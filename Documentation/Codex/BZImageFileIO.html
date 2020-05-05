@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFileIO</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZImageFileIO</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+La classe décrite ici, &quot;<a class="normal" href="BZImageFileIO.TBZCustomImageFileIO.html">TBZCustomImageFileIO</a>&quot; est l'ancêtre des classes servant à lire ou écrire les différents formats d'image supportés (BMP, TGA, PCX,...).<br> Elle est un pont direct avec notre gestionnaire de bitmap &quot;<a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>&quot;.</p>
+<p>
+
+
+<p>Cette classe est avant une classe d'aide à la lecture et l'écriture des données. <br> Elle inclue des fonctions utiles pour la lecture des pixels dans un format donné RGB 16bits, RGB 24bits, BGRA,... ; pour créer la palette de couleur issue du fichier.<br> Ou bien encore pour décompresser, ou décoder les données suivant un schéma fournit.
+
+<p>Elle inclut également le support d'informations complémentaires lors de la lecture d'un fichier. Par exemple les données EXIF des fichiers JPEG.
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>11/05/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : <br>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZColors.html">BZColors</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZBitmap.html">BZBitmap</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> Tous les liens au dessus, dessous, dedans, et au-delà......
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;<br>
+
+<p><b>TODO :</b> - Prise en charge d'une liste de Décodeur/Encodeur (RLE_RAW, RLE_BMP, RLE_TGA, RLE_PCX, LZW, HUF ect...)
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>LICENCE : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileIO.EInvalidImageFile.html"><code>EInvalidImageFile</code></a></td>
+<td class="itemdesc">Exception qui indique un type d'image invalide générale</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileIO.EInvalidImageHeader.html"><code>EInvalidImageHeader</code></a></td>
+<td class="itemdesc">Exception qui indique un En-tête Invalide d'image invalide</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileIO.EInvalidImageData.html"><code>EInvalidImageData</code></a></td>
+<td class="itemdesc">Exception qui indique des Données Invalides dans l'image</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileIO.TBZRLEOpCode.html"><code>TBZRLEOpCode</code></a></td>
+<td class="itemdesc">Prise en charge du mode de compression RLE 4, 8, 16, 24, 32 bits</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileIO.TBZCustomImageFileIO.html"><code>TBZCustomImageFileIO</code></a></td>
+<td class="itemdesc"><code>TBZCustomImageFileIO</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileIO.TBZImageFileIO.html"><code>TBZImageFileIO</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileIO.html#PBZRLEOpCode">PBZRLEOpCode</a></b> = &circ;<a  href="BZImageFileIO.TBZRLEOpCode.html">TBZRLEOpCode</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileIO.html#TBZNotifySeverity">TBZNotifySeverity</a></b> = (...);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZRLEOpCode"></span><code><b>PBZRLEOpCode</b> = &circ;<a  href="BZImageFileIO.TBZRLEOpCode.html">TBZRLEOpCode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZNotifySeverity"></span><code><b>TBZNotifySeverity</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="nsInfo">nsInfo</span></li>
+<li>
+<span id="nsWarning">nsWarning</span></li>
+<li>
+<span id="nsError">nsError</span></li>
+</ul>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-05-11
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

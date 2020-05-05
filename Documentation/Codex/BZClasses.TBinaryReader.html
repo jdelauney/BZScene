@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBinaryReader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBinaryReader"></span><h1 class="cio">Classe TBinaryReader</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBinaryReader = class(<a class="normal" href="BZClasses.TVirtualReader.html">TVirtualReader</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Lecteur virtuelle de données binaire</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TVirtualReader.html">TVirtualReader</a></li>
+<li class="thisitem">TBinaryReader</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBinaryReader.html#Read">Read</a></b>(var Buf; Count: Longint); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#NextValue">NextValue</a></b>: TValueType; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#ReadInteger">ReadInteger</a></b>: Integer; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#ReadBoolean">ReadBoolean</a></b>: Boolean; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#ReadString">ReadString</a></b>: string; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#ReadFloat">ReadFloat</a></b>: Extended; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBinaryReader.html#ReadListBegin">ReadListBegin</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBinaryReader.html#ReadListEnd">ReadListEnd</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBinaryReader.html#EndOfList">EndOfList</a></b>: Boolean; override;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Read"></span><code>procedure <b>Read</b>(var Buf; Count: Longint); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit dans le flux &quot;Count&quot; valeur et les place dans &quot;Buffer&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NextValue"></span><code>function <b>NextValue</b>: TValueType; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le type la valeur suivante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadInteger"></span><code>function <b>ReadInteger</b>: Integer; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit un Integer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadBoolean"></span><code>function <b>ReadBoolean</b>: Boolean; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit un boolean</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadString"></span><code>function <b>ReadString</b>: string; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une chaine de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFloat"></span><code>function <b>ReadFloat</b>: Extended; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Extended</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadListBegin"></span><code>procedure <b>ReadListBegin</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Debut la lecture d'une liste de valeur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadListEnd"></span><code>procedure <b>ReadListEnd</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fin la lecture d'une liste de valeur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndOfList"></span><code>function <b>EndOfList</b>: Boolean; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si la fin de la liste des valeurs à lire est attainte</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

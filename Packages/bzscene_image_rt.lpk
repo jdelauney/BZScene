@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="bzscene_image_rt"/>
+    <Author Value="J.Delauney (BeanzMaster)"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\Source\Dependancies\freetype"/>
+        <OtherUnitFiles Value="..\Source\Image;..\Source\Image\fileformats;..\Source\Dependancies\webp"/>
+        <UnitOutputDirectory Value="lib\bzcene-image\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
+      </SearchPaths>
+      <Parsing>
+        <Style Value="1"/>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="BZScene Multimedia Library -  Image Runtime Package
+Contains the base for image manipulations"/>
+    <License Value="MPL / GPL"/>
+    <Version Minor="1"/>
+    <Files Count="21">
+      <Item1>
+        <Filename Value="..\Source\Image\BZImageStrConsts.pas"/>
+        <UnitName Value="BZImageStrConsts"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\Image\BZBitmap.pas"/>
+        <UnitName Value="BZBitmap"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\Source\Image\BZBitmapCompression.pas"/>
+        <UnitName Value="BZBitmapCompression"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\Source\Image\BZImageFileIO.pas"/>
+        <UnitName Value="BZImageFileIO"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\Source\Image\BZBitmapFilterClasses.pas"/>
+        <UnitName Value="BZBitmapFilterClasses"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\Source\Image\BZBitmapColorFilters.pas"/>
+        <UnitName Value="BZBitmapColorFilters"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\Source\Image\BZBitmapBlurFilters.pas"/>
+        <UnitName Value="BZBitmapBlurFilters"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\Source\Image\BZBitmapDeformationFilters.pas"/>
+        <UnitName Value="BZBitmapDeformationFilters"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\Source\Image\BZBitmapMorphologicalFilters.pas"/>
+        <UnitName Value="BZBitmapMorphologicalFilters"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\Source\Image\BZBitmapThresholdFilters.pas"/>
+        <UnitName Value="BZBitmapThresholdFilters"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileBMP.pas"/>
+        <UnitName Value="BZImageFileBMP"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileGIF.pas"/>
+        <UnitName Value="BZImageFileGIF"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileJPEG.pas"/>
+        <UnitName Value="BZImageFileJPEG"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\Source\Image\fileformats\BZImageFilePNG.pas"/>
+        <UnitName Value="BZImageFilePNG"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\Source\Image\fileformats\BZImageFilePCX.pas"/>
+        <UnitName Value="BZImageFilePCX"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\Source\Image\fileformats\BZImageFilePPM.pas"/>
+        <UnitName Value="BZImageFilePPM"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileTGA.pas"/>
+        <UnitName Value="BZImageFileTGA"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileXPM.pas"/>
+        <UnitName Value="BZImageFileXPM"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\Source\Image\fileformats\BZImageFileWEBP.pas"/>
+        <UnitName Value="BZImageFileWEBP"/>
+      </Item19>
+      <Item20>
+        <Filename Value="..\Source\Dependancies\webp\BZLibWebp.pas"/>
+        <UnitName Value="BZLibWebp"/>
+      </Item20>
+      <Item21>
+        <Filename Value="..\Source\Image\BZBitmapIO.pas"/>
+        <UnitName Value="BZBitmapIO"/>
+      </Item21>
+    </Files>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="LCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="FCL"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="bzscene_rt"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

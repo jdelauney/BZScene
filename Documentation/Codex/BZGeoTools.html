@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGeoTools</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZGeoTools</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des classes d'aide à la manipulation de primitives géométrique tel que les lignes, les polylignes, les polygones, les courbes de bezier, les courbes BSpline.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>10/07/2019 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Notes</b> :
+
+<p>TODO : Les classes de cette unité seraient elles mieux si ce sont des Enregistrements Avancés ????? <br> A voir. Mais dans ce cas on perdrait la notfication des changements de valeur.
+
+<p>TODO : CETTE UNITE EST A COMPLETER POUR ETRE PLEINEMENT FONCTIONNELLE
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Dependances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZVectorMath.html">BZVectorMath</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>()</p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Dialogs</li><li>Math</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZArrayClasses.html">BZArrayClasses</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZGeoTools.TBZRasterItem.html"><code>TBZRasterItem</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZFloatPointsContainer.html"><code>TBZFloatPointsContainer</code></a></td>
+<td class="itemdesc"><code>TBZFloatPointsContainer</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DLineTool.html"><code>TBZ2DLineTool</code></a></td>
+<td class="itemdesc"><code>TBZ2DLineTool</code> : Classe d'aide à la manipulation et au calcul de formules d'une ligne dans un repère cartésien</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DEdgeList.html"><code>TBZ2DEdgeList</code></a></td>
+<td class="itemdesc">Stocke un liste de segment</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DCircleTool.html"><code>TBZ2DCircleTool</code></a></td>
+<td class="itemdesc">Classe pour la manipulation de cercle</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DPolyLineTool.html"><code>TBZ2DPolyLineTool</code></a></td>
+<td class="itemdesc">Classe pour la manipuation et la gestion d'une polyline</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DPolygonTool.html"><code>TBZ2DPolygonTool</code></a></td>
+<td class="itemdesc">Classe pour la gestion et la manipulation de polygone.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DPolygonList.html"><code>TBZ2DPolygonList</code></a></td>
+<td class="itemdesc">Gestion d'une liste de polygone</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DQuadraticBezierCurve.html"><code>TBZ2DQuadraticBezierCurve</code></a></td>
+<td class="itemdesc">Classe de manipulation de courbe de bezier quadratic @unorderdlist(   </td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DCubicBezierCurve.html"><code>TBZ2DCubicBezierCurve</code></a></td>
+<td class="itemdesc">Classe de manipulation de courbe de bezier cubic</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZCubicBezierCurves.html"><code>TBZCubicBezierCurves</code></a></td>
+<td class="itemdesc">Classe de gestion de courbes de Bezier cubic</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGeoTools.TBZ2DCurve.html"><code>TBZ2DCurve</code></a></td>
+<td class="itemdesc">Classe de gestion de courbes de bezier et spline</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.html#CreateQuadraticBezierCurve">CreateQuadraticBezierCurve</a></b>(StartPoint, ControlPoint, EndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.TBZ2DQuadraticBezierCurve.html">TBZ2DQuadraticBezierCurve</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.html#CreateCubicBezierCurve">CreateCubicBezierCurve</a></b>(StartPoint, ControlPointA, ControlPointB, EndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.html#BuildPolyCircle">BuildPolyCircle</a></b>(ptc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Radius : Single; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Steps : Integer = -1);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.html#BuildPolyEllipse">BuildPolyEllipse</a></b>(ptc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; RadiusX, RadiusY : Single; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Steps : Integer = -1);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.html#BuildPolyArc">BuildPolyArc</a></b>(cx, cy, rx, ry, StartAngle, EndAngle : Single; const ClockWise : Boolean; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.html#BuildPolySuperShape">BuildPolySuperShape</a></b>(Coords : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; n1, n2, n3, m, a, b, ScaleFactor : Single; nbPoints : Integer; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.html#BuildPolyStar">BuildPolyStar</a></b>(Coords : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; InnerRadius, OuterRadius : Single; nbBranches : Integer; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZCurveType">TBZCurveType</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a></b> = Array Of <a  href="BZGeoTools.TBZRasterItem.html">TBZRasterItem</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZRastersList">TBZRastersList</a></b> = Array Of <a  href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZ2DPolygonType">TBZ2DPolygonType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGeoTools.html#TBZQuadraticBezierCurves">TBZQuadraticBezierCurves</a></b> = array of <a  href="BZGeoTools.TBZ2DQuadraticBezierCurve.html">TBZ2DQuadraticBezierCurve</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateQuadraticBezierCurve"></span><code>function <b>CreateQuadraticBezierCurve</b>(StartPoint, ControlPoint, EndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.TBZ2DQuadraticBezierCurve.html">TBZ2DQuadraticBezierCurve</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'une courbe de bezier quadratic</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateCubicBezierCurve"></span><code>function <b>CreateCubicBezierCurve</b>(StartPoint, ControlPointA, ControlPointB, EndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'une courbe de bezier cubic</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BuildPolyCircle"></span><code>procedure <b>BuildPolyCircle</b>(ptc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Radius : Single; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Steps : Integer = -1);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un polygone en forme de cercle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BuildPolyEllipse"></span><code>procedure <b>BuildPolyEllipse</b>(ptc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; RadiusX, RadiusY : Single; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Steps : Integer = -1);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un polygone en forme d'ellipse</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BuildPolyArc"></span><code>procedure <b>BuildPolyArc</b>(cx, cy, rx, ry, StartAngle, EndAngle : Single; const ClockWise : Boolean; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un polygone en forme d'arc de cercle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BuildPolySuperShape"></span><code>procedure <b>BuildPolySuperShape</b>(Coords : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; n1, n2, n3, m, a, b, ScaleFactor : Single; nbPoints : Integer; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un polygone de type &quot;supershape&quot;. cf : <a  href="http://paulbourke.net/geometry/supershape/">http://paulbourke.net/geometry/supershape/</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BuildPolyStar"></span><code>procedure <b>BuildPolyStar</b>(Coords : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; InnerRadius, OuterRadius : Single; nbBranches : Integer; out ArrayOfPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un polygone en forme d'étoile</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZ2DLineIntersecType"></span><code><b>TBZ2DLineIntersecType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définit le type d'intersection de deux lignes</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ilNone">ilNone</span></li>
+<li>
+<span id="ilIntersect">ilIntersect</span></li>
+<li>
+<span id="ilOverlap">ilOverlap</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCurveType"></span><code><b>TBZCurveType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ctBezier">ctBezier</span></li>
+<li>
+<span id="ctBezierSpline">ctBezierSpline</span></li>
+<li>
+<span id="ctUniformSpline">ctUniformSpline</span></li>
+<li>
+<span id="ctCatmullRomSpline">ctCatmullRomSpline</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZRasterItems"></span><code><b>TBZRasterItems</b> = Array Of <a  href="BZGeoTools.TBZRasterItem.html">TBZRasterItem</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+PBZRasterItem = TBZRasterHLineRec;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZRastersList"></span><code><b>TBZRastersList</b> = Array Of <a  href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZ2DPolygonType"></span><code><b>TBZ2DPolygonType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de polygone</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ptConvex">ptConvex</span></li>
+<li>
+<span id="ptConcave">ptConcave</span></li>
+<li>
+<span id="ptComplex">ptComplex</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZQuadraticBezierCurves"></span><code><b>TBZQuadraticBezierCurves</b> = array of <a  href="BZGeoTools.TBZ2DQuadraticBezierCurve.html">TBZ2DQuadraticBezierCurve</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau de courbes de bezier quadratic</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZSound</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZSound</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient les classes et collections pour la gestion des sources audio et des effets</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>05/11/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZVectorMath.html">BZVectorMath</a>, <a class="normal" href="BZSoundSample.html">BZSoundSample</a>, <a class="normal" href="BZXCollection.html">BZXCollection</a>, <a class="normal" href="BZCadencer.html">BZCadencer</a>, <a class="normal" href="BZUtils.html">BZUtils</a>, <a class="normal" href="BZMath.html">BZMath</a>, BZLIbOpenAL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>Credits : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Codé sur une base de GLScene <a  href="http://www.sourceforge.net/glscene">http://www.sourceforge.net/glscene</a>)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li><li><a  href="BZSoundSample.html">BZSoundSample</a></li><li><a  href="BZXCollection.html">BZXCollection</a></li><li><a  href="BZCadencer.html">BZCadencer</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundSampleItem.html"><code>TBZSoundSampleItem</code></a></td>
+<td class="itemdesc">Stores a single PCM coded sound sample.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundSampleItems.html"><code>TBZSoundSampleItems</code></a></td>
+<td class="itemdesc">Gestion d'une collection d'échantillons audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundLibrary.html"><code>TBZSoundLibrary</code></a></td>
+<td class="itemdesc">Composant non-visuel pour gérer une liste d'échantillon audio</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZCustomSoundFXItem.html"><code>TBZCustomSoundFXItem</code></a></td>
+<td class="itemdesc">Description d' un effet audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZCustomSoundFilterItem.html"><code>TBZCustomSoundFilterItem</code></a></td>
+<td class="itemdesc">Classe abstraite à hériter pour la gestion de filtres audio</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZLowPassSoundFilter.html"><code>TBZLowPassSoundFilter</code></a></td>
+<td class="itemdesc">Déclaration d'un filtre de type &quot;Low-pass&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZHighPassSoundFilter.html"><code>TBZHighPassSoundFilter</code></a></td>
+<td class="itemdesc">Déclaration d'un filtre de type &quot;High-pass&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZBandPassSoundFilter.html"><code>TBZBandPassSoundFilter</code></a></td>
+<td class="itemdesc">Déclaration d'un filtre de type &quot;Band-pass&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZCustomSoundEffectItem.html"><code>TBZCustomSoundEffectItem</code></a></td>
+<td class="itemdesc">Classe abstraite à hériter pour la gestion d'effets audio</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZReverbSoundEffect.html"><code>TBZReverbSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Reverb&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZEAXReverbSoundEffect.html"><code>TBZEAXReverbSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;EAX Reverb&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZChorusSoundEffect.html"><code>TBZChorusSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Chorus&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZEchoSoundEffect.html"><code>TBZEchoSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Echo&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZDistortionSoundEffect.html"><code>TBZDistortionSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Distortion&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZFlangerSoundEffect.html"><code>TBZFlangerSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Flanger&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZCompressorSoundEffect.html"><code>TBZCompressorSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Compressor&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZEqualizerSoundEffect.html"><code>TBZEqualizerSoundEffect</code></a></td>
+<td class="itemdesc">Description de l'effet audio &quot;Equalizer&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundFXLib.html"><code>TBZSoundFXLib</code></a></td>
+<td class="itemdesc">Gestion d'une collection d'effets audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundFXLibrary.html"><code>TBZSoundFXLibrary</code></a></td>
+<td class="itemdesc">Composant non-visuel pour gérer une liste d'effets audio</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundFXAuxSlot.html"><code>TBZSoundFXAuxSlot</code></a></td>
+<td class="itemdesc">Descritpion d'un &quot;Slot&quot; permettant d'assigner un effet à un échantillon audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundFXAuxSlots.html"><code>TBZSoundFXAuxSlots</code></a></td>
+<td class="itemdesc">Gestion d'une collection de &quot;slots&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZBaseSoundSource.html"><code>TBZBaseSoundSource</code></a></td>
+<td class="itemdesc">Description de base d'un échantillon audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundSource.html"><code>TBZSoundSource</code></a></td>
+<td class="itemdesc">Description d'un échantillon audio avec prise en charge de l'orientation.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundSources.html"><code>TBZSoundSources</code></a></td>
+<td class="itemdesc">Gestion d'une collection d'échantillons audio</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSound.TBZSoundManager.html"><code>TBZSoundManager</code></a></td>
+<td class="itemdesc">Classe de base pour les composants du gestionnaire de son. <br> Le composant sound manager est l'interface d'une API audio de bas niveau (comme DirectSound, Bass, <a class="normal" href="BZMath.html#fmod">FMod</a>, OpenAL...)</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZSound.html#ActiveSoundManager">ActiveSoundManager</a></b>: <a  href="BZSound.TBZSoundManager.html">TBZSoundManager</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZSound.html#GetSoundLibraryByName">GetSoundLibraryByName</a></b>(const aName: string): <a  href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a></b> = string;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundSourceChange">TBZSoundSourceChange</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundSourceChanges">TBZSoundSourceChanges</a></b> = set of <a  href="BZSound.html#TBZSoundSourceChange">TBZSoundSourceChange</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundSourceFXChange">TBZSoundSourceFXChange</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundSourceFXChanges">TBZSoundSourceFXChanges</a></b> = set of <a  href="BZSound.html#TBZSoundSourceFXChange">TBZSoundSourceFXChange</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZSound.html#BZSoundFXItemClass">BZSoundFXItemClass</a></b> = class of <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundManagerChange">TBZSoundManagerChange</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#TBZSoundManagerChanges">TBZSoundManagerChanges</a></b> = set of <a  href="BZSound.html#TBZSoundManagerChange">TBZSoundManagerChange</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZSound.html#vVerboseGLSMErrors">vVerboseGLSMErrors</a></b>: Boolean = True;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ActiveSoundManager"></span><code>function <b>ActiveSoundManager</b>: <a  href="BZSound.TBZSoundManager.html">TBZSoundManager</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le gestionnaire d'audio actuellement actif</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetSoundLibraryByName"></span><code>function <b>GetSoundLibraryByName</b>(const aName: string): <a  href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la librairie d'un échantillon audio d'après son nom</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundFXName"></span><code><b>TBZSoundFXName</b> = string;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundSourceChange"></span><code><b>TBZSoundSourceChange</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="sscTransformation">sscTransformation</span></li>
+<li>
+<span id="sscSample">sscSample</span></li>
+<li>
+<span id="sscStatus">sscStatus</span></li>
+<li>
+<span id="sscFXStatus">sscFXStatus</span></li>
+<li>
+<span id="sscNewSample">sscNewSample</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundSourceChanges"></span><code><b>TBZSoundSourceChanges</b> = set of <a  href="BZSound.html#TBZSoundSourceChange">TBZSoundSourceChange</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+sscEffects, sscFilters</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundSourceFXChange"></span><code><b>TBZSoundSourceFXChange</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="sfxcDirectFilter">sfxcDirectFilter</span></li>
+<li>
+<span id="sfxEffectSlot0Status">sfxEffectSlot0Status</span></li>
+<li>
+<span id="sfxEffectFiltering">sfxEffectFiltering</span></li>
+<li>
+<span id="sfxcFilter">sfxcFilter</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundSourceFXChanges"></span><code><b>TBZSoundSourceFXChanges</b> = set of <a  href="BZSound.html#TBZSoundSourceFXChange">TBZSoundSourceFXChange</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+sscEffects, sscFilters</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZSoundFXItemClass"></span><code><b>BZSoundFXItemClass</b> = class of <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundReverbEnvironment"></span><code><b>TBZSoundReverbEnvironment</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+EAX standard sound environments. (112 presets)</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="seGeneric">seGeneric</span></li>
+<li>
+<span id="sePaddedCell">sePaddedCell</span></li>
+<li>
+<span id="seRoom">seRoom</span></li>
+<li>
+<span id="seBathroom">seBathroom</span></li>
+<li>
+<span id="seLivingRoom">seLivingRoom</span></li>
+<li>
+<span id="seStoneroom">seStoneroom</span></li>
+<li>
+<span id="seAuditorium">seAuditorium</span></li>
+<li>
+<span id="seConcertHall">seConcertHall</span></li>
+<li>
+<span id="seCave">seCave</span></li>
+<li>
+<span id="seArena">seArena</span></li>
+<li>
+<span id="seHangar">seHangar</span></li>
+<li>
+<span id="seCarpetedHallway">seCarpetedHallway</span></li>
+<li>
+<span id="seHallway">seHallway</span></li>
+<li>
+<span id="seStoneCorridor">seStoneCorridor</span></li>
+<li>
+<span id="seAlley">seAlley</span></li>
+<li>
+<span id="seForest">seForest</span></li>
+<li>
+<span id="seCity">seCity</span></li>
+<li>
+<span id="seMountains">seMountains</span></li>
+<li>
+<span id="seQuarry">seQuarry</span></li>
+<li>
+<span id="sePlain">sePlain</span></li>
+<li>
+<span id="seParkingLot">seParkingLot</span></li>
+<li>
+<span id="seSewerPipe">seSewerPipe</span></li>
+<li>
+<span id="seUnderWater">seUnderWater</span></li>
+<li>
+<span id="seDrugged">seDrugged</span></li>
+<li>
+<span id="seDizzy">seDizzy</span></li>
+<li>
+<span id="sePsychotic">sePsychotic</span></li>
+<li>
+<span id="seCastle_SmallRoom">seCastle_SmallRoom</span></li>
+<li>
+<span id="seCastle_ShortPassage">seCastle_ShortPassage</span></li>
+<li>
+<span id="seCastle_MediumRoom">seCastle_MediumRoom</span></li>
+<li>
+<span id="seCastle_LargeRoom">seCastle_LargeRoom</span></li>
+<li>
+<span id="seCastle_LongPassage">seCastle_LongPassage</span></li>
+<li>
+<span id="seCastle_Hall">seCastle_Hall</span></li>
+<li>
+<span id="seCastle_CupBoarb">seCastle_CupBoarb</span></li>
+<li>
+<span id="seCastle_CourtYard">seCastle_CourtYard</span></li>
+<li>
+<span id="seCastle_Alcove">seCastle_Alcove</span></li>
+<li>
+<span id="seFactory_SmallRoom">seFactory_SmallRoom</span></li>
+<li>
+<span id="seFactory_ShortPassage">seFactory_ShortPassage</span></li>
+<li>
+<span id="seFactory_MediumRoom">seFactory_MediumRoom</span></li>
+<li>
+<span id="seFactory_LargeRoom">seFactory_LargeRoom</span></li>
+<li>
+<span id="seFactory_LongPassage">seFactory_LongPassage</span></li>
+<li>
+<span id="seFactory_Hall">seFactory_Hall</span></li>
+<li>
+<span id="seFactory_CupBoard">seFactory_CupBoard</span></li>
+<li>
+<span id="seFactory_CourtYard">seFactory_CourtYard</span></li>
+<li>
+<span id="seFactory_Alcove">seFactory_Alcove</span></li>
+<li>
+<span id="seIcePalace_SmallRoom">seIcePalace_SmallRoom</span></li>
+<li>
+<span id="seIcePalace_ShortPassage">seIcePalace_ShortPassage</span></li>
+<li>
+<span id="seIcePalace_MediumRoom">seIcePalace_MediumRoom</span></li>
+<li>
+<span id="seIcePalace_LargeRoom">seIcePalace_LargeRoom</span></li>
+<li>
+<span id="seIcePalace_LongPassage">seIcePalace_LongPassage</span></li>
+<li>
+<span id="seIcePalace_Hall">seIcePalace_Hall</span></li>
+<li>
+<span id="seIcePalace_CupBoard">seIcePalace_CupBoard</span></li>
+<li>
+<span id="seIcePalace_CourtYard">seIcePalace_CourtYard</span></li>
+<li>
+<span id="seIcePalace_Alcove">seIcePalace_Alcove</span></li>
+<li>
+<span id="seSpaceStation_SmallRoom">seSpaceStation_SmallRoom</span></li>
+<li>
+<span id="seSpaceStation_ShortPassage">seSpaceStation_ShortPassage</span></li>
+<li>
+<span id="seSpaceStation_MediumRoom">seSpaceStation_MediumRoom</span></li>
+<li>
+<span id="seSpaceStation_LargeRoom">seSpaceStation_LargeRoom</span></li>
+<li>
+<span id="seSpaceStation_LongPassage">seSpaceStation_LongPassage</span></li>
+<li>
+<span id="seSpaceStation_Hall">seSpaceStation_Hall</span></li>
+<li>
+<span id="seSpaceStation_CupBoard">seSpaceStation_CupBoard</span></li>
+<li>
+<span id="seSpaceStation_Alcove">seSpaceStation_Alcove</span></li>
+<li>
+<span id="seWooden_SmallRoom">seWooden_SmallRoom</span>: seSpaceStation_CourtYard,</li>
+<li>
+<span id="seWooden_ShortPassage">seWooden_ShortPassage</span></li>
+<li>
+<span id="seWooden_MediumRoom">seWooden_MediumRoom</span></li>
+<li>
+<span id="seWooden_LargeRoom">seWooden_LargeRoom</span></li>
+<li>
+<span id="seWooden_LongPassage">seWooden_LongPassage</span></li>
+<li>
+<span id="seWooden_Hall">seWooden_Hall</span></li>
+<li>
+<span id="seWooden_CupBoard">seWooden_CupBoard</span></li>
+<li>
+<span id="seWooden_CourtYard">seWooden_CourtYard</span></li>
+<li>
+<span id="seWooden_Alcove">seWooden_Alcove</span></li>
+<li>
+<span id="seSport_EmptyStadium">seSport_EmptyStadium</span></li>
+<li>
+<span id="seSport_SquashCourt">seSport_SquashCourt</span></li>
+<li>
+<span id="seSport_SmallSwimmingPool">seSport_SmallSwimmingPool</span></li>
+<li>
+<span id="seSport_LargeSwimmingPool">seSport_LargeSwimmingPool</span></li>
+<li>
+<span id="seSport_Gymnasium">seSport_Gymnasium</span></li>
+<li>
+<span id="seSport_FullStadium">seSport_FullStadium</span></li>
+<li>
+<span id="seSport_StadiumTannoy">seSport_StadiumTannoy</span></li>
+<li>
+<span id="sePrefab_WorkShop">sePrefab_WorkShop</span></li>
+<li>
+<span id="sePrefab_SchoolRoom">sePrefab_SchoolRoom</span></li>
+<li>
+<span id="sePrefab_PractiseRoom">sePrefab_PractiseRoom</span></li>
+<li>
+<span id="sePrefab_OutHouse">sePrefab_OutHouse</span></li>
+<li>
+<span id="sePrefab_Caravan">sePrefab_Caravan</span></li>
+<li>
+<span id="seDome_Tomb">seDome_Tomb</span></li>
+<li>
+<span id="sePipe_Small">sePipe_Small</span></li>
+<li>
+<span id="seDome_SaintPauls">seDome_SaintPauls</span></li>
+<li>
+<span id="sePipe_Longthin">sePipe_Longthin</span></li>
+<li>
+<span id="sePipe_Large">sePipe_Large</span></li>
+<li>
+<span id="sePipe_Resonant">sePipe_Resonant</span></li>
+<li>
+<span id="seOutDoors_BackYard">seOutDoors_BackYard</span></li>
+<li>
+<span id="seOutDoors_RollingPlains">seOutDoors_RollingPlains</span></li>
+<li>
+<span id="seOutDoors_DeepCanyon">seOutDoors_DeepCanyon</span></li>
+<li>
+<span id="seOutDoors_Creek">seOutDoors_Creek</span></li>
+<li>
+<span id="seOutDoors_Valley">seOutDoors_Valley</span></li>
+<li>
+<span id="seMood_Heaven">seMood_Heaven</span></li>
+<li>
+<span id="seMood_Hell">seMood_Hell</span></li>
+<li>
+<span id="seMood_Memory">seMood_Memory</span></li>
+<li>
+<span id="seDriving_Commentator">seDriving_Commentator</span></li>
+<li>
+<span id="seDriving_PitGarage">seDriving_PitGarage</span></li>
+<li>
+<span id="seDriving_Incar_Racer">seDriving_Incar_Racer</span></li>
+<li>
+<span id="seDriving_Incar_Sports">seDriving_Incar_Sports</span></li>
+<li>
+<span id="seDriving_Incar_Luxury">seDriving_Incar_Luxury</span></li>
+<li>
+<span id="seDriving_FullGrandStand">seDriving_FullGrandStand</span></li>
+<li>
+<span id="seDriving_EmptyGrandStand">seDriving_EmptyGrandStand</span></li>
+<li>
+<span id="seDriving_Tunnel">seDriving_Tunnel</span></li>
+<li>
+<span id="seCity_Streets">seCity_Streets</span></li>
+<li>
+<span id="seCity_SubWay">seCity_SubWay</span></li>
+<li>
+<span id="seCity_Museum">seCity_Museum</span></li>
+<li>
+<span id="seCity_Library">seCity_Library</span></li>
+<li>
+<span id="seCity_UnderPass">seCity_UnderPass</span></li>
+<li>
+<span id="seCity_Abandoned">seCity_Abandoned</span></li>
+<li>
+<span id="seDustyRoom">seDustyRoom</span></li>
+<li>
+<span id="seChapel">seChapel</span></li>
+<li>
+<span id="seSmallWaterRoom">seSmallWaterRoom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundManagerChange"></span><code><b>TBZSoundManagerChange</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="smcTransformation">smcTransformation</span></li>
+<li>
+<span id="smcEnvironnment">smcEnvironnment</span></li>
+<li>
+<span id="smcEqualizer">smcEqualizer</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZSoundManagerChanges"></span><code><b>TBZSoundManagerChanges</b> = set of <a  href="BZSound.html#TBZSoundManagerChange">TBZSoundManagerChange</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+sscEffects, sscFiltersmc</p>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vVerboseGLSMErrors"></span><code><b>vVerboseGLSMErrors</b>: Boolean = True;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Variable global pour l'affichage des erreurs</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

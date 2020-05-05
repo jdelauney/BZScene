@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZFastMath</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZFastMath</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section">Classes, interfaces, enregistrements et objets</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section">Types</div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des fonctions mathématiques, basiques et trigonométriques optimisées.
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Creation : 24/02/2019</p></li>
+  <li><p>Mise à jour : </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b><br> Quelques liens : </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://lab.polygonal.de/2007/07/18/fast-and-accurate-sinecosine-approximation/">http://lab.polygonal.de/2007/07/18/fast-and-accurate-sinecosine-approximation/</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Fast_inverse_square_root">https://en.wikipedia.org/wiki/Fast_inverse_square_root</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Taylor_series">https://en.wikipedia.org/wiki/Taylor_series</a></p></li>
+  <li><p><a  href="https://stackoverflow.com/questions/18662261/fastest-implementation-of-sine-cosine-and-square-root-in-c-doesnt-need-to-b">https://stackoverflow.com/questions/18662261/fastest-implementation-of-sine-cosine-and-square-root-in-c-doesnt-need-to-b</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Newton%27s_method">https://en.wikipedia.org/wiki/Newton%27s_method</a></p></li>
+  <li><p><a  href="http://allenchou.net/2014/02/game-math-faster-sine-cosine-with-polynomial-curves/">http://allenchou.net/2014/02/game-math-faster-sine-cosine-with-polynomial-curves/</a></p></li>
+  <li><p><a  href="http://www.ue.eti.pg.gda.pl/~wrona/lab_dsp/cw04/fun_aprox.pdf">http://www.ue.eti.pg.gda.pl/&tilde;wrona/lab_dsp/cw04/fun_aprox.pdf</a></p></li>
+  <li><p><a  href="http://www.netlib.org/cephes/">http://www.netlib.org/cephes/</a></p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : Aucune
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZFastMath.html#FastCosLUT">FastCosLUT</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZFastMath.html#FastSinLUT">FastSinLUT</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZFastMath.html#FastTanLUT">FastTanLUT</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastSinc">FastSinc</a></b>(x: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastTan">FastTan</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastArcTan">FastArcTan</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastArcTan2">FastArcTan2</a></b>(y, x: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastArcSine">FastArcSine</a></b>(Const x: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastArcCosine">FastArcCosine</a></b>(const X: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastInvSqrt">FastInvSqrt</a></b>(Const Value: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastSqrt">FastSqrt</a></b>(Const Value: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLn">FastLn</a></b>(Const X: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastExp">FastExp</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLog">FastLog</a></b>(x:Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLog2">FastLog2</a></b>(X: Single): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLog10">FastLog10</a></b>(X: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLDExp">FastLDExp</a></b>(x: Single; N: Integer): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastLNXP1">FastLNXP1</a></b>(Const x: Single): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastAbs">FastAbs</a></b>(f:single):single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastNeg">FastNeg</a></b>(f:single):single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastSign">FastSign</a></b>(f:single):longint;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZFastMath.html#FastPower">FastPower</a></b>(Base: Single; Power: Integer): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZFastMath.html#_InitSinCosTanLUT">_InitSinCosTanLUT</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZFastMath.html#_DoneSinCosTanLUT">_DoneSinCosTanLUT</a></b>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastCosLUT"></span><code>function <b>FastCosLUT</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le Cosinus de x. Précision 4E-8</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastSinLUT"></span><code>function <b>FastSinLUT</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le Sinus de x. Précision 4E-8</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastTanLUT"></span><code>function <b>FastTanLUT</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la tangente de x. Précision 4E-8</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastSinc"></span><code>Function <b>FastSinc</b>(x: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le Sinus Invers de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastTan"></span><code>Function <b>FastTan</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la tangente Inverse de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastArcTan"></span><code>Function <b>FastArcTan</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'arc tangente de x</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastArcTan2"></span><code>Function <b>FastArcTan2</b>(y, x: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'arc Tangente de y par x. Approximation, précis à 0.07 rads.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastArcSine"></span><code>Function <b>FastArcSine</b>(Const x: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'arc Sinus de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastArcCosine"></span><code>Function <b>FastArcCosine</b>(const X: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'arc Cosinus de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastInvSqrt"></span><code>Function <b>FastInvSqrt</b>(Const Value: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la racine carré inverse de Value</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastSqrt"></span><code>Function <b>FastSqrt</b>(Const Value: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la racine carré de Value</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLn"></span><code>Function <b>FastLn</b>(Const X: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme naturel de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastExp"></span><code>Function <b>FastExp</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'exponentiel de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLog"></span><code>Function <b>FastLog</b>(x:Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme naturel de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLog2"></span><code>Function <b>FastLog2</b>(X: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme naturel de X base 2</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLog10"></span><code>Function <b>FastLog10</b>(X: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme naturel de X base 10</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLDExp"></span><code>Function <b>FastLDExp</b>(x: Single; N: Integer): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme exponentiel de X par N</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastLNXP1"></span><code>Function <b>FastLNXP1</b>(Const x: Single): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le logarithme exponentiel de X par N</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastAbs"></span><code>Function <b>FastAbs</b>(f:single):single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur absolue de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastNeg"></span><code>Function <b>FastNeg</b>(f:single):single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le négatif de X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastSign"></span><code>Function <b>FastSign</b>(f:single):longint;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le signe de f. <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>0 si null</p></li>
+  <li><p>+1 si positif</p></li>
+  <li><p>-1 si négatif</p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FastPower"></span><code>Function <b>FastPower</b>(Base: Single; Power: Integer): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la puissance de base par Power</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="_InitSinCosTanLUT"></span><code>procedure <b>_InitSinCosTanLUT</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Initalisation pour les tables de Sinus et Cosinus précalculés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="_DoneSinCosTanLUT"></span><code>procedure <b>_DoneSinCosTanLUT</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Libération des tables de Sinus et Cosinus précalculés. Initialisées Par _InitSinCosLUT</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+24/02/2019
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBZUpdateAbleObject</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZUpdateAbleObject"></span><h1 class="cio">Classe TBZUpdateAbleObject</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZUpdateAbleObject = class(<a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a>, <a class="normal" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe abstraite décrivant l'interface &quot;<a class="normal" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a>&quot; Offre un systeme d'evenement de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="thisitem">TBZUpdateAbleObject</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZUpdateAbleObject.html#Create">Create</a></b>; Overload; Virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZUpdateAbleObject.html#Create">Create</a></b>(AOwner: TPersistent); Overload; Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZUpdateAbleObject.html#NotifyChange">NotifyChange</a></b>(Sender: TObject); Virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZUpdateAbleObject.html#Notification">Notification</a></b>(Sender: TObject; Operation: TOperation); Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZUpdateAbleObject.html#BeginUpdate">BeginUpdate</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZUpdateAbleObject.html#EndUpdate">EndUpdate</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZUpdateAbleObject.html#Owner">Owner</a></b>: TPersistent read GetOwner;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZUpdateAbleObject.html#Updating">Updating</a></b>: Integer read FUpdating;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZUpdateAbleObject.html#OnChange">OnChange</a></b>: TNotifyEvent read FOnChange write FOnChange;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; Overload; Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TPersistent); Overload; Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation avec un propriétaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NotifyChange"></span><code>Procedure <b>NotifyChange</b>(Sender: TObject); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Notifie un changement dans l'objet. L'énènement se propagera dans les objets propriétaires (<a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Owner">Owner</a>) de celui-ci</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Notification"></span><code>Procedure <b>Notification</b>(Sender: TObject; Operation: TOperation); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A Surcharger dans les classe enfant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BeginUpdate"></span><code>Procedure <b>BeginUpdate</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Débute une mise à jour de l'objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndUpdate"></span><code>Procedure <b>EndUpdate</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fin d'une mise à jour de l'objet</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Owner"></span><code>property <b>Owner</b>: TPersistent read GetOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Propriétaire de l'objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Updating"></span><code>property <b>Updating</b>: Integer read FUpdating;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Compteur des mise à jour de l'objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnChange"></span><code>property <b>OnChange</b>: TNotifyEvent read FOnChange write FOnChange;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement levé lors d'une changement d'état de l'objet</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

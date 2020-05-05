@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZColors: Enregistrement TBZColorVector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZColorVector"></span><h1 class="cio">Enregistrement TBZColorVector</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZColors.html">BZColors</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZColorVector = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Format générique d'une couleur au format RGBA en virgule flottante</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#V">V</a></b>: <a  href="BZColors.html#TBZColorVectorType">TBZColorVectorType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#X">X</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Y">Y</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Z">Z</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#W">W</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Red">Red</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Green">Green</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Blue">Blue</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorVector.html#Alpha">Alpha</a></b>: Single</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZColors.TBZColorVector.html#Create">Create</a></b>(const AValue: single; Const AlphaValue : Single =1.0); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZColors.TBZColorVector.html#Create">Create</a></b>(Const aX,aY,aZ: single; const aW : Single = 1.0); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZColors.TBZColorVector.html#Create">Create</a></b>(Const aValue : <a  href="BZColors.TBZColor32.html">TBZColor32</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZColors.TBZColorVector.html#Create">Create</a></b>(Const aValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#ToString">ToString</a></b> : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator /(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator /(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator =(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator &gt;=(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator &lt;=(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator &gt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator &lt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator &lt;&gt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator <b><a  href="BZColors.TBZColorVector.html#xor">xor</a></b>(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Shuffle">Shuffle</a></b>(const x,y,z,w : Byte):<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Swizzle">Swizzle</a></b>(const ASwizzle: <a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a> ): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#MinXYZComponent">MinXYZComponent</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#MaxXYZComponent">MaxXYZComponent</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#DivideBy2">DivideBy2</a></b>:<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Min">Min</a></b>(constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Min">Min</a></b>(constref B: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Max">Max</a></b>(constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Max">Max</a></b>(constref B: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Clamp">Clamp</a></b>(Constref AMin, AMax: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Clamp">Clamp</a></b>(constref AMin, AMax: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#MulAdd">MulAdd</a></b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#MulSub">MulSub</a></b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#MulDiv">MulDiv</a></b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Lerp">Lerp</a></b>(Constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; Constref T:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Combine">Combine</a></b>(constref V2: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref F1: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Combine2">Combine2</a></b>(constref V2: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; const F1, F2: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Combine3">Combine3</a></b>(constref V2, V3: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; const F1, F2, F3: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#DotProduct">DotProduct</a></b>(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Abs">Abs</a></b>: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#Round">Round</a></b>: <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZColors.TBZColorVector.html#ConvertColorSpace">ConvertColorSpace</a></b>(ColorMatrixConversion : <a  href="BZColors.html#TBZColorSpaceMatrixConversion">TBZColorSpaceMatrixConversion</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZColors.html#TBZColorVectorType">TBZColorVectorType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Array access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="X"></span><code><b>X</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Y"></span><code><b>Y</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Z"></span><code><b>Z</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="W"></span><code><b>W</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Red"></span><code><b>Red</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+As Color components in RGBA order</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Green"></span><code><b>Green</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+As Color components in RGBA order</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Blue"></span><code><b>Blue</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+As Color components in RGBA order</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Alpha"></span><code><b>Alpha</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+As Color components in RGBA order</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const AValue: single; Const AlphaValue : Single =1.0); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="BZColors.TBZColorVector.html#Create">Create</a> as Homogenous from a Float. W value set by default to 0.0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aX,aY,aZ: single; const aW : Single = 1.0); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="BZColors.TBZColorVector.html#Create">Create</a> as Homogenous from three Float. W value set by default to 1.0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aValue : <a  href="BZColors.TBZColor32.html">TBZColor32</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="BZColors.TBZColorVector.html#Create">Create</a> As Point from three Float. W value set by default to 1.0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>Create</code> As Point from Vector.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b> : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return Vector to a formatted string eg &quot;(x, y, z, w)&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Add two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Sub two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiply two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divide two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Add to each component of a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> one Float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Sub each component of a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> by one float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiply one Float to each component of a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref B:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divide each component of a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> by one Float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are equal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id=">="></span><code>class operator &gt;=(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are greater or equal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<="></span><code>class operator &lt;=(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are less or equal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id=">"></span><code>class operator &gt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are greater</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are less</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;&gt;(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare if two <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> are not equal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="xor"></span><code>class operator <b>xor</b>(constref A, B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur <code>XOr</code> entre 2 couleur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Shuffle"></span><code>function <b>Shuffle</b>(const x,y,z,w : Byte):<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return <code>shuffle</code> components of self following params orders</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Swizzle"></span><code>function <b>Swizzle</b>(const ASwizzle: <a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a> ): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return <code>swizzle</code> (<a class="normal" href="BZColors.TBZColorVector.html#Shuffle">shuffle</a>) components of self from <a class="normal" href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a> mask</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinXYZComponent"></span><code>function <b>MinXYZComponent</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the minimum component value in XYZ</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxXYZComponent"></span><code>function <b>MaxXYZComponent</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the maximum component value in XYZ</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DivideBy2"></span><code>function <b>DivideBy2</b>:<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Fast Self Divide by 2</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the minimum of each component in <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> between self and another <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(constref B: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the minimum of each component in <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> between self and a float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the maximum of each component in <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> between self and another <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(constref B: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return the maximum of each component in <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> between self and a float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(Constref AMin, AMax: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<a class="normal" href="BZColors.TBZColorVector.html#Clamp">Clamp</a> Self beetween a <a class="normal" href="BZColors.TBZColorVector.html#Min">min</a> and a <a class="normal" href="BZColors.TBZColorVector.html#Max">max</a> <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(constref AMin, AMax: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>Clamp</code> each component of Self beatween a <a class="normal" href="BZColors.TBZColorVector.html#Min">min</a> and a <a class="normal" href="BZColors.TBZColorVector.html#Max">max</a> float</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulAdd"></span><code>function <b>MulAdd</b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiply Self by a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> and Add an another <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulSub"></span><code>function <b>MulSub</b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiply Self by a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> and Substract an another <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulDiv"></span><code>function <b>MulDiv</b>(Constref B, C: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiply Self by a <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a> and Divide by an another <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Lerp"></span><code>function <b>Lerp</b>(Constref B: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; Constref T:Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return linear interpolate value at T between self and B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine"></span><code>function <b>Combine</b>(constref V2: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; constref F1: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return <a class="normal" href="BZColors.TBZColorVector.html#Combine3">Combine3</a> = Self + (V2 * F2)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine2"></span><code>function <b>Combine2</b>(constref V2: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; const F1, F2: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return <code>Combine2</code> = (Self * F1) + (V2 * F2)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine3"></span><code>function <b>Combine3</b>(constref V2, V3: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; const F1, F2, F3: Single): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Return <code>Combine3</code> = (Self * F1) + (V2 * F2) + (V3 * F3)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DotProduct"></span><code>function <b>DotProduct</b>(constref A: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le produit scalaire de 2 couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Abs"></span><code>function <b>Abs</b>: <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les valeurs absolue</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Round"></span><code>function <b>Round</b>: <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les valeurs arrondies</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ConvertColorSpace"></span><code>function <b>ConvertColorSpace</b>(ColorMatrixConversion : <a  href="BZColors.html#TBZColorSpaceMatrixConversion">TBZColorSpaceMatrixConversion</a>): <a  href="BZColors.TBZColorVector.html">TBZColorVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit une couleur suivant la matrice d'espace de couleur</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

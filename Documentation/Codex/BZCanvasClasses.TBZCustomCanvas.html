@@ -1,0 +1,883 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZCanvasClasses: Classe TBZCustomCanvas</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomCanvas"></span><h1 class="cio">Classe TBZCustomCanvas</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZCanvasClasses.html">BZCanvasClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomCanvas = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZCustomCanvas</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZCustomCanvas</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Create">Create</a></b>(const AWidth, AHeight: integer); virtual; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#CreateFont">CreateFont</a></b> : <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#BeginUpdate">BeginUpdate</a></b>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#EndUpdate">EndUpdate</a></b>; Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#FreeBuffer">FreeBuffer</a></b>; virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#ResizeBuffer">ResizeBuffer</a></b>(const AWidth, AHeight: integer); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextOut">TextOut</a></b> (x,y:integer;text:string); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextSize">GetTextSize</a></b> (text:string; var w,h:integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextHeight">GetTextHeight</a></b> (text:string) : integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextWidth">GetTextWidth</a></b> (text:string) : integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextHeight">TextHeight</a></b>(const Text: string): Integer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextWidth">TextWidth</a></b>(const Text: string): Integer; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextSize">GetTextSize</a></b> (text:unicodestring; var w,h:integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextHeight">GetTextHeight</a></b> (text:unicodestring) : integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#GetTextWidth">GetTextWidth</a></b> (text:unicodestring) : integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextHeight">TextHeight</a></b>(const Text: unicodestring): Integer; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextWidth">TextWidth</a></b>(const Text: unicodestring): Integer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TextOut">TextOut</a></b> (x,y:integer;text:unicodestring); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#VLine">VLine</a></b>(x1, y1, y2: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#VLine">VLine</a></b>(PtFrom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; h: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#HLine">HLine</a></b>(x1, y1, x2: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#HLine">HLine</a></b>(PtFrom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; L: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Line">Line</a></b>(x1,y1,x2,y2 : Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Line">Line</a></b>(PtFrom, PtTo : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#PolyLine">PolyLine</a></b>(pnts: <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Closed : Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Triangle">Triangle</a></b>(x1, y1, x2, y2, x3, y3: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Triangle">Triangle</a></b>(Pt1,Pt2,Pt3 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Polygon">Polygon</a></b>(Const Pnts: <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">Rectangle</a></b>(x1, y1, x2, y2: Single); Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">Rectangle</a></b>(ARect: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">Rectangle</a></b>(ARect: <a  href="BZGraphic.TBZRect.html">TBZRect</a>); Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">Rectangle</a></b>(ptl, pbr : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#RoundedRect">RoundedRect</a></b>(x1, y1, x2, y2, Rx, Ry: Single); Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#RoundedRect">RoundedRect</a></b>(ARect: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Rx, Ry: Single); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Circle">Circle</a></b>(cx, cy, r: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Circle">Circle</a></b>(CP : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; r: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Ellipse">Ellipse</a></b>(cx, cy, Rx, Ry: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Ellipse">Ellipse</a></b>(pc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Rx, Ry: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Ellipse">Ellipse</a></b>(ptl, pbr : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Arc">Arc</a></b>(cx, cy, rx, ry, StartAngle, EndAngle: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#BezierCurve">BezierCurve</a></b>(P1, C1, P2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#BezierCurve">BezierCurve</a></b>(P1x, P1y, C1x, C1Y, P2x, P2y : Single; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#BezierCurve">BezierCurve</a></b>(P1, C1, C2, P2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#BezierCurve">BezierCurve</a></b>(P1x, P1y, C1x, C1Y, C2x, C2Y, P2x, P2y : Single; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#MoveTo">MoveTo</a></b>(x,y : Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#MoveTo">MoveTo</a></b>(pt : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TurnTo">TurnTo</a></b>(A: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#LineTo">LineTo</a></b>(x,y:Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#LineTo">LineTo</a></b>(PtTo : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#TraceTo">TraceTo</a></b>(L: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#FloodFill">FloodFill</a></b>(px,py : Single; Const SearchColor, NewColor: <a  href="BZColors.html#TBZColor">TBZColor</a>); virtual; abstract;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Clipping">Clipping</a></b> : Boolean Read FClipping write FClipping;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#ClipRect">ClipRect</a></b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> read FClipRect write FClipRect;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#Font">Font</a></b> : <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a> read GetFont write SetFont;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#DrawMode">DrawMode</a></b> : <a  href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a> read FDrawMode write FDrawMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#SurfaceViewPort">SurfaceViewPort</a></b> : <a  href="BZGraphic.TBZRect.html">TBZRect</a> read FSurfaceViewPort;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCanvasClasses.TBZCustomCanvas.html#AntiAlias">AntiAlias</a></b> : Boolean read FAntialias write FAntiAlias;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(const AWidth, AHeight: integer); virtual; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création avec définition de la largeur et hauteur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateFont"></span><code>function <b>CreateFont</b> : <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création d'un objet <a class="normal" href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BeginUpdate"></span><code>procedure <b>BeginUpdate</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Début des mises à jour de la surface</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndUpdate"></span><code>procedure <b>EndUpdate</b>; Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fin des mises à jour de la surface</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FreeBuffer"></span><code>procedure <b>FreeBuffer</b>; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Libération du tampon d'affichage</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ResizeBuffer"></span><code>procedure <b>ResizeBuffer</b>(const AWidth, AHeight: integer); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Redimensionnement du tampon d'affichage</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextOut"></span><code>procedure <b>TextOut</b> (x,y:integer;text:string); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Affiche un texte à la position x,y. Note la position se réfère au coin bas et gauche du texte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextSize"></span><code>procedure <b>GetTextSize</b> (text:string; var w,h:integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les dimensions du texte en pixel avec la police en cours d'utilisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextHeight"></span><code>function <b>GetTextHeight</b> (text:string) : integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la hauteur du texte en pixel avec la police en cours d'utilisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextWidth"></span><code>function <b>GetTextWidth</b> (text:string) : integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la longueur du texte en pixel avec la police en cours d'utilisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextHeight"></span><code>function <b>TextHeight</b>(const Text: string): Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la hauteur d'un texte en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextWidth"></span><code>function <b>TextWidth</b>(const Text: string): Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la largeur d'un texte en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextSize"></span><code>procedure <b>GetTextSize</b> (text:unicodestring; var w,h:integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la hauteur et la largeur d'un texte UNICODE en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextHeight"></span><code>function <b>GetTextHeight</b> (text:unicodestring) : integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la hauteur d'un texte UNICODE en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTextWidth"></span><code>function <b>GetTextWidth</b> (text:unicodestring) : integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la largeur d'un texte UNICODE en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextHeight"></span><code>function <b>TextHeight</b>(const Text: unicodestring): Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la largeur d'un texte UNICODE en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextWidth"></span><code>function <b>TextWidth</b>(const Text: unicodestring): Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la largeur d'un texte UNICODE en pixel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextOut"></span><code>procedure <b>TextOut</b> (x,y:integer;text:unicodestring); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un texte UNICODE au coordonnées X et Y</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VLine"></span><code>Procedure <b>VLine</b>(x1, y1, y2: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne verticale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VLine"></span><code>Procedure <b>VLine</b>(PtFrom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; h: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne verticale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HLine"></span><code>Procedure <b>HLine</b>(x1, y1, x2: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne horizontale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HLine"></span><code>Procedure <b>HLine</b>(PtFrom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; L: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne horizontale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Line"></span><code>procedure <b>Line</b>(x1,y1,x2,y2 : Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Line"></span><code>procedure <b>Line</b>(PtFrom, PtTo : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PolyLine"></span><code>Procedure <b>PolyLine</b>(pnts: <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const Closed : Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une polyligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Triangle"></span><code>Procedure <b>Triangle</b>(x1, y1, x2, y2, x3, y3: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Triangle">triangle</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Triangle"></span><code>Procedure <b>Triangle</b>(Pt1,Pt2,Pt3 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <code>triangle</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Polygon"></span><code>Procedure <b>Polygon</b>(Const Pnts: <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rectangle"></span><code>Procedure <b>Rectangle</b>(x1, y1, x2, y2: Single); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">rectangle</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rectangle"></span><code>Procedure <b>Rectangle</b>(ARect: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">rectangle</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rectangle"></span><code>Procedure <b>Rectangle</b>(ARect: <a  href="BZGraphic.TBZRect.html">TBZRect</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">rectangle</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rectangle"></span><code>Procedure <b>Rectangle</b>(ptl, pbr : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <code>rectangle</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RoundedRect"></span><code>Procedure <b>RoundedRect</b>(x1, y1, x2, y2, Rx, Ry: Single); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">rectangle</a> aux coins arrondis</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RoundedRect"></span><code>Procedure <b>RoundedRect</b>(ARect: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Rx, Ry: Single); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Rectangle">rectangle</a> aux coins arrondis</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Circle"></span><code>Procedure <b>Circle</b>(cx, cy, r: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un cercle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Circle"></span><code>Procedure <b>Circle</b>(CP : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; r: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Ellipse"></span><code>Procedure <b>Ellipse</b>(cx, cy, Rx, Ry: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Ellipse">ellipse</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Ellipse"></span><code>Procedure <b>Ellipse</b>(pc : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Rx, Ry: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Ellipse">ellipse</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Ellipse"></span><code>Procedure <b>Ellipse</b>(ptl, pbr : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une <code>ellipse</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Arc"></span><code>Procedure <b>Arc</b>(cx, cy, rx, ry, StartAngle, EndAngle: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine un <code>arc</code> de cercle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BezierCurve"></span><code>procedure <b>BezierCurve</b>(P1, C1, P2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une courbe de Bezier Quadratic</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BezierCurve"></span><code>procedure <b>BezierCurve</b>(P1x, P1y, C1x, C1Y, P2x, P2y : Single; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une courbe de Bezier Quadratic</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BezierCurve"></span><code>procedure <b>BezierCurve</b>(P1, C1, C2, P2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une courbe de Bezier Cubique</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BezierCurve"></span><code>procedure <b>BezierCurve</b>(P1x, P1y, C1x, C1Y, C2x, C2Y, P2x, P2y : Single; Const nbSteps : Integer = -1); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveTo"></span><code>procedure <b>MoveTo</b>(x,y : Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplace la position du curseur dans le Canvas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveTo"></span><code>procedure <b>MoveTo</b>(pt : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplace la position du curseur dans le Canvas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TurnTo"></span><code>Procedure <b>TurnTo</b>(A: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Effectue une rotation du curseur de &quot;A&quot; angle en degré</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LineTo"></span><code>procedure <b>LineTo</b>(x,y:Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne de la position du curseur vers la position &quot;x,y&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LineTo"></span><code>procedure <b>LineTo</b>(PtTo : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dessine une ligne de la position du curseur vers la position définie par le point &quot;PtTo&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TraceTo"></span><code>Procedure <b>TraceTo</b>(L: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trace une ligne de longueur &quot;L&quot; depuis la position du curseur et dans la direction chosie par la methode &quot;Turn&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FloodFill"></span><code>procedure <b>FloodFill</b>(px,py : Single; Const SearchColor, NewColor: <a  href="BZColors.html#TBZColor">TBZColor</a>); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rempli une surface</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clipping"></span><code>property <b>Clipping</b> : Boolean Read FClipping write FClipping;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Clip le canvas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ClipRect"></span><code>property <b>ClipRect</b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> read FClipRect write FClipRect;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Definie la zone de <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html#Clipping">clipping</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Font"></span><code>property <b>Font</b> : <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a> read GetFont write SetFont;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définie la police et ses attributs pour l'affichage des textes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DrawMode"></span><code>property <b>DrawMode</b> : <a  href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a> read FDrawMode write FDrawMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Propriété du mode d'affichage. cf : <a class="normal" href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SurfaceViewPort"></span><code>property <b>SurfaceViewPort</b> : <a  href="BZGraphic.TBZRect.html">TBZRect</a> read FSurfaceViewPort;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Dimension de la surface du cnavas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AntiAlias"></span><code>property <b>AntiAlias</b> : Boolean read FAntialias write FAntiAlias;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Active ou désactive &quot;l'anti-aliasing&quot;</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

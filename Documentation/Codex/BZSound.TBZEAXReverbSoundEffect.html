@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZSound: Classe TBZEAXReverbSoundEffect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZEAXReverbSoundEffect"></span><h1 class="cio">Classe TBZEAXReverbSoundEffect</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZSound.html">BZSound</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZEAXReverbSoundEffect = class(<a class="normal" href="BZSound.TBZCustomSoundEffectItem.html">TBZCustomSoundEffectItem</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Description de l'effet audio &quot;EAX Reverb&quot;</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZXCollection.TBZXCollectionItem.html">TBZXCollectionItem</a></li>
+<li class="ancestor"><a class="normal" href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a></li>
+<li class="ancestor"><a class="normal" href="BZSound.TBZCustomSoundEffectItem.html">TBZCustomSoundEffectItem</a></li>
+<li class="thisitem">TBZEAXReverbSoundEffect</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#Create">Create</a></b>(AOwner: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#FriendlyName">FriendlyName</a></b>: String; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#Preset">Preset</a></b> : <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FPreset write SetPreset;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DENSITY">DENSITY</a></b> : Single read FDensity write FDensity;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DIFFUSION">DIFFUSION</a></b> : Single read FDiffusion write FDiffusion;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#GAIN">GAIN</a></b> : Single read FGain write FGain;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#GAINHF">GAINHF</a></b> : Single read FGainHF write FGainHF;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#GAINLF">GAINLF</a></b> : Single read FGainHF write FGainLF;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DECAY_TIME">DECAY_TIME</a></b> : Single read FDecay_Time write FDecay_Time;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DECAY_HFRATIO">DECAY_HFRATIO</a></b> : Single read FDecay_HFRatio write FDecay_LFRatio;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DECAY_LFRATIO">DECAY_LFRATIO</a></b> : Single read FDecay_LFRatio write FDecay_LFRatio;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#REFLECTIONS_GAIN">REFLECTIONS_GAIN</a></b> : Single read FReflections_Gain write FReflections_Gain;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#REFLECTIONS_DELAY">REFLECTIONS_DELAY</a></b> : Single read FReflections_Delay write FReflections_Delay;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#LATE_REVERB_GAIN">LATE_REVERB_GAIN</a></b> : Single read FLate_Reverb_Gain write FLate_Reverb_Gain;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#LATE_REVERB_DELAY">LATE_REVERB_DELAY</a></b> : Single read FLate_Reverb_Delay write FLate_Reverb_Delay;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#ECHO_TIME">ECHO_TIME</a></b> : Single read FEcho_Time write FEcho_Time;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#ECHO_DEPTH">ECHO_DEPTH</a></b> : Single read FEcho_Depth write FEcho_Depth;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#MODULATION_TIME">MODULATION_TIME</a></b> : Single read FModulation_Time write FModulation_Time;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#MODULATION_DEPTH">MODULATION_DEPTH</a></b> : Single read FModulation_Depth write FModulation_Depth;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#AIR_ABSORPTION_GAINHF">AIR_ABSORPTION_GAINHF</a></b> : Single read FAir_Absorption_GainHF write FAir_Absorption_GainHF;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#HF_REFERENCE">HF_REFERENCE</a></b> : Single read FHF_Reference write FHF_Reference;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#LF_REFERENCE">LF_REFERENCE</a></b> : Single read FLF_Reference write FLF_Reference;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#ROOM_ROLLOFF_FACTOR">ROOM_ROLLOFF_FACTOR</a></b> : Single read FRoom_RollOff_Factor write FRoom_RollOff_Factor;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZEAXReverbSoundEffect.html#DECAY_HFLIMIT">DECAY_HFLIMIT</a></b> : Boolean read FDecay_HFLimit write FDecay_HFLimit;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(AOwner: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FriendlyName"></span><code>class function <b>FriendlyName</b>: String; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Preset"></span><code>property <b>Preset</b> : <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FPreset write SetPreset;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DENSITY"></span><code>property <b>DENSITY</b> : Single read FDensity write FDensity;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DIFFUSION"></span><code>property <b>DIFFUSION</b> : Single read FDiffusion write FDiffusion;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="GAIN"></span><code>property <b>GAIN</b> : Single read FGain write FGain;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="GAINHF"></span><code>property <b>GAINHF</b> : Single read FGainHF write FGainHF;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="GAINLF"></span><code>property <b>GAINLF</b> : Single read FGainHF write FGainLF;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DECAY_TIME"></span><code>property <b>DECAY_TIME</b> : Single read FDecay_Time write FDecay_Time;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DECAY_HFRATIO"></span><code>property <b>DECAY_HFRATIO</b> : Single read FDecay_HFRatio write FDecay_LFRatio;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DECAY_LFRATIO"></span><code>property <b>DECAY_LFRATIO</b> : Single read FDecay_LFRatio write FDecay_LFRatio;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="REFLECTIONS_GAIN"></span><code>property <b>REFLECTIONS_GAIN</b> : Single read FReflections_Gain write FReflections_Gain;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="REFLECTIONS_DELAY"></span><code>property <b>REFLECTIONS_DELAY</b> : Single read FReflections_Delay write FReflections_Delay;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="LATE_REVERB_GAIN"></span><code>property <b>LATE_REVERB_GAIN</b> : Single read FLate_Reverb_Gain write FLate_Reverb_Gain;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+property REFLECTIONS_PAN : <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a> read FReflections_Pan write FReflections_Pan;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="LATE_REVERB_DELAY"></span><code>property <b>LATE_REVERB_DELAY</b> : Single read FLate_Reverb_Delay write FLate_Reverb_Delay;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ECHO_TIME"></span><code>property <b>ECHO_TIME</b> : Single read FEcho_Time write FEcho_Time;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+property LATE_REVERB_PAN : <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a> read FLate_Reverb_Delay write FLate_Reverb_Pan;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ECHO_DEPTH"></span><code>property <b>ECHO_DEPTH</b> : Single read FEcho_Depth write FEcho_Depth;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MODULATION_TIME"></span><code>property <b>MODULATION_TIME</b> : Single read FModulation_Time write FModulation_Time;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MODULATION_DEPTH"></span><code>property <b>MODULATION_DEPTH</b> : Single read FModulation_Depth write FModulation_Depth;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="AIR_ABSORPTION_GAINHF"></span><code>property <b>AIR_ABSORPTION_GAINHF</b> : Single read FAir_Absorption_GainHF write FAir_Absorption_GainHF;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="HF_REFERENCE"></span><code>property <b>HF_REFERENCE</b> : Single read FHF_Reference write FHF_Reference;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="LF_REFERENCE"></span><code>property <b>LF_REFERENCE</b> : Single read FLF_Reference write FLF_Reference;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ROOM_ROLLOFF_FACTOR"></span><code>property <b>ROOM_ROLLOFF_FACTOR</b> : Single read FRoom_RollOff_Factor write FRoom_RollOff_Factor;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DECAY_HFLIMIT"></span><code>property <b>DECAY_HFLIMIT</b> : Boolean read FDecay_HFLimit write FDecay_HFLimit;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

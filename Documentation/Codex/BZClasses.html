@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZClasses</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des classes conçues à des fins génériques. <br> Elles implémentent un mécanisme de persistance légèrement différent de celui de la LCL / VCL. <br> Elles permettent le contrôle de version au niveau de l'objet avec une persistance 100% ascendante et une compatibilité polymorphe.</p>
+<p>
+     Cette unité, contient des définitions d'objets à surcharger.
+
+<p>Ces objets peuvent : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Etre notifiés lors de changements interne</p></li>
+  <li><p>Etre cadencés (simulations basées sur le temps). </p></li>
+  <li><p>Inclure un méchanisme de lecture/écriture de données dans un flux</p></li>
+</ul>
+
+<p>
+
+<p>  Contient également des classes spécialisées et utiles comme le remplacement d'un TStringList basé sur le hachage.
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>16/11/2016 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZSystem.html">BZSystem</a>, <a class="normal" href="BZUtils.html">BZUtils</a>, BZTypesHelpers, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZStreamClasses.html">BZStreamClasses</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Une partie des objets sont basés sur GLScene <a  href="http://www.sourceforge.net/glscene">http://www.sourceforge.net/glscene</a>)</p></li>
+  <li><p>(Une partie des objets sont basés sur GraphicEx <a  href="https://github.com/mike-lischke/GraphicEx">https://github.com/mike-lischke/GraphicEx</a>)</p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Contnrs</li><li>Graphics</li><li>LCLType</li><li><a  href="BZSystem.html">BZSystem</a></li><li><a  href="BZUtils.html">BZUtils</a></li><li>BZTypesHelpers</li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZStreamClasses.html">BZStreamClasses</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.EBZBaseException.html"><code>EBZBaseException</code></a></td>
+<td class="itemdesc">Exception de base déclenchée lors d'une erreur</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.EInvalidFileSignature.html"><code>EInvalidFileSignature</code></a></td>
+<td class="itemdesc">Exception déclenchée sur un format de fichier incorrect ou des données endommagées</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.EFilerException.html"><code>EFilerException</code></a></td>
+<td class="itemdesc">Exception déclenchée lorsqu'une erreur est détectée lors de l'écriture des données</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZClasses.TBZProgressTimes.html"><code>TBZProgressTimes</code></a></td>
+<td class="itemdesc">Type d'enregistrement pour stocker une progression dans le temps</td>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZClasses.TBZProgressSection.html"><code>TBZProgressSection</code></a></td>
+<td class="itemdesc">Décrit une entrée dans la pile de progression pour les sections imbriquées.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TVirtualReader.html"><code>TVirtualReader</code></a></td>
+<td class="itemdesc">Identique à TReader, mais réutilisable.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TVirtualWriter.html"><code>TVirtualWriter</code></a></td>
+<td class="itemdesc">Identique à TWriter, mais réutilisable.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBinaryReader.html"><code>TBinaryReader</code></a></td>
+<td class="itemdesc">Lecteur virtuelle de données binaire</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBinaryWriter.html"><code>TBinaryWriter</code></a></td>
+<td class="itemdesc">Ecriture virtuelle de données binaire</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TTextReader.html"><code>TTextReader</code></a></td>
+<td class="itemdesc">Lecture virtuelle de chaine de caractères</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TTextWriter.html"><code>TTextWriter</code></a></td>
+<td class="itemdesc">Ecriture virtuelle de chaine de caractères</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Interface&nbsp;<a class="bold" href="BZClasses.IBZPersistentObject.html"><code>IBZPersistentObject</code></a></td>
+<td class="itemdesc">Interface pour les objets persistants.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Interface&nbsp;<a class="bold" href="BZClasses.IBZNotifyAble.html"><code>IBZNotifyAble</code></a></td>
+<td class="itemdesc">Interface pour les objets avec un systeme et d'evenement de notifications.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Interface&nbsp;<a class="bold" href="BZClasses.IBZCadenceAble.html"><code>IBZCadenceAble</code></a></td>
+<td class="itemdesc">Interface offrant la possiblités d'animer, de faire des simulations basées sur le temps.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZPersistentObject.html"><code>TBZPersistentObject</code></a></td>
+<td class="itemdesc">Classe de base pour les objets persistants.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZPersistentObjectList.html"><code>TBZPersistentObjectList</code></a></td>
+<td class="itemdesc">Liste d'objets persistants. Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZOwnedPersistent.html"><code>TBZOwnedPersistent</code></a></td>
+<td class="itemdesc">TPersistent qui connait son propriétaire</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZInterfacedPersistent.html"><code>TBZInterfacedPersistent</code></a></td>
+<td class="itemdesc">TPersistent qui implémente une IInterface.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZInterfacedCollectionItem.html"><code>TBZInterfacedCollectionItem</code></a></td>
+<td class="itemdesc">TCollectionItem qui implémente une IInterface.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZUpdateAbleObject.html"><code>TBZUpdateAbleObject</code></a></td>
+<td class="itemdesc">Classe abstraite décrivant l'interface &quot;<a class="normal" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a>&quot; Offre un systeme d'evenement de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZProgressAbleObject.html"><code>TBZProgressAbleObject</code></a></td>
+<td class="itemdesc">Classe abstraite ajoutant la gestion d'une progression</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZThreadAbleObject.html"><code>TBZThreadAbleObject</code></a></td>
+<td class="itemdesc">En plus des méthodes de <a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>, et <a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a> il rajoute un verrouillage pour les threads</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZCadenceAbleComponent.html"><code>TBZCadenceAbleComponent</code></a></td>
+<td class="itemdesc">Classe abstraite décrivant l'interface &quot;IBZProgessAble&quot;.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZUpdateAbleComponent.html"><code>TBZUpdateAbleComponent</code></a></td>
+<td class="itemdesc">Classe abstraite décrivant et supportant IBZProgessAble et <a class="normal" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a>.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZDataFileFormatDesc.html"><code>TBZDataFileFormatDesc</code></a></td>
+<td class="itemdesc">Description minimale pour la prise en charge d'un format de fichier spécifique</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZCustomDataFile.html"><code>TBZCustomDataFile</code></a></td>
+<td class="itemdesc">Classe de base abstraite pour les interfaces de formats de fichiers de données. Cette classe déclare les comportements de base liés aux fichiers. C'est à dire, pouvoir charger / enregistrer à partir d'un fichier ou d'un flux.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZCustomHashListItem.html"><code>TBZCustomHashListItem</code></a></td>
+<td class="itemdesc">Classe abstraite décrivant un élément dans <a class="normal" href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a>.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZCustomHashStringList.html"><code>TBZCustomHashStringList</code></a></td>
+<td class="itemdesc">Classe optimisée pour utiliser une liste de chaine de caractères avec la possibiliter d'associer un nom, un d'objets et ou un Tag.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZStringList.html"><code>TBZStringList</code></a></td>
+<td class="itemdesc">Gestion d'une liste de chaine de caractères.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZClasses.TBZNotifyCollection.html"><code>TBZNotifyCollection</code></a></td>
+<td class="itemdesc">Collection avec un systeme et d'evenement de notifications.</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.html#RaiseFilerException">RaiseFilerException</a></b>(aClass: TClass; archiveVersion: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZClasses.html#CreateFileStream">CreateFileStream</a></b>(const fileName: string; mode: Word = fmOpenRead + fmShareDenyNone): TStream;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#PObject">PObject</a></b> = &circ;TObject;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZDataFileCapability">TBZDataFileCapability</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZDataFileCapabilities">TBZDataFileCapabilities</a></b> = Set Of <a  href="BZClasses.html#TBZDataFileCapability">TBZDataFileCapability</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a></b> = Procedure(Sender: TObject; Const deltaTime, newTime: Double) Of Object;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#PBZProgressSection">PBZProgressSection</a></b> = &circ;<a  href="BZClasses.TBZProgressSection.html">TBZProgressSection</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZProgressStage">TBZProgressStage</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZProgressEvent">TBZProgressEvent</a></b> = procedure (Sender: TObject; Stage: <a  href="BZClasses.html#TBZProgressStage">TBZProgressStage</a>; PercentDone: Byte; RedrawNow: Boolean; const R: TRect; const Msg: string; Var Continue:Boolean) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TVirtualReaderClass">TVirtualReaderClass</a></b> = class of <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TVirtualWriterClass">TVirtualWriterClass</a></b> = class of <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZPersistentObjectClass">TBZPersistentObjectClass</a></b> = class of <a  href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TPointerObjectList">TPointerObjectList</a></b>     = array [0 .. MaxInt div (2 * SizeOf(Pointer))] of TObject;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#PPointerObjectList">PPointerObjectList</a></b>     = &circ;<a  href="BZClasses.html#TPointerObjectList">TPointerObjectList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TObjectListSortCompare">TObjectListSortCompare</a></b> = function(item1, item2: TObject): Integer of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZEncodingType">TBZEncodingType</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZDataFileLoadErrorEvent">TBZDataFileLoadErrorEvent</a></b> = procedure (Sender: TObject;Const ErrorCount : Integer;Const ErrorList:TStringList) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZDataFileClass">TBZDataFileClass</a></b> = Class Of <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a></b> = Array[0..cHash2 - 1] Of <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZClasses.html#PBZCustomHashListItemArray">PBZCustomHashListItemArray</a></b> = &circ;<a  href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RaiseFilerException"></span><code>procedure <b>RaiseFilerException</b>(aClass: TClass; archiveVersion: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Méthode de convenance qui déclenche une exception lors de la lecture à partir de données persistantes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateFileStream"></span><code>function <b>CreateFileStream</b>(const fileName: string; mode: Word = fmOpenRead + fmShareDenyNone): TStream;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un flux TStream depuis un fichier</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PObject"></span><code><b>PObject</b> = &circ;TObject;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>PObject</code> : Definit un pointer sur un TObject</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZDataFileCapability"></span><code><b>TBZDataFileCapability</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Capacité pour les classes de lecture et ou d'ecriture de données dans un fichier. <br> cf : <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="dfcRead">dfcRead</span></li>
+<li>
+<span id="dfcWrite">dfcWrite</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZDataFileCapabilities"></span><code><b>TBZDataFileCapabilities</b> = Set Of <a  href="BZClasses.html#TBZDataFileCapability">TBZDataFileCapability</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCadencerProgressEvent"></span><code><b>TBZCadencerProgressEvent</b> = Procedure(Sender: TObject; Const deltaTime, newTime: Double) Of Object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Événement de progression pour des animations / simulations basées sur le temps. <br> DeltaTime est le delta du temps écoulé depuis le dernier état et newTime est la nouvelle heure après la fin de l'événement.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZProgressSection"></span><code><b>PBZProgressSection</b> = &circ;<a  href="BZClasses.TBZProgressSection.html">TBZProgressSection</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZProgressStage"></span><code><b>TBZProgressStage</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Action de la progression (pour eviter d'utiliser l'uniter FPImage)</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="opsStarting">opsStarting</span></li>
+<li>
+<span id="opsRunning">opsRunning</span></li>
+<li>
+<span id="opsEnding">opsEnding</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZProgressEvent"></span><code><b>TBZProgressEvent</b> = procedure (Sender: TObject; Stage: <a  href="BZClasses.html#TBZProgressStage">TBZProgressStage</a>; PercentDone: Byte; RedrawNow: Boolean; const R: TRect; const Msg: string; Var Continue:Boolean) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Definition du type fonction pour l'evenement OnProgress</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TVirtualReaderClass"></span><code><b>TVirtualReaderClass</b> = class of <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TVirtualWriterClass"></span><code><b>TVirtualWriterClass</b> = class of <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPersistentObjectClass"></span><code><b>TBZPersistentObjectClass</b> = class of <a  href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de classes héritée de <a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TPointerObjectList"></span><code><b>TPointerObjectList</b>     = array [0 .. MaxInt div (2 * SizeOf(Pointer))] of TObject;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau d'objets</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PPointerObjectList"></span><code><b>PPointerObjectList</b>     = &circ;<a  href="BZClasses.html#TPointerObjectList">TPointerObjectList</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeru vers un tableau d'objets</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TObjectListSortCompare"></span><code><b>TObjectListSortCompare</b> = function(item1, item2: TObject): Integer of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Fonction pour comparer deux TObject</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZEncodingType"></span><code><b>TBZEncodingType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Decrit l'algorithme de compression utilisé dans un fichier</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="etNone">etNone</span></li>
+<li>
+<span id="etBitFields">etBitFields</span></li>
+<li>
+<span id="etRLE">etRLE</span></li>
+<li>
+<span id="etHuffman">etHuffman</span></li>
+<li>
+<span id="etLZW">etLZW</span></li>
+<li>
+<span id="etLZ77">etLZ77</span></li>
+<li>
+<span id="etThunder">etThunder</span></li>
+<li>
+<span id="etJPEG">etJPEG</span></li>
+<li>
+<span id="etVP8">etVP8</span></li>
+<li>
+<span id="etNotSupported">etNotSupported</span></li>
+<li>
+<span id="etUnknown">etUnknown</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZDataFileLoadErrorEvent"></span><code><b>TBZDataFileLoadErrorEvent</b> = procedure (Sender: TObject;Const ErrorCount : Integer;Const ErrorList:TStringList) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Evènement levé lors d'une erreur au chargement d'un flux par <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZDataFileClass"></span><code><b>TBZDataFileClass</b> = Class Of <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCustomHashListItemArray"></span><code><b>TBZCustomHashListItemArray</b> = Array[0..cHash2 - 1] Of <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type Tableau pour stocker des éléments de type <a class="normal" href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZCustomHashListItemArray"></span><code><b>PBZCustomHashListItemArray</b> = &circ;<a  href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeur vers un Tableau s de type <a class="normal" href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a></p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

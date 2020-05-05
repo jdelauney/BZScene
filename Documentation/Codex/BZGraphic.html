@@ -1,0 +1,3010 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGraphic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZGraphic</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Définit et regroupe les systèmes de couleurs les types de filtres et autres données utiles à la gestion du graphisme. <br> Contient les classes de base à la gestion des informations sur les formats d'image
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>11/07/2018 : Creation</p></li>
+  <li><p>11/07/2018 : Dernière mise à jour</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Dependances</b> : <a class="normal" href="BZSystem.html">BZSystem</a>, <a class="normal" href="BZUtils.html">BZUtils</a>, <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZVectorMath.html">BZVectorMath</a>, <a class="normal" href="BZAnimationTool.html">BZAnimationTool</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>()</p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Types</li><li>GraphType</li><li>Graphics</li><li>LCLIntf</li><li>LCLType</li><li>fpImage</li><li>dialogs</li><li>Windows</li><li>Win32Extra</li><li>GDK2</li><li>Gtk2Def</li><li>FileUtil</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li><li><a  href="BZColors.html">BZColors</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.EBZBitmapException.html"><code>EBZBitmapException</code></a></td>
+<td class="itemdesc">Exeption levée relative aux Bitmaps</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.EBZInvalidImageFormatException.html"><code>EBZInvalidImageFormatException</code></a></td>
+<td class="itemdesc">Exception lévée pour un format d'image invalide</td>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZGraphic.TBZRect.html"><code>TBZRect</code></a></td>
+<td class="itemdesc">Définition d'un rectangle virtuel en valeur entière</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZGraphic.TBZFloatRect.html"><code>TBZFloatRect</code></a></td>
+<td class="itemdesc">Définition d'un rectangle en valeur flottante</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZRectItemProperty.html"><code>TBZRectItemProperty</code></a></td>
+<td class="itemdesc">Classe permettant de gérer un type <a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a> dans une classe TODO : A déplacer dans l'unité BZControlClasses</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZGraphic.TBZHistogramStatistics.html"><code>TBZHistogramStatistics</code></a></td>
+<td class="itemdesc">Statistiques d'un histogramme</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZGraphic.TBZConvolutionFilter.html"><code>TBZConvolutionFilter</code></a></td>
+<td class="itemdesc">Conteneur servant à décrire un filtre de convolution</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZRawImageDescription.html"><code>TBZRawImageDescription</code></a></td>
+<td class="itemdesc">TClasse décrivant les informations utiles pour décoder les données brute du bitmap.<br> On stocke ici toutes les informations relatives à la bonne marche des importations et exportations des données d'un format à l'autre.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZRawImageData.html"><code>TBZRawImageData</code></a></td>
+<td class="itemdesc">Classe &quot;semi-abstraite&quot; décrivant les informations de données brute d'un bitmap (image).<br> On stocke ici sa <a class="normal" href="BZGraphic.TBZRawImageData.html#Description">description</a>, ainsi que la palette de couleur &quot;brute&quot; si elle existe.<br> Les informations sont à mettre à jour manuellement.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZBitmapLayerItem.html"><code>TBZBitmapLayerItem</code></a></td>
+<td class="itemdesc">Objet pour stocker des images supplémentaire dans un <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>.<br> Utile dans le cas d'images animées (gif, apng) ou de fichier multi-images (tiff, mng, psd etc...) Peux également être utilisé dans la gestion de calque comme photoshop ou gimp.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZBitmapLayerList.html"><code>TBZBitmapLayerList</code></a></td>
+<td class="itemdesc">Gestionnaire de liste conteant des <a class="normal" href="BZGraphic.TBZBitmapLayerItem.html">TBZBitmapLayerItem</a></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZCustomBitmap.html"><code>TBZCustomBitmap</code></a></td>
+<td class="itemdesc"><code>TBZCustomBitmap</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZBaseBitmap.html"><code>TBZBaseBitmap</code></a></td>
+<td class="itemdesc"><code>TBZBaseBitmap</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZCustomOwnerBitmap.html"><code>TBZCustomOwnerBitmap</code></a></td>
+<td class="itemdesc">Classe de base servant de &quot;conténaire&quot; à filtres <br> <b>Note</b> : Cette classe est temporaire et en attente d'améliorations futures.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZImageFileFormat.html"><code>TBZImageFileFormat</code></a></td>
+<td class="itemdesc"><a class="normal" href="BZGraphic.TBZImageFileFormat.html#Description">Description</a> pour le support d'un format de fichier &quot;Image&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZGraphic.TBZImageFileFormatsList.html"><code>TBZImageFileFormatsList</code></a></td>
+<td class="itemdesc">Stock les classes des formats de fichiers supportés</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.html#BZRect">BZRect</a></b>(aLeft, aTop, aRight, aBottom : Longint) : <a  href="BZGraphic.TBZRect.html">TBZRect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZGraphic.html#GetBZImageFileFormats">GetBZImageFileFormats</a></b>: <a  href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZGraphic.html#BZImageFileFormatExtensionByIndex">BZImageFileFormatExtensionByIndex</a></b>(index: Integer): String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Procedure <b><a  href="BZGraphic.html#RegisterRasterFormat">RegisterRasterFormat</a></b>(Const AExtension, ADescription: String; AClass: <a  href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>Procedure <b><a  href="BZGraphic.html#UnregisterRasterFormat">UnregisterRasterFormat</a></b>(AClass: <a  href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.html#Compute_BytesPerLine">Compute_BytesPerLine</a></b>(AWidth: Cardinal; ABitsPerPixel: Byte; ALineEnd: <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a>): PtrUInt;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.html#Compute_BitsPerLine">Compute_BitsPerLine</a></b>(AWidth: Cardinal; ABitsPerPixel: Byte; ALineEnd: <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a>): PtrUInt;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.html#KeepAspectRatio">KeepAspectRatio</a></b>(Const SrcW, SrcH : Integer; Var NewWidth, NewHeight : Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.html#PointInCircle">PointInCircle</a></b>(const px,py,cx,cy: Integer; const Radius:Integer): boolean; inline;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.html#OverlapQuadrangle">OverlapQuadrangle</a></b>(const Q1, Q2 : <a  href="BZGraphic.html#TBZQuadrangle2D">TBZQuadrangle2D</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.html#RotateArrayOfPoints">RotateArrayOfPoints</a></b>(Var Points : Array of <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>; xOrg, yOrg: Integer; Angle : Single);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZPoint">TBZPoint</a></b> = <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#PBZPoint">PBZPoint</a></b> = &circ;<a  href="BZGraphic.html#TBZPoint">TBZPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZRectVectorType">TBZRectVectorType</a></b> = packed array[0..3] of Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#PBZRect">PBZRect</a></b> = &circ;<a  href="BZGraphic.TBZRect.html">TBZRect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZFloatRectVectorType">TBZFloatRectVectorType</a></b> = packed array[0..3] of Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZQuadrangle2D">TBZQuadrangle2D</a></b> = Array[0..3] of <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZHistorgramDrawMode">TBZHistorgramDrawMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZHistogramArray">TBZHistogramArray</a></b> = array[0..255] of integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZGetPixelSampleMethod">TBZGetPixelSampleMethod</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapDrawMode">TBZBitmapDrawMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZPixelEdgeAction">TBZPixelEdgeAction</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZMorphologicalOperator">TBZMorphologicalOperator</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapAlphaMode">TBZBitmapAlphaMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapBlendMode">TBZBitmapBlendMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZTextureMappingMode">TBZTextureMappingMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapFillType">TBZBitmapFillType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZCanvasBrushFillType">TBZCanvasBrushFillType</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapAntiAliasMode">TBZBitmapAntiAliasMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapBitOrder">TBZBitmapBitOrder</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZStrokeStyle">TBZStrokeStyle</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBrushStyle">TBZBrushStyle</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZPatternStyle">TBZPatternStyle</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZTextureMappingKind">TBZTextureMappingKind</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a></b> = array of boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBrushPattern">TBZBrushPattern</a></b> = array[0..31] of <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#PBZBrushPattern">PBZBrushPattern</a></b> = &circ;<a  href="BZGraphic.html#TBZBrushPattern">TBZBrushPattern</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZImageRawPaletteFormat">TBZImageRawPaletteFormat</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapAlphaSetMode">TBZBitmapAlphaSetMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZMatrixConvolutionFilter3x3">TBZMatrixConvolutionFilter3x3</a></b> = Array [0..8] of Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZMatrixConvolutionFilter5x5">TBZMatrixConvolutionFilter5x5</a></b> = Array [0..24] of Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZMatrixConvolutionFilter7x7">TBZMatrixConvolutionFilter7x7</a></b> = Array [0..48] of Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZMatrixConvolutionType">TBZMatrixConvolutionType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZConvolutionFilterCategory">TBZConvolutionFilterCategory</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZScanLineLUT">TBZScanLineLUT</a></b> = Array Of DWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a></b> = Class Of <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#cPixelDrawModeStr">cPixelDrawModeStr</a></b>   : Array[0..3] of String  = ('Set', 'Set Alpha', 'Combine', 'Custom');</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#cAlphaDrawModeStr">cAlphaDrawModeStr</a></b>   : Array[0..8] of String  = ('Aucun', 'Opaque', 'Alpha', 'Alpha Blend', 'Alpha Blend HQ', 'Blend', 'AlphaSrc', 'AlphaDst', 'AlphaCheck');</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.html#BZConvolutionFilterPresets">BZConvolutionFilterPresets</a></b> : Array[0..63] of <a  href="BZGraphic.TBZConvolutionFilter.html">TBZConvolutionFilter</a> = (
+    ( 
+      Name     : 'Neutre';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (0,0,0,
+                     0,1,0,
+                     0,0,0
+                ));
+    ),
+    ( 
+      Name    : 'Moyenne 3x3';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 9;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (1,1,1,
+                     1,1,1,
+                     1,1,1
+                ));
+    ),
+    ( 
+      Name    : 'Moyenne 5x5';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 25;
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 3;
+      Matrix  : (_5 : ( 1, 1, 2, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1
+                       ));
+     ),
+     ( 
+      Name    : 'Flou Gaussien 3x3';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 16;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 : (1,2,1,
+                       2,4,2,
+                       1,2,1
+                 ));
+     ),
+     ( 
+      Name    : 'Flou Gaussien 3x3 Doux';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 32;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 : (1, 3,1,
+                       3,16,3,
+                       1, 3,1
+                 ));
+     ),
+    ( 
+      Name    : 'Flou Gaussien 5x5 Fort';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 64;
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 3;
+      Matrix  : (_5 : ( 0, 1, 2, 1, 0,
+                        1, 4, 6, 4, 1,
+                        2, 6, 8, 6, 2,
+                        1, 4, 6, 4, 1,
+                        0, 1, 2, 1, 0
+                       ));
+     ),
+     ( 
+     
+     
+     
+     
+     
+     
+
+      Name    : 'Flou Gaussien 5x5';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 159; 
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 5;
+      
+      
+      
+      
+      
+      
+      Matrix  : (_5 : ( 2, 4, 5, 4, 2,
+                        4, 9,12, 9, 4,
+                        5,12,15,12, 5,
+                        4, 9,12, 9, 4,
+                        2, 4, 5, 4, 2
+                       ));
+      ),
+      ( 
+      Name    : 'Flou Gaussien 7x7';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 999;
+      MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+      MatrixSize : 7;
+      Matrix  : (_7 : ( 1, 4, 8,10, 8, 4, 1,
+                        4,12,25,29,25,12, 4,
+                        8,25,49,58,49,25, 8,
+                       10,29,58,67,58,29,10,
+                        8,25,49,58,49,25, 8,
+                        4,12,25,29,25,12, 4,
+                        1, 4, 8,10, 8, 4, 1
+                      ));
+     ),
+     ( 
+      Name    : 'Flou Bartlett 7x7';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 256;
+      MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+      MatrixSize : 7;
+      Matrix  : (_7 : ( 1, 2, 3, 4, 3, 2, 1,
+                        2, 4, 6, 8, 6, 4, 2,
+                        3, 6, 9,12, 9, 6, 3,
+                        4, 8,12,16,12, 8, 4,
+                        3, 6, 9,12, 9, 6, 3,
+                        2, 4, 6, 8, 6, 4, 2,
+                        1, 2, 3, 4, 3, 2, 1
+                       ));
+      ),
+     ( 
+      Name    : 'Renforcement des contours'; 
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (-1,-1,-1,
+                     -1,9,-1,
+                     -1,-1,-1
+              ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 12;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,4,1,
+                      1,1,1
+                ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas doux';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 20;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,12,1,
+                      1,1,1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas fort';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 10;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,2,1,
+                      1,1,1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 0,-1, 0,
+                      -1, 5,-1,
+                       0,-1, 0
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut doux';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(-1 , 1,-1,
+                       1,  4, 1,
+                      -1 , 1,-1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut moyen';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 1 , -2,  1,
+                      -2,   5, -2,
+                       1 , -2,  1
+                     ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut fort';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 16;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 0 , -1,  0,
+                      -1,  20, -1,
+                       0 , -1,  0
+                     ));
+      ),
+    ( 
+     Name    : 'Prewitt horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 3;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                       0, 0, 0,
+                       1, 1, 1
+               ));
+    ),
+    ( 
+     Name    : 'Prewitt vertictal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 3;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 0, 1,
+                      -1, 0, 1,
+                      -1, 0, 1
+               ));
+    ),
+    ( 
+     Name    : 'Roberts -45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, 0, 0,
+                       0, 0, 1,
+                       0,-1, 0
+               ));
+    ),
+    ( 
+     Name    : 'Roberts +45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, 0, 0,
+                       0,-1, 0,
+                       0, 0, 1
+               ));
+    ),
+    ( 
+     Name    : 'Sobel horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -1,-2,-1,
+                        0, 0, 0,
+                        1, 2, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'Sobel vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 0, 1,
+                      -2, 0, 2,
+                      -1, 0, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'Kirsch horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 15;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-3,-3,-3,
+                      -3, 0,-3,
+                       5, 5, 5
+               ));
+    ),
+    ( 
+     Name    : 'Kirsch vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 15;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -3,-3, 5,
+                       -3, 0, 5,
+                       -3,-3, 5
+               ));
+    ),
+    ( 
+     Name    : 'Scharr horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 10;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-3, -1, -3,
+                       0,  0,  0,
+                       3,  1,  3
+               ));
+    ),
+    ( 
+     Name    : 'Scharr vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 10;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -3,  0,  3,
+                       -1,  0,  1,
+                       -3,  0,  3
+               ));
+    ),
+    ( 
+     Name    : 'RobinSon Horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 5;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1, 1, 1,
+                       1, -2, 1,
+                      -1,-1,-1
+               ));
+
+    ),
+    ( 
+     Name    : 'RobinSon Vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 5;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 1, 1,
+                      -1, -2, 1,
+                      -1, 1, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'MDif horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 12;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1,-1,-1, 0,
+                      -1,-2,-3,-2,-1,
+                       0, 0, 0, 0, 0,
+                       1, 2, 3, 2, 1,
+                       0, 1, 1, 1, 0
+               ));
+    ),
+    ( 
+     Name    : 'MDif vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 12;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1, 0, 1, 0,
+                      -1,-2, 0, 2, 1,
+                      -1,-3, 0, 3, 1,
+                      -1,-2, 0, 2, 1,
+                       0,-1, 0, 1, 0
+                    ));
+    ),
+    ( 
+     Name    : 'Différence Gaussienne';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 28;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1, 0, 1, 0,
+                      -1,-2, 0, 2, 1,
+                      -1,-3, 0, 3, 1,
+                      -1,-2, 0, 2, 1,
+                       0,-1, 0, 1, 0
+               ));
+    ),
+    ( 
+     Name    : 'Detection ligne horizontale';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, -1, -1,
+                       2,  2,  2,
+                      -1, -1, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne verticale';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,  2, -1,
+                      -1,  2, -1,
+                      -1,  2, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne +45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, -1,  2,
+                      -1,  2, -1,
+                       2, -1, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne -45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 2, -1, -1,
+                      -1,  2, -1,
+                      -1, -1,  2
+               ));
+
+    ),
+    ( 
+     Name    : 'Laplace Gaussien connexités 4';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0,-1, 0,
+                      -1, 4,-1,
+                       0,-1, 0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace Gaussien connexités 8';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : -1;
+     Divisor : 8;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                      -1, 8,-1,
+                      -1,-1,-1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, -1,  0,
+                       0,  2,  0,
+                       0, -1,  0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0,  0,  0,
+                      -1,  2, -1,
+                       0,  0,  0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace diagonal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -1,  0, -1,
+                        0,  4,  0,
+                       -1,  0, -1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace discret';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1,  1, 1,
+                       1, -8, 1,
+                       1,  1, 1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace Robinson';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1,-2, 1,
+                      -2, 4,-2,
+                       1,-2, 1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace 3x3 OmniDir';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                      -1, 8,-1,
+                      -1,-1,-1
+               ));
+    ),
+    ( 
+     Name    : 'Laplace Gaussien 5x5';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -4;
+     Divisor : 16;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0, 0,-1, 0, 0,
+                       0,-1,-2,-1, 0,
+                      -1,-2,16,-2,-1,
+                       0,-1,-2,-1, 0,
+                       0, 0,-1, 0, 0
+               ));
+    ),
+    ( 
+     Name    : 'Laplace 5x5 Omnidir';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (-1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,24,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1
+                ));
+    ),
+    ( 
+     Name    : 'Sharpen 3x3';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 :(-1,-1,-1,
+                     -1, 9,-1,
+                     -1,-1,-1
+                    ));
+    ),
+    ( 
+     Name    : 'Sharpen 5x5';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (-1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,25,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1
+               ));
+    ),
+    ( 
+     Name    : 'Amélioration des contour'; 
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 :(-1,-2,-1,
+                     -2,16,-2,
+                     -1,-2,-1
+                    ));
+    ),
+    ( 
+    Name    : 'Contour Epais';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias    : 0;
+    Divisor : 4;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 1,  3, 1,
+                     3,-16, 3,
+                     1,  3,  1
+                   ));
+    ),
+    ( 
+    Name    : 'Contour Fin';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias    : 0;
+    Divisor : 4;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 0, 1, 0,
+                     1,-4, 1,
+                     0, 1, 0
+                   ));
+    ),
+    ( 
+    Name :'Trace contour';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:240; 
+    Divisor:4; 
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(-6,-2,-6,
+                    -1,32,-1,
+                    -6,-2,-6 ));
+
+
+    ),
+    ( 
+    Name :'Glow';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:8;
+    MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (1, 2,   2, 2, 1,
+                      2, 0,   0, 0, 2,
+                      2, 0, -20, 0, 2,
+                      2, 0,   0, 0, 2,
+                      1, 2,   2, 2, 1
+               ));
+
+
+    ),
+    ( 
+    Name :'Waggle';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:3;
+    MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+    MatrixSize : 7;
+    Matrix  : (_7 :( 0, 1, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 1,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 1, 0, 0, 0, 0
+                  ));
+    ),
+    ( 
+    Name :'Negate';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:255;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0, 0, 0,
+                    0,-1, 0,
+                    0, 0, 0
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:1; 
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(2, 0, 0,
+                    0,-1, 0,
+                    0, 0,-1
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss Doux';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:192;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0,-1, 0,
+                    0, 0, 0,
+                    0, 1, 0
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss Moyen';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:192;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0,-2, 0,
+                    0, 0, 0,
+                    0, 2, 0
+                  ));
+    ),
+    ( 
+    Name :'Emboss Color';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(-1,-1,-1,
+                     0, 1, 0,
+                     1, 1, 1
+                   ));
+    ),
+    ( 
+    Name :'Différence Gaussienne (DOG) 2nd Degré';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:0;
+    Divisor:7;
+    MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+    MatrixSize : 7;
+    Matrix  : (_7 :( 0, 0, 1, 1, 1, 0, 0,
+                     0, 1, 1, 1, 1, 1, 0,
+                     1, 1,-1,-4,-1, 1, 1,
+                     1, 1,-1,-8,-1, 1, 1,
+                     1, 1,-1,-4,-1, 1, 1,
+                     0, 1, 1, 1, 1, 1, 0,
+                     0, 0, 1, 1, 1, 0, 0
+                  ));
+    ),
+    ( 
+    Name :'Emboss Color +';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 2,  3, -3,
+                     1, -1,  1,
+                    -2,  1, -2
+                   ));
+    ),
+    ( 
+    Name :'Ghost';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:-29;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 11,-33, -4,
+                     3,  -4, -3,
+                    36, -40,  3
+                   ));
+    ),
+    ( 
+    Name :'Freeze';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:-1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 18,-19, 15,
+                    -14,  5, -6,
+                      8,-17,  7
+                   ));
+    ),
+    ( 
+    Name :'Fuzzy glass';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:7;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 0, 20, 0,
+                    20,-59,20,
+                     0, 13, 0
+                   ));
+    )
+  );</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZRect"></span><code>function <b>BZRect</b>(aLeft, aTop, aRight, aBottom : Longint) : <a  href="BZGraphic.TBZRect.html">TBZRect</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation rapide d'un <a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBZImageFileFormats"></span><code>Function <b>GetBZImageFileFormats</b>: <a  href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Lecture de la liste des formats &quot;Image&quot; supportés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZImageFileFormatExtensionByIndex"></span><code>Function <b>BZImageFileFormatExtensionByIndex</b>(index: Integer): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'extension de l'index &quot;index&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RegisterRasterFormat"></span><code>Procedure <b>RegisterRasterFormat</b>(Const AExtension, ADescription: String; AClass: <a  href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enregistrement d'un type de format</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UnregisterRasterFormat"></span><code>Procedure <b>UnregisterRasterFormat</b>(AClass: <a  href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Annulation d'un type de format</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Compute_BytesPerLine"></span><code>function <b>Compute_BytesPerLine</b>(AWidth: Cardinal; ABitsPerPixel: Byte; ALineEnd: <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a>): PtrUInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul le nombre d'octets par ligne en fonction, du nombre de bits par pixel, de la longueur de la ligne et enfin du nombre de bits. <br> <b>nb</b> : la ligne doit être alignée.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Compute_BitsPerLine"></span><code>function <b>Compute_BitsPerLine</b>(AWidth: Cardinal; ABitsPerPixel: Byte; ALineEnd: <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a>): PtrUInt;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul le nombre de bits par ligne en fonction, du nombre de bits par pixel, de la longueur de la ligne et enfin du nombre de bits. <br> <b>nb</b> : la ligne doit être alignée.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="KeepAspectRatio"></span><code>procedure <b>KeepAspectRatio</b>(Const SrcW, SrcH : Integer; Var NewWidth, NewHeight : Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul les nouvelles dimensions d'une image en conservant les proportions</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointInCircle"></span><code>function <b>PointInCircle</b>(const px,py,cx,cy: Integer; const Radius:Integer): boolean; inline;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si un point aux coordonées (px,py) se trouve dans le cercle à la postion (cx,cy) et de radius &quot;Radius)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OverlapQuadrangle"></span><code>function <b>OverlapQuadrangle</b>(const Q1, Q2 : <a  href="BZGraphic.html#TBZQuadrangle2D">TBZQuadrangle2D</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si deux <a class="normal" href="BZGraphic.html#TBZQuadrangle2D">TBZQuadrangle2D</a> se chevauche</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RotateArrayOfPoints"></span><code>procedure <b>RotateArrayOfPoints</b>(Var Points : Array of <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>; xOrg, yOrg: Integer; Angle : Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Effectue une rotation des points contenus dans le tableaux &quot;Points&quot; d'angle &quot;Angle&quot; en degré autours du point (xOrg, yOrg)</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPoint"></span><code><b>TBZPoint</b> = <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de convenance pour définir un point 2D de type Integer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPoint"></span><code><b>PBZPoint</b> = &circ;<a  href="BZGraphic.html#TBZPoint">TBZPoint</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeur vers un <a class="normal" href="BZGraphic.html#TBZPoint">TBZPoint</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZRectVectorType"></span><code><b>TBZRectVectorType</b> = packed array[0..3] of Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau pour la représentation d'un rectangle virtuel (Integer)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZRect"></span><code><b>PBZRect</b> = &circ;<a  href="BZGraphic.TBZRect.html">TBZRect</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeur vers un <a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZFloatRectVectorType"></span><code><b>TBZFloatRectVectorType</b> = packed array[0..3] of Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau pour la représentation d'un rectangle virtuel e,n virgule flottante (Single)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZQuadrangle2D"></span><code><b>TBZQuadrangle2D</b> = Array[0..3] of <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+TODO : Faire un Enregistrment Avancer et à passer dans BZGeoTool.pas. A voir.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZHistogramChannel"></span><code><b>TBZHistogramChannel</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Choix du canal de l'histogramme</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="hcLuminosity">hcLuminosity</span></li>
+<li>
+<span id="hcRed">hcRed</span></li>
+<li>
+<span id="hcGreen">hcGreen</span></li>
+<li>
+<span id="hcBlue">hcBlue</span></li>
+<li>
+<span id="hcHue">hcHue</span></li>
+<li>
+<span id="hcSaturation">hcSaturation</span></li>
+<li>
+<span id="hcLuminance">hcLuminance</span></li>
+<li>
+<span id="hcValue">hcValue</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZHistorgramDrawMode"></span><code><b>TBZHistorgramDrawMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de l'histogramme</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="hdmRBGLuminosity">hdmRBGLuminosity</span></li>
+<li>
+<span id="hdmRGB">hdmRGB</span></li>
+<li>
+<span id="hdmLuminosity">hdmLuminosity</span></li>
+<li>
+<span id="hdmRed">hdmRed</span></li>
+<li>
+<span id="hdmGreen">hdmGreen</span></li>
+<li>
+<span id="hdmBlue">hdmBlue</span></li>
+<li>
+<span id="hdmHue">hdmHue</span></li>
+<li>
+<span id="hdmSaturation">hdmSaturation</span></li>
+<li>
+<span id="hdmLuminance">hdmLuminance</span></li>
+<li>
+<span id="hdmValue">hdmValue</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZHistogramArray"></span><code><b>TBZHistogramArray</b> = array[0..255] of integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau de stockage des valeurs pour les histogrammes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZGetPixelSampleMethod"></span><code><b>TBZGetPixelSampleMethod</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enumération des méthode de suréchantillionnage</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="psmDefault">psmDefault</span></li>
+<li>
+<span id="psmNeighbour">psmNeighbour</span></li>
+<li>
+<span id="psmBilinear">psmBilinear</span></li>
+<li>
+<span id="psmBicubic">psmBicubic</span></li>
+<li>
+<span id="psmMean">psmMean</span></li>
+<li>
+<span id="psmMedian">psmMedian</span></li>
+<li>
+<span id="psmMin">psmMin</span></li>
+<li>
+<span id="psmMax">psmMax</span></li>
+<li>
+<span id="psmMinMax">psmMinMax</span></li>
+<li>
+<span id="psmSubSampling">psmSubSampling</span></li>
+<li>
+<span id="psmAdaptativeSubSampling">psmAdaptativeSubSampling</span></li>
+<li>
+<span id="psmCustom">psmCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapDrawMode"></span><code><b>TBZBitmapDrawMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mode de dessin des pixels</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="dmSet">dmSet</span></li>
+<li>
+<span id="dmSetAlpha">dmSetAlpha</span></li>
+<li>
+<span id="dmCombine">dmCombine</span></li>
+<li>
+<span id="dmCustom">dmCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPixelEdgeAction"></span><code><b>TBZPixelEdgeAction</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mode de traitement pour les pixels sur les bords</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="peaZero">peaZero</span></li>
+<li>
+<span id="peaClamp">peaClamp</span></li>
+<li>
+<span id="peaWarp">peaWarp</span></li>
+<li>
+<span id="peaReflect">peaReflect</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMorphologicalOperator"></span><code><b>TBZMorphologicalOperator</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de filtre morphologique de base</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="moErode">moErode</span></li>
+<li>
+<span id="moDilate">moDilate</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapAlphaMode"></span><code><b>TBZBitmapAlphaMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition du mode de composition pour le canal alpha</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="amNone">amNone</span></li>
+<li>
+<span id="amOpaque">amOpaque</span></li>
+<li>
+<span id="amAlpha">amAlpha</span></li>
+<li>
+<span id="amAlphaBlend">amAlphaBlend</span></li>
+<li>
+<span id="amAlphaBlendHQ">amAlphaBlendHQ</span></li>
+<li>
+<span id="amBlend">amBlend</span></li>
+<li>
+<span id="amAlphaSrc">amAlphaSrc</span></li>
+<li>
+<span id="amAlphaDst">amAlphaDst</span></li>
+<li>
+<span id="amAlphaCheck">amAlphaCheck</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapBlendMode"></span><code><b>TBZBitmapBlendMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition de convenance, des modes de compositions pour les couleurs RGB (Voir aussi : TBZBitmapCombineMode).</p>
+<p>
+ <br> cf : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://www.pegtop.net/delphi/articles/blendmodes/">http://www.pegtop.net/delphi/articles/blendmodes/</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Blend_modes">https://en.wikipedia.org/wiki/Blend_modes</a></p></li>
+</ul>
+
+<p></p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bmNormal">bmNormal</span></li>
+<li>
+<span id="bmAdd">bmAdd</span></li>
+<li>
+<span id="bmSub">bmSub</span></li>
+<li>
+<span id="bmMul">bmMul</span></li>
+<li>
+<span id="bmDiv">bmDiv</span></li>
+<li>
+<span id="bmOr">bmOr</span></li>
+<li>
+<span id="bmXor">bmXor</span></li>
+<li>
+<span id="bmAnd">bmAnd</span></li>
+<li>
+<span id="bmDifference">bmDifference</span></li>
+<li>
+<span id="bmAverage">bmAverage</span></li>
+<li>
+<span id="bmOverlay">bmOverlay</span></li>
+<li>
+<span id="bmScreen">bmScreen</span></li>
+<li>
+<span id="bmStamp">bmStamp</span></li>
+<li>
+<span id="bmHeat">bmHeat</span></li>
+<li>
+<span id="bmFreeze">bmFreeze</span></li>
+<li>
+<span id="bmGlow">bmGlow</span></li>
+<li>
+<span id="bmReflect">bmReflect</span></li>
+<li>
+<span id="bmExclusion">bmExclusion</span></li>
+<li>
+<span id="bmNegate">bmNegate</span></li>
+<li>
+<span id="bmLighten">bmLighten</span></li>
+<li>
+<span id="bmDarken">bmDarken</span></li>
+<li>
+<span id="bmColorBurn">bmColorBurn</span></li>
+<li>
+<span id="bmSoftColorBurn">bmSoftColorBurn</span></li>
+<li>
+<span id="bmInverseColorBurn">bmInverseColorBurn</span></li>
+<li>
+<span id="bmColorDodge">bmColorDodge</span></li>
+<li>
+<span id="bmSoftColorDodge">bmSoftColorDodge</span></li>
+<li>
+<span id="bmInverseColorDodgen">bmInverseColorDodgen</span></li>
+<li>
+<span id="bmInterpolation">bmInterpolation</span></li>
+<li>
+<span id="bmHardLight">bmHardLight</span></li>
+<li>
+<span id="bmSoftLight">bmSoftLight</span></li>
+<li>
+<span id="bmBrightLight">bmBrightLight</span></li>
+<li>
+<span id="bmLinearLight">bmLinearLight</span></li>
+<li>
+<span id="bmVividLight">bmVividLight</span></li>
+<li>
+<span id="bmPinLight">bmPinLight</span></li>
+<li>
+<span id="bmHardMix">bmHardMix</span></li>
+<li>
+<span id="bmHue">bmHue</span></li>
+<li>
+<span id="bmColor">bmColor</span></li>
+<li>
+<span id="bmValue">bmValue</span></li>
+<li>
+<span id="bmSaturation">bmSaturation</span></li>
+<li>
+<span id="bmLuminosity">bmLuminosity</span></li>
+<li>
+<span id="bmPhoenix">bmPhoenix</span></li>
+<li>
+<span id="bmGrainMerge">bmGrainMerge</span></li>
+<li>
+<span id="bmGrainExtract">bmGrainExtract</span></li>
+<li>
+<span id="bmRed">bmRed</span></li>
+<li>
+<span id="bmGreen">bmGreen</span></li>
+<li>
+<span id="bmBlue">bmBlue</span></li>
+<li>
+<span id="bmDissolve">bmDissolve</span></li>
+<li>
+<span id="bmErase">bmErase</span></li>
+<li>
+<span id="bmCustom">bmCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZTextureMappingMode"></span><code><b>TBZTextureMappingMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+TBZGradientType = (gtHorizontal, gtVertical, gtRadial, gtFromTopLeft, gtFromTopRight, gtDoubleHorz, gtDoubleVert);</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="tmmDefault">tmmDefault</span></li>
+<li>
+<span id="tmCenter">tmCenter</span></li>
+<li>
+<span id="tmmStretch">tmmStretch</span></li>
+<li>
+<span id="tmmStretchProportional">tmmStretchProportional</span></li>
+<li>
+<span id="tmmTiled">tmmTiled</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapFillType"></span><code><b>TBZBitmapFillType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition des modes de remplissage d'un bitmap</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bftNone">bftNone</span></li>
+<li>
+<span id="bftFlat">bftFlat</span></li>
+<li>
+<span id="bftGradient">bftGradient</span></li>
+<li>
+<span id="bftTextured">bftTextured</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCanvasBrushFillType"></span><code><b>TBZCanvasBrushFillType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition des modes de remplissage d'une brosse</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ftNone">ftNone</span></li>
+<li>
+<span id="ftSolid">ftSolid</span></li>
+<li>
+<span id="ftGradient">ftGradient</span></li>
+<li>
+<span id="ftTexture">ftTexture</span></li>
+<li>
+<span id="ftPattern">ftPattern</span></li>
+<li>
+<span id="ftCustom">ftCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapAntiAliasMode"></span><code><b>TBZBitmapAntiAliasMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition des mode d'anticrénelage</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="aamNone">aamNone</span></li>
+<li>
+<span id="aam2x">aam2x</span></li>
+<li>
+<span id="aam4x">aam4x</span></li>
+<li>
+<span id="aam8x">aam8x</span></li>
+<li>
+<span id="aam16x">aam16x</span></li>
+<li>
+<span id="aam32x">aam32x</span></li>
+<li>
+<span id="aamCustom">aamCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapLineOrder"></span><code><b>TBZBitmapLineOrder</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ordre des lignes c-a-d l'origine en haut à gauche ou en bas à gauche</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bloTopToBottom">bloTopToBottom</span></li>
+<li>
+<span id="bloBottomToTop">bloBottomToTop</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapBitOrder"></span><code><b>TBZBitmapBitOrder</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ordre des bits pour les formats couleurs &lt; 8bits</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bboBitsInOrder">bboBitsInOrder</span>: Bit 0 is pixel 0</li>
+<li>
+<span id="bboReversedBits">bboReversedBits</span>: Bit 0 is pixel 7 (Bit 1 is pixel 6, ...)</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapLineEnd"></span><code><b>TBZBitmapLineEnd</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Alignement de la taille d'une ligne suivant l'unité utilisé</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bleNoBoundary">bleNoBoundary</span>: no gap at end of lines</li>
+<li>
+<span id="bleByteBoundary">bleByteBoundary</span>: each line starts at byte boundary. For example : If BitsPerPixel=3 and Width=1, each line has a gap of 5 unused bits at the end.</li>
+<li>
+<span id="bleWordBoundary">bleWordBoundary</span>: each line starts at word (16bit) boundary</li>
+<li>
+<span id="bleDWordBoundary">bleDWordBoundary</span>: each line starts at double word (32bit) boundary</li>
+<li>
+<span id="bleQWordBoundary">bleQWordBoundary</span>: each line starts at quad word (64bit) boundary</li>
+<li>
+<span id="bleDQWordBoundary">bleDQWordBoundary</span>: each line starts at double quad word (128bit) boundary</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZStrokeStyle"></span><code><b>TBZStrokeStyle</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type pour le dessin du conteur</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ssClear">ssClear</span></li>
+<li>
+<span id="ssSolid">ssSolid</span></li>
+<li>
+<span id="ssPattern">ssPattern</span></li>
+<li>
+<span id="ssGradient">ssGradient</span></li>
+<li>
+<span id="ssTexture">ssTexture</span></li>
+<li>
+<span id="ssCustom">ssCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZStrokeMode"></span><code><b>TBZStrokeMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition du mode de dessin des contours</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="smInner">smInner</span></li>
+<li>
+<span id="smOuter">smOuter</span></li>
+<li>
+<span id="smAround">smAround</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBrushStyle"></span><code><b>TBZBrushStyle</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Style des differentes brosses pour le Canvas</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bsClear">bsClear</span></li>
+<li>
+<span id="bsSolid">bsSolid</span></li>
+<li>
+<span id="bsGradient">bsGradient</span></li>
+<li>
+<span id="bsTexture">bsTexture</span></li>
+<li>
+<span id="bsPattern">bsPattern</span></li>
+<li>
+<span id="bsCustom">bsCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPatternStyle"></span><code><b>TBZPatternStyle</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Style des pattern prédéfinis</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="psClear">psClear</span></li>
+<li>
+<span id="psSolid">psSolid</span></li>
+<li>
+<span id="psDash">psDash</span></li>
+<li>
+<span id="psDot">psDot</span></li>
+<li>
+<span id="psDashDot">psDashDot</span></li>
+<li>
+<span id="psDashDotDot">psDashDotDot</span></li>
+<li>
+<span id="psCustom">psCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZTextureMappingKind"></span><code><b>TBZTextureMappingKind</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de mapping à appliquer pour le remplissage avec une texture. (<a class="normal" href="BZGraphic.html#ssTexture">ssTexture</a>, <a class="normal" href="BZGraphic.html#bsTexture">bsTexture</a>)</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="tmkDefault">tmkDefault</span></li>
+<li>
+<span id="tmkAutoTile">tmkAutoTile</span></li>
+<li>
+<span id="tmkTiled">tmkTiled</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCanvasPenStrokePattern"></span><code><b>TBZCanvasPenStrokePattern</b> = array of boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau type pour definir une &quot;Patterne&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBrushPattern"></span><code><b>TBZBrushPattern</b> = array[0..31] of <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau type pour definir une &quot;Patterne&quot; pour la brosse</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZBrushPattern"></span><code><b>PBZBrushPattern</b> = &circ;<a  href="BZGraphic.html#TBZBrushPattern">TBZBrushPattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZJoinStyle"></span><code><b>TBZJoinStyle</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Style des jointures de contour</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="jsMitter">jsMitter</span></li>
+<li>
+<span id="jsRounded">jsRounded</span></li>
+<li>
+<span id="jsBevel">jsBevel</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCapsMode"></span><code><b>TBZCapsMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Style de debut et de fin de ligne et ou chemins</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="cmNone">cmNone</span></li>
+<li>
+<span id="cmRounded">cmRounded</span></li>
+<li>
+<span id="cmArrow">cmArrow</span></li>
+<li>
+<span id="cCircle">cCircle</span></li>
+<li>
+<span id="cmSquare">cmSquare</span></li>
+<li>
+<span id="cmCustom">cmCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZImageRawPaletteFormat"></span><code><b>TBZImageRawPaletteFormat</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Format des palette utilisés dans les données brutes (provenant d'un fichier par exemple ) (Source : GraphicEx)</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="pfInterlaced8Triple">pfInterlaced8Triple</span>: 24bits RGB, 8 bits par canal</li>
+<li>
+<span id="pfInterlaced8Quad">pfInterlaced8Quad</span>: 32bits RGB.Reserved, 8 bits par canal (Le 4eme canal est reservé pour windows dans sa gestion des palettes)</li>
+<li>
+<span id="pfPlane8Triple">pfPlane8Triple</span>: 3 plans séparés, 8 bits par canal</li>
+<li>
+<span id="pfPlane8Quad">pfPlane8Quad</span>: 4 plans séparés, 8 bits par canal</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapAlphaSetMode"></span><code><b>TBZBitmapAlphaSetMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définit comment la Canal Alpha doit être définit dans un bitmap : </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a class="normal" href="BZGraphic.html#asmDefault">asmDefault</a> : Utilise le canal alpha non modifié du bitmap par defaut</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmAlphaFromIntensity">asmAlphaFromIntensity</a> : La valeur du canal alpha est déduite des autres intensité des composants RVB (plus lumineux, plus opaque)</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmSuperBlackTransparent">asmSuperBlackTransparent</a> : Les pixels avec une couleur RVB de (0, 0, 0) sont complètement transparent, les autres reste inchangés</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmLuminance">asmLuminance</a> : La valeur de luminance est calculée pour chaque pixel</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmLuminanceSqrt">asmLuminanceSqrt</a> : Identique à bamLuminance mais avec un <a class="normal" href="BZMath.html#Sqrt">Sqrt</a> (Luminance)</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmOpaque">asmOpaque</a> : Le canal alpha est uniformément réglé sur 255</p></li>
+</ul>
+
+<p><br>
+
+<p><b>Note</b> : Luminance = Intensité , mais plus précis cf : fonction <a class="normal" href="BZBitmap.TBZBitmapColorFilters.html#SetAlpha">TBZBitmapColorFilters.SetAlpha</a> <br> TODO asmCustom : Le canal alpha est défini par l'utilisateur Porte ouverte pour une fonction &quot;CallBack&quot;</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="asmDefault">asmDefault</span></li>
+<li>
+<span id="asmAlphaFromIntensity">asmAlphaFromIntensity</span></li>
+<li>
+<span id="asmSuperBlackTransparent">asmSuperBlackTransparent</span></li>
+<li>
+<span id="asmLuminance">asmLuminance</span></li>
+<li>
+<span id="asmLuminanceSqrt">asmLuminanceSqrt</span></li>
+<li>
+<span id="asmOpaque">asmOpaque</span></li>
+<li>
+<span id="asmInverseLuminance">asmInverseLuminance</span></li>
+<li>
+<span id="asmInverseLuminanceSqrt">asmInverseLuminanceSqrt</span></li>
+<li>
+<span id="asmAlphaFromColor">asmAlphaFromColor</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZDetectEdgeFilterMode"></span><code><b>TBZDetectEdgeFilterMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mode de detection des contours par convolution disponibles</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="defPrewitt">defPrewitt</span></li>
+<li>
+<span id="defSobel">defSobel</span></li>
+<li>
+<span id="defRoberts">defRoberts</span></li>
+<li>
+<span id="defKirsch">defKirsch</span></li>
+<li>
+<span id="defScharr">defScharr</span></li>
+<li>
+<span id="defRobinson">defRobinson</span></li>
+<li>
+<span id="defMDif">defMDif</span></li>
+<li>
+<span id="defLaplace">defLaplace</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMatrixConvolutionFilter3x3"></span><code><b>TBZMatrixConvolutionFilter3x3</b> = Array [0..8] of Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau pour stocker des matrices de convolution 3x3</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMatrixConvolutionFilter5x5"></span><code><b>TBZMatrixConvolutionFilter5x5</b> = Array [0..24] of Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau pour stocker des matrices de convolution 5x5</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMatrixConvolutionFilter7x7"></span><code><b>TBZMatrixConvolutionFilter7x7</b> = Array [0..48] of Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau pour stocker des matrices de convolution 7x7</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMatrixConvolutionType"></span><code><b>TBZMatrixConvolutionType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de la matrice de convolution</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="mct3x3">mct3x3</span></li>
+<li>
+<span id="mct5x5">mct5x5</span></li>
+<li>
+<span id="mct7x7">mct7x7</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZConvolutionFilterCategory"></span><code><b>TBZConvolutionFilterCategory</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="cfcAntialiasing">cfcAntialiasing</span></li>
+<li>
+<span id="cfcEdgeDetect">cfcEdgeDetect</span></li>
+<li>
+<span id="cfcEnhanceEdge">cfcEnhanceEdge</span></li>
+<li>
+<span id="cfcEnhanceColor">cfcEnhanceColor</span></li>
+<li>
+<span id="cfcArtistic">cfcArtistic</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZScanLineLUT"></span><code><b>TBZScanLineLUT</b> = Array Of DWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tableau de DWord servant a stocker les adresses de début de chaque ligne du bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapClass"></span><code><b>TBZBitmapClass</b> = Class Of <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de classe descendante de <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cPixelDrawModeStr"></span><code><b>cPixelDrawModeStr</b>   : Array[0..3] of String  = ('Set', 'Set Alpha', 'Combine', 'Custom');</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition en chaine de caractères des modes de dessin</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cAlphaDrawModeStr"></span><code><b>cAlphaDrawModeStr</b>   : Array[0..8] of String  = ('Aucun', 'Opaque', 'Alpha', 'Alpha Blend', 'Alpha Blend HQ', 'Blend', 'AlphaSrc', 'AlphaDst', 'AlphaCheck');</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition en chaine de caractères des modes de prise en charge du canal Alpha</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZConvolutionFilterPresets"></span><code><b>BZConvolutionFilterPresets</b> : Array[0..63] of <a  href="BZGraphic.TBZConvolutionFilter.html">TBZConvolutionFilter</a> = (
+    ( 
+      Name     : 'Neutre';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (0,0,0,
+                     0,1,0,
+                     0,0,0
+                ));
+    ),
+    ( 
+      Name    : 'Moyenne 3x3';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 9;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (1,1,1,
+                     1,1,1,
+                     1,1,1
+                ));
+    ),
+    ( 
+      Name    : 'Moyenne 5x5';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 25;
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 3;
+      Matrix  : (_5 : ( 1, 1, 2, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1,
+                        1, 1, 1, 1, 1
+                       ));
+     ),
+     ( 
+      Name    : 'Flou Gaussien 3x3';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 16;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 : (1,2,1,
+                       2,4,2,
+                       1,2,1
+                 ));
+     ),
+     ( 
+      Name    : 'Flou Gaussien 3x3 Doux';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 32;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 : (1, 3,1,
+                       3,16,3,
+                       1, 3,1
+                 ));
+     ),
+    ( 
+      Name    : 'Flou Gaussien 5x5 Fort';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 64;
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 3;
+      Matrix  : (_5 : ( 0, 1, 2, 1, 0,
+                        1, 4, 6, 4, 1,
+                        2, 6, 8, 6, 2,
+                        1, 4, 6, 4, 1,
+                        0, 1, 2, 1, 0
+                       ));
+     ),
+     ( 
+     
+     
+     
+     
+     
+     
+
+      Name    : 'Flou Gaussien 5x5';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 159; 
+      MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+      MatrixSize : 5;
+      
+      
+      
+      
+      
+      
+      Matrix  : (_5 : ( 2, 4, 5, 4, 2,
+                        4, 9,12, 9, 4,
+                        5,12,15,12, 5,
+                        4, 9,12, 9, 4,
+                        2, 4, 5, 4, 2
+                       ));
+      ),
+      ( 
+      Name    : 'Flou Gaussien 7x7';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 999;
+      MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+      MatrixSize : 7;
+      Matrix  : (_7 : ( 1, 4, 8,10, 8, 4, 1,
+                        4,12,25,29,25,12, 4,
+                        8,25,49,58,49,25, 8,
+                       10,29,58,67,58,29,10,
+                        8,25,49,58,49,25, 8,
+                        4,12,25,29,25,12, 4,
+                        1, 4, 8,10, 8, 4, 1
+                      ));
+     ),
+     ( 
+      Name    : 'Flou Bartlett 7x7';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 256;
+      MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+      MatrixSize : 7;
+      Matrix  : (_7 : ( 1, 2, 3, 4, 3, 2, 1,
+                        2, 4, 6, 8, 6, 4, 2,
+                        3, 6, 9,12, 9, 6, 3,
+                        4, 8,12,16,12, 8, 4,
+                        3, 6, 9,12, 9, 6, 3,
+                        2, 4, 6, 8, 6, 4, 2,
+                        1, 2, 3, 4, 3, 2, 1
+                       ));
+      ),
+     ( 
+      Name    : 'Renforcement des contours'; 
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix :(_3 : (-1,-1,-1,
+                     -1,9,-1,
+                     -1,-1,-1
+              ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 12;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,4,1,
+                      1,1,1
+                ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas doux';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 20;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,12,1,
+                      1,1,1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe bas fort';
+      Category : <a  href="BZGraphic.html#cfcAntialiasing">cfcAntialiasing</a>;
+      Bias    : 0;
+      Divisor : 10;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(1,1,1,
+                      1,2,1,
+                      1,1,1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 0,-1, 0,
+                      -1, 5,-1,
+                       0,-1, 0
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut doux';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :(-1 , 1,-1,
+                       1,  4, 1,
+                      -1 , 1,-1
+                 ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut moyen';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 1;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 1 , -2,  1,
+                      -2,   5, -2,
+                       1 , -2,  1
+                     ));
+      ),
+     ( 
+      Name    : 'Filtre passe haut fort';
+      Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+      Bias    : 0;
+      Divisor : 16;
+      MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+      MatrixSize : 3;
+      Matrix  : (_3 :( 0 , -1,  0,
+                      -1,  20, -1,
+                       0 , -1,  0
+                     ));
+      ),
+    ( 
+     Name    : 'Prewitt horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 3;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                       0, 0, 0,
+                       1, 1, 1
+               ));
+    ),
+    ( 
+     Name    : 'Prewitt vertictal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 3;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 0, 1,
+                      -1, 0, 1,
+                      -1, 0, 1
+               ));
+    ),
+    ( 
+     Name    : 'Roberts -45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, 0, 0,
+                       0, 0, 1,
+                       0,-1, 0
+               ));
+    ),
+    ( 
+     Name    : 'Roberts +45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, 0, 0,
+                       0,-1, 0,
+                       0, 0, 1
+               ));
+    ),
+    ( 
+     Name    : 'Sobel horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -1,-2,-1,
+                        0, 0, 0,
+                        1, 2, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'Sobel vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 0, 1,
+                      -2, 0, 2,
+                      -1, 0, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'Kirsch horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 15;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-3,-3,-3,
+                      -3, 0,-3,
+                       5, 5, 5
+               ));
+    ),
+    ( 
+     Name    : 'Kirsch vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 15;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -3,-3, 5,
+                       -3, 0, 5,
+                       -3,-3, 5
+               ));
+    ),
+    ( 
+     Name    : 'Scharr horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 10;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-3, -1, -3,
+                       0,  0,  0,
+                       3,  1,  3
+               ));
+    ),
+    ( 
+     Name    : 'Scharr vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 10;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -3,  0,  3,
+                       -1,  0,  1,
+                       -3,  0,  3
+               ));
+    ),
+    ( 
+     Name    : 'RobinSon Horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 5;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1, 1, 1,
+                       1, -2, 1,
+                      -1,-1,-1
+               ));
+
+    ),
+    ( 
+     Name    : 'RobinSon Vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 5;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, 1, 1,
+                      -1, -2, 1,
+                      -1, 1, 1
+               ));
+
+    ),
+    ( 
+     Name    : 'MDif horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 12;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1,-1,-1, 0,
+                      -1,-2,-3,-2,-1,
+                       0, 0, 0, 0, 0,
+                       1, 2, 3, 2, 1,
+                       0, 1, 1, 1, 0
+               ));
+    ),
+    ( 
+     Name    : 'MDif vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 12;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1, 0, 1, 0,
+                      -1,-2, 0, 2, 1,
+                      -1,-3, 0, 3, 1,
+                      -1,-2, 0, 2, 1,
+                       0,-1, 0, 1, 0
+                    ));
+    ),
+    ( 
+     Name    : 'Différence Gaussienne';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 28;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0,-1, 0, 1, 0,
+                      -1,-2, 0, 2, 1,
+                      -1,-3, 0, 3, 1,
+                      -1,-2, 0, 2, 1,
+                       0,-1, 0, 1, 0
+               ));
+    ),
+    ( 
+     Name    : 'Detection ligne horizontale';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, -1, -1,
+                       2,  2,  2,
+                      -1, -1, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne verticale';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,  2, -1,
+                      -1,  2, -1,
+                      -1,  2, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne +45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1, -1,  2,
+                      -1,  2, -1,
+                       2, -1, -1
+               ));
+
+    ),
+    ( 
+     Name    : 'Detection ligne -45°';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 2, -1, -1,
+                      -1,  2, -1,
+                      -1, -1,  2
+               ));
+
+    ),
+    ( 
+     Name    : 'Laplace Gaussien connexités 4';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0,-1, 0,
+                      -1, 4,-1,
+                       0,-1, 0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace Gaussien connexités 8';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : -1;
+     Divisor : 8;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                      -1, 8,-1,
+                      -1,-1,-1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace horizontal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0, -1,  0,
+                       0,  2,  0,
+                       0, -1,  0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace vertical';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 0,  0,  0,
+                      -1,  2, -1,
+                       0,  0,  0
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace diagonal';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( -1,  0, -1,
+                        0,  4,  0,
+                       -1,  0, -1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace discret';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1,  1, 1,
+                       1, -8, 1,
+                       1,  1, 1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace Robinson';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -1;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : ( 1,-2, 1,
+                      -2, 4,-2,
+                       1,-2, 1
+                 ));
+    ),
+    ( 
+     Name    : 'Laplace 3x3 OmniDir';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 : (-1,-1,-1,
+                      -1, 8,-1,
+                      -1,-1,-1
+               ));
+    ),
+    ( 
+     Name    : 'Laplace Gaussien 5x5';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : -4;
+     Divisor : 16;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : ( 0, 0,-1, 0, 0,
+                       0,-1,-2,-1, 0,
+                      -1,-2,16,-2,-1,
+                       0,-1,-2,-1, 0,
+                       0, 0,-1, 0, 0
+               ));
+    ),
+    ( 
+     Name    : 'Laplace 5x5 Omnidir';
+     Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (-1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,24,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1
+                ));
+    ),
+    ( 
+     Name    : 'Sharpen 3x3';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 :(-1,-1,-1,
+                     -1, 9,-1,
+                     -1,-1,-1
+                    ));
+    ),
+    ( 
+     Name    : 'Sharpen 5x5';
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 1;
+     MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (-1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,25,-1,-1,
+                      -1,-1,-1,-1,-1,
+                      -1,-1,-1,-1,-1
+               ));
+    ),
+    ( 
+     Name    : 'Amélioration des contour'; 
+     Category : <a  href="BZGraphic.html#cfcEnhanceEdge">cfcEnhanceEdge</a>;
+     Bias    : 0;
+     Divisor : 4;
+     MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+     MatrixSize : 3;
+     Matrix  : (_3 :(-1,-2,-1,
+                     -2,16,-2,
+                     -1,-2,-1
+                    ));
+    ),
+    ( 
+    Name    : 'Contour Epais';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias    : 0;
+    Divisor : 4;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 1,  3, 1,
+                     3,-16, 3,
+                     1,  3,  1
+                   ));
+    ),
+    ( 
+    Name    : 'Contour Fin';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias    : 0;
+    Divisor : 4;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 0, 1, 0,
+                     1,-4, 1,
+                     0, 1, 0
+                   ));
+    ),
+    ( 
+    Name :'Trace contour';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:240; 
+    Divisor:4; 
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(-6,-2,-6,
+                    -1,32,-1,
+                    -6,-2,-6 ));
+
+
+    ),
+    ( 
+    Name :'Glow';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:8;
+    MatrixType : <a  href="BZGraphic.html#mct5x5">mct5x5</a>;
+     MatrixSize : 5;
+     Matrix  : (_5 : (1, 2,   2, 2, 1,
+                      2, 0,   0, 0, 2,
+                      2, 0, -20, 0, 2,
+                      2, 0,   0, 0, 2,
+                      1, 2,   2, 2, 1
+               ));
+
+
+    ),
+    ( 
+    Name :'Waggle';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:3;
+    MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+    MatrixSize : 7;
+    Matrix  : (_7 :( 0, 1, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 1,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 0, 0, 0,
+                     0, 0, 1, 0, 0, 0, 0
+                  ));
+    ),
+    ( 
+    Name :'Negate';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:255;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0, 0, 0,
+                    0,-1, 0,
+                    0, 0, 0
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:1; 
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(2, 0, 0,
+                    0,-1, 0,
+                    0, 0,-1
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss Doux';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:192;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0,-1, 0,
+                    0, 0, 0,
+                    0, 1, 0
+                  ));
+
+
+    ),
+    ( 
+    Name :'Emboss Moyen';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:192;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(0,-2, 0,
+                    0, 0, 0,
+                    0, 2, 0
+                  ));
+    ),
+    ( 
+    Name :'Emboss Color';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :(-1,-1,-1,
+                     0, 1, 0,
+                     1, 1, 1
+                   ));
+    ),
+    ( 
+    Name :'Différence Gaussienne (DOG) 2nd Degré';
+    Category : <a  href="BZGraphic.html#cfcEdgeDetect">cfcEdgeDetect</a>;
+    Bias:0;
+    Divisor:7;
+    MatrixType : <a  href="BZGraphic.html#mct7x7">mct7x7</a>;
+    MatrixSize : 7;
+    Matrix  : (_7 :( 0, 0, 1, 1, 1, 0, 0,
+                     0, 1, 1, 1, 1, 1, 0,
+                     1, 1,-1,-4,-1, 1, 1,
+                     1, 1,-1,-8,-1, 1, 1,
+                     1, 1,-1,-4,-1, 1, 1,
+                     0, 1, 1, 1, 1, 1, 0,
+                     0, 0, 1, 1, 1, 0, 0
+                  ));
+    ),
+    ( 
+    Name :'Emboss Color +';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 2,  3, -3,
+                     1, -1,  1,
+                    -2,  1, -2
+                   ));
+    ),
+    ( 
+    Name :'Ghost';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:-29;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 11,-33, -4,
+                     3,  -4, -3,
+                    36, -40,  3
+                   ));
+    ),
+    ( 
+    Name :'Freeze';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:-1;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 18,-19, 15,
+                    -14,  5, -6,
+                      8,-17,  7
+                   ));
+    ),
+    ( 
+    Name :'Fuzzy glass';
+    Category : <a  href="BZGraphic.html#cfcArtistic">cfcArtistic</a>;
+    Bias:0;
+    Divisor:7;
+    MatrixType : <a  href="BZGraphic.html#mct3x3">mct3x3</a>;
+    MatrixSize : 3;
+    Matrix  : (_3 :( 0, 20, 0,
+                    20,-59,20,
+                     0, 13, 0
+                   ));
+    )
+  );</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Filtres de &quot;convolution ou matricielle&quot; prédéfinis. <br> Sources : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://xphilipp.developpez.com/articles/filtres/">http://xphilipp.developpez.com/articles/filtres/</a></p></li>
+  <li><p><a  href="https://www.developpez.net/forums/d328817/general-developpement/algorithme-mathematiques/contribuez/image-gradient-hessienne-convolution/">https://www.developpez.net/forums/d328817/general-developpement/algorithme-mathematiques/contribuez/image-gradient-hessienne-convolution/</a></p></li>
+  <li><p><a  href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm">https://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm</a></p></li>
+  <li><p><a  href="http://lodev.org/cgtutor/filtering.html">http://lodev.org/cgtutor/filtering.html</a></p></li>
+  <li><p><a  href="https://docs.gimp.org/fr/plug-in-convmatrix.html">https://docs.gimp.org/fr/plug-in-convmatrix.html</a></p></li>
+  <li><p><a  href="http://www.roborealm.com/help/Convolution.php">http://www.roborealm.com/help/Convolution.php</a></p></li>
+  <li><p>Graphic32, BGRABitmap, Vampyre/FreeImage Lib</p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2018-07-11
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

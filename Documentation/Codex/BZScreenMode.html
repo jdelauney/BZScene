@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZScreenMode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZScreenMode</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient un composant <a class="normal" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a> pour interagir avec l'écran / bureau (changement du mode video, passage en plein écran).</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>11/06/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Basé sur le code de GLScene <a  href="http://www.sourceforge.net/glscene">http://www.sourceforge.net/glscene</a></p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Windows</li><li>x</li><li>xlib</li><li>xf86vmode</li><li>Forms</li><li>Controls</li><li>LCLVersion</li><li>Classes</li><li><a  href="BZSystem.html">BZSystem</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZScreenMode.TBZVideoMode.html"><code>TBZVideoMode</code></a></td>
+<td class="itemdesc">Descritption d'un mode vidéo</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZScreenMode.TBZScreenMode.html"><code>TBZScreenMode</code></a></td>
+<td class="itemdesc">Composant pour controler le mode video de(s) écran(s) et le comportement de la fen&circ;tre principale de l'application</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZScreenMode.html#GetIndexFromResolution">GetIndexFromResolution</a></b>(XRes, YRes, BPP: Integer): <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZScreenMode.html#SetFullscreenMode">SetFullscreenMode</a></b>(modeIndex: <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a>; displayFrequency: Integer = 0): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.html#RestoreDefaultScreenMode">RestoreDefaultScreenMode</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a></b> = 0 .. <a  href="BZScreenMode.html#MaxVideoModes">MaxVideoModes</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#PVideoMode">PVideoMode</a></b> = &circ;<a  href="BZScreenMode.TBZVideoMode.html">TBZVideoMode</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a></b> = procedure (Sender : TObject; ScreenWidth, ScreenHeight, ScreenDepth, ScreenFrequency: Integer; VideoModeIndex : <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a> ) of object;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#MaxVideoModes">MaxVideoModes</a></b> = 200;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vNumberVideoModes">vNumberVideoModes</a></b>: Integer = 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vCurrentVideoMode">vCurrentVideoMode</a></b>: Integer = 0;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vScreenModeChanged">vScreenModeChanged</a></b>: Boolean = false;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vVideoModes">vVideoModes</a></b>: array of <a  href="BZScreenMode.TBZVideoMode.html">TBZVideoMode</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vDisplay">vDisplay</a></b>: PDisplay;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vVideoModes">vVideoModes</a></b>: array of PXF86VidModeModeInfo;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZScreenMode.html#vDesktop">vDesktop</a></b>: TXF86VidModeModeInfo;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetIndexFromResolution"></span><code>function <b>GetIndexFromResolution</b>(XRes, YRes, BPP: Integer): <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Détermine l'index d'une résolution d'écran disponible la plus proche en fonction des valeurs données. La résolution d'écran renvoyée est toujours supérieure ou égal à XRes et YRes. Si la résolution n'est pas prise en charge, la valeur 0 est retournée, ce qui indique le mode par défaut.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SetFullscreenMode"></span><code>function <b>SetFullscreenMode</b>(modeIndex: <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a>; displayFrequency: Integer = 0): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Change le mode vidéo de l'écran en fonction de 'ModeIndex' dans la liste des modes videos disponibles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RestoreDefaultScreenMode"></span><code>procedure <b>RestoreDefaultScreenMode</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Restaure le mode vidéo par défaut</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZScreenModeResolution"></span><code><b>TBZScreenModeResolution</b> = 0 .. <a  href="BZScreenMode.html#MaxVideoModes">MaxVideoModes</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définition des bornes de l'ensemble des modes vidéo</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PVideoMode"></span><code><b>PVideoMode</b> = &circ;<a  href="BZScreenMode.TBZVideoMode.html">TBZVideoMode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeur sur un mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZScreenModeChangeVideoModeEvent"></span><code><b>TBZScreenModeChangeVideoModeEvent</b> = procedure (Sender : TObject; ScreenWidth, ScreenHeight, ScreenDepth, ScreenFrequency: Integer; VideoModeIndex : <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a> ) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Evènement déclancher lors d'un changement de mode video</p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxVideoModes"></span><code><b>MaxVideoModes</b> = 200;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vNumberVideoModes"></span><code><b>vNumberVideoModes</b>: Integer = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le nombre de mode video disponible</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vCurrentVideoMode"></span><code><b>vCurrentVideoMode</b>: Integer = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'index du mode video actuel de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vScreenModeChanged"></span><code><b>vScreenModeChanged</b>: Boolean = false;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Drapeau indiquant si le mode video à été changé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vVideoModes"></span><code><b>vVideoModes</b>: array of <a  href="BZScreenMode.TBZVideoMode.html">TBZVideoMode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Liste des modes videos disponibles (Windows)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vDisplay"></span><code><b>vDisplay</b>: PDisplay;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeur vers les propriétés d'affichage (Linux)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vVideoModes"></span><code><b>vVideoModes</b>: array of PXF86VidModeModeInfo;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Liste des modes videos disponibles (Linux)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vDesktop"></span><code><b>vDesktop</b>: TXF86VidModeModeInfo;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Informations video du bureau (Linux uniquement)</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-06-11
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

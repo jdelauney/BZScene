@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZLogger: Classe TBZLogFileDef</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZLogFileDef"></span><h1 class="cio">Classe TBZLogFileDef</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZLogger.html">BZLogger</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZLogFileDef = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe de gestion du nom du fichier journal, définition du mode d'accès et paramètres pour la générations des noms de fichiers.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TBZLogFileDef</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZLogger.TBZLogFileDef.html#Create">Create</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZLogger.TBZLogFileDef.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogFileDef.html#BuildSafeFileName">BuildSafeFileName</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#ddname">ddname</a></b>: string read FDdn write FDdn;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#path">path</a></b>: string read FPath write SetPath;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#ext">ext</a></b>: string read FExt write SetExt;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#fileName">fileName</a></b>: TFileName read GetFileName write SetFileName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#append">append</a></b>: boolean read FDoAppend write SetDoAppend;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#Created">Created</a></b>: boolean read FCreated write FCreated default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#gdgMax">gdgMax</a></b>: word read FGDGMax write SetGdgMax;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#SafegdgMax">SafegdgMax</a></b>: word read FSafeGDGMax write fSafeGDGMax;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#OpMode">OpMode</a></b>: word read GetOpenMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#UseFileSizeLimit">UseFileSizeLimit</a></b>: boolean read FUseSizeLimit write FUseSizeLimit;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#LogFileMaxSize">LogFileMaxSize</a></b>: integer read FLogFileMaxSize write FLogFileMaxSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogFileDef.html#UseSafeFilenames">UseSafeFilenames</a></b>: boolean read FUseSafeFileNames write FUseSafeFileNames;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Coréation de la classe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction de la classe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BuildSafeFileName"></span><code>procedure <b>BuildSafeFileName</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Génération d'un nom de fichier sécurisé</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ddname"></span><code>property <b>ddname</b>: string read FDdn write FDdn;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nom du fichiers sans extension</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="path"></span><code>property <b>path</b>: string read FPath write SetPath;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Chemin d'accès aux fichiers</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ext"></span><code>property <b>ext</b>: string read FExt write SetExt;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Extension du nom de fichier. '.log' par défaut si non GDG.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="fileName"></span><code>property <b>fileName</b>: TFileName read GetFileName write SetFileName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nom du fichier journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="append"></span><code>property <b>append</b>: boolean read FDoAppend write SetDoAppend;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Le journal doit-il être vidé ou non ? , si il existe. Ignoré si FGDGMax &gt; 0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Created"></span><code>property <b>Created</b>: boolean read FCreated write FCreated default False;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Drapeau si le fichier existe déja</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="gdgMax"></span><code>property <b>gdgMax</b>: word read FGDGMax write SetGdgMax;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre <a class="normal" href="BZMath.html#Max">max</a> de fichier à générer et conserver. (0 &lt; GDG &lt; 999 / 0 = pas de compteur)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SafegdgMax"></span><code>property <b>SafegdgMax</b>: word read FSafeGDGMax write fSafeGDGMax;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre <a class="normal" href="BZMath.html#Max">max</a> de fichier à générer et conserver, sécurisé. (0 &lt; GDG &lt; 999 / 0 = pas de compteur)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OpMode"></span><code>property <b>OpMode</b>: word read GetOpenMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Type du mode d'acces du fichier journal en cours d'utilisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UseFileSizeLimit"></span><code>property <b>UseFileSizeLimit</b>: boolean read FUseSizeLimit write FUseSizeLimit;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fermer le fichier journal et en démarrer un nouveau lorsque la taille limite est dépassée ?</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogFileMaxSize"></span><code>property <b>LogFileMaxSize</b>: integer read FLogFileMaxSize write FLogFileMaxSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+taille maximale du fichier journal utilisé pour un fonctionnement en continu</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UseSafeFilenames"></span><code>property <b>UseSafeFilenames</b>: boolean read FUseSafeFileNames write FUseSafeFileNames;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Utiliser des noms de fichier unique pour chaque journal</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

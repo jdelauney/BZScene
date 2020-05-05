@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZCanvasClasses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZCanvasClasses</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des classes de bases conçues à des fins génériques pour gérer l'affichage de primitives et de textes sur un &quot;Canvas&quot;.</p>
+<p>
+
+
+<p>Il vous faudras hériter ces classes afin de prendre en charge différents type de surface (Bitmap, OpenGL, Vulkan, DirectX etc...) <br> Pour la gestion des textes, vous devrez heriter les classes de l'unité <a class="normal" href="BZFontClasses.html">BZFontClasses</a> afin d'adapter l'affichage des textes en fonction du type de &quot;Surface&quot;. Puis dans votre classe finale, vous devrez assigner votre moteur de rendu de texte
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>06/06/2019 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZUtils.html">BZUtils</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZVectorMath.html">BZVectorMath</a>, <a class="normal" href="BZGeoTools.html">BZGeoTools</a>, <a class="normal" href="BZFontClasses.html">BZFontClasses</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li><li><a  href="BZGeoTools.html">BZGeoTools</a></li><li><a  href="BZFontClasses.html">BZFontClasses</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.EBZCanvasException.html"><code>EBZCanvasException</code></a></td>
+<td class="itemdesc">Exception levée en cas d'erreur avec le canvas</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.TBZCustomCanvasPen.html"><code>TBZCustomCanvasPen</code></a></td>
+<td class="itemdesc">Definition de base des propriétés du &quot;Crayon&quot; pour un Canvas</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.TBZBrushTextureProperty.html"><code>TBZBrushTextureProperty</code></a></td>
+<td class="itemdesc">Definition de base des propriétés pour le remplisage de surface avec une texture</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.TBZCustomCanvasBrush.html"><code>TBZCustomCanvasBrush</code></a></td>
+<td class="itemdesc">Définition de base des propriétés de la brosse pour le remplisage de surface</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.TBZCanvasDrawModeProperty.html"><code>TBZCanvasDrawModeProperty</code></a></td>
+<td class="itemdesc">Définition de base des propriétiés liées au mode d'affichage des pixels.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCanvasClasses.TBZCustomCanvas.html"><code>TBZCustomCanvas</code></a></td>
+<td class="itemdesc"><code>TBZCustomCanvas</code></td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZCanvasClasses.html#CreateBZStrokePattern">CreateBZStrokePattern</a></b>(d1, s1, d2, s2, d3, s3, d4, s4: Byte): <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#TBZCanvasPenClass">TBZCanvasPenClass</a></b> = class of <a  href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#TBZCanvasBrushClass">TBZCanvasBrushClass</a></b> = class of <a  href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#TBZCanvasClass">TBZCanvasClass</a></b> = Class of <a  href="BZCanvasClasses.TBZCustomCanvas.html">TBZCustomCanvas</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#SolidPenStrokePattern">SolidPenStrokePattern</a></b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#DashPenStrokePattern">DashPenStrokePattern</a></b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#DotPenStrokePattern">DotPenStrokePattern</a></b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#DashDotPenStrokePattern">DashDotPenStrokePattern</a></b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZCanvasClasses.html#DashDotDotPenStrokePattern">DashDotDotPenStrokePattern</a></b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateBZStrokePattern"></span><code>Function <b>CreateBZStrokePattern</b>(d1, s1, d2, s2, d3, s3, d4, s4: Byte): <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un masque de &quot;Pattern&quot;</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCanvasPenClass"></span><code><b>TBZCanvasPenClass</b> = class of <a  href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCanvasBrushClass"></span><code><b>TBZCanvasBrushClass</b> = class of <a  href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCanvasClass"></span><code><b>TBZCanvasClass</b> = Class of <a  href="BZCanvasClasses.TBZCustomCanvas.html">TBZCustomCanvas</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html">TBZCustomCanvas</a></p>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SolidPenStrokePattern"></span><code><b>SolidPenStrokePattern</b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DashPenStrokePattern"></span><code><b>DashPenStrokePattern</b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DotPenStrokePattern"></span><code><b>DotPenStrokePattern</b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DashDotPenStrokePattern"></span><code><b>DashDotPenStrokePattern</b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DashDotDotPenStrokePattern"></span><code><b>DashDotDotPenStrokePattern</b>: <a  href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

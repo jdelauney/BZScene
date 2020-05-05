@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGraphic: Enregistrement TBZFloatRect</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZFloatRect"></span><h1 class="cio">Enregistrement TBZFloatRect</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGraphic.html">BZGraphic</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZFloatRect = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Définition d'un rectangle en valeur flottante</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#V">V</a></b>: <a  href="BZGraphic.html#TBZFloatRectVectorType">TBZFloatRectVectorType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#Left">Left</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#Top">Top</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#Right">Right</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#Bottom">Bottom</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#TopLeft">TopLeft</a></b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZGraphic.TBZFloatRect.html#BottomRight">BottomRight</a></b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a></code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Create">Create</a></b>(Const aLeft,aTop,aRight,aBottom : Single ); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Create">Create</a></b>(Const aLeftTop,aRightBottom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const DoNormalize : Boolean = true ); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Create">Create</a></b>(Const ARect : TRect ); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Create">Create</a></b>(Origin: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; AWidth, AHeight: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#CreateEmpty">CreateEmpty</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#CreateBounds">CreateBounds</a></b>(Const aLeft, aTop, aWidth, aHeight: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator +(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator -(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator +(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator -(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator =(ConstRef A, B: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator &lt;&gt;(ConstRef A, B: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#ToString">ToString</a></b> : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Min">Min</a></b>(ConstRef B : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Min">Min</a></b>(Constref B : Single) : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Max">Max</a></b>(ConstRef B : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Max">Max</a></b>(Constref B : Single) : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Clamp">Clamp</a></b>(Constref AMin, AMax : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#Clamp">Clamp</a></b>(Constref AMin, AMax : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#RectInRect">RectInRect</a></b>(ConstRef Rect2: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#OverlapRect">OverlapRect</a></b>(ConstRef Rect2: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZGraphic.TBZFloatRect.html#PointOutRect">PointOutRect</a></b>(ConstRef x,y:Single):Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#PointInRect">PointInRect</a></b>(ConstRef x,y:Single): Boolean; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <b><a  href="BZGraphic.TBZFloatRect.html#PointOutRect">PointOutRect</a></b>(ConstRef p : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>):Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#PointInRect">PointInRect</a></b>(ConstRef p : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#IntersectWithRect">IntersectWithRect</a></b>(ConstRef Rect2 : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Var OutRect:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Normalize">Normalize</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Inflate">Inflate</a></b>(DL, DT, DR, DB: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Inflate">Inflate</a></b>(DX, DY: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Contract">Contract</a></b>(DL, DT, DR, DB: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#Contract">Contract</a></b>(DX, DY: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#OffSetRect">OffSetRect</a></b>(ConstRef dx,dy: Single): Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#OffSetRect">OffSetRect</a></b>(ConstRef P: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZFloatRect.html#UnionRect">UnionRect</a></b>(ConstRef Rect2 : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#CenterPoint">CenterPoint</a></b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#AsRect">AsRect</a></b> : <a  href="BZGraphic.TBZRect.html">TBZRect</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZFloatRect.html#AsNativeRect">AsNativeRect</a></b> : TRect; overload;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZFloatRect.html#Height">Height</a></b>: Single read getHeight write setHeight;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZFloatRect.html#Width">Width</a></b> : Single read getWidth  write setWidth;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZFloatRect.html#TopRight">TopRight</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read GetTopRight;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZFloatRect.html#BottomLeft">BottomLeft</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read GetBottomLeft;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZGraphic.html#TBZFloatRectVectorType">TBZFloatRectVectorType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Array access</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Left"></span><code><b>Left</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access²</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Top"></span><code><b>Top</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access²</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Right"></span><code><b>Right</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access²</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Bottom"></span><code><b>Bottom</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Legacy access²</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TopLeft"></span><code><b>TopLeft</b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BottomRight"></span><code><b>BottomRight</b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a></code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aLeft,aTop,aRight,aBottom : Single ); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation de l'objet <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> avec les paramètres &quot;aLeft,aTop,aRight,aBottom&quot; de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aLeftTop,aRightBottom : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const DoNormalize : Boolean = true ); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation de l'objet <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> avec les paramètres &quot;aLeftTop,aRightaBottom&quot;. &quot;DoNormalize&quot; indique si les postions <a class="normal" href="BZGraphic.TBZFloatRect.html#Top">Top</a> et <a class="normal" href="BZGraphic.TBZFloatRect.html#Left">Left</a> doivent être interchanger si plus elles sont plus grandes que <a class="normal" href="BZGraphic.TBZFloatRect.html#Bottom">Bottom</a> et <a class="normal" href="BZGraphic.TBZFloatRect.html#Right">Right</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const ARect : TRect ); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation de l'objet <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> depuis un TRect</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Origin: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; AWidth, AHeight: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation de l'objet <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> avec les paramètres &quot;Origin de type <a class="normal" href="BZGraphic.html#TBZPoint">TBZPoint</a> et AWidth, AHeight&quot; de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateEmpty"></span><code>procedure <b>CreateEmpty</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation de l'objet <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> nul</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateBounds"></span><code>procedure <b>CreateBounds</b>(Const aLeft, aTop, aWidth, aHeight: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Addition : ajoute les coordonnées des deux <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Soustraction : Soustrait les coordonnées des deux <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Addition : ajoute les cordonnées d'un TBFloatZRect avec une valeur &quot;B&quot; de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(ConstRef A:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; ConstRef B : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Soustraction : Soustrait les cordonnées d'un TBFloatZRect avec une valeur &quot;B&quot; de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(ConstRef A, B: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Egale : Verifie si les deux <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> ont des coordonnées égales Renvoie <code>True</code> si toutes les coordonnée sont identiques</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;&gt;(ConstRef A, B: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operateur Différent : Verifie si les deux <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> ont des coordonnées Différents. Renvoie <code>True</code> si une des coordonnée est différente</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b> : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la représentation du TBZFloatZRect sous forme de chaine de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(ConstRef B : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les coordonées minimum des deux rectangles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(Constref B : Single) : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les coordonées minimum des rectangles en fonction de la valeur B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(ConstRef B : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les coordonées maximum des rectangles deux rectangles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(Constref B : Single) : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne les coordonées maxmum des rectangles en fonction de la valeur B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(Constref AMin, AMax : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que le rectangle soit dans l'interval des rectangle [<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>, AMax]</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(Constref AMin, AMax : Single):<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que le rectangle soit dans l'interval des valeurs [<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>, AMax]</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RectInRect"></span><code>function <b>RectInRect</b>(ConstRef Rect2: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si &quot;Rect2&quot; se trouve dans le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OverlapRect"></span><code>function <b>OverlapRect</b>(ConstRef Rect2: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si &quot;Rect2&quot; chevauche le TBFloatZRect</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointOutRect"></span><code>Function <b>PointOutRect</b>(ConstRef x,y:Single):Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le point &quot;x,y&quot; se trouve a l'extérieur du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointInRect"></span><code>function <b>PointInRect</b>(ConstRef x,y:Single): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le point &quot;x,y&quot; se trouve a l'intérieur du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointOutRect"></span><code>Function <b>PointOutRect</b>(ConstRef p : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>):Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le point &quot;P&quot; se trouve a l'extérieur du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointInRect"></span><code>function <b>PointInRect</b>(ConstRef p : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le point &quot;P&quot; se trouve a l'intérieur du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IntersectWithRect"></span><code>function <b>IntersectWithRect</b>(ConstRef Rect2 : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Var OutRect:<a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>):Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> sui les dexu rectangles se chevauve et retour le rectangle inscrit dans les deux rectangles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Normalize"></span><code>procedure <b>Normalize</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les coordonnées <a class="normal" href="BZGraphic.TBZFloatRect.html#Top">Top</a>, <a class="normal" href="BZGraphic.TBZFloatRect.html#Left">Left</a> avec <a class="normal" href="BZGraphic.TBZFloatRect.html#Bottom">Bottom</a>, <a class="normal" href="BZGraphic.TBZFloatRect.html#Right">Right</a>, suivant si <a class="normal" href="BZGraphic.TBZFloatRect.html#Top">Top</a>/<a class="normal" href="BZGraphic.TBZFloatRect.html#Left">Left</a> plus grand que <a class="normal" href="BZGraphic.TBZFloatRect.html#Bottom">Bottom</a>/<a class="normal" href="BZGraphic.TBZFloatRect.html#Right">Right</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Inflate"></span><code>procedure <b>Inflate</b>(DL, DT, DR, DB: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Agrandit le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;DL&quot; par la gauche, de &quot;DT&quot; vers le haut, de &quot;DR&quot; vers la droite et de &quot;DB&quot; vers le bas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Inflate"></span><code>procedure <b>Inflate</b>(DX, DY: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Agrandit le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;DX&quot; par la gauche et la droite, de &quot;DY&quot; vers le haut et vers le bas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contract"></span><code>procedure <b>Contract</b>(DL, DT, DR, DB: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Réduit le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;DL&quot; par la gauche, de &quot;DT&quot; vers le haut, de &quot;DR&quot; vers la droite et de &quot;DB&quot; vers le bas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contract"></span><code>procedure <b>Contract</b>(DX, DY: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Réduit le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;DX&quot; par la gauche et la droite, de &quot;DY&quot; vers le haut et vers le bas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OffSetRect"></span><code>function <b>OffSetRect</b>(ConstRef dx,dy: Single): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Déplace le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;dx&quot; et &quot;dy&quot; unité</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OffSetRect"></span><code>function <b>OffSetRect</b>(ConstRef P: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Déplace le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de &quot;x&quot; et &quot;y&quot; unité représenté par le point &quot;P&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UnionRect"></span><code>procedure <b>UnionRect</b>(ConstRef Rect2 : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Unie les deux rectangles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CenterPoint"></span><code>function <b>CenterPoint</b>: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le point central du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsRect"></span><code>function <b>AsRect</b> : <a  href="BZGraphic.TBZRect.html">TBZRect</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> en tant que <a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsNativeRect"></span><code>function <b>AsNativeRect</b> : TRect; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> en tant que TRect</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Height"></span><code>property <b>Height</b>: Single read getHeight write setHeight;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la hauteur du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Width"></span><code>property <b>Width</b> : Single read getWidth  write setWidth;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la Largeur du TBZFloatZRect</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TopRight"></span><code>property <b>TopRight</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read GetTopRight;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la position haut/droite du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BottomLeft"></span><code>property <b>BottomLeft</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read GetBottomLeft;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la position bas/gauche du <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMathEx: Enregistrement TBZAxisAlignedBoundingBox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZAxisAlignedBoundingBox"></span><h1 class="cio">Enregistrement TBZAxisAlignedBoundingBox</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMathEx.html">BZVectorMathEx</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZAxisAlignedBoundingBox = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Décrisption d'une boite englobante alignée en 3D (AABB)
+
+<p><b>Note</b> : <br> 'Le calcul de base sous-jacent du lancer de rayons est celui de l'<a class="normal" href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Intersection">intersection</a> d'une ligne avec les surfaces d'un objet. <br> Est une méthode pour effectuer ce calcul, pour une nouvelle et puissante classe d'objets, ceux définis en balayant une sphère de rayon variable le long d'une trajectoire 3D. <br>   Lorsque des polynômes sont utilisés pour le paramétrage du centre et du rayon de la sphère, <br>    Le problème d'<a class="normal" href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Intersection">intersection</a> se réduit à l'emplacement des racines d'un polynôme. ' <br> <i>Source : <a  href="https://www.sciencedirect.com/science/article/pii/009784938590055X">https://www.sciencedirect.com/science/article/pii/009784938590055X</a></i>
+
+<p>Plus d'informations :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Bounding_volume">https://en.wikipedia.org/wiki/Bounding_volume</a></p></li>
+  <li><p><a  href="https://www.gamasutra.com/view/feature/131833/when_two_hearts_collide_.php">https://www.gamasutra.com/view/feature/131833/when_two_hearts_collide_.php</a></p></li>
+  <li><p><a  href="https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection">https://developer.mozilla.org/kab/docs/Games/Techniques/2D_collision_detection</a></p></li>
+  <li><p><a  href="https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/">https://www.azurefromthetrenches.com/introductory-guide-to-aabb-tree-collision-detection/</a></p></li>
+  <li><p><a  href="http://www.gamefromscratch.com/post/2012/11/26/GameDev-math-recipes-Collision-detection-using-an-axis-aligned-bounding-box.aspx">http://www.gamefromscratch.com/post/2012/11/26/GameDev-math-recipes-Collision-detection-using-an-axis-aligned-bounding-box.aspx</a></p></li>
+  <li><p><a  href="https://www.researchgate.net/publication/303703971_An_intensity_recovery_algorithm_IRA_for_minimizing_the_edge_effect_of_LIDAR_data">https://www.researchgate.net/publication/303703971_An_intensity_recovery_algorithm_IRA_for_minimizing_the_edge_effect_of_LIDAR_data</a></p></li>
+  <li><p><a  href="http://www-ljk.imag.fr/Publications/Basilic/com.lmc.publi.PUBLI_Inproceedings@117681e94b6_1860ffd/bounding_volume_hierarchies.pdf">http://www-ljk.imag.fr/Publications/Basilic/com.lmc.publi.PUBLI_Inproceedings@117681e94b6_1860ffd/bounding_volume_hierarchies.pdf</a></p></li>
+</ul>
+
+<p></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Min">Min</a></b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Max">Max</a></b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Create">Create</a></b>(const AValue: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Create">Create</a></b>(const AMin, AMax: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Create">Create</a></b>(const ABB: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#CreateFromSweep">CreateFromSweep</a></b>(const Start, Dest: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;const Radius: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Create">Create</a></b>(const BSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Create">Create</a></b>(const Center: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; Radius: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator +(ConstRef A, B : <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(ConstRef A: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator *(ConstRef A: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator =(ConstRef A, B : <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>):Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Transform">Transform</a></b>(Constref M:<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Include">Include</a></b>(Constref P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Intersection">Intersection</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#ToBoundingBox">ToBoundingBox</a></b>: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#ToBoundingBox">ToBoundingBox</a></b>(const M: <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>) : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#ToBoundingSphere">ToBoundingSphere</a></b>: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Intersect">Intersect</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;const M1, M2: <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#IntersectAbsoluteXY">IntersectAbsoluteXY</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#IntersectAbsoluteXZ">IntersectAbsoluteXZ</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#IntersectAbsolute">IntersectAbsolute</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#FitsInAbsolute">FitsInAbsolute</a></b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#PointIn">PointIn</a></b>(const P: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#ExtractCorners">ExtractCorners</a></b>: <a  href="BZVectorMathEx.html#TBZAABBCorners">TBZAABBCorners</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Contains">Contains</a></b>(const TestAABB: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Contains">Contains</a></b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code><b>Min</b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+function RayCastIntersect(const RayOrigin, RayDirection: <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>; out TNear, TFar: Single): Boolean; overload; function RayCastIntersect(const RayOrigin, RayDirection: <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>; IntersectPoint: <a class="normal" href="BZVectorMath.html#PBZVector">PBZVector</a> = nil): Boolean; overload;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code><b>Max</b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+function RayCastIntersect(const RayOrigin, RayDirection: <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>; out TNear, TFar: Single): Boolean; overload; function RayCastIntersect(const RayOrigin, RayDirection: <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>; IntersectPoint: <a class="normal" href="BZVectorMath.html#PBZVector">PBZVector</a> = nil): Boolean; overload;</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const AValue: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée depuis un point</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const AMin, AMax: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée depuis deux points décrivant les coordonées minimum et maximum de la boite</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const ABB: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée depuis une boite englobante orienté (<a class="normal" href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateFromSweep"></span><code>procedure <b>CreateFromSweep</b>(const Start, Dest: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;const Radius: Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée, qui sera formée en balayant une sphère de Start à Dest.</p>
+<p>
+
+
+<p>Plus d'informations :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://physicsforgames.blogspot.in/2010/03/narrow-phase-sweeping-sphere-against.html">http://physicsforgames.blogspot.in/2010/03/narrow-phase-sweeping-sphere-against.html</a></p></li>
+  <li><p><a  href="https://www.gamasutra.com/view/feature/131790/simple_intersection_tests_for_games.php">https://www.gamasutra.com/view/feature/131790/simple_intersection_tests_for_games.php</a></p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const BSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée depuis une sphere englobante (<a class="normal" href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(const Center: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; Radius: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante alignée depuis une sphere englobante définie par une centre et un rayon</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A, B : <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute deux boite englobante alignée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute un point à la boite englobante (Etend la boite)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(ConstRef A: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie une boite englobante par un vecteur TBZVecteur (Mise à l'echelle)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(ConstRef A, B : <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>):Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux boite englobante alignée sont égales</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Transform"></span><code>function <b>Transform</b>(Constref M:<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Applique une matrice de transformation affine 4x4</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Include"></span><code>function <b>Include</b>(Constref P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Etend la boite englobante avec le point P de type <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Intersection"></span><code>function <b>Intersection</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'<code>intersection</code> de la boite englobante alignée avec une autre. <br> Si les AABB ne se coupent pas, alors le résultat sera une AABB dégénéré (plan, ligne ou point).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToBoundingBox"></span><code>function <b>ToBoundingBox</b>: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit l'AABB en sa <a class="normal" href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a> canonique.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToBoundingBox"></span><code>function <b>ToBoundingBox</b>(const M: <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>) : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit l'AABB <a class="normal" href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Transform">transform</a>ée par une matrice en <a class="normal" href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToBoundingSphere"></span><code>function <b>ToBoundingSphere</b>: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit l'AABB en une sphere englobante <a class="normal" href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Intersect"></span><code>function <b>Intersect</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>;const M1, M2: <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si il y a <a class="normal" href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html#Intersection">Intersection</a> en la boite englobante alignée et une autre boite englobante alignée.</p>
+<p>
+
+
+<p>Les matrices servent à convertir un point en système AABB vers l'autre avec : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>m1 : matrice de rotation matrix</p></li>
+  <li><p>m2 : matrice de Translation et/ou de mise à l'echelle</p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IntersectAbsoluteXY"></span><code>function <b>IntersectAbsoluteXY</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie et retourne <code>True</code> si la boite englobante alignée entre en collision avec une autre, alignée sur l'axe dans le plan XY.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IntersectAbsoluteXZ"></span><code>function <b>IntersectAbsoluteXZ</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie et retourne <code>True</code> si la boite englobante alignée entre en collision avec une autre, alignée sur l'axe dans le plan XZ.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IntersectAbsolute"></span><code>function <b>IntersectAbsolute</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie et retourne <code>True</code> si la boite englobante alignée entre en collision avec une autre, alignée sur l'axe du monde virtuel.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FitsInAbsolute"></span><code>function <b>FitsInAbsolute</b>(const B: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie et retourne <code>True</code> si la boite englobante alignée s'inscrit dans une autre, alignée avec les axes du monde virtuel.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PointIn"></span><code>function <b>PointIn</b>(const P: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le point P de type <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a> se trouve à l'intérieur de la boite englobante alignée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ExtractCorners"></span><code>function <b>ExtractCorners</b>: <a  href="BZVectorMathEx.html#TBZAABBCorners">TBZAABBCorners</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Extrait les coins de la boite englobante alignée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contains"></span><code>function <b>Contains</b>(const TestAABB: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Détermine dans quel espace (<a class="normal" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>) l'AABB contient un autre AABB.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contains"></span><code>function <b>Contains</b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Détermine dans quel espace (<a class="normal" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>) l'AABB contient une sphere englobante <a class="normal" href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a></p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

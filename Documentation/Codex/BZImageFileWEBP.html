@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFileWEBP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZImageFileWEBP</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Prise en charge des Images au format WEBP proposé par Google.</p>
+<p>
+
+
+<p>Spécifications : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Version librairie : 1.0.3 </p></li>
+  <li><p>Méthode de compression : VP8 or VP8L </p></li>
+  <li><p>Nombre de couleurs : 24 / 32 bits : (RGB/A, BGR/A, YUV) </p></li>
+  <li><p>Supporte plusieurs images : Non </p></li>
+  <li><p>Format des nombres : - </p></li>
+  <li><p>Auteur : Google</p></li>
+  <li><p>Extensons : *.webp; ( *.webm = video) </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>06/02/2020 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :<br> Basé sur la bibliothèque externe &quot;LiWebp&quot;
+
+<p>Informations sur le format WEBP : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://developers.google.com/speed/webp">https://developers.google.com/speed/webp</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/WebP">https://en.wikipedia.org/wiki/WebP</a></p></li>
+  <li><p><a  href="https://www.webmproject.org/code/#libwebp-webp-image-library">https://www.webmproject.org/code/#libwebp-webp-image-library</a></p></li>
+  <li><p><a  href="https://developers.google.com/speed/webp/download">https://developers.google.com/speed/webp/download</a></p></li>
+</ul>
+
+<p>
+
+<p>Fichiers test :<br> - <a  href="https://developers.google.com/speed/webp/gallery1">https://developers.google.com/speed/webp/gallery1</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> - Tous les liens au dessus
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li><li><a  href="BZImageFileIO.html">BZImageFileIO</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZImageFileWEBP.TBZWebPHeader.html"><code>TBZWebPHeader</code></a></td>
+<td class="itemdesc">TODO 1 -oBZBitmap -cSupport_Image_WEBP : Sauvegarde au format WebP</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileWEBP.TBZBitmapWEBPImage.html"><code>TBZBitmapWEBPImage</code></a></td>
+<td class="itemdesc"><code>TBZBitmapWEBPImage</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWebPPreset">TBZWebPPreset</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_MethodeRange">TBZWEBP_MethodeRange</a></b> = 0..6;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_SharpnessRange">TBZWEBP_SharpnessRange</a></b> = 0..7;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_SegmentRange">TBZWEBP_SegmentRange</a></b> = 1..4;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_PartitionRange">TBZWEBP_PartitionRange</a></b> = 0..3;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_EntropyAnalysisPassesRange">TBZWEBP_EntropyAnalysisPassesRange</a></b> = 1..10;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileWEBP.html#TBZWEBP_FilterType">TBZWEBP_FilterType</a></b> = (...);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWebPPreset"></span><code><b>TBZWebPPreset</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="WEBP_PRESET_CUSTOM">WEBP_PRESET_CUSTOM</span></li>
+<li>
+<span id="WEBP_PRESET_DEFAULT">WEBP_PRESET_DEFAULT</span>: Options de sauvegarde personalisées</li>
+<li>
+<span id="WEBP_PRESET_LOSSLESS">WEBP_PRESET_LOSSLESS</span>: Options par défaut</li>
+<li>
+<span id="WEBP_PRESET_PICTURE">WEBP_PRESET_PICTURE</span></li>
+<li>
+<span id="WEBP_PRESET_PHOTO">WEBP_PRESET_PHOTO</span>: Image digital. Comme portrait, plan intérieur</li>
+<li>
+<span id="WEBP_PRESET_DRAWING">WEBP_PRESET_DRAWING</span>: Photographie extérieur avec lumière naturelle</li>
+<li>
+<span id="WEBP_PRESET_ICON">WEBP_PRESET_ICON</span>: Dessin à la main ou au trait, avec des détails très contrastés</li>
+<li>
+<span id="WEBP_PRESET_TEXT">WEBP_PRESET_TEXT</span>: Images colorées de petite taille</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_MethodeRange"></span><code><b>TBZWEBP_MethodeRange</b> = 0..6;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Texte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_SharpnessRange"></span><code><b>TBZWEBP_SharpnessRange</b> = 0..7;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_SegmentRange"></span><code><b>TBZWEBP_SegmentRange</b> = 1..4;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_PartitionRange"></span><code><b>TBZWEBP_PartitionRange</b> = 0..3;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_EntropyAnalysisPassesRange"></span><code><b>TBZWEBP_EntropyAnalysisPassesRange</b> = 1..10;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZWEBP_FilterType"></span><code><b>TBZWEBP_FilterType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="wftSimple">wftSimple</span></li>
+<li>
+<span id="wftStrong">wftStrong</span></li>
+</ul>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2020-02-06
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

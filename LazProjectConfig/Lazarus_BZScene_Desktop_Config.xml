@@ -1,0 +1,1707 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Desktops Count="3">
+    <Desktop1 Name="default docked" DockMaster="TIDEAnchorDockMaster">
+      <Desktop Version="2" FormIdCount="37">
+        <FormIdList a1="MainIDE" a2="CallStack" a3="BreakPoints" a4="SourceNotebook" a5="Watches" a6="Threads" a7="DbgEvents" a8="Registers" a9="MessagesView" a10="PackageEditor_bzscene_engine_rt" a11="PackageEditor_bzscene_image_rt" a12="PackageEditor_bzscene_rt" a13="PackageEditor_bzscene_image_dt" a14="PackageEditor_Nouveaupaquet" a15="Assembler" a16="ObjectInspectorDlg" a17="SourceNotebook2" a18="Locals" a19="CodeExplorerView" a20="ProjectInspector" a21="EvaluateModify" a22="DbgOutput" a23="Inspect" a24="PseudoTerminal" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="PkgGraphExplorer" a30="EditorFileManager" a31="SearchResults" a32="AnchorEditor" a33="TabOrderEditor" a34="CodeBrowser" a35="IssueBrowser" a36="JumpHistory" a37="ComponentList"/>
+      </Desktop>
+      <MainIDE>
+        <CustomPosition Left="18" Top="16" Width="1487" Height="978"/>
+        <Visible Value="True"/>
+      </MainIDE>
+      <CallStack>
+        <CustomPosition Width="381" Height="606"/>
+      </CallStack>
+      <BreakPoints>
+        <CustomPosition Width="859" Height="204"/>
+      </BreakPoints>
+      <SourceNotebook>
+        <CustomPosition Left="349" Top="149" Width="779" Height="769"/>
+        <Visible Value="True"/>
+      </SourceNotebook>
+      <Watches>
+        <CustomPosition Width="859" Height="204"/>
+        <Divider Count="1">
+          <Item0 ID="ColumnWatchExpr" Size="200"/>
+        </Divider>
+      </Watches>
+      <Threads>
+        <CustomPosition Width="381" Height="606"/>
+      </Threads>
+      <DbgEvents>
+        <CustomPosition Width="381" Height="606"/>
+      </DbgEvents>
+      <Registers>
+        <CustomPosition Width="859" Height="204"/>
+      </Registers>
+      <MessagesView>
+        <CustomPosition Left="319" Top="946" Width="713" Height="75"/>
+      </MessagesView>
+      <PackageEditor_bzscene_engine_rt>
+        <CustomPosition Left="284" Top="231" Width="451" Height="455"/>
+      </PackageEditor_bzscene_engine_rt>
+      <PackageEditor_bzscene_image_rt>
+        <CustomPosition Left="1044" Top="561" Width="400" Height="460"/>
+      </PackageEditor_bzscene_image_rt>
+      <PackageEditor_bzscene_rt>
+        <CustomPosition Left="1044" Top="561" Width="400" Height="460"/>
+      </PackageEditor_bzscene_rt>
+      <PackageEditor_bzscene_image_dt>
+        <CustomPosition Left="1044" Top="561" Width="465" Height="460"/>
+      </PackageEditor_bzscene_image_dt>
+      <PackageEditor_Nouveaupaquet>
+        <CustomPosition Left="1044" Top="561" Width="465" Height="460"/>
+      </PackageEditor_Nouveaupaquet>
+      <Assembler>
+        <CustomPosition Left="293" Top="946" Width="792" Height="75"/>
+      </Assembler>
+      <ObjectInspectorDlg>
+        <CustomPosition Left="26" Top="183" Width="244" Height="859"/>
+      </ObjectInspectorDlg>
+      <SourceNotebook2>
+        <CustomPosition Left="342" Top="108" Width="1569" Height="763"/>
+      </SourceNotebook2>
+      <Locals>
+        <CustomPosition Left="275" Top="788" Width="786" Height="228"/>
+        <Divider Count="2">
+          <Item0 ID="LocalsName" Size="199"/>
+          <Item1 ID="LocalsValue" Size="528"/>
+        </Divider>
+      </Locals>
+      <CodeExplorerView>
+        <CustomPosition Left="1018" Top="560" Width="276" Height="477"/>
+      </CodeExplorerView>
+      <ProjectInspector>
+        <CustomPosition Left="1018" Top="167" Width="276" Height="372"/>
+      </ProjectInspector>
+      <Dialogs Count="10">
+        <Dialog1>
+          <Name Value="TLazFindInFilesDialog"/>
+          <Size Width="0" Height="0"/>
+        </Dialog1>
+        <Dialog2>
+          <Name Value="TLazFindReplaceDialog"/>
+          <Size Width="487" Height="367"/>
+        </Dialog2>
+        <Dialog3>
+          <Name Value="TIDEOptionsDialog"/>
+          <Size Width="800" Height="697"/>
+        </Dialog3>
+        <Dialog4>
+          <Name Value="TToolBarConfig"/>
+          <Size Width="696" Height="457"/>
+        </Dialog4>
+        <Dialog5>
+          <Name Value="TActionListEditor"/>
+          <Size Width="404" Height="315"/>
+        </Dialog5>
+        <Dialog6>
+          <Name Value="TImageListEditorDlg"/>
+          <Size Width="617" Height="484"/>
+        </Dialog6>
+        <Dialog7>
+          <Name Value="TAddPkgDependencyDialog"/>
+          <Size Width="400" Height="360"/>
+        </Dialog7>
+        <Dialog8>
+          <Name Value="TNewOtherDialog"/>
+          <Size Width="750" Height="410"/>
+        </Dialog8>
+        <Dialog9>
+          <Name Value="TCollectionPropertyEditorForm"/>
+          <Size Width="190" Height="300"/>
+        </Dialog9>
+        <Dialog10>
+          <Name Value="TStringsPropEditorDlg"/>
+          <Size Width="819" Height="607"/>
+        </Dialog10>
+      </Dialogs>
+      <AssociatedDebugDesktopName Value="Default Debug"/>
+      <CompletionWindowOptions>
+        <Width Value="320"/>
+      </CompletionWindowOptions>
+      <IDECoolBarOptions Count="2">
+        <Width Value="230"/>
+        <GrabStyle Value="0"/>
+        <BorderStyle Value="0"/>
+        <ToolBar1 Version="1" Count="11">
+          <Button1 Name="New"/>
+          <Button2 Name="NewUnit"/>
+          <Button3 Name="NewForm"/>
+          <Button4 Name="---------------"/>
+          <Button5 Name="Open"/>
+          <Button6 Name="Save"/>
+          <Button7 Name="SaveAll"/>
+          <Button8 Name="---------------"/>
+          <Button9 Name="Toggle between Unit and Form"/>
+          <Button10 Name="---------------"/>
+          <Button11 Name="Manage desktops"/>
+        </ToolBar1>
+        <ToolBar2 Version="1" Count="11">
+          <Break Value="True"/>
+          <Button1 Name="View Units"/>
+          <Button2 Name="View Forms"/>
+          <Button3 Name="---------------"/>
+          <Button4 Name="Change build mode"/>
+          <Button5 Name="Run program"/>
+          <Button6 Name="Run without debugging"/>
+          <Button7 Name="Pause program"/>
+          <Button8 Name="Stop program"/>
+          <Button9 Name="Step over"/>
+          <Button10 Name="Step into"/>
+          <Button11 Name="Step out"/>
+        </ToolBar2>
+      </IDECoolBarOptions>
+      <EditorToolBarOptions Version="1" Count="2">
+        <Button1 Name="Jump back"/>
+        <Button2 Name="Jump forward"/>
+      </EditorToolBarOptions>
+      <ObjectInspectorOptions>
+        <SplitterX>
+          <PropertyPage Value="110"/>
+          <EventPage Value="126"/>
+          <FavoritePage Value="110"/>
+          <RestrictedPage Value="110"/>
+        </SplitterX>
+        <ComponentTree>
+          <Height Value="160"/>
+        </ComponentTree>
+        <InfoBox>
+          <Height Value="163"/>
+        </InfoBox>
+      </ObjectInspectorOptions>
+      <AnchorDocking>
+        <Version Value="1"/>
+        <MainConfig>
+          <Nodes ChildCount="1">
+            <Item1 Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite7" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite10" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="1198" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter2" Top="AnchorDockSplitter3"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="1190" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSplitter2" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item2>
+                <Item3 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter2"/>
+                </Item3>
+                <Item4 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="796" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter2" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter3"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="1198" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter2"/>
+                </Item5>
+                <Item6 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1085" Width="4" Height="769"/>
+                  <Anchors Bottom="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1089" Width="398" Height="381"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item7>
+                <Item8 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="1089" Top="381" Width="398" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item8>
+                <Item9 Name="CodeExplorerView" Type="Control">
+                  <Bounds Left="1089" Top="385" Width="398" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter5" Bottom="AnchorDockSplitter3"/>
+                </Item9>
+              </Item1>
+            </Item1>
+          </Nodes>
+        </MainConfig>
+        <Restores Count="5">
+          <Item1 Names="PackageEditor_bzscene_controls_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite21" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite22" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite23" Type="Pages" ChildCount="6">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_controls_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                  <Item5 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item5>
+                  <Item6 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item6>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item1>
+          <Item2 Names="PackageEditor_bzscene_controls_dt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite21" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite22" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite23" Type="Pages" ChildCount="5">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="4"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                  <Item5 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item5>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item2>
+          <Item3 Names="PackageEditor_bzscene_image_dt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite21" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite22" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite23" Type="Pages" ChildCount="4">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item3>
+          <Item4 Names="PackageEditor_bzscene_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite21" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite22" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite23" Type="Pages" ChildCount="3">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="2"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item4>
+          <Item5 Names="PackageEditor_bzscene_image_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite21" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite22" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite23" Type="Pages" ChildCount="2">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="1"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item5>
+        </Restores>
+        <Settings HeaderStyle="Line"/>
+      </AnchorDocking>
+    </Desktop1>
+    <Desktop2 Name="Package Manager" DockMaster="TIDEAnchorDockMaster">
+      <Desktop Version="2" FormIdCount="39">
+        <FormIdList a1="MainIDE" a2="CallStack" a3="BreakPoints" a4="SourceNotebook" a5="Watches" a6="Threads" a7="DbgEvents" a8="Registers" a9="MessagesView" a10="PackageEditor_bzscene_engine_rt" a11="PackageEditor_bzscene_image_rt" a12="PackageEditor_bzscene_rt" a13="PackageEditor_bzscene_controls_rt" a14="PackageEditor_bzscene_image_dt" a15="PackageEditor_bzscene_controls_dt" a16="PackageEditor_Nouveaupaquet" a17="Assembler" a18="ObjectInspectorDlg" a19="SourceNotebook2" a20="Locals" a21="CodeExplorerView" a22="ProjectInspector" a23="EvaluateModify" a24="DbgOutput" a25="Inspect" a26="PseudoTerminal" a27="DbgHistory" a28="UnitDependencies" a29="FPDocEditor" a30="ClipBrdHistory" a31="PkgGraphExplorer" a32="EditorFileManager" a33="SearchResults" a34="AnchorEditor" a35="TabOrderEditor" a36="CodeBrowser" a37="IssueBrowser" a38="JumpHistory" a39="ComponentList"/>
+      </Desktop>
+      <MainIDE>
+        <Caption Value="MainIDE"/>
+        <CustomPosition Left="94" Top="13" Width="1487" Height="978"/>
+        <Visible Value="True"/>
+      </MainIDE>
+      <CallStack>
+        <Caption Value="CallStack"/>
+        <CustomPosition Width="381" Height="606"/>
+      </CallStack>
+      <BreakPoints>
+        <Caption Value="BreakPoints"/>
+        <CustomPosition Width="859" Height="204"/>
+      </BreakPoints>
+      <SourceNotebook>
+        <Caption Value="SourceNotebook"/>
+        <CustomPosition Left="136" Top="146" Width="851" Height="723"/>
+        <Visible Value="True"/>
+      </SourceNotebook>
+      <Watches>
+        <Caption Value="Watches"/>
+        <CustomPosition Width="859" Height="204"/>
+        <Divider Count="1">
+          <Item0 ID="ColumnWatchExpr" Size="200"/>
+        </Divider>
+      </Watches>
+      <Threads>
+        <Caption Value="Threads"/>
+        <CustomPosition Width="381" Height="606"/>
+      </Threads>
+      <DbgEvents>
+        <Caption Value="DbgEvents"/>
+        <CustomPosition Width="381" Height="606"/>
+      </DbgEvents>
+      <Registers>
+        <Caption Value="Registers"/>
+        <CustomPosition Width="859" Height="204"/>
+      </Registers>
+      <MessagesView>
+        <Caption Value="MessagesView"/>
+        <CustomPosition Left="106" Top="897" Width="1225" Height="75"/>
+      </MessagesView>
+      <PackageEditor_bzscene_engine_rt>
+        <Caption Value="PackageEditor_bzscene_engine_rt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_engine_rt>
+      <PackageEditor_bzscene_image_rt>
+        <Caption Value="PackageEditor_bzscene_image_rt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_image_rt>
+      <PackageEditor_bzscene_rt>
+        <Caption Value="PackageEditor_bzscene_rt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_rt>
+      <PackageEditor_bzscene_controls_rt>
+        <Caption Value="PackageEditor_bzscene_controls_rt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_controls_rt>
+      <PackageEditor_bzscene_image_dt>
+        <Caption Value="PackageEditor_bzscene_image_dt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_image_dt>
+      <PackageEditor_bzscene_controls_dt>
+        <Caption Value="PackageEditor_bzscene_controls_dt"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_controls_dt>
+      <PackageEditor_Nouveaupaquet>
+        <Caption Value="PackageEditor_Nouveaupaquet"/>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_Nouveaupaquet>
+      <Assembler>
+        <Caption Value="Assembler"/>
+        <CustomPosition Left="293" Top="946" Width="792" Height="75"/>
+      </Assembler>
+      <ObjectInspectorDlg>
+        <Caption Value="ObjectInspectorDlg"/>
+        <CustomPosition Left="26" Top="183" Width="244" Height="859"/>
+      </ObjectInspectorDlg>
+      <SourceNotebook2>
+        <Caption Value="SourceNotebook2"/>
+        <CustomPosition Left="342" Top="108" Width="1569" Height="763"/>
+      </SourceNotebook2>
+      <Locals>
+        <Caption Value="Locals"/>
+        <CustomPosition Left="275" Top="788" Width="786" Height="228"/>
+        <Divider Count="2">
+          <Item0 ID="LocalsName" Size="199"/>
+          <Item1 ID="LocalsValue" Size="528"/>
+        </Divider>
+      </Locals>
+      <CodeExplorerView>
+        <Caption Value="CodeExplorerView"/>
+        <CustomPosition Left="1018" Top="560" Width="276" Height="477"/>
+      </CodeExplorerView>
+      <ProjectInspector>
+        <Caption Value="ProjectInspector"/>
+        <CustomPosition Left="1018" Top="167" Width="276" Height="372"/>
+      </ProjectInspector>
+      <EvaluateModify>
+        <Caption Value="EvaluateModify"/>
+      </EvaluateModify>
+      <DbgOutput>
+        <Caption Value="DbgOutput"/>
+      </DbgOutput>
+      <Inspect>
+        <Caption Value="Inspect"/>
+      </Inspect>
+      <PseudoTerminal>
+        <Caption Value="PseudoTerminal"/>
+      </PseudoTerminal>
+      <DbgHistory>
+        <Caption Value="DbgHistory"/>
+      </DbgHistory>
+      <UnitDependencies>
+        <Caption Value="UnitDependencies"/>
+      </UnitDependencies>
+      <FPDocEditor>
+        <Caption Value="FPDocEditor"/>
+      </FPDocEditor>
+      <ClipBrdHistory>
+        <Caption Value="ClipBrdHistory"/>
+      </ClipBrdHistory>
+      <PkgGraphExplorer>
+        <Caption Value="PkgGraphExplorer"/>
+      </PkgGraphExplorer>
+      <EditorFileManager>
+        <Caption Value="EditorFileManager"/>
+      </EditorFileManager>
+      <SearchResults>
+        <Caption Value="SearchResults"/>
+      </SearchResults>
+      <AnchorEditor>
+        <Caption Value="AnchorEditor"/>
+      </AnchorEditor>
+      <TabOrderEditor>
+        <Caption Value="TabOrderEditor"/>
+      </TabOrderEditor>
+      <CodeBrowser>
+        <Caption Value="CodeBrowser"/>
+      </CodeBrowser>
+      <IssueBrowser>
+        <Caption Value="IssueBrowser"/>
+      </IssueBrowser>
+      <JumpHistory>
+        <Caption Value="JumpHistory"/>
+      </JumpHistory>
+      <ComponentList>
+        <Caption Value="ComponentList"/>
+      </ComponentList>
+      <Dialogs Count="10">
+        <Dialog1>
+          <Name Value="TLazFindInFilesDialog"/>
+          <Size Width="0" Height="0"/>
+        </Dialog1>
+        <Dialog2>
+          <Name Value="TLazFindReplaceDialog"/>
+          <Size Width="487" Height="367"/>
+        </Dialog2>
+        <Dialog3>
+          <Name Value="TIDEOptionsDialog"/>
+          <Size Width="800" Height="697"/>
+        </Dialog3>
+        <Dialog4>
+          <Name Value="TToolBarConfig"/>
+          <Size Width="696" Height="457"/>
+        </Dialog4>
+        <Dialog5>
+          <Name Value="TActionListEditor"/>
+          <Size Width="404" Height="315"/>
+        </Dialog5>
+        <Dialog6>
+          <Name Value="TImageListEditorDlg"/>
+          <Size Width="617" Height="484"/>
+        </Dialog6>
+        <Dialog7>
+          <Name Value="TAddPkgDependencyDialog"/>
+          <Size Width="400" Height="360"/>
+        </Dialog7>
+        <Dialog8>
+          <Name Value="TNewOtherDialog"/>
+          <Size Width="750" Height="410"/>
+        </Dialog8>
+        <Dialog9>
+          <Name Value="TCollectionPropertyEditorForm"/>
+          <Size Width="190" Height="300"/>
+        </Dialog9>
+        <Dialog10>
+          <Name Value="TStringsPropEditorDlg"/>
+          <Size Width="819" Height="607"/>
+        </Dialog10>
+      </Dialogs>
+      <CompletionWindowOptions>
+        <Width Value="320"/>
+      </CompletionWindowOptions>
+      <IDECoolBarOptions Count="2">
+        <Width Value="230"/>
+        <GrabStyle Value="0"/>
+        <BorderStyle Value="0"/>
+        <ToolBar1 Version="1" Count="11">
+          <Button1 Name="New"/>
+          <Button2 Name="NewUnit"/>
+          <Button3 Name="NewForm"/>
+          <Button4 Name="---------------"/>
+          <Button5 Name="Open"/>
+          <Button6 Name="Save"/>
+          <Button7 Name="SaveAll"/>
+          <Button8 Name="---------------"/>
+          <Button9 Name="Toggle between Unit and Form"/>
+          <Button10 Name="---------------"/>
+          <Button11 Name="Manage desktops"/>
+        </ToolBar1>
+        <ToolBar2 Version="1" Count="11">
+          <Break Value="True"/>
+          <Button1 Name="View Units"/>
+          <Button2 Name="View Forms"/>
+          <Button3 Name="---------------"/>
+          <Button4 Name="Change build mode"/>
+          <Button5 Name="Run program"/>
+          <Button6 Name="Run without debugging"/>
+          <Button7 Name="Pause program"/>
+          <Button8 Name="Stop program"/>
+          <Button9 Name="Step over"/>
+          <Button10 Name="Step into"/>
+          <Button11 Name="Step out"/>
+        </ToolBar2>
+      </IDECoolBarOptions>
+      <EditorToolBarOptions Version="1" Count="2">
+        <Button1 Name="Jump back"/>
+        <Button2 Name="Jump forward"/>
+      </EditorToolBarOptions>
+      <ObjectInspectorOptions>
+        <SplitterX>
+          <PropertyPage Value="110"/>
+          <EventPage Value="126"/>
+          <FavoritePage Value="110"/>
+          <RestrictedPage Value="110"/>
+        </SplitterX>
+        <ComponentTree>
+          <Height Value="160"/>
+        </ComponentTree>
+        <InfoBox>
+          <Height Value="163"/>
+        </InfoBox>
+      </ObjectInspectorOptions>
+      <AnchorDocking>
+        <Version Value="1"/>
+        <MainConfig>
+          <Nodes ChildCount="1">
+            <Item1 Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="94" Top="13" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite20" Type="Layout" ChildCount="3">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite21" Type="Pages" ChildCount="2">
+                  <Bounds Top="727" Width="1487" Height="149"/>
+                  <Anchors Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="1"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="1225" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="1479" Height="121"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                </Item1>
+                <Item2 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Top="723" Width="1487" Height="4"/>
+                </Item2>
+                <Item3 Name="AnchorDockSite22" Type="Layout" ChildCount="7">
+                  <Bounds Width="1487" Height="723"/>
+                  <Anchors Bottom="AnchorDockSplitter2"/>
+                  <Item1 Name="AnchorDockSite24" Type="Pages" ChildCount="6">
+                    <Bounds Left="872" Top="210" Width="361" Height="513"/>
+                    <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter4" Right="AnchorDockSplitter5"/>
+                    <Header PageIndex="2"/>
+                    <Item1 Name="PackageEditor_bzscene_rt" Type="Control">
+                      <Bounds Width="317" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item1>
+                    <Item2 Name="PackageEditor_bzscene_controls_rt" Type="Control">
+                      <Bounds Width="317" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item2>
+                    <Item3 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                      <Bounds Width="353" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item3>
+                    <Item4 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                      <Bounds Width="317" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item4>
+                    <Item5 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                      <Bounds Width="317" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item5>
+                    <Item6 Name="PackageEditor_bzscene_engine_rt" Type="Control">
+                      <Bounds Width="317" Height="485"/>
+                      <Anchors Align="Client"/>
+                    </Item6>
+                  </Item1>
+                  <Item2 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                    <Bounds Left="868" Width="4" Height="723"/>
+                  </Item2>
+                  <Item3 Name="SourceNotebook" Type="Control">
+                    <Bounds Width="868" Height="723"/>
+                    <Anchors Right="AnchorDockSplitter3"/>
+                  </Item3>
+                  <Item4 Name="AnchorDockSplitter4" Type="SplitterHorizontal">
+                    <Bounds Left="872" Top="206" Width="361" Height="4"/>
+                    <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter5"/>
+                  </Item4>
+                  <Item5 Name="ProjectInspector" Type="Control">
+                    <Bounds Left="872" Width="361" Height="206"/>
+                    <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter5" Bottom="AnchorDockSplitter4"/>
+                  </Item5>
+                  <Item6 Name="AnchorDockSplitter5" Type="SplitterVertical">
+                    <Bounds Left="1233" Width="4" Height="723"/>
+                  </Item6>
+                  <Item7 Name="CodeExplorerView" Type="Control">
+                    <Bounds Left="1237" Width="250" Height="723"/>
+                    <Anchors Left="AnchorDockSplitter5"/>
+                  </Item7>
+                </Item3>
+              </Item1>
+            </Item1>
+          </Nodes>
+        </MainConfig>
+        <Restores Count="1">
+          <Item1 Names="Locals">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite8" Type="Layout" ChildCount="7">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite9" Type="Pages" ChildCount="3">
+                  <Bounds Top="773" Width="1233" Height="103"/>
+                  <Anchors Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Header PageIndex="2"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="1225" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="1225" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="1225" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="CodeExplorerView" Type="Control">
+                  <Bounds Left="1237" Width="250" Height="876"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1233" Width="4" Height="876"/>
+                </Item3>
+                <Item4 Name="SourceNotebook" Type="Control">
+                  <Bounds Top="388" Width="1233" Height="381"/>
+                  <Anchors Top="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Top="769" Width="1233" Height="4"/>
+                  <Anchors Right="AnchorDockSplitter4"/>
+                </Item5>
+                <Item6 Name="AnchorDockSplitter3" Type="SplitterHorizontal">
+                  <Bounds Top="384" Width="1233" Height="4"/>
+                  <Anchors Right="AnchorDockSplitter4"/>
+                </Item6>
+                <Item7 Name="AnchorDockSite14" Type="Pages" ChildCount="4">
+                  <Bounds Width="1233" Height="384"/>
+                  <Anchors Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter3"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="PackageEditor_bzscene_controls_rt" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="1002" Height="356"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="1002" Height="356"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="AnchorDockSite11" Type="Pages" ChildCount="3">
+                    <Bounds Width="1225" Height="356"/>
+                    <Anchors Align="Client"/>
+                    <Header PageIndex="2"/>
+                    <Item1 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                      <Bounds Width="320" Height="240"/>
+                      <Anchors Align="Client"/>
+                    </Item1>
+                    <Item2 Name="ProjectInspector" Type="Control">
+                      <Bounds Width="994" Height="146"/>
+                      <Anchors Align="Client"/>
+                    </Item2>
+                    <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                      <Bounds Width="1217" Height="328"/>
+                      <Anchors Align="Client"/>
+                    </Item3>
+                  </Item4>
+                </Item7>
+              </Item1>
+            </Nodes>
+          </Item1>
+        </Restores>
+        <Settings HeaderStyle="Line"/>
+      </AnchorDocking>
+    </Desktop2>
+    <Desktop3 Name="Default Debug" DockMaster="TIDEAnchorDockMaster">
+      <Desktop Version="2" FormIdCount="39">
+        <FormIdList a1="MainIDE" a2="CallStack" a3="BreakPoints" a4="SourceNotebook" a5="Watches" a6="Threads" a7="DbgEvents" a8="Registers" a9="MessagesView" a10="PackageEditor_bzscene_engine_rt" a11="PackageEditor_bzscene_image_rt" a12="PackageEditor_bzscene_rt" a13="PackageEditor_bzscene_image_dt" a14="PackageEditor_Nouveaupaquet" a15="Assembler" a16="ObjectInspectorDlg" a17="SourceNotebook2" a18="Locals" a19="CodeExplorerView" a20="ProjectInspector" a21="EvaluateModify" a22="DbgOutput" a23="Inspect" a24="PseudoTerminal" a25="DbgHistory" a26="UnitDependencies" a27="FPDocEditor" a28="ClipBrdHistory" a29="PkgGraphExplorer" a30="EditorFileManager" a31="SearchResults" a32="AnchorEditor" a33="TabOrderEditor" a34="CodeBrowser" a35="IssueBrowser" a36="JumpHistory" a37="ComponentList" a38="PackageEditor_bzscene_controls_rt" a39="PackageEditor_bzscene_controls_dt"/>
+      </Desktop>
+      <MainIDE>
+        <CustomPosition Left="18" Top="16" Width="1564" Height="978"/>
+        <Visible Value="True"/>
+      </MainIDE>
+      <CallStack>
+        <CustomPosition Left="1205" Top="415" Width="381" Height="606"/>
+      </CallStack>
+      <BreakPoints>
+        <CustomPosition Left="334" Top="817" Width="859" Height="204"/>
+      </BreakPoints>
+      <SourceNotebook>
+        <CustomPosition Left="364" Top="149" Width="850" Height="640"/>
+        <Visible Value="True"/>
+      </SourceNotebook>
+      <Watches>
+        <CustomPosition Left="334" Top="817" Width="859" Height="204"/>
+        <Visible Value="True"/>
+        <Divider Count="1">
+          <Item0 ID="ColumnWatchExpr" Size="200"/>
+        </Divider>
+      </Watches>
+      <Threads>
+        <CustomPosition Left="1205" Top="415" Width="381" Height="606"/>
+      </Threads>
+      <DbgEvents>
+        <CustomPosition Left="1205" Top="415" Width="381" Height="606"/>
+        <Visible Value="True"/>
+      </DbgEvents>
+      <Registers>
+        <CustomPosition Left="334" Top="817" Width="859" Height="204"/>
+      </Registers>
+      <MessagesView>
+        <CustomPosition Left="319" Top="946" Width="713" Height="75"/>
+      </MessagesView>
+      <PackageEditor_bzscene_engine_rt>
+        <CustomPosition Left="284" Top="231" Width="451" Height="455"/>
+      </PackageEditor_bzscene_engine_rt>
+      <PackageEditor_bzscene_image_rt>
+        <CustomPosition Left="1044" Top="561" Width="400" Height="460"/>
+      </PackageEditor_bzscene_image_rt>
+      <PackageEditor_bzscene_rt>
+        <CustomPosition Left="1044" Top="561" Width="400" Height="460"/>
+      </PackageEditor_bzscene_rt>
+      <PackageEditor_bzscene_image_dt>
+        <CustomPosition Left="1044" Top="561" Width="465" Height="460"/>
+      </PackageEditor_bzscene_image_dt>
+      <PackageEditor_Nouveaupaquet>
+        <CustomPosition Left="1044" Top="561" Width="465" Height="460"/>
+      </PackageEditor_Nouveaupaquet>
+      <Assembler>
+        <CustomPosition Left="293" Top="946" Width="792" Height="75"/>
+      </Assembler>
+      <ObjectInspectorDlg>
+        <CustomPosition Left="26" Top="183" Width="244" Height="859"/>
+      </ObjectInspectorDlg>
+      <SourceNotebook2>
+        <CustomPosition Left="342" Top="108" Width="1569" Height="763"/>
+      </SourceNotebook2>
+      <Locals>
+        <CustomPosition Left="275" Top="788" Width="786" Height="228"/>
+        <Divider Count="2">
+          <Item0 ID="LocalsName" Size="199"/>
+          <Item1 ID="LocalsValue" Size="528"/>
+        </Divider>
+      </Locals>
+      <CodeExplorerView>
+        <CustomPosition Left="1018" Top="560" Width="276" Height="477"/>
+      </CodeExplorerView>
+      <ProjectInspector>
+        <CustomPosition Left="1018" Top="167" Width="276" Height="372"/>
+      </ProjectInspector>
+      <PackageEditor_bzscene_controls_rt>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_controls_rt>
+      <PackageEditor_bzscene_controls_dt>
+        <CustomPosition Left="978" Top="380" Width="400" Height="485"/>
+      </PackageEditor_bzscene_controls_dt>
+      <Dialogs Count="10">
+        <Dialog1>
+          <Name Value="TLazFindInFilesDialog"/>
+          <Size Width="0" Height="0"/>
+        </Dialog1>
+        <Dialog2>
+          <Name Value="TLazFindReplaceDialog"/>
+          <Size Width="487" Height="367"/>
+        </Dialog2>
+        <Dialog3>
+          <Name Value="TIDEOptionsDialog"/>
+          <Size Width="800" Height="697"/>
+        </Dialog3>
+        <Dialog4>
+          <Name Value="TToolBarConfig"/>
+          <Size Width="696" Height="457"/>
+        </Dialog4>
+        <Dialog5>
+          <Name Value="TActionListEditor"/>
+          <Size Width="404" Height="315"/>
+        </Dialog5>
+        <Dialog6>
+          <Name Value="TImageListEditorDlg"/>
+          <Size Width="617" Height="484"/>
+        </Dialog6>
+        <Dialog7>
+          <Name Value="TAddPkgDependencyDialog"/>
+          <Size Width="400" Height="360"/>
+        </Dialog7>
+        <Dialog8>
+          <Name Value="TNewOtherDialog"/>
+          <Size Width="750" Height="410"/>
+        </Dialog8>
+        <Dialog9>
+          <Name Value="TCollectionPropertyEditorForm"/>
+          <Size Width="190" Height="300"/>
+        </Dialog9>
+        <Dialog10>
+          <Name Value="TStringsPropEditorDlg"/>
+          <Size Width="819" Height="607"/>
+        </Dialog10>
+      </Dialogs>
+      <CompletionWindowOptions>
+        <Width Value="320"/>
+      </CompletionWindowOptions>
+      <IDECoolBarOptions Count="2">
+        <Width Value="230"/>
+        <GrabStyle Value="0"/>
+        <BorderStyle Value="0"/>
+        <ToolBar1 Version="1" Count="11">
+          <Button1 Name="New"/>
+          <Button2 Name="NewUnit"/>
+          <Button3 Name="NewForm"/>
+          <Button4 Name="---------------"/>
+          <Button5 Name="Open"/>
+          <Button6 Name="Save"/>
+          <Button7 Name="SaveAll"/>
+          <Button8 Name="---------------"/>
+          <Button9 Name="Toggle between Unit and Form"/>
+          <Button10 Name="---------------"/>
+          <Button11 Name="Manage desktops"/>
+        </ToolBar1>
+        <ToolBar2 Version="1" Count="11">
+          <Break Value="True"/>
+          <Button1 Name="View Units"/>
+          <Button2 Name="View Forms"/>
+          <Button3 Name="---------------"/>
+          <Button4 Name="Change build mode"/>
+          <Button5 Name="Run program"/>
+          <Button6 Name="Run without debugging"/>
+          <Button7 Name="Pause program"/>
+          <Button8 Name="Stop program"/>
+          <Button9 Name="Step over"/>
+          <Button10 Name="Step into"/>
+          <Button11 Name="Step out"/>
+        </ToolBar2>
+      </IDECoolBarOptions>
+      <EditorToolBarOptions Version="1" Count="2">
+        <Button1 Name="Jump back"/>
+        <Button2 Name="Jump forward"/>
+      </EditorToolBarOptions>
+      <ObjectInspectorOptions>
+        <SplitterX>
+          <PropertyPage Value="110"/>
+          <EventPage Value="126"/>
+          <FavoritePage Value="110"/>
+          <RestrictedPage Value="110"/>
+        </SplitterX>
+        <ComponentTree>
+          <Height Value="160"/>
+        </ComponentTree>
+        <InfoBox>
+          <Height Value="163"/>
+        </InfoBox>
+      </ObjectInspectorOptions>
+      <AnchorDocking>
+        <Version Value="1"/>
+        <MainConfig>
+          <Nodes ChildCount="2">
+            <Item1 Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1564" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite10" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1564" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite20" Type="Pages" ChildCount="6">
+                  <Bounds Left="304" Top="644" Width="867" Height="232"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Header PageIndex="5"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="846" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="BreakPoints" Type="Control">
+                    <Bounds Width="859" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Assembler" Type="Control">
+                    <Bounds Width="859" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="Registers" Type="Control">
+                    <Bounds Width="859" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                  <Item5 Name="Locals" Type="Control">
+                    <Bounds Width="859" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item5>
+                  <Item6 Name="Watches" Type="Control">
+                    <Bounds Width="859" Height="204"/>
+                    <Anchors Align="Client"/>
+                  </Item6>
+                </Item1>
+                <Item2 Name="AnchorDockSite24" Type="Pages" ChildCount="4">
+                  <Bounds Left="1175" Top="242" Width="389" Height="634"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="CallStack" Type="Control">
+                    <Bounds Width="381" Height="606"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Threads" Type="Control">
+                    <Bounds Width="381" Height="606"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="DbgEvents" Type="Control">
+                    <Bounds Width="381" Height="606"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1175" Top="238" Width="389" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1175" Width="389" Height="238"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="300" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="300" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1171" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="304" Width="867" Height="640"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="304" Top="640" Width="867" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Item1>
+            <Item2 Name="PackageEditor_bzscene_engine_rt" Type="Control">
+              <Bounds Left="250" Top="200" Width="464" Height="455">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+            </Item2>
+          </Nodes>
+        </MainConfig>
+        <Restores Count="5">
+          <Item1 Names="PackageEditor_bzscene_controls_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite14" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite15" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite16" Type="Pages" ChildCount="6">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_controls_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                  <Item5 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item5>
+                  <Item6 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item6>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item1>
+          <Item2 Names="PackageEditor_bzscene_image_dt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite14" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite15" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite16" Type="Pages" ChildCount="5">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_image_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                  <Item5 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item5>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item2>
+          <Item3 Names="PackageEditor_bzscene_controls_dt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite14" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite15" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite16" Type="Pages" ChildCount="4">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="3"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="385" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                  <Item4 Name="PackageEditor_bzscene_controls_dt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item4>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item3>
+          <Item4 Names="PackageEditor_bzscene_image_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite14" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite15" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite16" Type="Pages" ChildCount="3">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="1"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_image_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item4>
+          <Item5 Names="PackageEditor_bzscene_rt">
+            <Nodes Name="MainIDE" Type="CustomSite" ChildCount="1">
+              <Bounds Left="18" Top="16" Width="1487" Height="978">
+                <WorkArea>
+                  <Rect Right="1920" Bottom="1040"/>
+                </WorkArea>
+              </Bounds>
+              <Item1 Name="AnchorDockSite14" Type="Layout" ChildCount="9">
+                <Bounds Top="82" Width="1487" Height="876" SplitterPos="80"/>
+                <Anchors Align="Bottom"/>
+                <Item1 Name="AnchorDockSite15" Type="Pages" ChildCount="3">
+                  <Bounds Left="289" Top="773" Width="721" Height="103"/>
+                  <Anchors Left="AnchorDockSplitter3" Top="AnchorDockSplitter5" Right="AnchorDockSplitter4"/>
+                  <Item1 Name="MessagesView" Type="Control">
+                    <Bounds Width="713" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="Assembler" Type="Control">
+                    <Bounds Width="792" Height="75"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                  <Item3 Name="Locals" Type="Control">
+                    <Bounds Width="744" Height="245"/>
+                    <Anchors Align="Client"/>
+                  </Item3>
+                </Item1>
+                <Item2 Name="AnchorDockSite16" Type="Pages" ChildCount="2">
+                  <Bounds Left="1014" Top="388" Width="473" Height="488"/>
+                  <Anchors Left="AnchorDockSplitter4" Top="AnchorDockSplitter2"/>
+                  <Header PageIndex="1"/>
+                  <Item1 Name="CodeExplorerView" Type="Control">
+                    <Bounds Width="320" Height="240"/>
+                    <Anchors Align="Client"/>
+                  </Item1>
+                  <Item2 Name="PackageEditor_bzscene_rt" Type="Control">
+                    <Bounds Width="465" Height="460"/>
+                    <Anchors Align="Client"/>
+                  </Item2>
+                </Item2>
+                <Item3 Name="AnchorDockSplitter2" Type="SplitterHorizontal">
+                  <Bounds Left="1014" Top="384" Width="473" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter4"/>
+                </Item3>
+                <Item4 Name="ProjectInspector" Type="Control">
+                  <Bounds Left="1014" Width="473" Height="384"/>
+                  <Anchors Left="AnchorDockSplitter4" Bottom="AnchorDockSplitter2"/>
+                </Item4>
+                <Item5 Name="AnchorDockSplitter3" Type="SplitterVertical">
+                  <Bounds Left="285" Width="4" Height="876"/>
+                </Item5>
+                <Item6 Name="ObjectInspectorDlg" Type="Control">
+                  <Bounds Width="285" Height="876"/>
+                  <Anchors Right="AnchorDockSplitter3"/>
+                </Item6>
+                <Item7 Name="AnchorDockSplitter4" Type="SplitterVertical">
+                  <Bounds Left="1010" Width="4" Height="876"/>
+                </Item7>
+                <Item8 Name="SourceNotebook" Type="Control">
+                  <Bounds Left="289" Width="721" Height="769"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4" Bottom="AnchorDockSplitter5"/>
+                </Item8>
+                <Item9 Name="AnchorDockSplitter5" Type="SplitterHorizontal">
+                  <Bounds Left="289" Top="769" Width="721" Height="4"/>
+                  <Anchors Left="AnchorDockSplitter3" Right="AnchorDockSplitter4"/>
+                </Item9>
+              </Item1>
+            </Nodes>
+          </Item5>
+        </Restores>
+        <Settings HeaderStyle="Line"/>
+      </AnchorDocking>
+    </Desktop3>
+  </Desktops>
+</CONFIG>

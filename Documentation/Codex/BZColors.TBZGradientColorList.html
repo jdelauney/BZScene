@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZColors: Classe TBZGradientColorList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZGradientColorList"></span><h1 class="cio">Classe TBZGradientColorList</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZColors.html">BZColors</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZGradientColorList = class(<a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Gestionnaire d'une liste de couleurs de type <a class="normal" href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a> pour la génération de dégradés</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a></li>
+<li class="thisitem">TBZGradientColorList</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZColors.TBZGradientColorList.html#CreateOwned">CreateOwned</a></b>(AOwner: <a  href="BZColors.TBZColorList.html">TBZColorList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZColors.TBZGradientColorList.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZColors.TBZGradientColorList.html#Clear">Clear</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#AddColorStop">AddColorStop</a></b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#AddColorStop">AddColorStop</a></b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; Const aEaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; Const aEaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; Const aLerpType: <a  href="BZMath.html#TBZInterpolationType">TBZInterpolationType</a>; Const aTheta: Single; Const aDistorsion: Single = 0): Integer; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#AddColorStop">AddColorStop</a></b>(Const aColorItem: <a  href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a>): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#AddColorStop">AddColorStop</a></b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; Const aTheta:Single): Integer; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#GetGradientColor">GetGradientColor</a></b>(Const aTheta: Single): <a  href="BZColors.html#TBZColor">TBZColor</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZColors.TBZGradientColorList.html#CreateGradient">CreateGradient</a></b>(nb: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZGradientColorList.html#GetOrCreateGradientColorList">GetOrCreateGradientColorList</a></b>(Const nb: Integer = 256; Const AColorList: <a  href="BZColors.TBZColorList.html">TBZColorList</a> = nil): <a  href="BZColors.TBZColorList.html">TBZColorList</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZGradientColorList.html#ColorStops">ColorStops</a></b>[Index:Integer]: <a  href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a> read GetGradientColorItem write setGradientColorItem;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZGradientColorList.html#GadientList">GadientList</a></b>: <a  href="BZColors.html#PBZColorItemArray">PBZColorItemArray</a> read getDirectGradientList;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZGradientColorList.html#TweenGlobal">TweenGlobal</a></b>: Boolean read FTweenGlobal write FTweenGlobal;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZGradientColorList.html#TweenNext">TweenNext</a></b>: Boolean read FTweenNext write FTweenNext;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZGradientColorList.html#TweenDuration">TweenDuration</a></b>: Single read FTweenDuration write FTweenDuration;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateOwned"></span><code>Constructor <b>CreateOwned</b>(AOwner: <a  href="BZColors.TBZColorList.html">TBZColorList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>Procedure <b>Clear</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface la liste de couleur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColorStop"></span><code>Function <b>AddColorStop</b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couleur à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColorStop"></span><code>Function <b>AddColorStop</b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; Const aEaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; Const aEaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; Const aLerpType: <a  href="BZMath.html#TBZInterpolationType">TBZInterpolationType</a>; Const aTheta: Single; Const aDistorsion: Single = 0): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couleur à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColorStop"></span><code>Function <b>AddColorStop</b>(Const aColorItem: <a  href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a>): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couleur à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColorStop"></span><code>Function <b>AddColorStop</b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; Const aTheta:Single): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couleur à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetGradientColor"></span><code>Function <b>GetGradientColor</b>(Const aTheta: Single): <a  href="BZColors.html#TBZColor">TBZColor</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la couleur du degradé à la postion &quot;aTheta&quot; avec &quot;aTheta&quot; compris entre 0.0 et 1.0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateGradient"></span><code>Procedure <b>CreateGradient</b>(nb: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création du dégradé de &quot;nb&quot; couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetOrCreateGradientColorList"></span><code>Function <b>GetOrCreateGradientColorList</b>(Const nb: Integer = 256; Const AColorList: <a  href="BZColors.TBZColorList.html">TBZColorList</a> = nil): <a  href="BZColors.TBZColorList.html">TBZColorList</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation de la liste de couleurs du degradé ou la retourne si celle-ci existe déja</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ColorStops"></span><code>property <b>ColorStops</b>[Index:Integer]: <a  href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a> read GetGradientColorItem write setGradientColorItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Colors : Acceder à la couleur &quot;Index&quot; de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GadientList"></span><code>property <b>GadientList</b>: <a  href="BZColors.html#PBZColorItemArray">PBZColorItemArray</a> read getDirectGradientList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+GradientList : Retourne la liste des couleurs du dégradé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TweenGlobal"></span><code>property <b>TweenGlobal</b>: Boolean read FTweenGlobal write FTweenGlobal;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>TweenGlobal</code> : Utilisation de l'interpolation global ou local</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TweenNext"></span><code>property <b>TweenNext</b>: Boolean read FTweenNext write FTweenNext;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>TweenNext</code> : Utilser le type d'interpolation du point suivant pour les calcul du dégradé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TweenDuration"></span><code>property <b>TweenDuration</b>: Single read FTweenDuration write FTweenDuration;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>TweenDuration</code> : Paramètre de durée dans le temps du dégradé</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

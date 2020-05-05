@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZVector2f</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZVector2f"></span><h1 class="cio">Enregistrement TBZVector2f</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZVector2f = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZVector2f</code></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector2f.html#V">V</a></b>: <a  href="BZVectorMath.html#TBZVector2fType">TBZVector2fType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector2f.html#X">X</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector2f.html#Y">Y</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector2f.html#Width">Width</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector2f.html#Height">Height</a></b>: Single</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZVector2f.html#Create">Create</a></b>(aX,aY: single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#ToString">ToString</a></b> : String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; Constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator /(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator /(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator /(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Min">Min</a></b>(constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Min">Min</a></b>(constref B: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Max">Max</a></b>(constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Max">Max</a></b>(constref B: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Clamp">Clamp</a></b>(constref AMin, AMax: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Clamp">Clamp</a></b>(constref AMin, AMax: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#MulAdd">MulAdd</a></b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#MulSub">MulSub</a></b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#MulDiv">MulDiv</a></b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Length">Length</a></b>:Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#LengthSquare">LengthSquare</a></b>:Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Distance">Distance</a></b>(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#DistanceSquare">DistanceSquare</a></b>(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#ManhattanDistance">ManhattanDistance</a></b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#ChebyshevDistance">ChebyshevDistance</a></b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#MinkovskiDistance">MinkovskiDistance</a></b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#BaryCenter">BaryCenter</a></b>(constRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; const WeightA : Single = 1.0; Const WeightB : Single = 1.0) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Center">Center</a></b>(ConstRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Normalize">Normalize</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Perp">Perp</a></b>(A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#CrossProduct">CrossProduct</a></b>(A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#DotProduct">DotProduct</a></b>(A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#AngleBetween">AngleBetween</a></b>(Constref A, ACenterPoint : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#AngleBetweenPointsInDeg">AngleBetweenPointsInDeg</a></b>(C : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#AngleCosine">AngleCosine</a></b>(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Rotate">Rotate</a></b>(anAngle : Single; aCenterPoint : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Abs">Abs</a></b>:<a  href="BZVectorMath.TBZVector2f.html">TBZvector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Round">Round</a></b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Trunc">Trunc</a></b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Floor">Floor</a></b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Ceil">Ceil</a></b> : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Fract">Fract</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Modf">Modf</a></b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#fMod">fMod</a></b>(Constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#Sqrt">Sqrt</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2f.html#InvSqrt">InvSqrt</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZVectorMath.html#TBZVector2fType">TBZVector2fType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces via tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="X"></span><code><b>X</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Y"></span><code><b>Y</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Width"></span><code><b>Width</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Propriétés de convenance pour la manipulation de taille</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Height"></span><code><b>Height</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Propriétés de convenance pour la manipulation de taille</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(aX,aY: single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Initialisation des valeurs X et Y</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b> : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne une chaine de caractères formaté représentant le vecteur : '(x, y)'</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute deux vecteurs de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> à un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait deux vecteurs de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> à un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie deux vecteurs de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; Constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> avec un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise deux vecteurs de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute chaque composant du vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> avec une valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait chaque composant du vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> avec une valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie chaque composant du vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> par une valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise chaque composant du vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> une valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; constref B: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> avec un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse le signe des composants du vecteur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux variables de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> sont égales. Retourne <code>True</code> si la condition est <a class="normal" href="BZVectorMath.TBZVector2f.html#V">v</a>érifiée. Chaque composant du vecteur est <a class="normal" href="BZVectorMath.TBZVector2f.html#V">v</a>érifié</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux variables de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> ne sont pas égales. Retourne <code>True</code> si la condition est <a class="normal" href="BZVectorMath.TBZVector2f.html#V">v</a>érifiée. Chaque composant du vecteur est <a class="normal" href="BZVectorMath.TBZVector2f.html#V">v</a>érifié</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le minimum de chaque composant entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(constref B: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le minimum de chaque composant entre vecteur courrant et un valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le maximum de chaque composant entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(constref B: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le maximum de chaque composant entre vecteur courrant et un valeur de type Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(constref AMin, AMax: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que chaque composant du vecteur courrant soit compris en les valeur définit par les valeurs de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> &quot;<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>&quot; et &quot;AMax&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(constref AMin, AMax: Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que chaque composant du vecteur courrant soit compris en les valeur de type Single &quot;<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>&quot; et &quot;AMax&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulAdd"></span><code>function <b>MulAdd</b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le vecteur courrant par un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> et ajoute un deuxieme <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> au résultat</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulSub"></span><code>function <b>MulSub</b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le vecteur courrant par un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> et soustrait un deuxieme <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> au résultat</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulDiv"></span><code>function <b>MulDiv</b>(constref A,B:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le vecteur courrant par un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> et divise le résultat par un deuxieme <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Length"></span><code>function <b>Length</b>:Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la longueur du vecteur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="LengthSquare"></span><code>function <b>LengthSquare</b>:Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la longueur carré du vecteur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Distance"></span><code>function <b>Distance</b>(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <code>distance</code> (Cartésienne) entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceSquare"></span><code>function <b>DistanceSquare</b>(constref A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> (Cartésienne) carré entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ManhattanDistance"></span><code>function <b>ManhattanDistance</b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> de Manhattan. <br> <b>Note</b> : La <a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> de Manahattan est la <a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> de &quot;marche&quot; entre deux points. <br> Aucun déplacement angulaire n'est autorisé. (applicable uniquement pour des mouvements horizontaux et verticaux)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ChebyshevDistance"></span><code>function <b>ChebyshevDistance</b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> de Chebyshev. Similaire à <a class="normal" href="BZVectorMath.TBZVector2f.html#ManhattanDistance">ManhattanDistance</a>. <br> Sauf que le mouvement diagonal est autorisé. <br> <b>Note</b> : Cette fonction est aussi appelée &quot;<a class="normal" href="BZVectorMath.TBZVector2f.html#Distance">distance</a> de l'échiquier&quot; car elle correspond au nombre de mouvements qu'une pièce du roi doit effectuer pour se déplacer entre deux points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinkovskiDistance"></span><code>function <b>MinkovskiDistance</b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BaryCenter"></span><code>function <b>BaryCenter</b>(constRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; const WeightA : Single = 1.0; Const WeightB : Single = 1.0) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le barycentre pondéré. <br> cf : <a  href="https://fr.wikibooks.org/wiki/Manuel_de_g">https://fr.wikibooks.org/wiki/Manuel_de_g</a>éométrie_vectorielle/Coordonnées_du_barycentre</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Center"></span><code>function <b>Center</b>(ConstRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Normalize"></span><code>function <b>Normalize</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le vecteur courrant normalisé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Perp"></span><code>function <b>Perp</b>(A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la composante Z (Magnitude) d'un produit en croix d'un vecteur 3D. Nous supposons ici que la valeur &quot;Z&quot; est egale à 0</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CrossProduct"></span><code>function <b>CrossProduct</b>(A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le produit en croix du vecteur Equivalent au produit en croix d'un vecteur 3D. (Pour simuler le calcul et obtenir un résultat, on &quot;suppose&quot; que la valeur &quot;Z&quot; est égale à 1) Pour obtenir la valeur de &quot;Z&quot; (magnitude) du produit en croix d'un vecteur 3D il faut utiliser la fonction <a class="normal" href="BZVectorMath.TBZVector2f.html#Perp">Perp</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DotProduct"></span><code>function <b>DotProduct</b>(A:<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le produit scalaire du vecteur courrant avec un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AngleBetween"></span><code>function <b>AngleBetween</b>(Constref A, ACenterPoint : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'angle en &quot;Degré&quot; entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> relatif a un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> décrivant le centre de rotation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AngleBetweenPointsInDeg"></span><code>function <b>AngleBetweenPointsInDeg</b>(C : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne l'angle en &quot;Degré&quot; entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>. Note le centre de rotation se trouve à la position (0,0)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AngleCosine"></span><code>function <b>AngleCosine</b>(constref A: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le cosinus de l'angle entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Rotate"></span><code>function <b>Rotate</b>(anAngle : Single; aCenterPoint : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>) : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le point après rotation du vecteur de &quot;anAngle&quot; en degré par rapport au centre de rotation &quot;aCenterPoint</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Abs"></span><code>function <b>Abs</b>:<a  href="BZVectorMath.TBZVector2f.html">TBZvector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur absolue de chaque composant du vecteur courrant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Round"></span><code>function <b>Round</b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur arrondit de chaque composant du vecteur courrant dans un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Trunc"></span><code>function <b>Trunc</b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur tronqué de chaque composant du vecteur courrant dans un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Floor"></span><code>function <b>Floor</b>: <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur arrondit tendant vers le négatif de chaque composant du vecteur courrant dans un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Ceil"></span><code>function <b>Ceil</b> : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur arrondit tendant vers le positif de chaque composant du vecteur courrant dans un vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Fract"></span><code>function <b>Fract</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la partie fractionnaire de chaque composant du vecteur courrant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Modf"></span><code>function <b>Modf</b>(constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le dividende de chaque composant du vecteur courrant avec comme diviseur un autre vecteur de type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="fMod"></span><code>function <b>fMod</b>(Constref A : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le dividende de chaque composant du vecteur courrant avec comme diviseur un autre vecteur de type <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> ( TODO : Overload <a class="normal" href="BZVectorMath.TBZVector2f.html#Modf">modf</a> ou <code>fmod</code> ???)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Sqrt"></span><code>function <b>Sqrt</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la racine carré de chaque composant du vecteur courrant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="InvSqrt"></span><code>function <b>InvSqrt</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la racine carré inverse de chaque composant du vecteur courrant</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

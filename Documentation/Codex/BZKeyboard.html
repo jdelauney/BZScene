@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZKeyboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZKeyboard</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section">Classes, interfaces, enregistrements et objets</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des méthodes qui Fournissent l'état à la demande de toute touche appuyée sur le clavier.<br> Et un ensemble de fonctions pour travailler avec des codes de touches virtuelles.</p>
+<p>
+
+
+<p>  Notez que Windows mappe les boutons de la souris avec des codes de touches virtuelles et que vous   utiliser les fonctions / classes de cette unité pour vérifier également les boutons de la souris.<br>   Reportez-vous à la section 'Codes Touches virtuelles' dans les révisions des programmeurs Win32 pour une liste de constantes de code de touches (les constantes VK_ * sont déclarées dans l'unité 'Windows').
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>04/05/2018 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Dependances</b> : Aucune
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>LICENCE</b> : MPL / LGPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>lcltype</li><li>lclintf</li><li>classes</li><li>Windows</li><li>x</li><li>xlib</li><li>KeySym</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#IsKeyDown">IsKeyDown</a></b>(c : Char) : Boolean; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#IsKeyDown">IsKeyDown</a></b>(vk : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>) : Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#KeyPressed">KeyPressed</a></b>(minVkCode : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a> = 0) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#VirtualKeyCodeToKeyName">VirtualKeyCodeToKeyName</a></b>(vk : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>) : String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#KeyNameToVirtualKeyCode">KeyNameToVirtualKeyCode</a></b>(const keyName : String) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#CharToVirtualKeyCode">CharToVirtualKeyCode</a></b>(c : Char) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZKeyboard.html#KeyboardNotifyWheelMoved">KeyboardNotifyWheelMoved</a></b>(wheelDelta : Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZKeyboard.html#GetBufferKeyState">GetBufferKeyState</a></b>(Var Buffer: <a  href="BZKeyboard.html#TBZKeyBufferState">TBZKeyBufferState</a>):Byte;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a></b> = Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZKeyboard.html#TBZKeyBufferState">TBZKeyBufferState</a></b> = array[0..255] of byte;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZKeyboard.html#VK_MOUSEWHEELUP">VK_MOUSEWHEELUP</a></b>   = VK_F23;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZKeyboard.html#VK_MOUSEWHEELDOWN">VK_MOUSEWHEELDOWN</a></b> = VK_F24;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZKeyboard.html#vLastWheelDelta">vLastWheelDelta</a></b>: Integer;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IsKeyDown"></span><code>function <b>IsKeyDown</b>(c : Char) : Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie si la touche correspondant au &quot;char&quot; donné est appuyée.</p>
+<p>
+
+
+<p>  Le caractère est mappé sur le &quot;clavier principal&quot; uniquement, et non sur le clavier numérique.(virtuel) <br>   Les combinaisons Shift / Ctrl / Alt qui peuvent être nécessaires pour taper les caractères spéciaux sont ignorés. <br> C'est à dire que 'a' équivaut à 'A' et sur mon clavier français '5' = '(' = '[' car ils ont tous le même Code de touche physique).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IsKeyDown"></span><code>function <b>IsKeyDown</b>(vk : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>) : Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Vérifie si la touche correspondant au &quot;Code Virtuel&quot; donné est appuyée. <br> Cette fonction est juste là pour englober &quot;GetKeyState&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="KeyPressed"></span><code>function <b>KeyPressed</b>(minVkCode : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a> = 0) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie la première touche enfoncée dont le code virtuelle est &gt;= à minVkCode. <br>   Si aucune touche n'est enfoncée, la valeur de retour est -1. Cette fonction n'attend PAS la saisie de l'utilisateur. <br>   Si vous ne vous souciez pas de plusieurs pressions de touches, n'utilisez pas le paramètre.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VirtualKeyCodeToKeyName"></span><code>function <b>VirtualKeyCodeToKeyName</b>(vk : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>) : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit un code de touche virtuel vers son nom Le nom est exprimé à l'aide des paramètres locale de l'OS.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="KeyNameToVirtualKeyCode"></span><code>function <b>KeyNameToVirtualKeyCode</b>(const keyName : String) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertit un nom de touche en son code virtuel.<br>   La comparaison n'est PAS sensible à la casse. Si aucune correspondance n'est trouvée, retourne -1.<br>   Le nom est exprimé à l'aide des paramètres locale de l'OS., sauf pour les boutons de la souris  qui sont traduits en 'LBUTTON', 'MBUTTON' et 'RBUTTON'.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CharToVirtualKeyCode"></span><code>function <b>CharToVirtualKeyCode</b>(c : Char) : <a  href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie le code virtuel correspondant au caractère donné. <br>   Le code renvoyé n'est pas traduit, exemple : 'a' et 'A' donneront le même résultat. <br> Une valeur de retour de -1 signifie que le caractère n'est peut être pas entré en utilisant le clavier physique.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="KeyboardNotifyWheelMoved"></span><code>procedure <b>KeyboardNotifyWheelMoved</b>(wheelDelta : Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Utilisez cette procédure pour informer le mouvement de la roue de la souris et simuler l'appui d'une touche (<a class="normal" href="BZKeyboard.html#VK_MOUSEWHEELUP">VK_MOUSEWHEELUP</a>/<a class="normal" href="BZKeyboard.html#VK_MOUSEWHEELDOWN">VK_MOUSEWHEELDOWN</a>), qui sera intercepté par <a class="normal" href="BZKeyboard.html#IsKeyDown">IsKeyDown</a> et/ou <a class="normal" href="BZKeyboard.html#KeyPressed">KeyPressed</a>. <br> A placer dans les évènement OnMouseWheel des controles graphique (form, tpanel ect...)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBufferKeyState"></span><code>function <b>GetBufferKeyState</b>(Var Buffer: <a  href="BZKeyboard.html#TBZKeyBufferState">TBZKeyBufferState</a>):Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie le nombre de touche pressées silmutanément et le buffer contenant l'etat des touche.</p>
+<p>
+ Example : <br> </p>
+
+<pre class="longcode">
+HitKeyCount := GetBufferKeyState(Buffer);
+<span class="pascal_keyword">if</span> HitKeyCount&gt;<span class="pascal_numeric">0</span> <span class="pascal_keyword">then</span>
+<span class="pascal_keyword">begin</span>
+  <span class="pascal_keyword">if</span> ((Buffer[VK_NUMPAD1] <span class="pascal_keyword">and</span> <span class="pascal_hex">$80</span>) &lt;&gt; <span class="pascal_numeric">0</span>) <span class="pascal_keyword">and</span> ((Buffer[VK_RSHIFT] <span class="pascal_keyword">and</span> <span class="pascal_hex">$80</span>) &lt;&gt; <span class="pascal_numeric">0</span>) <span class="pascal_keyword">then</span> inputkey := <span class="pascal_numeric">1</span>
+  <span class="pascal_keyword">else</span> <span class="pascal_keyword">if</span> ((Buffer[VK_NUMPAD2] <span class="pascal_keyword">and</span> <span class="pascal_hex">$80</span>) &lt;&gt; <span class="pascal_numeric">0</span>) <span class="pascal_keyword">then</span> inputkey := <span class="pascal_numeric">2</span>;
+<span class="pascal_keyword">end</span>;</pre>
+
+<p></p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZVirtualKeyCode"></span><code><b>TBZVirtualKeyCode</b> = Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Code d'une touche virtuelle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZKeyBufferState"></span><code><b>TBZKeyBufferState</b> = array[0..255] of byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Tampon de stockage, de l'état des touches pressées (code de 0 à 255)</p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VK_MOUSEWHEELUP"></span><code><b>VK_MOUSEWHEELUP</b>   = VK_F23;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+pseudo touche pour la roulette de la souris vers le haut (nous réaffectons la touche F23), voir &quot;<a class="normal" href="BZKeyboard.html#KeyboardNotifyWheelMoved">KeyboardNotifyWheelMoved</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VK_MOUSEWHEELDOWN"></span><code><b>VK_MOUSEWHEELDOWN</b> = VK_F24;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+pseudo touche pour la roulette de la souris vers le bas (nous réaffectons la touche F23), voir &quot;<a class="normal" href="BZKeyboard.html#KeyboardNotifyWheelMoved">KeyboardNotifyWheelMoved</a>&quot;</p>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="vLastWheelDelta"></span><code><b>vLastWheelDelta</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Variable globale du dernier état de la roulette de la souris</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2018-05-04
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

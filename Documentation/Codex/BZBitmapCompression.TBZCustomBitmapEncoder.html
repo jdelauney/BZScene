@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmapCompression: Classe TBZCustomBitmapEncoder</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomBitmapEncoder"></span><h1 class="cio">Classe TBZCustomBitmapEncoder</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmapCompression.html">BZBitmapCompression</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomBitmapEncoder = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe décorative pour définir les fonctionnalités de base d'un encodeur / décodeur ; compresseur / décompresseur.
+
+<p>Modifié et adapté de GraphicEx</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZCustomBitmapEncoder</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#Create">Create</a></b>(AOwner : <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#DecodeInit">DecodeInit</a></b>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#Decode">Decode</a></b>(var Dest: Pointer; UnpackedSize: Integer); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#DecodeEnd">DecodeEnd</a></b>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#EncodeInit">EncodeInit</a></b>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#Encode">Encode</a></b>(Source : Pointer; var Dest: Pointer; Count: Cardinal; var BytesStored: Cardinal); virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapCompression.TBZCustomBitmapEncoder.html#EncodeEnd">EncodeEnd</a></b>; virtual;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(AOwner : <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DecodeInit"></span><code>procedure <b>DecodeInit</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initialisation du décodage des données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Decode"></span><code>procedure <b>Decode</b>(var Dest: Pointer; UnpackedSize: Integer); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Décodage des données, renvoie dans &quot;Dest&quot; les données décodées. La lecture des données compressées se fait via la propriété &quot;Memory&quot; du &quot;<a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Owner">Owner</a>&quot;. Ainsi lors de la lecture a partir d'un flux, la position dans celui-ci est conservé et la lecture séquentielle peux se poursuivre.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DecodeEnd"></span><code>procedure <b>DecodeEnd</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalisation du décodagedes données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EncodeInit"></span><code>procedure <b>EncodeInit</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initialisation de l'encodage des données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Encode"></span><code>procedure <b>Encode</b>(Source : Pointer; var Dest: Pointer; Count: Cardinal; var BytesStored: Cardinal); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Encodage des données, renvoie dans &quot;Dest&quot; les données encodées. L'écriture des données se fait via la propriété &quot;Memory&quot; du &quot;<a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Owner">Owner</a>&quot;. Ainsi lors de l'écriture dans le flux, la position dans celui-ci est conservé et la l'écriture séquentielle peux se poursuivre.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EncodeEnd"></span><code>procedure <b>EncodeEnd</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Finalisation de l'encodage des données</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

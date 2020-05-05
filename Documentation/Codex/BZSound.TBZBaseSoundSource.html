@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZSound: Classe TBZBaseSoundSource</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBaseSoundSource"></span><h1 class="cio">Classe TBZBaseSoundSource</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZSound.html">BZSound</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBaseSoundSource = class(TCollectionItem)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Description de base d'un échantillon audio</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TCollectionItem</li>
+<li class="thisitem">TBZBaseSoundSource</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZSound.TBZBaseSoundSource.html#Create">Create</a></b>(ACollection: TCollection); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZSound.TBZBaseSoundSource.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZBaseSoundSource.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZBaseSoundSource.html#Sample">Sample</a></b>: <a  href="BZSound.TBZSoundSampleItem.html">TBZSoundSampleItem</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZBaseSoundSource.html#UpdateTimePosition">UpdateTimePosition</a></b>(Const val : Single);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Changes">Changes</a></b>: <a  href="BZSound.html#TBZSoundSourceChanges">TBZSoundSourceChanges</a> read FChanges Write FChanges;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#FXChanges">FXChanges</a></b>: <a  href="BZSound.html#TBZSoundSourceFXChanges">TBZSoundSourceFXChanges</a> read FFXChanges Write FFXChanges;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#ManagerTag">ManagerTag</a></b>: PtrUInt read FTag write FTag;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#DirectFilterTag">DirectFilterTag</a></b> : PtrUInt read FDirectFilterTag write FDirectFilterTag;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#DirectFilterFX">DirectFilterFX</a></b> : <a  href="BZSound.TBZCustomSoundFilterItem.html">TBZCustomSoundFilterItem</a> read GetDirectFilterFXCache;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#TimePosition">TimePosition</a></b> : Single Read FTimePosition;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#TimePositionInByte">TimePositionInByte</a></b> : Int64 read GetTimePositionInByte;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#SoundLibrary">SoundLibrary</a></b>: <a  href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a> read GetSoundLibrary write SetSoundLibrary;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#SoundName">SoundName</a></b>: string read FSoundName write SetSoundName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#SoundFXLibrary">SoundFXLibrary</a></b>  : <a  href="BZSound.TBZSoundFXLibrary.html">TBZSoundFXLibrary</a> read GetSoundFXLibrary write SetSoundFXLibrary;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#DirectFilter">DirectFilter</a></b> : String read FDirectFilterName Write setDirectFilterName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#DirectFilterActivated">DirectFilterActivated</a></b> : Boolean read GetDirectFilterActivated Write setDirectFilterActivated;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#AuxSlots">AuxSlots</a></b> : <a  href="BZSound.TBZSoundFXAuxSlots.html">TBZSoundFXAuxSlots</a> read FAuxSlots;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Volume">Volume</a></b>: Single read FVolume write SetVolume;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#NbLoops">NbLoops</a></b>: Integer read FNbLoops write SetNbLoops default 1;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Mute">Mute</a></b>: Boolean read FMute write SetMute default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Pause">Pause</a></b>: Boolean read FPause write SetPause default False;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Playing">Playing</a></b>: Boolean read FPlaying write SetPlaying default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Priority">Priority</a></b>: Integer read FPriority write SetPriority default 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#MinDistance">MinDistance</a></b>: Single read FMinDistance write SetMinDistance;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#MaxDistance">MaxDistance</a></b>: Single read FMaxDistance write SetMaxDistance;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#InsideConeAngle">InsideConeAngle</a></b>: Single read FInsideConeAngle write SetInsideConeAngle;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#OutsideConeAngle">OutsideConeAngle</a></b>: Single read FOutsideConeAngle write SetOutsideConeAngle;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#ConeOutsideVolume">ConeOutsideVolume</a></b>: Single read FConeOutsideVolume write SetConeOutsideVolume;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Frequency">Frequency</a></b>: Integer read FFrequency write SetFrequency default -1;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#Pitch">Pitch</a></b>: Single read FPitch write SetPitch default 1.0;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#UseEnvironnment">UseEnvironnment</a></b> : Boolean read FUseEnvironnment write FUseEnvironnment;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#UseEqualizer">UseEqualizer</a></b> : Boolean read FUseEnvironnment write FUseEqualizer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZBaseSoundSource.html#AutoFreeOnStop">AutoFreeOnStop</a></b> : Boolean read FAutoFreeOnStop write FAutoFreeOnStop;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(ACollection: TCollection); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+function GetPeaksMeter(PosInByte : Int64; var Channels : Array of single); OpenALBuffers : array[0..1] of PtrUInt; // Pour OpenAL</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Sample"></span><code>function <b>Sample</b>: <a  href="BZSound.TBZSoundSampleItem.html">TBZSoundSampleItem</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UpdateTimePosition"></span><code>procedure <b>UpdateTimePosition</b>(Const val : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Changes"></span><code>property <b>Changes</b>: <a  href="BZSound.html#TBZSoundSourceChanges">TBZSoundSourceChanges</a> read FChanges Write FChanges;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FXChanges"></span><code>property <b>FXChanges</b>: <a  href="BZSound.html#TBZSoundSourceFXChanges">TBZSoundSourceFXChanges</a> read FFXChanges Write FFXChanges;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ManagerTag"></span><code>property <b>ManagerTag</b>: PtrUInt read FTag write FTag;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+This Tag is reserved for sound manager use only</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectFilterTag"></span><code>property <b>DirectFilterTag</b> : PtrUInt read FDirectFilterTag write FDirectFilterTag;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectFilterFX"></span><code>property <b>DirectFilterFX</b> : <a  href="BZSound.TBZCustomSoundFilterItem.html">TBZCustomSoundFilterItem</a> read GetDirectFilterFXCache;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TimePosition"></span><code>property <b>TimePosition</b> : Single Read FTimePosition;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+property Origin: TBZBaseSceneObject read FOrigin write SetOrigin; property <a class="normal" href="BZSound.TBZBaseSoundSource.html#DirectFilter">DirectFilter</a> : TBZCustomSoundFilter read FDirectFilter;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TimePositionInByte"></span><code>property <b>TimePositionInByte</b> : Int64 read GetTimePositionInByte;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="SoundLibrary"></span><code>property <b>SoundLibrary</b>: <a  href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a> read GetSoundLibrary write SetSoundLibrary;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="SoundName"></span><code>property <b>SoundName</b>: string read FSoundName write SetSoundName;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="SoundFXLibrary"></span><code>property <b>SoundFXLibrary</b>  : <a  href="BZSound.TBZSoundFXLibrary.html">TBZSoundFXLibrary</a> read GetSoundFXLibrary write SetSoundFXLibrary;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DirectFilter"></span><code>property <b>DirectFilter</b> : String read FDirectFilterName Write setDirectFilterName;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="DirectFilterActivated"></span><code>property <b>DirectFilterActivated</b> : Boolean read GetDirectFilterActivated Write setDirectFilterActivated;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="AuxSlots"></span><code>property <b>AuxSlots</b> : <a  href="BZSound.TBZSoundFXAuxSlots.html">TBZSoundFXAuxSlots</a> read FAuxSlots;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Volume"></span><code>property <b>Volume</b>: Single read FVolume write SetVolume;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Volume</code> of the source, [0.0; 1.0] range</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="NbLoops"></span><code>property <b>NbLoops</b>: Integer read FNbLoops write SetNbLoops default 1;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nb of <a class="normal" href="BZSound.TBZBaseSoundSource.html#Playing">playing</a> loops.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Mute"></span><code>property <b>Mute</b>: Boolean read FMute write SetMute default False;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Pause"></span><code>property <b>Pause</b>: Boolean read FPause write SetPause default False;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Playing"></span><code>property <b>Playing</b>: Boolean read FPlaying write SetPlaying default False;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Priority"></span><code>property <b>Priority</b>: Integer read FPriority write SetPriority default 0;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sound source <code>priority</code>, the higher the better. When maximum number of sound sources is reached, only the sources with the highest <code>priority</code> will continue to play, however, even non-<a class="normal" href="BZSound.TBZBaseSoundSource.html#Playing">playing</a> sources should be tracked by the manager, thus allowing an &quot;unlimited&quot; amount of sources from the application point of view.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MinDistance"></span><code>property <b>MinDistance</b>: Single read FMinDistance write SetMinDistance;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZMath.html#Min">Min</a> distance before spatial attenuation occurs. 1.0 by default</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MaxDistance"></span><code>property <b>MaxDistance</b>: Single read FMaxDistance write SetMaxDistance;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZMath.html#Max">Max</a> distance, if source is further away, it will not be heard. 100.0 by default</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="InsideConeAngle"></span><code>property <b>InsideConeAngle</b>: Single read FInsideConeAngle write SetInsideConeAngle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inside <a class="normal" href="BZMath.html#cOne">cone</a> angle, [0° 360°]. Sound <a class="normal" href="BZSound.TBZBaseSoundSource.html#Volume">volume</a> is maximal within this <a class="normal" href="BZMath.html#cOne">cone</a>. See DirectX SDK for details.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OutsideConeAngle"></span><code>property <b>OutsideConeAngle</b>: Single read FOutsideConeAngle write SetOutsideConeAngle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Outside <a class="normal" href="BZMath.html#cOne">cone</a> angle, [0°; 360°]. Between inside and outside <a class="normal" href="BZMath.html#cOne">cone</a>, sound <a class="normal" href="BZSound.TBZBaseSoundSource.html#Volume">volume</a> decreases between <a class="normal" href="BZMath.html#Max">max</a> and <a class="normal" href="BZMath.html#cOne">cone</a> outside <a class="normal" href="BZSound.TBZBaseSoundSource.html#Volume">volume</a>. See DirectX SDK for details.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ConeOutsideVolume"></span><code>property <b>ConeOutsideVolume</b>: Single read FConeOutsideVolume write SetConeOutsideVolume;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZMath.html#cOne">Cone</a> outside <a class="normal" href="BZSound.TBZBaseSoundSource.html#Volume">volume</a>, [0.0; 1.0] range. See DirectX SDK for details.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Frequency"></span><code>property <b>Frequency</b>: Integer read FFrequency write SetFrequency default -1;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZSound.TBZBaseSoundSource.html#Sample">Sample</a> custom playback <code>frequency</code>. Values null or negative are interpreted as 'default <code>frequency</code>'.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Pitch"></span><code>property <b>Pitch</b>: Single read FPitch write SetPitch default 1.0;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="UseEnvironnment"></span><code>property <b>UseEnvironnment</b> : Boolean read FUseEnvironnment write FUseEnvironnment;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="UseEqualizer"></span><code>property <b>UseEqualizer</b> : Boolean read FUseEnvironnment write FUseEqualizer;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="AutoFreeOnStop"></span><code>property <b>AutoFreeOnStop</b> : Boolean read FAutoFreeOnStop write FAutoFreeOnStop;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

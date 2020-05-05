@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGeoTools: Classe TBZ2DPolyLineTool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZ2DPolyLineTool"></span><h1 class="cio">Classe TBZ2DPolyLineTool</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGeoTools.html">BZGeoTools</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZ2DPolyLineTool = class(<a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe pour la manipuation et la gestion d'une polyline</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a></li>
+<li class="thisitem">TBZ2DPolyLineTool</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#Create">Create</a></b>(aPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#BuildStroke">BuildStroke</a></b> : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#GetEdgeList">GetEdgeList</a></b>(Var EdgeList : <a  href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a>) : Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#GetBounds">GetBounds</a></b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#SimplifyTo">SimplifyTo</a></b>(Const Tolerance : Single = 1.0) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#Simplify">Simplify</a></b>(Const Tolerance : Single = 1.0);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#Path">Path</a></b> : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a> read FPoints write FPoints;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#StrokeMode">StrokeMode</a></b> : <a  href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a> read FStrokeMode write FStrokeMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#InnerJoinType">InnerJoinType</a></b>  : <a  href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a> read FInnerJoinType write FInnerJoinType;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#OuterJoinType">OuterJoinType</a></b> : <a  href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a> read FOuterJoinType write FOuterJoinType;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#StartCap">StartCap</a></b>  : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a> read FStartCap write FStartCap;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#EndCap">EndCap</a></b> : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a> read FEndCap write FEndCap;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#StrokeWidth">StrokeWidth</a></b> : Word read FStrokeWidth write FStrokeWidth;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolyLineTool.html#ClosePath">ClosePath</a></b> : Boolean read FClosePath write FClosePath;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(aPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BuildStroke"></span><code>function <b>BuildStroke</b> : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+constructor <a class="normal" href="BZGeoTools.TBZ2DPolyLineTool.html#Create">Create</a>(aPoints : <a class="normal" href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>; Const AutoClosePath : Boolean = false); procedure <a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html#AssignPoints">AssignPoints</a>(aPoints : <a class="normal" href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEdgeList"></span><code>function <b>GetEdgeList</b>(Var EdgeList : <a  href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a>) : Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Construit la liste des segments dans &quot;EdgeList&quot; et retourne le nombre de segment</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetBounds"></span><code>function <b>GetBounds</b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+function GetLength : Single;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SimplifyTo"></span><code>function <b>SimplifyTo</b>(Const Tolerance : Single = 1.0) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne un tableau de coordonnées, de la poly ligne simplifiée en utilisant un algorithme simplification simple par distance <br> combiner à l'algorithme de Ramer Douglas Peucker (<a  href="https://fr.wikipedia.org/wiki/Algorithme_de_Douglas-Peucker">https://fr.wikipedia.org/wiki/Algorithme_de_Douglas-Peucker</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Simplify"></span><code>procedure <b>Simplify</b>(Const Tolerance : Single = 1.0);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Simplification de la poly ligne simplifiée en utilisant un algorithme simplification simple par distancede combiner à l'algorithme de Ramer Douglas Peucker</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Path"></span><code>property <b>Path</b> : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a> read FPoints write FPoints;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StrokeMode"></span><code>property <b>StrokeMode</b> : <a  href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a> read FStrokeMode write FStrokeMode;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InnerJoinType"></span><code>property <b>InnerJoinType</b>  : <a  href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a> read FInnerJoinType write FInnerJoinType;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OuterJoinType"></span><code>property <b>OuterJoinType</b> : <a  href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a> read FOuterJoinType write FOuterJoinType;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartCap"></span><code>property <b>StartCap</b>  : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a> read FStartCap write FStartCap;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndCap"></span><code>property <b>EndCap</b> : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a> read FEndCap write FEndCap;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StrokeWidth"></span><code>property <b>StrokeWidth</b> : Word read FStrokeWidth write FStrokeWidth;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ClosePath"></span><code>property <b>ClosePath</b> : Boolean read FClosePath write FClosePath;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

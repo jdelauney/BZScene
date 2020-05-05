@@ -1,0 +1,270 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="bzscene_rt"/>
+    <Author Value="J.Delauney (BeanzMaster)"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <IncludeFiles Value="..\Source;..\Source\Dependancies\freetype;..\Source\Dependancies\paszlib"/>
+        <OtherUnitFiles Value="..\Source\Dependancies\freetype;..\Source\Dependancies\paszlib;..\Source\Core;..\Source\Maths;..\Source\DevTools;..\Source\Utils;..\Source\Dependancies\dglOpenGL-4.6"/>
+        <UnitOutputDirectory Value="lib\bzscene\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
+      </SearchPaths>
+      <Parsing>
+        <Style Value="1"/>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="BZScene Multimedia Library -  Runtime Package
+Contains the base of BZScene Multimedia Library"/>
+    <License Value="MPL / LGPL"/>
+    <Version Minor="1"/>
+    <Files Count="54">
+      <Item1>
+        <Filename Value="..\Source\bzscene_options.inc"/>
+        <Type Value="Include"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\Core\BZSceneStrConsts.pas"/>
+        <UnitName Value="BZSceneStrConsts"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\Source\Core\BZSystem.pas"/>
+        <UnitName Value="BZSystem"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\Source\Core\BZUtils.pas"/>
+        <UnitName Value="BZUtils"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\Source\Core\BZArrayClasses.pas"/>
+        <UnitName Value="BZArrayClasses"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\Source\Core\BZParallelThread.pas"/>
+        <UnitName Value="BZParallelThread"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\Source\Core\BZClasses.pas"/>
+        <UnitName Value="BZClasses"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\Source\Core\BZStreamClasses.pas"/>
+        <UnitName Value="BZStreamClasses"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\Source\Core\BZColors.pas"/>
+        <UnitName Value="BZColors"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\Source\Core\BZGraphic.pas"/>
+        <UnitName Value="BZGraphic"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\Source\Core\BZFontClasses.pas"/>
+        <UnitName Value="BZFontClasses"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\Source\Core\BZCanvasClasses.pas"/>
+        <UnitName Value="BZCanvasClasses"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\Source\Core\BZXCollection.pas"/>
+        <UnitName Value="BZXCollection"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\Source\Maths\BZFastMath.pas"/>
+        <UnitName Value="BZFastMath"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\Source\Maths\BZMath.pas"/>
+        <UnitName Value="BZMath"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\Source\Maths\BZVectorMath.pas"/>
+        <UnitName Value="BZVectorMath"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\Source\Maths\BZVectorMathEx.pas"/>
+        <UnitName Value="BZVectorMathEx"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\Source\Maths\BZVectorMathUtils.pas"/>
+        <UnitName Value="BZVectorMathUtils"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\Source\DevTools\BZTypesHelpers.pas"/>
+        <UnitName Value="BZTypesHelpers"/>
+      </Item19>
+      <Item20>
+        <Filename Value="..\Source\DevTools\BZLogger.pas"/>
+        <UnitName Value="BZLogger"/>
+      </Item20>
+      <Item21>
+        <Filename Value="..\Source\DevTools\uViewLoggerForm.pas"/>
+        <UnitName Value="uViewLoggerForm"/>
+      </Item21>
+      <Item22>
+        <Filename Value="..\Source\DevTools\BZStopWatch.pas"/>
+        <UnitName Value="BZStopWatch"/>
+      </Item22>
+      <Item23>
+        <Filename Value="..\Source\Utils\BZKeyboard.pas"/>
+        <UnitName Value="BZKeyboard"/>
+      </Item23>
+      <Item24>
+        <Filename Value="..\Source\Utils\BZRandomGenerator.pas"/>
+        <UnitName Value="BZRandomGenerator"/>
+      </Item24>
+      <Item25>
+        <Filename Value="..\Source\Utils\BZGeoTools.pas"/>
+        <UnitName Value="BZGeoTools"/>
+      </Item25>
+      <Item26>
+        <Filename Value="..\Source\Utils\BZInterpolationFilters.pas"/>
+        <UnitName Value="BZInterpolationFilters"/>
+      </Item26>
+      <Item27>
+        <Filename Value="..\Source\Utils\BZNoiseGenerator.pas"/>
+        <UnitName Value="BZNoiseGenerator"/>
+      </Item27>
+      <Item28>
+        <Filename Value="..\Source\Utils\BZAnimationTool.pas"/>
+        <UnitName Value="BZAnimationTool"/>
+      </Item28>
+      <Item29>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibParseTTF.pp"/>
+        <UnitName Value="BZLibParseTTF"/>
+      </Item29>
+      <Item30>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibTTFEncodings.pp"/>
+        <UnitName Value="BZLibTTFEncodings"/>
+      </Item30>
+      <Item31>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibFreeType.inc"/>
+        <Type Value="Include"/>
+      </Item31>
+      <Item32>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibFreeType.pp"/>
+        <UnitName Value="BZLibFreeType"/>
+      </Item32>
+      <Item33>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibFreeTypeh.pp"/>
+        <UnitName Value="BZLibFreeTypeh"/>
+      </Item33>
+      <Item34>
+        <Filename Value="..\Source\Dependancies\freetype\BZLibFreeTypehDyn.pp"/>
+        <UnitName Value="BZLibFreeTypehDyn"/>
+      </Item34>
+      <Item35>
+        <Filename Value="..\Source\Dependancies\paszlib\bzadler.pas"/>
+        <UnitName Value="bzadler"/>
+      </Item35>
+      <Item36>
+        <Filename Value="..\Source\Dependancies\paszlib\bzgzio.pas"/>
+        <UnitName Value="bzgzio"/>
+      </Item36>
+      <Item37>
+        <Filename Value="..\Source\Dependancies\paszlib\bzinfblock.pas"/>
+        <UnitName Value="bzinfblock"/>
+      </Item37>
+      <Item38>
+        <Filename Value="..\Source\Dependancies\paszlib\bzinfcodes.pas"/>
+        <UnitName Value="bzinfcodes"/>
+      </Item38>
+      <Item39>
+        <Filename Value="..\Source\Dependancies\paszlib\bzinffast.pas"/>
+        <UnitName Value="bzInfFast"/>
+      </Item39>
+      <Item40>
+        <Filename Value="..\Source\Dependancies\paszlib\bzinftrees.pas"/>
+        <UnitName Value="bzinftrees"/>
+      </Item40>
+      <Item41>
+        <Filename Value="..\Source\Dependancies\paszlib\bzinfutil.pas"/>
+        <UnitName Value="bzinfutil"/>
+      </Item41>
+      <Item42>
+        <Filename Value="..\Source\Dependancies\paszlib\bzpaszlib.pas"/>
+        <UnitName Value="bzPasZLib"/>
+      </Item42>
+      <Item43>
+        <Filename Value="..\Source\Dependancies\paszlib\bztrees.pas"/>
+        <UnitName Value="bzTrees"/>
+      </Item43>
+      <Item44>
+        <Filename Value="..\Source\Dependancies\paszlib\bzunzip.pas"/>
+        <UnitName Value="bzUnzip"/>
+      </Item44>
+      <Item45>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzbase.pas"/>
+        <UnitName Value="bzZBase"/>
+      </Item45>
+      <Item46>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzcompres.pas"/>
+        <UnitName Value="bzZCompres"/>
+      </Item46>
+      <Item47>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzconf.inc"/>
+        <Type Value="Include"/>
+      </Item47>
+      <Item48>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzdeflate.pas"/>
+        <UnitName Value="bzZDeflate"/>
+      </Item48>
+      <Item49>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzinflate.pas"/>
+        <UnitName Value="bzZInflate"/>
+      </Item49>
+      <Item50>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzip.pas"/>
+        <UnitName Value="bzZip"/>
+      </Item50>
+      <Item51>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzipper.pas"/>
+        <UnitName Value="bzZipper"/>
+      </Item51>
+      <Item52>
+        <Filename Value="..\Source\Dependancies\paszlib\bzziputils.pas"/>
+        <UnitName Value="bzZipUtils"/>
+      </Item52>
+      <Item53>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzstream.pas"/>
+        <UnitName Value="bzZStream"/>
+      </Item53>
+      <Item54>
+        <Filename Value="..\Source\Dependancies\paszlib\bzzuncompr.pas"/>
+        <UnitName Value="bzZUncompr"/>
+      </Item54>
+    </Files>
+    <i18n>
+      <EnableI18N Value="True"/>
+      <OutDir Value="..\i18n"/>
+    </i18n>
+    <RequiredPkgs Count="4">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="LCLBase"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="LazUtils"/>
+      </Item4>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZStreamClasses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZStreamClasses</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Objets stream étendues et optimisés pour l'accès aux données séquentiellement.<br> Grace à un systeme de cache et de l'utilisation du &quot;File Mapping&quot; pour les fichiers.
+
+<p>Contient <a class="normal" href="BZStreamClasses.TBZZLibStream.html">TBZZLibStream</a> un cllasse spécialisée pour la compression et decompression de flux avec ZLib
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>11/06/2017 : Creation</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : Cette unité n'est pas 100% finalisé. Il manque quelques classes.
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZSystem.html">BZSystem</a>, <a class="normal" href="BZUtils.html">BZUtils</a>. + <a class="normal" href="BZLogger.html">BZLogger</a> si DEBUG est activé
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>LCLType</li><li>LCLIntf</li><li>Classes</li><li>SysUtils</li><li>Math</li><li>ZBase</li><li>Unix</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.TBZCustomBufferedStream.html"><code>TBZCustomBufferedStream</code></a></td>
+<td class="itemdesc"><code>TBZCustomBufferedStream</code> : Classe d'aide à la lecture et ou ecriture de données dans un flux (TStream).<br> L'acces se fait par le biais d'un tampon de taille définie.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.TBZBufferedStream.html"><code>TBZBufferedStream</code></a></td>
+<td class="itemdesc"><code>TBZBufferedStream</code> : See <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a> for more informations</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.TBZZLibStream.html"><code>TBZZLibStream</code></a></td>
+<td class="itemdesc"><code>TBZZLibStream</code> : Classe utile pour compresser et décompresser un flux avec ZLib.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.EZLibError.html"><code>EZLibError</code></a></td>
+<td class="itemdesc">Exception levée par la bibliothèque ZLib</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.EGZCompressionError.html"><code>EGZCompressionError</code></a></td>
+<td class="itemdesc">Exception levée par la bibliothèque ZLib en cas d'erreur pendant la compression</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.EGZDecompressionError.html"><code>EGZDecompressionError</code></a></td>
+<td class="itemdesc">Exception levée par la bibliothèque ZLib en cas d'erreur pendant la décompression</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.EBZFileNotExist.html"><code>EBZFileNotExist</code></a></td>
+<td class="itemdesc">Exception levée si le fichier n'existe pas</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZStreamClasses.EBZCantCreateFile.html"><code>EBZCantCreateFile</code></a></td>
+<td class="itemdesc">Exception levée si le fichier ne peux pas être créé</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.html#CreateFileStream">CreateFileStream</a></b>(Const fileName: String; mode: Word = fmOpenRead + fmShareDenyNone): TStream;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZStreamClasses.html#TBZCustomBufferedStreamClass">TBZCustomBufferedStreamClass</a></b> = Class Of <a  href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZStreamClasses.html#TGZCompressionLevel">TGZCompressionLevel</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZStreamClasses.html#TGZOpenMode">TGZOpenMode</a></b> = (...);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a></b> = 1024 * 1024 * 32;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a></b> = #8#9#10#13#32;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateFileStream"></span><code>Function <b>CreateFileStream</b>(Const fileName: String; mode: Word = fmOpenRead + fmShareDenyNone): TStream;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un flux pour l'acces à un fichier en écriture et ou en lecture)</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCustomBufferedStreamClass"></span><code><b>TBZCustomBufferedStreamClass</b> = Class Of <a  href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Descendant class type of <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TGZCompressionLevel"></span><code><b>TGZCompressionLevel</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>TGZCompressionLevel</code> : Enumeration des niveaux de compression</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="clnone">clnone</span>: Do not use compression, just copy data.</li>
+<li>
+<span id="clfastest">clfastest</span>: Use fast (but less) compression.</li>
+<li>
+<span id="cldefault">cldefault</span>: Use default compression</li>
+<li>
+<span id="clmax">clmax</span>: Use maximum compression</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TGZOpenMode"></span><code><b>TGZOpenMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>TGZOpenMode</code> : Enumeration des modes d'acces aux fichiers compressés</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="gzopenread">gzopenread</span>: Open file for reading.</li>
+<li>
+<span id="gzopenwrite">gzopenwrite</span>: Open file for writing.</li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultBufferedStreamBlockSize"></span><code><b>cDefaultBufferedStreamBlockSize</b> = 1024 * 1024 * 32;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>cDefaultBufferedStreamBlockSize</code> : par défaut tampon de 32Mo</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultCharsDelims"></span><code><b>cDefaultCharsDelims</b> = #8#9#10#13#32;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>cDefaultCharsDelims</code> : Caractères de délimitation : Tabulation, retour à la ligne, espace</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-06-11
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

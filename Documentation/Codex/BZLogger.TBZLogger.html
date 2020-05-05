@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZLogger: Classe TBZLogger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZLogger"></span><h1 class="cio">Classe TBZLogger</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZLogger.html">BZLogger</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZLogger = class(TThread)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZLogger</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TThread</li>
+<li class="thisitem">TBZLogger</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZLogger.TBZLogger.html#Create">Create</a></b>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZLogger.TBZLogger.html#Create">Create</a></b>( CreateSuspended : Boolean ); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZLogger.TBZLogger.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogError">LogError</a></b>(ErrorMessage: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogWarning">LogWarning</a></b>(WarningMessage: string);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogStatus">LogStatus</a></b>(StatusMessage: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogNotice">LogNotice</a></b>(NoticeMessage: string);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogHint">LogHint</a></b>(HintMessage: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogException">LogException</a></b>(ExceptionMessage: string);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#Log">Log</a></b>(aMsg: string);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogSystemInfos">LogSystemInfos</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#LogEnd">LogEnd</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#CatchException">CatchException</a></b>(Sender: TObject; E: Exception);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#ShowLogView">ShowLogView</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZLogger.TBZLogger.html#HideLogView">HideLogView</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogger.html#OnCallBack">OnCallBack</a></b> : <a  href="BZLogger.html#TBZLoggerCallback">TBZLoggerCallback</a> read FOnCallBack write SetOnCallBack;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogger.html#LoggerCounter">LoggerCounter</a></b> : <a  href="BZLogger.TBZLoggerCounter.html">TBZLoggerCounter</a> read FLoggerCounter;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogger.html#LogWriters">LogWriters</a></b> : <a  href="BZLogger.TBZLoggerWriterList.html">TBZLoggerWriterList</a> read FLogWriters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogger.html#HandleApplicationException">HandleApplicationException</a></b> : Boolean read FHandleApplicationException write SetHandleApplicationException;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZLogger.TBZLogger.html#LogViewEnabled">LogViewEnabled</a></b> : Boolean read FLogViewEnabled write SetLogViewEnabled;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>( CreateSuspended : Boolean ); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogError"></span><code>procedure <b>LogError</b>(ErrorMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;erreur&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogWarning"></span><code>procedure <b>LogWarning</b>(WarningMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;avertissement&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogStatus"></span><code>procedure <b>LogStatus</b>(StatusMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;Statut&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogNotice"></span><code>procedure <b>LogNotice</b>(NoticeMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;Notification&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogHint"></span><code>procedure <b>LogHint</b>(HintMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;conseil&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogException"></span><code>procedure <b>LogException</b>(ExceptionMessage: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message de type &quot;Exception&quot; dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Log"></span><code>procedure <b>Log</b>(aMsg: string);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit un message simple dans le journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogSystemInfos"></span><code>procedure <b>LogSystemInfos</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit des informations, concernant le projet et le système ou celui-ci est lancé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogEnd"></span><code>procedure <b>LogEnd</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit les données de fin du <a class="normal" href="BZLogger.TBZLogger.html#Log">log</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CatchException"></span><code>procedure <b>CatchException</b>(Sender: TObject; E: Exception);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShowLogView"></span><code>procedure <b>ShowLogView</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Affiche la fenêtre de <a class="normal" href="BZLogger.TBZLogger.html#Log">log</a> interne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HideLogView"></span><code>procedure <b>HideLogView</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Cache la fenêtre de <a class="normal" href="BZLogger.TBZLogger.html#Log">log</a> interne</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnCallBack"></span><code>property <b>OnCallBack</b> : <a  href="BZLogger.html#TBZLoggerCallback">TBZLoggerCallback</a> read FOnCallBack write SetOnCallBack;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement pour intercepter les messages</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LoggerCounter"></span><code>property <b>LoggerCounter</b> : <a  href="BZLogger.TBZLoggerCounter.html">TBZLoggerCounter</a> read FLoggerCounter;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Compteurs des messages en fonction des niveaux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogWriters"></span><code>property <b>LogWriters</b> : <a  href="BZLogger.TBZLoggerWriterList.html">TBZLoggerWriterList</a> read FLogWriters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Liste des moteurs d'écriture attachés au <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HandleApplicationException"></span><code>property <b>HandleApplicationException</b> : Boolean read FHandleApplicationException write SetHandleApplicationException;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Active/désactive l'interception des exceptions dans l'application en cours</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LogViewEnabled"></span><code>property <b>LogViewEnabled</b> : Boolean read FLogViewEnabled write SetLogViewEnabled;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Active / désactive la sortie du <a class="normal" href="BZLogger.TBZLogger.html#Log">log</a> dans la fenêtre dédiée</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

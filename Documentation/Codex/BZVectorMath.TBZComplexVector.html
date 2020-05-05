@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZComplexVector</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZComplexVector"></span><h1 class="cio">Enregistrement TBZComplexVector</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZComplexVector = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZComplexVector</code></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZComplexVector.html#V">V</a></b>: <a  href="BZVectorMath.html#TBZVector2dType">TBZVector2dType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZComplexVector.html#RealPart">RealPart</a></b>: Double</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZComplexVector.html#ImaginaryPart">ImaginaryPart</a></b>: Double</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZComplexVector.html#AsVector2D">AsVector2D</a></b>: <a  href="BZVectorMath.TBZVector2d.html">TBZVector2D</a></code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZComplexVector.html#Create">Create</a></b>(ARealPart, AnImaginaryPart : Double);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZComplexVector.html#Create">Create</a></b>(AValue : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#ToString">ToString</a></b> : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator *(constref A : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; constref B : Single): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator /(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Conjugate">Conjugate</a></b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Length">Length</a></b> : Double;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Phase">Phase</a></b> : Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Cosinus">Cosinus</a></b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Sinus">Sinus</a></b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZComplexVector.html#Polynome">Polynome</a></b>(Degree : Integer) : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZVectorMath.html#TBZVector2dType">TBZVector2dType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces via tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RealPart"></span><code><b>RealPart</b>: Double</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ImaginaryPart"></span><code><b>ImaginaryPart</b>: Double</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsVector2D"></span><code><b>AsVector2D</b>: <a  href="BZVectorMath.TBZVector2d.html">TBZVector2D</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Comme une <a class="normal" href="BZVectorMath.TBZVector2d.html">TBZVector2D</a></p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(ARealPart, AnImaginaryPart : Double);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(AValue : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un nombre complex depuis un <a class="normal" href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> ou X est la partie Reelle et Y la partie Imaginaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b> : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne une chaine de caractères formaté représentant le vecteur : '(<a class="normal" href="BZVectorMath.TBZComplexVector.html#RealPart">RealPart</a>, <a class="normal" href="BZVectorMath.TBZComplexVector.html#ImaginaryPart">ImaginaryPart</a>)'</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute deux nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait deux nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie deux nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; constref B : Single): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le nombre complex avec une valeur de type Single (Mise à l'echelle/Scale)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="/"></span><code>class operator /(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise deux nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux nombre complex sont égales. Retourne <code>True</code> si la condition est <a class="normal" href="BZVectorMath.TBZComplexVector.html#V">v</a>érifiée. <br> Chaque composant du vecteur est <a class="normal" href="BZVectorMath.TBZComplexVector.html#V">v</a>érifié</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux nombre complex ne sont pas égales. Retourne <code>True</code> si la condition est <a class="normal" href="BZVectorMath.TBZComplexVector.html#V">v</a>érifiée. <br> Chaque composant du vecteur est <a class="normal" href="BZVectorMath.TBZComplexVector.html#V">v</a>érifié</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Conjugate"></span><code>function <b>Conjugate</b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Negation de la partie Reel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Length"></span><code>function <b>Length</b> : Double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la longueur (magnitude) du nombre complex</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Phase"></span><code>function <b>Phase</b> : Double;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <code>phase</code> du nombre complex (Z) (en radian, dans l'interval [-pi, pi])</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Cosinus"></span><code>function <b>Cosinus</b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le <code>cosinus</code> du nombre complexe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Sinus"></span><code>function <b>Sinus</b> : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le <code>sinus</code> du nombre complexe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Polynome"></span><code>function <b>Polynome</b>(Degree : Integer) : <a  href="BZVectorMath.TBZComplexVector.html">TBZComplexVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le <code>polynome</code> de &quot;Degree&quot; du nombre complexe</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

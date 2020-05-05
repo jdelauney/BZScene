@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmapFont: Classe TBZBitmapFont</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBitmapFont"></span><h1 class="cio">Classe TBZBitmapFont</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmapFont.html">BZBitmapFont</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBitmapFont = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<div class="nodescription">No description available, ancestor TBZUpdateAbleObject description follows</div><p>
+Classe abstraite décrivant l'interface &quot;<a class="normal" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a>&quot; Offre un systeme d'evenement de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZBitmapFont</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmapFont.TBZBitmapFont.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmapFont.TBZBitmapFont.html#Create">Create</a></b>(Const BitmapFont : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; const aCarWidth, aCarHeight : Byte); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmapFont.TBZBitmapFont.html#Create">Create</a></b>(Const FileFontName : String; const aCarWidth, aCarHeight : Byte); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZBitmapFont.TBZBitmapFont.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapFont.TBZBitmapFont.html#LoadFromFile">LoadFromFile</a></b>(Const FileFontName : String; const aCarWidth, aCarHeight : Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapFont.TBZBitmapFont.html#TextOut">TextOut</a></b>(Bmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; px, py : Integer; Const Text : String);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmapFont.TBZBitmapFont.html#TextOutRect">TextOutRect</a></b>(Bmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; aRect : <a  href="BZGraphic.TBZRect.html">TBZRect</a> ; Const Text : String; Const HorizontalAlign : <a  href="BZBitmapFont.html#TBZBitmapFontHorizontalAlign">TBZBitmapFontHorizontalAlign</a> = <a  href="BZBitmapFont.html#haLeft">haLeft</a>; Const VerticalAlign : <a  href="BZBitmapFont.html#TBZBitmapFontVerticalAlign">TBZBitmapFontVerticalAlign</a> = <a  href="BZBitmapFont.html#vaTop">vaTop</a>);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#Alphabet">Alphabet</a></b> : String read FAlphabet write SetAlphabet;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#SpaceOffset">SpaceOffset</a></b> : Integer read FSpaceOffset write FSpaceOffset;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#CarWidth">CarWidth</a></b> : Byte read FCarWidth write SetCarWidth;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#CarHeight">CarHeight</a></b> : Byte read FCarHeight write SetCarHeight;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#Bitmap">Bitmap</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read GetBitmap write SetBitmap;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#DrawMode">DrawMode</a></b> : <a  href="BZGraphic.html#TBZBitmapDrawMode">TBZBitmapDrawMode</a> read FDrawMode write FDrawMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#AlphaMode">AlphaMode</a></b> : <a  href="BZGraphic.html#TBZBitmapAlphaMode">TBZBitmapAlphaMode</a> read FAlphaMode write FAlphaMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#MasterAlpha">MasterAlpha</a></b> : Byte read FMasterAlpha write FMasterAlpha;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#HorizontalLowerCaseGapSize">HorizontalLowerCaseGapSize</a></b>: Integer read FHorizontalLowerCaseGapSize write FHorizontalLowerCaseGapSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#VerticalLowerCaseGapSize">VerticalLowerCaseGapSize</a></b> : Integer read FVerticalLowerCaseGapSize write FVerticalLowerCaseGapSize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#HorizontalGapSize">HorizontalGapSize</a></b> : Integer read FHorizontalGapSize write FHorizontalGapSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmapFont.TBZBitmapFont.html#VerticalGapSize">VerticalGapSize</a></b> : Integer read FVerticalGapSize write FVerticalGapSize;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+FImageList : TBZImageList; FFontIndex : Integer;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(Const BitmapFont : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; const aCarWidth, aCarHeight : Byte); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(Const FileFontName : String; const aCarWidth, aCarHeight : Byte); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LoadFromFile"></span><code>procedure <b>LoadFromFile</b>(Const FileFontName : String; const aCarWidth, aCarHeight : Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextOut"></span><code>procedure <b>TextOut</b>(Bmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; px, py : Integer; Const Text : String);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TextOutRect"></span><code>procedure <b>TextOutRect</b>(Bmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; aRect : <a  href="BZGraphic.TBZRect.html">TBZRect</a> ; Const Text : String; Const HorizontalAlign : <a  href="BZBitmapFont.html#TBZBitmapFontHorizontalAlign">TBZBitmapFontHorizontalAlign</a> = <a  href="BZBitmapFont.html#haLeft">haLeft</a>; Const VerticalAlign : <a  href="BZBitmapFont.html#TBZBitmapFontVerticalAlign">TBZBitmapFontVerticalAlign</a> = <a  href="BZBitmapFont.html#vaTop">vaTop</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Alphabet"></span><code>property <b>Alphabet</b> : String read FAlphabet write SetAlphabet;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+property ImageList : TBZImageList read FImageList write SetImageList; property FontIndex : Integer read SetIndex write SetIndex;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SpaceOffset"></span><code>property <b>SpaceOffset</b> : Integer read FSpaceOffset write FSpaceOffset;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CarWidth"></span><code>property <b>CarWidth</b> : Byte read FCarWidth write SetCarWidth;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CarHeight"></span><code>property <b>CarHeight</b> : Byte read FCarHeight write SetCarHeight;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Bitmap"></span><code>property <b>Bitmap</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read GetBitmap write SetBitmap;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DrawMode"></span><code>property <b>DrawMode</b> : <a  href="BZGraphic.html#TBZBitmapDrawMode">TBZBitmapDrawMode</a> read FDrawMode write FDrawMode;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AlphaMode"></span><code>property <b>AlphaMode</b> : <a  href="BZGraphic.html#TBZBitmapAlphaMode">TBZBitmapAlphaMode</a> read FAlphaMode write FAlphaMode;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MasterAlpha"></span><code>property <b>MasterAlpha</b> : Byte read FMasterAlpha write FMasterAlpha;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HorizontalLowerCaseGapSize"></span><code>property <b>HorizontalLowerCaseGapSize</b>: Integer read FHorizontalLowerCaseGapSize write FHorizontalLowerCaseGapSize;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VerticalLowerCaseGapSize"></span><code>property <b>VerticalLowerCaseGapSize</b> : Integer read FVerticalLowerCaseGapSize write FVerticalLowerCaseGapSize;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HorizontalGapSize"></span><code>property <b>HorizontalGapSize</b> : Integer read FHorizontalGapSize write FHorizontalGapSize;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VerticalGapSize"></span><code>property <b>VerticalGapSize</b> : Integer read FVerticalGapSize write FVerticalGapSize;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

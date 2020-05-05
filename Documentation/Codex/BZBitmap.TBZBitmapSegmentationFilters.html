@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap: Classe TBZBitmapSegmentationFilters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBitmapSegmentationFilters"></span><h1 class="cio">Classe TBZBitmapSegmentationFilters</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmap.html">BZBitmap</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBitmapSegmentationFilters = class(<a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Regroupe les filtres de segmentation (Détection de contour)</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a></li>
+<li class="thisitem">TBZBitmapSegmentationFilters</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#Create">Create</a></b>(Const AOwner: <a  href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a>); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#ComputeGradientX">ComputeGradientX</a></b> : <a  href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#ComputeGradientY">ComputeGradientY</a></b> : <a  href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#ComputeConvolutionGradientX">ComputeConvolutionGradientX</a></b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>) : <a  href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#ComputeConvolutionGradientY">ComputeConvolutionGradientY</a></b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>) : <a  href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#GradientX">GradientX</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#GradientY">GradientY</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#Gradient">Gradient</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#GradientLength">GradientLength</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#GradientConvolution">GradientConvolution</a></b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#GradientDir">GradientDir</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#StandardDeviation">StandardDeviation</a></b>(Const StdDevFactor : Single = 2.5; Const BinaryOutput : Boolean = False; Const ShowOnlyROI : Boolean = False);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#Integration">Integration</a></b>(Const ScaleFactor : Single = 0.5; Const absorbtionFactor : Single = 1.0;Const Offset : Integer = 64);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#DCT">DCT</a></b>(Const ScaleFactor : Single = 2.5);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#CannyEdgeDetection">CannyEdgeDetection</a></b>(const NumStdDev : Single = 1; Const MinThresholdFactor : Single = 0.2; const MinThreshold : Byte = 30; const MaxThresHold : Byte = 60; Const GrayMode : <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a>=<a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix : <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a> = <a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const BlurMode : <a  href="BZBitmap.html#TBZBitmapEdgeDetctionBlurMode">TBZBitmapEdgeDetctionBlurMode</a> = <a  href="BZBitmap.html#edbmGaussian5x5">edbmGaussian5x5</a>; Const GaussianRadius : Single = 5.0; Const GaussianSigma : Single = 2.0; Const GradientKernel : <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a> = <a  href="BZGraphic.html#defSobel">defSobel</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#MarrHildrethEdgeDetection">MarrHildrethEdgeDetection</a></b>(Const GrayMode : <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a>=<a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix : <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a> = <a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const KernelSize : Integer = 7; Const Weight : Single = 1.5);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#BooleanEdgeDetection">BooleanEdgeDetection</a></b>(LocalConst, GlobalThreshold : Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#MorphologicalEdgeDetection">MorphologicalEdgeDetection</a></b>(FilterSize : Byte; FilterType : <a  href="BZBitmap.html#TBZMorphologicalEdgeDetectionMode">TBZMorphologicalEdgeDetectionMode</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapSegmentationFilters.html#MinMaxEdgeDetection">MinMaxEdgeDetection</a></b>(MinThresHold, MaxThreshold, GlobalThreshold : Byte);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(Const AOwner: <a  href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a>); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeGradientX"></span><code>function <b>ComputeGradientX</b> : <a  href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+function <code>ComputeGradientX</code> function <a class="normal" href="BZBitmap.TBZBitmapSegmentationFilters.html#ComputeGradientY">ComputeGradientY</a> function ComputeGradient</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeGradientY"></span><code>function <b>ComputeGradientY</b> : <a  href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeConvolutionGradientX"></span><code>function <b>ComputeConvolutionGradientX</b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>) : <a  href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeConvolutionGradientY"></span><code>function <b>ComputeConvolutionGradientY</b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>) : <a  href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GradientX"></span><code>procedure <b>GradientX</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GradientY"></span><code>procedure <b>GradientY</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Gradient"></span><code>procedure <b>Gradient</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GradientLength"></span><code>procedure <b>GradientLength</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GradientConvolution"></span><code>procedure <b>GradientConvolution</b>(aMode: <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GradientDir"></span><code>procedure <b>GradientDir</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StandardDeviation"></span><code>procedure <b>StandardDeviation</b>(Const StdDevFactor : Single = 2.5; Const BinaryOutput : Boolean = False; Const ShowOnlyROI : Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la déviation standard de l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Integration"></span><code>procedure <b>Integration</b>(Const ScaleFactor : Single = 0.5; Const absorbtionFactor : Single = 1.0;Const Offset : Integer = 64);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'<code>integration</code> de l'image. <br> <b>Note</b> : Paramètres recommandés : <br> - ScaleFactor : [-10,10] <br> - absorbtionFactor : [0, 1] - Offset : [-200, 200]</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DCT"></span><code>procedure <b>DCT</b>(Const ScaleFactor : Single = 2.5);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la Transformée en cosinus discrète de type I <a  href="https://fr.wikipedia.org/wiki/Transform">https://fr.wikipedia.org/wiki/Transform</a>ée_en_cosinus_discrète</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CannyEdgeDetection"></span><code>procedure <b>CannyEdgeDetection</b>(const NumStdDev : Single = 1; Const MinThresholdFactor : Single = 0.2; const MinThreshold : Byte = 30; const MaxThresHold : Byte = 60; Const GrayMode : <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a>=<a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix : <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a> = <a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const BlurMode : <a  href="BZBitmap.html#TBZBitmapEdgeDetctionBlurMode">TBZBitmapEdgeDetctionBlurMode</a> = <a  href="BZBitmap.html#edbmGaussian5x5">edbmGaussian5x5</a>; Const GaussianRadius : Single = 5.0; Const GaussianSigma : Single = 2.0; Const GradientKernel : <a  href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a> = <a  href="BZGraphic.html#defSobel">defSobel</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Detection des contours avec la methode de Canny</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MarrHildrethEdgeDetection"></span><code>procedure <b>MarrHildrethEdgeDetection</b>(Const GrayMode : <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a>=<a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix : <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a> = <a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const KernelSize : Integer = 7; Const Weight : Single = 1.5);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Detection des contours avec la methode de Marr–Hildreth. <br> <b>Note</b> : Plus la taille du filtre est grande et plus le poid est faible, plus il y a de contours</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BooleanEdgeDetection"></span><code>procedure <b>BooleanEdgeDetection</b>(LocalConst, GlobalThreshold : Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Detection des contour par seuil, variance locale et fonction binaire - <a  href="https://www.academia.edu/17699371/Local_threshold_and_Boolean_function_based_edge_detection">https://www.academia.edu/17699371/Local_threshold_and_Boolean_function_based_edge_detection</a> <br> - <a  href="https://pdfs.semanticscholar.org/5aa0/35d4dd5823a2e0c12dfddae875eb4cccd8eb.pdf">https://pdfs.semanticscholar.org/5aa0/35d4dd5823a2e0c12dfddae875eb4cccd8eb.pdf</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MorphologicalEdgeDetection"></span><code>procedure <b>MorphologicalEdgeDetection</b>(FilterSize : Byte; FilterType : <a  href="BZBitmap.html#TBZMorphologicalEdgeDetectionMode">TBZMorphologicalEdgeDetectionMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Detection des contours par morphologie. <br> <b>Note</b> : Pour obtenir une accentuation des contours, il suffit d'appliquer par dessus un filtre arithmétique d'addition de l'image originale. <br> <b>Attention</b> : <br> L'image retournée est en couleur. Pour obtenir une image binaire, il faudra convertir la source ou l'image retournée en niveau de gris, puis appliquer un filtre de seuillage</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MinMaxEdgeDetection"></span><code>procedure <b>MinMaxEdgeDetection</b>(MinThresHold, MaxThreshold, GlobalThreshold : Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Detection des contours par la méthode &quot;MinMax&quot;</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

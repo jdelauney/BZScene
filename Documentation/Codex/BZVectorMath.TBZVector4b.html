@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZVector4b</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZVector4b"></span><h1 class="cio">Enregistrement TBZVector4b</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZVector4b = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Définition d'un vecteur 4D de type Byte.</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#V">V</a></b>:<a  href="BZVectorMath.html#TBZVector4bType">TBZVector4bType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#X">X</a></b>:Byte</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Y">Y</a></b>:Byte</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Z">Z</a></b>:Byte</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#W">W</a></b>:Byte</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Red">Red</a></b>:Byte</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Green">Green</a></b>:Byte</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Blue">Blue</a></b>:Byte</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#Alpha">Alpha</a></b>:Byte</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#AsVector3b">AsVector3b</a></b>: <a  href="BZVectorMath.TBZVector3b.html">TBZVector3b</a></code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZVector4b.html#AsInteger">AsInteger</a></b>: Integer</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZVector4b.html#Create">Create</a></b>(Const aX,aY,aZ: Byte; const aW : Byte = 255); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZVector4b.html#Create">Create</a></b>(Const aValue : <a  href="BZVectorMath.TBZVector3b.html">TBZVector3b</a>; const aW : Byte = 255); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#ToString">ToString</a></b> : String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#Div">Div</a></b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#Div">Div</a></b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#And">And</a></b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#Or">Or</a></b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#Xor">Xor</a></b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#And">And</a></b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#or">or</a></b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator <b><a  href="BZVectorMath.TBZVector4b.html#Xor">Xor</a></b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#DivideBy2">DivideBy2</a></b> : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Min">Min</a></b>(Constref B : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Min">Min</a></b>(Constref B : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Max">Max</a></b>(Constref B : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Max">Max</a></b>(Constref B : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Clamp">Clamp</a></b>(Constref AMin, AMax : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Clamp">Clamp</a></b>(Constref AMin, AMax : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#MulAdd">MulAdd</a></b>(Constref B, C : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#MulDiv">MulDiv</a></b>(Constref B, C : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Shuffle">Shuffle</a></b>(const x,y,z,w : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Swizzle">Swizzle</a></b>(const ASwizzle: <a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a> ): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Combine">Combine</a></b>(constref V2: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref F1: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Combine2">Combine2</a></b>(constref V2: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; const F1, F2: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#Combine3">Combine3</a></b>(constref V2, V3: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; const F1, F2, F3: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#MinXYZComponent">MinXYZComponent</a></b> : Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector4b.html#MaxXYZComponent">MaxXYZComponent</a></b> : Byte;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>:<a  href="BZVectorMath.html#TBZVector4bType">TBZVector4bType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces via tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="X"></span><code><b>X</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Y"></span><code><b>Y</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Z"></span><code><b>Z</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="W"></span><code><b>W</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Red"></span><code><b>Red</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme une couleur au format RGBA</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Green"></span><code><b>Green</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme une couleur au format RGBA</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Blue"></span><code><b>Blue</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme une couleur au format RGBA</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Alpha"></span><code><b>Alpha</b>:Byte</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme une couleur au format RGBA</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsVector3b"></span><code><b>AsVector3b</b>: <a  href="BZVectorMath.TBZVector3b.html">TBZVector3b</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme un <a class="normal" href="BZVectorMath.TBZVector3b.html">TBZVector3b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsInteger"></span><code><b>AsInteger</b>: Integer</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces comme valeur 32 bit Integer</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aX,aY,aZ: Byte; const aW : Byte = 255); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Initialisation des valeurs X, Y, Z et W <br> Par défaut la valeur W est mise à 255</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const aValue : <a  href="BZVectorMath.TBZVector3b.html">TBZVector3b</a>; const aW : Byte = 255); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation depuis un <a class="normal" href="BZVectorMath.TBZVector3b.html">TBZVector3b</a> et W <br> Par défaut la valeur W est mise à 255</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b> : String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne une chaine de caractères formaté représentant le vecteur : '(x, y, z, w)'</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Div"></span><code>class operator <b>Div</b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute à chaque composant une variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="-"></span><code>class operator -(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Soustrait à chaque composant une variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie chaque composant par variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="*"></span><code>class operator *(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie chaque composant par variable de type Single. Les valeurs sont arrondis et leur interval <a class="normal" href="BZVectorMath.TBZVector4b.html#V">v</a>érifié</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Div"></span><code>class operator <b>Div</b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Divise chaque composant par variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le vecteur A est égale au vecteur B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="<"></span><code>class operator &lt;&gt;(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si le vecteur A n'est pas égale au vecteur B</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="And"></span><code>class operator <b>And</b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique ET (<a class="normal" href="BZVectorMath.TBZVector4b.html#And">AND</a>) entre deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Or"></span><code>class operator <b>Or</b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique OU (<a class="normal" href="BZVectorMath.TBZVector4b.html#or">OR</a>) entre deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Xor"></span><code>class operator <b>Xor</b>(constref A, B: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique OU EXCLUSIF (<a class="normal" href="BZVectorMath.TBZVector4b.html#Xor">XOR</a>) entre deux <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="And"></span><code>class operator <b>And</b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique ET (<code>AND</code>) entre un <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> et une variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="or"></span><code>class operator <b>or</b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique OU (<code>OR</code>) entre un <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> et une variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Xor"></span><code>class operator <b>Xor</b>(constref A: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref B:Byte): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Opérateur logique OU EXCLUSIF (<code>XOR</code>) entre un <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> et une variable de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DivideBy2"></span><code>function <b>DivideBy2</b> : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Division rapide par 2</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(Constref B : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le minimum de chaque composant entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Min"></span><code>function <b>Min</b>(Constref B : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le minimum de chaque composant entre le vecteur courrant et un valeur de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(Constref B : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le maximum de chaque composant entre le vecteur courrant et un autre <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Max"></span><code>function <b>Max</b>(Constref B : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le maximum de chaque composant entre le vecteur courrant et un valeur de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(Constref AMin, AMax : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que chaque composant du vecteur courrant soit compris en les valeur définit par les valeurs de type <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> &quot;<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>&quot; et &quot;AMax&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Clamp"></span><code>function <b>Clamp</b>(Constref AMin, AMax : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+S'assure que chaque composant du vecteur courrant soit compris en les valeur de type Byte &quot;<a class="normal" href="BZAnimationTool.html#amIn">AMin</a>&quot; et &quot;AMax&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulAdd"></span><code>function <b>MulAdd</b>(Constref B, C : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le vecteur courrant par un autre <a class="normal" href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> et ajoute un deuxieme <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> au résultat</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulDiv"></span><code>function <b>MulDiv</b>(Constref B, C : <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplie le vecteur courrant par un autre <a class="normal" href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> et divise le resultat par un deuxieme <a class="normal" href="BZVectorMath.TBZVector4b.html">TBZVector4b</a> au résultat</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Shuffle"></span><code>function <b>Shuffle</b>(const x,y,z,w : Byte):<a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mélange (<code>Shuffle</code>) les composants par rapport à l'odre des paramètres</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Swizzle"></span><code>function <b>Swizzle</b>(const ASwizzle: <a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a> ): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mélange (<code>Swizzle</code>) les composants en fonction du masque de type <a class="normal" href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine"></span><code>function <b>Combine</b>(constref V2: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; constref F1: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la combinaison = Self + (V2 * F2)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine2"></span><code>function <b>Combine2</b>(constref V2: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; const F1, F2: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la combinaison = (Self * F1) + (V2 * F2)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Combine3"></span><code>function <b>Combine3</b>(constref V2, V3: <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>; const F1, F2, F3: Single): <a  href="BZVectorMath.TBZVector4b.html">TBZVector4b</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la combinaison = (Self * F1) + (V2 * F2) + (V3 * F3)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinXYZComponent"></span><code>function <b>MinXYZComponent</b> : Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeurs minimum dans les composants XYZ</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxXYZComponent"></span><code>function <b>MaxXYZComponent</b> : Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeurs maximale dans les composants XYZ</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

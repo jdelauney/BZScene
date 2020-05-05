@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap: Classe TBZBitmapTransformations</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBitmapTransformations"></span><h1 class="cio">Classe TBZBitmapTransformations</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmap.html">BZBitmap</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBitmapTransformations = class(<a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Regroupe les fonctions pour effectuer les opérations suivantes : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Inversion Horizontale et verticale</p></li>
+  <li><p>Rotation</p></li>
+  <li><p>Redimensionner (plusieurs methodes disponible)</p></li>
+</ul>
+
+<p>
+
+<p>@TODO : cisaillement, rotation par cisaillement, Deformation affine</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a></li>
+<li class="thisitem">TBZBitmapTransformations</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#FlipX">FlipX</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#FlipY">FlipY</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Rotate">Rotate</a></b>(Const Degrees: Integer; Const Wrap: Boolean = False; Const RotCX: Integer = -1; Const RotCY: Integer = -1);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Stretch">Stretch</a></b>(NW, NH: Integer; out NewWidth, NewHeight : Integer; Const KeepRatio: Boolean = False ) overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Stretch">Stretch</a></b>(NW, NH: Integer; Const KeepRatio: Boolean = False); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchTo">StretchTo</a></b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchSmooth">StretchSmooth</a></b>(NW, NH: Integer; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchSmoothTo">StretchSmoothTo</a></b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchBicubic">StretchBicubic</a></b>(NW, NH: Integer; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchBicubicTo">StretchBicubicTo</a></b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#StretchSmart">StretchSmart</a></b>(Var NW, NH: Integer; Const RayLength: Byte = 2; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#DownSample">DownSample</a></b>(Const Factor: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Resample">Resample</a></b>(NewWidth, NewHeight: Integer; ResampleMode: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#ResampleTo">ResampleTo</a></b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; ResampleMode : <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>; Const KeepRatio : Boolean = False);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Crop">Crop</a></b>(x, y, w, h: Integer); Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#CropRect">CropRect</a></b>(ARect: <a  href="BZGraphic.TBZRect.html">TBZRect</a>); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#Crop">Crop</a></b>; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#PolarToCartesian">PolarToCartesian</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapTransformations.html#CartesianToPolar">CartesianToPolar</a></b>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FlipX"></span><code>Procedure <b>FlipX</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retournement horizontal (effet mirroir)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FlipY"></span><code>Procedure <b>FlipY</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retournement vertical (effet mirroir)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rotate"></span><code>Procedure <b>Rotate</b>(Const Degrees: Integer; Const Wrap: Boolean = False; Const RotCX: Integer = -1; Const RotCY: Integer = -1);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rotation de l'image de &quot;Degrees&quot;)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Stretch"></span><code>Procedure <b>Stretch</b>(NW, NH: Integer; out NewWidth, NewHeight : Integer; Const KeepRatio: Boolean = False ) overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Redimensionne le bitmap sans adoucissement</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Stretch"></span><code>Procedure <b>Stretch</b>(NW, NH: Integer; Const KeepRatio: Boolean = False); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Procedure <code>Stretch</code>(NW, NH: Integer; Const KeepRatio: Boolean = False; out NewWidth, NewHeight : Integer; ) overload; // BUG COMPILATION FPC</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchTo"></span><code>procedure <b>StretchTo</b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchSmooth"></span><code>Procedure <b>StretchSmooth</b>(NW, NH: Integer; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Redimensionne le bitmap avec adoucissement Bilineaire)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchSmoothTo"></span><code>procedure <b>StretchSmoothTo</b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchBicubic"></span><code>Procedure <b>StretchBicubic</b>(NW, NH: Integer; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Redimensionne le bitmap avec adoucissement Bicubique
+
+<p>Code adapté et modifié d'après un source de : <a  href="http://codes-sources.commentcamarche.net/source/54486-reechantillonnage-bicubique-vs-stretchblt">http://codes-sources.commentcamarche.net/source/54486-reechantillonnage-bicubique-vs-stretchblt</a> lui même adapté d'un code Paul Toth en C</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchBicubicTo"></span><code>procedure <b>StretchBicubicTo</b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StretchSmart"></span><code>Procedure <b>StretchSmart</b>(Var NW, NH: Integer; Const RayLength: Byte = 2; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Methode Experimentale Redimensionne en utilisant un &quot;effet de cercle concentrique&quot; (comme quand on jette une pierre dans une marre) Cette fonction est lente, mais donne de bon résultats dans l'ensemble. Sinon elle peux produire, suivant l'image et le facteur de redimensionnement des parasites.
+
+<p><code>StretchSmart</code> utilise une fonction de rééchantillognage &quot;fenêtré&quot; a base de <a class="normal" href="BZMath.html#Sinh">SinH</a>/<a class="normal" href="BZMath.html#Sinc">SinC</a> et <a class="normal" href="BZMath.html#Bessel">Bessel</a>
+
+<p>Note : J'aimerai ajouté une dimension dans l'equation pour controler le lissage. Afin de supprimer ces &quot;erreurs de diffusion&quot; et obtenir de meilleurs résultats</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DownSample"></span><code>Procedure <b>DownSample</b>(Const Factor: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Réduction des dimensions en largeur et hauteur du bitmap sans perte de qualité suivant un facteur. Ex &quot;Factor = 1&quot; pas de changements, si &quot;Factor&quot; = 2 : largeur = largeur*2 et hauteur = hauteur*2, ect...</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Resample"></span><code>Procedure <b>Resample</b>(NewWidth, NewHeight: Integer; ResampleMode: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>; Const KeepRatio: Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Réduction ou augmentation des dimensions du bitmap. Avec plusieurs méthode de rééchantillonnage possible : - imBox, imTriangle, imSpline, imCubic, imBell,imHermit, imMitchell, imLanscoz3, imBlackman, imBlackmanSinC, imBlackmanBessel, imQuadratic, imCatrom, imHanning, imHamming, imKaiser....</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ResampleTo"></span><code>Procedure <b>ResampleTo</b>(DstBmp : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; ResampleMode : <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>; Const KeepRatio : Boolean = False);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Crop"></span><code>Procedure <b>Crop</b>(x, y, w, h: Integer); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+procedure Resize(Const NewWidth, NewHeight : Integer; Const ResizeMode: TBZBitmapResizeMode = brmResample; Const ResampleMode:TBZResampleFilterMethod = rfmLanczos3 ;Const KeepRatio:Boolean=false);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CropRect"></span><code>Procedure <b>CropRect</b>(ARect: <a  href="BZGraphic.TBZRect.html">TBZRect</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Crop"></span><code>Procedure <b>Crop</b>; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PolarToCartesian"></span><code>procedure <b>PolarToCartesian</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Procedure ResizeSurface(bl,bt,br,bd:Integer;Const CenterBitmap : Boolean = false); procedure Skew; procedure Perspective</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CartesianToPolar"></span><code>procedure <b>CartesianToPolar</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

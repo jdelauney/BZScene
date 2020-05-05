@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBZCustomHashStringList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomHashStringList"></span><h1 class="cio">Classe TBZCustomHashStringList</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomHashStringList = class(<a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe optimisée pour utiliser une liste de chaine de caractères avec la possibiliter d'associer un nom, un d'objets et ou un Tag. <br> Elle intègre une recherche basé sur le &quot;Haschage&quot;. <br> Ce qui fait que la recherche est un simple test de correspondance. <br> La liste n'a donc pas besoin d'être triée pou effectuer un recherche rapide..</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></li>
+<li class="thisitem">TBZCustomHashStringList</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZCustomHashStringList.html#Create">Create</a></b>(AOwner: TPersistent); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZClasses.TBZCustomHashStringList.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#UpdateDirectList">UpdateDirectList</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Add">Add</a></b>(Const Value: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Add">Add</a></b>(Const s: String): Integer; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Add">Add</a></b>(Const s: String; Const aTag : String): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#AddInt">AddInt</a></b>(Const s: String; Const aTag: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Add">Add</a></b>(Const s: String; Const aTag: Single): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Add">Add</a></b>(Const s: String; AObject: TObject): Integer; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#Clear">Clear</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#WriteToFiler">WriteToFiler</a></b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#ReadFromFiler">ReadFromFiler</a></b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Count">Count</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#Find">Find</a></b>(Const S: String; Var index: Integer): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#IndexOf">IndexOf</a></b>(Const aText: String): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#IndexOfText">IndexOfText</a></b>(Const s: String): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomHashStringList.html#IndexOfItem">IndexOfItem</a></b>(aItem: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#RemoveAndFreeItem">RemoveAndFreeItem</a></b>(aItem: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#Pack">Pack</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#DirectSort">DirectSort</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashStringList.html#Sort">Sort</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#Items">Items</a></b>[Index:Integer]: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a> read GetItem write SetItem;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#Strings">Strings</a></b>[Index:Integer]: String read GetStringText write SetStringText;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#Objects">Objects</a></b>[Index:Integer]: TObject read GetObjectRef write SetObjectRef;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#CaseSensitive">CaseSensitive</a></b>: Boolean read FCaseSensitive write FCaseSensitive;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#IsSorted">IsSorted</a></b>: Boolean read FIsSorted;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashStringList.html#List">List</a></b>: <a  href="BZClasses.html#PBZCustomHashListItemArray">PBZCustomHashListItemArray</a> read getDirectList;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TPersistent); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UpdateDirectList"></span><code>Procedure <b>UpdateDirectList</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>UpdateDirectList</code> : Met à jour la liste de données DirectList</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>Function <b>Add</b>(Const Value: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un élément à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>Function <b>Add</b>(Const s: String): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une chaine de caractères à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>Function <b>Add</b>(Const s: String; Const aTag : String): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une chaine de caractères à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddInt"></span><code>Function <b>AddInt</b>(Const s: String; Const aTag: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une chaine de caractères à la liste et assigne un Tag</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>Function <b>Add</b>(Const s: String; Const aTag: Single): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une chaine de caractères à la liste et assigne un Tag</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>Function <b>Add</b>(Const s: String; AObject: TObject): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une chaine de caractères à la liste et attache un Objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>procedure <b>Clear</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteToFiler"></span><code>Procedure <b>WriteToFiler</b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Integration avec L'IDE : Ecriture des données de la classe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFromFiler"></span><code>Procedure <b>ReadFromFiler</b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Integration avec L'IDE : Lecture des données de la classe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Count"></span><code>Function <b>Count</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie le nombre d'éléments dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Find"></span><code>Function <b>Find</b>(Const S: String; Var index: Integer): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Find</code> : Recherche une chaine de caractère. <br> Renvoie <code>True</code> si trouvé et retourne dans &quot;Index&quot; la position de l'élément trouvé dans la liste. Sinon renvoi -1.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IndexOf"></span><code>Function <b>IndexOf</b>(Const aText: String): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la position d'un élément dans la liste en utilsant le hash</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IndexOfText"></span><code>Function <b>IndexOfText</b>(Const s: String): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la position du nom d'un élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IndexOfItem"></span><code>Function <b>IndexOfItem</b>(aItem: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la position d'un élément dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RemoveAndFreeItem"></span><code>Procedure <b>RemoveAndFreeItem</b>(aItem: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Supprime et libère un élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Pack"></span><code>Procedure <b>Pack</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nettoie, compresse la liste afin d'optimiser l'utilisation de la mémoire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectSort"></span><code>Procedure <b>DirectSort</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+La procedure de trie ici n'utilise pas la fonction de base par défaut qui utilise l'algorithme QuickSort. A la place le trie est effectué par l'algorithme &quot;A-<a class="normal" href="BZClasses.TBZCustomHashStringList.html#Sort">Sort</a>&quot; qui est 1000x plus rapide. Cet algorithme est basé sur un article de Lionel Defosse parue dans le magazine pascalissisme n°59. ( <a  href="https://ldelafosse.pagesperso-orange.fr/Sort/Papers/Asort.htm">https://ldelafosse.pagesperso-orange.fr/Sort/Papers/Asort.htm</a> ) <br> Le trie est effectué uniquement dans DirectList dans un soucis de performance. <br> La Liste de l'objet n'est pas impacté.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Sort"></span><code>Procedure <b>Sort</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie la liste. Avec la fonction par défaut QuickSort.</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Items"></span><code>property <b>Items</b>[Index:Integer]: <a  href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a> read GetItem write SetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie un élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Strings"></span><code>property <b>Strings</b>[Index:Integer]: String read GetStringText write SetStringText;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie le nom associer à un élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Objects"></span><code>property <b>Objects</b>[Index:Integer]: TObject read GetObjectRef write SetObjectRef;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'objet associer à un élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CaseSensitive"></span><code>property <b>CaseSensitive</b>: Boolean read FCaseSensitive write FCaseSensitive;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit si sensible à la casse</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsSorted"></span><code>property <b>IsSorted</b>: Boolean read FIsSorted;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie <code>True</code> si la liste a été triée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="List"></span><code>property <b>List</b>: <a  href="BZClasses.html#PBZCustomHashListItemArray">PBZCustomHashListItemArray</a> read getDirectList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la liste sous forme d'un pointeur</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZCustomShader: Classe TBZAbstractShader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZAbstractShader"></span><h1 class="cio">Classe TBZAbstractShader</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZCustomShader.html">BZCustomShader</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZAbstractShader = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZAbstractShader</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZAbstractShader</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZCustomShader.TBZAbstractShader.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZCustomShader.TBZAbstractShader.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZAbstractShader.html#NotifyChange">NotifyChange</a></b>(Sender: TObject); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZAbstractShader.html#BeginUpdate">BeginUpdate</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZAbstractShader.html#EndUpdate">EndUpdate</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZAbstractShader.html#Apply">Apply</a></b>(var rci: Pointer; Sender: TObject); virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZAbstractShader.html#UnApply">UnApply</a></b>(var rci: Pointer): Boolean; virtual; abstract;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZAbstractShader.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZAbstractShader.html#HardwareShaderSupported">HardwareShaderSupported</a></b>: Boolean; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZAbstractShader.html#SoftwareShaderSupported">SoftwareShaderSupported</a></b>: Boolean; virtual;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#FailedInitAction">FailedInitAction</a></b>: <a  href="BZCustomShader.html#TBZShaderFailedInitAction">TBZShaderFailedInitAction</a> read FFailedInitAction write FFailedInitAction default <a  href="BZCustomShader.html#fiaRaiseStandardException">fiaRaiseStandardException</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#ShaderInitialized">ShaderInitialized</a></b>: Boolean read GetShaderInitialized;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#ShaderActive">ShaderActive</a></b>: Boolean read FShaderActive;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#PassCount">PassCount</a></b>: Integer read FPassCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#DataNeedUpdate">DataNeedUpdate</a></b> : Boolean read FdataNeedUpdate Write FDataNeedUpdate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#TagObject">TagObject</a></b>: TObject read FTagObject write FTagObject default nil;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#DebugMode">DebugMode</a></b> : Boolean read FDebugMode Write SetDebugMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#Name">Name</a></b> : String Read FName Write FName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#Enabled">Enabled</a></b>: Boolean read FEnabled write SetEnabled default True;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#OnApply">OnApply</a></b>: <a  href="BZCustomShader.html#TBZShaderEvent">TBZShaderEvent</a> read FOnApply write FOnApply;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#OnUnApply">OnUnApply</a></b>: <a  href="BZCustomShader.html#TBZShaderEventOnUnApply">TBZShaderEventOnUnApply</a> read FOnUnApply write FOnUnApply;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#OnInitialize">OnInitialize</a></b>: <a  href="BZCustomShader.html#TBZShaderEvent">TBZShaderEvent</a> read FOnInitialize write FOnInitialize;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#OnInitializeEx">OnInitializeEx</a></b>: <a  href="BZCustomShader.html#TBZShaderEventEx">TBZShaderEventEx</a> read FOnInitializeEx write FOnInitializeEx;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZAbstractShader.html#OnApplyEx">OnApplyEx</a></b>: <a  href="BZCustomShader.html#TBZShaderEventEx">TBZShaderEventEx</a> read FOnApplyEx write FOnApplyEx;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+constructor <code>Create</code>(AOwner: TComponent); override;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+(AOwner: TComponent);// override;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NotifyChange"></span><code>procedure <b>NotifyChange</b>(Sender: TObject); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: Subclasses should invoke this function when shader properties are altered. This procedure can also be used to reset/recompile the shader.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BeginUpdate"></span><code>procedure <b>BeginUpdate</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndUpdate"></span><code>procedure <b>EndUpdate</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Apply"></span><code>procedure <b>Apply</b>(var rci: Pointer; Sender: TObject); virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: <code>Apply</code> shader to state machine.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UnApply"></span><code>function <b>UnApply</b>(var rci: Pointer): Boolean; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: <code>UnApply</code> shader.&lt;p&gt; When returning True, the caller is expected to perform a multipass rendering by re-rendering then invoking <code>UnApply</code> again, until a &quot;False&quot; is returned.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HardwareShaderSupported"></span><code>function <b>HardwareShaderSupported</b>: Boolean; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: Defines if shader is supported by hardware/drivers. Default - always supported. Descendants are encouraged to override this function.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SoftwareShaderSupported"></span><code>function <b>SoftwareShaderSupported</b>: Boolean; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FailedInitAction"></span><code>property <b>FailedInitAction</b>: <a  href="BZCustomShader.html#TBZShaderFailedInitAction">TBZShaderFailedInitAction</a> read FFailedInitAction write FFailedInitAction default <a  href="BZCustomShader.html#fiaRaiseStandardException">fiaRaiseStandardException</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: Defines what to do if for some reason shader failed to initialize. Note, that in some cases it cannon be determined by just checking the required OpenGL extentions. You need to try to compile and link the shader - only at that stage you might catch an error</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShaderInitialized"></span><code>property <b>ShaderInitialized</b>: Boolean read GetShaderInitialized;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShaderActive"></span><code>property <b>ShaderActive</b>: Boolean read FShaderActive;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PassCount"></span><code>property <b>PassCount</b>: Integer read FPassCount;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DataNeedUpdate"></span><code>property <b>DataNeedUpdate</b> : Boolean read FdataNeedUpdate Write FDataNeedUpdate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TagObject"></span><code>property <b>TagObject</b>: TObject read FTagObject write FTagObject default nil;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DebugMode"></span><code>property <b>DebugMode</b> : Boolean read FDebugMode Write SetDebugMode;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Name"></span><code>property <b>Name</b> : String Read FName Write FName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: Turns on/off shader application.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Enabled"></span><code>property <b>Enabled</b>: Boolean read FEnabled write SetEnabled default True;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnApply"></span><code>property <b>OnApply</b>: <a  href="BZCustomShader.html#TBZShaderEvent">TBZShaderEvent</a> read FOnApply write FOnApply;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnUnApply"></span><code>property <b>OnUnApply</b>: <a  href="BZCustomShader.html#TBZShaderEventOnUnApply">TBZShaderEventOnUnApply</a> read FOnUnApply write FOnUnApply;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnInitialize"></span><code>property <b>OnInitialize</b>: <a  href="BZCustomShader.html#TBZShaderEvent">TBZShaderEvent</a> read FOnInitialize write FOnInitialize;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnInitializeEx"></span><code>property <b>OnInitializeEx</b>: <a  href="BZCustomShader.html#TBZShaderEventEx">TBZShaderEventEx</a> read FOnInitializeEx write FOnInitializeEx;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnApplyEx"></span><code>property <b>OnApplyEx</b>: <a  href="BZCustomShader.html#TBZShaderEventEx">TBZShaderEventEx</a> read FOnApplyEx write FOnApplyEx;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,1415 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: Tous les types</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="allitems">Tous les types</h1>
+<table class="itemstable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemunit">Unité</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSound.html#BZSoundFXItemClass">BZSoundFXItemClass</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZOpenALManager.html#EOpenALError">EOpenALError</a></td>
+<td class="itemunit"><a class="bold" href="BZOpenALManager.html">BZOpenALManager</a></td>
+<td class="itemdesc"><p>Exception levé par OpenAL</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZMath.html#FloatX">FloatX</a></td>
+<td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
+<td class="itemdesc"><p>Types réels:     A point flottant: <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Simple (Single) 32 bits : 7-8 chiffres significatifs</p></li>
+  <li><p>Double (Double) 64 bits : 15-16 chiffres significatifs</p></li>
+  <li><p>Etendu (Extended) 80 bits : 19-20 chiffres significatifs</p></li>
+</ul>
+
+<p>
+
+<p>    A point fixe: <br>       Devise (Currency) 64 bits : 19-20 chiffres significatifs, 4 après la virgule décimale.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#PBZAffineVector">PBZAffineVector</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Pointeur vers <a class="normal" href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileBMP.html#PBZBitmapBMPInfoHeader">PBZBitmapBMPInfoHeader</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#PBZBrushPattern">PBZBrushPattern</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColor">PBZColor</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.html#TBZColor">TBZColor</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColor24">PBZColor24</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColor32">PBZColor32</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorBGR16_565">PBZColorBGR16_565</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorBGR_24">PBZColorBGR_24</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmapFilterClasses.html#PBZColorChannelLUT">PBZColorChannelLUT</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></td>
+<td class="itemdesc"><p>Pointeurr vers une table LUT : <a class="normal" href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorItemArray">PBZColorItemArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.html#TBZColorItemPropertyArray">TBZColorItemPropertyArray</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorRegisterEntry">PBZColorRegisterEntry</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.TBZColorRegisterEntry.html">TBZColorRegisterEntry</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorRGB16_565">PBZColorRGB16_565</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>5 bits</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorVector">PBZColorVector</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorXBGR16_1555">PBZColorXBGR16_1555</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>5 bits</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZColorXRGB16_1555">PBZColorXRGB16_1555</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>5 bits</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#PBZCustomHashListItemArray">PBZCustomHashListItemArray</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Pointeur vers un Tableau s de type <a class="normal" href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZDynColorVectorArray">PBZDynColorVectorArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers <a class="normal" href="BZColors.html#TBZDynColorVectorArray">TBZDynColorVectorArray</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileGIF.html#PBZGifFrameInformations">PBZGifFrameInformations</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
+<td class="itemdesc"><p>Image entrelacée</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZGradientColorItemArray">PBZGradientColorItemArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.html#TBZGradientColorItemArray">TBZGradientColorItemArray</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileJPEG.html#PBZJPEGProgressManager">PBZJPEGProgressManager</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileJPEG.html">BZImageFileJPEG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZLogger.html#PBZLogViewMsgData">PBZLogViewMsgData</a></td>
+<td class="itemunit"><a class="bold" href="BZLogger.html">BZLogger</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#PBZMatrix">PBZMatrix</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Pointeur vers <a class="normal" href="BZVectorMath.html#TBZMatrix">TBZMatrix</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#PBZPaletteEntries">PBZPaletteEntries</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZColors.html#TBZPaletteEntries">TBZPaletteEntries</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_acTL">PBZPNGChunk_acTL</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_cHRM">PBZPNGChunk_cHRM</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_fcTL">PBZPNGChunk_fcTL</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_IHDR">PBZPNGChunk_IHDR</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_JHDR">PBZPNGChunk_JHDR</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_MHDR">PBZPNGChunk_MHDR</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_pHYs">PBZPNGChunk_pHYs</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#PBZPNGChunk_tIME">PBZPNGChunk_tIME</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#PBZPoint">PBZPoint</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZGraphic.html#TBZPoint">TBZPoint</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#PBZProgressSection">PBZProgressSection</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#PBZRect">PBZRect</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileIO.html#PBZRLEOpCode">PBZRLEOpCode</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileIO.html">BZImageFileIO</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileTGA.html#PBZTGAFileHeader">PBZTGAFileHeader</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#PBZVector">PBZVector</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Pointeur vers <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#PBZVector2i">PBZVector2i</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Pointeur vers un <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZLogger.html#PFlName">PFlName</a></td>
+<td class="itemunit"><a class="bold" href="BZLogger.html">BZLogger</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZMath.html#PFloatX">PFloatX</a></td>
+<td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#PObject">PObject</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p><code>PObject</code> : Definit un pointer sur un TObject</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#PPointerObjectList">PPointerObjectList</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Pointeru vers un tableau d'objets</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZMath.html#PSinCos">PSinCos</a></td>
+<td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSoundSample.html#PSoundFileFormat">PSoundFileFormat</a></td>
+<td class="itemunit"><a class="bold" href="BZSoundSample.html">BZSoundSample</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZScreenMode.html#PVideoMode">PVideoMode</a></td>
+<td class="itemunit"><a class="bold" href="BZScreenMode.html">BZScreenMode</a></td>
+<td class="itemdesc"><p>Pointeur sur un mode video</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Mode d'arrondissement du SIMD</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>Définit le type d'intersection de deux lignes</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZ2DPolygonType">TBZ2DPolygonType</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>Type de polygone</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMathEx.html#TBZAABBCorners">TBZAABBCorners</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMathEx.html">BZVectorMathEx</a></td>
+<td class="itemdesc"><p>Structure pour stocker une AABB.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMathEx.html#TBZAffineMatrix">TBZAffineMatrix</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMathEx.html">BZVectorMathEx</a></td>
+<td class="itemdesc"><p>Type de convenance pour décrire une matrice de transformation 2D affine</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Définition de convenance pratique pour décrire un vecteur affine de type <a class="normal" href="BZVectorMath.TBZVector3f.html">TBZVector3f</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZAnimationTool.html#TBZAnimationClampMode">TBZAnimationClampMode</a></td>
+<td class="itemunit"><a class="bold" href="BZAnimationTool.html">BZAnimationTool</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a></td>
+<td class="itemunit"><a class="bold" href="BZAnimationTool.html">BZAnimationTool</a></td>
+<td class="itemdesc"><p>Enumération des mode d'animation disponibles</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a></td>
+<td class="itemunit"><a class="bold" href="BZAnimationTool.html">BZAnimationTool</a></td>
+<td class="itemdesc"><p>Enumération des type d'animation disponibles</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Type de convenance pour un tableau 1D conteant des <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZArrayOfPoints">TBZArrayOfPoints</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Type de convenance pour un tableau 1D conteant des <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVector2i</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmapThresholdFilters.html#TBZAutomaticThresholdMode">TBZAutomaticThresholdMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapThresholdFilters.html">BZBitmapThresholdFilters</a></td>
+<td class="itemdesc"><p>Méthode de calcul du seuillage automatique</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapAlphaMode">TBZBitmapAlphaMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition du mode de composition pour le canal alpha</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapAlphaSetMode">TBZBitmapAlphaSetMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définit comment la Canal Alpha doit être définit dans un bitmap : </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a class="normal" href="BZGraphic.html#asmDefault">asmDefault</a> : Utilise le canal alpha non modifié du bitmap par defaut</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmAlphaFromIntensity">asmAlphaFromIntensity</a> : La valeur du canal alpha est déduite des autres intensité des composants RVB (plus lumineux, plus opaque)</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmSuperBlackTransparent">asmSuperBlackTransparent</a> : Les pixels avec une couleur RVB de (0, 0, 0) sont complètement transparent, les autres reste inchangés</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmLuminance">asmLuminance</a> : La valeur de luminance est calculée pour chaque pixel</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmLuminanceSqrt">asmLuminanceSqrt</a> : Identique à bamLuminance mais avec un <a class="normal" href="BZMath.html#Sqrt">Sqrt</a> (Luminance)</p></li>
+  <li><p><a class="normal" href="BZGraphic.html#asmOpaque">asmOpaque</a> : Le canal alpha est uniformément réglé sur 255</p></li>
+</ul>
+
+<p><br>
+
+<p><b>Note</b> : Luminance = Intensité , mais plus précis cf : fonction <a class="normal" href="BZBitmap.TBZBitmapColorFilters.html#SetAlpha">TBZBitmapColorFilters.SetAlpha</a> <br> TODO asmCustom : Le canal alpha est défini par l'utilisateur Porte ouverte pour une fonction &quot;CallBack&quot;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapAntiAliasMode">TBZBitmapAntiAliasMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition des mode d'anticrénelage</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapBitOrder">TBZBitmapBitOrder</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Ordre des bits pour les formats couleurs &lt; 8bits</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapBlendMode">TBZBitmapBlendMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition de convenance, des modes de compositions pour les couleurs RGB (Voir aussi : TBZBitmapCombineMode).</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapClass">TBZBitmapClass</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de classe descendante de <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapDrawMode">TBZBitmapDrawMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Mode de dessin des pixels</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmap.html#TBZBitmapEdgeDetctionBlurMode">TBZBitmapEdgeDetctionBlurMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmap.html">BZBitmap</a></td>
+<td class="itemdesc"><p>Type d'adoucissement à appliquer pour la detection de conteur avec Canny</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapFillType">TBZBitmapFillType</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition des modes de remplissage d'un bitmap</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Alignement de la taille d'une ligne suivant l'unité utilisé</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Ordre des lignes c-a-d l'origine en haut à gauche ou en bas à gauche</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZBlendingFactor">TBZBlendingFactor</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Facteurs de fusion source et destination pour les fonctions de dessin avec fusion.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileBMP.html#TBZBMPHeaderType">TBZBMPHeaderType</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
+<td class="itemdesc"><p>Type de l'en-tête</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBrushPattern">TBZBrushPattern</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau type pour definir une &quot;Patterne&quot; pour la brosse</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZBrushStyle">TBZBrushStyle</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Style des differentes brosses pour le Canvas</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZCadencer.html#TBZCadencerMode">TBZCadencerMode</a></td>
+<td class="itemunit"><a class="bold" href="BZCadencer.html">BZCadencer</a></td>
+<td class="itemdesc"><p>Détermine comment fonctionne le <a class="normal" href="BZCadencer.TBZCadencer.html">TBZCadencer</a>.<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a class="normal" href="BZCadencer.html#cmManual">cmManual</a> : vous devez déclencher la progression manuellement (dans votre code).</p></li>
+  <li><p><a class="normal" href="BZCadencer.html#cmASAP">cmASAP</a> : la progression est déclenchée aussi tôt que possible après une précédente progression (utilise les messages de Windows).</p></li>
+  <li><p><a class="normal" href="BZCadencer.html#cmApplicationIdle">cmApplicationIdle</a> : va accrocher Application.OnIdle, cela va écraser toute manipulation d'événement précédente, et un seul cadencer peut être utilisé dans ce mode.</p></li>
+</ul>
+
+<p></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Événement de progression pour des animations / simulations basées sur le temps.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZCadencer.html#TBZCadencerTimeReference">TBZCadencerTimeReference</a></td>
+<td class="itemunit"><a class="bold" href="BZCadencer.html">BZCadencer</a></td>
+<td class="itemdesc"><p>Determines à quel moment le <a class="normal" href="BZCadencer.TBZCadencer.html">TBZCadencer</a> doit &quot;progesser&quot;.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZCanvasClasses.html#TBZCanvasBrushClass">TBZCanvasBrushClass</a></td>
+<td class="itemunit"><a class="bold" href="BZCanvasClasses.html">BZCanvasClasses</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZCanvasBrushFillType">TBZCanvasBrushFillType</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition des modes de remplissage d'une brosse</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZCanvasClasses.html#TBZCanvasClass">TBZCanvasClass</a></td>
+<td class="itemunit"><a class="bold" href="BZCanvasClasses.html">BZCanvasClasses</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvas.html">TBZCustomCanvas</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZCanvasClasses.html#TBZCanvasPenClass">TBZCanvasPenClass</a></td>
+<td class="itemunit"><a class="bold" href="BZCanvasClasses.html">BZCanvasClasses</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZCanvasPenStrokePattern">TBZCanvasPenStrokePattern</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau type pour definir une &quot;Patterne&quot;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Style de debut et de fin de ligne et ou chemins</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZClipRect">TBZClipRect</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>TODO : Rendre Independant ou extraire <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> de l'unité <a class="normal" href="BZGraphic.html">BZGraphic</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColor">TBZColor</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Type de convenance pour le type <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColor24Type">TBZColor24Type</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau pour la représentation d'une couleur en 24 bits</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColor32Type">TBZColor32Type</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau pour la représentation d'une couleur en 32 bits</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></td>
+<td class="itemdesc"><p>LUT pour stocker des valeurs précalculées</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorCombineMode">TBZColorCombineMode</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Définition des mode de fusion.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmapColorFilters.html#TBZColorFilterSwapChannelMode">TBZColorFilterSwapChannelMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapColorFilters.html">BZBitmapColorFilters</a></td>
+<td class="itemdesc"><p>Mode d'invertion des canaux de couleur</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorFormat">TBZColorFormat</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Reflete la taille et l'ordre des valeurs d'un pixel</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorItemPropertyArray">TBZColorItemPropertyArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau pour stocker des <a class="normal" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorItemPropertyClass">TBZColorItemPropertyClass</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Objet de Classe descendante de <a class="normal" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorMaskComponent">TBZColorMaskComponent</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumeration des composantes de couleur RGBA</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorMatrixType">TBZColorMatrixType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Décrit une matrice de conversion de couleur (simplifiée).</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorRegisterSortType">TBZColorRegisterSortType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Ordre de trie de la liste de couleurs enregistrée</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorRGB_24">TBZColorRGB_24</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorSpace">TBZColorSpace</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumération des différents espaces de couleur</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorSpaceMatrixConversion">TBZColorSpaceMatrixConversion</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Définition d'une matrice 3x3 de conversion entre espace de couleur. <br> cf Fonctions mathematiques de conversion des espaces de couleur <a  href="http://brucelindbloom.com/index.html?UPLab.html">http://brucelindbloom.com/index.html?UPLab.html</a>.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorVectorType">TBZColorVectorType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Definition d'une couleur 128 bits en virgule flottante</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZColorVectorType3f">TBZColorVectorType3f</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Definition d'une couleur 96 bits en virgule flottante</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZConvolutionFilterCategory">TBZConvolutionFilterCategory</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmap.html#TBZConvolutionFilterMode">TBZConvolutionFilterMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmap.html">BZBitmap</a></td>
+<td class="itemdesc"><p>procedure SmartBlur; procedure VariableBlur procedure LensBlur;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSystem.html#TBZCPUFeatures">TBZCPUFeatures</a></td>
+<td class="itemunit"><a class="bold" href="BZSystem.html">BZSystem</a></td>
+<td class="itemdesc"><p>Extensions supportées par le CPU</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSystem.html#TBZCPUFeaturesSet">TBZCPUFeaturesSet</a></td>
+<td class="itemunit"><a class="bold" href="BZSystem.html">BZSystem</a></td>
+<td class="itemdesc"><p>Definition des technologies spécifiques supportées par le CPU</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZMath.html#TBZCubicRootSolution">TBZCubicRootSolution</a></td>
+<td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZCurveType">TBZCurveType</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZStreamClasses.html#TBZCustomBufferedStreamClass">TBZCustomBufferedStreamClass</a></td>
+<td class="itemunit"><a class="bold" href="BZStreamClasses.html">BZStreamClasses</a></td>
+<td class="itemdesc"><p>Descendant class type of <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZCustomHashListItemArray">TBZCustomHashListItemArray</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Type Tableau pour stocker des éléments de type <a class="normal" href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmapCompression.html#TBZDataEncoderClass">TBZDataEncoderClass</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapCompression.html">BZBitmapCompression</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZDataFileCapabilities">TBZDataFileCapabilities</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZDataFileCapability">TBZDataFileCapability</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Capacité pour les classes de lecture et ou d'ecriture de données dans un fichier.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZDataFileClass">TBZDataFileClass</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZDataFileLoadErrorEvent">TBZDataFileLoadErrorEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Evènement levé lors d'une erreur au chargement d'un flux par <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZDateFilterAccessKind">TBZDateFilterAccessKind</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p><code>TBZDateFilterAccessKind</code> : Type de date sur lequel appliquer les filtres de date</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZDateFilterKind">TBZDateFilterKind</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p><code>TBZDateFilterKind</code> : Mode de comparaison pour les filtres sur les dates</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZDetectEdgeFilterMode">TBZDetectEdgeFilterMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Mode de detection des contours par convolution disponibles</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZArrayClasses.html#TBZDynByteArray">TBZDynByteArray</a></td>
+<td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
+<td class="itemdesc"><p>Déclaration pour définir un tableau dynamique de single</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZDynColorArray">TBZDynColorArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Définition d'un tableau dynamique de <a class="normal" href="BZColors.html#TBZColor">TBZColor</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZDynColorVectorArray">TBZDynColorVectorArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau dynamique pour stoquer des <a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZArrayClasses.html#TBZDynIntegerArray">TBZDynIntegerArray</a></td>
+<td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
+<td class="itemdesc"><p>Déclaration pour définir un tableau dynamique de single</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZArrayClasses.html#TBZDynSingleArray">TBZDynSingleArray</a></td>
+<td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
+<td class="itemdesc"><p>Déclaration pour définir un tableau dynamique de single</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZEncodingType">TBZEncodingType</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Decrit l'algorithme de compression utilisé dans un fichier</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Ordre de rotation des angles d'Euler.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmapThresholdFilters.html#TBZFilterAdaptativeThresOldMode">TBZFilterAdaptativeThresOldMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapThresholdFilters.html">BZBitmapThresholdFilters</a></td>
+<td class="itemdesc"><p>Enumération des methodes pour le filtre de seuillage adaptatif</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Définition de convenance pour la représentation d'un point 2D en virgule flottante</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZFloatRectVectorType">TBZFloatRectVectorType</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau pour la représentation d'un rectangle virtuel e,n virgule flottante (Single)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmap.html#TBZFloodFillMode">TBZFloodFillMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmap.html">BZBitmap</a></td>
+<td class="itemdesc"><p>Enumération des algorithme de remplissage de zone disponibles pour le Canvas</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZFontClasses.html#TBZFontClass">TBZFontClass</a></td>
+<td class="itemunit"><a class="bold" href="BZFontClasses.html">BZFontClasses</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFontClasses.html#TBZFontQuality">TBZFontQuality</a></td>
+<td class="itemunit"><a class="bold" href="BZFontClasses.html">BZFontClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMathEx.html#TBZFrustrumPlanesArray">TBZFrustrumPlanesArray</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMathEx.html">BZVectorMathEx</a></td>
+<td class="itemdesc"><p>Structure pour stocker les plan d'un &quot;frustum&quot; (champ de vue de la caméra)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmapFilterClasses.html#TBZGetPixelSampleFunction">TBZGetPixelSampleFunction</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></td>
+<td class="itemdesc"><p>Fonctions pour le calcul dune valeur suréchantillionnée</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZGetPixelSampleMethod">TBZGetPixelSampleMethod</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Enumération des méthode de suréchantillionnage</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileGIF.html#TBZGIFDisposalFlag">TBZGIFDisposalFlag</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
+<td class="itemdesc"><p>Index dans la palette si plus petit ou égale Terminator: Byte; // Normalement toujours ZERO</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileGIF.html#TBZGIFVersion">TBZGIFVersion</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
+<td class="itemdesc"><p>Methode compression par defaut</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileGIF.html#TBZGIFVersionRec">TBZGIFVersionRec</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZGradientColorItemArray">TBZGradientColorItemArray</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau pour stocker des <a class="normal" href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZGradientKind">TBZGradientKind</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Définition des type de dégradé</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumération des Matrices de conversion couleur vers niveaux de gris.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumération des matrice de conversion couleur vers niveaux de gris disponibles</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZHistogramArray">TBZHistogramArray</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau de stockage des valeurs pour les histogrammes</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Choix du canal de l'histogramme</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZHistorgramDrawMode">TBZHistorgramDrawMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de l'histogramme</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZHmgPlaneHalfSpace">TBZHmgPlaneHalfSpace</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Description du plan dans l'espace.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZImageRawPaletteFormat">TBZImageRawPaletteFormat</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Format des palette utilisés dans les données brutes (provenant d'un fichier par exemple ) (Source : GraphicEx)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageViewer.html#TBZImageStretchMode">TBZImageStretchMode</a></td>
+<td class="itemunit"><a class="bold" href="BZImageViewer.html">BZImageViewer</a></td>
+<td class="itemdesc"><p>Mode de redimensionnement</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmapColorFilters.html#TBZInstagramFilterType">TBZInstagramFilterType</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapColorFilters.html">BZBitmapColorFilters</a></td>
+<td class="itemdesc"><p>Filtres &quot;ala&quot; Instagram prédéfinis</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a></td>
+<td class="itemunit"><a class="bold" href="BZInterpolationFilters.html">BZInterpolationFilters</a></td>
+<td class="itemdesc"><p>Type de classe descendante de BZCustomInterpolationFilter</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a></td>
+<td class="itemunit"><a class="bold" href="BZInterpolationFilters.html">BZInterpolationFilters</a></td>
+<td class="itemdesc"><p>Enumération des filtres de rééchantillonage supportés.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZInterpolationFilters.html#TBZInterpolationFilterWindowedMode">TBZInterpolationFilterWindowedMode</a></td>
+<td class="itemunit"><a class="bold" href="BZInterpolationFilters.html">BZInterpolationFilters</a></td>
+<td class="itemdesc"><p>Enumération des modes de fenetrage pour les filtres de type &quot;Windowed&quot; <br> TODO : Ajouter d'autres modes : Welch, Bartlett, Tukey ect...</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZMath.html#TBZInterpolationType">TBZInterpolationType</a></td>
+<td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
+<td class="itemdesc"><p>Enumération des types d'interpolation pour l'unité <a class="normal" href="BZMath.html">BZMath</a> : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a class="normal" href="BZMath.html#itLinear">itLinear</a> : Interpolation Lineaire</p></li>
+  <li><p><a class="normal" href="BZMath.html#itPower">itPower</a> : Interpolation par puissance</p></li>
+  <li><p><a class="normal" href="BZMath.html#itSin">itSin</a> : Interpolation Sinuosidale</p></li>
+  <li><p><a class="normal" href="BZMath.html#itSinAlt">itSinAlt</a> : Interpolation Sinuosidale Alternative</p></li>
+  <li><p><a class="normal" href="BZMath.html#itTan">itTan</a> : Interpolation par tangente</p></li>
+  <li><p><a class="normal" href="BZMath.html#itLn">itLn</a> : Interpolation logarithmique</p></li>
+  <li><p><a class="normal" href="BZMath.html#itExp">itExp</a> : Interpolation exponentielle</p></li>
+</ul>
+
+<p>
+
+<p>Voir : <a class="normal" href="BZMath.html#InterpolateValue">InterpolateValue</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZJoinStyle">TBZJoinStyle</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Style des jointures de contour</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileJPEG.html#TBZJPEGQualityRange">TBZJPEGQualityRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileJPEG.html">BZImageFileJPEG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileJPEG.html#TBZJPEGReadPerformance">TBZJPEGReadPerformance</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileJPEG.html">BZImageFileJPEG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileJPEG.html#TBZJPEGScale">TBZJPEGScale</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileJPEG.html">BZImageFileJPEG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZKeyboard.html#TBZKeyBufferState">TBZKeyBufferState</a></td>
+<td class="itemunit"><a class="bold" href="BZKeyboard.html">BZKeyboard</a></td>
+<td class="itemdesc"><p>Tampon de stockage, de l'état des touches pressées (code de 0 à 255)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZLogger.html#TBZLoggerCallback">TBZLoggerCallback</a></td>
+<td class="itemunit"><a class="bold" href="BZLogger.html">BZLogger</a></td>
+<td class="itemdesc"><p>Procedure de callback pour ecrire un message de log</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZLogger.html#TBZLogLevel">TBZLogLevel</a></td>
+<td class="itemunit"><a class="bold" href="BZLogger.html">BZLogger</a></td>
+<td class="itemdesc"><p>Niveau du message de log</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZMatrix">TBZMatrix</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Définition de convenance pratique pour décrire une matrice de type <a class="normal" href="BZVectorMath.TBZMatrix4f.html">TBZMatrix4f</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZMatrixConvolutionFilter3x3">TBZMatrixConvolutionFilter3x3</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau pour stocker des matrices de convolution 3x3</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZMatrixConvolutionFilter5x5">TBZMatrixConvolutionFilter5x5</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau pour stocker des matrices de convolution 5x5</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZMatrixConvolutionFilter7x7">TBZMatrixConvolutionFilter7x7</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau pour stocker des matrices de convolution 7x7</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZMatrixConvolutionType">TBZMatrixConvolutionType</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de la matrice de convolution</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZMatrixTransformations">TBZMatrixTransformations</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p><code>TBZMatrixTransformations</code> : Est utilisé pour décrire une séquence de transformation en suivant l'odre définis tel que : [Sx][Sy][Sz][ShearXY][ShearXZ][ShearZY][Rx][Ry][Rz][Tx][Ty][Tz][P(x,y,z,w)] Constants are declared for easier access (see MatrixDecompose below)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Type d'action de transformation d'une matrice</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmap.html#TBZMorphologicalEdgeDetectionMode">TBZMorphologicalEdgeDetectionMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmap.html">BZBitmap</a></td>
+<td class="itemdesc"><p>Type d'operateur morphologique à appliquer pour la detection de contour</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZMorphologicalOperator">TBZMorphologicalOperator</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de filtre morphologique de base</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoiseGeneratorClass">TBZNoiseGeneratorClass</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoiseInterpolationType">TBZNoiseInterpolationType</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Enumération des types d'interpolation du bruit</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoisePerturbation">TBZNoisePerturbation</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Enumération des types de pertubation du bruit</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoiseRandomGeneratorType">TBZNoiseRandomGeneratorType</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Enumération des générateurs aléatoire pour la génération du bruit</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Enumération des types de bruit</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZNoiseSupports">TBZNoiseSupports</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Support des bruits</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileIO.html#TBZNotifySeverity">TBZNotifySeverity</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileIO.html">BZImageFileIO</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageViewer.html#TBZOnAfterPaintEvent">TBZOnAfterPaintEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZImageViewer.html">BZImageViewer</a></td>
+<td class="itemdesc"><p>Evenement d�clencher pour dessiner sur le canvas virtuel</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZNoiseGenerator.html#TBZOnCustomRandomNoise">TBZOnCustomRandomNoise</a></td>
+<td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
+<td class="itemdesc"><p>Méthode personalisée pour la génération d'un bruit</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZOnSearchAcceptFile">TBZOnSearchAcceptFile</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p>Evènement déclencher lorsque lorsqu'un fichier est sur le point d'être accepté comme résultat valide.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZOnSearchChangeFolder">TBZOnSearchChangeFolder</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p>Evènement déclencher lors du changement du chemein de recherche</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZOnSearchCompleted">TBZOnSearchCompleted</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p>Evènement déclencher lorsque la recherche est terminée</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZOnSearchFileFound">TBZOnSearchFileFound</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p>Evènement déclencher lorqu'un fichier ou dossier est trouvé</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZOnSearchStart">TBZOnSearchStart</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p>Evènement déclencher au démarrage de la recherche</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZPaletteEntries">TBZPaletteEntries</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Tableau pour stocker un palette de couleur au format <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZParallelThread.html#TBZParallelProc">TBZParallelProc</a></td>
+<td class="itemunit"><a class="bold" href="BZParallelThread.html">BZParallelThread</a></td>
+<td class="itemdesc"><p>Type de procedure simple d'execution du tratement à effectuer dans les threads</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZParallelThread.html">BZParallelThread</a></td>
+<td class="itemdesc"><p>Type de procedure objet d'execution du tratement à effectuer dans les threads</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZParallelThread.html#TBZParallelProgressEvent">TBZParallelProgressEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZParallelThread.html">BZParallelThread</a></td>
+<td class="itemdesc"><p>Type de procedure objet pour la progression de l'execution</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZParallelThread.html#TBZParallelProgressMode">TBZParallelProgressMode</a></td>
+<td class="itemunit"><a class="bold" href="BZParallelThread.html">BZParallelThread</a></td>
+<td class="itemdesc"><p>Direction de traitement des données.</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a></td>
+<td class="itemunit"><a class="bold" href="BZAnimationTool.html">BZAnimationTool</a></td>
+<td class="itemdesc"><p>Definition d'une function paramétrique 1D</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZPatternStyle">TBZPatternStyle</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Style des pattern prédéfinis</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZPersistentObjectClass">TBZPersistentObjectClass</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Type de classes héritée de <a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZPixelEdgeAction">TBZPixelEdgeAction</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Mode de traitement pour les pixels sur les bords</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Reflete la taille du pixel en bits</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSystem.html#TBZPlatformVersion">TBZPlatformVersion</a></td>
+<td class="itemunit"><a class="bold" href="BZSystem.html">BZSystem</a></td>
+<td class="itemdesc"><p>Enumération des types et version de systemes d'exploitation</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPNGChunkCode">TBZPNGChunkCode</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPNGChunkTypes">TBZPNGChunkTypes</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>Les différents types de &quot;Chunk&quot; supportés</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPNGICCPName">TBZPNGICCPName</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPNGsRGBType">TBZPNGsRGBType</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>0 Perceptual for images preferring good adaptation to the output device gamut at the expense of colorimetric accuracy, such as photographs.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZPoint">TBZPoint</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de convenance pour définir un point 2D de type Integer</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZBitmapDeformationFilters.html#TBZPolarTransformationMode">TBZPolarTransformationMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapDeformationFilters.html">BZBitmapDeformationFilters</a></td>
+<td class="itemdesc"><p><a class="normal" href="BZBitmapDeformationFilters.TBZBitmapPolarTransformationFilter.html">TBZBitmapPolarTransformationFilter</a></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFilePNG.html#TBZPortableNetworkGraphicFormatType">TBZPortableNetworkGraphicFormatType</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZProgressEvent">TBZProgressEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Definition du type fonction pour l'evenement OnProgress</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TBZProgressStage">TBZProgressStage</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Action de la progression (pour eviter d'utiliser l'uniter FPImage)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZQuadrangle2D">TBZQuadrangle2D</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>TODO : Faire un Enregistrment Avancer et à passer dans BZGeoTool.pas.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZQuadraticBezierCurves">TBZQuadraticBezierCurves</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>Tableau de courbes de bezier quadratic</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZRandomGenerator.html#TBZRandomNumGeneratorType">TBZRandomNumGeneratorType</a></td>
+<td class="itemunit"><a class="bold" href="BZRandomGenerator.html">BZRandomGenerator</a></td>
+<td class="itemdesc"><p>Methode aléatoire : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>rngtXorShif64 : Très rapide</p></li>
+  <li><p><a class="normal" href="BZRandomGenerator.html#rngtMWC256">rngtMWC256</a> : Moins rapide mais plus précis</p></li>
+</ul>
+
+<p></p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>PBZRasterItem = TBZRasterHLineRec;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGeoTools.html#TBZRastersList">TBZRastersList</a></td>
+<td class="itemunit"><a class="bold" href="BZGeoTools.html">BZGeoTools</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZRectVectorType">TBZRectVectorType</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau pour la représentation d'un rectangle virtuel (Integer)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZScanLineLUT">TBZScanLineLUT</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Tableau de DWord servant a stocker les adresses de début de chaque ligne du bitmap</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a></td>
+<td class="itemunit"><a class="bold" href="BZScreenMode.html">BZScreenMode</a></td>
+<td class="itemdesc"><p>Evènement déclancher lors d'un changement de mode video</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a></td>
+<td class="itemunit"><a class="bold" href="BZScreenMode.html">BZScreenMode</a></td>
+<td class="itemdesc"><p>Définition des bornes de l'ensemble des modes vidéo</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFileFinder.html#TBZSizeFilterKind">TBZSizeFilterKind</a></td>
+<td class="itemunit"><a class="bold" href="BZFileFinder.html">BZFileFinder</a></td>
+<td class="itemdesc"><p><code>TBZSizeFilterKind</code> : Mode de comparaison pour le filtre sur la taille des fichiers</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a></td>
+<td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
+<td class="itemdesc"><p>Ordre de trie Ascendant ou descendant</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundManagerChange">TBZSoundManagerChange</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundManagerChanges">TBZSoundManagerChanges</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>sscEffects, sscFiltersmc</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>EAX standard sound environments.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSoundSample.html#TBZSoundSampleClass">TBZSoundSampleClass</a></td>
+<td class="itemunit"><a class="bold" href="BZSoundSample.html">BZSoundSample</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZSoundSample.TBZCustomSoundSample.html">TBZCustomSoundSample</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundSourceChange">TBZSoundSourceChange</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundSourceChanges">TBZSoundSourceChanges</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>sscEffects, sscFilters</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundSourceFXChange">TBZSoundSourceFXChange</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSound.html#TBZSoundSourceFXChanges">TBZSoundSourceFXChanges</a></td>
+<td class="itemunit"><a class="bold" href="BZSound.html">BZSound</a></td>
+<td class="itemdesc"><p>sscEffects, sscFilters</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSoundSample.html#TBZSoundWaveGenerator">TBZSoundWaveGenerator</a></td>
+<td class="itemunit"><a class="bold" href="BZSoundSample.html">BZSoundSample</a></td>
+<td class="itemdesc"><p>Fonctions disponibles pour la génération d'onde sonore</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMathEx.html">BZVectorMathEx</a></td>
+<td class="itemdesc"><p>Description pour le test des intersections dans l'espace avec les boites englobantes Voir aussi : <a class="normal" href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>, <a class="normal" href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>, TBZBoundingCircle, TBZAxisAlignedBoundingRect (2D)</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Définition du mode de dessin des contours</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZStrokeStyle">TBZStrokeStyle</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type pour le dessin du conteur</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZSupportedColorFormat">TBZSupportedColorFormat</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Liste des formats de couleur supportés</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#TBZSupportedPixelSize">TBZSupportedPixelSize</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Liste des nombres de bits supportés par un formats de couleur</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZTextureMappingKind">TBZTextureMappingKind</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>Type de mapping à appliquer pour le remplissage avec une texture.</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZGraphic.html#TBZTextureMappingMode">TBZTextureMappingMode</a></td>
+<td class="itemunit"><a class="bold" href="BZGraphic.html">BZGraphic</a></td>
+<td class="itemdesc"><p>TBZGradientType = (gtHorizontal, gtVertical, gtRadial, gtFromTopLeft, gtFromTopRight, gtDoubleHorz, gtDoubleVert);</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZStopWatch.html#TBZTimeUnit">TBZTimeUnit</a></td>
+<td class="itemunit"><a class="bold" href="BZStopWatch.html">BZStopWatch</a></td>
+<td class="itemdesc"><p>Unité de mesure du chronomètre</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector">TBZVector</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Définition de convenance pratique pour décrire un vecteur homogène de type <a class="normal" href="BZVectorMath.TBZVector4f.html">TBZVector4f</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector2dType">TBZVector2dType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 2D Double</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector2fType">TBZVector2fType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 2D Single</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector2iType">TBZVector2iType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 2D Integer</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector2SwizzleRef">TBZVector2SwizzleRef</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 2D</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector3bType">TBZVector3bType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 3D Byte</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector3fType">TBZVector3fType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 3D Single</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector3iType">TBZVector3iType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 3D Integer</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector3SwizzleRef">TBZVector3SwizzleRef</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 3D</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector4bType">TBZVector4bType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 4D Byte</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector4fType">TBZVector4fType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 4D Single</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector4iType">TBZVector4iType</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Tableau aligné pour les vecteur 4D Integer</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a></td>
+<td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
+<td class="itemdesc"><p>Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 4D</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZKeyboard.html#TBZVirtualKeyCode">TBZVirtualKeyCode</a></td>
+<td class="itemunit"><a class="bold" href="BZKeyboard.html">BZKeyboard</a></td>
+<td class="itemdesc"><p>Code d'une touche virtuelle</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZBitmapDeformationFilters.html#TBZWaveDistorsionMode">TBZWaveDistorsionMode</a></td>
+<td class="itemunit"><a class="bold" href="BZBitmapDeformationFilters.html">BZBitmapDeformationFilters</a></td>
+<td class="itemdesc"><p>TBZBitmapWaveFilter</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWebPPreset">TBZWebPPreset</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_EntropyAnalysisPassesRange">TBZWEBP_EntropyAnalysisPassesRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_FilterType">TBZWEBP_FilterType</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_MethodeRange">TBZWEBP_MethodeRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>Texte</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_PartitionRange">TBZWEBP_PartitionRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_SegmentRange">TBZWEBP_SegmentRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFileWEBP.html#TBZWEBP_SharpnessRange">TBZWEBP_SharpnessRange</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFileWEBP.html">BZImageFileWEBP</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZXCollection.html#TBZXCollectionItemClass">TBZXCollectionItemClass</a></td>
+<td class="itemunit"><a class="bold" href="BZXCollection.html">BZXCollection</a></td>
+<td class="itemdesc"><p>Classe de type <a class="normal" href="BZXCollection.TBZXCollectionItem.html">TBZXCollectionItem</a></p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZStreamClasses.html#TGZCompressionLevel">TGZCompressionLevel</a></td>
+<td class="itemunit"><a class="bold" href="BZStreamClasses.html">BZStreamClasses</a></td>
+<td class="itemdesc"><p><code>TGZCompressionLevel</code> : Enumeration des niveaux de compression</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZStreamClasses.html#TGZOpenMode">TGZOpenMode</a></td>
+<td class="itemunit"><a class="bold" href="BZStreamClasses.html">BZStreamClasses</a></td>
+<td class="itemdesc"><p><code>TGZOpenMode</code> : Enumeration des modes d'acces aux fichiers compressés</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZColors.html#THSLColorSubSpaceType">THSLColorSubSpaceType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumération des sous espaces de couleur pour l'espace de couleur HSL (HLS)</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZColors.html#THSVColorSubSpaceType">THSVColorSubSpaceType</a></td>
+<td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
+<td class="itemdesc"><p>Enumération des sous espaces de couleur pour l'espace de couleur HSV</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TObjectListSortCompare">TObjectListSortCompare</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Fonction pour comparer deux TObject</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TPointerObjectList">TPointerObjectList</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>Tableau d'objets</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZImageFilePPM.html#TTupleType">TTupleType</a></td>
+<td class="itemunit"><a class="bold" href="BZImageFilePPM.html">BZImageFilePPM</a></td>
+<td class="itemdesc"><p>Type des données pour le format PAM</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZClasses.html#TVirtualReaderClass">TVirtualReaderClass</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZClasses.html#TVirtualWriterClass">TVirtualWriterClass</a></td>
+<td class="itemunit"><a class="bold" href="BZClasses.html">BZClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

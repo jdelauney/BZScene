@@ -1,0 +1,105 @@
+object OpenPictureForm: TOpenPictureForm
+  Left = 282
+  Height = 300
+  Top = 250
+  Width = 426
+  BorderStyle = bsDialog
+  Caption = 'Ouvrir une image'
+  ClientHeight = 300
+  ClientWidth = 426
+  Position = poScreenCenter
+  LCLVersion = '2.0.6.0'
+  object Panel1: TPanel
+    Left = 290
+    Height = 300
+    Top = 0
+    Width = 136
+    Align = alRight
+    ClientHeight = 300
+    ClientWidth = 136
+    TabOrder = 0
+    object btnOpen: TButton
+      Left = 9
+      Height = 25
+      Top = 9
+      Width = 118
+      Align = alTop
+      BorderSpacing.Around = 8
+      Caption = 'Ouvrir'
+      OnClick = btnOpenClick
+      TabOrder = 0
+    end
+    object btnCancel: TButton
+      Left = 9
+      Height = 25
+      Top = 266
+      Width = 118
+      Align = alBottom
+      BorderSpacing.Around = 8
+      Caption = 'Annuler'
+      ModalResult = 2
+      TabOrder = 1
+    end
+    object btnOk: TButton
+      Left = 9
+      Height = 25
+      Top = 233
+      Width = 118
+      Align = alBottom
+      BorderSpacing.Around = 8
+      Caption = 'Ok'
+      ModalResult = 1
+      TabOrder = 2
+    end
+    object btnClear: TButton
+      Left = 9
+      Height = 25
+      Top = 42
+      Width = 118
+      Align = alTop
+      BorderSpacing.Around = 8
+      Caption = 'Effacer'
+      OnClick = btnClearClick
+      TabOrder = 3
+    end
+  end
+  object Panel2: TPanel
+    Left = 4
+    Height = 292
+    Top = 4
+    Width = 282
+    Align = alClient
+    BorderSpacing.Around = 4
+    ClientHeight = 292
+    ClientWidth = 282
+    TabOrder = 1
+    object ImageViewer: TBZImageViewer
+      Left = 1
+      Height = 290
+      Top = 1
+      Width = 280
+      Align = alClient
+      UseDockManager = False
+      TabOrder = 0
+      Color = clBlack
+      Picture.data = {
+        020002000200
+      }
+      Stretch = True
+      Proportional = True
+      Center = True
+      StretchMode = ismResample
+      ResampleFilter = ifmLanczos3
+      ZoomFactor = 100
+      ZoomGrid = False
+      OffsetLeft = 0
+      OffsetTop = 0
+      DrawWithTransparency = True
+      BackGroundChecker = True
+    end
+  end
+  object OPD: TOpenPictureDialog
+    left = 336
+    top = 128
+  end
+end

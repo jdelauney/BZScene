@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZBitmap</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient un objet dont les performances d'acces et d'affichage ont étés optimisés pour un affichage en 32bits avec prise en charge de la transparence en mode RGBA ou BGRA suivant l'OS.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>08/06/2016 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Petite Histoire :</b> <br> L'acces aux bitmaps par GLscene est confu et il subsiste des bugs (conversion Delphi=&gt;Lazarus) <br> De plus la gestion des bitmaps avec FPC et la LCL est quelques peu &quot;capricieuse&quot; <br> Mixer les possibilités de GLScene en lui rajoutant une gestion des bitmaps optimisée. Tout était bénef ! <br> Il m'a donc également semblé évident de rajouter les fonctionnalité de la librairie &quot;GraphiEx&quot; de Mike Lischke (<a  href="http://www.soft-gems.net/">http://www.soft-gems.net/</a>) qui est le créateur initial de GLScene.
+
+<p>Au final cela donne les capacités suivante : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Travailler avec format de donnée brute 32Bits au format de couleur RGBA ou BGRA (Linux / Windows) afin d'optimiser les performances d'affichage</p></li>
+  <li><p>Affichage 32bit avec ou sans transparence en fonction du sytsteme et de l'interface.</p></li>
+  <li><p>Accéder aux données graphique indépendemment des routines de FPC et de la LCL</p></li>
+  <li><p>Acces aux pixels optimisé</p></li>
+  <li><p>Capaciter dessiner des lignes, rectangles, cercles, polygones, textes, arc, courbes,...</p></li>
+  <li><p>Appliquer de nombreux filtres sur les couleurs</p></li>
+  <li><p>Appliquer des effets spéciaux</p></li>
+  <li><p>Remplissage avec des dégradés, des textures, patterns</p></li>
+  <li><p>Plusieurs modes de redimensionnement (Stretch, StretSmooth, DownSample, Resample)</p></li>
+  <li><p>Convertion des couleurs dans plusieurs formats (rgba, bgra, hsl, hsv, cmyk, cie, yuv, lab, lch) et bit par pixel (de 1 à 128bits)</p></li>
+  <li><p>Prise en charge des differents formats de couleurs dans les fichiers</p></li>
+  <li><p>Prise en charge de différents formats d'image (independant des unités de FPC et Lazarus)</p></li>
+</ul>
+
+<p>
+
+<p>Liste des formats supportés + variantes : <br> En lecture et ecriture : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>BMP : TBZImageFileBMP</p></li>
+  <li><p>JPEG : TBZImageFileJPEG</p></li>
+  <li><p>TGA : TBZImageFileTGA</p></li>
+</ul>
+
+<p>
+
+<p>En lecture seule : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>PNG : TBZImageFilePNG</p></li>
+  <li><p>PIXMAP : TBZImageFilePPM</p></li>
+  <li><p>PCX : TBZImageFilePCX</p></li>
+  <li><p>XPM : TBZImageFileXPM</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : <br> La base de tout ce &quot;beanz&quot; entre autres : <br> Discussions intéressantes, n'est t-il pas ? <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://www.developpez.net/forums/d1610633/autres-langages/pascal/lazarus/info-font-graphisme-pointu/">https://www.developpez.net/forums/d1610633/autres-langages/pascal/lazarus/info-font-graphisme-pointu/</a></p></li>
+  <li><p><a  href="https://www.developpez.net/forums/d1677547/autres-langages/pascal/lazarus/copie-d-image-resultat-mauvais-selon-type-d-image/">https://www.developpez.net/forums/d1677547/autres-langages/pascal/lazarus/copie-d-image-resultat-mauvais-selon-type-d-image/</a></p></li>
+</ul>
+
+<p>
+
+<p>C'est bizarre des fois de voir comment le temps passe et de se rendre compte que certaines choses ; même en informatique ne change pas. <br> La methode ici pour gérer et manipuler une image le plus rapidement possible est la même qu'il y a plus de 20 ans sous DOS avec les Modes X/Y. La methode reste quasi identique :D <br> De quoi se refaire des demoscenes, des jeux 2D à l'ancienne facilement... ;) avec de très bonnes performances. <br> Couplé à OpenGL/Vulkan voir même DirectX, ça peux faire mal.
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://wiki.lazarus.freepascal.org/Fast_direct_pixel_access">http://wiki.lazarus.freepascal.org/Fast_direct_pixel_access</a></p></li>
+  <li><p>Plein de documents sur des sujets mathematique : <a  href="http://www.nrbook.com/a/bookcpdf.php">http://www.nrbook.com/a/bookcpdf.php</a></p></li>
+  <li><p>Parlons couleur : <a  href="http://www.brucelindbloom.com/index.html?ColorCheckerRGB.html">http://www.brucelindbloom.com/index.html?ColorCheckerRGB.html</a> et <a  href="http://www.easyrgb.com/en/math.php">http://www.easyrgb.com/en/math.php</a></p></li>
+</ul>
+
+<p>
+
+<p>Vous prendrez bien un peu de rééchantillonage pour la route ? </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://clouard.users.greyc.fr/Pantheon/experiments/rescaling/index-fr.html#convolution">https://clouard.users.greyc.fr/Pantheon/experiments/rescaling/index-fr.html#convolution</a></p></li>
+  <li><p><a  href="http://www.drdobbs.com/image-scaling-with-bresenham/184405045">http://www.drdobbs.com/image-scaling-with-bresenham/184405045</a></p></li>
+</ul>
+
+<p>
+
+<p></p>
+
+<p>( (Tout ce deforme ! : <a  href="http://edn.embarcadero.com/bg/article/40052">http://edn.embarcadero.com/bg/article/40052</a> 
+
+<p>Quelques liens qui me servent de références : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://www.efg2.com/Lab/">http://www.efg2.com/Lab/</a></p></li>
+  <li><p><a  href="http://delphi-kb.blogspot.ch">http://delphi-kb.blogspot.ch</a></p></li>
+  <li><p><a  href="http://www.davdata.nl">http://www.davdata.nl</a></p></li>
+  <li><p><a  href="http://patrick-bonnin.developpez.com/cours/vision/apprendre-bases-traitement-image/partie-2-visualisation-images-operateurs-simples/#LIII-D-1">http://patrick-bonnin.developpez.com/cours/vision/apprendre-bases-traitement-image/partie-2-visualisation-images-operateurs-simples/#LIII-D-1</a></p></li>
+  <li><p><a  href="http://en.wikipedia.org/wiki/Pixel_art_scaling_algorithms">http://en.wikipedia.org/wiki/Pixel_art_scaling_algorithms</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Cohen">https://en.wikipedia.org/wiki/Cohen</a>–Sutherland_algorithm</p></li>
+  <li><p><a  href="https://www.gamedev.net/articles/programming/graphics/graphics-programming-black-book-r1698">https://www.gamedev.net/articles/programming/graphics/graphics-programming-black-book-r1698</a></p></li>
+  <li><p><a  href="http://www.easyrgb.com/en/math.php">http://www.easyrgb.com/en/math.php</a></p></li>
+  <li><p><a  href="http://www.brucelindbloom.com/index.html?ColorCheckerRGB.html">http://www.brucelindbloom.com/index.html?ColorCheckerRGB.html</a></p></li>
+  <li><p><a  href="http://www.jcolibri.com/articles/graphique/correction_couleur/correction_couleur.html">http://www.jcolibri.com/articles/graphique/correction_couleur/correction_couleur.html</a></p></li>
+  <li><p><a  href="https://fr.wikipedia.org/wiki/Filtre_m">https://fr.wikipedia.org/wiki/Filtre_m</a>édian</p></li>
+  <li><p><a  href="http://benjlaiel.hebergratuit.net/filtrage_Cours6.ppt">http://benjlaiel.hebergratuit.net/filtrage_Cours6.ppt</a></p></li>
+  <li><p><a  href="http://www.helixsoft.nl/articles/circle/sincos.htm">http://www.helixsoft.nl/articles/circle/sincos.htm</a></p></li>
+  <li><p><a  href="http://www.dailyfreecode.com/Code/draw-circular-arc-trigonometric-method-669.aspx">http://www.dailyfreecode.com/Code/draw-circular-arc-trigonometric-method-669.aspx</a></p></li>
+  <li><p><a  href="http://answers.google.com/answers/threadview/id/769733.html">http://answers.google.com/answers/threadview/id/769733.html</a></p></li>
+  <li><p><a  href="http://www.cambridgeincolour.com/tutorials/image-resize-for-web.htm">http://www.cambridgeincolour.com/tutorials/image-resize-for-web.htm</a></p></li>
+  <li><p><a  href="http://www.cambridgeincolour.com/tutorials/digital-photo-enlargement.htm">http://www.cambridgeincolour.com/tutorials/digital-photo-enlargement.htm</a></p></li>
+  <li><p><a  href="https://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm">https://homepages.inf.ed.ac.uk/rbf/HIPR2/gsmooth.htm</a></p></li>
+  <li><p><a  href="https://www.eriksmistad.no/gaussian-blur-using-opencl-and-the-built-in-images-textures/">https://www.eriksmistad.no/gaussian-blur-using-opencl-and-the-built-in-images-textures/</a></p></li>
+  <li><p><a  href="http://blog.ivank.net/fastest-gaussian-blur.html">http://blog.ivank.net/fastest-gaussian-blur.html</a></p></li>
+  <li><p><a  href="http://xphilipp.developpez.com/articles/filtres/">http://xphilipp.developpez.com/articles/filtres/</a></p></li>
+  <li><p><a  href="https://www.developpez.net/forums/d328817/general-developpement/algorithme-mathematiques/contribuez/image-gradient-hessienne-convolution/">https://www.developpez.net/forums/d328817/general-developpement/algorithme-mathematiques/contribuez/image-gradient-hessienne-convolution/</a></p></li>
+  <li><p><a  href="http://lodev.org/cgtutor/filtering.html">http://lodev.org/cgtutor/filtering.html</a></p></li>
+  <li><p><a  href="http://www.roborealm.com/help/Convolution.php">http://www.roborealm.com/help/Convolution.php</a></p></li>
+  <li><p><a  href="http://www.sunshine2k.de/coding/java/TriangleRasterization/TriangleRasterization.html#sunbresenhamarticle">http://www.sunshine2k.de/coding/java/TriangleRasterization/TriangleRasterization.html#sunbresenhamarticle</a></p></li>
+  <li><p><a  href="https://www.mikekohn.net/stuff/image_processing.php">https://www.mikekohn.net/stuff/image_processing.php</a></p></li>
+  <li><p><a  href="https://www.youtube.com/watch?v=-X49VQgi86E">https://www.youtube.com/watch?v=-X49VQgi86E</a></p></li>
+  <li><p><a  href="http://crteknologies.fr/projets/tpe_compression_graphique/">http://crteknologies.fr/projets/tpe_compression_graphique/</a></p></li>
+  <li><p><a  href="http://www.optique-ingenieur.org/fr/cours/OPI_fr_M04_C05/co/Contenu_02.html">http://www.optique-ingenieur.org/fr/cours/OPI_fr_M04_C05/co/Contenu_02.html</a></p></li>
+  <li><p><a  href="http://www.nrbook.com/a/bookcpdf.php">http://www.nrbook.com/a/bookcpdf.php</a></p></li>
+  <li><p><a  href="http://www.hugi.scene.org/online/coding/hugi%20se%204%20-%20index%20sorted%20by%20author.htm">http://www.hugi.scene.org/online/coding/hugi%20se%204%20-%20index%20sorted%20by%20author.htm</a></p></li>
+  <li><p><a  href="http://www.jagregory.com/abrash-black-book/">http://www.jagregory.com/abrash-black-book/</a></p></li>
+  <li><p><a  href="http://www.tsi.enst.fr/pages/enseignement/ressources/mti/">http://www.tsi.enst.fr/pages/enseignement/ressources/mti/</a></p></li>
+  <li><p><a  href="https://perso.esiee.fr/~perretb/I5FM/TAI/histogramme/index.html">https://perso.esiee.fr/&tilde;perretb/I5FM/TAI/histogramme/index.html</a></p></li>
+  <li><p><a  href="http://www.imageprocessingplace.com/root_files_V3/tutorials.htm">http://www.imageprocessingplace.com/root_files_V3/tutorials.htm</a></p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Bugs</b> :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>/!\ pour l'application de certain filtre (blur notemment) il faudra rajouter<br> l'action PreMultiplyAlpha AVANT l'application du filtre afin de preserver au mieux le<br> canal ALPHA original</p></li>
+  <li><p></p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits</b> : Tous les liens au dessus, dessous, dedans, et au-delà...... <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p> FPC/Lazarus, GLScene, Vampire / FreeImage Lib, Graphic32, BGRABitmap...</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>GraphType</li><li>Graphics</li><li>LCLIntf</li><li>LCLType</li><li>LazFileUtils</li><li>ExtCtrls</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZArrayClasses.html">BZArrayClasses</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZFontClasses.html">BZFontClasses</a></li><li><a  href="BZCanvasClasses.html">BZCanvasClasses</a></li><li><a  href="BZInterpolationFilters.html">BZInterpolationFilters</a></li><li>BZLibFreeType</li><li>BZLibFreeTypehDyn</li><li><a  href="BZBitmapColorFilters.html">BZBitmapColorFilters</a></li><li><a  href="BZBitmapBlurFilters.html">BZBitmapBlurFilters</a></li><li><a  href="BZBitmapDeformationFilters.html">BZBitmapDeformationFilters</a></li><li><a  href="BZBitmapMorphologicalFilters.html">BZBitmapMorphologicalFilters</a></li><li><a  href="BZBitmapThresholdFilters.html">BZBitmapThresholdFilters</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZCustomBitmapFontDrawer.html"><code>TBZCustomBitmapFontDrawer</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapFontDrawer.html"><code>TBZBitmapFontDrawer</code></a></td>
+<td class="itemdesc">Classe de rendu de texte par defaut </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Rendu des contours</p></li>
+  <li><p>Remplissage, couleur unie, texture, dégradé</p></li>
+  <li><p>Rendu d'une Ombre</p></li>
+</ul>
+
+<p></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapCanvas.html"><code>TBZBitmapCanvas</code></a></td>
+<td class="itemdesc">Regroupe les fonctions pour dessiner dans un <a class="normal" href="BZBitmap.TBZBitmap.html">TBZBitmap</a>.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZHistogram.html"><code>TBZHistogram</code></a></td>
+<td class="itemdesc">Objet permettant le calcul et la manipulation de l'histogramme d'une image.<br> D'après les codes source de Earl F.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapTransformations.html"><code>TBZBitmapTransformations</code></a></td>
+<td class="itemdesc">Regroupe les fonctions pour effectuer les opérations suivantes : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Inversion Horizontale et verticale</p></li>
+  <li><p>Rotation</p></li>
+  <li><p>Redimensionner (plusieurs methodes disponible)</p></li>
+</ul>
+
+<p>
+
+<p>@TODO : cisaillement, rotation par cisaillement, Deformation affine</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmap.html"><code>TBZBitmap</code></a></td>
+<td class="itemdesc">Classe spécialisée et optimisée dans la gestion d'images.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapColorFilters.html"><code>TBZBitmapColorFilters</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilters</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapEffectFilters.html"><code>TBZBitmapEffectFilters</code></a></td>
+<td class="itemdesc"><code>TBZBitmapEffectFilters</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapBlurFilters.html"><code>TBZBitmapBlurFilters</code></a></td>
+<td class="itemdesc">Regroupe les filtres d'adoucissement (&quot;Blur&quot;) et de réduction du bruit d'une image</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapConvolutionFilters.html"><code>TBZBitmapConvolutionFilters</code></a></td>
+<td class="itemdesc">Regroupe les méthodes de convolution</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapThresholdFilters.html"><code>TBZBitmapThresholdFilters</code></a></td>
+<td class="itemdesc">Regroupe les filtres de seuillage</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapSegmentationFilters.html"><code>TBZBitmapSegmentationFilters</code></a></td>
+<td class="itemdesc">Regroupe les filtres de segmentation (Détection de contour)</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapRenderFilters.html"><code>TBZBitmapRenderFilters</code></a></td>
+<td class="itemdesc">Regroupe les filtres de rendu de texture</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapDeformationFilters.html"><code>TBZBitmapDeformationFilters</code></a></td>
+<td class="itemdesc">Regroupe les filtres de déformations</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZBitmapMorphologicalFilters.html"><code>TBZBitmapMorphologicalFilters</code></a></td>
+<td class="itemdesc">Classe spécialisée dans l'application des filtres morphologique</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmap.TBZPicture.html"><code>TBZPicture</code></a></td>
+<td class="itemdesc">Classe d'aide surtout utile pour l'integration d'un <a class="normal" href="BZBitmap.TBZPicture.html#Bitmap">bitmap</a> dans un composant (non) visuel.<br> Elle permet également de définir le format les options adequates pour la sauvegarde d'une image.</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZBitmap.html#ComputeGaussianKernel">ComputeGaussianKernel</a></b>(KernelSize : Integer; Weight : Single) : <a  href="BZArrayClasses.html#TBZDynSingleArray">TBZDynSingleArray</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZBitmap.html#ComputeLOGKernel">ComputeLOGKernel</a></b>(KernelSize : Integer; Weight : Single) : <a  href="BZArrayClasses.html#TBZDynSingleArray">TBZDynSingleArray</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#TBZFloodFillMode">TBZFloodFillMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#TBZConvolutionFilterMode">TBZConvolutionFilterMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#TBZBitmapEdgeDetctionBlurMode">TBZBitmapEdgeDetctionBlurMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#TBZMorphologicalEdgeDetectionMode">TBZMorphologicalEdgeDetectionMode</a></b> = (...);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#cAnimation_DelayRatio">cAnimation_DelayRatio</a></b> : integer = 12;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#cAnimation_DefaultDelayRatio">cAnimation_DefaultDelayRatio</a></b> : integer = 10;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#cAnimation_MinimumDelayRatio">cAnimation_MinimumDelayRatio</a></b> : integer = 3;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmap.html#cAnimation_MaximumDelayRatio">cAnimation_MaximumDelayRatio</a></b> : integer = 1000;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ComputeGaussianKernel"></span><code>function <b>ComputeGaussianKernel</b>(KernelSize : Integer; Weight : Single) : <a  href="BZArrayClasses.html#TBZDynSingleArray">TBZDynSingleArray</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul une matrice de convolution gaussienne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ComputeLOGKernel"></span><code>function <b>ComputeLOGKernel</b>(KernelSize : Integer; Weight : Single) : <a  href="BZArrayClasses.html#TBZDynSingleArray">TBZDynSingleArray</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul une matrice de convolution laplacienne de gausse</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZFloodFillMode"></span><code><b>TBZFloodFillMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enumération des algorithme de remplissage de zone disponibles pour le Canvas</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ffmBoundary4">ffmBoundary4</span></li>
+<li>
+<span id="ffmBoundary8">ffmBoundary8</span></li>
+<li>
+<span id="ffmScanLine">ffmScanLine</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZConvolutionFilterMode"></span><code><b>TBZConvolutionFilterMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+procedure SmartBlur; procedure VariableBlur procedure LensBlur;</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="cfmNormal">cfmNormal</span></li>
+<li>
+<span id="cfmDilate">cfmDilate</span></li>
+<li>
+<span id="cfmErode">cfmErode</span></li>
+<li>
+<span id="cfmContract">cfmContract</span></li>
+<li>
+<span id="cfmExpand">cfmExpand</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBitmapEdgeDetctionBlurMode"></span><code><b>TBZBitmapEdgeDetctionBlurMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type d'adoucissement à appliquer pour la detection de conteur avec Canny</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="edbmLowPass">edbmLowPass</span></li>
+<li>
+<span id="edbmSoftLowPass">edbmSoftLowPass</span></li>
+<li>
+<span id="edbmHardLowPass">edbmHardLowPass</span></li>
+<li>
+<span id="edbmMean3x3">edbmMean3x3</span></li>
+<li>
+<span id="edbmMean5x5">edbmMean5x5</span></li>
+<li>
+<span id="edbmGaussian">edbmGaussian</span></li>
+<li>
+<span id="edbmSoftGaussian">edbmSoftGaussian</span></li>
+<li>
+<span id="edbmHardGaussian">edbmHardGaussian</span></li>
+<li>
+<span id="edbmGaussian5x5">edbmGaussian5x5</span></li>
+<li>
+<span id="edbmGaussian7x7">edbmGaussian7x7</span></li>
+<li>
+<span id="edbmBartlett7x7">edbmBartlett7x7</span></li>
+<li>
+<span id="edbmRealGaussian">edbmRealGaussian</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZMorphologicalEdgeDetectionMode"></span><code><b>TBZMorphologicalEdgeDetectionMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type d'operateur morphologique à appliquer pour la detection de contour</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="medErode">medErode</span></li>
+<li>
+<span id="medDilate">medDilate</span></li>
+<li>
+<span id="medOpen">medOpen</span></li>
+<li>
+<span id="medClose">medClose</span></li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cAnimation_DelayRatio"></span><code><b>cAnimation_DelayRatio</b> : integer = 12;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplicateur pour le temps d'attente entre chaque image de l'animation en ms</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cAnimation_DefaultDelayRatio"></span><code><b>cAnimation_DefaultDelayRatio</b> : integer = 10;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Temps d'attente par defaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cAnimation_MinimumDelayRatio"></span><code><b>cAnimation_MinimumDelayRatio</b> : integer = 3;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Temps d'attente minimum</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cAnimation_MaximumDelayRatio"></span><code><b>cAnimation_MaximumDelayRatio</b> : integer = 1000;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Temps d'attente maximum. Cette valeur garantit que de longue, ou lente animation ne bloque pas le systeme. (1000 = 10000 mS = 10 Seconds)</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-06-08
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

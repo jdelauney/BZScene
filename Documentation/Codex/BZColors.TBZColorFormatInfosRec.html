@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZColors: Packed Enregistrement TBZColorFormatInfosRec</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZColorFormatInfosRec"></span><h1 class="cio">Packed Enregistrement TBZColorFormatInfosRec</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section">Méthodes</div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZColors.html">BZColors</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZColorFormatInfosRec = packed record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Conteneur décrivant les formats de couleur supportés</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#name">name</a></b>: string[12];</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#SupportedPixelFormat">SupportedPixelFormat</a></b>: <a  href="BZColors.html#TBZSupportedPixelSize">TBZSupportedPixelSize</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#DefaultPixelFormat">DefaultPixelFormat</a></b>: <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#RedPrec">RedPrec</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#GreenPrec">GreenPrec</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#BluePrec">BluePrec</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#AlphaPrec">AlphaPrec</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#RedMask">RedMask</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#GreenMask">GreenMask</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#BlueMask">BlueMask</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#AlphaMask">AlphaMask</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#RedShift">RedShift</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#GreenShift">GreenShift</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#BlueShit">BlueShit</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#AlphaShift">AlphaShift</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#BitsPerPixel">BitsPerPixel</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#PixelSize">PixelSize</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#SwapRB">SwapRB</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZColors.TBZColorFormatInfosRec.html#SwapAlpha">SwapAlpha</a></b>: Boolean;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="name"></span><code><b>name</b>: string[12];</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Représentation du format sous chaine de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SupportedPixelFormat"></span><code><b>SupportedPixelFormat</b>: <a  href="BZColors.html#TBZSupportedPixelSize">TBZSupportedPixelSize</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Bits par pixel supportés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DefaultPixelFormat"></span><code><b>DefaultPixelFormat</b>: <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Format du pixel par defaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RedPrec"></span><code><b>RedPrec</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Precision des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GreenPrec"></span><code><b>GreenPrec</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Precision des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BluePrec"></span><code><b>BluePrec</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Precision des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaPrec"></span><code><b>AlphaPrec</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Precision des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RedMask"></span><code><b>RedMask</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Position des composantes de couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GreenMask"></span><code><b>GreenMask</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Position des composantes de couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BlueMask"></span><code><b>BlueMask</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Position des composantes de couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaMask"></span><code><b>AlphaMask</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Position des composantes de couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RedShift"></span><code><b>RedShift</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GreenShift"></span><code><b>GreenShift</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BlueShit"></span><code><b>BlueShit</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaShift"></span><code><b>AlphaShift</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage des composantes de couleurs en bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BitsPerPixel"></span><code><b>BitsPerPixel</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Bits par Pixel : 1,2, 4,8,16,24,32,48,64,96,128</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PixelSize"></span><code><b>PixelSize</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Taille en octet d'UN Pixel : 1,2,3,4,6,8,12,16</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapRB"></span><code><b>SwapRB</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Si les valeurs Rouge et bleu sont inversées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapAlpha"></span><code><b>SwapAlpha</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Si la valeur Alpha est en premier (ex : ARGB )</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

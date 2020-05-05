@@ -1,0 +1,464 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZUtils</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZUtils</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section">Classes, interfaces, enregistrements et objets</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section">Types</div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+L'unité <code>BZUtils</code> contiens des routines utiles dans différents domaines tel que les nombres, les chaine de caractères, la manipulation de bits, le calcul de <a class="normal" href="BZUtils.html#CRC32">CRC32</a> etc... <br> Certaines routines ont étés optimisées gràce à l'utilisation de l'assembleur.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  <b>Historique</b> : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Creation : 24/02/2019</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b> <br> Par défaut, certaines routines utilisent l'assembleur. <br>   Pour désactiver l'utilisation de l'assembleur, commentez 'USE_ASM_OPTIMIZATIONS' dans bzscene_options.inc <br>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> : BZSceneStrConsts, <a class="normal" href="BZSystem.html">BZSystem</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>LCLIntf</li><li>LCLType</li><li>Graphics</li><li>windows</li><li>BaseUnix</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#FillLongword">FillLongword</a></b>(var X; Count: Integer; Value: Longword);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#FillWord">FillWord</a></b>(var X; Count: Cardinal; Value: LongWord);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#MoveLongword">MoveLongword</a></b>(const Source; var Dest; Count: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#MoveWord">MoveWord</a></b>(const Source; var Dest; Count: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#FormatByteSize">FormatByteSize</a></b>(ABytes: Int64): String;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#MiniMizeName">MiniMizeName</a></b>(FileName: String; Canvas: TCanvas; MaxWidth: Integer): String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#MulDiv">MulDiv</a></b>(Multiplicand, Multiplier, Divisor: Integer): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#Swap">Swap</a></b>(var A, B: Integer); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#Swap">Swap</a></b>(var X, Y: Word); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#Swap">Swap</a></b>(var X, Y: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#GetPercentRatio">GetPercentRatio</a></b>(Const Max:Integer;Const apercent:Integer):Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#GetPercent">GetPercent</a></b>(Const Max:Integer;Const Current:Integer):Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#memAlloc">memAlloc</a></b>(Out Buffer:Pointer; Size:Int64):Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#memReAlloc">memReAlloc</a></b>(var Buffer:Pointer; Size:Int64):Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#CircularShiftLeftArray">CircularShiftLeftArray</a></b>(var mat : array of single; TabSize,k : Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#CircularShiftRightArray">CircularShiftRightArray</a></b>(var mat : array of single; TabSize,k : Byte);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#ClearBit">ClearBit</a></b>(const AValue: DWORD; const Bit: Byte): DWORD;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SetBit">SetBit</a></b>(const AValue: DWORD; const Bit: Byte): DWORD;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#EnableBit">EnableBit</a></b>(const AValue: DWORD; const Bit: Byte; const Enable: Boolean): DWORD;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#GetBit">GetBit</a></b>(const AValue: DWORD; const Bit: Byte): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#GetBitsValue">GetBitsValue</a></b>(const AValue: DWORD; const BitI, BitF: Byte): DWORD;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#GetBits">GetBits</a></b>(const AValue: DWORD;const AIndex, numbits: Integer): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(b: Byte): Byte; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#CountBits">CountBits</a></b>(Value: byte): shortint;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#ShiftCount">ShiftCount</a></b>(Mask: DWORD): shortint;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(This : qword): qword; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(This : int64): int64; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(This : Longword): longword; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(This : integer): integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZUtils.html#SwapBits">SwapBits</a></b>(This : Word): Word; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZUtils.html#CRC32">CRC32</a></b> (p: pointer; ByteCount: LongWord; VAR CRCValue: LongWord);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FillLongword"></span><code>procedure <b>FillLongword</b>(var X; Count: Integer; Value: Longword);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Remplie un pointer avec des données alignées sur 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FillWord"></span><code>procedure <b>FillWord</b>(var X; Count: Cardinal; Value: LongWord);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Remplie un pointer avec des données alignées sur 16 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MoveLongword"></span><code>procedure <b>MoveLongword</b>(const Source; var Dest; Count: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Deplace un pointer avec des données alignées sur 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MoveWord"></span><code>procedure <b>MoveWord</b>(const Source; var Dest; Count: Integer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Deplace un pointer avec des données alignées sur 16 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="FormatByteSize"></span><code>function <b>FormatByteSize</b>(ABytes: Int64): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Formatte un nombre en ko,mo,go,to,eo</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MiniMizeName"></span><code>function <b>MiniMizeName</b>(FileName: String; Canvas: TCanvas; MaxWidth: Integer): String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Raccourcis le nom d'un fichier et son dossier</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MulDiv"></span><code>function <b>MulDiv</b>(Multiplicand, Multiplier, Divisor: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Multiplier et diviser des integer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Swap"></span><code>procedure <b>Swap</b>(var A, B: Integer); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les valeur de deux Integer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Swap"></span><code>procedure <b>Swap</b>(var X, Y: Word); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les valeur de deux Word</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Swap"></span><code>procedure <b>Swap</b>(var X, Y: Single); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les valeur de deux Single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetPercentRatio"></span><code>function <b>GetPercentRatio</b>(Const Max:Integer;Const apercent:Integer):Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+renvoi le ratio d'une valeur par rapport au pourcentage demandé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetPercent"></span><code>function <b>GetPercent</b>(Const Max:Integer;Const Current:Integer):Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+renvoi le pourcentage d'une valeur par rapport au maximum</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="memAlloc"></span><code>function <b>memAlloc</b>(Out Buffer:Pointer; Size:Int64):Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Alloue un bloc mémoire en vérifiant la quantité de ram disponible (utilise GetMem)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="memReAlloc"></span><code>function <b>memReAlloc</b>(var Buffer:Pointer; Size:Int64):Int64;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ré-alloue un bloc mémoire en vérifiant la quantité de ram disponible (utilise ReAllocMem)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CircularShiftLeftArray"></span><code>procedure <b>CircularShiftLeftArray</b>(var mat : array of single; TabSize,k : Byte);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage/rotation circulaire de 'K&quot; des valeurs d'un tableau vers la gauche</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CircularShiftRightArray"></span><code>procedure <b>CircularShiftRightArray</b>(var mat : array of single; TabSize,k : Byte);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Décalage/rotation circulaire de 'K&quot; des valeurs d'un tableau vers la droite</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ClearBit"></span><code>function <b>ClearBit</b>(const AValue: DWORD; const Bit: Byte): DWORD;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Efface le bit demandé d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SetBit"></span><code>function <b>SetBit</b>(const AValue: DWORD; const Bit: Byte): DWORD;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Définis le bit demandé d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="EnableBit"></span><code>function <b>EnableBit</b>(const AValue: DWORD; const Bit: Byte; const Enable: Boolean): DWORD;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Active ou désactive le bit demandé d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBit"></span><code>function <b>GetBit</b>(const AValue: DWORD; const Bit: Byte): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie l'état du bit demandé d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBitsValue"></span><code>function <b>GetBitsValue</b>(const AValue: DWORD; const BitI, BitF: Byte): DWORD;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie l'état de la plage de bits entre 'BitI' et 'BitF' d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBits"></span><code>function <b>GetBits</b>(const AValue: DWORD;const AIndex, numbits: Integer): Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie les états des bits 'NumBits' de 'AIndex' d'une valeur de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(b: Byte): Byte; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverser des bits d'une valeur de type Byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CountBits"></span><code>function <b>CountBits</b>(Value: byte): shortint;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie le nombre de bits activés dans une valeur de typ byte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ShiftCount"></span><code>function <b>ShiftCount</b>(Mask: DWORD): shortint;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie le nombre de décalages d'un masque de 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(This : qword): qword; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les Bits d'une valeur de type QWord</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(This : int64): int64; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les Bits d'une valeur de type Int64</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(This : Longword): longword; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les Bits d'une valeur de type LongWord</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(This : integer): integer; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les Bits d'une valeur de type Integer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SwapBits"></span><code>function <b>SwapBits</b>(This : Word): Word; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Inverse les Bits d'une valeur de type Word</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CRC32"></span><code>procedure <b>CRC32</b> (p: pointer; ByteCount: LongWord; VAR CRCValue: LongWord);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul le <code>CRC32</code> d'un tampon de données</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+24/02/2019
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap: Classe TBZBitmapColorFilters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBitmapColorFilters"></span><h1 class="cio">Classe TBZBitmapColorFilters</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmap.html">BZBitmap</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBitmapColorFilters = class(<a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZBitmapColorFilters</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a></li>
+<li class="thisitem">TBZBitmapColorFilters</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#SwapChannel">SwapChannel</a></b>(Mode: <a  href="BZBitmapColorFilters.html#TBZColorFilterSwapChannelMode">TBZColorFilterSwapChannelMode</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Negate">Negate</a></b>(Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#HyperSat">HyperSat</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Mix">Mix</a></b>(aHoverColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; pct: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#MixInv">MixInv</a></b>(aHoverColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; pct: Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Average">Average</a></b>(AColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Modulate">Modulate</a></b>(AColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Colorize">Colorize</a></b>(ByAColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#GrayScale">GrayScale</a></b>(Const GrayMode: <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a> = <a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix: <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a>=<a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const OptVal: Single = 0; Const GammaFactor : Single = 1.7);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustBrightness">AdjustBrightness</a></b>(factor: Single; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustContrast">AdjustContrast</a></b>(factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AutoAdjustContrast">AutoAdjustContrast</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustSaturation">AdjustSaturation</a></b>(Factor: Single; Const LimitLuminosity: Boolean = False; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#GammaCorrection">GammaCorrection</a></b>(Const Factor: Single = 2.2; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Posterize">Posterize</a></b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Solarize">Solarize</a></b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#SplitLight">SplitLight</a></b>(Amount : Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepRed">KeepRed</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepGreen">KeepGreen</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepBlue">KeepBlue</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepRedInRange">KeepRedInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepGreenInRange">KeepGreenInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#KeepBlueInRange">KeepBlueInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#FilterOnlyRedInRange">FilterOnlyRedInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#FilterOnlyGreenInRange">FilterOnlyGreenInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#FilterOnlyBlueInRange">FilterOnlyBlueInRange</a></b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ExcludeColor">ExcludeColor</a></b>(AColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ExtractColor">ExtractColor</a></b>(AColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ExcludeColorInRange">ExcludeColorInRange</a></b>(AMinColor,AMaxColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ExtractColorInRange">ExtractColorInRange</a></b>(AMinColor,AMaxColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#SetAlpha">SetAlpha</a></b>(Mode: <a  href="BZGraphic.html#TBZBitmapAlphaSetMode">TBZBitmapAlphaSetMode</a>; const aTransparentColor : <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Minimum">Minimum</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Maximum">Maximum</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#GrayOut">GrayOut</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustExposure">AdjustExposure</a></b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustGain">AdjustGain</a></b>(FactorGain, FactorBias : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustRGB">AdjustRGB</a></b>(FactorRed, FactorGreen, FactorBlue : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#AdjustHSV">AdjustHSV</a></b>(FactorHue, FactorSaturation, FactorValue : Single; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Boost">Boost</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#RemoveRedEye">RemoveRedEye</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#Sepia">Sepia</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ColorBalance">ColorBalance</a></b>(FactorCyanRed, FactorMagentaGreen, FactorYellowBlue : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#ApplyColorMatrix">ApplyColorMatrix</a></b>(aColorMatrix : <a  href="BZColors.TBZColorMatrix.html">TBZColorMatrix</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmapColorFilters.html#HueRotate">HueRotate</a></b>(ShiftDeg : Integer);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SwapChannel"></span><code>Procedure <b>SwapChannel</b>(Mode: <a  href="BZBitmapColorFilters.html#TBZColorFilterSwapChannelMode">TBZColorFilterSwapChannelMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>SwapChannel</code> : Intervertit les canaux de couleurs entre eux.<br> Avec &quot;Mode&quot; : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>0 : Red &lt;-&gt; Blue</p></li>
+  <li><p>1 : Red &lt;-&gt; Green</p></li>
+  <li><p>2 : Green &lt;-&gt; Blue</p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Negate"></span><code>Procedure <b>Negate</b>(Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inverser les composantes RGB</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HyperSat"></span><code>Procedure <b>HyperSat</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajuste la saturation des couleurs à leur &quot;<a class="normal" href="BZBitmap.TBZBitmapColorFilters.html#Maximum">maximum</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Mix"></span><code>Procedure <b>Mix</b>(aHoverColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; pct: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mixer l'image avec la couleur &quot;HoverColor&quot; de &quot;pct&quot; pourcent</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MixInv"></span><code>Procedure <b>MixInv</b>(aHoverColor: <a  href="BZColors.html#TBZColor">TBZColor</a>; pct: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mixer l'image avec l'inverse de couleur &quot;HoverColor&quot; de &quot;pct&quot; pourcent</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Average"></span><code>Procedure <b>Average</b>(AColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mixer l'image en prenant la couleur moyenne avec &quot;ACOlor&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Modulate"></span><code>Procedure <b>Modulate</b>(AColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modulation des couleur de l'image avec &quot;AColor&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Colorize"></span><code>Procedure <b>Colorize</b>(ByAColor: <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Teinte l'image avec la couleur &quot;ByAColor&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GrayScale"></span><code>Procedure <b>GrayScale</b>(Const GrayMode: <a  href="BZColors.html#TBZGrayConvertMode">TBZGrayConvertMode</a> = <a  href="BZColors.html#gcmLuminosity">gcmLuminosity</a>;Const GrayMatrix: <a  href="BZColors.html#TBZGrayMatrixType">TBZGrayMatrixType</a>=<a  href="BZColors.html#gmtJPEG">gmtJPEG</a>; Const OptVal: Single = 0; Const GammaFactor : Single = 1.7);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Convertit l'image en niveau de gris, suivant l'algorithme appliqué :<br> <b>Note</b> : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Le paramètre GrayMatrix : Matrice de conversion, uniquement utilisé avec GrayMode = <a class="normal" href="BZColors.html#gcmLuminosity">gcmLuminosity</a></p></li>
+  <li><p>Le paramètre OptVal seulement utilisé :</p></li>
+  <li><p>si GrayMode = gmColorMask alors sa valeur sera comprise entre 0 et 3, ou chaque chiffre représente respectivement le 0 = Canal Rouge, 1 = Vert, 2 = Bleu et 3 = Alpha</p></li>
+  <li><p>si GrayMode = <a class="normal" href="BZColors.html#gcmCustomShades">gcmCustomShades</a> (réduction de couleurs), alors valeur comprise entre 1 et 255</p></li>
+  <li><p>si GrayMode = <a class="normal" href="BZColors.html#gcmPowerLaw">gcmPowerLaw</a> et <a class="normal" href="BZColors.html#gcmLogarithmic">gcmLogarithmic</a></p></li>
+  <li><p>Le paramètre GammaFactor est utilisé seulement pour GrayMode = <a class="normal" href="BZColors.html#gcmLogarithmic">gcmLogarithmic</a></p></li>
+</ul>
+
+<p>
+
+<p>Dans le cas ou GrayMode = <a class="normal" href="BZColors.html#gcmLogarithmic">gcmLogarithmic</a> : <br> La paramètre OptVal serre de constante qui est généralement utilisée pour mettre à l'échelle la plage de la fonction &quot;log&quot; afin qu'elle corresponde au domaine d'entrée. &quot;Constante = OptVal / log (1 + ValeurCouleur)&quot; . <br> Pour une image avec des composantes de couleur en byte OptVal sera compris entre [0..255] <br> Dans le cas de couleur en virgule flottante OptVal sera compris entre [0..1] <br> Le paramètre OptVal peut également être utilisé pour augmenter davantage le contraste : <br> - plus la valeur est élevé, plus l'image apparaît lumineuse.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustBrightness"></span><code>Procedure <b>AdjustBrightness</b>(factor: Single; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifiie la luminosité de l'image suivant le facteur &quot;factor&quot; en nombre réel (0..1.0 = 0%..100%)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustContrast"></span><code>Procedure <b>AdjustContrast</b>(factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifiie la luminosité de l'image suivant le facteur &quot;factor&quot; en nombre réel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AutoAdjustContrast"></span><code>procedure <b>AutoAdjustContrast</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajustement automatique du contraste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustSaturation"></span><code>Procedure <b>AdjustSaturation</b>(Factor: Single; Const LimitLuminosity: Boolean = False; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifiie la saturation des couleurs de l'image suivant le facteur &quot;factor&quot; en nombre réel.<br> Si LimitLuminosity = True alors le résultat retourné sera en fonction du niveau de gris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GammaCorrection"></span><code>Procedure <b>GammaCorrection</b>(Const Factor: Single = 2.2; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Correction GAMMA de l'image suivant le facteur &quot;factor&quot; en nombre réel par defaut 2.2</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Posterize"></span><code>Procedure <b>Posterize</b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Méthode de postérisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Solarize"></span><code>Procedure <b>Solarize</b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Méthode de solarisation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SplitLight"></span><code>Procedure <b>SplitLight</b>(Amount : Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Découpage de la lumière. Amélioration du contraste et de la luminosité</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepRed"></span><code>procedure <b>KeepRed</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepGreen"></span><code>procedure <b>KeepGreen</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepBlue"></span><code>procedure <b>KeepBlue</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepRedInRange"></span><code>procedure <b>KeepRedInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepGreenInRange"></span><code>procedure <b>KeepGreenInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="KeepBlueInRange"></span><code>procedure <b>KeepBlueInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FilterOnlyRedInRange"></span><code>procedure <b>FilterOnlyRedInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FilterOnlyGreenInRange"></span><code>procedure <b>FilterOnlyGreenInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FilterOnlyBlueInRange"></span><code>procedure <b>FilterOnlyBlueInRange</b>(mini,maxi:Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ExcludeColor"></span><code>procedure <b>ExcludeColor</b>(AColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Exclusion de la couleur définie</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ExtractColor"></span><code>procedure <b>ExtractColor</b>(AColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Extraction de la couleur définie</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ExcludeColorInRange"></span><code>procedure <b>ExcludeColorInRange</b>(AMinColor,AMaxColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Exclusion des couleurs dans l'interval définis</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ExtractColorInRange"></span><code>procedure <b>ExtractColorInRange</b>(AMinColor,AMaxColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Extraction des couleurs dans l'interval définis</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetAlpha"></span><code>Procedure <b>SetAlpha</b>(Mode: <a  href="BZGraphic.html#TBZBitmapAlphaSetMode">TBZBitmapAlphaSetMode</a>; const aTransparentColor : <a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>SetAlpha</code> : Modifie le canal Alpha du bitmap en fonction de &quot;mode&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Minimum"></span><code>procedure <b>Minimum</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Conserve les valeurs <code>minimum</code> du bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Maximum"></span><code>procedure <b>Maximum</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Conserve les valeurs <code>maximum</code> du bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GrayOut"></span><code>procedure <b>GrayOut</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+filtre qui 'grise' une image en faisant la moyenne de chaque pixel avec du blanc</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustExposure"></span><code>Procedure <b>AdjustExposure</b>(Factor: Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajustement de l'exposition</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustGain"></span><code>procedure <b>AdjustGain</b>(FactorGain, FactorBias : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Un filtre qui modifie le gain et la polarisation d'une image - similaire au filtre Contrast</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustRGB"></span><code>procedure <b>AdjustRGB</b>(FactorRed, FactorGreen, FactorBlue : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajustement des valeurs RGB</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustHSV"></span><code>procedure <b>AdjustHSV</b>(FactorHue, FactorSaturation, FactorValue : Single; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajustement des valeurs HSV</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Boost"></span><code>procedure <b>Boost</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+procedure AdjustHSL(FactorHue, FactorSat, FactorLevel : Single); procedure <a class="normal" href="BZBitmap.TBZBitmapColorFilters.html#AdjustHSV">AdjustHSV</a>(FactorHue, FactorSat, FactorValue : Single);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RemoveRedEye"></span><code>procedure <b>RemoveRedEye</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Supression des yeux rouge</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Sepia"></span><code>procedure <b>Sepia</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Filtre sépia</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ColorBalance"></span><code>procedure <b>ColorBalance</b>(FactorCyanRed, FactorMagentaGreen, FactorYellowBlue : Single; Const PreserveLuminosity : Boolean = False; Const ApplyOnShadowTone : Boolean = True; Const ApplyOnMidTone : Boolean = True; Const ApplyOnHighlightTone : Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajustement de la balance des couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ApplyColorMatrix"></span><code>procedure <b>ApplyColorMatrix</b>(aColorMatrix : <a  href="BZColors.TBZColorMatrix.html">TBZColorMatrix</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applique une matrice de couleur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HueRotate"></span><code>procedure <b>HueRotate</b>(ShiftDeg : Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rotation de la teinte</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

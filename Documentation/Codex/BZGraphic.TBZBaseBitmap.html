@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGraphic: Classe TBZBaseBitmap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBaseBitmap"></span><h1 class="cio">Classe TBZBaseBitmap</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGraphic.html">BZGraphic</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBaseBitmap = class(<a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZBaseBitmap</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></li>
+<li class="thisitem">TBZBaseBitmap</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZGraphic.TBZBaseBitmap.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#Assign">Assign</a></b>(Source : TPersistent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZBaseBitmap.html#CreateClone">CreateClone</a></b> : <a  href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetMaskFromBitmap">SetMaskFromBitmap</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aTransparentColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetMaskFromBitmapAlpha">SetMaskFromBitmapAlpha</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetMaskFromBitmapIntensity">SetMaskFromBitmapIntensity</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aThresHold : Byte);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetSelectionMaskFromBitmap">SetSelectionMaskFromBitmap</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aTransparentColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetSelectionMaskFromBitmapAlpha">SetSelectionMaskFromBitmapAlpha</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZBaseBitmap.html#SetSelectionMaskFromBitmapIntensity">SetSelectionMaskFromBitmapIntensity</a></b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aThresHold : Byte);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#Mask">Mask</a></b> : <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> read GetMask write SetMask;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#SelectionMask">SelectionMask</a></b> : <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> read GetSelectionMask write SetSelectionMask;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#UseMask">UseMask</a></b> : Boolean read FUseMask Write SetUseMask;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#ApplyMask">ApplyMask</a></b> : Boolean Read FMaskApply Write FMaskApply;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#ApplyMaskAlpha">ApplyMaskAlpha</a></b> : Boolean Read FMaskApplyAlpha Write FMaskApplyAlpha;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZBaseBitmap.html#UseSelectionMask">UseSelectionMask</a></b> : Boolean read FUseSelectionMask Write SetUseSelectionMask;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source : TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Overload;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateClone"></span><code>function <b>CreateClone</b> : <a  href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation d'un clone du bitmap (nouvelle instance)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMaskFromBitmap"></span><code>procedure <b>SetMaskFromBitmap</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aTransparentColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque depuis un bitmap en fonction de la couleur transparente choisie</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMaskFromBitmapAlpha"></span><code>procedure <b>SetMaskFromBitmapAlpha</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque depuis un bitmap en fonction de la valeur alpha</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMaskFromBitmapIntensity"></span><code>procedure <b>SetMaskFromBitmapIntensity</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aThresHold : Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque depuis un bitmap en fonction de l'intensité lumineuse choisie</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetSelectionMaskFromBitmap"></span><code>procedure <b>SetSelectionMaskFromBitmap</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aTransparentColor:<a  href="BZColors.html#TBZColor">TBZColor</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque de sélection depuis un bitmap en fonction de la couleur transparente choisie</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetSelectionMaskFromBitmapAlpha"></span><code>procedure <b>SetSelectionMaskFromBitmapAlpha</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque de sélection depuis un bitmap en fonction de la valeur alpha</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetSelectionMaskFromBitmapIntensity"></span><code>procedure <b>SetSelectionMaskFromBitmapIntensity</b>(Const aBmp:<a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>; Const aThresHold : Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définis le masque de sélection depuis un bitmap en fonction de l'intensité lumineuse choisie</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Mask"></span><code>property <b>Mask</b> : <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> read GetMask write SetMask;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SelectionMask"></span><code>property <b>SelectionMask</b> : <a  href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> read GetSelectionMask write SetSelectionMask;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UseMask"></span><code>property <b>UseMask</b> : Boolean read FUseMask Write SetUseMask;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si TRUE le masque sera utilisé ????? à supprimer ????</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ApplyMask"></span><code>property <b>ApplyMask</b> : Boolean Read FMaskApply Write FMaskApply;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si TRUE le masque sera appliqué</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ApplyMaskAlpha"></span><code>property <b>ApplyMaskAlpha</b> : Boolean Read FMaskApplyAlpha Write FMaskApplyAlpha;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si TRUE on applique la transparence, sinon toutes valeurs &gt; 0 sont affichées.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UseSelectionMask"></span><code>property <b>UseSelectionMask</b> : Boolean read FUseSelectionMask Write SetUseSelectionMask;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si TRUE le masque de selection sera utilisé pour l'application de certains filtres</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

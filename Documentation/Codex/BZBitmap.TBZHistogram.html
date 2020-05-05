@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap: Classe TBZHistogram</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZHistogram"></span><h1 class="cio">Classe TBZHistogram</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmap.html">BZBitmap</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZHistogram = class(<a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Objet permettant le calcul et la manipulation de l'histogramme d'une image.<br> D'après les codes source de Earl F. Glynn entre autres.
+
+<p>Plus d'informations : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://www.tsi.enst.fr/pages/enseignement/ressources/mti/egal-histo/rapport.htm">http://www.tsi.enst.fr/pages/enseignement/ressources/mti/egal-histo/rapport.htm</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Adaptive_histogram_equalization">https://en.wikipedia.org/wiki/Adaptive_histogram_equalization</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Normalization_">https://en.wikipedia.org/wiki/Normalization_</a>(image_processing)</p></li>
+  <li><p><a  href="https://stackoverflow.com/questions/56905592/automatic-contrast-and-brightness-adjustment-of-a-color-photo-of-a-sheet-of-pape">https://stackoverflow.com/questions/56905592/automatic-contrast-and-brightness-adjustment-of-a-color-photo-of-a-sheet-of-pape</a></p></li>
+  <li><p><a  href="http://www.eyemaginary.com/Rendering/AutomaticHistogramWarping.pdf">http://www.eyemaginary.com/Rendering/AutomaticHistogramWarping.pdf</a></p></li>
+  <li><p><a  href="https://openclassrooms.com/fr/courses/1490316-introduction-a-la-vision-par-ordinateur/1491061-etirement-et-egalisation-dhistogramme">https://openclassrooms.com/fr/courses/1490316-introduction-a-la-vision-par-ordinateur/1491061-etirement-et-egalisation-dhistogramme</a></p></li>
+</ul>
+
+<p></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a></li>
+<li class="thisitem">TBZHistogram</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#ComputeHistogram">ComputeHistogram</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#GetAutoLevels">GetAutoLevels</a></b>(Const Channel : <a  href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a>; var OptimalFactorBrightness, OptimalFactorContrast: single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#AutoAdjustBrightnessContrast">AutoAdjustBrightnessContrast</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#AdjustLevels">AdjustLevels</a></b>(LowInputLevel, HighInputLevel, LowOutputLevel, HighOutputLevel : Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#AutoAdjustLevels">AutoAdjustLevels</a></b>(Const Tolerance : Integer = 0);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#Equalize">Equalize</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZHistogram.html#DrawTo">DrawTo</a></b>(Dst : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; HistoChannel : <a  href="BZGraphic.html#TBZHistorgramDrawMode">TBZHistorgramDrawMode</a>; Const Logarithmic, ShowAxis, ShowGrid, ShowGradient : Boolean );</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZHistogram.html#Channel">Channel</a></b>[Index:<a  href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a>]: <a  href="BZGraphic.html#TBZHistogramArray">TBZHistogramArray</a> read GetChannel;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZHistogram.html#Statistics">Statistics</a></b> : <a  href="BZGraphic.TBZHistogramStatistics.html">TBZHistogramStatistics</a> read getStatistics;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeHistogram"></span><code>procedure <b>ComputeHistogram</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+function GetChannelIndex : Byte; procedure ComputeHistogramByColorSpace(ColorSpace : <a class="normal" href="BZColors.html#TBZColorSpace">TBZColorSpace</a>);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetAutoLevels"></span><code>procedure <b>GetAutoLevels</b>(Const Channel : <a  href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a>; var OptimalFactorBrightness, OptimalFactorContrast: single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AutoAdjustBrightnessContrast"></span><code>procedure <b>AutoAdjustBrightnessContrast</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AdjustLevels"></span><code>procedure <b>AdjustLevels</b>(LowInputLevel, HighInputLevel, LowOutputLevel, HighOutputLevel : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AutoAdjustLevels"></span><code>procedure <b>AutoAdjustLevels</b>(Const Tolerance : Integer = 0);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Equalize"></span><code>procedure <b>Equalize</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+procedure Adjust</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DrawTo"></span><code>procedure <b>DrawTo</b>(Dst : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; HistoChannel : <a  href="BZGraphic.html#TBZHistorgramDrawMode">TBZHistorgramDrawMode</a>; Const Logarithmic, ShowAxis, ShowGrid, ShowGradient : Boolean );</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+procedure Homogenize; procedure Stretch procedure <code>DrawTo</code>(Dst : <a class="normal" href="BZBitmap.TBZBitmap.html">TBZBitmap</a>);</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Channel"></span><code>property <b>Channel</b>[Index:<a  href="BZGraphic.html#TBZHistogramChannel">TBZHistogramChannel</a>]: <a  href="BZGraphic.html#TBZHistogramArray">TBZHistogramArray</a> read GetChannel;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Statistics"></span><code>property <b>Statistics</b> : <a  href="BZGraphic.TBZHistogramStatistics.html">TBZHistogramStatistics</a> read getStatistics;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZHmgPlane</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZHmgPlane"></span><h1 class="cio">Enregistrement TBZHmgPlane</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZHmgPlane = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Définition d'un plan homogène.</p>
+<p>
+
+
+<p>Une équation plane est défini par son équation A.x + B.y + C.z + D, un plan peut être mappé sur les     Coordonnées d'espace homogènes, et c'est ce que nous faisons ici. <br>     Le plan est normalisé et contient donc une unité normale dans ABC (XYZ) et la <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Distance">distance</a> de l'origine du plan.
+
+<p>    <b>AVERTISSEMENT</b> : la méthode <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Create">Create</a>(Point, Normal) autorisera les vecteurs non-unitaires mais fondamentalement <b>NE LE FAITES PAS</b>. <br>     Un vecteur non-unitaire calculera la mauvaise <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Distance">distance</a> au plan.
+
+<p>    C’est un moyen rapide de créer un plan quand on a un point et une Normale sans encore un autre appel à la méthode <a class="normal" href="BZMath.html#Sqrt">sqrt</a>.
+
+<p>    Plus d'informations : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Plane_">https://en.wikipedia.org/wiki/Plane_</a>(geometry) </p></li>
+  <li><p><a  href="http://www.songho.ca/math/plane/plane.html">http://www.songho.ca/math/plane/plane.html</a></p></li>
+  <li><p><a  href="https://brilliant.org/wiki/3d-coordinate-geometry-equation-of-a-plane/">https://brilliant.org/wiki/3d-coordinate-geometry-equation-of-a-plane/</a> </p></li>
+  <li><p><a  href="http://tutorial.math.lamar.edu/Classes/CalcII/EqnsOfPlanes.aspx">http://tutorial.math.lamar.edu/Classes/CalcII/EqnsOfPlanes.aspx</a> </p></li>
+</ul>
+
+<p></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#V">V</a></b>: <a  href="BZVectorMath.html#TBZVector4fType">TBZVector4fType</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#A">A</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#B">B</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#C">C</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#D">D</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#AsNormal3">AsNormal3</a></b>: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#AsVector">AsVector</a></b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#X">X</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#Y">Y</a></b>: Single</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#Z">Z</a></b>: Single</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZHmgPlane.html#W">W</a></b>: Single</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZHmgPlane.html#Create">Create</a></b>(constref point, normal : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZHmgPlane.html#Create">Create</a></b>(constref p1, p2, p3 : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZHmgPlane.html#Normalize">Normalize</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#Normalized">Normalized</a></b> : <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#AbsDistance">AbsDistance</a></b>(constref point : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#Distance">Distance</a></b>(constref point : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#Distance">Distance</a></b>(constref Center : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; constref Radius:Single) : Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#Perpendicular">Perpendicular</a></b>(constref P : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#Reflect">Reflect</a></b>(constref V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZHmgPlane.html#IsInHalfSpace">IsInHalfSpace</a></b>(constref point: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Boolean;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZVectorMath.html#TBZVector4fType">TBZVector4fType</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Doit être compatible avec le type <a class="normal" href="BZVectorMath.TBZVector4f.html">TBZVector4f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="A"></span><code><b>A</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Paramètres du plan</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="B"></span><code><b>B</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Paramètres du plan</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="C"></span><code><b>C</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Paramètres du plan</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="D"></span><code><b>D</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Paramètres du plan</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsNormal3"></span><code><b>AsNormal3</b>: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Accès super rapide à la Normale en tant que vecteur affine.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AsVector"></span><code><b>AsVector</b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Accès comme un <a class="normal" href="BZVectorMath.TBZVector4f.html">TBZVector4f</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="X"></span><code><b>X</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces légal pour que le code existant fonctionne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Y"></span><code><b>Y</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces légal pour que le code existant fonctionne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Z"></span><code><b>Z</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces légal pour que le code existant fonctionne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="W"></span><code><b>W</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces légal pour que le code existant fonctionne</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(constref point, normal : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'un plan homogène. <br> Autorise les vecteurs non unitaires mais essentiellement <b>NE PAS LE FAIRE</b>. <br>       Un vecteur non unitaire calculera la mauvaise <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Distance">distance</a> au plan.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(constref p1, p2, p3 : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création et calcule des paramètres du plan définis par trois points.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Normalize"></span><code>procedure <b>Normalize</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Normalise le plan</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Normalized"></span><code>function <b>Normalized</b> : <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne le plan normalisé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AbsDistance"></span><code>function <b>AbsDistance</b>(constref point : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Distance">distance</a> absolue entre le plan et un point</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Distance"></span><code>function <b>Distance</b>(constref point : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <a class="normal" href="BZVectorMath.TBZHmgPlane.html#Distance">distance</a> entre le plan et un point</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Distance"></span><code>function <b>Distance</b>(constref Center : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; constref Radius:Single) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la <code>distance</code> entre le plan et une sphere de centre &quot;Center&quot; et de rayon &quot;Radius&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Perpendicular"></span><code>function <b>Perpendicular</b>(constref P : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Calcul et retourne le vecteur perpendiculaire au plan. <br> Le plan courrant est supposé être de longueur unitaire, pour pouvoir soustraire tout composant parallèle à lui même</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Reflect"></span><code>function <b>Reflect</b>(constref V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Reflète le vecteur <a class="normal" href="BZVectorMath.TBZHmgPlane.html#V">V</a> par rapport le plan (on suppose que le plan est normalisé)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IsInHalfSpace"></span><code>function <b>IsInHalfSpace</b>(constref point: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne <code>True</code> si un point est dans la moitié de l'espace</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

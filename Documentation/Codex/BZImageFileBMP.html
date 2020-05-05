@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFileBMP</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZImageFileBMP</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Prise en charge des Images au format BMP (Windows et Osx) en lecture et écriture.</p>
+<p>
+
+
+<p><b>Spécifications</b> : <br> </p>
+
+<p>(  (Nombre de couleurs : 1,2,4,8,15,16,24,32,64 bits  
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>17/04/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : <br> Informations sur le format BMP : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://fr.wikipedia.org/wiki/Windows_bitmap">https://fr.wikipedia.org/wiki/Windows_bitmap</a></p></li>
+  <li><p><a  href="http://fileformats.archiveteam.org/wiki/BMP">http://fileformats.archiveteam.org/wiki/BMP</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/BMP_file_format">https://en.wikipedia.org/wiki/BMP_file_format</a> (plus complet que la version française)</p></li>
+  <li><p><a  href="https://delphi.developpez.com/cours/graphiques/menugra/bitmap2.php">https://delphi.developpez.com/cours/graphiques/menugra/bitmap2.php</a></p></li>
+  <li><p><a  href="http://www.alrj.org/docs/formats/bmp/BMP.htm">http://www.alrj.org/docs/formats/bmp/BMP.htm</a></p></li>
+  <li><p><a  href="http://netghost.narod.ru/gff/graphics/summary/os2bmp.htm">http://netghost.narod.ru/gff/graphics/summary/os2bmp.htm</a></p></li>
+  <li><p><a  href="http://www.drdobbs.com/the-bmp-file-format-part-2/184409533?pgno=5">http://www.drdobbs.com/the-bmp-file-format-part-2/184409533?pgno=5</a></p></li>
+  <li><p><a  href="http://www.fileformat.info/format/bmp/egff.htm">http://www.fileformat.info/format/bmp/egff.htm</a></p></li>
+  <li><p><a  href="http://www.fileformat.info/format/os2bmp/egff.htm">http://www.fileformat.info/format/os2bmp/egff.htm</a></p></li>
+</ul>
+
+<p>
+
+<p>Encodage/Decodage : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd183376%28v=vs.85%29.aspx">https://msdn.microsoft.com/en-us/library/windows/desktop/dd183376%28v=vs.85%29.aspx</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/File:BitfieldsSLN.png">https://en.wikipedia.org/wiki/File:BitfieldsSLN.png</a></p></li>
+  <li><p><a  href="http://netghost.narod.ru/gff/graphics/book/ch09_01.htm">http://netghost.narod.ru/gff/graphics/book/ch09_01.htm</a></p></li>
+  <li><p><a  href="https://fr.wikipedia.org/wiki/Codage_de_Huffman">https://fr.wikipedia.org/wiki/Codage_de_Huffman</a></p></li>
+  <li><p><a  href="http://tcharles.developpez.com/Huffman/">http://tcharles.developpez.com/Huffman/</a></p></li>
+</ul>
+
+<p>
+
+<p>Autres informations utiles : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd183393">https://msdn.microsoft.com/en-us/library/windows/desktop/dd183393</a>(v=vs.85).aspx</p></li>
+  <li><p><a  href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd183353">https://msdn.microsoft.com/en-us/library/windows/desktop/dd183353</a>(v=vs.85).aspx</p></li>
+  <li><p><a  href="https://msdn.microsoft.com/en-us/library/windows/desktop/dd183376">https://msdn.microsoft.com/en-us/library/windows/desktop/dd183376</a>(v=vs.85).aspx</p></li>
+</ul>
+
+<p>
+
+<p>Fichiers test : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://entropymine.com/jason/bmpsuite/">http://entropymine.com/jason/bmpsuite/</a></p></li>
+  <li><p><a  href="https://samples.libav.org/image-samples/">https://samples.libav.org/image-samples/</a></p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>BUGS :</b><br> - Problème de chargement avec certains fichiers BMP OS2v1 1/4/8 bits (problèmes chargement palette)
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>TODO</b> :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Fichier Icones et cusrseurs</p></li>
+  <li><p>Decompression Huffman 1D</p></li>
+  <li><p>Prise en charge pixelformat = 2 et 64 bits</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>FPC/Lazarus</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li><li><a  href="BZImageFileIO.html">BZImageFileIO</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZBMPFileHeader.html"><code>TBZBMPFileHeader</code></a></td>
+<td class="itemdesc">L'entête principale d'un fichier BMP est composée de 4 champs :<br> - La signature (sur 2 octets), indiquant qu'il s'agit d'un fichier BMP à l'aide de 2 caractères : </p>
+
+<p>(       - La taille totale du fichier en octets (codée sur 4 octets)<br> - 2 champs réservés (de 2 octets)<br> - L'offset de l'image (sur 4 octets), en français décalage</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZOs21xBMPInfoHeader.html"><code>TBZOs21xBMPInfoHeader</code></a></td>
+<td class="itemdesc">Ici Taille 60, biSize est lu avant</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZOs22xBMPInfoHeader.html"><code>TBZOs22xBMPInfoHeader</code></a></td>
+<td class="itemdesc">Ici Taille 36, biSize est lu avant</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZWindowsBMPInfoHeaderV1.html"><code>TBZWindowsBMPInfoHeaderV1</code></a></td>
+<td class="itemdesc">En-têtes BMP OS/2 V2<br> biSize: LongWord; Taille de l'en-tête = 40 octets</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZBMP_CIEXYZCoord.html"><code>TBZBMP_CIEXYZCoord</code></a></td>
+<td class="itemdesc">Definitions pour la prise en charge type de couleur spéciale CIExyz<br> dans les en-têtes Windows V4 et V5</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZBMP_CIEXYZCoordTriple.html"><code>TBZBMP_CIEXYZCoordTriple</code></a></td>
+<td class="itemdesc">Ici Taille 48, biSize est lu avant</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZWindowsBMPInfoHeaderV2.html"><code>TBZWindowsBMPInfoHeaderV2</code></a></td>
+<td class="itemdesc">En-tête BMP Windows V2 (non documenté - Adobe Photoshop)<br> biSize: LongWord; Taille de l'en-tête = 52 octets</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZWindowsBMPInfoHeaderV3.html"><code>TBZWindowsBMPInfoHeaderV3</code></a></td>
+<td class="itemdesc">Ici Taille 104, biSize est lu avant</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZWindowsBMPInfoHeaderV4.html"><code>TBZWindowsBMPInfoHeaderV4</code></a></td>
+<td class="itemdesc">Ici Taille 120, biSize est lu avant</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZWindowsBMPInfoHeaderV5.html"><code>TBZWindowsBMPInfoHeaderV5</code></a></td>
+<td class="itemdesc">En-tête BMP Windows V5<br> biSize: LongWord; Taille de l'en-tête = 124 octets</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFileBMP.TBZBitmapBMPInfoHeader.html"><code>TBZBitmapBMPInfoHeader</code></a></td>
+<td class="itemdesc">En-tête BMP</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileBMP.EBZSaveImageException.html"><code>EBZSaveImageException</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFileBMP.TBZBitmapBMPImage.html"><code>TBZBitmapBMPImage</code></a></td>
+<td class="itemdesc">Classe de lecture et d&quot;ecriture des images au format BMP</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#TBZBMPHeaderType">TBZBMPHeaderType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#PBZBitmapBMPInfoHeader">PBZBitmapBMPInfoHeader</a></b> = &circ;<a  href="BZImageFileBMP.TBZBitmapBMPInfoHeader.html">TBZBitmapBMPInfoHeader</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_WINBMP">BMP_MAGIC_WINBMP</a></b> = 'BM';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_OS2BMP">BMP_MAGIC_OS2BMP</a></b> = 'BA';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_OS21ICO">BMP_MAGIC_OS21ICO</a></b> = 'CI';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_OS21CUR">BMP_MAGIC_OS21CUR</a></b> = 'CP';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_OS22ICO">BMP_MAGIC_OS22ICO</a></b> = 'IC';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_MAGIC_OS22CUR">BMP_MAGIC_OS22CUR</a></b> = 'PT';</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_NONE">BMP_COMPRESSION_NONE</a></b> = Longword(0);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_RLE8">BMP_COMPRESSION_RLE8</a></b> = Longword(1);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_RLE4">BMP_COMPRESSION_RLE4</a></b> = Longword(2);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_BITF">BMP_COMPRESSION_BITF</a></b> = Longword(3);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_HUF1D">BMP_COMPRESSION_HUF1D</a></b> = Longword(3);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_JPEG">BMP_COMPRESSION_JPEG</a></b> = Longword(4);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_PNG">BMP_COMPRESSION_PNG</a></b> = Longword(5);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileBMP.html#BMP_COMPRESSION_ALPHABITF">BMP_COMPRESSION_ALPHABITF</a></b> = Longword(6);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZBMPHeaderType"></span><code><b>TBZBMPHeaderType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de l'en-tête</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="bmpht_unknown">bmpht_unknown</span></li>
+<li>
+<span id="bmpht_Os21x">bmpht_Os21x</span></li>
+<li>
+<span id="bmpht_Os22x">bmpht_Os22x</span></li>
+<li>
+<span id="bmpht_WindowsV1">bmpht_WindowsV1</span></li>
+<li>
+<span id="bmpht_WindowsV2">bmpht_WindowsV2</span></li>
+<li>
+<span id="bmpht_WindowsV3">bmpht_WindowsV3</span></li>
+<li>
+<span id="bmpht_WindowsV4">bmpht_WindowsV4</span></li>
+<li>
+<span id="bmpht_WindowsV5">bmpht_WindowsV5</span>: Ici Taille 8, biSize est lu avant</li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZBitmapBMPInfoHeader"></span><code><b>PBZBitmapBMPInfoHeader</b> = &circ;<a  href="BZImageFileBMP.TBZBitmapBMPInfoHeader.html">TBZBitmapBMPInfoHeader</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_WINBMP"></span><code><b>BMP_MAGIC_WINBMP</b> = 'BM';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ID BMP</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_OS2BMP"></span><code><b>BMP_MAGIC_OS2BMP</b> = 'BA';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+19778;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_OS21ICO"></span><code><b>BMP_MAGIC_OS21ICO</b> = 'CI';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_OS21CUR"></span><code><b>BMP_MAGIC_OS21CUR</b> = 'CP';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_OS22ICO"></span><code><b>BMP_MAGIC_OS22ICO</b> = 'IC';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_MAGIC_OS22CUR"></span><code><b>BMP_MAGIC_OS22CUR</b> = 'PT';</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_NONE"></span><code><b>BMP_COMPRESSION_NONE</b> = Longword(0);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Non compressé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_RLE8"></span><code><b>BMP_COMPRESSION_RLE8</b> = Longword(1);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compressé avec RLE 8bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_RLE4"></span><code><b>BMP_COMPRESSION_RLE4</b> = Longword(2);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compressé avec RLE 4bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_BITF"></span><code><b>BMP_COMPRESSION_BITF</b> = Longword(3);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nom compressé BitFields winV2 Mask RGB / V3 Mask RGBA, et seulement 16 et 32 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_HUF1D"></span><code><b>BMP_COMPRESSION_HUF1D</b> = Longword(3);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+OSX22 = Hufman1D seulement 1bit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_JPEG"></span><code><b>BMP_COMPRESSION_JPEG</b> = Longword(4);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compressé avec JPEG si OSX22 = RLE 24bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_PNG"></span><code><b>BMP_COMPRESSION_PNG</b> = Longword(5);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compressé avec PNG</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BMP_COMPRESSION_ALPHABITF"></span><code><b>BMP_COMPRESSION_ALPHABITF</b> = Longword(6);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compressé avec AlphaBitFields Mask RGBA (seulement WinCE5.0 et avec .NET &gt; 4.0)</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-04-17
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

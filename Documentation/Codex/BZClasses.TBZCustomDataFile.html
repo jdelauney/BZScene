@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBZCustomDataFile</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomDataFile"></span><h1 class="cio">Classe TBZCustomDataFile</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomDataFile = class(<a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe de base abstraite pour les interfaces de formats de fichiers de données. Cette classe déclare les comportements de base liés aux fichiers. C'est à dire, pouvoir charger / enregistrer à partir d'un fichier ou d'un flux.</p>
+<p>
+
+
+<p>Il est fortement recommandé de surcharger SEULEMENT les méthodes d'acces à la mémoire. (fonction <a class="normal" href="BZClasses.TBZCustomDataFile.html#CanLoad">CanLoad</a> et procedure LoadFromMemory)
+
+<p>Les comportements en flux permettent d'ajouter d'autres capacités en E/S, comme la compression, la mise en cache, etc... sans qu'il soit nécessaire de réécrire de sous-classes. La base provient de GLScene/GraphicEx.
+
+<p><b>Note</b> : CheckFormat / LoadFromMemory / SaveToMemory : <br> Les enfants doivent réécrirent ces méthodes pour supporter la lecture et ou l'écriture d'un format de fichier.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a></li>
+<li class="thisitem">TBZCustomDataFile</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZCustomDataFile.html#Create">Create</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZCustomDataFile.html#Create">Create</a></b>(AOwner: TPersistent); Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZClasses.TBZCustomDataFile.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Class Function <b><a  href="BZClasses.TBZCustomDataFile.html#Capabilities">Capabilities</a></b>: <a  href="BZClasses.html#TBZDataFileCapabilities">TBZDataFileCapabilities</a>; Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZCustomDataFile.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomDataFile.html#CreateCopy">CreateCopy</a></b>(AOwner: TPersistent): <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>; Dynamic;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomDataFile.html#CanLoad">CanLoad</a></b>(Const FileName: String): Boolean; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZClasses.TBZCustomDataFile.html#CanLoad">CanLoad</a></b>(aStream: TStream): Boolean; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomDataFile.html#LoadFromStream">LoadFromStream</a></b>(aStream: TStream); Virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomDataFile.html#LoadFromFile">LoadFromFile</a></b>(Const FileName: String); Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomDataFile.html#SaveToFile">SaveToFile</a></b>(Const fileName: String); Virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomDataFile.html#SaveToStream">SaveToStream</a></b>(aStream: TStream); Virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomDataFile.html#Initialize">Initialize</a></b>; Dynamic;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#ResourceName">ResourceName</a></b>: String read FResourceName write FResourceName;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#FullFileName">FullFileName</a></b>: String read FFullFileName write FFullFileName;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#DataFormatDesc">DataFormatDesc</a></b>: <a  href="BZClasses.TBZDataFileFormatDesc.html">TBZDataFileFormatDesc</a> read FDataFileFormatDesc;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#Memory">Memory</a></b>: <a  href="BZStreamClasses.TBZBufferedStream.html">TBZBufferedStream</a> read FData;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#ErrorCount">ErrorCount</a></b> : Integer Read FErrorCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#Errors">Errors</a></b> : TStringList Read FErrorList;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomDataFile.html#OnLoadError">OnLoadError</a></b> : <a  href="BZClasses.html#TBZDataFileLoadErrorEvent">TBZDataFileLoadErrorEvent</a> Read FOnLoadError Write FOnLoadError;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TPersistent); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation de l'objet <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a> avec un propriétaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Capabilities"></span><code>Class Function <b>Capabilities</b>: <a  href="BZClasses.html#TBZDataFileCapabilities">TBZDataFileCapabilities</a>; Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Décrit les capacités de lecture et ou écriture des données Valeur par defaut [<a class="normal" href="BZClasses.html#dfcRead">dfcRead</a>].</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assigne un autre <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateCopy"></span><code>Function <b>CreateCopy</b>(AOwner: TPersistent): <a  href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a>; Dynamic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Duplique et renvoie un <a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a> Les enfants doivent réécrirent cette méthode pour supporter leurs données.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CanLoad"></span><code>Function <b>CanLoad</b>(Const FileName: String): Boolean; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérification si on peux charger les données depuis un fichier.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CanLoad"></span><code>Function <b>CanLoad</b>(aStream: TStream): Boolean; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérification si on peux charger les données depuis un flux.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LoadFromStream"></span><code>Procedure <b>LoadFromStream</b>(aStream: TStream); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Charge les données depuis un flux TStream</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LoadFromFile"></span><code>Procedure <b>LoadFromFile</b>(Const FileName: String); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Charge les données depuis un fichier physique</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SaveToFile"></span><code>Procedure <b>SaveToFile</b>(Const fileName: String); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A Surcharger uniquement si l'enfant veux et peux exporter les données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SaveToStream"></span><code>Procedure <b>SaveToStream</b>(aStream: TStream); Virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A Surcharger uniquement si l'enfant veux et peux exporter les données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Initialize"></span><code>Procedure <b>Initialize</b>; Dynamic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+A Surcharger pour initialiser des paramètres personnels. (Avant la lecture et l'écriture)</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ResourceName"></span><code>property <b>ResourceName</b>: String read FResourceName write FResourceName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lorsque <a class="normal" href="BZClasses.TBZCustomDataFile.html#LoadFromFile">LoadFromFile</a>/<a class="normal" href="BZClasses.TBZCustomDataFile.html#SaveToFile">SaveToFile</a> est utilisé , le nom du fichier est placé ici. Lorsque un Stream ou une variante est utilsé l'appelant peux placer son nom ou autre pour une utilisation ultérieure.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FullFileName"></span><code>property <b>FullFileName</b>: String read FFullFileName write FFullFileName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nom fichier avec chemin complet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DataFormatDesc"></span><code>property <b>DataFormatDesc</b>: <a  href="BZClasses.TBZDataFileFormatDesc.html">TBZDataFileFormatDesc</a> read FDataFileFormatDesc;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les informations basiques sur le format du fichier</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Memory"></span><code>property <b>Memory</b>: <a  href="BZStreamClasses.TBZBufferedStream.html">TBZBufferedStream</a> read FData;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le flux direct de lecture ou d'écriture des données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ErrorCount"></span><code>property <b>ErrorCount</b> : Integer Read FErrorCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre d'erreur produite loars d'un chargement ou d'un enregistrement</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Errors"></span><code>property <b>Errors</b> : TStringList Read FErrorList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la liste des erreurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnLoadError"></span><code>property <b>OnLoadError</b> : <a  href="BZClasses.html#TBZDataFileLoadErrorEvent">TBZDataFileLoadErrorEvent</a> Read FOnLoadError Write FOnLoadError;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement pour intercepter les erreurs notifiées lors du chargement des données</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

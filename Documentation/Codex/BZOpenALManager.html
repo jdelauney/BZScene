@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZOpenALManager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZOpenALManager</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient le &quot;Manager de son&quot; pour la librairie OpenAL</p>
+<p>
+
+
+<p>  Les pilotes officiels d' OpenAL peuvent être téléchargés à partir du site OpenAL <br> (<a  href="http://www.openal.org">http://www.openal.org</a>). ou de votre carte son site Web du fabricant. <br> Ou pouvez télécharger la version d'OpenAL Soft (<a  href="http://www.openal-soft.org/">http://www.openal-soft.org/</a>) <br> Cette version à l'avantage d'être open source et est disponible pour toutes les plateformes <br> et supporte les environnements 32bits et 64bits. C'est cette version qui est utilisée <br> afin de conserver la compatibilité partout.<br>
+
+<p>Pourquoi avoir choisi d'utiliser la version OpenAL Soft plutot l'officiel ? Les différences entre ces 2 librairies sont : <br> Pour la version officielle 32bits : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Support EAX 2.0,3.0,4.0,5.0)</p></li>
+  <li><p>(Effets supportés : Reverb, EAX Reverb, Chorus, Echo, Distorion, Frequency Shifter, <br></p></li>
+  <li><p>(Filtres supportés : Low Pass)</p></li>
+</ul>
+
+<p>
+
+<p>Pour la version officielle 64bits : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Support EAX 2.0,3.0,4.0,5.0)</p></li>
+  <li><p>(Effets supportés : Reverb, EAX Reverb)</p></li>
+  <li><p>(Filtres supportés : Low Pass)</p></li>
+</ul>
+
+<p>
+
+<p>Pour la version non-officielle (Soft OpenAL) 32bits et 64bits : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Support EAX 2.0)</p></li>
+  <li><p>(Effets supportés : Reverb, EAX Reverb, Chorus, Echo, Distorion,<br></p></li>
+  <li><p>(Filtres supportés : Low Pass, High Pass, Band Pass)</p></li>
+</ul>
+
+<p>
+
+<p>Voilà c'est juste à cause des effets non supportés par la version 64bits qui à fait basculer la balance
+
+<p>Actuellement OpenAL sound manager supporte : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Le positionnement des sons en 3D)</p></li>
+  <li><p>(Les filtres :</p></li>
+  <li><p>(Les effets :</p></li>
+  <li><p>(Nombre d'effets maximum par source : 4 + 1 filtre direct)</p></li>
+  <li><p>(Effet Doppler)</p></li>
+  <li><p>(Le changement du volume principal)</p></li>
+  <li><p>(Le changement du volume d'une source)</p></li>
+  <li><p>(Le changement de pitch d'une source)</p></li>
+  <li><p>(Le support de sons multi-cannaux (1 = Mono, 2 = Strereo, 3 et 4 = Quadriphonie, 6 = 5.1, 7 = 6.1 et 8 = 7.1 ))</p></li>
+  <li><p>(Le support des environnement 3D virtuels via les effets REVERB et EAX_REVERB )</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>05/11/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : <br> Pour l'implementation des filtres et effets voir unité BZSound.pas<br>
+
+<p>Malheureusement avec les 2 librairies (officielles et soft) ont ne peux pas utiliser<br> les effets d'environnements virtuel 3D, car les fonctions &quot;eaxSet&quot; et &quot;eaxGet&quot;<br> ne sont pas disponiblent. Il nous faut donc les émuler via les effets &quot;Reverb&quot; EFX ou EAX. De plus ces fonctions ne fonctionnent que si le mode<br> &quot;Hardware&quot; est activé, ce qui est impossible sous Windows (du à sont fonctionnement :( )<br> Je n'ai pas testé sous d'autres OS comme linux, donc à voir.<br> Cependant sous Windows (non testé avec d'autres OS) les fonctions &quot;EAXSet&quot; et &quot;EAXget&quot; <br> sont disponiblent uniquement avec la version officielle d'OpenAL, mais il faut utiliser <br> le fichier &quot;wrap_oal.dll&quot; à la place de &quot;OpenAL32.dll&quot; mais idem cela ne change rien du fait <br> que le mode Hardware n'est pas disponible.<br>
+
+<p>La solution est donc d'utiliser les effets REVERB et EAX_REVERB pour simuler les environnements.
+
+<p>Pour infos l'installateur de la version officiel d'OpenAL pour Windows sur des sytemes <br> 64 bits place les Librairie DLL 32 bits dans le dossier c:\Windows\sysWOW64 et les librairies 64 bits dans le dossier c:\Windows\system32. <br> <b>Attention</b> : leurs noms ne changent pas et reste &quot;OpenAL32.dll&quot; et &quot;wrap_oal.dll&quot;
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>Credits : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>(Codé sur une base de GLScene <a  href="http://www.sourceforge.net/glscene">http://www.sourceforge.net/glscene</a>)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>BZLibOpenAL</li><li><a  href="BZSound.html">BZSound</a></li><li><a  href="BZSoundSample.html">BZSoundSample</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZOpenALManager.EBZSoundOpenALManager.html"><code>EBZSoundOpenALManager</code></a></td>
+<td class="itemdesc">Exception levée par <a class="normal" href="BZOpenALManager.TBZSoundOpenALManager.html">TBZSoundOpenALManager</a></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZOpenALManager.TBZSoundOpenALManager.html"><code>TBZSoundOpenALManager</code></a></td>
+<td class="itemdesc">Gestionnaire audio pour OpenAL</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZOpenALManager.html#EOpenALError">EOpenALError</a></b> = Exception;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZOpenALManager.html#OAL_MIN_PITCH">OAL_MIN_PITCH</a></b> : Single = 0.1;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZOpenALManager.html#OAL_MAX_PITCH">OAL_MAX_PITCH</a></b> : Single = 4.0;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="EOpenALError"></span><code><b>EOpenALError</b> = Exception;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Exception levé par OpenAL</p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OAL_MIN_PITCH"></span><code><b>OAL_MIN_PITCH</b> : Single = 0.1;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="OAL_MAX_PITCH"></span><code><b>OAL_MAX_PITCH</b> : Single = 4.0;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

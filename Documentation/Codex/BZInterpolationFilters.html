@@ -1,0 +1,605 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZInterpolationFilters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZInterpolationFilters</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'interpolation de valeur</p>
+<p>
+
+
+<p>Ces filtres sont definis dans <a class="normal" href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a> voici la liste complète : <br> Filtres FIR (Finite <a class="normal" href="BZMath.html#Impulse">impulse</a> Response) : </p>
+
+<p>(    Filtres IIR (Infinite <a class="normal" href="BZMath.html#Impulse">impulse</a> Response) : </p>
+
+<p>( (<a class="normal" href="BZInterpolationFilters.html#ifmBlackmanBessel">ifmBlackmanBessel</a>, <a class="normal" href="BZInterpolationFilters.html#ifmBlackmanSinC">ifmBlackmanSinC</a>, <a class="normal" href="BZInterpolationFilters.html#ifmGaussian">ifmGaussian</a> 
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>21/07/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> : <br> Les filtres avec le préfixe &quot;WD&quot; (Windowed) donnent en général de meilleurs résultats. <br> Les filtres de type &quot;windowed&quot; WD peuvent être implémenter de 2 manières différente. <br> <br> . 1ere Méthode :<br> Type<br> TWD_MonFiltre = Class(<a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>)
+
+<p>Dans ce cas, le calcul du résultat de la fonction &quot;filter&quot; devra être &quot;réfactoré&quot;/&quot;factorisé&quot; <br> (cf filtres BlackManBessel/<a class="normal" href="BZMath.html#Sinc">SinC</a>, Bohman par exemple)
+
+<p>. 2eme Méthode<br> Type<br> TWD_MonFiltre = Class(TBZCustomWindowInterpolationFilter)<br>
+
+<p>Ici la fonction &quot;Window&quot; devra être surchargée.<br> On peux egalement choisir la fonction de fenetrage dans le constructor Create propriété &quot;WindowMode&quot;. Pour l'instant seule les fonctions de fenetrages suivante sont disponible : <br> cf <a class="normal" href="BZMath.html#Sinc">SinC</a> et <a class="normal" href="BZMath.html#Blackman">Blackman</a>.
+
+<p>Informations sur le rééchantillonage et autres fonctions mathématiques bien tordues.<br> Préparez vos tubes d'aspirines !! :
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://clouard.users.greyc.fr/Pantheon/experiments/rescaling/index-fr.html">https://clouard.users.greyc.fr/Pantheon/experiments/rescaling/index-fr.html</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Finite_impulse_response">https://en.wikipedia.org/wiki/Finite_impulse_response</a></p></li>
+  <li><p><a  href="http://en.wikipedia.org/wiki/Window_function">http://en.wikipedia.org/wiki/Window_function</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Lanczos_resampling">https://en.wikipedia.org/wiki/Lanczos_resampling</a></p></li>
+  <li><p><a  href="http://reference.wolfram.com/language/ref/Resampling.html">http://reference.wolfram.com/language/ref/Resampling.html</a></p></li>
+  <li><p><a  href="http://www.resampling.narod.ru">http://www.resampling.narod.ru</a></p></li>
+  <li><p><a  href="http://www.xtremevbtalk.com/archive/index.php/t-228878.html">http://www.xtremevbtalk.com/archive/index.php/t-228878.html</a></p></li>
+  <li><p><a  href="https://docs.scipy.org/doc/scipy/reference/signal.html">https://docs.scipy.org/doc/scipy/reference/signal.html</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Sinc_function">https://en.wikipedia.org/wiki/Sinc_function</a></p></li>
+  <li><p><a  href="http://resampy.readthedocs.io/en/latest/index.html">http://resampy.readthedocs.io/en/latest/index.html</a></p></li>
+  <li><p><a  href="http://dspace.thapar.edu:8080/jspui/bitstream/10266/2052/3/2052.pdf">http://dspace.thapar.edu:8080/jspui/bitstream/10266/2052/3/2052.pdf</a></p></li>
+  <li><p><a  href="https://cadxfem.org/inf/ResamplingFilters.pdf">https://cadxfem.org/inf/ResamplingFilters.pdf</a></p></li>
+  <li><p><a  href="http://www-cs.ccny.cuny.edu/~wolberg/pub/crc04.pdf">http://www-cs.ccny.cuny.edu/&tilde;wolberg/pub/crc04.pdf</a></p></li>
+  <li><p><a  href="https://www.ldv.ei.tum.de/fileadmin/w00bfa/www/content_uploads/Vorlesung_3.4_Resampling.pdf">https://www.ldv.ei.tum.de/fileadmin/w00bfa/www/content_uploads/Vorlesung_3.4_Resampling.pdf</a></p></li>
+  <li><p><a  href="https://cran.r-project.org/web/packages/signal/signal.pdf">https://cran.r-project.org/web/packages/signal/signal.pdf</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Bessel_function">https://en.wikipedia.org/wiki/Bessel_function</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Kaiser_window">https://en.wikipedia.org/wiki/Kaiser_window</a></p></li>
+</ul>
+
+<p> Autres infos diverses : </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Elliptic_filter">https://en.wikipedia.org/wiki/Elliptic_filter</a></p></li>
+  <li><p><a  href="https://fr.wikipedia.org/wiki/Filtre_particulaire">https://fr.wikipedia.org/wiki/Filtre_particulaire</a></p></li>
+  <li><p><a  href="http://perso.telecom-paristech.fr/~chollet/Biblio/Articles/Auteurs/Blouet/particleFilter-2.pdf">http://perso.telecom-paristech.fr/&tilde;chollet/Biblio/Articles/Auteurs/Blouet/particleFilter-2.pdf</a></p></li>
+  <li><p><a  href="https://www.rocq.inria.fr/clime/adoqa/meetings/grenoble181006/adoqa-irisa.pdf">https://www.rocq.inria.fr/clime/adoqa/meetings/grenoble181006/adoqa-irisa.pdf</a></p></li>
+  <li><p><a  href="http://cas.ensmp.fr/~chaplais/SeminarSlides/MUSSO_10_12_02.pdf">http://cas.ensmp.fr/&tilde;chaplais/SeminarSlides/MUSSO_10_12_02.pdf</a></p></li>
+  <li><p><a  href="http://graphicon.ru/oldgr/en/research/scaling/index.html">http://graphicon.ru/oldgr/en/research/scaling/index.html</a></p></li>
+  <li><p><a  href="http://bigwww.epfl.ch/publications/thevenaz9901.pdf">http://bigwww.epfl.ch/publications/thevenaz9901.pdf</a></p></li>
+  <li><p><a  href="http://dsp-book.narod.ru/HFTSP/8579ch07.pdf">http://dsp-book.narod.ru/HFTSP/8579ch07.pdf</a></p></li>
+  <li><p><a  href="https://www.dsprelated.com/freebooks/sasp/">https://www.dsprelated.com/freebooks/sasp/</a></p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>TODO :</b><br> - Ajouter d'autres filtres : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Chebyshev_filter">https://en.wikipedia.org/wiki/Chebyshev_filter</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Kolmogorov">https://en.wikipedia.org/wiki/Kolmogorov</a>–Zurbenko_filter</p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Butterworth_filter">https://en.wikipedia.org/wiki/Butterworth_filter</a></p></li>
+  <li><p>etc...</p></li>
+</ul>
+
+<p> <br> - Ajouter d'autres methode de calcul pour les filtres &quot;Windowed&quot; </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Planck-Taper, chebyshev, Burgess, Lawrey, ...</p></li>
+</ul>
+
+<p> <br> - Ajouter fonction de rééchantillonage à base de FFT (Fast Fourrier Transformation) <br> - <b>Corriger</b> les methodes : Nutttal, BlackmanHarris, BlackmanNuttal, BartlettHann, FlatTop, Poisson, HannPoisson
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney aka BeanzMaster</p></li>
+  <li><p>FPC/Lazarus</p></li>
+  <li><p>GLScene</p></li>
+  <li><p>Graphic32</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE :</b> MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZMath.html">BZMath</a></li><li>BZTypesHelpers</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html"><code>TBZCustomInterpolationFilter</code></a></td>
+<td class="itemdesc">Classe à hériter pour ajouter un filtre d'interpolations.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCustomWindowedInterpolationFilter.html"><code>TBZCustomWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Classe abstraite pour les filtres &quot;<a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a>&quot;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBoxInterpolationFilter.html"><code>TBZBoxInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Box</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZTriangleInterpolationFilter.html"><code>TBZTriangleInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Triangle</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCosineInterpolationFilter.html"><code>TBZCosineInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Cosine</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZSplineInterpolationFilter.html"><code>TBZSplineInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Spline</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCatromInterpolationFilter.html"><code>TBZCatromInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Catrom</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCubicInterpolationFilter.html"><code>TBZCubicInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Cubic</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZQuadraticInterpolationFilter.html"><code>TBZQuadraticInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Quadratic</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZQuinticInterpolationFilter.html"><code>TBZQuinticInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) BSpline Quintic</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBellInterpolationFilter.html"><code>TBZBellInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Bell</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHermitInterpolationFilter.html"><code>TBZHermitInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Hermit</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZWelchInterpolationFilter.html"><code>TBZWelchInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Welch</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZMitchellInterpolationFilter.html"><code>TBZMitchellInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Mitchell</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHannInterpolationFilter.html"><code>TBZHannInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Hann</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHammingInterpolationFilter.html"><code>TBZHammingInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Hamming</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZSinshInterpolationFilter.html"><code>TBZSinshInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) <a class="normal" href="BZMath.html#Sinh">SinH</a></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanInterpolationFilter.html"><code>TBZBlackmanInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) <a class="normal" href="BZMath.html#Blackman">Blackman</a></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZLagrangeInterpolationFilter.html"><code>TBZLagrangeInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Lagrange</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZQuadraticSchaumInterpolationFilter.html"><code>TBZQuadraticSchaumInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) Schaum 2.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCubicSchaumInterpolationFilter.html"><code>TBZCubicSchaumInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZCubicSchaumInterpolationFilter</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZOMomsx3InterpolationFilter.html"><code>TBZOMomsx3InterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) O-Moms x3</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZOMomsx5InterpolationFilter.html"><code>TBZOMomsx5InterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) O-Moms x5</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZOMomsx7InterpolationFilter.html"><code>TBZOMomsx7InterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage FIR (Finit Impulsion Response) O-Moms x7</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanBesselInterpolationFilter.html"><code>TBZBlackmanBesselInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) <a class="normal" href="BZMath.html#Blackman">Blackman</a>/<a class="normal" href="BZMath.html#Bessel">Bessel</a></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanSinCInterpolationFilter.html"><code>TBZBlackmanSinCInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) <a class="normal" href="BZMath.html#Blackman">Blackman</a>/<a class="normal" href="BZMath.html#Sinc">SinC</a></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZGaussianInterpolationFilter.html"><code>TBZGaussianInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) Gaussian</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZSinCInterpolationFilter.html"><code>TBZSinCInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) <a class="normal" href="BZMath.html#Sinc">SinC</a></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZJinCInterpolationFilter.html"><code>TBZJinCInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) JinC appelé également <a class="normal" href="BZMath.html#Bessel">Bessel</a></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBeanzInterpolationFilter.html"><code>TBZBeanzInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage IIR (Infinit Impulsion Response) BeanZ</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBartlettWindowedInterpolationFilter.html"><code>TBZBartlettWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Barlett</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCosineWindowedInterpolationFilter.html"><code>TBZCosineWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> System.Cosine</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZWelchWindowedInterpolationFilter.html"><code>TBZWelchWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Welch</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHannWindowedInterpolationFilter.html"><code>TBZHannWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Hann</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHammingWindowedInterpolationFilter.html"><code>TBZHammingWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Hamming</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanWindowedInterpolationFilter.html"><code>TBZBlackmanWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> <a class="normal" href="BZMath.html#Blackman">Blackman</a></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZLanczos3InterpolationFilter.html"><code>TBZLanczos3InterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Lanczos3</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBohmanInterpolationFilter.html"><code>TBZBohmanInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Bohman</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZAlbrechtWindowedInterpolationFilter.html"><code>TBZAlbrechtWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Albrecht</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZKaiserWindowedInterpolationFilter.html"><code>TBZKaiserWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Kaiser</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZGaussianWindowedInterpolationFilter.html"><code>TBZGaussianWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Gaussian</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZPoissonWindowedInterpolationFilter.html"><code>TBZPoissonWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZPoissonWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZHannPoissonWindowedInterpolationFilter.html"><code>TBZHannPoissonWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZHannPoissonWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZNuttallWindowedInterpolationFilter.html"><code>TBZNuttallWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">Filtre de rééchantillonage <a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html#Windowed">Windowed</a> Nuttall</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanNuttallWindowedInterpolationFilter.html"><code>TBZBlackmanNuttallWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZBlackmanNuttallWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBlackmanHarrisWindowedInterpolationFilter.html"><code>TBZBlackmanHarrisWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZBlackmanHarrisWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZFlatTopWindowedInterpolationFilter.html"><code>TBZFlatTopWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZFlatTopWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZTukeyWindowedInterpolationFilter.html"><code>TBZTukeyWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZTukeyWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZBartlettHannWindowedInterpolationFilter.html"><code>TBZBartlettHannWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc">TBZBarlettHannWindowedInterpolationFilter</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZCauchyWindowedInterpolationFilter.html"><code>TBZCauchyWindowedInterpolationFilter</code></a></td>
+<td class="itemdesc"><code>TBZCauchyWindowedInterpolationFilter</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZInterpolationFilterRec.html"><code>TBZInterpolationFilterRec</code></a></td>
+<td class="itemdesc">Informations d'un filtre de rééchantillonnage</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZInterpolationFilters.TBZInterpolationFiltersList.html"><code>TBZInterpolationFiltersList</code></a></td>
+<td class="itemdesc">Stock les classes des filtres de rééchantillonnage supportés</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZInterpolationFilters.html#GetBZInterpolationFilter">GetBZInterpolationFilter</a></b>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZInterpolationFilters.html#GetBZInterpolationFilters">GetBZInterpolationFilters</a></b>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZInterpolationFilters.html#RegisterBZInterpolationFilter">RegisterBZInterpolationFilter</a></b>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZInterpolationFilters.html#UnregisterBZInterpolationFilter">UnregisterBZInterpolationFilter</a></b>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterWindowedMode">TBZInterpolationFilterWindowedMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a></b> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a></b> = (...);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBZInterpolationFilter"></span><code>function <b>GetBZInterpolationFilter</b>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la classe du filtre de rééchantillonnage &quot;aType&quot;</p>
+<p>
+ <br>
+
+<p>Exemple : <br> </p>
+
+<pre class="longcode">
+<span class="pascal_keyword">Var</span>
+  FilterClass : TBZInterpolationFilterClass;
+  MonFiltre : TBZCustomInterpolationFilter;
+<span class="pascal_keyword">begin</span>
+  FilterClass := GetBZInterpolationFilter(imBox);
+  MonFiltre := FilterClass.Create;
+  <span class="pascal_comment">// ...</span>
+  weight := MonFiltre.Filter(x);
+  <span class="pascal_comment">// ...</span>
+  FreeAndNil(MonFiltre);
+<span class="pascal_keyword">end</span>;</pre>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GetBZInterpolationFilters"></span><code>function <b>GetBZInterpolationFilters</b>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la liste des filtres de rééchantillognage supportés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="RegisterBZInterpolationFilter"></span><code>procedure <b>RegisterBZInterpolationFilter</b>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enregistrement d'un filtre de rééchantillonage dans la liste des filtres supportés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="UnregisterBZInterpolationFilter"></span><code>procedure <b>UnregisterBZInterpolationFilter</b>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Libération de l'enregistrement d'un filtre de rééchantillonage dans la liste des filtres supportés</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZInterpolationFilterWindowedMode"></span><code><b>TBZInterpolationFilterWindowedMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enumération des modes de fenetrage pour les filtres de type &quot;Windowed&quot; <br> TODO : Ajouter d'autres modes : Welch, Bartlett, Tukey ect...</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="wmDefault">wmDefault</span></li>
+<li>
+<span id="wmSinC">wmSinC</span></li>
+<li>
+<span id="wmBlackman">wmBlackman</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZInterpolationFilterClass"></span><code><b>TBZInterpolationFilterClass</b> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de classe descendante de BZCustomInterpolationFilter</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZInterpolationFilterMethod"></span><code><b>TBZInterpolationFilterMethod</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Enumération des filtres de rééchantillonage supportés.</p>
+<p>
+
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p>FIR : Finite <a class="normal" href="BZMath.html#Impulse">impulse</a> Response</p></li>
+  <li><p>IIR : Infinite <a class="normal" href="BZMath.html#Impulse">impulse</a> Response</p></li>
+</ul>
+
+<p>
+
+<p><b>Note</b> : Jinc est aussi appelé <a class="normal" href="BZMath.html#Bessel">Bessel</a></p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ifmBox">ifmBox</span></li>
+<li>
+<span id="ifmTriangle">ifmTriangle</span></li>
+<li>
+<span id="ifmCosine">ifmCosine</span></li>
+<li>
+<span id="ifmSpline">ifmSpline</span></li>
+<li>
+<span id="ifmCatrom">ifmCatrom</span></li>
+<li>
+<span id="ifmCubic">ifmCubic</span></li>
+<li>
+<span id="ifmQuadratic">ifmQuadratic</span></li>
+<li>
+<span id="ifmQuintic">ifmQuintic</span></li>
+<li>
+<span id="ifmBell">ifmBell</span></li>
+<li>
+<span id="ifmHermit">ifmHermit</span></li>
+<li>
+<span id="ifmWelch">ifmWelch</span></li>
+<li>
+<span id="ifmMitchell">ifmMitchell</span></li>
+<li>
+<span id="ifmHann">ifmHann</span></li>
+<li>
+<span id="ifmHamming">ifmHamming</span></li>
+<li>
+<span id="ifmSinsh">ifmSinsh</span></li>
+<li>
+<span id="ifmBlackman">ifmBlackman</span></li>
+<li>
+<span id="ifmLagrange">ifmLagrange</span></li>
+<li>
+<span id="ifmQuadraticSchaum">ifmQuadraticSchaum</span></li>
+<li>
+<span id="ifmCubicSchaum">ifmCubicSchaum</span></li>
+<li>
+<span id="ifmOMomsx3">ifmOMomsx3</span></li>
+<li>
+<span id="ifmOMomsx5">ifmOMomsx5</span></li>
+<li>
+<span id="ifmOMomsx7">ifmOMomsx7</span></li>
+<li>
+<span id="ifmBlackmanBessel">ifmBlackmanBessel</span></li>
+<li>
+<span id="ifmBlackmanSinC">ifmBlackmanSinC</span></li>
+<li>
+<span id="ifmGaussian">ifmGaussian</span></li>
+<li>
+<span id="ifmSinC">ifmSinC</span></li>
+<li>
+<span id="ifmJinC">ifmJinC</span></li>
+<li>
+<span id="ifmNuttall">ifmNuttall</span></li>
+<li>
+<span id="ifmTukey">ifmTukey</span></li>
+<li>
+<span id="ifmPoisson">ifmPoisson</span></li>
+<li>
+<span id="ifmCauchy">ifmCauchy</span></li>
+<li>
+<span id="ifmFlatTop">ifmFlatTop</span></li>
+<li>
+<span id="ifmBartlett">ifmBartlett</span></li>
+<li>
+<span id="ifmBartlettHann">ifmBartlettHann</span></li>
+<li>
+<span id="ifmCosineWindowed">ifmCosineWindowed</span></li>
+<li>
+<span id="ifmWelchWindowed">ifmWelchWindowed</span></li>
+<li>
+<span id="ifmHannWindowed">ifmHannWindowed</span></li>
+<li>
+<span id="ifmHannPoisson">ifmHannPoisson</span></li>
+<li>
+<span id="ifmHammingWindowed">ifmHammingWindowed</span></li>
+<li>
+<span id="ifmBlackmanWindowed">ifmBlackmanWindowed</span>: Sinsh</li>
+<li>
+<span id="ifmBlackmanHarris">ifmBlackmanHarris</span></li>
+<li>
+<span id="ifmBlackmanNuttall">ifmBlackmanNuttall</span></li>
+<li>
+<span id="ifmGaussianWindowed">ifmGaussianWindowed</span></li>
+<li>
+<span id="ifmLanczos3">ifmLanczos3</span>: <a class="normal" href="BZMath.html#Sinc">SinC</a>, JinC,</li>
+<li>
+<span id="ifmBohman">ifmBohman</span></li>
+<li>
+<span id="ifmAlbrecht">ifmAlbrecht</span></li>
+<li>
+<span id="ifmKaiser">ifmKaiser</span></li>
+<li>
+<span id="ifmBeanz">ifmBeanz</span></li>
+</ul>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-07-21
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

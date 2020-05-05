@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZParallelThread</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZParallelThread</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient un objet <a class="normal" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a> qui permet d'exécuter des opérations en parallele facilement grâce au multithreading.
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Creation : 24/06/2019</p></li>
+  <li><p>Mise à jour : </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b><br> Lazarus dispose de cette possibilité nativement, mais est un peu plus compliqué à mettre en place. cf : <a  href="https://wiki.freepascal.org/Parallel_procedures/fr">https://wiki.freepascal.org/Parallel_procedures/fr</a>
+
+<p>Inspirer du code source de Paul Toth pour Delphi <a  href="http://lookinside.free.fr/delphi.php?Multithreading">http://lookinside.free.fr/delphi.php?Multithreading</a>)
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : Aucune
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZParallelThread.TBZParallelThread.html"><code>TBZParallelThread</code></a></td>
+<td class="itemdesc">Objet servant à l'initialisation du code à paralleliser dans des threads en mode objet</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZParallelThread.html#ParallelFor">ParallelFor</a></b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProc">TBZParallelProc</a>;Const DataPtr : Pointer = nil; Const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZParallelThread.html#ParallelFor">ParallelFor</a></b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZParallelThread.html#ParallelFor">ParallelFor</a></b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; Const DataPtr : Pointer; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZParallelThread.html#ParallelFor">ParallelFor</a></b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; ProgressEvent : <a  href="BZParallelThread.html#TBZParallelProgressEvent">TBZParallelProgressEvent</a>; Const DataPtr : Pointer; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZParallelThread.html#TBZParallelProc">TBZParallelProc</a></b> = procedure(Index: Integer; Data : Pointer);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a></b> = procedure(Sender: TObject; Index: Integer ; Data : Pointer) of object;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZParallelThread.html#TBZParallelProgressEvent">TBZParallelProgressEvent</a></b> = procedure(Sender: TObject; Index: Integer) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZParallelThread.html#TBZParallelProgressMode">TBZParallelProgressMode</a></b> = (...);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZParallelThread.html#BZCurrentParallelThread">BZCurrentParallelThread</a></b>: TThread;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ParallelFor"></span><code>procedure <b>ParallelFor</b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProc">TBZParallelProc</a>;Const DataPtr : Pointer = nil; Const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Procedure de lancement d'un traitement paralléliser simple. <br> &quot;Data&quot; est un pointer permettant d'acceder à des paramètres ou valeurs nécessaire au traitement</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ParallelFor"></span><code>procedure <b>ParallelFor</b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Procedure de lancement d'un traitement paralléliser objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ParallelFor"></span><code>procedure <b>ParallelFor</b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; Const DataPtr : Pointer; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Procedure de lancement d'un traitement paralléliser objet avec data</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ParallelFor"></span><code>procedure <b>ParallelFor</b>(FromIndex, ToIndex : Int64; ParallelProc : <a  href="BZParallelThread.html#TBZParallelProcEvent">TBZParallelProcEvent</a>; ProgressEvent : <a  href="BZParallelThread.html#TBZParallelProgressEvent">TBZParallelProgressEvent</a>; Const DataPtr : Pointer; const ThreadCount : Byte = 4); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Procedure de lancement d'un traitement paralléliser objet avec data et évènement pour controler la progression de la tâche</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZParallelProc"></span><code><b>TBZParallelProc</b> = procedure(Index: Integer; Data : Pointer);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de procedure simple d'execution du tratement à effectuer dans les threads</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZParallelProcEvent"></span><code><b>TBZParallelProcEvent</b> = procedure(Sender: TObject; Index: Integer ; Data : Pointer) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de procedure objet d'execution du tratement à effectuer dans les threads</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZParallelProgressEvent"></span><code><b>TBZParallelProgressEvent</b> = procedure(Sender: TObject; Index: Integer) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de procedure objet pour la progression de l'execution</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZParallelProgressMode"></span><code><b>TBZParallelProgressMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Direction de traitement des données. <br> Vers l'avant (Incrementation de l'index) ou vers l'arrière (Décrementation de l'index).</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ppmForward">ppmForward</span></li>
+<li>
+<span id="ppmBackward">ppmBackward</span></li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZCurrentParallelThread"></span><code><b>BZCurrentParallelThread</b>: TThread;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Variable globale servant à contenir le thread en cours d'execution. <br> Utile dans le cas de synchronisation. Vous pouvez la définir dans vos propres descendants TThread</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+24/02/2019
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFileTGA: Packed Enregistrement TBZTGAExtensionArea</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZTGAExtensionArea"></span><h1 class="cio">Packed Enregistrement TBZTGAExtensionArea</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section">Méthodes</div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZImageFileTGA.html">BZImageFileTGA</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZTGAExtensionArea = packed record</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZTGAExtensionArea</code> : Description des informations des fichiers TGA (Version 2.0 uniquement)</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#Size">Size</a></b>: Word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#AuthorName">AuthorName</a></b>: Array[0..40] of char;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#AuthorComment">AuthorComment</a></b>: Array[0..383] of char;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#Day">Day</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#Month">Month</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#Year">Year</a></b>: Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#JobeName">JobeName</a></b>: Array[0..40] of char;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#JobTimeH">JobTimeH</a></b>: Word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#JobTimeM">JobTimeM</a></b>: Word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#JobTimeS">JobTimeS</a></b>: Word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#SoftwareID">SoftwareID</a></b>: Array[0..40] of char;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#SoftwareVersionMinor">SoftwareVersionMinor</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#SoftwareVersionMajor">SoftwareVersionMajor</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#SoftwareVersionBuild">SoftwareVersionBuild</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#KeyColor">KeyColor</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#PixelAspectRatio">PixelAspectRatio</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#ColorCorrectionOffset">ColorCorrectionOffset</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#StampOffset">StampOffset</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#ScanLineOffset">ScanLineOffset</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFileTGA.TBZTGAExtensionArea.html#Attribut">Attribut</a></b>: Byte;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Size"></span><code><b>Size</b>: Word;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AuthorName"></span><code><b>AuthorName</b>: Array[0..40] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AuthorComment"></span><code><b>AuthorComment</b>: Array[0..383] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Day"></span><code><b>Day</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Month"></span><code><b>Month</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Year"></span><code><b>Year</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="JobeName"></span><code><b>JobeName</b>: Array[0..40] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="JobTimeH"></span><code><b>JobTimeH</b>: Word;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="JobTimeM"></span><code><b>JobTimeM</b>: Word;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="JobTimeS"></span><code><b>JobTimeS</b>: Word;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SoftwareID"></span><code><b>SoftwareID</b>: Array[0..40] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SoftwareVersionMinor"></span><code><b>SoftwareVersionMinor</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SoftwareVersionMajor"></span><code><b>SoftwareVersionMajor</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SoftwareVersionBuild"></span><code><b>SoftwareVersionBuild</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="KeyColor"></span><code><b>KeyColor</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PixelAspectRatio"></span><code><b>PixelAspectRatio</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ColorCorrectionOffset"></span><code><b>ColorCorrectionOffset</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="StampOffset"></span><code><b>StampOffset</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ScanLineOffset"></span><code><b>ScanLineOffset</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Attribut"></span><code><b>Attribut</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

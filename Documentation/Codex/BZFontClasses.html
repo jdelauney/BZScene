@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZFontClasses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZFontClasses</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient des classes de bases conçues à des fins génériques pour gérer et afficher des textes en UTF-8 et WideString suivant la police de de craractères choisie.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>06/06/2019 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZSystem.html">BZSystem</a>, <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, BZLibFreeType, BZLibFreeTypehDyn
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<p>(   )
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>CWString</li><li>Classes</li><li>SysUtils</li><li>Dialogs</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li>BZLibFreeType</li><li>BZLibFreeTypehDyn</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZFontClasses.TFontPixelMetric.html"><code>TFontPixelMetric</code></a></td>
+<td class="itemdesc">* Measurements of a font &ndash;&gt; Importer de BGRABitmap</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZFontClasses.TBZCustomFont.html"><code>TBZCustomFont</code></a></td>
+<td class="itemdesc">Classe de convenance décrivant les paramètres pour une police de caractères.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZFontClasses.TBZCustomFontDrawer.html"><code>TBZCustomFontDrawer</code></a></td>
+<td class="itemdesc">Classe à hériter pour afficher un texte</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZFontClasses.TBZEmptyFont.html"><code>TBZEmptyFont</code></a></td>
+<td class="itemdesc">Police de caratère vide</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZFontClasses.TBZFont.html"><code>TBZFont</code></a></td>
+<td class="itemdesc">Classe d&quot;crivant une police de caractères</td>
+</tr>
+</table>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZFontClasses.html#InitFontEngine">InitFontEngine</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZFontClasses.html#DoneFontEngine">DoneFontEngine</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#TBZFontQuality">TBZFontQuality</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#TBZFontClass">TBZFontClass</a></b> = class of <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#cDefaultFontList">cDefaultFontList</a></b> : array[0..8] of string = ('Arial', 'Segoeui', 'DejaVuSans', 'LiberationSans-Regular', 'NotoSans-Regular',
+                                              'Roboto-Regular', 'Helvetica', 'Verdana','Tahoma');</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#cDefaultPreferredFontIndex">cDefaultPreferredFontIndex</a></b> = 1;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#cDefaultPreferredFontIndex">cDefaultPreferredFontIndex</a></b> = 3;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#BZFontMgr">BZFontMgr</a></b>: TBZFontManager = nil;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZFontClasses.html#DefautFontName">DefautFontName</a></b>: String ='';</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="InitFontEngine"></span><code>procedure <b>InitFontEngine</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Initialisation du moteur de rendu des polices de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DoneFontEngine"></span><code>procedure <b>DoneFontEngine</b>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Libèration du moteur de rendu des polices de caractères</p>
+</td></tr>
+</table>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZFontQuality"></span><code><b>TBZFontQuality</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="fqDraft">fqDraft</span></li>
+<li>
+<span id="fqAntiAliased">fqAntiAliased</span></li>
+<li>
+<span id="fqClearType">fqClearType</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZFontClass"></span><code><b>TBZFontClass</b> = class of <a  href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Classe de type <a class="normal" href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a></p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultFontList"></span><code><b>cDefaultFontList</b> : array[0..8] of string = ('Arial', 'Segoeui', 'DejaVuSans', 'LiberationSans-Regular', 'NotoSans-Regular',
+                                              'Roboto-Regular', 'Helvetica', 'Verdana','Tahoma');</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nom des fichiers TTF pouvant être utilisé comme police par défaut @A remplacer par nom de famille</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultPreferredFontIndex"></span><code><b>cDefaultPreferredFontIndex</b> = 1;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Index de la police de caractères préférées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultPreferredFontIndex"></span><code><b>cDefaultPreferredFontIndex</b> = 3;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BZFontMgr"></span><code><b>BZFontMgr</b>: TBZFontManager = nil;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Variable globale pour référencer les polices de caractères disponibles dans le systeme</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DefautFontName"></span><code><b>DefautFontName</b>: String ='';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nom de la police par défault</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMathEx: Enregistrement TBZFrustum</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZFrustum"></span><h1 class="cio">Enregistrement TBZFrustum</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMathEx.html">BZVectorMathEx</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZFrustum = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Description d'un champ de vue pour une caméra</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pLeft">pLeft</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pTop">pTop</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pRight">pRight</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pBottom">pBottom</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pNear">pNear</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#pFar">pFar</a></b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#BoundingSphere">BoundingSphere</a></b>: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZFrustum.html#Planes">Planes</a></b>: <a  href="BZVectorMathEx.html#TBZFrustrumPlanesArray">TBZFrustrumPlanesArray</a></code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZFrustum.html#CreateFromModelViewProjectionMatrix">CreateFromModelViewProjectionMatrix</a></b>(constref modelViewProj : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZFrustum.html#Contains">Contains</a></b>(constref TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZFrustum.html#Contains">Contains</a></b>(constref TestAABB: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>) : <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZFrustum.html#IsVolumeClipped">IsVolumeClipped</a></b>(constref objPos : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; const objRadius : Single):Boolean; overload;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pLeft"></span><code><b>pLeft</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pTop"></span><code><b>pTop</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pRight"></span><code><b>pRight</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pBottom"></span><code><b>pBottom</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pNear"></span><code><b>pNear</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pFar"></span><code><b>pFar</b>: <a  href="BZVectorMath.TBZHmgPlane.html">TBZHmgPlane</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces aux propriétés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BoundingSphere"></span><code><b>BoundingSphere</b>: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut. Ajoute une sphere englobante pour décrire le &quot;frustum&quot; et qui sera utilisé pour des tests d'intersections rapides</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Planes"></span><code><b>Planes</b>: <a  href="BZVectorMathEx.html#TBZFrustrumPlanesArray">TBZFrustrumPlanesArray</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Plans des délimitation du &quot;frustum&quot;</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="CreateFromModelViewProjectionMatrix"></span><code>procedure <b>CreateFromModelViewProjectionMatrix</b>(constref modelViewProj : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'un <a class="normal" href="BZVectorMathEx.TBZFrustum.html">TBZFrustum</a> depuis une matrice décrivant le &quot;model-view-projection&quot;.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contains"></span><code>function <b>Contains</b>(constref TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Détermine dans quel espace (<a class="normal" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>) du &quot;Frustrum&quot; une sphere englobante fait partie.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contains"></span><code>function <b>Contains</b>(constref TestAABB: <a  href="BZVectorMathEx.TBZAxisAlignedBoundingBox.html">TBZAxisAlignedBoundingBox</a>) : <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Détermine dans quel espace (<a class="normal" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>) du &quot;Frustrum&quot; une boite englobante alignée fait partie. <br> voir : <a  href="http://www.flipcode.com/articles/article_frustumculling.shtml">http://www.flipcode.com/articles/article_frustumculling.shtml</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="IsVolumeClipped"></span><code>function <b>IsVolumeClipped</b>(constref objPos : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; const objRadius : Single):Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Determine si un volume (une sphere englobante) est &quot;coupé&quot; ou pas</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

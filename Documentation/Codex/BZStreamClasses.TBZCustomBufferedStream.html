@@ -1,0 +1,737 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZStreamClasses: Classe TBZCustomBufferedStream</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomBufferedStream"></span><h1 class="cio">Classe TBZCustomBufferedStream</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZStreamClasses.html">BZStreamClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomBufferedStream = class(TStream)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZCustomBufferedStream</code> : Classe d'aide à la lecture et ou ecriture de données dans un flux (TStream).<br> L'acces se fait par le biais d'un tampon de taille définie.</p>
+<p>
+
+
+<p>L'acces aux données est un acces directe en mémoire et se fait de façon séquentielle. <br> <code>TBZCustomBufferedStream</code> contient de nombreuse procedures et fonctions optimisées pour la lecture et l'écriture de valeurs de différents types. <br> Disponibles en 2 versions &quot;Little-Endian&quot; et &quot;Big-Endian&quot;.
+
+<p>Cette classe ameliore surtout les performances d'accès aux données de fichiers physique. <br> Ne pas employer directement <code>TBZCustomBufferedStream</code>. Utilsez la classe <a class="normal" href="BZStreamClasses.TBZBufferedStream.html">TBZBufferedStream</a> et les autres classes descendantes.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TStream</li>
+<li class="thisitem">TBZCustomBufferedStream</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Create">Create</a></b>(Const aBlockSize: Integer = <a  href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Create">Create</a></b>(AStream: TStream; Const aBlockSize: Integer = <a  href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a>); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#AssignBuffer">AssignBuffer</a></b>(aBuffer: Pointer; aSize:Int64);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#AssignStream">AssignStream</a></b>(aStream: TStream);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Flush">Flush</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">Read</a></b>(Var aBuffer; Count: Longint):Longint; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Write">Write</a></b>(Const aBuffer; Count: Longint): Longint; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Seek">Seek</a></b>(Const Offset: Int64; Origin: TSeekOrigin): Int64; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#SeekForward">SeekForward</a></b>(Offset : Int64):Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#SeekBackward">SeekBackward</a></b>(Offset : Int64):Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadByte">ReadByte</a></b>: Byte; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteByte">WriteByte</a></b>(Const Value : Byte); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#SkipNextByte">SkipNextByte</a></b>(Const aCount: Integer = 1); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#GotoPreviousByte">GotoPreviousByte</a></b>(Const aCount: Integer = 1); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#GotoNextStringLine">GotoNextStringLine</a></b>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadWord">ReadWord</a></b>: Word; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteWord">WriteWord</a></b>(Const Value : Word);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadInteger">ReadInteger</a></b>: Integer; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteInteger">WriteInteger</a></b>(Const Value : Integer); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadLongWord">ReadLongWord</a></b>: Longword; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteLongWord">WriteLongWord</a></b>(Const Value : LongWord); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadLongint">ReadLongint</a></b>: Longint; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteLongint">WriteLongint</a></b>(Const Value : Longint); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadCardinal">ReadCardinal</a></b>: Cardinal; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteCardinal">WriteCardinal</a></b>(Const Value : Cardinal);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadSingle">ReadSingle</a></b>: Single; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteSingle">WriteSingle</a></b>(Const Value : Single); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadDouble">ReadDouble</a></b>: Double; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteDouble">WriteDouble</a></b>(Const Value : Double); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadChar">ReadChar</a></b>: Char; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#WriteChar">WriteChar</a></b>(Const Value : Char); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadNextChar">ReadNextChar</a></b>: Char; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#SkipChar">SkipChar</a></b>(Const CharsDelim: String = <a  href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a>); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadLnString">ReadLnString</a></b>: String; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadString">ReadString</a></b>: String; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadString">ReadString</a></b>(len: Integer): String; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadStrToken">ReadStrToken</a></b>(Const CharsDelim: String = <a  href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a>): String;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#ReadStrIntToken">ReadStrIntToken</a></b>: Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Clear">Clear</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#GetBuffer">GetBuffer</a></b>: Pointer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Save">Save</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#GetBufferAsString">GetBufferAsString</a></b>: String;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#EOS">EOS</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#GetStream">GetStream</a></b> : TStream;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#Size">Size</a></b>: Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> StreamSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a></b>: Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> GetStreamPosition;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStreamClasses.TBZCustomBufferedStream.html#BytesLeft">BytesLeft</a></b> : Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> BufferBytesLeft;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(Const aBlockSize: Integer = <a  href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Créer un nouveau flux en mémoire tampon avec une taille de bloc définie par le parmètre &quot;aBlockSize&quot; (64 Mo par défaut)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AStream: TStream; Const aBlockSize: Integer = <a  href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Créer un nouveau flux mis en mémoire tampon à partir d'un objet TStream hérité avec une taille de bloc définie (64 Mo par défaut)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction de <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AssignBuffer"></span><code>Procedure <b>AssignBuffer</b>(aBuffer: Pointer; aSize:Int64);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assigne un tampon de données &quot;aBuffer&quot; de taille &quot;aSize&quot; en octet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AssignStream"></span><code>Procedure <b>AssignStream</b>(aStream: TStream);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assign les données d'un objet TStream &quot;aStream&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Flush"></span><code>Procedure <b>Flush</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vide le tampon</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Read"></span><code>Function <b>Read</b>(Var aBuffer; Count: Longint):Longint; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit des données du flux, de taille &quot;Count&quot; a partir de la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courante et retourne les données dans un tampon &quot;aBuffer&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Write"></span><code>Function <b>Write</b>(Const aBuffer; Count: Longint): Longint; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit les données du tampon de &quot;aBuffer&quot; de taille &quot;Count&quot; à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante dans le flux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Seek"></span><code>Function <b>Seek</b>(Const Offset: Int64; Origin: TSeekOrigin): Int64; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se déplacer dans le tampon suivant &quot;Offset&quot; et en fonction du paramètre &quot;Origin&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SeekForward"></span><code>Function <b>SeekForward</b>(Offset : Int64):Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se déplacer dans le tampon vers l'avant de &quot;Offset&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SeekBackward"></span><code>Function <b>SeekBackward</b>(Offset : Int64):Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se déplacer dans le tampon en arrière de &quot;Offset&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadByte"></span><code>Function <b>ReadByte</b>: Byte; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur &quot;Byte&quot; dans le tampon à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> actuelle et se déplace à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> suivante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteByte"></span><code>procedure <b>WriteByte</b>(Const Value : Byte); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur &quot;Byte&quot; dans le tampon à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> actuelle et se déplace à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> suivante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SkipNextByte"></span><code>Procedure <b>SkipNextByte</b>(Const aCount: Integer = 1); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se deplace de &quot;aCount&quot; Byte vers l'avant dans le flux depuis la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GotoPreviousByte"></span><code>Procedure <b>GotoPreviousByte</b>(Const aCount: Integer = 1); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se deplace de &quot;aCount&quot; Byte vers l'arrière dans le flux depuis la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GotoNextStringLine"></span><code>Procedure <b>GotoNextStringLine</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si les données sont du texte alors se déplace sur la ligne suivante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadWord"></span><code>Function <b>ReadWord</b>: Word; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Word à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteWord"></span><code>procedure <b>WriteWord</b>(Const Value : Word);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Word à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadInteger"></span><code>Function <b>ReadInteger</b>: Integer; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Integer à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteInteger"></span><code>procedure <b>WriteInteger</b>(Const Value : Integer); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Integer à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadLongWord"></span><code>Function <b>ReadLongWord</b>: Longword; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type LongWord à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteLongWord"></span><code>procedure <b>WriteLongWord</b>(Const Value : LongWord); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type LongWord à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadLongint"></span><code>Function <b>ReadLongint</b>: Longint; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Longint à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteLongint"></span><code>procedure <b>WriteLongint</b>(Const Value : Longint); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Longint à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadCardinal"></span><code>Function <b>ReadCardinal</b>: Cardinal; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Cardinal à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteCardinal"></span><code>procedure <b>WriteCardinal</b>(Const Value : Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Cardinal à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadSingle"></span><code>Function <b>ReadSingle</b>: Single; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Single à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteSingle"></span><code>procedure <b>WriteSingle</b>(Const Value : Single); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Single à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadDouble"></span><code>Function <b>ReadDouble</b>: Double; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Double à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteDouble"></span><code>procedure <b>WriteDouble</b>(Const Value : Double); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Double à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadChar"></span><code>Function <b>ReadChar</b>: Char; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Char à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteChar"></span><code>procedure <b>WriteChar</b>(Const Value : Char); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecrit une valeur de type Char à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadNextChar"></span><code>Function <b>ReadNextChar</b>: Char; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur de type Word à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> suivante, sans incrémenter la postion</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SkipChar"></span><code>Procedure <b>SkipChar</b>(Const CharsDelim: String = <a  href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Saute les caractères inclus dans CharsDelim. (Par defaut : Espace, tab, EOL)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadLnString"></span><code>Function <b>ReadLnString</b>: String; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une ligne de texte délimiter par #0 ou #13 à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadString"></span><code>Function <b>ReadString</b>: String; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une ligne de texte de longueur indéfinie à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadString"></span><code>Function <b>ReadString</b>(len: Integer): String; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une ligne de texte de longueur &quot;Len&quot; à la <a class="normal" href="BZStreamClasses.TBZCustomBufferedStream.html#position">position</a> courrante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadStrToken"></span><code>Function <b>ReadStrToken</b>(Const CharsDelim: String = <a  href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a>): String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une chaine de caractères délimiter par &quot;CharsDelim&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadStrIntToken"></span><code>Function <b>ReadStrIntToken</b>: Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lit une valeur integer dans une chaine de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>Procedure <b>Clear</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface les données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetBuffer"></span><code>Function <b>GetBuffer</b>: Pointer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le tampon de données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Save"></span><code>procedure <b>Save</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sauvegarde le tampon de données dans le flux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetBufferAsString"></span><code>Function <b>GetBufferAsString</b>: String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le tampon de données sous forme de chaine de caractères. <br>    <b>Attention</b> : La taille maximal est celle définie à la création du TBZBufferdStream</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EOS"></span><code>Function <b>EOS</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si la fin du flux est atteinte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetStream"></span><code>function <b>GetStream</b> : TStream;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le flux</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Size"></span><code>property <b>Size</b>: Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> StreamSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la taille totale du flux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="position"></span><code>property <b>position</b>: Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> GetStreamPosition;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la <code>position</code> dans le flux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BytesLeft"></span><code>property <b>BytesLeft</b> : Int64 <a  href="BZStreamClasses.TBZCustomBufferedStream.html#Read">read</a> BufferBytesLeft;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre d'octets restant à parcourir</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

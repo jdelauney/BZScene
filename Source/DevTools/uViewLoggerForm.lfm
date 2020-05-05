@@ -1,0 +1,31 @@
+object ViewLoggerForm: TViewLoggerForm
+  Left = 337
+  Height = 240
+  Top = 250
+  Width = 640
+  BorderStyle = bsSizeToolWin
+  Caption = 'Log view'
+  ClientHeight = 240
+  ClientWidth = 640
+  Color = clBlack
+  Constraints.MinHeight = 240
+  Constraints.MinWidth = 640
+  OnShow = FormShow
+  object MemoLog: TMemo
+    Left = 4
+    Height = 232
+    Top = 4
+    Width = 632
+    Align = alClient
+    BorderSpacing.Around = 4
+    BorderStyle = bsNone
+    Color = clBlack
+    Font.Color = clMoneyGreen
+    Font.Height = -11
+    Font.Name = 'Courier New'
+    ParentFont = False
+    ReadOnly = True
+    ScrollBars = ssAutoBoth
+    TabOrder = 0
+  end
+end

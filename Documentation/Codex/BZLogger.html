@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZLogger</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZLogger</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section"><a class="section" href="#PasDoc-Variables">Variables</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient une classe <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a> servant à générer des fichiers logs simplement. Elle utilise un Thread pour ecrire les messages en arrière-plan.</p>
+<p>
+
+
+<p>Vous pouvez ajoutez des sorties supplémentaires en héritant la classe <a class="normal" href="BZLogger.TBZCustomLoggerWriter.html">TBZCustomLoggerWriter</a>. <br> Ensuite il vous suffira de déclarer les nouvelles classes en les ajoutant au <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a> grace à la commande AddWriter(aLogWriter : <a class="normal" href="BZLogger.TBZCustomLoggerWriter.html">TBZCustomLoggerWriter</a>); <br> Vous pouvez accéder aux &quot;Writer&quot; via la propriété LogWriters.Items[]
+
+<p>Par défaut 3 &quot;writers&quot; sont initialisés : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>LogWriters.Items[0] = <a class="normal" href="BZLogger.TBZFileLoggerWriter.html">TBZFileLoggerWriter</a> : Ecriture dans un fichier</p></li>
+  <li><p>LogWriters.Items[1] = <a class="normal" href="BZLogger.TBZCallBackLoggerWriter.html">TBZCallBackLoggerWriter</a> : Ecriture dans la fenêtre de log</p></li>
+  <li><p>LogWriters.Items[2] = <a class="normal" href="BZLogger.TBZCallBackLoggerWriter.html">TBZCallBackLoggerWriter</a> : Ecriture personnalisé</p></li>
+</ul>
+
+<p>
+
+<p>L'écriture du log est intercepté par l'évènement OnCallBack du Logger.
+
+<p>Pour afficher ou cacher la fenêtre de log incorporée ; utilisez les commandes : <br> &quot;ShowLogView&quot; et &quot;HideLogView&quot; <br>
+
+<p>Voir l'exemple dans : Demos\Basics\Logger
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Creation : 24/02/2019</p></li>
+  <li><p>Mise à jour : </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b><br> En plus vous disposer d'un &quot;Writer&quot;, qui écrit le log dans une console (Terminal). <br> Celui-ci supporte différentes couleurs prédéfinies en fonction du type de message. <br> <br> Pour l'ajouter : <br> </p>
+
+<pre class="longcode">
+<span class="pascal_keyword">Var</span>
+  ConsoleLoggerWriter : TBZConsoleLoggerWriter;
+<span class="pascal_keyword">begin</span>
+  ConsoleLoggerWriter := TBZConsoleLoggerWriter.Create(GlobalLogger);
+  GlobalLogger.LogWriters.AddWriter(ConsoleLoggerWriter);
+<span class="pascal_keyword">end</span>;</pre>
+
+<p>
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p>Le logger protège les écritures des log par des sections critique. Il est donc &quot;Thread Safe&quot;. </p></li>
+  <li><p>Les &quot;Writers&quot; ajoutés, sont automatiquement libérés de la mémoire par le Logger. </p></li>
+  <li><p>Un objet nommé &quot;<a class="normal" href="BZLogger.html#GlobalLogger">GlobalLogger</a>&quot; de <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a> est directement initialisé et accessible  &quot;Application graphique W32 (-WG)&quot; et bien sure ajoutez le &quot;Writer&quot;. </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dependances</b> : <a class="normal" href="BZSystem.html">BZSystem</a>, <a class="normal" href="BZClasses.html">BZClasses</a>, BZTypesHelpers, uViewLoggerForm
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b><br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZSystem.html">BZSystem</a></li><li><a  href="BZClasses.html">BZClasses</a></li><li>uViewLoggerForm</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZLogger.FlName.html"><code>FlName</code></a></td>
+<td class="itemdesc">Gestion du nom du fichier journal.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZLoggerItem.html"><code>TBZLoggerItem</code></a></td>
+<td class="itemdesc">Représentation d'un élément de log dans la liste</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZLogger.TBZLoggerCounter.html"><code>TBZLoggerCounter</code></a></td>
+<td class="itemdesc">Compteurs pour les différents niveaux des messages</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZCustomLoggerWriter.html"><code>TBZCustomLoggerWriter</code></a></td>
+<td class="itemdesc">Classe à hériter pour ajouter un nouveau moteur d'écriture des messages</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZLogFileDef.html"><code>TBZLogFileDef</code></a></td>
+<td class="itemdesc">Classe de gestion du nom du fichier journal, définition du mode d'accès et paramètres pour la générations des noms de fichiers.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZFileLoggerWriter.html"><code>TBZFileLoggerWriter</code></a></td>
+<td class="itemdesc">Moteur d'écriture des messages dans un fichier</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZCallBackLoggerWriter.html"><code>TBZCallBackLoggerWriter</code></a></td>
+<td class="itemdesc">Moteur d'écriture des messages personnalisé.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZLogger.TBZLogViewMsgData.html"><code>TBZLogViewMsgData</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZLogViewLoggerWriter.html"><code>TBZLogViewLoggerWriter</code></a></td>
+<td class="itemdesc">Moteur d'écriture des message dans la fenêtre dédiée.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZConsoleLoggerWriter.html"><code>TBZConsoleLoggerWriter</code></a></td>
+<td class="itemdesc"><code>TBZConsoleLoggerWriter</code> : Moteur d'écriture des messages dans la console.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZLoggerWriterList.html"><code>TBZLoggerWriterList</code></a></td>
+<td class="itemdesc">Liste pour enregistrer les différents moteur d'écriture des messages disponibles.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZLogger.TBZLogger.html"><code>TBZLogger</code></a></td>
+<td class="itemdesc"><code>TBZLogger</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZLogger.html#TBZLoggerCallback">TBZLoggerCallback</a></b> = procedure ( aLevel: <a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>; aTimeStamp : TDateTime; const aMessage, ParseMsg : String) of object;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZLogger.html#PFlName">PFlName</a></b> = &circ;<a  href="BZLogger.FlName.html">FlName</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZLogger.html#PBZLogViewMsgData">PBZLogViewMsgData</a></b> = &circ;<a  href="BZLogger.TBZLogViewMsgData.html">TBZLogViewMsgData</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZLogger.html#cDefaultLogFileName">cDefaultLogFileName</a></b> = 'DebugLog';</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZLogger.html#cLogLevelName">cLogLevelName</a></b>    : array[<a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>] of String = ( 'NONE', 'NOTICE', 'STATUS', 'HINT', 'WARNING', 'EXCEPTION', 'ERROR');</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZLogger.html#cLogLevelColor">cLogLevelColor</a></b>   : array[<a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>] of Byte = (15,10,15,11,14,12,12);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Variables"></span><h3 class="summary">Variables</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZLogger.html#GlobalLogger">GlobalLogger</a></b>: <a  href="BZLogger.TBZLogger.html">TBZLogger</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZLogLevel"></span><code><b>TBZLogLevel</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Niveau du message de log</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="llNone">llNone</span></li>
+<li>
+<span id="llNotice">llNotice</span></li>
+<li>
+<span id="llStatus">llStatus</span></li>
+<li>
+<span id="llHint">llHint</span></li>
+<li>
+<span id="llWarn">llWarn</span></li>
+<li>
+<span id="llException">llException</span></li>
+<li>
+<span id="llError">llError</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZLoggerCallback"></span><code><b>TBZLoggerCallback</b> = procedure ( aLevel: <a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>; aTimeStamp : TDateTime; const aMessage, ParseMsg : String) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Procedure de callback pour ecrire un message de log</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PFlName"></span><code><b>PFlName</b> = &circ;<a  href="BZLogger.FlName.html">FlName</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZLogViewMsgData"></span><code><b>PBZLogViewMsgData</b> = &circ;<a  href="BZLogger.TBZLogViewMsgData.html">TBZLogViewMsgData</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cDefaultLogFileName"></span><code><b>cDefaultLogFileName</b> = 'DebugLog';</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nom par defaut du fichier journal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cLogLevelName"></span><code><b>cLogLevelName</b>    : array[<a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>] of String = ( 'NONE', 'NOTICE', 'STATUS', 'HINT', 'WARNING', 'EXCEPTION', 'ERROR');</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Niveau en chaine de caractère</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cLogLevelColor"></span><code><b>cLogLevelColor</b>   : array[<a  href="BZLogger.html#TBZLogLevel">TBZLogLevel</a>] of Byte = (15,10,15,11,14,12,12);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Numéro des couleurs pour la sortie console des messages en fonction du niveau de ceux-ci</p>
+</td></tr>
+</table>
+<h3 class="detail">Variables</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="GlobalLogger"></span><code><b>GlobalLogger</b>: <a  href="BZLogger.TBZLogger.html">TBZLogger</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Variable globale d'acces a un logger automatiquement créé et détruit.</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+24/02/2019
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

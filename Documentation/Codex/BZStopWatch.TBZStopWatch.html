@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZStopWatch: Classe TBZStopWatch</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZStopWatch"></span><h1 class="cio">Classe TBZStopWatch</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZStopWatch.html">BZStopWatch</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZStopWatch = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Composant non-visuel permettant de chronométrer une action</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">TBZStopWatch</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZStopWatch.TBZStopWatch.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStopWatch.TBZStopWatch.html#Start">Start</a></b>(Const AUseRTC:boolean = false);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZStopWatch.TBZStopWatch.html#Stop">Stop</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getTimerLap">getTimerLap</a></b> : Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#TickToTimeUnit">TickToTimeUnit</a></b>(const ATick: Int64; AUnit: <a  href="BZStopWatch.html#TBZTimeUnit">TBZTimeUnit</a>): Extended;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#GetValueAsTime">GetValueAsTime</a></b>: String;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getValueAsMicroSeconds">getValueAsMicroSeconds</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getValueAsNanoSeconds">getValueAsNanoSeconds</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getValueAsMilliSeconds">getValueAsMilliSeconds</a></b>: string;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getValueAsSeconds">getValueAsSeconds</a></b>: string;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getValue">getValue</a></b>: Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getAsSecond">getAsSecond</a></b> : Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getAsMilliSeconds">getAsMilliSeconds</a></b> : Double;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getTicks">getTicks</a></b>: Extended;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getFPS">getFPS</a></b>(FrameCounter:Integer):Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getFPS">getFPS</a></b>:Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#getFPSAsString">getFPSAsString</a></b>(FrameCounter:Integer):String;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZStopWatch.TBZStopWatch.html#TickToMicroSecond">TickToMicroSecond</a></b>(const ATick: Int64): String;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStopWatch.TBZStopWatch.html#UseRTC">UseRTC</a></b> : Boolean read FUseRTC write FUseRTC;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStopWatch.TBZStopWatch.html#PerformanceCountStart">PerformanceCountStart</a></b>: Int64 read FPerformanceCountStart;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStopWatch.TBZStopWatch.html#PerformanceCountStop">PerformanceCountStop</a></b>: Int64 read FPerformanceCountStop;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStopWatch.TBZStopWatch.html#Frequency">Frequency</a></b> : Int64 read FFrequency;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZStopWatch.TBZStopWatch.html#Precision">Precision</a></b> : Byte read FPrecision write FPrecision default 12;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation de <a class="normal" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Start"></span><code>procedure <b>Start</b>(Const AUseRTC:boolean = false);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Démarre le chronomètre avec utilisation l'horloge RTC ou non en fonction du paramètre. Par défaut : FALSE</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Stop"></span><code>procedure <b>Stop</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Arrête le chronomètre</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getTimerLap"></span><code>function <b>getTimerLap</b> : Double;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le temps écoulé en ticks</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TickToTimeUnit"></span><code>function <b>TickToTimeUnit</b>(const ATick: Int64; AUnit: <a  href="BZStopWatch.html#TBZTimeUnit">TBZTimeUnit</a>): Extended;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Convertis les &quot;Ticks&quot; dans l'unité de temps choisi</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetValueAsTime"></span><code>function <b>GetValueAsTime</b>: String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la valeur sous forme de chaine de caractères au format TDateTime</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getValueAsMicroSeconds"></span><code>function <b>getValueAsMicroSeconds</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le temps écoulé en microsecondes sous forme de chaine de caratères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getValueAsNanoSeconds"></span><code>function <b>getValueAsNanoSeconds</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le temps écoulé en nanosecondes sous forme de chaine de caratères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getValueAsMilliSeconds"></span><code>function <b>getValueAsMilliSeconds</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le temps écoulé en millisecondes sous forme de chaine de caratères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getValueAsSeconds"></span><code>function <b>getValueAsSeconds</b>: string;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le temps écoulé en secondes sous forme de chaine de caratères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getValue"></span><code>function <b>getValue</b>: Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une valeur entiere du temps écoulé microsecondes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getAsSecond"></span><code>function <b>getAsSecond</b> : Double;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une valeur double du temps écoulé secondes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getAsMilliSeconds"></span><code>function <b>getAsMilliSeconds</b> : Double;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une valeur double du temps écoulé millisecondes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getTicks"></span><code>function <b>getTicks</b>: Extended;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une valeur Extended du temps écoulé ticks</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getFPS"></span><code>function <b>getFPS</b>(FrameCounter:Integer):Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre de FPS en fonction du nombre de &quot;Frame&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getFPS"></span><code>function <b>getFPS</b>:Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre de FPS en fonction du nombre de &quot;Frame&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getFPSAsString"></span><code>function <b>getFPSAsString</b>(FrameCounter:Integer):String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre de FPS en fonction du nombre de &quot;Frame&quot; sous forme de caractères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TickToMicroSecond"></span><code>function <b>TickToMicroSecond</b>(const ATick: Int64): String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Convertis un nombre de ticks en microsecondes sous forme de chaine de caractères</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UseRTC"></span><code>property <b>UseRTC</b> : Boolean read FUseRTC write FUseRTC;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Utiliser l'horloge RTC</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PerformanceCountStart"></span><code>property <b>PerformanceCountStart</b>: Int64 read FPerformanceCountStart;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la valeur entiere du temps au démarrage du chronomètre</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PerformanceCountStop"></span><code>property <b>PerformanceCountStop</b>: Int64 read FPerformanceCountStop;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la valeur entiere du temps a l'arrêt du chronomètre</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Frequency"></span><code>property <b>Frequency</b> : Int64 read FFrequency;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Frequence de l'horloge interne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Precision"></span><code>property <b>Precision</b> : Byte read FPrecision write FPrecision default 12;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de chiffre après la virgule pour les resultats</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

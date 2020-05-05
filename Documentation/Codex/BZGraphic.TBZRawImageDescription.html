@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGraphic: Classe TBZRawImageDescription</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZRawImageDescription"></span><h1 class="cio">Classe TBZRawImageDescription</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGraphic.html">BZGraphic</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZRawImageDescription = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+TClasse décrivant les informations utiles pour décoder les données brute du bitmap.<br> On stocke ici toutes les informations relatives à la bonne marche des importations et exportations des données d'un format à l'autre.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZRawImageDescription</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZGraphic.TBZRawImageDescription.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZGraphic.TBZRawImageDescription.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#Assign">Assign</a></b>(Source : TPersistent); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#UpdateSize">UpdateSize</a></b>(Const NewWidth, NewHeight : Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#InitDefault">InitDefault</a></b>(Const AWidth, AHeight : Integer; Const ADepth: Byte);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#Init">Init</a></b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#Init">Init</a></b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>;aPixelFormat : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#Init">Init</a></b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>;aPixelFormat : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;const aLineOrder : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#Init">Init</a></b>(const aLineOrder : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a>;Const aPixelFormat:<a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;aPixelSize:Byte;Const aSwapRB, aSwapAlpha : Boolean); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGraphic.TBZRawImageDescription.html#CheckAlphaDescription">CheckAlphaDescription</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGraphic.TBZRawImageDescription.html#getDescriptionAsString">getDescriptionAsString</a></b>:String;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#Width">Width</a></b>: Integer read FWidth Write setWidth;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#Height">Height</a></b>: Integer read FHeight Write setHeight;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#Size">Size</a></b>: Int64 read FSize write FSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#ColorFormat">ColorFormat</a></b> : <a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a> read FColorFormat write FColorFormat;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#PixelFormat">PixelFormat</a></b> : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a> read FPixelFormat write setPixelFormat;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#BitsPerPixel">BitsPerPixel</a></b>: Byte Read FBitsPerPixel;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#PixelSize">PixelSize</a></b> : Byte Read FPixelSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#BitCount">BitCount</a></b>: Byte Read GetBitCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#BitFields">BitFields</a></b> : <a  href="BZColors.TBZColorBitFields.html">TBZColorBitFields</a> read FBitFields write FBitFields;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#RowStrideType">RowStrideType</a></b> : <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a> read FRowStrideType write setRowStrideType;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#RowStrideSize">RowStrideSize</a></b> : Integer read getRowStrideSize;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#RowStrideLength">RowStrideLength</a></b> : Byte read getRowStrideLength;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#BytesPerLine">BytesPerLine</a></b> : PtrUInt read GetBytesPerLine;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#BitsPerLine">BitsPerLine</a></b> : PtrUInt read GetBitsPerLine;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#LineOrder">LineOrder</a></b> : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a> Read FLineOrder Write FLineOrder;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#HasAlpha">HasAlpha</a></b> : Boolean Read FHasAlpha Write FHasAlpha;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#TransparentColor">TransparentColor</a></b> : <a  href="BZColors.html#TBZColor">TBZColor</a> Read FTransparentColor Write FTransparentColor;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#UsePalette">UsePalette</a></b> : Boolean read FUsePalette write FUsePalette;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#PaletteCount">PaletteCount</a></b> : Integer read FPaletteCount write SetPaletteCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#PaletteEntries">PaletteEntries</a></b> : <a  href="BZColors.html#PBZPaletteEntries">PBZPaletteEntries</a> read FPaletteEntries write FPaletteEntries;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#FrameCount">FrameCount</a></b> : Integer Read FFrameCount Write FFrameCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#Interlaced">Interlaced</a></b> : Boolean Read FInterlaced Write FInterlaced;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#WidthInCm">WidthInCm</a></b> : Integer read FPrintSizeWidthInCm write FPrintSizeWidthInCm;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#HeightInCm">HeightInCm</a></b> : Integer read FPrintSizeHeightInCm write FPrintSizeHeightInCm;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGraphic.TBZRawImageDescription.html#DPI">DPI</a></b> : Integer read FDPI write FDPI;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source : TPersistent); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UpdateSize"></span><code>procedure <b>UpdateSize</b>(Const NewWidth, NewHeight : Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>UpdateSize</code> : Mise à jour des dimensions</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InitDefault"></span><code>procedure <b>InitDefault</b>(Const AWidth, AHeight : Integer; Const ADepth: Byte);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>InitDefault</code> : Initialisation par defaut du format en corrélation avec les paramètres de l'OS</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Init"></span><code>procedure <b>Init</b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Initialise certain paramètres de la descriptions </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Init"></span><code>procedure <b>Init</b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>;aPixelFormat : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Init"></span><code>procedure <b>Init</b>(aColorFormat:<a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a>;aPixelFormat : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;const aLineOrder : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Init"></span><code>procedure <b>Init</b>(const aLineOrder : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a>;Const aPixelFormat:<a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a>;aPixelSize:Byte;Const aSwapRB, aSwapAlpha : Boolean); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CheckAlphaDescription"></span><code>procedure <b>CheckAlphaDescription</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérifie et corrige les informations sur la transparence suivant le format. <br> Cette fonction doit être publique pour être appeler dans certain cas. Lors du chargement d'un fichier par exemple</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getDescriptionAsString"></span><code>function <b>getDescriptionAsString</b>:String;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la description complète de l'image sous forme de chaine de caractères</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Width"></span><code>property <b>Width</b>: Integer read FWidth Write setWidth;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Largeur du l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Height"></span><code>property <b>Height</b>: Integer read FHeight Write setHeight;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Largeur du l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Size"></span><code>property <b>Size</b>: Int64 read FSize write FSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Taille de l'image (Taille = (Largeur * Hauteur) * Taille d'un pixel en octet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ColorFormat"></span><code>property <b>ColorFormat</b> : <a  href="BZColors.html#TBZColorFormat">TBZColorFormat</a> read FColorFormat write FColorFormat;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Format couleur de l'image : RGB, BGRA, GrayScale,...</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PixelFormat"></span><code>property <b>PixelFormat</b> : <a  href="BZColors.html#TBZPixelFormat">TBZPixelFormat</a> read FPixelFormat write setPixelFormat;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Format du pixel : <br> - <a class="normal" href="BZColors.html#pf1bit">pf1bit</a> ,<a class="normal" href="BZColors.html#pf2bits">pf2bits</a>, <a class="normal" href="BZColors.html#pf4bits">pf4bits</a>, <a class="normal" href="BZColors.html#pf8bits">pf8bits</a>, <a class="normal" href="BZColors.html#pf15bits">pf15bits</a>, <br> - <a class="normal" href="BZColors.html#pf16bits">pf16bits</a> ,<a class="normal" href="BZColors.html#pf32bits">pf32bits</a>, <a class="normal" href="BZColors.html#pf48bits">pf48bits</a>, <a class="normal" href="BZColors.html#pf64bits">pf64bits</a>, <a class="normal" href="BZColors.html#pf96bits">pf96bits</a> ,<a class="normal" href="BZColors.html#pf128bits">pf128bits</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BitsPerPixel"></span><code>property <b>BitsPerPixel</b>: Byte Read FBitsPerPixel;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Format du pixel 1,2,4,8,16,32,48,64,96,128 bits</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PixelSize"></span><code>property <b>PixelSize</b> : Byte Read FPixelSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Taille d'un pixel en octet. <br> Exemple : 1bits := 1 div 8, 8bits = 1, 32bits = 4</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BitCount"></span><code>property <b>BitCount</b>: Byte Read GetBitCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de bits réelement pris en compte. Il peux donc être différent du <a class="normal" href="BZGraphic.TBZRawImageDescription.html#BitsPerPixel">BitsPerPixel</a>. <br> Exemple : Le pixel format est <a class="normal" href="BZColors.html#pf32bits">pf32bits</a>. Mais tous les pixels de l'image sont opaque (valeur alpha = 255). <br> On peux alors considérer, vu que l'image est entièrement opaque que le <code>BitCount</code> est 24. On n'utilise que les canaux RGB.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BitFields"></span><code>property <b>BitFields</b> : <a  href="BZColors.TBZColorBitFields.html">TBZColorBitFields</a> read FBitFields write FBitFields;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Informations contenant les masques et les décalages de bits afin de pouvoir décoder n'importe quel format de couleur depuis n'importe quel type et taille de pixel (1,2,..8,15,16,32...bits)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RowStrideType"></span><code>property <b>RowStrideType</b> : <a  href="BZGraphic.html#TBZBitmapLineEnd">TBZBitmapLineEnd</a> read FRowStrideType write setRowStrideType;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Definit la façon dont les lignes de l'image sont alignées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RowStrideSize"></span><code>property <b>RowStrideSize</b> : Integer read getRowStrideSize;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Taille de l'alignement des données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RowStrideLength"></span><code>property <b>RowStrideLength</b> : Byte read getRowStrideLength;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Longueur de l'alignement des données de l'image. (0,1,2,3...) <br> Calculer en fonction de <a class="normal" href="BZGraphic.TBZRawImageDescription.html#RowStrideType">RowStrideType</a> et <a class="normal" href="BZGraphic.TBZRawImageDescription.html#RowStrideSize">RowStrideSize</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BytesPerLine"></span><code>property <b>BytesPerLine</b> : PtrUInt read GetBytesPerLine;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre d'octets d'une ligne de l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BitsPerLine"></span><code>property <b>BitsPerLine</b> : PtrUInt read GetBitsPerLine;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de Bits d'une ligne de l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LineOrder"></span><code>property <b>LineOrder</b> : <a  href="BZGraphic.html#TBZBitmapLineOrder">TBZBitmapLineOrder</a> Read FLineOrder Write FLineOrder;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Agencement des lignes de l'image de bas en haut ou de haut en bas</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HasAlpha"></span><code>property <b>HasAlpha</b> : Boolean Read FHasAlpha Write FHasAlpha;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+L'image utilise la transparence</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TransparentColor"></span><code>property <b>TransparentColor</b> : <a  href="BZColors.html#TBZColor">TBZColor</a> Read FTransparentColor Write FTransparentColor;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Couleur de transparence</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UsePalette"></span><code>property <b>UsePalette</b> : Boolean read FUsePalette write FUsePalette;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Utilisation d'une palette Oui/Non</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PaletteCount"></span><code>property <b>PaletteCount</b> : Integer read FPaletteCount write SetPaletteCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de couleur dans la palette</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PaletteEntries"></span><code>property <b>PaletteEntries</b> : <a  href="BZColors.html#PBZPaletteEntries">PBZPaletteEntries</a> read FPaletteEntries write FPaletteEntries;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Pointeur sur le tableau contenant la palette</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FrameCount"></span><code>property <b>FrameCount</b> : Integer Read FFrameCount Write FFrameCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de frame. Uniquement pour les formats de fichier multi images (GIF, APNG, MNG, TIFF)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Interlaced"></span><code>property <b>Interlaced</b> : Boolean Read FInterlaced Write FInterlaced;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indique si l'image est entrelacée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WidthInCm"></span><code>property <b>WidthInCm</b> : Integer read FPrintSizeWidthInCm write FPrintSizeWidthInCm;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HeightInCm"></span><code>property <b>HeightInCm</b> : Integer read FPrintSizeHeightInCm write FPrintSizeHeightInCm;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DPI"></span><code>property <b>DPI</b> : Integer read FDPI write FDPI;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

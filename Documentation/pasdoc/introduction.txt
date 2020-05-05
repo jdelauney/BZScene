@@ -1,0 +1,678 @@
+@shorttitle(Acceuil)
+@title(BZScene bibliothèque multimédia 2D, 3D et audio pour Larazus & FPC)
+
+@author(J.Delauney (BeanzMaster))
+
+Licence : MPL / GPL
+
+@section(1 SecPreface Preface)
+
+@Bold(BZScene) est la solution Audio, 2D et 3D pour développer des applications graphiques multiplateformes avec Lazarus &amp; FPC 32 et 64 bits.
+
+@Bold(BZScene) est en partie basé sur le moteur de rendu  @html(<a href ="https://sourceforge.net/projects/glscene/">GLScene</a>). Communauté dont je fais partie.
+@html(<a href ="https://sourceforge.net/projects/glscene/">GLScene</a>) est le fruits de centaines de développeurs à travers le monde.
+
+Son histoire débute dans les années 1995 avec @html(<a href ="http://www.lischke-online.de/">Mike Lischke</a>)( "Soft Gems - Mike Lischke") et ces bibliothèques pour delphi @html(<a href ="https://github.com/mike-lischke/GraphicEx>GraphicEx</a>)", et de GLScene. @br
+Puis le flambeau de GLScene à été passé à Eric Grange. Depuis la communauté est toujours là et est plus ou moins active. C'est une bibliothèque robuste, optimisée, et éprouvée. Mais le code est "vieillissant"
+
+Passioné par tout ce qui à un rapport avec le traitement d'image, les effets en temps réel, la 3D et l'audio, ce fût naturel pour moi de commencer cette aventure.@br 
+Le désire de coder cette bibliothèque est venue dans le courrant de l'année 2017, lors de ces deux discussions, @html(<a href="https://www.developpez.net/forums/d1610633/autres-langages/pascal/lazarus/info-font-graphisme-pointu/">ici</a>) et @html(<a href="https://www.developpez.net/forums/d1677547/autres-langages/pascal/lazarus/copie-d-image-resultat-mauvais-selon-type-d-image/">là</a>) entre autres. Tout cela afin de disposer d'une gestion des bitmaps simple, rapide et robuste avec Lazarus. Mais aussi d'améliorer le portage de GLScene depuis Delphi.
+@br
+@br
+@html(<hr>)
+@section(1 SecCapacityA Que contient BZScene ?)
+
+BZScene est divisé en neuf groupes principaux, afin de faciliter le débogage et le développement en général.
+
+@unorderedlist( 
+  @item(Core         : Contient les unités communes à la bibliothèque)
+  @item(Dependencies : Contient les unités externes utilisée, comme par exemple Freetype, PasJpeg... ) 
+  @item(Maths        : Contient les unités découlant de mathématique vectorielles et de base. Ces unités sont optimisée et utilisent les instructions SIMD : SSE/AVX )
+  @item(Image        : Contient les unités relatives à la gestion et la manipulation des bitmaps)
+  @item(Audio        : Contient les unités relatives à la gestion du son)  
+  @item(Utils        : Contient des unités qui regroupent des méthodes utiles dans différents domaines)
+  @item(Engine       : Contient les unités des moteurs de rendu 2D et 3D. "encore en cours de dev" )
+  @item(Components   : Contient les unités des composants pouvant être installés dans l'EDI)
+  @item(DevTools     : Contient des unités utiles pour le développeur)
+)
+@br
+@br
+@html(<hr>)
+@section(1 SecCapacityB Les principales unités à connaitre. Ce quelles contiennent et leurs capacités)
+@unorderedlist( 
+  @item(@bold(Options de compilation)
+        Afin de contrôler les options de compilation vous devrez éditer le fichier "BZScene_options.inc"@br     
+        Vous pourrez contrôler l'utilisation des méthodes rapide mathématique ainsi que l'utilisation de l'assembleur
+        
+  )
+  @item(@bold(Core) :
+        @orderedlist( 
+		  @Item(@Bold(BZSytem.pas) : @br
+		        L'unité BZSystem, regroupe quelques routines pour la detection de l'OS, du CPU et autres informations sur le systeme en général. Elle contient également des fonctions utiles pour une application. (retrouver le dossier de l'application, dossier temporaire de l'OS etc...)
+		  )
+		  @Item(@Bold(BZUtils.pas) : @br
+		        L'unité BZUtils contiens des routines utiles dans différents domaines tel que
+                les nombres, la manipulation de bits, le calcul de CRC32 etc... @br
+                Certaines routines ont étés optimisées gràce à l'utilisation de l'assembleur.       
+		  )
+		  @Item(@bold(BZClasses.pas) : @br
+                L'unité BZClasses contient des classes conçues à des fins génériques.@br
+                Elles implémentent un mécanisme de persistance légèrement différent de celui de la LCL / VCL. @br
+                Elles permettent le contrôle de version au niveau de l'objet avec une persistance 100%  ascendante et une compatibilité polymorphe.@br
+                Cette unité, contient également les définitions d'objets à remplacer.@br
+                Ces objets peuvent être 'notifiés pendant les changements' et peuvent être animées (simulations basées sur le temps). @br
+                Elles peuvent inclure un méchanisme de lecture/écriture de données dans un flux optimisée. @br
+                Elle contient également des classes spécialisées et utiles comme par exemple,le remplacement d'un TStringList basé sur le hachage.@br
+				@br	
+				@bold(Les principales classes à connaitre) :					
+				@unorderedlist( 
+				  @item(@bold(TBZPersistentObject) : Classe de base pour les objets persistants. @br
+						L'exigence de base est l'implémentation de ReadFromFiler et WriteToFiler dans les sous-classes.@br
+						L'autre exigence est l'utilisation d'un constructeur virtuel, ce qui permet la construction polymorphe (ne pas oublier d'enregistrer vos sous-classes).@br
+						Les avantages immédiats sont le support du streaming (flux, fichier ou chaîne), l'affectation et le clonage.
+				  )
+				  @item(@bold(TBZPersistentObjectList) : Liste d'objets persistants.@br
+						Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.@br
+						Contrairement à la TObjectList de la VCL / LCL, TBZPersistentObjectList ne libère pas ses objets lors de la destruction ou de Clear. Vous devez utiliser les fonctions Clean et CleanFree.@br
+						@unorderedlist(
+						  @item(Seuls les éléments TBZPersistentObject et descendants seront gérés correctement.)
+						  @item(La liste peut être utilisée sous forme de LIFO  avec Push and Pop.)
+						  @item(Vous pouvez effectuer des opérations booléennes de base.)
+						)
+						
+						@italic(Note) : L'implémentation de la fonction IndexOf est jusqu'à 3 fois plus rapide que celle de TList 
+				  )
+				  @item(@bold(TBZUpdateAbleObject) : Classe abstraite décrivant l'interface "IGLZNotifyAble"@br
+						 Elle offre un systeme d'événements de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes.
+				  )
+				  @item(@bold(TBZCadenceAbleComponent) : Classe abstraite décrivant l'interface "IBZProgessAble"@br
+						 Elle est basée sur le Temps, permettant de créer des animations / simulations (2D,3D,...) ou autres fonctions d'arrière-plan
+				  )
+				  @item(@bold(TBZUpdateAbleComponent) : Classe abstraite décrivant et supportant IGLZProgessAble et IGLZNotifyAble@br
+						Elle offre la cappacité de notifer les changements de valeurs des propriétés à d'autres classes. Et permet "d'animer" les propriétés en se basant sur le temps
+				  )
+				  @item(@bold(TBZCustomDataFile) : Classe de base abstraite pour les interfaces de formats de fichiers de données.@br
+						Cette classe déclare les comportements de base liés aux fichiers. C'est à dire, pouvoir charger / enregistrer à partir d'un fichier ou d'un flux.@br
+						Il est fortement recommandé de surcharger SEULEMENT les méthodes d'acces à la mémoire. (fonction CanLoad et procedure LoadFromMemory)@br
+						Les comportements en flux permettent d'ajouter d'autres capacités en Entrée/Sortie, comme la compression, la mise en cache, etc... sans qu'il soit nécessaire de réécrire de sous-classes.@br
+						@italic(Note ): CheckFormat / LoadFromMemory / SaveToMemory : Les enfants doivent réécrirent ces méthodes pour supporter la lecture et ou l'écriture d'un format de fichier spécifique.
+				  )
+				  @item(@bold(TBZStringList) : Classe optimisée pour utiliser une liste de chaine de caractères. A utiliser en remplacement d'une TStringList. @br
+						On a la possibilité d'associer un d'objets et ou  un Tag de type integer et single à chaque élément.  
+						A chaque item est associé à un "Hash" permettant ainsi de retrouver un élément spécifique très rapidement juste par correspondance. La liste n'a donc pas besoin d'être triée pou effectuer un recherche rapide@br
+						Cette classe dispose également d'une méthode de trie 'DirectSort" plus rapide que QuickSort. Elle utilise l'algorithme de tri "A-Sort".					       
+				  )
+				)
+		  )
+		  @Item(@bold(BZArrayClasses.pas) : @br
+                 L'unité BZArrayClasses contient des classes génériques pour manipuler des tableaux "Array" a travers un pointeur.@br
+                 Elle regroupe des tableuax 1D et 2D pour les types Byte, Integer, Single et double@br
+                 Fournis quelques fonctions utiles et communes  ajouter, supprimer, l'accès aux données par incrément, de tri, l'accès en mode LIFO (Stack), la "mutation"
+				 
+                @bold(Les principales classes et types à connaitre) : @br
+				@unorderedlist( 
+				  @item(@bold(Tableaux prédéfinis 1D ) : TBZByteList, TBZIntegerList, TBZSingleList, TBZDoubleList)
+                  @item(@bold(Tableaux prédéfinis 2D ) : TBZByte2DMap, TBZInteger2DMap, TBZSingle2DMap, TBZDouble2DMap )
+                )
+		  )
+		  @Item(@bold(BZColors.pas) : @br
+                L'unité BZColors définis et regroupe les systèmes de couleurs RGBA / BGRA suivant l'OS, HSV, et autres espaces de couleur et leurs informations. @br
+				Contient des objets pour la gestion de palette de couleurs et des dégradés.
+		  
+                @bold(Les principales classes et types à connaitre) : @br
+				@unorderedlist( 
+				  @item(@bold(TBZColor32 / TBZColor )
+                  TBZColor32 est un enristrement avancé décrivant le format de couleur RGBA ou BGRA automatiquement en fonction de l'OS. Les valeurs sont de type byte [0,255]. TBZColor est un type de convenance décrivant un TBZColor32@br
+                  TBZColor32 supporte les opérateurs courrant : +, -, *, /, and, or, xor. Il contient également plusieurs méthode pour facilité la manipulation de couleur. L'acces se fait via les propriétés Red, Green, Blue, Alpha ; AsInteger, et un tableau de valeur et enfin AsVector3b (x,y,z).
+                  )
+                  @item(@bold(TBZColorVector)
+                  Identique à TBZColor32 sauf que les valeurs sont de type single et sont comprises dans l'interval [0.0,1.0].
+                  )                  
+                  @item(@bold(TBZPaletteEntries)
+                  Définis un tableau de TBZColor32, pour stocker rapidement une palette de couleur.
+                  )
+                  @item(@bold(TBZColorList)
+                  TBZColorList est une classe servant à gérer une liste de couleur.
+                  )
+                  @item(@bold(TBZGradientColorList)
+                  TBZGradientColorList est une liste servant à décrire un dégradé de couleur.
+                  )
+                  @item(@bold(TBZColorsManager)
+                  TBZColorsManager est une classe permettant de gérer un liste de couleur et les dégradés de couleur. Elle permet l'animation de la palette.
+                  )
+                )
+          )				
+		  @Item(@bold(BZGraphic.pas) : @br
+                L'unité BZGraphic définis et regroupe des enregistrements et objets de base pour la gestion des bitmaps, des informations sur les formats d'image,  @br
+                Définis les types de filtres et autres données utiles à la gestion du graphisme.@br				
+                Elle contient également quelques méthodes globale utiles.
+				
+                @unorderedlist( 
+                  @item(@bold(TBZRect / TBZFloatRect)
+                  Ces deux types sont des enregistrements avancés permet la manipulation de "Rectangle" comme le TRect natif.@br
+                  Ces types supportent les operateurs, ainsi que des méthodes utiles à leur manipulation.
+                  )
+                  @item(@bold(TBZRawImageData / TBZRawImageDescription)
+                  Ces deux classes sont utilisées par TBZCustomBitmap, elles permettent de décrire le format et les spécification d'image chargée via "LoadFromFile".
+                  )
+                  @item(@bold(TBZCustomBitmap)
+                  TBZCustomBitmap est la classe de base pour la gestion de bitmap. Elle contient des méthodes basiques pour copier en entier ou en partie un autre bitmap. Dessiner des lignes, des rectangles, déplacer ("Scroller") le bitmap, et de quelques méthodes de traitement. Il dispose également d'un systeme de gestion de calques.
+                  )
+                  @item(@bold(TBZImageFileFormatsList)
+                  TBZImageFileFormatsList permet de stocker les différentes classes en charge de la lecture et de l'écriture d'image dans différents formats. Sont accès se fait globalement vi la fonction GetBZImageFileFormats .
+                  )
+                )
+		  )
+		  @Item(@bold(BZParallelThread.pas) : @br
+                L'unité BZParallelThread contient un objet TBZParallelThread et des méthodes globales qui permettent d'exécuter des opérations en parallele facilement grâce au multithreading. Elle dispose de la possibilité de suivre la progression de la tâche.
+		  )
+		  
+        )
+   ) 
+   @Item(@bold(Maths) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZMath.pas)
+             L'unité BZMath contient des fonctions mathématiques optimisées. @br
+             Si l'option USE_FASTMATH est activée, des fonctions optimisées par approximation sont utilisées. @br
+             @br
+             Par exemple: @br
+             - Les fonctions 'approximatives' de Sin et Cos ont une précision moyenne de 4E-8 et sont jusqu'a 5 fois plus    rapide que les fonctions natives. 
+		
+             Elle comprend également des fonctions trigonométriques, calcul d'interpolations,
+             Des fonctionnalités avancées comme Bessel, BlackMan. Et aussi quelques fonctions utiles
+             Il y a également des fonctions indéfinies dans l'unité Math FPC tel
+             ArcCsc, ArcSec, ArcCot, CscH, SecH ect ... @br 
+	   )
+       @Item(@Bold(BZVectorMath.pas) : @br
+             L'unité BZVectorMath contient des enregistrements avancés optimisée pour l'utilisation de mathématique vectorielle. Une majorité des méthodes utilisent l'accélération SIMD (SSE, SSE3, SS4, AVX, AVX2) si l'option USE_ASM_OPTIMIZATIONS est activée. @br
+             Elles peuvent être utilisées dans les graphiques 2D / 3D et tout autre application nécessitant des calculs mathématique avec des vecteurs.
+		   
+            Les types de vecteurs supportés : @br
+           @unorderedlist(
+             @item(Vecteur 2D Integer, Single et Double)
+             @item(Vecteur 3D Byte, Integer, et Single)
+             @item(Vecteur 4D Byte, Integer, Single @TODO Double (AVX & native only) )
+             @item(Matrice 2D Single )
+             @item(Matrice 4D Single Matrix )
+             @item(Quaternion)
+             @item(Plan Homogène)
+           )
+		   
+		    Les liste de vecteurs supportés : @br
+           @unorderedlist(
+		     @item(TBZVector2f2DMap)
+			 @item(TBZVector4f2DMap)
+			 @item(TBZVector2iList)
+			 @item(TBZVector2fList (supporte le trie en fonction des X puis Y))
+             @item(TBZArrayOfFloatPoints)
+			 @item(TBZArrayOfPoints)
+			 
+		   )
+           
+           Contient également des fonctions identique au script GLSL / HLSL tel que Lerp, SmoothStep, Step...
+	   )
+       @Item(@Bold(BZVectorMathEx.pas) : @br
+             L'unité BZVectorMathEx contient des enregistrements avancés supplémentaire à BZVectorMath optimisée avec les instructions SIMD utiles principalement en 3D. @br@br
+             @bold(Types supportés) :@br
+             @unorderedlist(
+               @item(Matrix affine (pour la manipulation en 2D))              
+               @item(Frustum)
+               @item(Bounding Box 3D orienté (OBB))
+               @item(Bounding Sphere )
+               @item(Axis Aligned Bounding Box for 3D, Axis Aligned Bounding Rect for 2D )     
+	           @item(Raycast)	 	 
+             )      
+	   )
+      @Item(@Bold(BZVectorMathUtils.pas) : @br
+            L'unité BZVectorMathUtils contient des méthodes pour faciliter l'utilisation des vecteurs
+      )
+	 )
+   )
+   @Item(@bold(Image) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZBitmap.pas) : @br
+             L'unité BZBitmap, contient la classe TBZBitmap descendant de TBZCustomBitmap. Elle est spécialisée dans la gestion et la manupilation et le traitement d'image.@br
+			 C'est une sorte de **Super TBitmap**. @br
+             La manipulation se fait exclusivement en 32 bits (RGBA/BGRA)@br@br
+             @bold(Capacités) :@br
+             @unorderedlist(
+               @item(Accès aux pixels optimisé)
+               @item(Accéder aux données graphique indépendemment des routines de FPC et de la LCL)
+               @item(Affichage 32bit avec ou sans transparence en fonction du sytsteme et de l'interface.)
+               @item(Importation / exportation des divers formats d'image (cf l'unité BZBitmapIO))
+               @item(Support des masques.)
+               @item(Transformations (Mirroir Horizontal et vertical, rotation, recadrage, redimensionnement (Normal, lissé, lissage bicubique, par rééchantillonage avec + de 30 filtres disponibles)))
+               @item(Fusion d'image +20 modes différents)
+               @item(Conversion en niveaux de gris suivant plusieurs méthodes) 
+               @item(Filtres sur les couleurs + de 50 (negate, modulate, luminosité, saturation...))
+               @item(Lissage (rapide, lineaire, box, split, gaussien, radial, motion, FXAA))
+               @item(Filtres de convolutions + de 60 filtres prédéfinis disponibles)
+               @item(Filtres de deformations. (Tourbillon, pincement, fisheye, polaire/cartésien, sinuosidale, diffusion))
+			   @item(Filtres de seuillage.)
+			   @item(Filtres de morphologique.)
+			   @item(Filtres de segmentation, detection des contours ( par gradient, canny, DOG, LOG,...))
+			   @item(Filtres d'effets spéciaux. (Bloom, Gloss, Pixelate...))
+               @item(Dessiner des points, lignes, cercles, ellipses, rectangle, triangle, beziez remplissage (uni, dégradé, texture))         
+               @item(Afficher du texte (via la bibliothèque FreeType))
+               @item(Génération de texture (Damier, grille, bruit))
+            )
+	   )
+       @Item(@Bold(BZBitmapIO.pas) : @br
+             L'unité BZBitmapIO est une unité de convenance pour la prise en charge de tous les formats image supportés@br
+             @br
+             @bold(Format supportés en lecture) :@br
+             @unorderedlist(
+               @item(BMP Windows et OS/x. 1,2,4,8,16,24,32 et 64 bits. bmp, dib)
+               @item(X PixMap. xpm)
+               @item(Portable pxmap : pbm, pgm, pnm, ppm, pam, pfm)
+               @item(PCX ZSoft Paintbrush. 1, 2, 4, 8, 24, 32 bits. pcx, pcc, scr)
+               @item(TGA TrueVision TARGA. 8, 16, 24, 32 bits. tga, vst, icb, vda)
+               @item(Graphic Interchange Format 87a et 89a, animé ou non. gif)
+               @item(Potable Network Graphic. 1 à 64 bits. png)
+               @item(JPEG. jpeg, jpe, jpg, jfif)
+			   @item(Google WEBP, webp)
+             )
+             @br        
+             @bold(Format supportés en écriture à l'heure actuelle) :@br
+             @unorderedlist(
+               @item(BMP Windows 24 & 32 bits uniquement)
+			   @item(TGA)
+			   @item(JPEG)
+             )
+	   )
+       @Item(@Bold(BZImageViewer.pas) : @br
+             L'unité BZImageViewer contient le composant TBZImageViewer qui est un control visuel similaire au TImage@br
+             Il dispose de quelques options supplémentaires, tel que la prise en charge du déplacement, du zoom. L'affichage d'un fond de type echiquier.@br
+             Supporte plusieur filtre pour la mise à l'échelle et différents comportements en fonction de la taille de l'image chargée.        
+	   )
+	 )
+   )       
+   @Item(@bold(Utils) : @br
+     @orderedlist( 
+       @Item(@Bold(BZRandomGenerator.pas) : @br
+             L'unité BZRandomGenerator contient un classe "Thread-Safe" pour la génération de nombre aléatoire.
+	   )
+       @Item(@Bold(BZKeyboard.pas) : @br
+             L'unité BZKeyboard contient des fonction utiles pour l'interception et le mappage des touches appuyées sur le clavier. 
+	   )
+       @Item(@Bold(BZInterpolationFilters.pas) : @br
+             L'unité BZInterpolationFilters contient plusieurs type de filtre d'interpolation (utilisé pour le rééchantillonage d'image par exemple)
+	   )
+       @Item(@Bold(BZAnimationTool.pas) : @br
+             L'unité BZAnimationTool contient un objet et des méthodes pour le calcul d'animations de valeurs gràce à des fonctions paramétrique 1D (easing)
+	   )
+       @Item(@Bold(BZGeoTools.pas) : @br
+             L'unité BZGeoTools contient des classes utiles pour la manipulation de primitives vectorielles. @br
+			 @unorderedlist(
+			   @item(Lignes)
+			   @item(Polyline)
+			   @item(Polygones)
+			   @item(Cercle/Ellipse)
+			   @item(Courbes de bezier quadratic, cubic, spline)
+			 )
+	   )
+
+       @Item(@Bold(BZNoiseGenerator.pas) : @br
+             L'unité BZNoiseGenerator contient des classes d'objet permettant de générer divers bruits :
+			 @unorderedlist(
+			   @item(Bruit blanc, bruit gaussien)
+			   @item(Bruit de Perlin)
+			   @item(Bruit par valeurs)
+			   @item(Bruit Simplex / OpenSimplex)			  
+			 ) @br
+			 @Bold(NOTE) : Celle-ci est finaliser pour une utilisation à 100% et pour générer des textures de bruit cohérent
+	   )
+	 )
+   ) 
+   @Item(@bold(Audio) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZSound.pas) : @br
+	   L'unité BZSound contient les classes et collections pour la gestion des sources audio et des effets sonore.
+	   )
+       @Item(@Bold(BZOpenALManager.pas) : @br 
+	   L'unité BZOpenALManager contient le gestionnaire audio pour le moteur OpenAL.
+	   )	   
+	 )
+   )    
+   @Item(@bold(Components) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZThreadTimer.pas) : @br
+	   L'unité BZThreadTimer contient un composant non-visuel TBZThreadTimer. C'est un bon remplaçant au TTimer habituel. Celui est plus précis et s'éxécute en arrière-plan dans un thread à part.
+	   )
+	   @Item(@Bold(BZHotKeyManager.pas) : @br
+	   L'unité BZHotKeyManager contient trois composants non-visuel TBZFormHotKey, TBZApplicationHotKey, TBZSystemHotKey ceux-ci permettent l'interception de l'appuis de raccourcis clavier chacun à leur niveau. Dans la fenêtre en cours, dans toutes l'application, en dehors de l'application (Application minimiser dans la barre d'icone par exemple)
+	   )       
+	   @Item(@Bold(BZCadencer.pas) : @br
+	   L'unité BZCadencer contient un composant non-visuel TBZCadencer à la façon d'un TTimer,  en plus précis et spécialisé dans la mise en place d'animations synchronisées.
+	   )  
+       @Item(@Bold(BZFileFinder.pas) : @br	   
+	   L'unité BZFileFinder contient un composant non-visuel TBZFileFinder d'aide à la recherche de fichiers récursif, sur un disque ou dans un dossier.
+	   )
+       @Item(@Bold(BZScreenMode.pas) : @br	
+       L'unité BZScreenMode contient un composant non-visuel TBZScreenMode permmettant de changer la résolution du moniteur et d'afficher en mode "plein écran"
+	   )
+     )	   
+   )   
+   @Item(@bold(DevTools) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZTypesHelpers.pas) : @br	
+	   L'unité BZTypesHelpers surcharge les assistants de types (byte, word, integer, string, TDatetime) par défaut de FPC et Lazarus en y ajoutant plusieurs fonctions utiles.
+	   )     
+	   @Item(@Bold(BZLogger.pas) : @br
+	   L'unité BZLogger contient un composant non-visuel TBZLogger permmettant de générer des "log" très simplement dans un fichier, dans la console, dans un fenêtre supplémentaire etc...
+	   )
+       @Item(@Bold(BZStopWatch.pas) : @br
+	   L'unité BZStopWatch contient un composant non-visuel TBZStopWatch est une sorte de chronomètre très précis, qui permet de calculer le temps en 2 actions.
+	   )       
+	 )
+   )
+   @Item(@bold(Engine) : @br
+     @orderedlist( 
+	   @Item(@Bold(BZCustomShader.pas) : @br
+	   L'unité BZCustomShader contient les classes de base à hériter pour le rendu de shader (openGL/Vulkan/Software)
+	   )
+	   @Item(@Bold(BZBitmapRasterizer.pas) : @br
+	   L'unité BZBitmapRasterizer contient des classes spécialisées dans le rendu de shader alla GLSL en software.
+	   )
+	   @Item(@Bold(BZBitmapFont.pas) : @br
+	   L'unité BZBitmapFont contient les classes pour le rendu de police bitmap.
+	   )	
+       @Item(@Bold(BZSoftwareShader_?????.pas) : @br
+	   Ces unités contiennent les methodes de rendu de différents Shader en software.
+	   )	   	   
+	 )
+   )     
+ ) 
+@br
+@bold(NOTE) : Les unités non listées ici, sont principalement des unités utilisées en en interne. Je vous laisse donc vous reporter à leur code source pour plus d'information. @br
+Sinon, cela signifie que les unités non listés sont encore en cours de développement, ne sont pas stables ou non pas encore été testés.
+@br
+@br
+@html(<hr>)
+@section(1 SecInstallA Prérequis)
+
+@bold(La principale dépendance pour utiliser les bitmaps est la bibliothèque FreeType). @br
+Que ce soit ous Linux ou Windows. Cette bibliothèque doit-être installée sur votre système. Sous Windows vous pourrez placer directement la "DLL" dans le dossier de vos exécutables.
+
+@bold(Les autres bibliothèques requises sont) :
+@unorderedlist(
+  @item(LibWebp : Pour la prise en charge des image au format Webp)
+  @item(OpenAL, warp_oal et soft_openal : Pour la gestion audio (@bold(note) : soft_openal est la version software : https://openal-soft.org), pour l'utilisation de cette dernière vous devrez le renommer en "OpenAL64" ou "OpenAL32")
+  @item(Libmodplug : Prise en charge des format audio tracker (.mod, .st3, .xm,...))
+  @item(LibVorbis, LibOgg : Prise en charge des formats audio OGG)
+  @item(Libmpg123 : Prise en charge du format audio MP3)  
+)
+
+Pour Windows, vous trouverez les "DLL" dans le dossiers Externals/Windows/x64  et Externals/Windows/x86. @br
+Pour Linux vous devrez installer ces bibliothèques depuis votre gestionnaire de paquet
+@br
+@br
+@html(<hr>)
+@section(1 SecInstallB Installation)
+
+@orderedlist(
+  @item(Lancez Lazarus (pas trop fort quand même !))
+  @item(Dirigez vous vers le menu Paquet --> Ouvrir un paquet)
+  @item(Choisissez en 1er le paquet @italic(bzscene_rt) qui se trouve dans le dossier "Packages")
+  @item(Cliquez sur le bouton @bold(Compiler))
+)
+
+Recommencez les étapes 2,3 et 4 pour les paquet dans cet ordre : @br
+@unorderedlist(  
+  @item(@italic(bzscene_tool_rt))
+  @item(@italic(bzscene_controls_rt))  
+  @item(@italic(bzscene_image_rt))
+  @item(@italic(bzscene_engine_rt))
+  @item(@italic(bzscene_audio_rt), seulement si vous désirez utiliser les fonctions audio)
+)
+
+Vous pouvez maintenant également, si vous le désirez installer les composants dans l'EDI.
+
+@orderedlist(
+  @item(Dirigez vous vers le menu Paquet --> Ouvrir un paquet) 
+  @item(Choisissez en le paquet @italic(bzscene_control_dt) (ce paquet est recommandé, car de nombreux exemples utilise TBZImageViewer) qui se trouve également dans le dossier "Packages")
+  @item(Cliquez sur le bouton @bold(Utiliser) et choisissez @bold(Installer))
+)
+
+Optionnellement vous pouvez installer les autres composants disponibles en suivant les mêmes étapes que ci-dessus avec les paquets suivant : @br
+@unorderedlist(
+  @item(@italic(bzscene_tool_dt))
+  @item(@italic(bzscene_audio_dt - NON RECOMMANDE A CAUSE D'UN BUG LIE A L'EDI)) 
+)
+
+@bold(Note) : BUG : NE PAS INSTALLER LE PAQUET BZSCENE_AUDIO_DT malgré que celui-ci s'installe s'en encombre. En effet un bug est présent et génère une Erreur : "Out of memory" dès que vous souhaiterez poser une des composants sur votre fiche, sauf pour le "SoundManager". @br
+Néammoins vous pourrez utilisez ces composants en les créant par code
+
+@br
+@br
+@html(<hr>)
+@section(1 SecHowto Démarrer un projet avec BZScene)
+@orderedlist(
+  @item(Créez un nouveau projet "application")
+  @item(Dirigez vous vers le gestionnaire de projet
+    @orderedlist(
+	  @item(Faites un clique droit sur "Paquets requis")
+	  @item(Dans la boite de dialogue, en fonction des méthodes que vous souhaitez utiliser, choisissez les paquets : bzscene_rt, bzscene_image_rt, bzscene_tools_rt, bzscene_engine_rt, bzscene_audio_rt)
+	)
+	@br
+	@bold(NOTE) : Le choix des paquets insereront automatiquement les dépendances requises du paquet.
+	Exemples : @br
+	@unorderedlist(
+	  @item(Vous choisissez le paquet bzscene_image_rt, le paquet bzscene_rt sera automatiquement référencé.)
+	  @item(Vous choisissez le paquet bzscene_engine_rt, les paquet bzscene_rt, bzscene_image_rt seront automatiquement référencés.)
+	)
+	@br
+  )
+  @item(Enregistrez votre projet)
+  @item(Facultatif, mais conseillé. Dirigez vous dans les options du projet. Cliquez sur le bouton @italic(Importer) et allez chercher le fichier @italic("Lazarus_BZScene_Desktop_Config") qui se trouve dans le sous-dosssier @bold(LazProjectConfig) de la bibliothèque. @br
+  @br
+  Ce fichier iimportera directement les options de compilation (debug et release), nécessaire pour la cross-compilation pour les environnements Windows et Linux 32 et 64bit. @br
+  Il vous suffira juste de choisir le mode que vous déserez pour compiler votre projet.
+  )
+  @item(Insérer les nom d'unités que vous souhaitez utiliser dans la clause @italic(uses))
+  @item(Commencez à coder comme vous le faite d'habitude)
+)
+@br
+@br
+@Bold(NOTE] : Dans un soucis de compatibilité et de "non frustration" les fonctions en assembleur on été désactivées. @br Celles-ci sont relativement stables dans des environnement 64 bits et ont fait l'objet de tests unitaire poussés. @br
+Vous pouvez les activer en éditant le fichier bzscene_options.inc qui se trouve dans le dossier "Source".@br
+Dirigez vous à la ligne 93 et supprimer le point "." de la commande @italic({.$DEFINE USE_ASM_SSE_3}).   @br
+@br
+@bold(Si vous utilisez l'assembleur, il vous faudra faire attention à l'alignement des données.) 
+
+Pour ce faire vous devrez ajouter les ligne suivantes dans l'entète de vos unités (hors unités de l'application contenant des "Form" ou ce n'est pas obligatoire) :@br
+@longcode(#
+{$ALIGN 16}
+{$CODEALIGN CONSTMIN=16}
+{$CODEALIGN LOCALMIN=16}
+{$CODEALIGN VARMIN=16}  
+#)
+
+Si vous déclarer des variables vous devrez entourer celle-ci comme ceci : @br
+@unorderedlist(
+  @item(Dans une classe : @br
+    @longcode(#
+	Type
+	  MaClass = Class
+	  private
+	    {$CODEALIGN RECORDMIN=16}
+	    MonVecteur : TBZVector;
+	    MaMatrix : TBZMatrix;
+	    {$CODEALIGN RECORDMIN=4}
+	  end;	  
+	  #)
+  )
+  @item(Comme constante : @br
+    @longcode(#
+	Const
+	  {$CODEALIGN CONSTMIN=16}
+	  MonVecteur : TBZVector = (x:1.0; y:2.0; z:3.0; w:4.0);	
+	  {$CODEALIGN CONSTMIN=4}	
+	#)
+  )
+  @item(Comme une variable locale ou globale : @br
+    @longcode(#
+	Var
+	  {$CODEALIGN VARMIN=16}
+	  MonVecteur : TBZVector;
+	  MaMatrix : TBZMatrix;
+	  {$CODEALIGN VARMIN=4}
+	#)
+  )  
+)
+@br
+A Savoir (uniquement avec l'utilisation de l'assembleur) vous serez limiter à 4 (5 maximum) operations sur un seule ligne, suivant les cas.@br
+@bold(Exemple) : @br
+@longcode(#
+function compute : TBZVector;
+Var
+  {$CODEALIGN VARMIN=16}
+  v1, v2, v3, v4, v5 : TBZVector;	
+  {$CODEALIGN VARMIN=4}
+begin
+  Result := v1 + v2 * v3 + (v4 / v5);
+end;
+#)
+provoquera un SIGSEGV car une des données, ne sera plus alignée dans la pile. (dépacement de capacité) @br
+Il vous faudra alors découper votre formule en de plus petite entités. @br
+@bold(Exemple) : @br
+@longcode(#
+function compute : TBZVector;
+Var
+  {$CODEALIGN VARMIN=16}
+  v1, v2, v3, v4, v5 : TBZVector;	
+  {$CODEALIGN VARMIN=4}
+begin
+  Result := (v1 + v2) * v3 ;
+  v1 := (v4 / v5);
+  Result := Result + v1;
+  // ou Result := Result + (v4 / v5);
+end;
+#)
+@br
+N'hésitez pas également a entouré les différentes partie d'un calcul par des parenthèses. Le compilateur faisant assez bien les chose, cela diminue le risque d'obtenir des données mal alignées en mémoire.
+@br
+@br
+@html(<hr>)
+@section(1 SecDemos Les exemples de projet)
+Vous trouverez de nombreux exemples dans les différents dépots ci-dessous :
+@unorderedlist(
+  @item(https://github.com/jdelauney/BZScene-Samples )
+  @item(https://github.com/jdelauney/BZScene-Demoscene-Samples )
+  @item(https://github.com/jdelauney/OldSchoolIsBack )
+  @item(https://github.com/jdelauney/Little-Alchemist )
+)
+@br
+@br
+@html(<hr>)
+@section(1 SecContribution Comment participer à cette aventure ?)
+@orderedlist(
+  @item(Il vous faut un compte Github)
+  @item(Dirigez vous vers la page du projet BZScene : )
+  @item("Forkez" la branche "dev")
+  @item("Rapatriez le code source depuis votre version "forkée" sur votre ordinateur. (pull))
+  @item(Créez une branche nommée "dev-fix" (checkout -b dev-fix))
+  @item(Faites vos modifications du code)
+  @item(Envoyez les modifications sur votre votre serveur Github dans la branche "dev-fix" (commit + push))
+  @item(Proposez moi vos modifications à l'aide d'un "pull request")
+)
+
+ Si vous n'êtes pas familliariser avec les notions de fork et pull request sur GitHub je vous conseil de suivre ce tutoriel en français : @br https://openclassrooms.com/en/courses/2342361-gerez-votre-code-avec-git-et-github/2433731-contribuez-a-des-projets-open-source
+ 
+ @bold(Note) : Si vous ête un peu allergique aux commandes en ligne je vous suggère l'utilisation d'un client GIT comme "Fork" disponible sur le site officiel https://fork.dev ou le client officiel de Github disponible ici : https://desktop.github.com
+@br
+@br
+@html(<hr>)
+@section(1 SecBugs Les principaux bugs connus)
+@unorderedlist(
+  @item(Les composants audio provoque une erreur dans l'IDE mais sont fonctionnels en "runtime")
+) 
+@br
+@br
+@html(<hr>)
+@section(1 SecTodoList Ce qu'il reste à faire)
+@unorderedlist(
+ @item(Un tas de chose, le monde du traitement d'image est rempli d'algorithme à implémenter.)
+ @item(La 3D, avec l'utilisation d'un moteur 100% software à l'ancienne)
+ @item(La 3D, avec l'utilisation d'un moteur basé sur Vulkan/OpenGL Core/MetalGL)
+) 
+@br
+@br
+@html(<hr>)
+@section(1 secLicenceFour Licence)
+
+  Tous les liens, noms, prénoms, oncle, nièces, neveux, petits enfant, arrières grand-parents, dessus, dessous, dedans, dehore et au-delà.....sur le fil du temp. Plus tout ceux que j'oublie en backstage, merci ! xD).
+
+  @italic(@bold(NoteDeMoiMême) : Je ne suis pas fou, juste une petite extériorisation après une petite séance de réflexiologie sur les licences à 3 ou 4 lettres et de la douce hypocrisie qui se cache derrière.
+  On se croirait chez un concessionnaire de voitures d'occasion. Une licence, une marque.)
+   
+  Je suis pour la publication des noms des auteurs autant que faire se peut. Ainsi que le partages des sources et des connaissances. @br
+  Mais là franchement comment "kifont" pour controler tous ce vaste champ de codes et logciels ? Parce que quand on parcours certains codes on se demande lequel a pompé sur l'autre. @br 
+  Ok, le source est publié après, qu'il n'y ai pas la référence dans l'un ou l'autre de l'auteur originel. C'est trop c.... ...................................................................hum à méditer. Non ?
+
+  Une seule Licence Libre Open Source ( LLOS ) (y'a un truc dans le genre ? non ? c'est la CC "Creative Common". Ou je me trompe encore ? )
+
+  @unorderedlist( 
+	@Item(@Bold(REGLE 1) : CITER LES AUTEURS ET LA PROVENANCES DES CODES (MEME PARTIEL) quelque part DANS LE CODE au maximum )
+    @Item(@Bold(REGLE 2) : TU MODIFIES, TU AMELIORES LE CODE, TU PARTAGES TON NOUVEAU CODE ET TES AVENTURES QUI VONT AVEC  (au cas ou cela pourrait interessé ou bien encore être utile a quelqu'un d'autre, on sait jamais !) )
+    @Item(@Bold(REGLE 3) : TU TE REPORTES A LA REGLE 1
+
+    Tu fais un logiciel tu veux le vendre ? va y fait toi plaisir. Mais si tu améliores le bouzin. RETOURNES VOIR LES REGLES 1, 2 (3 aussi si t'as envie :)) @br
+    - heu même les codes de mon soft ? Non ceux là tu peux les conserver. @br
+	Au cas ou tu changes d'avis plus tard (he he he !) @br
+    Tu le veux "Open Source" c'est ça ! que c'est bon !.............(Et tout ça avec un mauvais accent portuguais dit-il en roucoulant).
+
+   A oui au fait, une petite chose cette licence ne garantit rien ! (un peu tout pareil comme les autres ! en bon françois, mdr ! :D)
+
+   sinon reste aussi la WTFPL ou LPRAB en français ;) cf : https://fr.wikipedia.org/wiki/WTFPL
+   
+   Alors, vu qu'il faut bien choisir, donc respectons l'ancêtre GLScene principal @bold(CETTE BIBLIOTHEQUE EST DONC PUBLIEE SOUS LICENCES : MPL ET GPL)  
+@br
+@br
+@html(<hr>)
+@section(1 SecOtherInfos Autres informations)
+
+Dans le dépot https://github.com/jdelauney/Computer-graphic-DocRefs vous trouverez des documents PDF (la majorité en anglais) glanner sur le web, sur divers sujets relatifs en majoriter au traitement d'image et à la 3D. @br
+Ceux-ci m'ont servis et me servent en partie de références sur un certain nombre d'algorithmes et de méthodes déja mises en place ou à faire.
+
+Merci de respecter par avance, la propriété intellectuelle, de leurs auteurs respectifs.
+@br
+@br
+@html(<hr>)
+@section(1 SecConclusion Conclusion)
+
+J'espère que cette bibliothèque, vous aidera en partie dans vos développement future. Dans le traitement de vos images, ou dans tout autre domaine.
+
+Je vous remercie par avance de votre indulgence, concernant les fautes d'orthographe dans les commentaires et cette documentation.@br
+Je vous remercie par avance pour vos suggestions, contribitions, découverte de bugs ect... future à ce projet.
+
+N'hésitez pas à mettre des étoiles et suivre le projet sur le dépot GIT : https://github.com/jdelauney/BZScene et me poser toutes vos questions. @br 
+Ainsi que sur les dépots des projets de démonstrations :
+
+@unorderedlist(
+  @item(https://github.com/jdelauney/BZScene-Samples )
+  @item(https://github.com/jdelauney/BZScene-Demoscene-Samples )
+)
+
+et d'applications :
+
+@unorderedlist(
+  @item(https://github.com/jdelauney/OldSchoolIsBack )
+  @item(https://github.com/jdelauney/Little-Alchemist )
+)
+
+Cordialement @br
+@bold(Jérôme Delauney)
+
+@br
+@br
+@html(<hr>)
+@html(<hr>)
+@unorderedlist( 
+  @item("L'Homme devrait mettre autant d'ardeur à simplifier sa vie qu'il met à la compliquer" - @italic(Henri Bergson))
+  @item("Bien des livres auraient été plus clairs s'ils n'avaient pas voulu être si clairs" - @italic(Emmanuel Kant))
+  @item("La simplicité est la sophistication suprême" - @italic(Léonard De Vinci))
+  @item("Ce qui est facile à comprendre ou à faire pour toi, ne l'est pas forcément pour l'autre." - @italic(Mon père))
+)
+@br
+@html(<hr>)

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFilePCX: Packed Enregistrement TBZPCXHeader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZPCXHeader"></span><h1 class="cio">Packed Enregistrement TBZPCXHeader</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section">Méthodes</div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZImageFilePCX.html">BZImageFilePCX</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZPCXHeader = packed record</code></p>
+<h2 class="description">Description</h2>
+<p>
+PBZPCXHeader : En-tête fichier PCX - FileID: byte; signature $0A fichiers PCX, $CD fichiers SCR</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#Version">Version</a></b>:  byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#Encoding">Encoding</a></b>: byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#BitsPerPixel">BitsPerPixel</a></b>: byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#XMin">XMin</a></b>: word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#YMin">YMin</a></b>: word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#XMax">XMax</a></b>: word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#YMax">YMax</a></b>: word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#HRes">HRes</a></b>: word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#VRes">VRes</a></b>: word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#ColorMap">ColorMap</a></b>: array[0..15] of <a  href="BZColors.TBZColor24.html">TBZColor24</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#Reserved">Reserved</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#ColorPlanes">ColorPlanes</a></b>: byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#BytesPerLine">BytesPerLine</a></b>: Word;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#PaletteType">PaletteType</a></b>: word;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePCX.TBZPCXHeader.html#Fill">Fill</a></b>:     array[0..57] of byte;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Version"></span><code><b>Version</b>:  byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0: <code>version</code> 2.5, 2: 2.8 avec palette, 3: 2.8 sans palette, 5: <code>version</code> 3<br></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Encoding"></span><code><b>Encoding</b>: byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compression</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BitsPerPixel"></span><code><b>BitsPerPixel</b>: byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+nombre de bits par pixel de l'image: 1, 4, 8, 24</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XMin"></span><code><b>XMin</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+abscisse de l'angle supérieur gauche</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YMin"></span><code><b>YMin</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ordonnée de l'angle supérieur gauche</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XMax"></span><code><b>XMax</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+abscisse de l'angle inférieur droit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YMax"></span><code><b>YMax</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+ordonnée de l'angle inférieur droit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="HRes"></span><code><b>HRes</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+résolution horizontale en dpi</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="VRes"></span><code><b>VRes</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+résolution verticale en dpi</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ColorMap"></span><code><b>ColorMap</b>: array[0..15] of <a  href="BZColors.TBZColor24.html">TBZColor24</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Palette 16 couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Reserved"></span><code><b>Reserved</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Réservé NOTE : Ici c'est bizarre car normalement <code>reserved</code> est avant colorplane. Il y a inversion à la lecture, mais je ne sais pas pourquoi</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ColorPlanes"></span><code><b>ColorPlanes</b>: byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nombre de plans de couleur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="BytesPerLine"></span><code><b>BytesPerLine</b>: Word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Nombre de bits par ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PaletteType"></span><code><b>PaletteType</b>: word;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Type de palette : 1 = couleur ou N/B, 2 = dégradé de gris, 0 = peux-etre utilisé dans le cas de fichier dont l'en-tête est incorrect</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Fill"></span><code><b>Fill</b>:     array[0..57] of byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Réservé</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

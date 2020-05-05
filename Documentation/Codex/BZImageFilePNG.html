@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFilePNG</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZImageFilePNG</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Prise en charge des Images au format &quot;PNG&quot; Potable Network Graphic.</p>
+<p>
+
+
+<p>Spécifications : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>Méthode de compression : LZ77</p></li>
+  <li><p>Nombre de couleurs : 1 à 64 bits</p></li>
+  <li><p>Supporte plusieurs images : Oui formats : APNG, MNG</p></li>
+  <li><p>Format des nombres : big-endian</p></li>
+  <li><p>Auteurs : &quot;the developers of PNG&quot;</p></li>
+  <li><p>Extensions : *.png, *.apng, *.mng, *.jng</p></li>
+  <li><p>Dimensions Maximum : 2Gx2G pixels</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>11/05/2017 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes</b> :
+
+<p>Informations sur le format PNG : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://fr.wikipedia.org/wiki/Portable_Network_Graphics">https://fr.wikipedia.org/wiki/Portable_Network_Graphics</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">https://en.wikipedia.org/wiki/Portable_Network_Graphics</a></p></li>
+  <li><p><a  href="https://www.w3.org/TR/PNG/">https://www.w3.org/TR/PNG/</a> et <a  href="https://www.w3.org/TR/REC-png.pdf">https://www.w3.org/TR/REC-png.pdf</a></p></li>
+  <li><p><a  href="http://www.fileformat.info/format/png/egff.htm">http://www.fileformat.info/format/png/egff.htm</a></p></li>
+  <li><p><a  href="http://www.libpng.org/pub/png/spec/">http://www.libpng.org/pub/png/spec/</a></p></li>
+  <li><p><a  href="http://www.libpng.org/pub/png/spec/iso/index-object.html#4Concepts.FormatChunks">http://www.libpng.org/pub/png/spec/iso/index-object.html#4Concepts.FormatChunks</a></p></li>
+  <li><p><a  href="http://www.libpng.org/pub/png/spec/register/pngext-1.4.0-pdg.html">http://www.libpng.org/pub/png/spec/register/pngext-1.4.0-pdg.html</a></p></li>
+  <li><p><a  href="ftp://ftp.simplesystems.org/pub/png/documents/pngextensions.html">ftp://ftp.simplesystems.org/pub/png/documents/pngextensions.html</a></p></li>
+  <li><p><a  href="http://www.dcode.fr/chunks-png">http://www.dcode.fr/chunks-png</a></p></li>
+  <li><p><a  href="http://fileformats.wikia.com/wiki/Portable_Network_Graphics">http://fileformats.wikia.com/wiki/Portable_Network_Graphics</a></p></li>
+  <li><p><a  href="http://fileformats.archiveteam.org/wiki/PNG">http://fileformats.archiveteam.org/wiki/PNG</a></p></li>
+  <li><p><a  href="https://www.buvetteetudiants.com/cours/administrator/html-css/formats-png.php">https://www.buvetteetudiants.com/cours/administrator/html-css/formats-png.php</a></p></li>
+</ul>
+
+<p>
+
+<p>Autres informations utiles : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://fr.99designs.ch/blog/tips/image-file-types/">https://fr.99designs.ch/blog/tips/image-file-types/</a></p></li>
+  <li><p><a  href="http://www.martinreddy.net/gfx/2d-hi.html">http://www.martinreddy.net/gfx/2d-hi.html</a></p></li>
+  <li><p><a  href="https://books.google.ch/books?id=_nJLvY757dQC&amp;pg=PA191&amp;lpg=PA191&amp;dq=png">https://books.google.ch/books?id=_nJLvY757dQC&amp;pg=PA191&amp;lpg=PA191&amp;dq=png</a>+chunk+type&amp;source=bl&amp;ots=0gQL41jh6k&amp;sig=fV9AD4-94SK9qI2VxyuCzAS3-vo&amp;hl=fr&amp;sa=X&amp;ved=0ahUKEwj1srXR1dfVAhVJXRQKHYs5BKAQ6AEIeTAN#v=onepage&amp;q=png%20chunk%20type&amp;f=false</p></li>
+  <li><p><a  href="https://blog.johnnovak.net/2016/09/21/what-every-coder-should-know-about-gamma/">https://blog.johnnovak.net/2016/09/21/what-every-coder-should-know-about-gamma/</a></p></li>
+  <li><p><a  href="http://www.profil-couleur.com/tp/205-profil-icc.php">http://www.profil-couleur.com/tp/205-profil-icc.php</a></p></li>
+</ul>
+
+<p>
+
+<p>Fichiers test : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://www.schaik.com/pngsuite/">http://www.schaik.com/pngsuite/</a></p></li>
+  <li><p><a  href="https://code.google.com/archive/p/imagetestsuite/downloads">https://code.google.com/archive/p/imagetestsuite/downloads</a></p></li>
+  <li><p><a  href="https://yardstick.pictures">https://yardstick.pictures</a></p></li>
+</ul>
+
+<p> &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZColors.html">BZColors</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZBitmap.html">BZBitmap</a>, <a class="normal" href="BZImageFileIO.html">BZImageFileIO</a>, BZImageStrConsts, <a class="normal" href="BZUtils.html">BZUtils</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Crédits</b> : Tous les liens au dessus, dessous, dedans, dehors, et au delà.... <br> + FPC, GraphicEx, Vampire, Graphic32
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>bzZStream</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li><li><a  href="BZImageFileIO.html">BZImageFileIO</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunkHeader.html"><code>TBZPNGChunkHeader</code></a></td>
+<td class="itemdesc">En-tête des &quot;Chunk&quot; suivie des données de taille &quot;<a class="normal" href="BZImageFilePNG.TBZPNGChunkHeader.html#DataSize">DataSize</a>&quot; et du checksum &quot;CRC&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunkInfos.html"><code>TBZPNGChunkInfos</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_IHDR.html"><code>TBZPNGChunk_IHDR</code></a></td>
+<td class="itemdesc">IHDR chunk format - En-tête PNG.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_MHDR.html"><code>TBZPNGChunk_MHDR</code></a></td>
+<td class="itemdesc">MHDR chunk format - En-tête MNG.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_JHDR.html"><code>TBZPNGChunk_JHDR</code></a></td>
+<td class="itemdesc">JHDR chunk format - En-tête JNG.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_acTL.html"><code>TBZPNGChunk_acTL</code></a></td>
+<td class="itemdesc">acTL chunk format - APNG animation control.</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_fcTL.html"><code>TBZPNGChunk_fcTL</code></a></td>
+<td class="itemdesc">fcTL chunk format - APNG frame control.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_cHRM.html"><code>TBZPNGChunk_cHRM</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_iCCP.html"><code>TBZPNGChunk_iCCP</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_pHYs.html"><code>TBZPNGChunk_pHYs</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list">
+<td class="itemname">Packed Enregistrement&nbsp;<a class="bold" href="BZImageFilePNG.TBZPNGChunk_tIME.html"><code>TBZPNGChunk_tIME</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZImageFilePNG.TBZBitmapNetworkGraphicImage.html"><code>TBZBitmapNetworkGraphicImage</code></a></td>
+<td class="itemdesc">TBZBitmapPortableNetworkGraphicImage : Classe de base pour la prise en charge des formats PNG, MNG et JNG</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a></b> =  Array[0..7] of Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPNGChunkCode">TBZPNGChunkCode</a></b> = array[0..3] of char;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPNGICCPName">TBZPNGICCPName</a></b> = Array[0..78] of char;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPortableNetworkGraphicFormatType">TBZPortableNetworkGraphicFormatType</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPNGsRGBType">TBZPNGsRGBType</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#TBZPNGChunkTypes">TBZPNGChunkTypes</a></b> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_IHDR">PBZPNGChunk_IHDR</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_IHDR.html">TBZPNGChunk_IHDR</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_MHDR">PBZPNGChunk_MHDR</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_MHDR.html">TBZPNGChunk_MHDR</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_JHDR">PBZPNGChunk_JHDR</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html">TBZPNGChunk_JHDR</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_acTL">PBZPNGChunk_acTL</a></b> =&circ;<a  href="BZImageFilePNG.TBZPNGChunk_acTL.html">TBZPNGChunk_acTL</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_fcTL">PBZPNGChunk_fcTL</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_fcTL.html">TBZPNGChunk_fcTL</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_cHRM">PBZPNGChunk_cHRM</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_cHRM.html">TBZPNGChunk_cHRM</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_pHYs">PBZPNGChunk_pHYs</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_pHYs.html">TBZPNGChunk_pHYs</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#PBZPNGChunk_tIME">PBZPNGChunk_tIME</a></b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_tIME.html">TBZPNGChunk_tIME</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#cNULL_MAGICID">cNULL_MAGICID</a></b>   : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($00, $00, $00, $00, $00, $00, $00, $00);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#cPNG_MAGICID">cPNG_MAGICID</a></b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $50, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#cMNG_MAGICID">cMNG_MAGICID</a></b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $4D, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#cJNG_MAGICID">cJNG_MAGICID</a></b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $4A, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#COLOR_GRAYSCALE">COLOR_GRAYSCALE</a></b>      = 0;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#COLOR_RGB">COLOR_RGB</a></b>            = 2;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#COLOR_PALETTE">COLOR_PALETTE</a></b>        = 3;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#COLOR_GRAYSCALEALPHA">COLOR_GRAYSCALEALPHA</a></b> = 4;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.html#COLOR_RGBA">COLOR_RGBA</a></b>           = 6;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPNGMagicID"></span><code><b>TBZPNGMagicID</b> =  Array[0..7] of Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPNGChunkCode"></span><code><b>TBZPNGChunkCode</b> = array[0..3] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPNGICCPName"></span><code><b>TBZPNGICCPName</b> = Array[0..78] of char;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPortableNetworkGraphicFormatType"></span><code><b>TBZPortableNetworkGraphicFormatType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ftPNG">ftPNG</span></li>
+<li>
+<span id="tfAPNG">tfAPNG</span></li>
+<li>
+<span id="ftMNG">ftMNG</span></li>
+<li>
+<span id="ftJNG">ftJNG</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPNGsRGBType"></span><code><b>TBZPNGsRGBType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0 Perceptual for images preferring good adaptation to the output device gamut at the expense of colorimetric accuracy, such as photographs. 1 Relative colorimetric for images requiring colour appearance matching (relative to the output device white point), such as logos. 2 Saturation for images preferring preservation of saturation at the expense of hue and lightness, such as charts and graphs. 3 Absolute colorimetric for images requiring preservation of absolute colorimetry, such as previews of images destined for a different output device (proofs).</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="rtPerceptual">rtPerceptual</span></li>
+<li>
+<span id="rtRelative">rtRelative</span></li>
+<li>
+<span id="rtSaturation">rtSaturation</span></li>
+<li>
+<span id="rtAbsolute">rtAbsolute</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZPNGChunkTypes"></span><code><b>TBZPNGChunkTypes</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Les différents types de &quot;Chunk&quot; supportés</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ctIHDR">ctIHDR</span></li>
+<li>
+<span id="ctcHRM">ctcHRM</span></li>
+<li>
+<span id="ctgAMA">ctgAMA</span></li>
+<li>
+<span id="ctsBIT">ctsBIT</span></li>
+<li>
+<span id="ctPLTE">ctPLTE</span></li>
+<li>
+<span id="ctbKGD">ctbKGD</span></li>
+<li>
+<span id="cthIST">cthIST</span></li>
+<li>
+<span id="cttRNS">cttRNS</span></li>
+<li>
+<span id="ctoFFs">ctoFFs</span></li>
+<li>
+<span id="ctpHYs">ctpHYs</span></li>
+<li>
+<span id="ctIDAT">ctIDAT</span></li>
+<li>
+<span id="cttIME">cttIME</span></li>
+<li>
+<span id="ctsCAL">ctsCAL</span></li>
+<li>
+<span id="cttEXt">cttEXt</span></li>
+<li>
+<span id="ctzTXt">ctzTXt</span></li>
+<li>
+<span id="ctIEND">ctIEND</span></li>
+<li>
+<span id="ctIEND2">ctIEND2</span></li>
+<li>
+<span id="ctIdND">ctIdND</span></li>
+<li>
+<span id="ctsRGB">ctsRGB</span></li>
+<li>
+<span id="ctiCCP">ctiCCP</span></li>
+<li>
+<span id="ctiTXt">ctiTXt</span></li>
+<li>
+<span id="ctsPLT">ctsPLT</span></li>
+<li>
+<span id="ctMHDR">ctMHDR</span></li>
+<li>
+<span id="ctMEND">ctMEND</span></li>
+<li>
+<span id="ctJHDR">ctJHDR</span></li>
+<li>
+<span id="ctJDAT">ctJDAT</span></li>
+<li>
+<span id="ctJDAA">ctJDAA</span></li>
+<li>
+<span id="ctJSEP">ctJSEP</span></li>
+<li>
+<span id="ctBACK">ctBACK</span></li>
+<li>
+<span id="ctDEFI">ctDEFI</span></li>
+<li>
+<span id="ctTERM">ctTERM</span></li>
+<li>
+<span id="ctacTL">ctacTL</span></li>
+<li>
+<span id="ctfcTL">ctfcTL</span></li>
+<li>
+<span id="ctfdAT">ctfdAT</span></li>
+<li>
+<span id="ctUnknown">ctUnknown</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_IHDR"></span><code><b>PBZPNGChunk_IHDR</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_IHDR.html">TBZPNGChunk_IHDR</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_MHDR"></span><code><b>PBZPNGChunk_MHDR</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_MHDR.html">TBZPNGChunk_MHDR</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_JHDR"></span><code><b>PBZPNGChunk_JHDR</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html">TBZPNGChunk_JHDR</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_acTL"></span><code><b>PBZPNGChunk_acTL</b> =&circ;<a  href="BZImageFilePNG.TBZPNGChunk_acTL.html">TBZPNGChunk_acTL</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_fcTL"></span><code><b>PBZPNGChunk_fcTL</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_fcTL.html">TBZPNGChunk_fcTL</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_cHRM"></span><code><b>PBZPNGChunk_cHRM</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_cHRM.html">TBZPNGChunk_cHRM</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_pHYs"></span><code><b>PBZPNGChunk_pHYs</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_pHYs.html">TBZPNGChunk_pHYs</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZPNGChunk_tIME"></span><code><b>PBZPNGChunk_tIME</b> = &circ;<a  href="BZImageFilePNG.TBZPNGChunk_tIME.html">TBZPNGChunk_tIME</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cNULL_MAGICID"></span><code><b>cNULL_MAGICID</b>   : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($00, $00, $00, $00, $00, $00, $00, $00);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cPNG_MAGICID"></span><code><b>cPNG_MAGICID</b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $50, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cMNG_MAGICID"></span><code><b>cMNG_MAGICID</b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $4D, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cJNG_MAGICID"></span><code><b>cJNG_MAGICID</b>    : <a  href="BZImageFilePNG.html#TBZPNGMagicID">TBZPNGMagicID</a> = ($89, $4A, $4E, $47, $0D, $0A, $1A, $0A);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="COLOR_GRAYSCALE"></span><code><b>COLOR_GRAYSCALE</b>      = 0;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Modes de couleur valide pour le PNG</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="COLOR_RGB"></span><code><b>COLOR_RGB</b>            = 2;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="COLOR_PALETTE"></span><code><b>COLOR_PALETTE</b>        = 3;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="COLOR_GRAYSCALEALPHA"></span><code><b>COLOR_GRAYSCALEALPHA</b> = 4;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="COLOR_RGBA"></span><code><b>COLOR_RGBA</b>           = 6;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-05-11
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

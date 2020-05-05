@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZCadencer: Classe TBZCadencer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCadencer"></span><h1 class="cio">Classe TBZCadencer</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZCadencer.html">BZCadencer</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCadencer = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Composant permettant une progression automatique d'une animation.</p>
+<p>
+
+
+<p>   Envoie les événements de progression en temps réel (le temps sera mesuré en secondes). <br>    Ou il gardera la CPU occupée à 100% si possible (c.-à-d. si les choses changent dans votre scène). <br>    Le temps de progression (celui que vous verrez dans vos événements de progression)    est calculé en utilisant (<a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a>-<a class="normal" href="BZCadencer.TBZCadencer.html#OriginTime">OriginTime</a>) * <a class="normal" href="BZCadencer.TBZCadencer.html#TimeMultiplier">TimeMultiplier</a>.<br>    &quot;<a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a>&quot; est mis manuellement ou automatiquement à jour en utilisant    &quot;<a class="normal" href="BZCadencer.TBZCadencer.html#TimeReference">TimeReference</a>&quot; (le paramètre &quot;<a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a>&quot; NE déclenche PAS la progression).</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">TBZCadencer</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZCadencer.TBZCadencer.html#Create">Create</a></b>(AOwner: TComponent); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZCadencer.TBZCadencer.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCadencer.TBZCadencer.html#Subscribe">Subscribe</a></b>(aComponent: <a  href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCadencer.TBZCadencer.html#UnSubscribe">UnSubscribe</a></b>(aComponent: <a  href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCadencer.TBZCadencer.html#Progress">Progress</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZCadencer.TBZCadencer.html#GetCurrenttime">GetCurrenttime</a></b>: Double;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZCadencer.TBZCadencer.html#IsBusy">IsBusy</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZCadencer.TBZCadencer.html#Reset">Reset</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#OriginTime">OriginTime</a></b>: Double read FOriginTime write FOriginTime;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a></b>: Double read FCurrentTime write SetCurrentTime;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#Enabled">Enabled</a></b>: Boolean read FEnabled write SetEnabled Default True;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#TimeReference">TimeReference</a></b>: <a  href="BZCadencer.html#TBZCadencerTimeReference">TBZCadencerTimeReference</a> read FTimeReference write SetTimeReference Default <a  href="BZCadencer.html#cmPerformanceCounter">cmPerformanceCounter</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#TimeMultiplier">TimeMultiplier</a></b>: Double read FTimeMultiplier write SetTimeMultiplier Stored StoreTimeMultiplier;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#MaxDeltaTime">MaxDeltaTime</a></b>: Double read FMaxDeltaTime write FMaxDeltaTime;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#MinDeltaTime">MinDeltaTime</a></b>: Double read FMinDeltaTime write FMinDeltaTime;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#FixedDeltaTime">FixedDeltaTime</a></b>: Double read FFixedDeltaTime write FFixedDeltaTime;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#Mode">Mode</a></b>: <a  href="BZCadencer.html#TBZCadencerMode">TBZCadencerMode</a> read FMode write SetMode Default <a  href="BZCadencer.html#cmASAP">cmASAP</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#SleepLength">SleepLength</a></b>: Integer read FSleepLength write FSleepLength Default -1;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#OnProgress">OnProgress</a></b>: <a  href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a> read FOnProgress write FOnProgress;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCadencer.TBZCadencer.html#OnTotalProgress">OnTotalProgress</a></b>: <a  href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a> read FOnTotalProgress write FOnTotalProgress;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TComponent); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Subscribe"></span><code>Procedure <b>Subscribe</b>(aComponent: <a  href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UnSubscribe"></span><code>Procedure <b>UnSubscribe</b>(aComponent: <a  href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Progress"></span><code>Procedure <b>Progress</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Permet de déclencher manuellement une progression.</p>
+<p>
+ <br>       Le temps est traité automatiquement. Si cadencer est désactivé, cette fonction ne fait rien.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetCurrenttime"></span><code>Function <b>GetCurrenttime</b>: Double;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajuste &quot;<a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a>&quot; si nécessaire, puis renvoie sa valeur.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsBusy"></span><code>Function <b>IsBusy</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie True si une Progression est en cours.</p>
+<p>
+ <br>       Soyez conscient que, tant que <code>IsBusy</code> est Vrai, le Cadencer peut envoyer de messages et appeller d'autres progressions vers des autres scènes et composants cadencés. </p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Reset"></span><code>Procedure <b>Reset</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Remise à zero des paramètres et du temps.</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OriginTime"></span><code>property <b>OriginTime</b>: Double read FOriginTime write FOriginTime;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur soustraite au temps actuel pour obtenir le temps de progression.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CurrentTime"></span><code>property <b>CurrentTime</b>: Double read FCurrentTime write SetCurrentTime;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Temps actuel (réglé manuellement ou automatiquement, voir <a class="normal" href="BZCadencer.TBZCadencer.html#TimeReference">TimeReference</a>).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Enabled"></span><code>property <b>Enabled</b>: Boolean read FEnabled write SetEnabled Default True;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Activer / Désactiver la Candence.</p>
+<p>
+
+
+<p>      La désactivation ne provoquera pas de saut lors du redémarrage, mais fonctionne comme       une lecture / pause (c.-à-d. peut modifier <a class="normal" href="BZCadencer.TBZCadencer.html#OriginTime">OriginTime</a> pour garder une progression douce).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="TimeReference"></span><code>property <b>TimeReference</b>: <a  href="BZCadencer.html#TBZCadencerTimeReference">TBZCadencerTimeReference</a> read FTimeReference write SetTimeReference Default <a  href="BZCadencer.html#cmPerformanceCounter">cmPerformanceCounter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit comment <a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a> est mis à jour. Voir <a class="normal" href="BZCadencer.html#TBZCadencerTimeReference">TBZCadencerTimeReference</a>.</p>
+<p>
+
+
+<p>     Le changement dynamique de <code>TimeReference</code> peut provoquer un 'saut'.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="TimeMultiplier"></span><code>property <b>TimeMultiplier</b>: Double read FTimeMultiplier write SetTimeMultiplier Stored StoreTimeMultiplier;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Multiplicateur appliqué à la référence de temps.</p>
+<p>
+
+
+<p>      Zéro n'est pas une valeur autorisée, et sachez que si des valeurs négatives       sont acceptés, elles peuvent ne pas être pris en charge par d'autres objets.<br>       La modification du <code>TimeMultiplier</code> modifiera <a class="normal" href="BZCadencer.TBZCadencer.html#OriginTime">OriginTime</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MaxDeltaTime"></span><code>property <b>MaxDeltaTime</b>: Double read FMaxDeltaTime write FMaxDeltaTime;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur maximale pour deltaTime dans les événements de progression.</p>
+<p>
+
+
+<p>      Si null ou négatif, aucun deltaTime <a class="normal" href="BZMath.html#Max">max</a> est défini. Sinon, chaque fois qu'un événement dont le deltaTime réel est supérieur à <code>MaxDeltaTime</code>, le deltaTime sera à son maximum, et le temps supplémentaire est mise en cache       par le cadencer (il n'est pas encore pris en compte dans <a class="normal" href="BZCadencer.TBZCadencer.html#CurrentTime">CurrentTime</a>).<br>       Cette option permet de limiter le taux de progression dans les simulations où Des valeurs élevées entraîneraient des erreurs / comportement aléatoire.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MinDeltaTime"></span><code>property <b>MinDeltaTime</b>: Double read FMinDeltaTime write FMinDeltaTime;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur minimale pour deltaTime dans les événements de progression.</p>
+<p>
+
+
+<p>      Si supérieur à zéro, cette valeur spécifie le &quot;pas&quot; du temps minimum entre deux événements de progression.<br>       Cette option permet de limiter le taux de progression dans les simulations où les valeurs faibles entraîneraient des erreurs / comportement aléatoire.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="FixedDeltaTime"></span><code>property <b>FixedDeltaTime</b>: Double read FFixedDeltaTime write FFixedDeltaTime;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur temporelle fixe pour les événements de progression.</p>
+<p>
+
+
+<p>      Si supérieur à zéro, des étapes de progression se produiront avec celles fixées au temps       delta. La progression reste basée sur le temps, donc zéro vers N événements       peut être déclenché en fonction du deltaTime réel (si deltaTime est       inférieur à <code>FixedDeltaTime</code>, aucun événement ne sera déclenché s'il est supérieur       à deux fois <code>FixedDeltaTime</code>, deux événements seront déclenchés, etc.).<br>       Cette option permet d'utiliser des étapes de temps fixes dans les simulations (pendant       l'animation et le rendu peuvent se produire à un niveau de fractionnement inférieur ou supérieur).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Mode"></span><code>property <b>Mode</b>: <a  href="BZCadencer.html#TBZCadencerMode">TBZCadencerMode</a> read FMode write SetMode Default <a  href="BZCadencer.html#cmASAP">cmASAP</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajuste comment les évènement de progression doivent être déclenchés. Voir <a class="normal" href="BZCadencer.html#TBZCadencerMode">TBZCadencerMode</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="SleepLength"></span><code>property <b>SleepLength</b>: Integer read FSleepLength write FSleepLength Default -1;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Permet de laisser du &quot;temps&quot; à d'autres threads / processus.</p>
+<p>
+
+
+<p>      Si <code>SleepLength</code>&gt; = 0 alors AVANT chaque progression une pause se produit (voir       la procédure &quot;Sleep&quot; dans FPC pour plus de détails).</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnProgress"></span><code>property <b>OnProgress</b>: <a  href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a> read FOnProgress write FOnProgress;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclenché apres le progression.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnTotalProgress"></span><code>property <b>OnTotalProgress</b>: <a  href="BZClasses.html#TBZCadencerProgressEvent">TBZCadencerProgressEvent</a> read FOnTotalProgress write FOnTotalProgress;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclenché quand toutes les iterations avec DeltaTime fixe sont finis.</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,742 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZArrayClasses: Classe TBZBaseArray</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBaseArray"></span><h1 class="cio">Classe TBZBaseArray</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZArrayClasses.html">BZArrayClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type generic TBZBaseArray&lt;T&gt; = class(TObject)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe de base générique pour gérer un tableau de n'importe quel type, tableau statique et pointeur.     Fournis quelques fonctions utiles et communes ajouter, supprimer, accès aux données. Prend également en charge l'accès en mode LIFO (Stack)</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TObject</li>
+<li class="thisitem">TBZBaseArray</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZArrayClasses.TBZBaseArray.html#Create">Create</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZArrayClasses.TBZBaseArray.html#Create">Create</a></b>(Reserved: Int64); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZArrayClasses.TBZBaseArray.html#CreateParented">CreateParented</a></b>(AParentData: Pointer; Reserved: Int64); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZArrayClasses.TBZBaseArray.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#DataSize">DataSize</a></b>: Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#ItemSize">ItemSize</a></b>: Longint;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Add">Add</a></b>(const Value: T):Int64;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#AddNoDup">AddNoDup</a></b>(const Value: T):Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Insert">Insert</a></b>(Position: Int64; const Value: T);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Delete">Delete</a></b>(Position : Int64);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Exchange">Exchange</a></b>(index1, index2: Int64);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Reverse">Reverse</a></b>; inline;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Flush">Flush</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Clear">Clear</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Push">Push</a></b>(const Value: T);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Pop">Pop</a></b>: T;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#First">First</a></b>: T;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Last">Last</a></b>: T;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Next">Next</a></b>: T;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Prev">Prev</a></b>: T;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Current">Current</a></b> : T;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#MoveNext">MoveNext</a></b>:Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#MovePrev">MovePrev</a></b>:Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#MoveFirst">MoveFirst</a></b>:Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#MoveLast">MoveLast</a></b>:Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#GetPosition">GetPosition</a></b> : Int64;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#Seek">Seek</a></b>(const pos : Int64; const StartAt : Byte = 0) : boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#MoveTo">MoveTo</a></b>(Position:Int64) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#IsEndOfArray">IsEndOfArray</a></b> : Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#IndexOf">IndexOf</a></b>(SearchItem : T): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZArrayClasses.TBZBaseArray.html#GetNextFrom">GetNextFrom</a></b>(anItem : T) : T;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Sort">Sort</a></b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#QuickSort">QuickSort</a></b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#DualQuickSort">DualQuickSort</a></b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#MergeSort">MergeSort</a></b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#InsertionSort">InsertionSort</a></b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZArrayClasses.TBZBaseArray.html#Shuffle">Shuffle</a></b>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Count">Count</a></b>: Int64 read FCount write SetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Capacity">Capacity</a></b>: Int64 read FCapacity write SetCapacity;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#GrowthDelta">GrowthDelta</a></b>: Integer read FGrowthDelta write FGrowthDelta;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Revision">Revision</a></b>: LongWord read FRevision write FRevision;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#ParentData">ParentData</a></b> : Pointer read FParentData;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Data">Data</a></b> : Pointer read GetData;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#DataArray">DataArray</a></b> : TArr read GetDataArray;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Handle">Handle</a></b> : Int64 read FHandle;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Items">Items</a></b>[i:Int64]: T read getValue write SetValue;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#Mutable">Mutable</a></b>[i:Int64]: PT read getMutable;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZArrayClasses.TBZBaseArray.html#TagString">TagString</a></b>: string read FTagString write FTagString;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation d'un nouveau tableau vide</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(Reserved: Int64); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation d'un nouveau tableau de &quot;Reserved&quot; éléments</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateParented"></span><code>constructor <b>CreateParented</b>(AParentData: Pointer; Reserved: Int64); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Créer un nouveau tableau avec un nombre d'éléments Réservés et un propriétaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Libère et détruit le tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DataSize"></span><code>function <b>DataSize</b>: Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la taille totale du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ItemSize"></span><code>function <b>ItemSize</b>: Longint;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la taille d'un élément</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>function <b>Add</b>(const Value: T):Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un nouvel élément</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddNoDup"></span><code>function <b>AddNoDup</b>(const Value: T):Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un nouvel élément si celui-ci n'es pas déja présent dans le tableau. Retourne -1 si l'élément n'est pas ajouté</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Insert"></span><code>procedure <b>Insert</b>(Position: Int64; const Value: T);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Insert</code> un nouvel élément à la position &quot;Position&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Delete"></span><code>procedure <b>Delete</b>(Position : Int64);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface un élément à la position &quot;Position&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Exchange"></span><code>procedure <b>Exchange</b>(index1, index2: Int64);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Echange la posiotion des éléments &quot;Index1&quot; et &quot;Index2&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Reverse"></span><code>procedure <b>Reverse</b>; inline;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Inverse le tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Flush"></span><code>procedure <b>Flush</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vide la liste sans altérer la capacité.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>procedure <b>Clear</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vide la liste et libère les éléments</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Push"></span><code>procedure <b>Push</b>(const Value: T);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un nouvel élément en haut tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Pop"></span><code>function <b>Pop</b>: T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Récupère l'élément en haut du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="First"></span><code>function <b>First</b>: T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le premier élément du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Last"></span><code>function <b>Last</b>: T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le dernier élément du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Next"></span><code>function <b>Next</b>: T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'élément suivant du tableau, relatif à la position actuelle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Prev"></span><code>function <b>Prev</b>: T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'élément précédent du tableau, relatif à la position actuelle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Current"></span><code>function <b>Current</b> : T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'élément actuel du tableau, relatif à la position actuelle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveNext"></span><code>function <b>MoveNext</b>:Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacer la position actuelle dans le tableau à la prochaine</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MovePrev"></span><code>function <b>MovePrev</b>:Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacer la position actuelle dans le tableau à la précédente</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveFirst"></span><code>function <b>MoveFirst</b>:Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacer la position actuelle dans le tableau vers le premier élément</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveLast"></span><code>function <b>MoveLast</b>:Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacer la position actuelle dans le tableau vers le dernier élément</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPosition"></span><code>function <b>GetPosition</b> : Int64;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie la position actuelle dans le tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Seek"></span><code>function <b>Seek</b>(const pos : Int64; const StartAt : Byte = 0) : boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se placer à la postion &quot;Pos&quot; en fonction de StartAt<br> (Valeurs possible pour StartAt :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p> 0 = Depuis le début (defaut) </p></li>
+  <li><p> 1 = Depuis la position actuelle</p></li>
+  <li><p> 2 = En partant de la fin</p></li>
+</ul>
+
+<p></p>
+<h6 class="description_section">Paramètres</h6>
+<dl class="parameters">
+<dt></dt>
+<dd></dd>
+</dl>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveTo"></span><code>function <b>MoveTo</b>(Position:Int64) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Se placer à n'importe quelle position dans le tableau (equivalent a <a class="normal" href="BZArrayClasses.TBZBaseArray.html#Seek">seek</a>(position, 0)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsEndOfArray"></span><code>function <b>IsEndOfArray</b> : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérifie si la fin du tableau est atteinte</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IndexOf"></span><code>function <b>IndexOf</b>(SearchItem : T): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'index de l'élément &quot;SearchItem&quot;. Dans le cas ou celui n'existe pas retourne -1</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNextFrom"></span><code>function <b>GetNextFrom</b>(anItem : T) : T;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'élélement suivant de l'élément &quot;anItem&quot;, Si l'élément n'existe pas le premier élément du tableau est retourné</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Sort"></span><code>procedure <b>Sort</b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie le tableaux par ordre croissant ou décroissant. L'algorithme de tri utilisé dépend du nombre d'éléments en fonction des constantes cInsertion_CutOff et <a class="normal" href="BZArrayClasses.html#cQuickSort_CutOff">cQuickSort_CutOff</a>. <br> Si la liste à un nombre d'éléments inférieur à 42 le tri par insertion est utilisé. <br> Si la liste à un nombre d'éléments inférieur ou égale à 500 le tri rapide &quot;<a class="normal" href="BZArrayClasses.TBZBaseArray.html#QuickSort">QuickSort</a>&quot; est utilisé. <br> Si non, c'est le tri rapide à double pivot &quot;DualPivotQuickSort&quot; qui est utilisé.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="QuickSort"></span><code>procedure <b>QuickSort</b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie le tableau avec l'algorithme de trie rapide &quot;<code>QuickSort</code>&quot; version &quot;Stable&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DualQuickSort"></span><code>procedure <b>DualQuickSort</b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie le tableau avec l'algorithme de trie rapide à double pivot version &quot;Stable&quot;, c'est l'algorithme utilisé par défaut par la méthode <a class="normal" href="BZArrayClasses.TBZBaseArray.html#Sort">Sort</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MergeSort"></span><code>procedure <b>MergeSort</b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie le tableau avec l'algorithme de fusion : <code>MergeSort</code> version &quot;Stable&quot;. Un peu moins rapide que le <a class="normal" href="BZArrayClasses.TBZBaseArray.html#QuickSort">quicksort</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InsertionSort"></span><code>procedure <b>InsertionSort</b>(Const Direction : <a  href="BZArrayClasses.html#TBZSortOrder">TBZSortOrder</a> = <a  href="BZArrayClasses.html#soAscending">soAscending</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Trie le tableau avec l'algorithme d'insertion</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Shuffle"></span><code>procedure <b>Shuffle</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mélange les éléments du tableau aléatoirement. Il vous faudra appeler la méthode Randomize en premier</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Count"></span><code>property <b>Count</b>: Int64 read FCount write SetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre d'éléments dans la liste. Lors de l'attribution d'un nombre, les éléments ajoutés sont réinitialisés à zéro.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Capacity"></span><code>property <b>Capacity</b>: Int64 read FCapacity write SetCapacity;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Capacité du tableau actuel. Non persistant.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GrowthDelta"></span><code>property <b>GrowthDelta</b>: Integer read FGrowthDelta write FGrowthDelta;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Granularité de croissance. Pas persistant.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Revision"></span><code>property <b>Revision</b>: LongWord read FRevision write FRevision;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Augmenter de un après chaque changement de contenu.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ParentData"></span><code>property <b>ParentData</b> : Pointer read FParentData;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie le propriétaire s'il existe</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Data"></span><code>property <b>Data</b> : Pointer read GetData;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie le tableau sous forme de pointeur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DataArray"></span><code>property <b>DataArray</b> : TArr read GetDataArray;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Handle"></span><code>property <b>Handle</b> : Int64 read FHandle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie le <code>handle</code> du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Items"></span><code>property <b>Items</b>[i:Int64]: T read getValue write SetValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux éléments du tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Mutable"></span><code>property <b>Mutable</b>[i:Int64]: PT read getMutable;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès à l'élément dans le tableau en tant que pointeur générique</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TagString"></span><code>property <b>TagString</b>: string read FTagString write FTagString;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Tag utilisateur</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

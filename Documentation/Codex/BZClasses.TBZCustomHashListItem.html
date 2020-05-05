@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBZCustomHashListItem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomHashListItem"></span><h1 class="cio">Classe TBZCustomHashListItem</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomHashListItem = class(<a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe abstraite décrivant un élément dans <a class="normal" href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a>. <br> On peut associer un objet dans &quot;<a class="normal" href="BZClasses.TBZCustomHashListItem.html#ObjectRef">ObjectRef</a>&quot; de type TObjet et un &quot;<a class="normal" href="BZClasses.TBZCustomHashListItem.html#Tag">Tag</a>&quot; de type Integer</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></li>
+<li class="thisitem">TBZCustomHashListItem</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZCustomHashListItem.html#Create">Create</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZClasses.TBZCustomHashListItem.html#Create">Create</a></b>(aOwner: <a  href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a>); Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashListItem.html#WriteToFiler">WriteToFiler</a></b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZClasses.TBZCustomHashListItem.html#ReadFromFiler">ReadFromFiler</a></b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>); Override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#Owner">Owner</a></b>: <a  href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a> read FOwner write FOwner;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#Text">Text</a></b>: String read FText write SetText;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#ObjectRef">ObjectRef</a></b>: TObject read FObjectRef write FObjectRef;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#Tag">Tag</a></b>: Integer read FTag write FTag;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#TagFloat">TagFloat</a></b>: Single read FTagFloat write FTagFloat;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZCustomHashListItem.html#TagText">TagText</a></b> : String read FTagText write FTagText;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(aOwner: <a  href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a>); Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation de l'objet <a class="normal" href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a> avec un propriétaire de type <a class="normal" href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteToFiler"></span><code>Procedure <b>WriteToFiler</b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Prise en charge de l'écriture du mécanisme de persistance des données</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFromFiler"></span><code>Procedure <b>ReadFromFiler</b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Prise en charge de lecture du mécanisme de persistance des données</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Owner"></span><code>property <b>Owner</b>: <a  href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a> read FOwner write FOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne de propriétaire de l'item</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Text"></span><code>property <b>Text</b>: String read FText write SetText;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Chaine de caractères associé à l'item</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ObjectRef"></span><code>property <b>ObjectRef</b>: TObject read FObjectRef write FObjectRef;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Objet attaché à l'item</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Tag"></span><code>property <b>Tag</b>: Integer read FTag write FTag;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Tag</code> de l'item</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TagFloat"></span><code>property <b>TagFloat</b>: Single read FTagFloat write FTagFloat;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZClasses.TBZCustomHashListItem.html#Tag">Tag</a> de type single</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TagText"></span><code>property <b>TagText</b> : String read FTagText write FTagText;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZClasses.TBZCustomHashListItem.html#Tag">Tag</a> de type string</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="bzscene_controls_dt"/>
+    <Type Value="DesignTime"/>
+    <Author Value="J.Delauney (BeanzMaster)"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="Register;..\Source\Designtime;..\Source\Components\Controls"/>
+        <UnitOutputDirectory Value="lib\bzcene-controls\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
+      </SearchPaths>
+    </CompilerOptions>
+    <Description Value="BZScene Multimedia Library -  Image Designtime Package
+Contains visual controls and components for managing application with BZScene Multimedia Library"/>
+    <License Value="MPL / GPL"/>
+    <Version Minor="1"/>
+    <Files Count="2">
+      <Item1>
+        <Filename Value="Register\BZSceneControls_Register.pas"/>
+        <HasRegisterProc Value="True"/>
+        <UnitName Value="BZSceneControls_Register"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\Designtime\uOpenPictureForm.pas"/>
+        <UnitName Value="uOpenPictureForm"/>
+      </Item2>
+    </Files>
+    <RequiredPkgs Count="4">
+      <Item1>
+        <PackageName Value="FCL"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="IDEIntf"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="bzscene_image_rt"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="bzscene_controls_rt"/>
+      </Item4>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

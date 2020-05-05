@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMathEx: Enregistrement TBZBoundingSphere</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBoundingSphere"></span><h1 class="cio">Enregistrement TBZBoundingSphere</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMathEx.html">BZVectorMathEx</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBoundingSphere = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Décris une sphere englobante simple</p>
+<p>
+
+
+<p>plus d'informations :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Bounding_sphere">https://en.wikipedia.org/wiki/Bounding_sphere</a></p></li>
+  <li><p><a  href="https://www.ep.liu.se/ecp/034/009/ecp083409.pdf">https://www.ep.liu.se/ecp/034/009/ecp083409.pdf</a></p></li>
+  <li><p><a  href="https://www.mvps.org/directx/articles/using_bounding_spheres.htm">https://www.mvps.org/directx/articles/using_bounding_spheres.htm</a></p></li>
+</ul>
+
+<p></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Center">Center</a></b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Radius">Radius</a></b>: Single</code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Create">Create</a></b>(Const x,y,z: Single;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Create">Create</a></b>(Const AValue : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Create">Create</a></b>(Const AValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#ToString">ToString</a></b>: String;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Contains">Contains</a></b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>) : <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingSphere.html#Intersect">Intersect</a></b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): Boolean;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Center"></span><code><b>Center</b>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Centre de la sphere englobante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Radius"></span><code><b>Radius</b>: Single</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Rayon de la sphere englobante</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const x,y,z: Single;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'une sphere englobante au coordonnées x,y et z. le rayon est par défaut de 1.0 unité</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const AValue : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'une sphere englobante au coordonnées définies par un <a class="normal" href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>. le rayon est par défaut de 1.0 unité</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const AValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;Const r: single = 1.0); overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation d'une sphere englobante au coordonnées définies par un <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>. le rayon est par défaut de 1.0 unité</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ToString"></span><code>function <b>ToString</b>: String;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne une chaine de caractères formaté représentant la sphere englobante : '(x, y, z, <a class="normal" href="BZVectorMathEx.TBZBoundingSphere.html#Radius">radius</a>)'</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Contains"></span><code>function <b>Contains</b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>) : <a  href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Determine l'espace d'intersection <a class="normal" href="BZVectorMathEx.html#TBZSpaceContains">TBZSpaceContains</a> de la sphere englobante avec une autre</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Intersect"></span><code>function <b>Intersect</b>(const TestBSphere: <a  href="BZVectorMathEx.TBZBoundingSphere.html">TBZBoundingSphere</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Determine si il y a intersection dans l'espace avec la sphere englobante et une autre</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGeoTools: Classe TBZ2DPolygonTool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZ2DPolygonTool"></span><h1 class="cio">Classe TBZ2DPolygonTool</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGeoTools.html">BZGeoTools</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZ2DPolygonTool = class(<a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe pour la gestion et la manipulation de polygone.</p>
+<p>
+
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://geomalgorithms.com/a09-_intersect-3.html#simple_Polygon">http://geomalgorithms.com/a09-_intersect-3.html#simple_Polygon</a>()</p></li>
+  <li><p><a  href="http://www.jagregory.com/abrash-black-book/#chapter-38-the-polygon-primeval">http://www.jagregory.com/abrash-black-book/#chapter-38-the-polygon-primeval</a></p></li>
+  <li><p><a  href="http://alienryderflex.com/polygon_fill/">http://alienryderflex.com/polygon_fill/</a></p></li>
+  <li><p><a  href="https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation">https://www.scratchapixel.com/lessons/3d-basic-rendering/rasterization-practical-implementation</a></p></li>
+  <li><p><a  href="https://cs.stackexchange.com/questions/2197/how-do-i-test-if-a-polygon-is-monotone-with-respect-to-an-arbitrary-line">https://cs.stackexchange.com/questions/2197/how-do-i-test-if-a-polygon-is-monotone-with-respect-to-an-arbitrary-line</a></p></li>
+  <li><p><a  href="https://stackoverflow.com/questions/471962/how-do-i-efficiently-determine-if-a-polygon-is-convex-non-convex-or-complex">https://stackoverflow.com/questions/471962/how-do-i-efficiently-determine-if-a-polygon-is-convex-non-convex-or-complex</a></p></li>
+  <li><p><a  href="http://www.tutorialspoint.com/computer_graphics/polygon_filling_algorithm.htm">http://www.tutorialspoint.com/computer_graphics/polygon_filling_algorithm.htm</a></p></li>
+  <li><p><a  href="http://paulbourke.net/geometry/polygonmesh/">http://paulbourke.net/geometry/polygonmesh/</a></p></li>
+</ul>
+
+<p></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a></li>
+<li class="thisitem">TBZ2DPolygonTool</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#Create">Create</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#NotifyChange">NotifyChange</a></b>(Sender: TObject); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetEdgeList">GetEdgeList</a></b>(Var EdgeList : <a  href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a>) : Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetRastersAtLine">GetRastersAtLine</a></b>(Const Y: Integer): <a  href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#PointInside">PointInside</a></b>(Const pt: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetPolygonType">GetPolygonType</a></b>: <a  href="BZGeoTools.html#TBZ2DPolygonType">TBZ2DPolygonType</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IsConvex">IsConvex</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IsComplex">IsComplex</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IsConcave">IsConcave</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetCenter">GetCenter</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IsCounterClockWise">IsCounterClockWise</a></b> : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#OffsetPolygon">OffsetPolygon</a></b>(Ratio:Single): <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IntersectWithPolygon">IntersectWithPolygon</a></b>(const P2: <a  href="BZGeoTools.TBZ2DPolygonTool.html">TBZ2DPolygonTool</a>): Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IsMonotoneVertical">IsMonotoneVertical</a></b>: Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetPerimeter">GetPerimeter</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetArea">GetArea</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#GetCentroid">GetCentroid</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#IntersectWithLine">IntersectWithLine</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>) : Boolean;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#Bounds">Bounds</a></b>: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> read GetBounds;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#StartY">StartY</a></b> : Integer read FStartY;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#FloatStartY">FloatStartY</a></b> : Single read FFloatStartY;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#RastersLineCount">RastersLineCount</a></b> : Integer read FRastersLineCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DPolygonTool.html#Rasters">Rasters</a></b> : <a  href="BZGeoTools.html#TBZRastersList">TBZRastersList</a> read getRastersList;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NotifyChange"></span><code>Procedure <b>NotifyChange</b>(Sender: TObject); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEdgeList"></span><code>function <b>GetEdgeList</b>(Var EdgeList : <a  href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a>) : Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Construit la liste des segments dans &quot;EdgeList&quot; et retourne le nombre de segment</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetRastersAtLine"></span><code>Function <b>GetRastersAtLine</b>(Const Y: Integer): <a  href="BZGeoTools.html#TBZRasterItems">TBZRasterItems</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les informations de rasterization</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PointInside"></span><code>Function <b>PointInside</b>(Const pt: <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne TRUE si le point se trouve à l'intérieur du polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPolygonType"></span><code>Function <b>GetPolygonType</b>: <a  href="BZGeoTools.html#TBZ2DPolygonType">TBZ2DPolygonType</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le type de polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsConvex"></span><code>Function <b>IsConvex</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Le polygone est-il convex ?</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsComplex"></span><code>Function <b>IsComplex</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Le polygone est-il complexe ?</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsConcave"></span><code>Function <b>IsConcave</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Le polygone est-il concave ?</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetCenter"></span><code>function <b>GetCenter</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le centre du polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsCounterClockWise"></span><code>function <b>IsCounterClockWise</b> : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si les <a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html#Points">points</a> tournent dans le sens horaire. <code>False</code> dans le sens anti-horaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OffsetPolygon"></span><code>function <b>OffsetPolygon</b>(Ratio:Single): <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Agrandit ou réduit le polygone en déplaçant les <a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html#Points">points</a> en fonction de &quot;Ratio&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IntersectWithPolygon"></span><code>function <b>IntersectWithPolygon</b>(const P2: <a  href="BZGeoTools.TBZ2DPolygonTool.html">TBZ2DPolygonTool</a>): Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si une des lignes du polygone croise celle d'un autre polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsMonotoneVertical"></span><code>Function <b>IsMonotoneVertical</b>: Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si le polygone est monotone par rapport à une ligne verticale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPerimeter"></span><code>function <b>GetPerimeter</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le périmètre du polygone. Note : cette méthode peut retourner des résultats faux dans des cas spéciaux. Par exemple quand le polygone a des côtés colinéaires qui se chevauchent. Cela peut être évité en filtrant le polygone pour détecter les défauts avant d'appeler cette méthode</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetArea"></span><code>function <b>GetArea</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'aire du polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetCentroid"></span><code>function <b>GetCentroid</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le centroide (centre de gravité) du polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IntersectWithLine"></span><code>function <b>IntersectWithLine</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoints : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les <a class="normal" href="BZGeoTools.TBZFloatPointsContainer.html#Points">points</a> d'intersection entre le polygone et une ligne</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Bounds"></span><code>property <b>Bounds</b>: <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a> read GetBounds;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les limites absolues du polygone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartY"></span><code>property <b>StartY</b> : Integer read FStartY;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la coordonée Y minimum</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FloatStartY"></span><code>property <b>FloatStartY</b> : Single read FFloatStartY;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RastersLineCount"></span><code>property <b>RastersLineCount</b> : Integer read FRastersLineCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre de ligne scannées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rasters"></span><code>property <b>Rasters</b> : <a  href="BZGeoTools.html#TBZRastersList">TBZRastersList</a> read getRastersList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la liste des lignes scannées</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

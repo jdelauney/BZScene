@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZCustomShader: Classe TBZCustomSoftwareShader</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZCustomSoftwareShader"></span><h1 class="cio">Classe TBZCustomSoftwareShader</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZCustomShader.html">BZCustomShader</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomSoftwareShader = class(<a class="normal" href="BZCustomShader.TBZCustomShader.html">TBZCustomShader</a>)</code></p>
+<h2 class="description">Description</h2>
+<div class="nodescription">No description available, ancestor TBZCustomShader description follows</div><div class="nodescription">No description available, ancestor TBZAbstractShader description follows</div><p>
+<code>TBZAbstractShader</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZCustomShader.TBZAbstractShader.html">TBZAbstractShader</a></li>
+<li class="ancestor"><a class="normal" href="BZCustomShader.TBZCustomShader.html">TBZCustomShader</a></li>
+<li class="thisitem">TBZCustomSoftwareShader</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#ShadePixel">ShadePixel</a></b>:<a  href="BZColors.html#TBZColor">TBZColor</a>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#ShadePixelFloat">ShadePixelFloat</a></b>:<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Clone">Clone</a></b> : <a  href="BZCustomShader.TBZCustomSoftwareShader.html">TBZCustomSoftwareShader</a>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#iTime">iTime</a></b> : Double read FiTime write FiTime;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#InvResolution">InvResolution</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read FInvResolution;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#FragCoords">FragCoords</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read FFragCoords write FFragCoords;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Resolution">Resolution</a></b> : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> read FResolution write FResolution;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#CameraPosition">CameraPosition</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FCameraPosition write FCameraPosition;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#CameraDirection">CameraDirection</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FCameraDirection write FCameraDirection;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#LightPosition">LightPosition</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FLightPosition write FLightPosition;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#iChannel0">iChannel0</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel0 write FiChannel0;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#iChannel1">iChannel1</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel1 write FiChannel1;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#iChannel2">iChannel2</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel2 write FiChannel2;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#iChannel3">iChannel3</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel3 write FiChannel3;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZCustomShader.TBZCustomSoftwareShader.html#Cadencer">Cadencer</a></b> : <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write FCadencer;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShadePixel"></span><code>function <b>ShadePixel</b>:<a  href="BZColors.html#TBZColor">TBZColor</a>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShadePixelFloat"></span><code>function <b>ShadePixelFloat</b>:<a  href="BZColors.TBZColorVector.html">TBZColorVector</a>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+for bitmap software rendering</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clone"></span><code>function <b>Clone</b> : <a  href="BZCustomShader.TBZCustomSoftwareShader.html">TBZCustomSoftwareShader</a>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="iTime"></span><code>property <b>iTime</b> : Double read FiTime write FiTime;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InvResolution"></span><code>property <b>InvResolution</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read FInvResolution;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FragCoords"></span><code>property <b>FragCoords</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read FFragCoords write FFragCoords;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Resolution"></span><code>property <b>Resolution</b> : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> read FResolution write FResolution;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+published</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CameraPosition"></span><code>property <b>CameraPosition</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FCameraPosition write FCameraPosition;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CameraDirection"></span><code>property <b>CameraDirection</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FCameraDirection write FCameraDirection;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="LightPosition"></span><code>property <b>LightPosition</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read FLightPosition write FLightPosition;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="iChannel0"></span><code>property <b>iChannel0</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel0 write FiChannel0;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="iChannel1"></span><code>property <b>iChannel1</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel1 write FiChannel1;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="iChannel2"></span><code>property <b>iChannel2</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel2 write FiChannel2;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="iChannel3"></span><code>property <b>iChannel3</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a> read FiChannel3 write FiChannel3;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Cadencer"></span><code>property <b>Cadencer</b> : <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write FCadencer;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

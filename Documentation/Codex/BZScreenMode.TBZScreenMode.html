@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZScreenMode: Classe TBZScreenMode</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZScreenMode"></span><h1 class="cio">Classe TBZScreenMode</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZScreenMode.html">BZScreenMode</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZScreenMode = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Composant pour controler le mode video de(s) écran(s) et le comportement de la fen&circ;tre principale de l'application</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">TBZScreenMode</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZScreenMode.TBZScreenMode.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZScreenMode.TBZScreenMode.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#ChangeVideoMode">ChangeVideoMode</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#RestoreVideoMode">RestoreVideoMode</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#ShowMouseCursor">ShowMouseCursor</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#HideMouseCursor">HideMouseCursor</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZScreenMode.TBZScreenMode.html#GetMousePos">GetMousePos</a></b> : <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#SetMousePos">SetMousePos</a></b>(MouseScreenX, MouseScreenY : Integer); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#SetMousePos">SetMousePos</a></b>(P : TPoint); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZScreenMode.TBZScreenMode.html#SetMousePos">SetMousePos</a></b>(P : <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>); overload;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#AvailableVideoMode">AvailableVideoMode</a></b> : TStrings read FAvailableVideoMode write SetAvailableVideoMode;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#ActualScreenWidth">ActualScreenWidth</a></b> : Integer read FActualScreenWidth;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#ActualScreenHeight">ActualScreenHeight</a></b> : Integer read FActualScreenHeight;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#AvailableVideoModeCount">AvailableVideoModeCount</a></b> : Integer read FAvailableVideoModeCount;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#CurrentVideoModeIndex">CurrentVideoModeIndex</a></b> : <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a> read FCurrentVideoModeIndex;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#FullScreenMode">FullScreenMode</a></b> : Boolean read FFullScreenMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#ScreenModeChanged">ScreenModeChanged</a></b> : Boolean read FScreenModeChanged;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#XRes">XRes</a></b> : Integer read FXRes write SetXRes;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#YRes">YRes</a></b> : Integer read FYRes write SetYRes;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#BPP">BPP</a></b> : Integer read FBPP write SetBPP;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#Frequency">Frequency</a></b> : Integer read FFrequency write SetFrequency;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#FullScreenForm">FullScreenForm</a></b> : Boolean read FFullScreenForm write SetFullScreenForm;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#OnBeforeRestoreVideoMode">OnBeforeRestoreVideoMode</a></b> : TNotifyEvent read FOnBeforeRestoreVideoMode write SetOnBeforeRestoreVideoMode stored;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#OnBeforeChangeVideoMode">OnBeforeChangeVideoMode</a></b> : <a  href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a> read FOnBeforeChangeVideoMode write SetOnBeforeChangeVideoMode stored;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#OnAfterRestoreVideoMode">OnAfterRestoreVideoMode</a></b> : TNotifyEvent read FOnAfterRestoreVideoMode write SetOnAfterRestoreVideoMode stored;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZScreenMode.TBZScreenMode.html#OnAfterChangeVideoMode">OnAfterChangeVideoMode</a></b> : <a  href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a> read FOnAfterChangeVideoMode write SetOnAfterChangeVideoMode stored;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ChangeVideoMode"></span><code>procedure <b>ChangeVideoMode</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Change vers le mode video choisit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RestoreVideoMode"></span><code>procedure <b>RestoreVideoMode</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Restore le mode video par defaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShowMouseCursor"></span><code>procedure <b>ShowMouseCursor</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Montre le curseur de la souris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HideMouseCursor"></span><code>procedure <b>HideMouseCursor</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Cache le curseur de la souris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetMousePos"></span><code>function <b>GetMousePos</b> : <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la position de la souris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMousePos"></span><code>procedure <b>SetMousePos</b>(MouseScreenX, MouseScreenY : Integer); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit la position de la souris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMousePos"></span><code>procedure <b>SetMousePos</b>(P : TPoint); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit la position de la souris</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetMousePos"></span><code>procedure <b>SetMousePos</b>(P : <a  href="BZGraphic.html#TBZPoint">TBZPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit la position de la souris</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AvailableVideoMode"></span><code>property <b>AvailableVideoMode</b> : TStrings read FAvailableVideoMode write SetAvailableVideoMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la liste des modes video disponibles</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ActualScreenWidth"></span><code>property <b>ActualScreenWidth</b> : Integer read FActualScreenWidth;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la largeur actuelle du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ActualScreenHeight"></span><code>property <b>ActualScreenHeight</b> : Integer read FActualScreenHeight;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la hauteur actuelle du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AvailableVideoModeCount"></span><code>property <b>AvailableVideoModeCount</b> : Integer read FAvailableVideoModeCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le nombre de mode video disponible</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CurrentVideoModeIndex"></span><code>property <b>CurrentVideoModeIndex</b> : <a  href="BZScreenMode.html#TBZScreenModeResolution">TBZScreenModeResolution</a> read FCurrentVideoModeIndex;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'index du mode video actuel</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FullScreenMode"></span><code>property <b>FullScreenMode</b> : Boolean read FFullScreenMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si on est en plein ecran</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ScreenModeChanged"></span><code>property <b>ScreenModeChanged</b> : Boolean read FScreenModeChanged;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si le mode video a changé</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="XRes"></span><code>property <b>XRes</b> : Integer read FXRes write SetXRes;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Choix de la resolution en largeur du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="YRes"></span><code>property <b>YRes</b> : Integer read FYRes write SetYRes;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Choix de la resolution en hauteur du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="BPP"></span><code>property <b>BPP</b> : Integer read FBPP write SetBPP;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Choix du nombre de bit par pixel du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Frequency"></span><code>property <b>Frequency</b> : Integer read FFrequency write SetFrequency;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Choix de la fréquence de rafraichissement du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="FullScreenForm"></span><code>property <b>FullScreenForm</b> : Boolean read FFullScreenForm write SetFullScreenForm;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Choix si la fenêtre de notre application doit être affichée en plein écran</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnBeforeRestoreVideoMode"></span><code>property <b>OnBeforeRestoreVideoMode</b> : TNotifyEvent read FOnBeforeRestoreVideoMode write SetOnBeforeRestoreVideoMode stored;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclencher avant la restauration du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnBeforeChangeVideoMode"></span><code>property <b>OnBeforeChangeVideoMode</b> : <a  href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a> read FOnBeforeChangeVideoMode write SetOnBeforeChangeVideoMode stored;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclencher avant le changement du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnAfterRestoreVideoMode"></span><code>property <b>OnAfterRestoreVideoMode</b> : TNotifyEvent read FOnAfterRestoreVideoMode write SetOnAfterRestoreVideoMode stored;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclencher après la restauration du mode video</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnAfterChangeVideoMode"></span><code>property <b>OnAfterChangeVideoMode</b> : <a  href="BZScreenMode.html#TBZScreenModeChangeVideoModeEvent">TBZScreenModeChangeVideoModeEvent</a> read FOnAfterChangeVideoMode write SetOnAfterChangeVideoMode stored;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evenement déclencher après le changement du mode video</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

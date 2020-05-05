@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmapColorFilters</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZBitmapColorFilters</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient les classes pour l'application de filtres sur les couleurs.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>22/08/2017 : Creation</p></li>
+  <li><p>18/06/2019 : Mise à jour</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b><br>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, BZControlClasses, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZBitmap.html">BZBitmap</a>, <a class="normal" href="BZInterpolationFilters.html">BZInterpolationFilters</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>FPC/Lazarus</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / LGPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Math</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSwapChannel.html"><code>TBZBitmapColorFilterSwapChannel</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterSwapChannel</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterNegate.html"><code>TBZBitmapColorFilterNegate</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterNegate</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterHyperSat.html"><code>TBZBitmapColorFilterHyperSat</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterHyperSat</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMix.html"><code>TBZBitmapColorFilterMix</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterMix</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMixInv.html"><code>TBZBitmapColorFilterMixInv</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterMixInv</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAverage.html"><code>TBZBitmapColorFilterAverage</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAverage</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterModulate.html"><code>TBZBitmapColorFilterModulate</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterModulate</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterColorize.html"><code>TBZBitmapColorFilterColorize</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterColorize</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGrayScale.html"><code>TBZBitmapColorFilterGrayScale</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterGrayScale</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustBrightness.html"><code>TBZBitmapColorFilterAdjustBrightness</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAdjustBrightness</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustContrast.html"><code>TBZBitmapColorFilterAdjustContrast</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAdjustContrast</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAutoAdjustContrast.html"><code>TBZBitmapColorFilterAutoAdjustContrast</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAutoAdjustContrast</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustSaturation.html"><code>TBZBitmapColorFilterAdjustSaturation</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAdjustSaturation</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGammaCorrection.html"><code>TBZBitmapColorFilterGammaCorrection</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterGammaCorrection</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterPosterize.html"><code>TBZBitmapColorFilterPosterize</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterPosterize</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSolarize.html"><code>TBZBitmapColorFilterSolarize</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterSolarize</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSplitLight.html"><code>TBZBitmapColorFilterSplitLight</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterSplitLight</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterFilterColor.html"><code>TBZBitmapColorFilterFilterColor</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterFilterColor</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExcludeColor.html"><code>TBZBitmapColorFilterExcludeColor</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterExcludeColor</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExtractColor.html"><code>TBZBitmapColorFilterExtractColor</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterExtractColor</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterModifyAlpha.html"><code>TBZBitmapColorFilterModifyAlpha</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterModifyAlpha</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMinimum.html"><code>TBZBitmapColorFilterMinimum</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterMinimum</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMaximum.html"><code>TBZBitmapColorFilterMaximum</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterMaximum</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGrayOut.html"><code>TBZBitmapColorFilterGrayOut</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterGrayOut</code> : filtre qui 'grise' une image en faisant la moyenne de chaque pixel avec du blanc</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExposure.html"><code>TBZBitmapColorFilterExposure</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterExposure</code> : Filtre à améliorer en prenant en compte le &quot;seuil du point noir&quot;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterBoost.html"><code>TBZBitmapColorFilterBoost</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterBoost</code> : Filtre multipliant les couleurs par un facteur</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGain.html"><code>TBZBitmapColorFilterGain</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterGain</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustRGB.html"><code>TBZBitmapColorFilterAdjustRGB</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterAdjustRGB</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterBalance.html"><code>TBZBitmapColorFilterBalance</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterBalance</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustHSV.html"><code>TBZBitmapColorFilterAdjustHSV</code></a></td>
+<td class="itemdesc">TBZBitmapColorFilterAdjustHSL</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterRemoveRedEye.html"><code>TBZBitmapColorFilterRemoveRedEye</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterRemoveRedEye</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSepia.html"><code>TBZBitmapColorFilterSepia</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterSepia</code></td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterHueRotate.html"><code>TBZBitmapColorFilterHueRotate</code></a></td>
+<td class="itemdesc">TBZBitmapColorHueRotate</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMatrix.html"><code>TBZBitmapColorFilterMatrix</code></a></td>
+<td class="itemdesc"><code>TBZBitmapColorFilterMatrix</code></td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmapColorFilters.html#TBZColorFilterSwapChannelMode">TBZColorFilterSwapChannelMode</a></b> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmapColorFilters.html#TBZInstagramFilterType">TBZInstagramFilterType</a></b> = (...);</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZColorFilterSwapChannelMode"></span><code><b>TBZColorFilterSwapChannelMode</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Mode d'invertion des canaux de couleur</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="scmRedBlue">scmRedBlue</span></li>
+<li>
+<span id="scmRedGreen">scmRedGreen</span></li>
+<li>
+<span id="scmGreenBlue">scmGreenBlue</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZInstagramFilterType"></span><code><b>TBZInstagramFilterType</b> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Filtres &quot;ala&quot; Instagram prédéfinis</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ift1977">ift1977</span></li>
+<li>
+<span id="iftAden">iftAden</span></li>
+<li>
+<span id="iftAmaro">iftAmaro</span></li>
+<li>
+<span id="iftAntique">iftAntique</span></li>
+<li>
+<span id="iftBlackAndWhite">iftBlackAndWhite</span></li>
+<li>
+<span id="iftBrannan">iftBrannan</span></li>
+<li>
+<span id="iftBrooklyn">iftBrooklyn</span></li>
+<li>
+<span id="iftClarendon">iftClarendon</span></li>
+<li>
+<span id="iftDream">iftDream</span></li>
+<li>
+<span id="iftEasyBird">iftEasyBird</span></li>
+<li>
+<span id="iftEverGlow">iftEverGlow</span></li>
+<li>
+<span id="iftFreshAqua">iftFreshAqua</span></li>
+<li>
+<span id="iftForest">iftForest</span></li>
+<li>
+<span id="iftGingham">iftGingham</span></li>
+<li>
+<span id="iftHudson">iftHudson</span></li>
+<li>
+<span id="iftInkWell">iftInkWell</span></li>
+<li>
+<span id="iftJuno">iftJuno</span></li>
+<li>
+<span id="iftKelvin">iftKelvin</span></li>
+<li>
+<span id="iftLark">iftLark</span></li>
+<li>
+<span id="iftLight">iftLight</span></li>
+<li>
+<span id="iftLime">iftLime</span></li>
+<li>
+<span id="iftLofi">iftLofi</span></li>
+<li>
+<span id="iftLudwig">iftLudwig</span></li>
+<li>
+<span id="iftMajesty">iftMajesty</span></li>
+<li>
+<span id="iftMaven">iftMaven</span></li>
+<li>
+<span id="iftMayfair">iftMayfair</span></li>
+<li>
+<span id="iftMoon">iftMoon</span></li>
+<li>
+<span id="iftNashville">iftNashville</span></li>
+<li>
+<span id="iftOldPhoto">iftOldPhoto</span></li>
+<li>
+<span id="iftPeachy">iftPeachy</span></li>
+<li>
+<span id="iftPerpetua">iftPerpetua</span></li>
+<li>
+<span id="iftPolaroid">iftPolaroid</span></li>
+<li>
+<span id="iftPolaroidII">iftPolaroidII</span></li>
+<li>
+<span id="iftRetro">iftRetro</span></li>
+<li>
+<span id="iftReyes">iftReyes</span></li>
+<li>
+<span id="iftRise">iftRise</span></li>
+<li>
+<span id="iftSlumber">iftSlumber</span></li>
+<li>
+<span id="iftStinson">iftStinson</span></li>
+<li>
+<span id="iftToaster">iftToaster</span></li>
+<li>
+<span id="iftValencia">iftValencia</span></li>
+<li>
+<span id="iftVintage">iftVintage</span></li>
+<li>
+<span id="iftWalden">iftWalden</span></li>
+<li>
+<span id="iftWillow">iftWillow</span></li>
+<li>
+<span id="iftXPro2">iftXPro2</span></li>
+</ul>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-08-22
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZVector2fHelper</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZVector2fHelper"></span><h1 class="cio">Enregistrement TBZVector2fHelper</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZVector2fHelper = record helper for TBZVector2f</code></p>
+<h2 class="description">Description</h2>
+<p>
+Assistant pour le type <a class="normal" href="BZVectorMath.TBZVector2f.html">TBZVector2f</a></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2fHelper.html#Step">Step</a></b>(ConstRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2fHelper.html#Saturate">Saturate</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2fHelper.html#SmoothStep">SmoothStep</a></b>(ConstRef A,B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZVector2fHelper.html#Lerp">Lerp</a></b>(Constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; Constref T:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XY">XY</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetXY;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YX">YX</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetYX;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XX">XX</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetXX;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YY">YY</a></b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetYY;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XXY">XXY</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXXY;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YYX">YYX</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYYX;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XYY">XYY</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXYY;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YXX">YXX</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYXX;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XYX">XYX</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXYX;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YXY">YXY</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYXY;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#XXX">XXX</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXXX;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>property <b><a  href="BZVectorMath.TBZVector2fHelper.html#YYY">YYY</a></b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYYY;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Step"></span><code>function <b>Step</b>(ConstRef B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Implémente une fonction d'étape renvoyant une pour chaque composant de Self qui est       supérieur ou égal au composant correspondant dans la référence du Vecteur B, et zéro si non</p>
+<p>
+ 
+
+<p>Plus d'informations : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://developer.download.nvidia.com/cg/step.html">http://developer.download.nvidia.com/cg/step.html</a></p></li>
+  <li><p><a  href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/step.xhtml">https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/step.xhtml</a> </p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Saturate"></span><code>function <b>Saturate</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Renvoie le plus petit entier non inférieur à un scalaire ou à chaque composante vectorielle.</p>
+<p>
+
+
+<p>      Retourne la valeur de la saturation dans la plage [0,1] comme suit: <br> </p>
+
+<ol class="paragraph_spacing">
+  <li value="1"><p>Retourne 0 si le vecteur courrant est plus petit que 0</p></li>
+  <li value="2"><p>Retourne 1 si le vecteur courrant est plus grand que 1</p></li>
+  <li value="3"><p>Dans les autres cas retourne les valeurs courrantes.</p></li>
+</ol>
+
+<p>
+
+<p>Plus d'informations : <a  href="http://developer.download.nvidia.com/cg/saturate.html">http://developer.download.nvidia.com/cg/saturate.html</a> )</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SmoothStep"></span><code>function <b>SmoothStep</b>(ConstRef A,B : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Interpolation douce entre deux valeurs basé sur le troisième paramètre.</p>
+<p>
+
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p>Retourne 0 si Self &lt; A &lt; B ou que Self &gt; A &gt; A</p></li>
+  <li><p>Retourne 1 si Self &lt; B &lt; A ou que Self &gt; B &gt; A</p></li>
+  <li><p>La valeur interpolée retournée est comprise dans l'intervalle 0.0 et 1.0 pour le domaina [A,B].</p></li>
+</ul>
+
+<p>
+
+<p>Si A = Self alors, la pente de Self.smoothstep(a, b) et b.smoothstep(a, b) est nulle.<br>
+
+<p>Plus d'information : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="http://developer.download.nvidia.com/cg/smoothstep.html">http://developer.download.nvidia.com/cg/smoothstep.html</a></p></li>
+  <li><p><a  href="https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/smoothstep.xhtml">https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/smoothstep.xhtml</a> </p></li>
+</ul>
+
+<p></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Lerp"></span><code>function <b>Lerp</b>(Constref B: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>; Constref T:Single): <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur de l'interpolation linéaire du vecteur courrant et de B en fonction du poid T. <br> Si T est une valeur en dehors de l'interval [0.0, 1.0], il sera actuellement extrapolé. </p>
+<p>
+
+
+<p>Plus d'informations : <br> </p>
+
+<p>(  </p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XY"></span><code>property <b>XY</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetXY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YX"></span><code>property <b>YX</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetYX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XX"></span><code>property <b>XX</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetXX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YY"></span><code>property <b>YY</b> : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetYY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XXY"></span><code>property <b>XXY</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXXY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YYX"></span><code>property <b>YYX</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYYX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XYY"></span><code>property <b>XYY</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXYY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YXX"></span><code>property <b>YXX</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYXX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XYX"></span><code>property <b>XYX</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXYX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YXY"></span><code>property <b>YXY</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYXY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="XXX"></span><code>property <b>XXX</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetXXX;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="YYY"></span><code>property <b>YYY</b> : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a> read GetYYY;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

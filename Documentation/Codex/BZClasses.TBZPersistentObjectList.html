@@ -1,0 +1,594 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZClasses: Classe TBZPersistentObjectList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZPersistentObjectList"></span><h1 class="cio">Classe TBZPersistentObjectList</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZClasses.html">BZClasses</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZPersistentObjectList = class(<a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Liste d'objets persistants. Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.</p>
+<p>
+
+
+<p>Contrairement à la TObjectList de la VCL / LCL, <code>TBZPersistentObjectList</code> ne libère pas ses objets lors de la destruction ou de <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Clear">Clear</a>. Vous devez utiliser les fonctions <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Clean">Clean</a> et <a class="normal" href="BZClasses.TBZPersistentObjectList.html#CleanFree">CleanFree</a>.
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p>Seuls les éléments <a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a> et descendants seront gérés correctement.</p></li>
+  <li><p>La liste peut être utilisée sous forme de LIFO avec <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Push">Push</a> and <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Pop">Pop</a>.</p></li>
+  <li><p>Vous pouvez effectuer des opérations booléennes de base.</p></li>
+</ul>
+
+<p>
+
+<p><b>Note</b> : L'implémentation de la fonction <a class="normal" href="BZClasses.TBZPersistentObjectList.html#IndexOf">IndexOf</a> est jusqu'à 3 fois plus rapide que celle de TList</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></li>
+<li class="thisitem">TBZPersistentObjectList</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZClasses.TBZPersistentObjectList.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZClasses.TBZPersistentObjectList.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#WriteToFiler">WriteToFiler</a></b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#ReadFromFiler">ReadFromFiler</a></b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#ReadFromFilerWithEvent">ReadFromFilerWithEvent</a></b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>; afterSenderObjectCreated: TNotifyEvent);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#Add">Add</a></b>(const Item: TObject): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#AddNils">AddNils</a></b>(nbVals: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Delete">Delete</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#DeleteItems">DeleteItems</a></b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Exchange">Exchange</a></b>(Index1, Index2: Integer);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Insert">Insert</a></b>(Index: Integer; Item: TObject);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#InsertNils">InsertNils</a></b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Move">Move</a></b>(CurIndex, NewIndex: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#Remove">Remove</a></b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#DeleteAndFree">DeleteAndFree</a></b>(Index: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#DeleteAndFreeItems">DeleteAndFreeItems</a></b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#RemoveAndFree">RemoveAndFree</a></b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#Expand">Expand</a></b>: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#RequiredCapacity">RequiredCapacity</a></b>(aCapacity: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Pack">Pack</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Clear">Clear</a></b>; dynamic;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Clean">Clean</a></b>; dynamic;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#CleanFree">CleanFree</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#IndexOf">IndexOf</a></b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Push">Push</a></b>(Item: TObject);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#Pop">Pop</a></b>: TObject;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#PopAndFree">PopAndFree</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZClasses.TBZPersistentObjectList.html#AddObjects">AddObjects</a></b>(const objectList: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>): Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#RemoveObjects">RemoveObjects</a></b>(const objectList: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZClasses.TBZPersistentObjectList.html#Sort">Sort</a></b>(compareFunc: <a  href="BZClasses.html#TObjectListSortCompare">TObjectListSortCompare</a>);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#GrowthDelta">GrowthDelta</a></b>: Integer read FGrowthDelta write FGrowthDelta;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#Items">Items</a></b>[Index:Integer]: TObject read Get write Put;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#Count">Count</a></b>: Integer read FCount write SetCount;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#List">List</a></b>: <a  href="BZClasses.html#PPointerObjectList">PPointerObjectList</a> read FList;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#Capacity">Capacity</a></b>: Integer read FCapacity write SetCapacity;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#First">First</a></b>: TObject read GetFirst write SetFirst;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZClasses.TBZPersistentObjectList.html#Last">Last</a></b>: TObject read GetLast write SetLast;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteToFiler"></span><code>procedure <b>WriteToFiler</b>(writer: <a  href="BZClasses.TVirtualWriter.html">TVirtualWriter</a>); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ecriture des propriétés avec le mechanisme de Persistance des objets</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFromFiler"></span><code>procedure <b>ReadFromFiler</b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lecture des propriétés avec le mechanisme de Persistance des objets</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFromFilerWithEvent"></span><code>procedure <b>ReadFromFilerWithEvent</b>(reader: <a  href="BZClasses.TVirtualReader.html">TVirtualReader</a>; afterSenderObjectCreated: TNotifyEvent);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Lecture des propriétés avec le mechanisme de Persistance des objets, avec un évènement déclencher à la fin de la lecture</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Add"></span><code>function <b>Add</b>(const Item: TObject): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un objet à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddNils"></span><code>procedure <b>AddNils</b>(nbVals: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute plusieur élément VIDE à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Delete"></span><code>procedure <b>Delete</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface une élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DeleteItems"></span><code>procedure <b>DeleteItems</b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface plusieurs éléments de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Exchange"></span><code>procedure <b>Exchange</b>(Index1, Index2: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Echange deux élément dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Insert"></span><code>procedure <b>Insert</b>(Index: Integer; Item: TObject);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Insert</code> un élément à la position &quot;Index&quot; dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InsertNils"></span><code>procedure <b>InsertNils</b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<a class="normal" href="BZClasses.TBZPersistentObjectList.html#Insert">Insert</a> plusieurs éléments VIDE à la position &quot;Index&quot; dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Move"></span><code>procedure <b>Move</b>(CurIndex, NewIndex: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Deplace un élément dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Remove"></span><code>function <b>Remove</b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Remove</code> : Efface un élément et renvoi le nouvel &quot;index&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DeleteAndFree"></span><code>procedure <b>DeleteAndFree</b>(Index: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface un élément de la liste et le libère</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DeleteAndFreeItems"></span><code>procedure <b>DeleteAndFreeItems</b>(Index: Integer; nbVals: Cardinal);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface plusieurs éléments de la liste et les libères</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RemoveAndFree"></span><code>function <b>RemoveAndFree</b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface un élément et le libère. Renvoi le nouvel &quot;index&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Expand"></span><code>function <b>Expand</b>: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Augmente la taille de la liste de <code>GrowDelta</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RequiredCapacity"></span><code>procedure <b>RequiredCapacity</b>(aCapacity: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assure que la capacité est au moins aussi grande que <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Capacity">Capacity</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Pack"></span><code>procedure <b>Pack</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Supprime tous les 'nil' de la liste. <br>       <b>Notes</b> : <br> - La capacité est inchangée, pas de mémoire libérée, la liste est juste plus courte. <br> - Cette fonctions est plus rapides que celle de TList.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>procedure <b>Clear</b>; dynamic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface la liste sans libérer les objets.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clean"></span><code>procedure <b>Clean</b>; dynamic;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vide la liste et libère les objets.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CleanFree"></span><code>procedure <b>CleanFree</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vide la liste, libere les objets et libere la liste elle même</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IndexOf"></span><code>function <b>IndexOf</b>(Item: TObject): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Renvoie l'index de &quot;Item&quot; dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Push"></span><code>procedure <b>Push</b>(Item: TObject);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute un élément en haut de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Pop"></span><code>function <b>Pop</b>: TObject;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le dernier élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PopAndFree"></span><code>procedure <b>PopAndFree</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le dernier élément de la liste et libère l'objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddObjects"></span><code>function <b>AddObjects</b>(const objectList: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>): Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une liste à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RemoveObjects"></span><code>procedure <b>RemoveObjects</b>(const objectList: <a  href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface les objets de la liste &quot;ObjectList&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Sort"></span><code>procedure <b>Sort</b>(compareFunc: <a  href="BZClasses.html#TObjectListSortCompare">TObjectListSortCompare</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fonction de tri</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GrowthDelta"></span><code>property <b>GrowthDelta</b>: Integer read FGrowthDelta write FGrowthDelta;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Indice d'augmentation de la capacité du nombre d'éléments de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Items"></span><code>property <b>Items</b>[Index:Integer]: TObject read Get write Put;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la liste des objets</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Count"></span><code>property <b>Count</b>: Integer read FCount write SetCount;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre d'objets dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="List"></span><code>property <b>List</b>: <a  href="BZClasses.html#PPointerObjectList">PPointerObjectList</a> read FList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne un pointer de la liste d'objet</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Capacity"></span><code>property <b>Capacity</b>: Integer read FCapacity write SetCapacity;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Capacité de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="First"></span><code>property <b>First</b>: TObject read GetFirst write SetFirst;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le premier élément de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Last"></span><code>property <b>Last</b>: TObject read GetLast write SetLast;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le dernier élément de la liste</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

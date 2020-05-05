@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZImageFilePNG: Packed Enregistrement TBZPNGChunk_JHDR</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZPNGChunk_JHDR"></span><h1 class="cio">Packed Enregistrement TBZPNGChunk_JHDR</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section">Méthodes</div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZImageFilePNG.html">BZImageFilePNG</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZPNGChunk_JHDR = packed record</code></p>
+<h2 class="description">Description</h2>
+<p>
+JHDR chunk format - En-tête JNG.</p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Width">Width</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Height">Height</a></b>: LongWord;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#ColorType">ColorType</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#SampleDepth">SampleDepth</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Compression">Compression</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Interlacing">Interlacing</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#AlphaSampleDepth">AlphaSampleDepth</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#AlphaCompression">AlphaCompression</a></b>: Byte;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#AlphaFilter">AlphaFilter</a></b>: Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZImageFilePNG.TBZPNGChunk_JHDR.html#AlphaInterlacing">AlphaInterlacing</a></b>: Byte;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Width"></span><code><b>Width</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Image <code>width</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Height"></span><code><b>Height</b>: LongWord;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Image <code>height</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ColorType"></span><code><b>ColorType</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+8 = grayscale (Y), 10 = color (YCbCr),</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="SampleDepth"></span><code><b>SampleDepth</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+8, 12 or 20 (8 and 12 samples together) bit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Compression"></span><code><b>Compression</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>Compression</code> type: 8 = Huffman coding</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Interlacing"></span><code><b>Interlacing</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0 = single scan, 8 = progressive</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaSampleDepth"></span><code><b>AlphaSampleDepth</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0, 1, 2, 4, 8, 16 if alpha <a class="normal" href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Compression">compression</a> is 0 (PNG). 8 if alpha <a class="normal" href="BZImageFilePNG.TBZPNGChunk_JHDR.html#Compression">compression</a> is 8 (JNG)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaCompression"></span><code><b>AlphaCompression</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0 = PNG graysscale IDAT, 8 = grayscale 8-bit JPEG</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaFilter"></span><code><b>AlphaFilter</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0 = PNG filter or no filter (JPEG)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="AlphaInterlacing"></span><code><b>AlphaInterlacing</b>: Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+0 = non interlaced</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

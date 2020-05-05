@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: Hiérarchie</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="allitems">Hiérarchie</h1>
+<ul class="hierarchylevel">
+<li>IInterface<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.IBZCadenceAble.html">IBZCadenceAble</a><li><a class="bold" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a><li><a class="bold" href="BZClasses.IBZPersistentObject.html">IBZPersistentObject</a></ul>
+</li>
+<li>TBZCustomComponentProperty<ul class="hierarchylevel">
+<li><a class="bold" href="BZFileFinder.TBZDateFilterParams.html">TBZDateFilterParams</a><li><a class="bold" href="BZFileFinder.TBZSearchOptionsParams.html">TBZSearchOptionsParams</a><li><a class="bold" href="BZFileFinder.TBZSizeFilterParams.html">TBZSizeFilterParams</a></ul>
+</li>
+<li>TBZCustomControl<ul class="hierarchylevel">
+<li><a class="bold" href="BZImageViewer.TBZCustomViewer.html">TBZCustomViewer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZImageViewer.TBZCustomImageViewer.html">TBZCustomImageViewer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZImageViewer.TBZImageViewer.html">TBZImageViewer</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>TObject<ul class="hierarchylevel">
+<li>Exception<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.EBZBaseException.html">EBZBaseException</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.EBZBitmapException.html">EBZBitmapException</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.EBZInvalidImageFormatException.html">EBZInvalidImageFormatException</a><li><a class="bold" href="BZImageFileBMP.EBZSaveImageException.html">EBZSaveImageException</a><li><a class="bold" href="BZImageFileIO.EInvalidImageFile.html">EInvalidImageFile</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZImageFileIO.EInvalidImageData.html">EInvalidImageData</a><li><a class="bold" href="BZImageFileIO.EInvalidImageHeader.html">EInvalidImageHeader</a></ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZCanvasClasses.EBZCanvasException.html">EBZCanvasException</a><li><a class="bold" href="BZSoundSample.EBZSoundException.html">EBZSoundException</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSoundSample.EBZInvalidSoundFile.html">EBZInvalidSoundFile</a><li><a class="bold" href="BZOpenALManager.EBZSoundOpenALManager.html">EBZSoundOpenALManager</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.EFilerException.html">EFilerException</a><li><a class="bold" href="BZClasses.EInvalidFileSignature.html">EInvalidFileSignature</a></ul>
+</li>
+<li><a class="bold" href="BZStreamClasses.EBZCantCreateFile.html">EBZCantCreateFile</a><li><a class="bold" href="BZStreamClasses.EBZFileNotExist.html">EBZFileNotExist</a><li><a class="bold" href="BZXCollection.EBZXCollectionFilerException.html">EBZXCollectionFilerException</a><li>EStreamError<ul class="hierarchylevel">
+<li><a class="bold" href="BZStreamClasses.EZLibError.html">EZLibError</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZStreamClasses.EGZCompressionError.html">EGZCompressionError</a><li><a class="bold" href="BZStreamClasses.EGZDecompressionError.html">EGZDecompressionError</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZBaseArray.html">TBZBaseArray</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZArrayByte.html">TBZArrayByte</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZByteList.html">TBZByteList</a><li><a class="bold" href="BZVectorMath.TBZVector3bList.html">TBZVector3bList</a><li><a class="bold" href="BZVectorMath.TBZVector4bList.html">TBZVector4bList</a></ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZArrayFloat.html">TBZArrayFloat</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZDoubleList.html">TBZDoubleList</a><li><a class="bold" href="BZArrayClasses.TBZSingleList.html">TBZSingleList</a><li><a class="bold" href="BZVectorMath.TBZVector2fList.html">TBZVector2fList</a><li><a class="bold" href="BZVectorMath.TBZVector4fList.html">TBZVector4fList</a></ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZArrayInt.html">TBZArrayInt</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZIntegerList.html">TBZIntegerList</a><li><a class="bold" href="BZVectorMath.TBZVector2iList.html">TBZVector2iList</a><li><a class="bold" href="BZVectorMath.TBZVector4iList.html">TBZVector4iList</a></ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZBaseArrayMap2D.html">TBZBaseArrayMap2D</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZArrayMap2DByte.html">TBZArrayMap2DByte</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZByte2DMap.html">TBZByte2DMap</a></ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZArrayMap2DFloat.html">TBZArrayMap2DFloat</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZDouble2DMap.html">TBZDouble2DMap</a><li><a class="bold" href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a><li><a class="bold" href="BZVectorMath.TBZVector2f2DMap.html">TBZVector2f2DMap</a><li><a class="bold" href="BZVectorMath.TBZVector4f2DMap.html">TBZVector4f2DMap</a></ul>
+</li>
+<li><a class="bold" href="BZArrayClasses.TBZArrayMap2DInt.html">TBZArrayMap2DInt</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZImageFileXPM.TBZColorHolder.html">TBZColorHolder</a><li><a class="bold" href="BZClasses.TBZDataFileFormatDesc.html">TBZDataFileFormatDesc</a><li><a class="bold" href="BZFileFinder.TBZFileSearchEngine.html">TBZFileSearchEngine</a><li><a class="bold" href="BZGraphic.TBZImageFileFormat.html">TBZImageFileFormat</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFilterRec.html">TBZInterpolationFilterRec</a><li><a class="bold" href="BZLogger.TBZLogFileDef.html">TBZLogFileDef</a><li><a class="bold" href="BZLogger.TBZLoggerItem.html">TBZLoggerItem</a><li><a class="bold" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a><li><a class="bold" href="BZRandomGenerator.TBZRandomNumGenerator.html">TBZRandomNumGenerator</a><li>TList<ul class="hierarchylevel">
+<li><a class="bold" href="BZColors.TBZColorRegister.html">TBZColorRegister</a><li><a class="bold" href="BZSoundSample.TBZSoundFileFormatsList.html">TBZSoundFileFormatsList</a></ul>
+</li>
+<li>TPersistent<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGeoTools.TBZ2DCircleTool.html">TBZ2DCircleTool</a><li><a class="bold" href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a><li><a class="bold" href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a><li><a class="bold" href="BZGeoTools.TBZ2DQuadraticBezierCurve.html">TBZ2DQuadraticBezierCurve</a><li><a class="bold" href="BZImageFileJPEG.TBZBitmapJPEGSavingOptions.html">TBZBitmapJPEGSavingOptions</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerItem.html">TBZBitmapLayerItem</a><li><a class="bold" href="BZImageFileTGA.TBZBitmapTGASavingOptions.html">TBZBitmapTGASavingOptions</a><li><a class="bold" href="BZCanvasClasses.TBZBrushTextureProperty.html">TBZBrushTextureProperty</a><li><a class="bold" href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a><li><a class="bold" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a></ul>
+</li>
+<li><a class="bold" href="BZBitmapCompression.TBZCustomBitmapEncoder.html">TBZCustomBitmapEncoder</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapCompression.TBZDataEncoderLZ77.html">TBZDataEncoderLZ77</a><li><a class="bold" href="BZBitmapCompression.TBZDataEncoderRLA.html">TBZDataEncoderRLA</a><li><a class="bold" href="BZBitmapCompression.TBZDataEncoderRLE_PCX.html">TBZDataEncoderRLE_PCX</a></ul>
+</li>
+<li><a class="bold" href="BZCanvasClasses.TBZCustomCanvas.html">TBZCustomCanvas</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmap.TBZBitmapCanvas.html">TBZBitmapCanvas</a></ul>
+</li>
+<li><a class="bold" href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a><li><a class="bold" href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a><li><a class="bold" href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZFontClasses.TBZCustomFontDrawer.html">TBZCustomFontDrawer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmap.TBZCustomBitmapFontDrawer.html">TBZCustomBitmapFontDrawer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmap.TBZBitmapFontDrawer.html">TBZBitmapFontDrawer</a></ul>
+</li>
+<li><a class="bold" href="BZFontClasses.TBZFont.html">TBZFont</a></ul>
+</li>
+<li><a class="bold" href="BZFontClasses.TBZEmptyFont.html">TBZEmptyFont</a></ul>
+</li>
+<li><a class="bold" href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZNoiseGenerator.TBZBaseNoiseGenerator.html">TBZBaseNoiseGenerator</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZNoiseGenerator.TBZGradientNoiseGenerator.html">TBZGradientNoiseGenerator</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZNoiseGenerator.TBZPerlinNoiseGenerator.html">TBZPerlinNoiseGenerator</a></ul>
+</li>
+<li><a class="bold" href="BZNoiseGenerator.TBZImprovedPerlinNoiseGenerator.html">TBZImprovedPerlinNoiseGenerator</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZNoiseGenerator.TBZOpenSimplexNoiseGenerator.html">TBZOpenSimplexNoiseGenerator</a><li><a class="bold" href="BZNoiseGenerator.TBZSimplexNoiseGenerator.html">TBZSimplexNoiseGenerator</a></ul>
+</li>
+<li><a class="bold" href="BZNoiseGenerator.TBZValueNoiseGenerator.html">TBZValueNoiseGenerator</a></ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGeoTools.TBZ2DCurve.html">TBZ2DCurve</a><li><a class="bold" href="BZGeoTools.TBZ2DPolygonTool.html">TBZ2DPolygonTool</a><li><a class="bold" href="BZGeoTools.TBZ2DPolyLineTool.html">TBZ2DPolyLineTool</a></ul>
+</li>
+<li><a class="bold" href="BZColors.TBZGradientProperty.html">TBZGradientProperty</a><li><a class="bold" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.TBZCustomOwnerBitmap.html">TBZCustomOwnerBitmap</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmap.TBZBitmapBlurFilters.html">TBZBitmapBlurFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapColorFilters.html">TBZBitmapColorFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapConvolutionFilters.html">TBZBitmapConvolutionFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapDeformationFilters.html">TBZBitmapDeformationFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapEffectFilters.html">TBZBitmapEffectFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapMorphologicalFilters.html">TBZBitmapMorphologicalFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapRenderFilters.html">TBZBitmapRenderFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapSegmentationFilters.html">TBZBitmapSegmentationFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapThresholdFilters.html">TBZBitmapThresholdFilters</a><li><a class="bold" href="BZBitmap.TBZBitmapTransformations.html">TBZBitmapTransformations</a><li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapScanner.html">TBZCustomBitmapScanner</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterBoxBlur.html">TBZBitmapFilterBoxBlur</a><li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterGaussianBlur.html">TBZBitmapFilterGaussianBlur</a><li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterMotionBlur.html">TBZBitmapFilterMotionBlur</a><li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterRadialBlur.html">TBZBitmapFilterRadialBlur</a><li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterThresholdBlur.html">TBZBitmapFilterThresholdBlur</a><li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterZoomBlur.html">TBZBitmapFilterZoomBlur</a><li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterPointTransform.html">TBZCustomBitmapFilterPointTransform</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAutoAdjustContrast.html">TBZBitmapColorFilterAutoAdjustContrast</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAverage.html">TBZBitmapColorFilterAverage</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExcludeColor.html">TBZBitmapColorFilterExcludeColor</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExtractColor.html">TBZBitmapColorFilterExtractColor</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterFilterColor.html">TBZBitmapColorFilterFilterColor</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterHueRotate.html">TBZBitmapColorFilterHueRotate</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMatrix.html">TBZBitmapColorFilterMatrix</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterModifyAlpha.html">TBZBitmapColorFilterModifyAlpha</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterRemoveRedEye.html">TBZBitmapColorFilterRemoveRedEye</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSepia.html">TBZBitmapColorFilterSepia</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSplitLight.html">TBZBitmapColorFilterSplitLight</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSwapChannel.html">TBZBitmapColorFilterSwapChannel</a><li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterPointTransformEx.html">TBZCustomBitmapFilterPointTransformEx</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustHSV.html">TBZBitmapColorFilterAdjustHSV</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustRGB.html">TBZBitmapColorFilterAdjustRGB</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustSaturation.html">TBZBitmapColorFilterAdjustSaturation</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterColorize.html">TBZBitmapColorFilterColorize</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGrayOut.html">TBZBitmapColorFilterGrayOut</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGrayScale.html">TBZBitmapColorFilterGrayScale</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterHyperSat.html">TBZBitmapColorFilterHyperSat</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMaximum.html">TBZBitmapColorFilterMaximum</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMinimum.html">TBZBitmapColorFilterMinimum</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMix.html">TBZBitmapColorFilterMix</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterMixInv.html">TBZBitmapColorFilterMixInv</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterModulate.html">TBZBitmapColorFilterModulate</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterNegate.html">TBZBitmapColorFilterNegate</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterPosterize.html">TBZBitmapColorFilterPosterize</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterSolarize.html">TBZBitmapColorFilterSolarize</a><li><a class="bold" href="BZBitmapThresholdFilters.TBZBitmapThresholdBaseFilter.html">TBZBitmapThresholdBaseFilter</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapThresholdFilters.TBZBitmapThresholdAutomaticFilter.html">TBZBitmapThresholdAutomaticFilter</a></ul>
+</li>
+<li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterApplyLUT.html">TBZCustomBitmapFilterApplyLUT</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustBrightness.html">TBZBitmapColorFilterAdjustBrightness</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterAdjustContrast.html">TBZBitmapColorFilterAdjustContrast</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterBalance.html">TBZBitmapColorFilterBalance</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterBoost.html">TBZBitmapColorFilterBoost</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterExposure.html">TBZBitmapColorFilterExposure</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGain.html">TBZBitmapColorFilterGain</a><li><a class="bold" href="BZBitmapColorFilters.TBZBitmapColorFilterGammaCorrection.html">TBZBitmapColorFilterGammaCorrection</a></ul>
+</li>
+<li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterNonLinear.html">TBZCustomBitmapFilterNonLinear</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapBlurFilters.TBZBitmapFilterNonLinearBlur.html">TBZBitmapFilterNonLinearBlur</a><li><a class="bold" href="BZBitmapMorphologicalFilters.TBZBitmapMorphologicalFilter.html">TBZBitmapMorphologicalFilter</a><li><a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterTransformation.html">TBZCustomBitmapFilterTransformation</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapAffineTransformationFilter.html">TBZBitmapAffineTransformationFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapDiffusionFilter.html">TBZBitmapDiffusionFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapFishEyeFilter.html">TBZBitmapFishEyeFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapPinchFilter.html">TBZBitmapPinchFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapPolarTransformationFilter.html">TBZBitmapPolarTransformationFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapTwirlFilter.html">TBZBitmapTwirlFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapWaterRippleFilter.html">TBZBitmapWaterRippleFilter</a><li><a class="bold" href="BZBitmapDeformationFilters.TBZBitmapWaveDistorsionFilter.html">TBZBitmapWaveDistorsionFilter</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZBitmap.TBZHistogram.html">TBZHistogram</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZAnimationTool.TBZAnimationTool.html">TBZAnimationTool</a><li><a class="bold" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmap.TBZBitmap.html">TBZBitmap</a></ul>
+</li>
+<li><a class="bold" href="BZImageFileIO.TBZCustomImageFileIO.html">TBZCustomImageFileIO</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZImageFileBMP.TBZBitmapBMPImage.html">TBZBitmapBMPImage</a><li><a class="bold" href="BZImageFileGIF.TBZBitmapGIFImage.html">TBZBitmapGIFImage</a><li><a class="bold" href="BZImageFileJPEG.TBZBitmapJPEGImage.html">TBZBitmapJPEGImage</a><li><a class="bold" href="BZImageFilePNG.TBZBitmapNetworkGraphicImage.html">TBZBitmapNetworkGraphicImage</a><li><a class="bold" href="BZImageFilePCX.TBZBitmapPCXImage.html">TBZBitmapPCXImage</a><li><a class="bold" href="BZImageFilePPM.TBZBitmapPPMImage.html">TBZBitmapPPMImage</a><li><a class="bold" href="BZImageFileTGA.TBZBitmapTGAImage.html">TBZBitmapTGAImage</a><li><a class="bold" href="BZImageFileWEBP.TBZBitmapWEBPImage.html">TBZBitmapWEBPImage</a><li><a class="bold" href="BZImageFileXPM.TBZBitmapXPMImage.html">TBZBitmapXPMImage</a><li><a class="bold" href="BZImageFileIO.TBZImageFileIO.html">TBZImageFileIO</a></ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZCustomHashStringList.html">TBZCustomHashStringList</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZStringList.html">TBZStringList</a></ul>
+</li>
+<li><a class="bold" href="BZSoundSample.TBZCustomSoundSample.html">TBZCustomSoundSample</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSoundSample.TBZSoundFileIO.html">TBZSoundFileIO</a><li><a class="bold" href="BZSoundSample.TBZSoundSample.html">TBZSoundSample</a></ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZLogger.TBZCustomLoggerWriter.html">TBZCustomLoggerWriter</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZLogger.TBZCallBackLoggerWriter.html">TBZCallBackLoggerWriter</a><li><a class="bold" href="BZLogger.TBZConsoleLoggerWriter.html">TBZConsoleLoggerWriter</a><li><a class="bold" href="BZLogger.TBZFileLoggerWriter.html">TBZFileLoggerWriter</a><li><a class="bold" href="BZLogger.TBZLogViewLoggerWriter.html">TBZLogViewLoggerWriter</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZGraphic.TBZRawImageData.html">TBZRawImageData</a><li><a class="bold" href="BZGraphic.TBZRawImageDescription.html">TBZRawImageDescription</a><li><a class="bold" href="BZGraphic.TBZRectItemProperty.html">TBZRectItemProperty</a></ul>
+</li>
+<li><a class="bold" href="BZXCollection.TBZXCollectionItem.html">TBZXCollectionItem</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZCustomSoundEffectItem.html">TBZCustomSoundEffectItem</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZChorusSoundEffect.html">TBZChorusSoundEffect</a><li><a class="bold" href="BZSound.TBZCompressorSoundEffect.html">TBZCompressorSoundEffect</a><li><a class="bold" href="BZSound.TBZDistortionSoundEffect.html">TBZDistortionSoundEffect</a><li><a class="bold" href="BZSound.TBZEAXReverbSoundEffect.html">TBZEAXReverbSoundEffect</a><li><a class="bold" href="BZSound.TBZEchoSoundEffect.html">TBZEchoSoundEffect</a><li><a class="bold" href="BZSound.TBZEqualizerSoundEffect.html">TBZEqualizerSoundEffect</a><li><a class="bold" href="BZSound.TBZFlangerSoundEffect.html">TBZFlangerSoundEffect</a><li><a class="bold" href="BZSound.TBZReverbSoundEffect.html">TBZReverbSoundEffect</a></ul>
+</li>
+<li><a class="bold" href="BZSound.TBZCustomSoundFilterItem.html">TBZCustomSoundFilterItem</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZBandPassSoundFilter.html">TBZBandPassSoundFilter</a><li><a class="bold" href="BZSound.TBZHighPassSoundFilter.html">TBZHighPassSoundFilter</a><li><a class="bold" href="BZSound.TBZLowPassSoundFilter.html">TBZLowPassSoundFilter</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZOwnedPersistent.html">TBZOwnedPersistent</a><li><a class="bold" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZCustomHashListItem.html">TBZCustomHashListItem</a><li><a class="bold" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZInterpolationFilters.TBZBeanzInterpolationFilter.html">TBZBeanzInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBellInterpolationFilter.html">TBZBellInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanBesselInterpolationFilter.html">TBZBlackmanBesselInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanInterpolationFilter.html">TBZBlackmanInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanSinCInterpolationFilter.html">TBZBlackmanSinCInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBohmanInterpolationFilter.html">TBZBohmanInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBoxInterpolationFilter.html">TBZBoxInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCatromInterpolationFilter.html">TBZCatromInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCosineInterpolationFilter.html">TBZCosineInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCubicInterpolationFilter.html">TBZCubicInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCubicSchaumInterpolationFilter.html">TBZCubicSchaumInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCustomWindowedInterpolationFilter.html">TBZCustomWindowedInterpolationFilter</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZInterpolationFilters.TBZAlbrechtWindowedInterpolationFilter.html">TBZAlbrechtWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBartlettHannWindowedInterpolationFilter.html">TBZBartlettHannWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBartlettWindowedInterpolationFilter.html">TBZBartlettWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanHarrisWindowedInterpolationFilter.html">TBZBlackmanHarrisWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanNuttallWindowedInterpolationFilter.html">TBZBlackmanNuttallWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZBlackmanWindowedInterpolationFilter.html">TBZBlackmanWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCauchyWindowedInterpolationFilter.html">TBZCauchyWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZCosineWindowedInterpolationFilter.html">TBZCosineWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZFlatTopWindowedInterpolationFilter.html">TBZFlatTopWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZGaussianWindowedInterpolationFilter.html">TBZGaussianWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHammingWindowedInterpolationFilter.html">TBZHammingWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHannPoissonWindowedInterpolationFilter.html">TBZHannPoissonWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHannWindowedInterpolationFilter.html">TBZHannWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZKaiserWindowedInterpolationFilter.html">TBZKaiserWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZNuttallWindowedInterpolationFilter.html">TBZNuttallWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZPoissonWindowedInterpolationFilter.html">TBZPoissonWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZTukeyWindowedInterpolationFilter.html">TBZTukeyWindowedInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZWelchWindowedInterpolationFilter.html">TBZWelchWindowedInterpolationFilter</a></ul>
+</li>
+<li><a class="bold" href="BZInterpolationFilters.TBZGaussianInterpolationFilter.html">TBZGaussianInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHammingInterpolationFilter.html">TBZHammingInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHannInterpolationFilter.html">TBZHannInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHermitInterpolationFilter.html">TBZHermitInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZJinCInterpolationFilter.html">TBZJinCInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZLagrangeInterpolationFilter.html">TBZLagrangeInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZLanczos3InterpolationFilter.html">TBZLanczos3InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZMitchellInterpolationFilter.html">TBZMitchellInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx3InterpolationFilter.html">TBZOMomsx3InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx5InterpolationFilter.html">TBZOMomsx5InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx7InterpolationFilter.html">TBZOMomsx7InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuadraticInterpolationFilter.html">TBZQuadraticInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuadraticSchaumInterpolationFilter.html">TBZQuadraticSchaumInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuinticInterpolationFilter.html">TBZQuinticInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSinCInterpolationFilter.html">TBZSinCInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSinshInterpolationFilter.html">TBZSinshInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSplineInterpolationFilter.html">TBZSplineInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZTriangleInterpolationFilter.html">TBZTriangleInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZWelchInterpolationFilter.html">TBZWelchInterpolationFilter</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a><li><a class="bold" href="BZGeoTools.TBZ2DPolygonList.html">TBZ2DPolygonList</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerList.html">TBZBitmapLayerList</a><li><a class="bold" href="BZColors.TBZColorList.html">TBZColorList</a><li><a class="bold" href="BZGeoTools.TBZCubicBezierCurves.html">TBZCubicBezierCurves</a><li><a class="bold" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a><li><a class="bold" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a><li><a class="bold" href="BZLogger.TBZLoggerWriterList.html">TBZLoggerWriterList</a></ul>
+</li>
+<li><a class="bold" href="BZBitmap.TBZPicture.html">TBZPicture</a></ul>
+</li>
+<li><a class="bold" href="BZXCollection.TBZXCollection.html">TBZXCollection</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZSoundFXLib.html">TBZSoundFXLib</a></ul>
+</li>
+<li>TCollection<ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZSoundFXAuxSlots.html">TBZSoundFXAuxSlots</a><li><a class="bold" href="BZSound.TBZSoundSampleItems.html">TBZSoundSampleItems</a><li><a class="bold" href="BZSound.TBZSoundSources.html">TBZSoundSources</a><li>TOwnedCollection<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZNotifyCollection.html">TBZNotifyCollection</a></ul>
+</li>
+</ul>
+</li>
+<li>TCollectionItem<ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZBaseSoundSource.html">TBZBaseSoundSource</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZSoundSource.html">TBZSoundSource</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZInterfacedCollectionItem.html">TBZInterfacedCollectionItem</a><li><a class="bold" href="BZSound.TBZSoundFXAuxSlot.html">TBZSoundFXAuxSlot</a><li><a class="bold" href="BZSound.TBZSoundSampleItem.html">TBZSoundSampleItem</a></ul>
+</li>
+<li>TComponent<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZColors.TBZColorsManager.html">TBZColorsManager</a><li><a class="bold" href="BZSound.TBZSoundManager.html">TBZSoundManager</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZOpenALManager.TBZSoundOpenALManager.html">TBZSoundOpenALManager</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TBZUpdateAbleComponent.html">TBZUpdateAbleComponent</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZCadencer.TBZCustomCadencedComponent.html">TBZCustomCadencedComponent</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZCadencer.TBZCadencedComponent.html">TBZCadencedComponent</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><a class="bold" href="BZCadencer.TBZCadencer.html">TBZCadencer</a><li><a class="bold" href="BZFileFinder.TBZFileFinder.html">TBZFileFinder</a><li><a class="bold" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a><li><a class="bold" href="BZSound.TBZSoundFXLibrary.html">TBZSoundFXLibrary</a><li><a class="bold" href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a><li><a class="bold" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a><li><a class="bold" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a></ul>
+</li>
+</ul>
+</li>
+<li>TStream<ul class="hierarchylevel">
+<li><a class="bold" href="BZStreamClasses.TBZCustomBufferedStream.html">TBZCustomBufferedStream</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZStreamClasses.TBZBufferedStream.html">TBZBufferedStream</a></ul>
+</li>
+<li>TOwnerStream<ul class="hierarchylevel">
+<li><a class="bold" href="BZStreamClasses.TBZZLibStream.html">TBZZLibStream</a></ul>
+</li>
+</ul>
+</li>
+<li>TThread<ul class="hierarchylevel">
+<li><a class="bold" href="BZLogger.TBZLogger.html">TBZLogger</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TVirtualReader.html">TVirtualReader</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBinaryReader.html">TBinaryReader</a><li><a class="bold" href="BZClasses.TTextReader.html">TTextReader</a></ul>
+</li>
+<li><a class="bold" href="BZClasses.TVirtualWriter.html">TVirtualWriter</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBinaryWriter.html">TBinaryWriter</a><li><a class="bold" href="BZClasses.TTextWriter.html">TTextWriter</a></ul>
+</li>
+</ul>
+</li>
+</ul>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

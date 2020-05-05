@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="bzscene_controls_rt"/>
+    <Author Value="J.Delauney (BeanzMaster)"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\Source\Components;..\Source\Components\Controls"/>
+        <UnitOutputDirectory Value="lib\bzcene-controls\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
+      </SearchPaths>
+      <Parsing>
+        <Style Value="1"/>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="BZScene Multimedia Library -  Controls Runtime Package
+Contains the base for creating visuals and non-visuals components"/>
+    <License Value="MPL / GPL"/>
+    <Version Minor="1"/>
+    <Files Count="2">
+      <Item1>
+        <Filename Value="..\Source\Components\Controls\BZImageViewer.pas"/>
+        <UnitName Value="BZImageViewer"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\Components\Controls\BZGizmoImage.pas"/>
+        <UnitName Value="BZGizmoImage"/>
+      </Item2>
+    </Files>
+    <RequiredPkgs Count="4">
+      <Item1>
+        <PackageName Value="bzscene_image_rt"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="bzscene_rt"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="LCL"/>
+      </Item3>
+      <Item4>
+        <PackageName Value="FCL"/>
+      </Item4>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+  </Package>
+</CONFIG>

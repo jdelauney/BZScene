@@ -1,0 +1,825 @@
+object BZBitmapInfosForm: TBZBitmapInfosForm
+  Left = 584
+  Height = 600
+  Top = 117
+  Width = 585
+  ActiveControl = Button1
+  BorderStyle = bsDialog
+  Caption = 'Bitmap Informations'
+  ClientHeight = 600
+  ClientWidth = 585
+  OnShow = FormShow
+  Position = poMainFormCenter
+  LCLVersion = '2.0.6.0'
+  object Panel1: TPanel
+    Left = 4
+    Height = 32
+    Top = 564
+    Width = 577
+    Align = alBottom
+    BorderSpacing.Around = 4
+    ClientHeight = 32
+    ClientWidth = 577
+    TabOrder = 0
+    object Button1: TButton
+      Left = 336
+      Height = 30
+      Top = 0
+      Width = 232
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Fermer'
+      OnClick = Button1Click
+      TabOrder = 0
+    end
+    object Button2: TButton
+      Left = 1
+      Height = 30
+      Top = 0
+      Width = 224
+      Align = alCustom
+      Anchors = [akTop, akLeft, akRight]
+      Caption = 'Autres informations'
+      TabOrder = 1
+    end
+  end
+  object Panel2: TPanel
+    Left = 4
+    Height = 556
+    Top = 4
+    Width = 577
+    Align = alClient
+    BorderSpacing.Around = 4
+    ClientHeight = 556
+    ClientWidth = 577
+    TabOrder = 1
+    object SpeedButton1: TSpeedButton
+      Left = 1
+      Height = 22
+      Top = 1
+      Width = 575
+      Align = alTop
+      Caption = 'Informations générales'
+    end
+    object pnlGeneralsInfos: TPanel
+      Left = 1
+      Height = 241
+      Top = 23
+      Width = 575
+      Align = alTop
+      ClientHeight = 241
+      ClientWidth = 575
+      TabOrder = 0
+      object Panel4: TPanel
+        Left = 5
+        Height = 231
+        Top = 5
+        Width = 283
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Bottom = 4
+        BevelOuter = bvNone
+        ClientHeight = 231
+        ClientWidth = 283
+        TabOrder = 0
+        object Label1: TLabel
+          Left = 4
+          Height = 15
+          Top = 4
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Format des données : '
+          ParentColor = False
+        end
+        object Label2: TLabel
+          Left = 4
+          Height = 15
+          Top = 42
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Compression : '
+          ParentColor = False
+        end
+        object Label3: TLabel
+          Left = 4
+          Height = 15
+          Top = 61
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Bits par pixel : '
+          ParentColor = False
+        end
+        object Label4: TLabel
+          Left = 4
+          Height = 15
+          Top = 80
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Largeur :'
+          ParentColor = False
+        end
+        object Label5: TLabel
+          Left = 4
+          Height = 15
+          Top = 99
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Hauteur : '
+          ParentColor = False
+        end
+        object Label6: TLabel
+          Left = 4
+          Height = 15
+          Top = 137
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Taille totale en octet : '
+          ParentColor = False
+        end
+        object Label7: TLabel
+          Left = 4
+          Height = 15
+          Top = 156
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Type d''alignement d''une ligne : '
+          ParentColor = False
+        end
+        object Label8: TLabel
+          Left = 4
+          Height = 15
+          Top = 118
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Taille d''une ligne en octet : '
+          ParentColor = False
+        end
+        object label9: TLabel
+          Left = 4
+          Height = 15
+          Top = 175
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Taille d''une ligne avec alignement en octet : '
+          ParentColor = False
+        end
+        object Label10: TLabel
+          Left = 4
+          Height = 15
+          Top = 194
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Nombre d''octet d''alignement : '
+          ParentColor = False
+        end
+        object Label11: TLabel
+          Left = 4
+          Height = 15
+          Top = 213
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Format de couleur : '
+          ParentColor = False
+        end
+        object Label17: TLabel
+          Left = 4
+          Height = 15
+          Top = 23
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Version : '
+          ParentColor = False
+        end
+      end
+      object Panel9: TPanel
+        Left = 288
+        Height = 231
+        Top = 5
+        Width = 282
+        Align = alClient
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        BorderSpacing.Bottom = 4
+        BevelOuter = bvNone
+        ClientHeight = 231
+        ClientWidth = 282
+        TabOrder = 1
+        object lblDataFormat: TLabel
+          Left = 4
+          Height = 15
+          Top = 4
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'Raw'
+          ParentColor = False
+        end
+        object lblDataCompression: TLabel
+          Left = 4
+          Height = 15
+          Top = 42
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'Aucune'
+          ParentColor = False
+        end
+        object lblPixelFormat: TLabel
+          Left = 4
+          Height = 15
+          Top = 61
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '32 bits'
+          ParentColor = False
+        end
+        object lblWidth: TLabel
+          Left = 4
+          Height = 15
+          Top = 80
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '1'
+          ParentColor = False
+        end
+        object lblHeight: TLabel
+          Left = 4
+          Height = 15
+          Top = 99
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '1'
+          ParentColor = False
+        end
+        object lblDataSize: TLabel
+          Left = 4
+          Height = 15
+          Top = 137
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '4'
+          ParentColor = False
+        end
+        object lblRowStrideType: TLabel
+          Left = 4
+          Height = 15
+          Top = 156
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '32 bits'
+          ParentColor = False
+        end
+        object lblRowSize: TLabel
+          Left = 4
+          Height = 15
+          Top = 118
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '4'
+          ParentColor = False
+        end
+        object lblRowStrideSize: TLabel
+          Left = 4
+          Height = 15
+          Top = 175
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '4'
+          ParentColor = False
+        end
+        object lblRowStrideLen: TLabel
+          Left = 4
+          Height = 15
+          Top = 194
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '0'
+          ParentColor = False
+        end
+        object lblColorFormat: TLabel
+          Left = 4
+          Height = 15
+          Top = 213
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'BGRA'
+          ParentColor = False
+        end
+        object lblDataVersion: TLabel
+          Left = 4
+          Height = 15
+          Top = 23
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '1.0'
+          ParentColor = False
+        end
+      end
+    end
+    object btnShowHideExtrasInfos: TSpeedButton
+      Left = 1
+      Height = 22
+      Top = 264
+      Width = 575
+      Align = alTop
+      Caption = 'Informations complémentaires'
+      OnClick = btnShowHideExtrasInfosClick
+    end
+    object pnlExtrasInfos: TPanel
+      Left = 1
+      Height = 130
+      Top = 286
+      Width = 575
+      Align = alTop
+      ClientHeight = 130
+      ClientWidth = 575
+      TabOrder = 1
+      Visible = False
+      object Panel6: TPanel
+        Left = 5
+        Height = 120
+        Top = 5
+        Width = 283
+        Align = alLeft
+        BorderSpacing.Left = 4
+        BorderSpacing.Top = 4
+        BorderSpacing.Bottom = 4
+        BevelOuter = bvNone
+        ClientHeight = 120
+        ClientWidth = 283
+        TabOrder = 0
+        object Label12: TLabel
+          Left = 4
+          Height = 15
+          Top = 23
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Nombre bits utilisés : '
+          ParentColor = False
+        end
+        object Label13: TLabel
+          Left = 4
+          Height = 15
+          Top = 4
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Ordre des lignes : '
+          ParentColor = False
+        end
+        object Label14: TLabel
+          Left = 4
+          Height = 15
+          Top = 42
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Prise en charge de la transparence : '
+          ParentColor = False
+        end
+        object Label15: TLabel
+          Left = 4
+          Height = 15
+          Top = 61
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Utilisation palette de couleurs : '
+          ParentColor = False
+        end
+        object Label16: TLabel
+          Left = 4
+          Height = 15
+          Top = 80
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Nombre de couleur dans la palette : '
+          ParentColor = False
+        end
+        object Label26: TLabel
+          Left = 4
+          Height = 15
+          Top = 99
+          Width = 275
+          Align = alTop
+          Alignment = taRightJustify
+          BorderSpacing.Around = 4
+          Caption = 'Entrelacée :'
+          ParentColor = False
+        end
+      end
+      object Panel10: TPanel
+        Left = 288
+        Height = 120
+        Top = 5
+        Width = 282
+        Align = alClient
+        BorderSpacing.Top = 4
+        BorderSpacing.Right = 4
+        BorderSpacing.Bottom = 4
+        BevelOuter = bvNone
+        ClientHeight = 120
+        ClientWidth = 282
+        TabOrder = 1
+        object lblBitsCount: TLabel
+          Left = 4
+          Height = 15
+          Top = 23
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '32'
+          ParentColor = False
+        end
+        object lblLineOrder: TLabel
+          Left = 4
+          Height = 15
+          Top = 4
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'de Haut en Bas'
+          ParentColor = False
+        end
+        object lblHasAlpha: TLabel
+          Left = 4
+          Height = 15
+          Top = 42
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'Oui'
+          ParentColor = False
+        end
+        object lblHasPalette: TLabel
+          Left = 4
+          Height = 15
+          Top = 61
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'Non'
+          ParentColor = False
+        end
+        object lblPaletteCount: TLabel
+          Left = 4
+          Height = 15
+          Top = 80
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = '0'
+          ParentColor = False
+        end
+        object lblIsInterlaced: TLabel
+          Left = 4
+          Height = 15
+          Top = 99
+          Width = 274
+          Align = alTop
+          BorderSpacing.Around = 4
+          Caption = 'Non'
+          ParentColor = False
+        end
+      end
+    end
+    object btnShowHideBFInfos: TSpeedButton
+      Left = 1
+      Height = 22
+      Top = 416
+      Width = 575
+      Align = alTop
+      Caption = 'Informations Encodage "bitfields"'
+      OnClick = btnShowHideBFInfosClick
+    end
+    object pnlBFInfos: TPanel
+      Left = 1
+      Height = 122
+      Top = 438
+      Width = 575
+      Align = alTop
+      ClientHeight = 122
+      ClientWidth = 575
+      TabOrder = 2
+      Visible = False
+      object Panel8: TPanel
+        Left = 5
+        Height = 112
+        Top = 5
+        Width = 565
+        Align = alClient
+        BorderSpacing.Around = 4
+        BevelOuter = bvNone
+        ClientHeight = 112
+        ClientWidth = 565
+        TabOrder = 0
+        object Bevel1: TBevel
+          Left = 31
+          Height = 7
+          Top = 25
+          Width = 507
+          Shape = bsTopLine
+        end
+        object Bevel2: TBevel
+          Left = 120
+          Height = 111
+          Top = 0
+          Width = 8
+          Shape = bsLeftLine
+        end
+        object Bevel3: TBevel
+          Left = 224
+          Height = 111
+          Top = 0
+          Width = 8
+          Shape = bsLeftLine
+        end
+        object Bevel4: TBevel
+          Left = 328
+          Height = 111
+          Top = 0
+          Width = 8
+          Shape = bsLeftLine
+        end
+        object Bevel5: TBevel
+          Left = 432
+          Height = 111
+          Top = 0
+          Width = 8
+          Shape = bsLeftLine
+        end
+        object Bevel6: TBevel
+          Left = 536
+          Height = 111
+          Top = 0
+          Width = 8
+          Shape = bsLeftLine
+        end
+        object Bevel7: TBevel
+          Left = 31
+          Height = 7
+          Top = 53
+          Width = 507
+          Shape = bsTopLine
+        end
+        object Bevel8: TBevel
+          Left = 31
+          Height = 7
+          Top = 81
+          Width = 507
+          Shape = bsTopLine
+        end
+        object Bevel9: TBevel
+          Left = 31
+          Height = 7
+          Top = 109
+          Width = 507
+          Shape = bsTopLine
+        end
+        object Label18: TLabel
+          Left = 156
+          Height = 15
+          Top = 5
+          Width = 36
+          Caption = 'Rouge'
+          Font.Color = clRed
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label19: TLabel
+          Left = 268
+          Height = 15
+          Top = 5
+          Width = 24
+          Caption = 'Vert'
+          Font.Color = clGreen
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label20: TLabel
+          Left = 369
+          Height = 15
+          Top = 5
+          Width = 25
+          Caption = 'Bleu'
+          Font.Color = clBlue
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label22: TLabel
+          Left = 470
+          Height = 15
+          Top = 5
+          Width = 31
+          Caption = 'Alpha'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label23: TLabel
+          Left = 64
+          Height = 15
+          Top = 32
+          Width = 43
+          Caption = 'Masque'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label24: TLabel
+          Left = 16
+          Height = 15
+          Top = 60
+          Width = 91
+          Caption = 'Décalage en bits'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object Label25: TLabel
+          Left = 40
+          Height = 15
+          Top = 88
+          Width = 68
+          Caption = 'Taille en bits'
+          Font.Style = [fsBold]
+          ParentColor = False
+          ParentFont = False
+        end
+        object lblRedMask: TLabel
+          Left = 120
+          Height = 15
+          Top = 32
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblRedMask'
+          ParentColor = False
+        end
+        object lblGreenMask: TLabel
+          Left = 224
+          Height = 15
+          Top = 32
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblGreenMask'
+          ParentColor = False
+        end
+        object lblBlueMask: TLabel
+          Left = 328
+          Height = 15
+          Top = 32
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblBlueMask'
+          ParentColor = False
+        end
+        object lblAlphaMask: TLabel
+          Left = 432
+          Height = 15
+          Top = 32
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblAlphaMask'
+          ParentColor = False
+        end
+        object lblAlphaShift: TLabel
+          Left = 434
+          Height = 15
+          Top = 60
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblAlphaShift'
+          ParentColor = False
+        end
+        object lblBlueShift: TLabel
+          Left = 330
+          Height = 15
+          Top = 60
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblBlueShift'
+          ParentColor = False
+        end
+        object lblGreenShift: TLabel
+          Left = 226
+          Height = 15
+          Top = 60
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblGreenShift'
+          ParentColor = False
+        end
+        object lblRedShift: TLabel
+          Left = 122
+          Height = 15
+          Top = 60
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblRedShift'
+          ParentColor = False
+        end
+        object lblAlphaSize: TLabel
+          Left = 432
+          Height = 15
+          Top = 88
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblAlphaSize'
+          ParentColor = False
+        end
+        object lblBlueSize: TLabel
+          Left = 328
+          Height = 15
+          Top = 88
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblBlueSize'
+          ParentColor = False
+        end
+        object lblGreenSize: TLabel
+          Left = 224
+          Height = 15
+          Top = 88
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblGreenSize'
+          ParentColor = False
+        end
+        object lblRedSize: TLabel
+          Left = 120
+          Height = 15
+          Top = 88
+          Width = 104
+          Alignment = taCenter
+          AutoSize = False
+          Caption = 'lblRedSize'
+          ParentColor = False
+        end
+      end
+    end
+  end
+  object Label21: TLabel
+    Left = 149
+    Height = 15
+    Top = 5
+    Width = 34
+    Caption = 'Rouge'
+    ParentColor = False
+  end
+end

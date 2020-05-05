@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmapFilterClasses</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZBitmapFilterClasses</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient les classes de base devant être hérité pour l'application de filtres graphique</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>22/08/2017 : Creation</p></li>
+  <li><p>18/06/2019 : Mise à jour</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Notes :</b><br>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Dépendances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZColors.html">BZColors</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZVectorMath.html">BZVectorMath</a>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>FPC/Lazarus</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
+
+<p><b>Licence</b> : MPL / LGPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Math</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZColors.html">BZColors</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapScanner.html"><code>TBZCustomBitmapScanner</code></a></td>
+<td class="itemdesc">Classe de base d'aide servant à appliquer divers traitement sur un bitmap.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterPointTransform.html"><code>TBZCustomBitmapFilterPointTransform</code></a></td>
+<td class="itemdesc">Classe à hériter pour appliquer un filtre à une couleur</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterPointTransformEx.html"><code>TBZCustomBitmapFilterPointTransformEx</code></a></td>
+<td class="itemdesc">Classe à hériter pour appliquer un filtre à une couleur avec prise en charge des tons clair, moyen et sombre, ainsi que la préservation de la luminosité</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterApplyLUT.html"><code>TBZCustomBitmapFilterApplyLUT</code></a></td>
+<td class="itemdesc">Classe à hériter pour l'application d'un filtre à partir de tables précalculées LUT</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterNonLinear.html"><code>TBZCustomBitmapFilterNonLinear</code></a></td>
+<td class="itemdesc">Classe à hériter pour l'application de filtre non-linéaire</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFilterClasses.TBZCustomBitmapFilterTransformation.html"><code>TBZCustomBitmapFilterTransformation</code></a></td>
+<td class="itemdesc">Classe à hériter pour l'application d'une transformation d'un point</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a></b> = array[0..255] of Byte;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmapFilterClasses.html#PBZColorChannelLUT">PBZColorChannelLUT</a></b> = &circ;<a  href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmapFilterClasses.html#TBZGetPixelSampleFunction">TBZGetPixelSampleFunction</a></b> = Function(var Pixels: <a  href="BZColors.html#TBZDynColorArray">TBZDynColorArray</a>): <a  href="BZColors.html#TBZColor">TBZColor</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZBitmapFilterClasses.html#cShadowToneLimit">cShadowToneLimit</a></b> =  85;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZBitmapFilterClasses.html#cMidToneLimit">cMidToneLimit</a></b>    = 170;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZColorChannelLUT"></span><code><b>TBZColorChannelLUT</b> = array[0..255] of Byte;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+LUT pour stocker des valeurs précalculées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="PBZColorChannelLUT"></span><code><b>PBZColorChannelLUT</b> = &circ;<a  href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Pointeurr vers une table LUT : <a class="normal" href="BZBitmapFilterClasses.html#TBZColorChannelLUT">TBZColorChannelLUT</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZGetPixelSampleFunction"></span><code><b>TBZGetPixelSampleFunction</b> = Function(var Pixels: <a  href="BZColors.html#TBZDynColorArray">TBZDynColorArray</a>): <a  href="BZColors.html#TBZColor">TBZColor</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Fonctions pour le calcul dune valeur suréchantillionnée</p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cShadowToneLimit"></span><code><b>cShadowToneLimit</b> =  85;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Limite <a class="normal" href="BZMath.html#Max">max</a> des tons foncés</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cMidToneLimit"></span><code><b>cMidToneLimit</b>    = 170;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Limite <a class="normal" href="BZMath.html#Max">max</a> des tons moyens</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2017-08-22
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

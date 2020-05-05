@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMathEx: Enregistrement TBZBoundingBox</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBoundingBox"></span><h1 class="cio">Enregistrement TBZBoundingBox</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMathEx.html">BZVectorMathEx</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBoundingBox = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Décris une boite englobante orienté 3D &quot;OBB&quot;<br> Une OBB est définis par huit <a class="normal" href="BZVectorMathEx.TBZBoundingBox.html#Points">points</a> décrivant la position de chaque coins de la boite</p>
+<p>
+)
+
+<p>Plus d'informations :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Minimum_bounding_box">https://en.wikipedia.org/wiki/Minimum_bounding_box</a></p></li>
+  <li><p><a  href="https://geidav.wordpress.com/tag/oriented-bounding-box/">https://geidav.wordpress.com/tag/oriented-bounding-box/</a></p></li>
+  <li><p><a  href="https://graphics.ethz.ch/teaching/former/seminar02/handouts/collisiondetection.pdf">https://graphics.ethz.ch/teaching/former/seminar02/handouts/collisiondetection.pdf</a></p></li>
+  <li><p><a  href="http://www.idt.mdh.se/~tla/publ/FastOBBs.pdf">http://www.idt.mdh.se/&tilde;tla/publ/FastOBBs.pdf</a></p></li>
+  <li><p><a  href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.9566&amp;rep=rep1&amp;type=pdf">http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.717.9566&amp;rep=rep1&amp;type=pdf</a></p></li>
+  <li><p><a  href="https://www.geometrictools.com/Documentation/DynamicCollisionDetection.pdf">https://www.geometrictools.com/Documentation/DynamicCollisionDetection.pdf</a></p></li>
+  <li><p><a  href="http://gamma.cs.unc.edu/users/gottschalk/main.pdf">http://gamma.cs.unc.edu/users/gottschalk/main.pdf</a></p></li>
+</ul>
+
+<p></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#Points">Points</a></b>: Array[0..7] of <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt1">pt1</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt2">pt2</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt3">pt3</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt4">pt4</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt5">pt5</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt6">pt6</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt7">pt7</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMathEx.TBZBoundingBox.html#pt8">pt8</a></b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMathEx.TBZBoundingBox.html#Create">Create</a></b>(Const AValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator +(ConstRef A, B : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>class operator +(ConstRef A: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>class operator =(ConstRef A, B : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>):Boolean; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#Transform">Transform</a></b>(ConstRef M:<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MinX">MinX</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MaxX">MaxX</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MinY">MinY</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MaxY">MaxY</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MinZ">MinZ</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <b><a  href="BZVectorMathEx.TBZBoundingBox.html#MaxZ">MaxZ</a></b> : Single;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Points"></span><code><b>Points</b>: Array[0..7] of <a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces via tableau de <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt1"></span><code><b>pt1</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt2"></span><code><b>pt2</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt3"></span><code><b>pt3</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt4"></span><code><b>pt4</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt5"></span><code><b>pt5</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt6"></span><code><b>pt6</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt7"></span><code><b>pt7</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="pt8"></span><code><b>pt8</b>:<a  href="BZVectorMath.html#TBZVector">TBZVector</a></code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const AValue : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Création d'une boite englobante orienté à partir d'un point</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A, B : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute deux boites englobante</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="+"></span><code>class operator +(ConstRef A: <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; ConstRef B : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Ajoute à la boites englobante un point (Etend la boite englobante )</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="="></span><code>class operator =(ConstRef A, B : <a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>):Boolean; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Compare si deux boite englobante sont égales</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Transform"></span><code>function <b>Transform</b>(ConstRef M:<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>):<a  href="BZVectorMathEx.TBZBoundingBox.html">TBZBoundingBox</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Applique une matrice de transformation affine 4x4</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinX"></span><code>function <b>MinX</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur minimale des X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxX"></span><code>function <b>MaxX</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur maximale des X</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinY"></span><code>function <b>MinY</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur minimale des Y</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxY"></span><code>function <b>MaxY</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur maximale des Y</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MinZ"></span><code>function <b>MinZ</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur minimale des Z</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MaxZ"></span><code>function <b>MaxZ</b> : Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Retourne la valeur maximale des Z</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

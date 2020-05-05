@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZVectorMath: Enregistrement TBZEulerAngles</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZEulerAngles"></span><h1 class="cio">Enregistrement TBZEulerAngles</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section">Hiérarchie</div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZVectorMath.html">BZVectorMath</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZEulerAngles = record</code></p>
+<h2 class="description">Description</h2>
+<p>
+Descrition d'angles d'Euler</p>
+<p>
+
+
+<p>Les angles d'Euler sont trois angles pour décrire l'orientation d'un corps rigide par rapport à un repère fixe. <br>     Ils peuvent également représenter l'orientation d'un référentiel mobile en physique. Ou l'orientation d'une base générale en algèbre linéaire tridimensionnelle. Est utilisé par le type <a class="normal" href="BZVectorMath.TBZQuaternion.html">TBZQuaternion</a>.
+
+<p><b>A RETENIR</b> : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>X = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Roll">Roll</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Bank">Bank</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Tilt">Tilt</a></p></li>
+  <li><p>Y = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Yaw">Yaw</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Heading">Heading</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Azimuth">Azimuth</a></p></li>
+  <li><p>Z = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Pitch">Pitch</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Attitude">Attitude</a> = <a class="normal" href="BZVectorMath.TBZEulerAngles.html#Elevation">Elevation</a></p></li>
+</ul>
+
+<p>
+
+<p>Source : <a  href="https://en.wikipedia.org/wiki/Euler_angles">https://en.wikipedia.org/wiki/Euler_angles</a>
+
+<p>Plus d'informations :<br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p><a  href="https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem">https://en.wikipedia.org/wiki/Euler%27s_rotation_theorem</a></p></li>
+  <li><p><a  href="http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/meca/angleeuler.html">http://ressources.univ-lemans.fr/AccesLibre/UM/Pedago/physique/02/meca/angleeuler.html</a></p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Orientation_">https://en.wikipedia.org/wiki/Orientation_</a>(geometry)</p></li>
+  <li><p><a  href="https://en.wikipedia.org/wiki/Inertial_navigation_system">https://en.wikipedia.org/wiki/Inertial_navigation_system</a></p></li>
+  <li><p><a  href="http://www.euclideanspace.com/maths/geometry/rotations/euler/index.htm">http://www.euclideanspace.com/maths/geometry/rotations/euler/index.htm</a></p></li>
+  <li><p><a  href="http://www.starlino.com/imu_guide.html">http://www.starlino.com/imu_guide.html</a></p></li>
+</ul>
+
+<p></p>
+<h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Fields"></span><h3 class="summary">Champs</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#V">V</a></b>: <a  href="BZVectorMath.html#TBZVector3fType">TBZVector3fType</a> </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#X">X</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Y">Y</a></b>: Single </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Z">Z</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Roll">Roll</a></b>: Single </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Yaw">Yaw</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Pitch">Pitch</a></b>: Single </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Bank">Bank</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Heading">Heading</a></b>: Single </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Attitude">Attitude</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Tilt">Tilt</a></b>: Single </code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Azimuth">Azimuth</a></b>: Single </code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZVectorMath.TBZEulerAngles.html#Elevation">Elevation</a></b>: Single </code></td>
+</tr>
+</table>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZEulerAngles.html#Create">Create</a></b>(X,Y,Z:Single);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZEulerAngles.html#Create">Create</a></b>(Const Angles: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.TBZEulerAngles.html#ConvertToAngleAxis">ConvertToAngleAxis</a></b>(Out Angle : Single; Out Axis : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;Const EulerOrder : <a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a> = <a  href="BZVectorMath.html#eulYZX">eulYZX</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <b><a  href="BZVectorMath.TBZEulerAngles.html#ConvertToRotationMatrix">ConvertToRotationMatrix</a></b>(Const EulerOrder:<a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a> = <a  href="BZVectorMath.html#eulYZX">eulYZX</a>): <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Champs</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="V"></span><code><b>V</b>: <a  href="BZVectorMath.html#TBZVector3fType">TBZVector3fType</a> </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Accès via tableau</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="X"></span><code><b>X</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Y"></span><code><b>Y</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Z"></span><code><b>Z</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par défaut</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Roll"></span><code><b>Roll</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Yaw"></span><code><b>Yaw</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Pitch"></span><code><b>Pitch</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Bank"></span><code><b>Bank</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;avionique&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Heading"></span><code><b>Heading</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;avionique&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Attitude"></span><code><b>Attitude</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;avionique&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Tilt"></span><code><b>Tilt</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;topographie&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Azimuth"></span><code><b>Azimuth</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;topographie&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Elevation"></span><code><b>Elevation</b>: Single </code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Acces par angle &quot;topographie&quot;</p>
+</td></tr>
+</table>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(X,Y,Z:Single);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Creation des angles d'Euler depuis les angles XYZ (en degré)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="Create"></span><code>procedure <b>Create</b>(Const Angles: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+CCreation des angles d'Euler depuis les angles définie dans un <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a> (en degré)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ConvertToAngleAxis"></span><code>procedure <b>ConvertToAngleAxis</b>(Out Angle : Single; Out Axis : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;Const EulerOrder : <a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a> = <a  href="BZVectorMath.html#eulYZX">eulYZX</a>);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertis les angles d'Euler en angle et en un axe selon l'ordre de rotation. <br> Ordre des angles de rotation par défaut YZX (<a class="normal" href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="ConvertToRotationMatrix"></span><code>function <b>ConvertToRotationMatrix</b>(Const EulerOrder:<a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a> = <a  href="BZVectorMath.html#eulYZX">eulYZX</a>): <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Convertis les angles d'Euler vers une matrice de rotation suivant l'ordre de rotation. <br> Ordre des angles de rotation par défaut YZX (<a class="normal" href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a>)</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

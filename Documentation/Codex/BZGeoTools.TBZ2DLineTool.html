@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGeoTools: Classe TBZ2DLineTool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZ2DLineTool"></span><h1 class="cio">Classe TBZ2DLineTool</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGeoTools.html">BZGeoTools</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZ2DLineTool = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZ2DLineTool</code> : Classe d'aide à la manipulation et au calcul de formules d'une ligne dans un repère cartésien</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZ2DLineTool</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZGeoTools.TBZ2DLineTool.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Assign">Assign</a></b>(source: TPersistent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#SetLineFromPoints">SetLineFromPoints</a></b>(Const aStartPoint, aEndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#SetInfiniteLine">SetInfiniteLine</a></b>(aStartPoint, aDirection : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aDistance : Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#Clone">Clone</a></b> : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetInfiniteIntersectPoint">GetInfiniteIntersectPoint</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetIntersectPoint">GetIntersectPoint</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoint, IntersectEndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IntersectWithLine">IntersectWithLine</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IntersectSegmentWithCircle">IntersectSegmentWithCircle</a></b>(aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aRadius : Single) : Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetInfiniteIntersectPointsWithCircle">GetInfiniteIntersectPointsWithCircle</a></b>(aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aRadius : Single; Out IntersectPointA, IntersectPointB : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetSegmentIntersectPointsWithRect">GetSegmentIntersectPointsWithRect</a></b>(aRect : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Out IntersectPointA, IntersectPointB : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IsPointOnLine">IsPointOnLine</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IsPerpendicular">IsPerpendicular</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IsParallel">IsParallel</a></b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IsVertical">IsVertical</a></b> : Boolean;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#IsHorizontal">IsHorizontal</a></b> : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPerpendicularPointsAtStartPoint">GetPerpendicularPointsAtStartPoint</a></b>(aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPerpendicularPointsAtEndPoint">GetPerpendicularPointsAtEndPoint</a></b>(aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPerpendicularPointFromPoint">GetPerpendicularPointFromPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPerpendicularPointsAtPoint">GetPerpendicularPointsAtPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetDirection">GetDirection</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetNormalizeDirection">GetNormalizeDirection</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetMidPoint">GetMidPoint</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPointOnLineFromStartPoint">GetPointOnLineFromStartPoint</a></b>(aDistance : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetPointOnLineFromEndPoint">GetPointOnLineFromEndPoint</a></b>(aDistance : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#getSlope">getSlope</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#getReciprocalInvSlope">getReciprocalInvSlope</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetYIntercept">GetYIntercept</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetLength">GetLength</a></b> : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#GetNormal">GetNormal</a></b>(Out LeftNormal, RightNormal : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#DistanceLineToPoint">DistanceLineToPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#DistanceLineToPoint">DistanceLineToPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; out aDir : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> ): Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#DistanceSegmentToPoint">DistanceSegmentToPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#DistanceSegmentToPoint">DistanceSegmentToPoint</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; out aDir : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> ): Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#PerpendicularDistance">PerpendicularDistance</a></b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Scale">Scale</a></b>(Factor : Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Translate">Translate</a></b>(dx,dy : Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Translate">Translate</a></b>(aVector : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Rotate">Rotate</a></b>(anAngle : Single; aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DLineTool.html#Rotate">Rotate</a></b>(anAngle : Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DLineTool.html#BuildStroke">BuildStroke</a></b>(Width : Integer; StrokeMode : <a  href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a>; StartCap, EndCap : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a>) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DLineTool.html#StartPoint">StartPoint</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read FStartPoint write FStartPoint;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DLineTool.html#EndPoint">EndPoint</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read FEndPoint write FEndPoint;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DLineTool.html#Tag">Tag</a></b> : Integer read FTagInt write FTagInt;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation de la classe <a class="normal" href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+constructor <a class="normal" href="BZGeoTools.TBZ2DLineTool.html#Create">Create</a>(Const aStartPoint, aEndPoint : <a class="normal" href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetLineFromPoints"></span><code>procedure <b>SetLineFromPoints</b>(Const aStartPoint, aEndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit les point de début et de fin du segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetInfiniteLine"></span><code>procedure <b>SetInfiniteLine</b>(aStartPoint, aDirection : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aDistance : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Définit le point de début, la direction et sa longueur de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clone"></span><code>function <b>Clone</b> : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Clone</code> la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetInfiniteIntersectPoint"></span><code>function <b>GetInfiniteIntersectPoint</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérifie si la ligne croise une autre ligne. Retourne : - <a class="normal" href="BZGeoTools.html#ilNone">ilNone</a> si pas d'intersection - <a class="normal" href="BZGeoTools.html#ilIntersect">ilIntersect</a> si les lignes se croise en un seul point Si il y a intersection la position du point d'intersection est retourné dans &quot;IntersectPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetIntersectPoint"></span><code>function <b>GetIntersectPoint</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>; out IntersectPoint, IntersectEndPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZGeoTools.html#TBZ2DLineIntersecType">TBZ2DLineIntersecType</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérifie si le segment de ligne croise un autre segment de ligne. Retourne : - <a class="normal" href="BZGeoTools.html#ilNone">ilNone</a> si pas d'intersection - <a class="normal" href="BZGeoTools.html#ilIntersect">ilIntersect</a> si les segments de ligne se croise en un seul point - <a class="normal" href="BZGeoTools.html#ilOverlap">ilOverlap</a> si les deux segment de ligne se chevauche Si il y a intersection la position du point d'intersection est retourné dans &quot;IntersectPoint&quot; Si les deux segment de ligne se chevauche alors les 2 points d'intersection sont retourné respectivement dans &quot;IntersectPoint&quot; et &quot;IntersectEndPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IntersectWithLine"></span><code>function <b>IntersectWithLine</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si le segment de ligne croise un autre segment de ligne.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IntersectSegmentWithCircle"></span><code>function <b>IntersectSegmentWithCircle</b>(aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aRadius : Single) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si un des points du segment de la ligne se trouve sur ou croise le cercle</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetInfiniteIntersectPointsWithCircle"></span><code>function <b>GetInfiniteIntersectPointsWithCircle</b>(aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aRadius : Single; Out IntersectPointA, IntersectPointB : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si un des points de la ligne se trouve sur ou croise le cercle et renvois la position des points d'intersection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetSegmentIntersectPointsWithRect"></span><code>function <b>GetSegmentIntersectPointsWithRect</b>(aRect : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>; Out IntersectPointA, IntersectPointB : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si un des points du segment de ligne se trouve sur ou croise le rectangle et renvois la position des points d'intersection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsPointOnLine"></span><code>function <b>IsPointOnLine</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vérifie si le point &quot;aPoint&quot; se trouve sur le segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsPerpendicular"></span><code>function <b>IsPerpendicular</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Verifie si la ligne &quot;aLine&quot; est perpendiculaire avec la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsParallel"></span><code>function <b>IsParallel</b>(aLine : <a  href="BZGeoTools.TBZ2DLineTool.html">TBZ2DLineTool</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Verifie si la ligne &quot;aLine&quot; est parallel avec la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsVertical"></span><code>function <b>IsVertical</b> : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Verifie si la ligne est Vertical</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsHorizontal"></span><code>function <b>IsHorizontal</b> : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Verifie si la ligne est Horizontal</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPerpendicularPointsAtStartPoint"></span><code>procedure <b>GetPerpendicularPointsAtStartPoint</b>(aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les points perpendiculaire Gauche &quot;LeftPoint&quot; et Droit &quot;RightPoint&quot; a une distance &quot;aDistance&quot; du point de début du segment &quot;<a class="normal" href="BZGeoTools.TBZ2DLineTool.html#StartPoint">StartPoint</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPerpendicularPointsAtEndPoint"></span><code>procedure <b>GetPerpendicularPointsAtEndPoint</b>(aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les points perpendiculaire Gauche &quot;LeftPoint&quot; et Droit &quot;RightPoint&quot; a une distance &quot;aDistance&quot; du point de fin du segment &quot;<a class="normal" href="BZGeoTools.TBZ2DLineTool.html#StartPoint">StartPoint</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPerpendicularPointFromPoint"></span><code>function <b>GetPerpendicularPointFromPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la position du point perpendiculaire à la ligne par rapport au point &quot;aPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPerpendicularPointsAtPoint"></span><code>function <b>GetPerpendicularPointsAtPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; aDistance : Single; out LeftPoint, RightPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Boolean;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Verifie que le point &quot;aPoint&quot; se trouve sur la ligne et les points perpendiculaire Gauche &quot;LeftPoint&quot; et Droit &quot;RightPoint&quot; a une distance &quot;aDistance&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetDirection"></span><code>function <b>GetDirection</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la direction de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNormalizeDirection"></span><code>function <b>GetNormalizeDirection</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la direction normalisé de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetMidPoint"></span><code>function <b>GetMidPoint</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la position du point médian du segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPointOnLineFromStartPoint"></span><code>function <b>GetPointOnLineFromStartPoint</b>(aDistance : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retoure la position du point sur la ligne se trouvant à une distance &quot;aDistance&quot; depuis le point de début du segment de ligne &quot;<a class="normal" href="BZGeoTools.TBZ2DLineTool.html#StartPoint">StartPoint</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetPointOnLineFromEndPoint"></span><code>function <b>GetPointOnLineFromEndPoint</b>(aDistance : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retoure la position du point sur la ligne se trouvant à une distance &quot;aDistance&quot; depuis le point de fin du segment de ligne &quot;<a class="normal" href="BZGeoTools.TBZ2DLineTool.html#EndPoint">EndPoint</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getSlope"></span><code>function <b>getSlope</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur de la pente (slope) de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getReciprocalInvSlope"></span><code>function <b>getReciprocalInvSlope</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la réciprocité inverse du facteur de la pente (InvSlope) de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetYIntercept"></span><code>function <b>GetYIntercept</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le &quot;Y-Intercept&quot; de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetLength"></span><code>function <b>GetLength</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la longueur du segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNormal"></span><code>procedure <b>GetNormal</b>(Out LeftNormal, RightNormal : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne les normales gauche et droite de la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DistanceLineToPoint"></span><code>function <b>DistanceLineToPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la distance la plus proche de la ligne au point &quot;aPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DistanceLineToPoint"></span><code>function <b>DistanceLineToPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; out aDir : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> ): Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la distance la plus proche de la ligne au point &quot;aPoint&quot; et retourne le vecteur directeur du point vers la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DistanceSegmentToPoint"></span><code>function <b>DistanceSegmentToPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>): Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la distance la plus proche du segment de ligne au point &quot;aPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DistanceSegmentToPoint"></span><code>function <b>DistanceSegmentToPoint</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; out aDir : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> ): Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la distance la plus proche du segment de ligne au point &quot;aPoint&quot; et retourne le vecteur directeur du point vers la ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PerpendicularDistance"></span><code>function <b>PerpendicularDistance</b>(aPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la distance entre le point perpendiculaire au segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Scale"></span><code>procedure <b>Scale</b>(Factor : Single);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Changement d'echelle du segment de ligne en fonction de &quot;Factor&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Translate"></span><code>procedure <b>Translate</b>(dx,dy : Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacement du segment de ligne en fonction de &quot;dx&quot;,&quot;dy&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Translate"></span><code>procedure <b>Translate</b>(aVector : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplacement du segment de ligne en fonction du vecteur &quot;aVector&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rotate"></span><code>procedure <b>Rotate</b>(anAngle : Single; aCenterPoint : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rotation de la ligne de &quot;Angle&quot; par rapport au centre &quot;aCenterPoint&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rotate"></span><code>procedure <b>Rotate</b>(anAngle : Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Rotation de la ligne sur elle même de &quot;Angle&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BuildStroke"></span><code>function <b>BuildStroke</b>(Width : Integer; StrokeMode : <a  href="BZGraphic.html#TBZStrokeMode">TBZStrokeMode</a>; StartCap, EndCap : <a  href="BZGraphic.html#TBZCapsMode">TBZCapsMode</a>) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartPoint"></span><code>property <b>StartPoint</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read FStartPoint write FStartPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Position du point de début du segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndPoint"></span><code>property <b>EndPoint</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> read FEndPoint write FEndPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Position du point de fin du segment de ligne</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Tag"></span><code>property <b>Tag</b> : Integer read FTagInt write FTagInt;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Tag</code></p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZGeoTools: Classe TBZ2DCubicBezierCurve</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZ2DCubicBezierCurve"></span><h1 class="cio">Classe TBZ2DCubicBezierCurve</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZGeoTools.html">BZGeoTools</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZ2DCubicBezierCurve = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe de manipulation de courbe de bezier cubic</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZ2DCubicBezierCurve</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ComputeOptimalSteps">ComputeOptimalSteps</a></b>(Const Tolerance : Single = 0.1) : Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ComputePointAt">ComputePointAt</a></b>(t: single): <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ComputePolyLinePoints">ComputePolyLinePoints</a></b>(Const nbStep : Integer = -1) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetX">GetX</a></b>(t : Single) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetY">GetY</a></b>(t : Single) : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetTFromX">GetTFromX</a></b>(x : Single) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetYFromX">GetYFromX</a></b>(x : Single) : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ComputeCoefficients">ComputeCoefficients</a></b>(Out CoefA, CoefB, CoefC : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#Split">Split</a></b>(out LeftCurve, RightCurve : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#SplitAt">SplitAt</a></b>(Position : Single; FromStart : Boolean) : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetLength">GetLength</a></b> : Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetBounds">GetBounds</a></b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetDerivativeAt">GetDerivativeAt</a></b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetNormalAt">GetNormalAt</a></b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetTangentAt">GetTangentAt</a></b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#GetTangentAngleAt">GetTangentAngleAt</a></b>(t : Single) : Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#AlignToLine">AlignToLine</a></b>(lp1, lp2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#StartPoint">StartPoint</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 0 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ControlPointA">ControlPointA</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 1 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#ControlPointB">ControlPointB</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 2 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#EndPoint">EndPoint</a></b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 3 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZGeoTools.TBZ2DCubicBezierCurve.html#Tolerance">Tolerance</a></b> : Single read FTolerance write FTolerance;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+FAngleTolerance</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeOptimalSteps"></span><code>function <b>ComputeOptimalSteps</b>(Const Tolerance : Single = 0.1) : Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputePointAt"></span><code>function <b>ComputePointAt</b>(t: single): <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputePolyLinePoints"></span><code>function <b>ComputePolyLinePoints</b>(Const nbStep : Integer = -1) : <a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetX"></span><code>function <b>GetX</b>(t : Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetY"></span><code>function <b>GetY</b>(t : Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTFromX"></span><code>function <b>GetTFromX</b>(x : Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetYFromX"></span><code>function <b>GetYFromX</b>(x : Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ComputeCoefficients"></span><code>procedure <b>ComputeCoefficients</b>(Out CoefA, CoefB, CoefC : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+B-Spline function ComputeSmoothPolyLinePoints : <a class="normal" href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a>;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Split"></span><code>procedure <b>Split</b>(out LeftCurve, RightCurve : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SplitAt"></span><code>function <b>SplitAt</b>(Position : Single; FromStart : Boolean) : <a  href="BZGeoTools.TBZ2DCubicBezierCurve.html">TBZ2DCubicBezierCurve</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetLength"></span><code>function <b>GetLength</b> : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetBounds"></span><code>function <b>GetBounds</b> : <a  href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetDerivativeAt"></span><code>function <b>GetDerivativeAt</b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNormalAt"></span><code>function <b>GetNormalAt</b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTangentAt"></span><code>function <b>GetTangentAt</b>(t : Single) : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetTangentAngleAt"></span><code>function <b>GetTangentAngleAt</b>(t : Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AlignToLine"></span><code>procedure <b>AlignToLine</b>(lp1, lp2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartPoint"></span><code>property <b>StartPoint</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 0 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ControlPointA"></span><code>property <b>ControlPointA</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 1 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ControlPointB"></span><code>property <b>ControlPointB</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 2 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndPoint"></span><code>property <b>EndPoint</b> : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a> index 3 read GetControlPoint write SetControlPoint;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Tolerance"></span><code>property <b>Tolerance</b> : Single read FTolerance write FTolerance;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZXCollection: Classe TBZXCollectionItem</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZXCollectionItem"></span><h1 class="cio">Classe TBZXCollectionItem</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZXCollection.html">BZXCollection</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZXCollectionItem = class(<a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe de base pour implémenté des objets pour la classe XCollection</p>
+<p>
+
+
+<p><b>NOTES</b> : <br> N'oubliez pas de surcharger les méthodes de persistance ReadFromFiler / WriteToFiler     si vous ajoutez des données dans une sous-classe! <br>     Les sous-classes doivent être &quot;enregistrées&quot; à l'aide de la fonction <a class="normal" href="BZXCollection.html#RegisterXCollectionItemClass">RegisterXCollectionItemClass</a>     pour un fonctionnement correct</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="thisitem">TBZXCollectionItem</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZXCollection.TBZXCollectionItem.html#Create">Create</a></b>(aOwner: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>); virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZXCollection.TBZXCollectionItem.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZXCollection.TBZXCollectionItem.html#GetNamePath">GetNamePath</a></b>: string; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZXCollection.TBZXCollectionItem.html#Assign">Assign</a></b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZXCollection.TBZXCollectionItem.html#MoveUp">MoveUp</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZXCollection.TBZXCollectionItem.html#MoveDown">MoveDown</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZXCollection.TBZXCollectionItem.html#Index">Index</a></b>: integer;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZXCollection.TBZXCollectionItem.html#FriendlyName">FriendlyName</a></b>: String; virtual; abstract;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZXCollection.TBZXCollectionItem.html#FriendlyDescription">FriendlyDescription</a></b>: String; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZXCollection.TBZXCollectionItem.html#ItemCategory">ItemCategory</a></b>: string; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZXCollection.TBZXCollectionItem.html#UniqueItem">UniqueItem</a></b>: Boolean; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZXCollection.TBZXCollectionItem.html#CanAddTo">CanAddTo</a></b>(collection: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>): Boolean; virtual;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZXCollection.TBZXCollectionItem.html#Owner">Owner</a></b>: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a> read FOwner;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZXCollection.TBZXCollectionItem.html#Name">Name</a></b>: string read FName write SetName;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(aOwner: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>); virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Création</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNamePath"></span><code>function <b>GetNamePath</b>: string; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le chemin de la collection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <b>Assign</b>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assigne un autre <a class="normal" href="BZXCollection.TBZXCollectionItem.html">TBZXCollectionItem</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveUp"></span><code>procedure <b>MoveUp</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplace l'item vers le haut dans la collection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MoveDown"></span><code>procedure <b>MoveDown</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Déplace l'item vers le bas dans la collection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Index"></span><code>function <b>Index</b>: integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'<code>index</code> de l'item dans la collection</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FriendlyName"></span><code>class function <b>FriendlyName</b>: String; virtual; abstract;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une dénomination conviviale pour la classe. <br>       Cette dénomination est utilisée pour choisir une classe dans l'expert IDE.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FriendlyDescription"></span><code>class function <b>FriendlyDescription</b>: String; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne une description conviviale de la classe. <br>       Cette dénomination est utilisée pour aider l'utilisateur lors du choix d'une       Classe dans l'expert IDE. Si elle est vide, elle tire sa valeur de <a class="normal" href="BZXCollection.TBZXCollectionItem.html#FriendlyName">FriendlyName</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ItemCategory"></span><code>class function <b>ItemCategory</b>: string; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la catégorie de la classe d'élément. <br>       C'est est une chaîne libre, elle sera utilisée par l'expert IDE pour       regrouper les éléments de collection et les éléments dans un menu</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UniqueItem"></span><code>class function <b>UniqueItem</b>: Boolean; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si <code>True</code>, un seul TBXCollectionItem est autorisé.
+
+<p>      L'héritage est pris en compte pour la résolution Unique de BXCollectionItem, c'est-à-dire       qu si TClassA est unique et TClassB est une sous-classe de TClassA, alors,       Quelle que soit l'unicité de TClassB, TClassA et TClassB ne seront pas autorisée       à être mélangé (puisque TClassB est un TClassA, et TClassA est unique). <br>       Tenter d'enfreindre les règles d'unicité ne sera pas possible       au moment du design (dans l'IDE) et déclenchera une exception au moment de l'exécution.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CanAddTo"></span><code>class function <b>CanAddTo</b>(collection: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a>): Boolean; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Permet à la classe TBXCollectionItem de déterminer si elle doit être autorisée       à être ajouter à la collection</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Owner"></span><code>property <b>Owner</b>: <a  href="BZXCollection.TBZXCollection.html">TBZXCollection</a> read FOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la collection propriétaire</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Name"></span><code>property <b>Name</b>: string read FName write SetName;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nom de l'item</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

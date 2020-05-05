@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZBitmap: Classe TBZBitmap</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZBitmap"></span><h1 class="cio">Classe TBZBitmap</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZBitmap.html">BZBitmap</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZBitmap = class(<a class="normal" href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe spécialisée et optimisée dans la gestion d'images. Avec les capacités suivantes : <br> </p>
+
+<p>(       </p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></li>
+<li class="ancestor"><a class="normal" href="BZGraphic.TBZBaseBitmap.html">TBZBaseBitmap</a></li>
+<li class="thisitem">TBZBitmap</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmap.TBZBitmap.html#Create">Create</a></b>(AOwner: TPersistent; AWidth, AHeight: Integer); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmap.TBZBitmap.html#Create">Create</a></b>(aWidth, aHeight: Integer); Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZBitmap.TBZBitmap.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZBitmap.TBZBitmap.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmap.html#Assign">Assign</a></b>(Source: TPersistent); Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZBitmap.TBZBitmap.html#CreateClone">CreateClone</a></b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmap.html#SetSize">SetSize</a></b>(NewWidth, NewHeight: Integer);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZBitmap.TBZBitmap.html#SaveToFile">SaveToFile</a></b>(Const FileName: String); Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmap.html#ApplyMask">ApplyMask</a></b>(Const FreeAfter:Boolean = True);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmap.html#ArithmeticBlend">ArithmeticBlend</a></b>(BlendMap : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; ColorOperator : <a  href="BZColors.html#TBZColorCombineMode">TBZColorCombineMode</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmap.html#StartAnimate">StartAnimate</a></b>; virtual;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmap.html#StopAnimate">StopAnimate</a></b>; virtual;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <b><a  href="BZBitmap.TBZBitmap.html#PauseAnimate">PauseAnimate</a></b>; virtual;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Canvas">Canvas</a></b>: <a  href="BZBitmap.TBZBitmapCanvas.html">TBZBitmapCanvas</a> read FCanvas;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Transformation">Transformation</a></b>: <a  href="BZBitmap.TBZBitmapTransformations.html">TBZBitmapTransformations</a> read FTransformations;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#ColorFilter">ColorFilter</a></b>: <a  href="BZBitmap.TBZBitmapColorFilters.html">TBZBitmapColorFilters</a> read FColorFilters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#EffectFilter">EffectFilter</a></b> : <a  href="BZBitmap.TBZBitmapEffectFilters.html">TBZBitmapEffectFilters</a> read FEffectFilters;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#BlurFilter">BlurFilter</a></b>: <a  href="BZBitmap.TBZBitmapBlurFilters.html">TBZBitmapBlurFilters</a> read FBlurFilters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#ConvolutionFilter">ConvolutionFilter</a></b>: <a  href="BZBitmap.TBZBitmapConvolutionFilters.html">TBZBitmapConvolutionFilters</a> read FConvolutionFilters;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#RenderFilter">RenderFilter</a></b>: <a  href="BZBitmap.TBZBitmapRenderFilters.html">TBZBitmapRenderFilters</a> read FRenderFilters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#DeformationFilter">DeformationFilter</a></b>: <a  href="BZBitmap.TBZBitmapDeformationFilters.html">TBZBitmapDeformationFilters</a> read FDeformationFilters;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#SegmentationFilter">SegmentationFilter</a></b> : <a  href="BZBitmap.TBZBitmapSegmentationFilters.html">TBZBitmapSegmentationFilters</a> read FSegmentationFilters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#MorphologicalFilter">MorphologicalFilter</a></b> : <a  href="BZBitmap.TBZBitmapMorphologicalFilters.html">TBZBitmapMorphologicalFilters</a> read FMorphologicalFilters;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#ThresholdFilter">ThresholdFilter</a></b> : <a  href="BZBitmap.TBZBitmapThresholdFilters.html">TBZBitmapThresholdFilters</a> read FThresholdFilters;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Histogram">Histogram</a></b> : <a  href="BZBitmap.TBZHistogram.html">TBZHistogram</a> read FHistogram;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#IsAnimate">IsAnimate</a></b> : Boolean Read FIsAnimate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#IsAnimatedPaused">IsAnimatedPaused</a></b> : Boolean Read FIsAnimatePaused;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#AnimateLoop">AnimateLoop</a></b> : Integer Read FAnimateLoop Write FAnimateLoop;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#AnimationSpeed">AnimationSpeed</a></b> : Integer Read FAnimationSpeed Write FAnimationSpeed;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#CurrentFrame">CurrentFrame</a></b> : Integer Read FFrameIndex;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnStartAnimate">OnStartAnimate</a></b> : TNotifyEvent Read FOnStartAnimate Write FOnStartAnimate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnStopAnimate">OnStopAnimate</a></b> : TNotifyEvent Read FOnStopAnimate Write FOnStopAnimate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnPauseAnimate">OnPauseAnimate</a></b> : TNotifyEvent Read FOnPauseAnimate Write FOnPauseAnimate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnFrameChanged">OnFrameChanged</a></b> : TNotifyEvent Read FOnFrameChanged Write FOnFrameChanged;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Pixels">Pixels</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Colors">Colors</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#FullFileName">FullFileName</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#ErrorCount">ErrorCount</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#Errors">Errors</a></b>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnLoadError">OnLoadError</a></b>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZBitmap.TBZBitmap.html#OnChange">OnChange</a></b>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(AOwner: TPersistent; AWidth, AHeight: Integer); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>(aWidth, aHeight: Integer); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>Procedure <b>Assign</b>(Source: TPersistent); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Assigne les propriété d'un autre bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateClone"></span><code>function <b>CreateClone</b> : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation d'un clone du bitmap (nouvelle instance)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetSize"></span><code>Procedure <b>SetSize</b>(NewWidth, NewHeight: Integer);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Modifie les dimensions du bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SaveToFile"></span><code>Procedure <b>SaveToFile</b>(Const FileName: String); Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Enregistre le bitmap dans un fichier</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ApplyMask"></span><code>procedure <b>ApplyMask</b>(Const FreeAfter:Boolean = True);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applique un masque à l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ArithmeticBlend"></span><code>procedure <b>ArithmeticBlend</b>(BlendMap : <a  href="BZBitmap.TBZBitmap.html">TBZBitmap</a>; ColorOperator : <a  href="BZColors.html#TBZColorCombineMode">TBZColorCombineMode</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Applique une operation arithmetique avec un autre image. (cf : <a class="normal" href="BZGraphic.TBZCustomBitmap.html#PutImageBlend">PutImageBlend</a>)</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartAnimate"></span><code>procedure <b>StartAnimate</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Joue l'animation depuis les images contenue dans <a class="normal" href="BZGraphic.TBZCustomBitmap.html#Layers">Layers</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StopAnimate"></span><code>procedure <b>StopAnimate</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Stoppe l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="PauseAnimate"></span><code>procedure <b>PauseAnimate</b>; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Pause l'animation</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Canvas"></span><code>property <b>Canvas</b>: <a  href="BZBitmap.TBZBitmapCanvas.html">TBZBitmapCanvas</a> read FCanvas;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès au <code>canvas</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Transformation"></span><code>property <b>Transformation</b>: <a  href="BZBitmap.TBZBitmapTransformations.html">TBZBitmapTransformations</a> read FTransformations;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes de transformations applicables à l'image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ColorFilter"></span><code>property <b>ColorFilter</b>: <a  href="BZBitmap.TBZBitmapColorFilters.html">TBZBitmapColorFilters</a> read FColorFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des filtres sur les couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EffectFilter"></span><code>property <b>EffectFilter</b> : <a  href="BZBitmap.TBZBitmapEffectFilters.html">TBZBitmapEffectFilters</a> read FEffectFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des effets spéciaux</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="BlurFilter"></span><code>property <b>BlurFilter</b>: <a  href="BZBitmap.TBZBitmapBlurFilters.html">TBZBitmapBlurFilters</a> read FBlurFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer les filtres d'adoucissement et de réduction de bruit</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ConvolutionFilter"></span><code>property <b>ConvolutionFilter</b>: <a  href="BZBitmap.TBZBitmapConvolutionFilters.html">TBZBitmapConvolutionFilters</a> read FConvolutionFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des filtres de convolution</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RenderFilter"></span><code>property <b>RenderFilter</b>: <a  href="BZBitmap.TBZBitmapRenderFilters.html">TBZBitmapRenderFilters</a> read FRenderFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes de rendu</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DeformationFilter"></span><code>property <b>DeformationFilter</b>: <a  href="BZBitmap.TBZBitmapDeformationFilters.html">TBZBitmapDeformationFilters</a> read FDeformationFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des filtres de déformation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SegmentationFilter"></span><code>property <b>SegmentationFilter</b> : <a  href="BZBitmap.TBZBitmapSegmentationFilters.html">TBZBitmapSegmentationFilters</a> read FSegmentationFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des filtres de segmentation et de détection des contours</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MorphologicalFilter"></span><code>property <b>MorphologicalFilter</b> : <a  href="BZBitmap.TBZBitmapMorphologicalFilters.html">TBZBitmapMorphologicalFilters</a> read FMorphologicalFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes pour appliquer des filtres morphologique</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ThresholdFilter"></span><code>property <b>ThresholdFilter</b> : <a  href="BZBitmap.TBZBitmapThresholdFilters.html">TBZBitmapThresholdFilters</a> read FThresholdFilters;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès aux méthodes de seuillage d'une image</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Histogram"></span><code>property <b>Histogram</b> : <a  href="BZBitmap.TBZHistogram.html">TBZHistogram</a> read FHistogram;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Acces à l'histogramme et ses méthodes</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsAnimate"></span><code>property <b>IsAnimate</b> : Boolean Read FIsAnimate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne <code>True</code> si une animation est jouée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="IsAnimatedPaused"></span><code>property <b>IsAnimatedPaused</b> : Boolean Read FIsAnimatePaused;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mettre l'animation en pause</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimateLoop"></span><code>property <b>AnimateLoop</b> : Integer Read FAnimateLoop Write FAnimateLoop;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Nombre de boucle à jouée pour l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimationSpeed"></span><code>property <b>AnimationSpeed</b> : Integer Read FAnimationSpeed Write FAnimationSpeed;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Vitesse de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CurrentFrame"></span><code>property <b>CurrentFrame</b> : Integer Read FFrameIndex;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Image actuelle de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnStartAnimate"></span><code>property <b>OnStartAnimate</b> : TNotifyEvent Read FOnStartAnimate Write FOnStartAnimate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement déclenché au démarrage de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnStopAnimate"></span><code>property <b>OnStopAnimate</b> : TNotifyEvent Read FOnStopAnimate Write FOnStopAnimate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement déclenché à l'arrêt de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnPauseAnimate"></span><code>property <b>OnPauseAnimate</b> : TNotifyEvent Read FOnPauseAnimate Write FOnPauseAnimate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement déclenché lorsque l'animation est mise en pause</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnFrameChanged"></span><code>property <b>OnFrameChanged</b> : TNotifyEvent Read FOnFrameChanged Write FOnFrameChanged;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement déclenché a chaque changement d'image dans l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Pixels"></span><code>property <b>Pixels</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Propriétés héritées</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Colors"></span><code>property <b>Colors</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FullFileName"></span><code>property <b>FullFileName</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ErrorCount"></span><code>property <b>ErrorCount</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Errors"></span><code>property <b>Errors</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnLoadError"></span><code>property <b>OnLoadError</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="OnChange"></span><code>property <b>OnChange</b>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CONFIG>
+  <Package Version="4">
+    <PathDelim Value="\"/>
+    <Name Value="bzscene_audio_rt"/>
+    <Author Value="J.Delauney (BeanzMaster)"/>
+    <CompilerOptions>
+      <Version Value="11"/>
+      <PathDelim Value="\"/>
+      <SearchPaths>
+        <OtherUnitFiles Value="..\Source\Audio;..\Source\Components\Audio;..\Source\Audio\fileformats;..\Source\Dependancies\openal;..\Source\Dependancies\mp3;..\Source\Dependancies\ogg;..\Source\Dependancies\modplug"/>
+        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+      </SearchPaths>
+      <Parsing>
+        <Style Value="1"/>
+      </Parsing>
+    </CompilerOptions>
+    <Description Value="BZScene Multimedia Library - Audio Runtime Package
+Contains the base of BZScene Multimedia Library for audio management"/>
+    <License Value="MPL /GPL"/>
+    <Version Major="1"/>
+    <Files Count="14">
+      <Item1>
+        <Filename Value="..\Source\Audio\BZSoundSample.pas"/>
+        <UnitName Value="BZSoundSample"/>
+      </Item1>
+      <Item2>
+        <Filename Value="..\Source\Dependancies\openal\BZLibOpenAL.pas"/>
+        <UnitName Value="BZLibOpenAL"/>
+      </Item2>
+      <Item3>
+        <Filename Value="..\Source\Dependancies\mp3\fmt123.pas"/>
+        <UnitName Value="fmt123"/>
+      </Item3>
+      <Item4>
+        <Filename Value="..\Source\Dependancies\mp3\mpg123.pas"/>
+        <UnitName Value="mpg123"/>
+      </Item4>
+      <Item5>
+        <Filename Value="..\Source\Dependancies\mp3\out123.pas"/>
+        <UnitName Value="out123"/>
+      </Item5>
+      <Item6>
+        <Filename Value="..\Source\Dependancies\ogg\BZLibOgg.pas"/>
+        <UnitName Value="BZLibOgg"/>
+      </Item6>
+      <Item7>
+        <Filename Value="..\Source\Dependancies\ogg\BZLibVorbis.pas"/>
+        <UnitName Value="BZLibVorbis"/>
+      </Item7>
+      <Item8>
+        <Filename Value="..\Source\Dependancies\modplug\BZLibModplug.pas"/>
+        <UnitName Value="BZLibModplug"/>
+      </Item8>
+      <Item9>
+        <Filename Value="..\Source\Components\Audio\BZSound.pas"/>
+        <UnitName Value="BZSound"/>
+      </Item9>
+      <Item10>
+        <Filename Value="..\Source\Components\Audio\BZOpenALManager.pas"/>
+        <UnitName Value="BZOpenALManager"/>
+      </Item10>
+      <Item11>
+        <Filename Value="..\Source\Audio\fileformats\BZSoundFileMP3.pas"/>
+        <UnitName Value="BZSoundFileMP3"/>
+      </Item11>
+      <Item12>
+        <Filename Value="..\Source\Audio\fileformats\BZSoundFileOGG.pas"/>
+        <UnitName Value="BZSoundFileOGG"/>
+      </Item12>
+      <Item13>
+        <Filename Value="..\Source\Audio\fileformats\BZSoundFileWAV.pas"/>
+        <UnitName Value="BZSoundFileWAV"/>
+      </Item13>
+      <Item14>
+        <Filename Value="..\Source\Audio\fileformats\BZSoundFileModplug.pas"/>
+        <UnitName Value="BZSoundFileModplug"/>
+      </Item14>
+    </Files>
+    <RequiredPkgs Count="3">
+      <Item1>
+        <PackageName Value="bzscene_tools_rt"/>
+      </Item1>
+      <Item2>
+        <PackageName Value="bzscene_rt"/>
+      </Item2>
+      <Item3>
+        <PackageName Value="FCL"/>
+      </Item3>
+    </RequiredPkgs>
+    <UsageOptions>
+      <UnitPath Value="$(PkgOutDir)"/>
+    </UsageOptions>
+    <PublishOptions>
+      <Version Value="2"/>
+      <UseFileFilters Value="True"/>
+    </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
+  </Package>
+</CONFIG>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZColors: Classe TBZColorList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZColorList"></span><h1 class="cio">Classe TBZColorList</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZColors.html">BZColors</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZColorList = class(<a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Classe pour la gestion d'une palette (liste) de couleurs de type <a class="normal" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a></li>
+<li class="thisitem">TBZColorList</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZColors.TBZColorList.html#CreateOwned">CreateOwned</a></b>(aOwner: <a  href="BZColors.TBZColorsManager.html">TBZColorsManager</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZColors.TBZColorList.html#Destroy">Destroy</a></b>; Override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZColors.TBZColorList.html#Clear">Clear</a></b>; Override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZColorList.html#AddColor">AddColor</a></b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZColorList.html#AddColor">AddColor</a></b>(Const aName: String; Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZColorList.html#AddColor">AddColor</a></b>(Const aColorItem: <a  href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a>): Integer; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Procedure <b><a  href="BZColors.TBZColorList.html#RemoveColor">RemoveColor</a></b>(Const aName: String);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZColorList.html#FindColorByName">FindColorByName</a></b>(Const aName: String; Out Index: Integer): <a  href="BZColors.html#TBZColor">TBZColor</a>; Overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <b><a  href="BZColors.TBZColorList.html#FindColorByName">FindColorByName</a></b>(Const aName: String): <a  href="BZColors.html#TBZColor">TBZColor</a>; Overload;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZColorList.html#Owner">Owner</a></b>: <a  href="BZColors.TBZColorsManager.html">TBZColorsManager</a> read FOwner write FOwner;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZColorList.html#DirectList">DirectList</a></b>: <a  href="BZColors.html#PBZColorItemArray">PBZColorItemArray</a> read getDirectList;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZColors.TBZColorList.html#Colors">Colors</a></b>[Index:Integer]: <a  href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a> read GetColorItem write setColorItem;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateOwned"></span><code>Constructor <b>CreateOwned</b>(aOwner: <a  href="BZColors.TBZColorsManager.html">TBZColorsManager</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Clear"></span><code>Procedure <b>Clear</b>; Override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface la liste de couleur</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColor"></span><code>Function <b>AddColor</b>(Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couler à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColor"></span><code>Function <b>AddColor</b>(Const aName: String; Const aColor: <a  href="BZColors.html#TBZColor">TBZColor</a>): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couler à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddColor"></span><code>Function <b>AddColor</b>(Const aColorItem: <a  href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a>): Integer; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une couler à la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="RemoveColor"></span><code>Procedure <b>RemoveColor</b>(Const aName: String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Efface une couleur de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FindColorByName"></span><code>Function <b>FindColorByName</b>(Const aName: String; Out Index: Integer): <a  href="BZColors.html#TBZColor">TBZColor</a>; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Recherche une couleur dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FindColorByName"></span><code>Function <b>FindColorByName</b>(Const aName: String): <a  href="BZColors.html#TBZColor">TBZColor</a>; Overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Recherche une couleur dans la liste</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Owner"></span><code>property <b>Owner</b>: <a  href="BZColors.TBZColorsManager.html">TBZColorsManager</a> read FOwner write FOwner;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Owner</code>: Liste gérér par un gestionnaire de type TBZColorManager</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectList"></span><code>property <b>DirectList</b>: <a  href="BZColors.html#PBZColorItemArray">PBZColorItemArray</a> read getDirectList;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>DirectList</code> : Pointeur sur une liste des couleurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Colors"></span><code>property <b>Colors</b>[Index:Integer]: <a  href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a> read GetColorItem write setColorItem;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Colors</code> : Acceder à la couleur &quot;Index&quot; de la liste</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

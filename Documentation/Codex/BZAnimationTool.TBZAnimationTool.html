@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZAnimationTool: Classe TBZAnimationTool</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZAnimationTool"></span><h1 class="cio">Classe TBZAnimationTool</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZAnimationTool.html">BZAnimationTool</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZAnimationTool = class(<a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadableObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZAnimationTool</code></p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZThreadAbleObject.html">TBZThreadAbleObject</a></li>
+<li class="thisitem">TBZAnimationTool</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <b><a  href="BZAnimationTool.TBZAnimationTool.html#Create">Create</a></b>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <b><a  href="BZAnimationTool.TBZAnimationTool.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Ease">Ease</a></b>(EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; t : Single) : Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Ease">Ease</a></b>(EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; t : Single; Param1 : Single) : Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Tween">Tween</a></b>(Current, Duration, rangeStart, rangeEnd : Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>) : Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Tween">Tween</a></b>(Current, Duration, rangeStart, rangeEnd : Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; Param1 : Single) : Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Animate">Animate</a></b>(CurrentStep : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Animate">Animate</a></b>(CurrentStep : Single; Param1 : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Animate">Animate</a></b>(CurrentStep : Single; Param1, Param2 : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#Animate">Animate</a></b>(CurrentStep : Single; Param1, Param2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#AnimateInt">AnimateInt</a></b>(CurrentStep : Single; Const Reverse : Boolean = False) : Integer; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#AnimateInt">AnimateInt</a></b>(CurrentStep : Single; Param1 : Single; Const Reverse : Boolean = False) : Integer; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZAnimationTool.TBZAnimationTool.html#AnimateRemap">AnimateRemap</a></b>(CurrentStep : Single; inStart, inEnd: Single) : Single;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#Duration">Duration</a></b> : Single read FDuration write FDuration;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#StartValue">StartValue</a></b> : Single read FStartValue write FStartValue;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#EndValue">EndValue</a></b> : Single read FEndValue write FEndValue;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#AnimationMode">AnimationMode</a></b> : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a> read FAnimationMode write FAnimationMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#AnimationType">AnimationType</a></b> : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a> read FAnimationType write FAnimationType;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#ClampMode">ClampMode</a></b> : <a  href="BZAnimationTool.html#TBZAnimationClampMode">TBZAnimationClampMode</a> read FClampMode write FClampMode;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#Interpolate">Interpolate</a></b> : Boolean read FInterpolate write FInterpolate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#InterpolationFilter">InterpolationFilter</a></b> : <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a> read FInterpolationFilter write FInterpolationFilter;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZAnimationTool.TBZAnimationTool.html#CustomEaseFunc">CustomEaseFunc</a></b> : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a> read FCustomEaseFunc write FCustomEaseFunc;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <b>Create</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Ease"></span><code>function <b>Ease</b>(EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; t : Single) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur compris entre 0.0 et 1.0 ,calculé de l'animation à un moment T compris entre 0.0 et 1.0 en fonction du mode et du type</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Ease"></span><code>function <b>Ease</b>(EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; t : Single; Param1 : Single) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur compris entre 0.0 et 1.0 ,calculé de l'animation à un moment T compris entre 0.0 et 1.0 en fonction du mode et du type. <br> Avec en plus le passage d'un paramètre supplémentaire pour les types d'animation qui le demande. <br> cf : <a class="normal" href="BZAnimationTool.html#atPower">atPower</a>, <a class="normal" href="BZAnimationTool.html#atStep">atStep</a>, <a class="normal" href="BZAnimationTool.html#atSwing">atSwing</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Tween"></span><code>function <b>Tween</b>(Current, Duration, rangeStart, rangeEnd : Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur d'animation compris entre &quot;rangeStart&quot; et &quot;rangeEnd&quot; à un temps donné &quot;Current&quot; de durée &quot;<a class="normal" href="BZAnimationTool.TBZAnimationTool.html#Duration">Duration</a>&quot;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Tween"></span><code>function <b>Tween</b>(Current, Duration, rangeStart, rangeEnd : Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>; Param1 : Single) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Animate"></span><code>function <b>Animate</b>(CurrentStep : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur de type &quot;Single&quot; d'animation en fonction des propriété</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Animate"></span><code>function <b>Animate</b>(CurrentStep : Single; Param1 : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Animate"></span><code>function <b>Animate</b>(CurrentStep : Single; Param1, Param2 : Single; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Animate"></span><code>function <b>Animate</b>(CurrentStep : Single; Param1, Param2 : <a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a>; Const Reverse : Boolean = False) : Single; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimateInt"></span><code>function <b>AnimateInt</b>(CurrentStep : Single; Const Reverse : Boolean = False) : Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne le facteur de type &quot;Integer&quot; d'animation en fonction des propriété</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimateInt"></span><code>function <b>AnimateInt</b>(CurrentStep : Single; Param1 : Single; Const Reverse : Boolean = False) : Integer; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimateRemap"></span><code>function <b>AnimateRemap</b>(CurrentStep : Single; inStart, inEnd: Single) : Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Duration"></span><code>property <b>Duration</b> : Single read FDuration write FDuration;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Durée total de l'animation en frame, seconde ou tout autre unité de mesure</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="StartValue"></span><code>property <b>StartValue</b> : Single read FStartValue write FStartValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur de début</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EndValue"></span><code>property <b>EndValue</b> : Single read FEndValue write FEndValue;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Valeur de fin</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimationMode"></span><code>property <b>AnimationMode</b> : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a> read FAnimationMode write FAnimationMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mode de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AnimationType"></span><code>property <b>AnimationType</b> : <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a> read FAnimationType write FAnimationType;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Type de l'animation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ClampMode"></span><code>property <b>ClampMode</b> : <a  href="BZAnimationTool.html#TBZAnimationClampMode">TBZAnimationClampMode</a> read FClampMode write FClampMode;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Mode de restriction des valeurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Interpolate"></span><code>property <b>Interpolate</b> : Boolean read FInterpolate write FInterpolate;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Active l'interpolation des valeurs</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="InterpolationFilter"></span><code>property <b>InterpolationFilter</b> : <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a> read FInterpolationFilter write FInterpolationFilter;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Filtre d'interpolation à appliquer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CustomEaseFunc"></span><code>property <b>CustomEaseFunc</b> : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a> read FCustomEaseFunc write FCustomEaseFunc;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Fonction paramétrique 1D personnalisée pour le calcul des valeurs de l'animation</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

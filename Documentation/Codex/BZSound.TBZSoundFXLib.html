@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZSound: Classe TBZSoundFXLib</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZSoundFXLib"></span><h1 class="cio">Classe TBZSoundFXLib</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZSound.html">BZSound</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZSoundFXLib = class(<a class="normal" href="BZXCollection.TBZXCollection.html">TBZXCollection</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Gestion d'une collection d'effets audio</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZXCollection.TBZXCollection.html">TBZXCollection</a></li>
+<li class="thisitem">TBZSoundFXLib</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetNamePath">GetNamePath</a></b>: string; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>class function <b><a  href="BZSound.TBZSoundFXLib.html#ItemsClass">ItemsClass</a></b>: <a  href="BZXCollection.html#TBZXCollectionItemClass">TBZXCollectionItemClass</a>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#CanAdd">CanAdd</a></b>(aClass: <a  href="BZXCollection.html#TBZXCollectionItemClass">TBZXCollectionItemClass</a>): Boolean; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetItemByName">GetItemByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddFilterLowPass">AddFilterLowPass</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZLowPassSoundFilter.html">TBZLowPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddFilterHighPass">AddFilterHighPass</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZHighPassSoundFilter.html">TBZHighPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddFilterBandPass">AddFilterBandPass</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZBandPassSoundFilter.html">TBZBandPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetFilterLowPassByName">GetFilterLowPassByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZLowPassSoundFilter.html">TBZLowPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetFilterHighPassByName">GetFilterHighPassByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZHighPassSoundFilter.html">TBZHighPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetFilterBandPassByName">GetFilterBandPassByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZBandPassSoundFilter.html">TBZBandPassSoundFilter</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectReverb">AddEffectReverb</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZReverbSoundEffect.html">TBZReverbSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectEAXReverb">AddEffectEAXReverb</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEAXReverbSoundEffect.html">TBZEAXReverbSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectChorus">AddEffectChorus</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZChorusSoundEffect.html">TBZChorusSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectEcho">AddEffectEcho</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEchoSoundEffect.html">TBZEchoSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectDistortion">AddEffectDistortion</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZDistortionSoundEffect.html">TBZDistortionSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectFlanger">AddEffectFlanger</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZFlangerSoundEffect.html">TBZFlangerSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectCompressor">AddEffectCompressor</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZCompressorSoundEffect.html">TBZCompressorSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#AddEffectEqualizer">AddEffectEqualizer</a></b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEqualizerSoundEffect.html">TBZEqualizerSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectReverbByName">GetEffectReverbByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZReverbSoundEffect.html">TBZReverbSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectEAXReverbByName">GetEffectEAXReverbByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEAXReverbSoundEffect.html">TBZEAXReverbSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectChorusByName">GetEffectChorusByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZChorusSoundEffect.html">TBZChorusSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectEchoByName">GetEffectEchoByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEchoSoundEffect.html">TBZEchoSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectDistortionByName">GetEffectDistortionByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZDistortionSoundEffect.html">TBZDistortionSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectFlangerByName">GetEffectFlangerByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZFlangerSoundEffect.html">TBZFlangerSoundEffect</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectCompressorByName">GetEffectCompressorByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZCompressorSoundEffect.html">TBZCompressorSoundEffect</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundFXLib.html#GetEffectEqualizerByName">GetEffectEqualizerByName</a></b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEqualizerSoundEffect.html">TBZEqualizerSoundEffect</a>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundFXLib.html#FXItems">FXItems</a></b>[index:Integer]: <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a> read GetItem;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetNamePath"></span><code>function <b>GetNamePath</b>: string; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ItemsClass"></span><code>class function <b>ItemsClass</b>: <a  href="BZXCollection.html#TBZXCollectionItemClass">TBZXCollectionItemClass</a>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CanAdd"></span><code>function <b>CanAdd</b>(aClass: <a  href="BZXCollection.html#TBZXCollectionItemClass">TBZXCollectionItemClass</a>): Boolean; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetItemByName"></span><code>function <b>GetItemByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+procedure DoProgress(const progressTimes: <a class="normal" href="BZClasses.TBZProgressTimes.html">TBZProgressTimes</a>);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddFilterLowPass"></span><code>function <b>AddFilterLowPass</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZLowPassSoundFilter.html">TBZLowPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddFilterHighPass"></span><code>function <b>AddFilterHighPass</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZHighPassSoundFilter.html">TBZHighPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddFilterBandPass"></span><code>function <b>AddFilterBandPass</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZBandPassSoundFilter.html">TBZBandPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetFilterLowPassByName"></span><code>function <b>GetFilterLowPassByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZLowPassSoundFilter.html">TBZLowPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetFilterHighPassByName"></span><code>function <b>GetFilterHighPassByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZHighPassSoundFilter.html">TBZHighPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetFilterBandPassByName"></span><code>function <b>GetFilterBandPassByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZBandPassSoundFilter.html">TBZBandPassSoundFilter</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectReverb"></span><code>function <b>AddEffectReverb</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZReverbSoundEffect.html">TBZReverbSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectEAXReverb"></span><code>function <b>AddEffectEAXReverb</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEAXReverbSoundEffect.html">TBZEAXReverbSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectChorus"></span><code>function <b>AddEffectChorus</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZChorusSoundEffect.html">TBZChorusSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectEcho"></span><code>function <b>AddEffectEcho</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEchoSoundEffect.html">TBZEchoSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectDistortion"></span><code>function <b>AddEffectDistortion</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZDistortionSoundEffect.html">TBZDistortionSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectFlanger"></span><code>function <b>AddEffectFlanger</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZFlangerSoundEffect.html">TBZFlangerSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectCompressor"></span><code>function <b>AddEffectCompressor</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZCompressorSoundEffect.html">TBZCompressorSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddEffectEqualizer"></span><code>function <b>AddEffectEqualizer</b>(AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>) : <a  href="BZSound.TBZEqualizerSoundEffect.html">TBZEqualizerSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectReverbByName"></span><code>function <b>GetEffectReverbByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZReverbSoundEffect.html">TBZReverbSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectEAXReverbByName"></span><code>function <b>GetEffectEAXReverbByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEAXReverbSoundEffect.html">TBZEAXReverbSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectChorusByName"></span><code>function <b>GetEffectChorusByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZChorusSoundEffect.html">TBZChorusSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectEchoByName"></span><code>function <b>GetEffectEchoByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEchoSoundEffect.html">TBZEchoSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectDistortionByName"></span><code>function <b>GetEffectDistortionByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZDistortionSoundEffect.html">TBZDistortionSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectFlangerByName"></span><code>function <b>GetEffectFlangerByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZFlangerSoundEffect.html">TBZFlangerSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectCompressorByName"></span><code>function <b>GetEffectCompressorByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZCompressorSoundEffect.html">TBZCompressorSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetEffectEqualizerByName"></span><code>function <b>GetEffectEqualizerByName</b>(const AName: <a  href="BZSound.html#TBZSoundFXName">TBZSoundFXName</a>): <a  href="BZSound.TBZEqualizerSoundEffect.html">TBZEqualizerSoundEffect</a>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FXItems"></span><code>property <b>FXItems</b>[index:Integer]: <a  href="BZSound.TBZCustomSoundFXItem.html">TBZCustomSoundFXItem</a> read GetItem;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

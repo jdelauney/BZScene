@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZThreadTimer: Classe TBZThreadTimer</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<span id="TBZThreadTimer"></span><h1 class="cio">Classe TBZThreadTimer</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZThreadTimer.html">BZThreadTimer</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZThreadTimer = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+Remplacant au composant TTimer compatible Windows et Unix avec une meilleure précision (1 milliseconde).</p>
+<p>
+
+
+<p><code>TBZThreadTimer</code> utilise un <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#Thread">thread</a> interne et peut avoir une précision d'une milliseconde. <br> <b>Note</b> : Il consomme plus de CPU qu'un TTimer traditionnel</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">TBZThreadTimer</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <b><a  href="BZThreadTimer.TBZThreadTimer.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <b><a  href="BZThreadTimer.TBZThreadTimer.html#Destroy">Destroy</a></b>; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Thread">Thread</a></b>: TThread read FThread;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Enabled">Enabled</a></b>: Boolean Read FEnabled Write SetEnabled default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Interval">Interval</a></b>: Cardinal Read FInterval Write SetInterval default 1000;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#KeepAlive">KeepAlive</a></b>: Boolean Read FKeepAlive Write SetKeepAlive default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Synchronize">Synchronize</a></b>: Boolean Read FSynchronize write SetSynchronize default False;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Accurate">Accurate</a></b>: Boolean Read FAccurate Write FAccurate default False;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#Priority">Priority</a></b>: TThreadPriority read FPriority write SetPriority default tpNormal;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <b><a  href="BZThreadTimer.TBZThreadTimer.html#OnTimer">OnTimer</a></b>: TNotifyEvent Read FOnTimer Write SetOnTimer;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Creation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Destruction</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Thread"></span><code>property <b>Thread</b>: TThread read FThread;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Accès direct au <code>Thread</code></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Enabled"></span><code>property <b>Enabled</b>: Boolean Read FEnabled Write SetEnabled default False;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Marche/ Arrêt du timer</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Interval"></span><code>property <b>Interval</b>: Cardinal Read FInterval Write SetInterval default 1000;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Interval</code> en milliseconde entre chaque appel à l'évènement <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#OnTimer">OnTimer</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="KeepAlive"></span><code>property <b>KeepAlive</b>: Boolean Read FKeepAlive Write SetKeepAlive default False;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Si le drapeau &quot;<code>KeepAlive</code>&quot; est sur True alors l'évènement <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#OnTimer">OnTimer</a> est exécuté en bloucle si non celui si est stoppé à la fin de la tâche à effectuée</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Synchronize"></span><code>property <b>Synchronize</b>: Boolean Read FSynchronize write SetSynchronize default False;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Synchronisation de l'évènement <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#OnTimer">OnTimer</a> avec l'application, si non l'appel à l'évènement <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#OnTimer">OnTimer</a> est asynchrone</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Accurate"></span><code>property <b>Accurate</b>: Boolean Read FAccurate Write FAccurate default False;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Utiliser la méthode précise pour la calcul du temps</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Priority"></span><code>property <b>Priority</b>: TThreadPriority read FPriority write SetPriority default tpNormal;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Uniquement sous Windows : Définition de la priorité du <a class="normal" href="BZThreadTimer.TBZThreadTimer.html#Thread">Thread</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="OnTimer"></span><code>property <b>OnTimer</b>: TNotifyEvent Read FOnTimer Write SetOnTimer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Evènement déclenché toutes les &quot;<a class="normal" href="BZThreadTimer.TBZThreadTimer.html#Interval">Interval</a>&quot; millisecondes</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>
