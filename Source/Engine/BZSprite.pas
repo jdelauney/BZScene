@@ -112,7 +112,7 @@ Type
   public
     constructor Create(AParent: TBZCustomBaseSprite); virtual;
     destructor Destroy; override;
-    procedure Assign(const Value: TBZCustomBaseSprite); override;
+    procedure Assign(const Value: TBZCustomBaseSprite); //override;
 
     procedure Add(Sprite: TBZCustomBaseSprite);
     procedure Remove(Sprite: TBZCustomBaseSprite);

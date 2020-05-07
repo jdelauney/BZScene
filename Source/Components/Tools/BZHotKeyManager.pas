@@ -54,7 +54,8 @@ uses
    windows
 {$ENDIF}
 {$IFDEF LINUX}
-  ctypes, cthreads, cmem , BaseUnix,Unix, x, xlib, gdk2, gdk2x
+  //cthreads, cmem ,
+  Unix, x, xlib, gdk2, gdk2x
 {$ENDIF}
 {$IFDEF DARWIN}
   // Il semblrerait qu'en utilisant "NSEvent" il est possible d'intercepter les evenements clavier
@@ -440,14 +441,13 @@ end;
 { Ecoute les evenements }
 procedure TBZXEventListener.Execute;
 begin
-  while Terminated do
+  while not(Terminated) do
   begin
-    if not Terminated then
-    begin
-      Synchronize(@FApplicationHotKeys.WaitForXevent)
-    end;
-    if Terminated then
-      exit;
+    //if not Terminated then
+    //begin
+     Synchronize(@FApplicationHotKeys.WaitForXevent);
+    //end;
+    //if Terminated then exit;
   end;
 end;
 

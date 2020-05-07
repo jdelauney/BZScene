@@ -36,7 +36,7 @@ unit BZThreadTimer;
 
 //==============================================================================
 {$mode objfpc}{$H+}
-{$i ..\..\bzscene_options.inc}
+{.$i ..\..\bzscene_options.inc}
 //==============================================================================
 
 interface
@@ -44,7 +44,7 @@ interface
 uses
   Classes, SysUtils,
   {$IFDEF LINUX}
-  cthreads,cmem,
+//  cthreads,cmem,
   {$ENDIF}
   LResources, LCLProc, LCLType, LCLIntf;
 

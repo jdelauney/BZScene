@@ -56,7 +56,7 @@ uses
   {$IFDEF UNIX}
     BaseUnix,
   {$ENDIF}
-  BZClasses, BZSystem, BZUtils, BZControlClasses;
+  BZClasses, BZSystem, BZUtils;{, BZControlClasses;}
 
 CONST
   { Masques de recherche tous les fichiers }

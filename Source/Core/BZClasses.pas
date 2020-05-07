@@ -1021,6 +1021,37 @@ Type
     Property OnNotifyChange: TNotifyEvent read FOnNotifyChange write FOnNotifyChange;
   End;
 
+  TBZOnPropertyChange = procedure(ASender: TObject; AData: PtrInt) of object;
+
+  { TBZCustomComponentProperty }
+  TBZCustomComponentProperty = class(TBZUpdateAbleObject)
+  private
+    FOnPropertyChange: TBZOnPropertyChange;
+  protected
+    FComponent: TComponent;
+    procedure Change(AData: PtrInt = 0); virtual;
+  public
+    constructor Create(AComponent: TComponent);virtual;
+
+    property Component: TComponent read FComponent;
+    property OnPropertyChange: TBZOnPropertyChange read FOnPropertyChange write FOnPropertyChange;
+  end;
+
+
+  { TBZCustomProperty }
+  TBZCustomProperty = class(TBZUpdateAbleObject)
+  private
+    FOnPropertyChange: TBZOnPropertyChange;
+  protected
+    FControl: TComponent;//TCustomControl;
+    procedure Change(AData: PtrInt = 0); virtual;
+  public
+    constructor Create(AControl: TComponent); overload;
+  public
+    property Control: TComponent read FControl;
+    property OnPropertyChange: TBZOnPropertyChange read FOnPropertyChange write FOnPropertyChange;
+  end;
+
 {%endregion%}
 
 { Méthode de convenance qui déclenche une exception lors de la lecture à partir de données persistantes }
@@ -2799,23 +2830,6 @@ End;
 
 {%endregion%}
 
-{%region%===[ TBZNotifyCollection ]=============================================}
-
-Constructor TBZNotifyCollection.Create(AOwner: TPersistent; AItemClass: TCollectionItemClass);
-Begin
-  Inherited Create(AOwner, AItemClass);
-  If Assigned(AOwner) And (AOwner Is TBZUpdateAbleComponent) Then
-    OnNotifyChange := @TBZUpdateAbleComponent(AOwner).NotifyChange;
-End;
-
-Procedure TBZNotifyCollection.Update(item: TCollectionItem);
-Begin
-  Inherited;
-  If Assigned(FOnNotifyChange) Then FOnNotifyChange(Self);
-End;
-
-{%endregion%}
-
 {%region%===[ TBZCustomDataFile ]===============================================}
 
 Constructor TBZDataFileFormatDesc.Create;
@@ -3711,6 +3725,63 @@ Function TBZStringList.CheckFormat(): Boolean;
 Begin
   Result := true; // CheckDataIsText(Memory.getBuffer);
 End;
+
+{%endregion%}
+
+{%region%===[ TBZNotifyCollection ]=============================================}
+
+Constructor TBZNotifyCollection.Create(AOwner: TPersistent; AItemClass: TCollectionItemClass);
+Begin
+  Inherited Create(AOwner, AItemClass);
+  If Assigned(AOwner) And (AOwner Is TBZUpdateAbleComponent) Then
+    OnNotifyChange := @TBZUpdateAbleComponent(AOwner).NotifyChange;
+End;
+
+Procedure TBZNotifyCollection.Update(item: TCollectionItem);
+Begin
+  Inherited;
+  If Assigned(FOnNotifyChange) Then FOnNotifyChange(Self);
+End;
+
+constructor TBZCustomComponentProperty.Create(AComponent : TComponent);
+begin
+  inherited Create(nil);
+  FComponent := AComponent;
+end;
+
+procedure TBZCustomComponentProperty.Change(AData: PtrInt);
+begin
+  if Assigned(FOnPropertyChange) then FOnPropertyChange(Self,AData);
+  NotifyChange(Self);
+end;
+
+//constructor TBZCustomControlProperty.Create(AControl: TCustomControl);
+//begin
+//  inherited Create(AControl);
+//  FControl := AControl;
+//end;
+
+//procedure TBZCustomControlProperty.Change(AData: PtrInt);
+//begin
+//  if Assigned(FOnChange) then FOnChange(Self,AData);
+//end;
+
+
+
+{ TBZCustomProperty }
+constructor TBZCustomProperty.Create(AControl : TComponent);
+begin
+  inherited Create(AControl);
+  FControl := AControl;
+end;
+
+procedure TBZCustomProperty.Change(AData : PtrInt);
+begin
+  if Assigned(FOnPropertyChange) then FOnPropertyChange(Self,AData);
+  NotifyChange(Self);
+end;
+
+
 
 {%endregion%}
 

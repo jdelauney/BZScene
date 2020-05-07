@@ -235,7 +235,9 @@ type
     FPicture : TBZPicture;
 
     Procedure CalculatePreferredSize(Var PreferredWidth, PreferredHeight : Integer; {%H-}WithThemeSpace : Boolean); Override;
+    {$IFDEF WINDOWS}
     Class Function GetControlClassDefaultSize: TSize; Override;
+    {$ENDIF}
 
     function GetCanScroll : Boolean;
     procedure SetCenter(const AValue : Boolean);
@@ -784,11 +786,13 @@ begin
   if (FPicture.Bitmap.Height > 1) then PreferredHeight := FPicture.Bitmap.Height else PreferredHeight := 90;
 end;
 
+{$IFDEF WINDOWS}
 Class Function TBZImageViewer.GetControlClassDefaultSize : TSize;
 begin
   Result.CX := 90;
   Result.CY := 90;
 end;
+{$ENDIF}
 
 procedure TBZImageViewer.Invalidate;
 begin
