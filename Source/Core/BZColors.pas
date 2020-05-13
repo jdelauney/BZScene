@@ -3592,11 +3592,13 @@ end;
 function TBZColor32Helper.Negate : TBZColor32;
 Const
    cVectorNegate : TBZColor32 = (X:255;Y:255;Z:255;W:255);
-Var
-  vc : TBZColor32;
+//Var
+//  vc : TBZColor32;
 begin
-  vc := cVectorNegate-Self;
-  Result.Create(vc.Red,vc.Green,vc.Blue, Self.Alpha);
+  //vc :=
+  Result := cVectorNegate - Self;
+  Result.Alpha:= Self.Alpha;
+  //Result.Create(vc.Red,vc.Green,vc.Blue, Self.Alpha);
 end;
 
 procedure TBZColor32Helper.DirectNegate;

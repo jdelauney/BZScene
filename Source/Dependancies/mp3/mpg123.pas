@@ -35,7 +35,11 @@ type
   ppcuchar = ^pcuchar;
 
 const
+  {$IFDEF WINDOWS}
   LIB_MPG123 = 'libmpg123-0.dll';
+  {$ELSE}
+  LIB_MPG123 = 'libmpg123.so';
+  {$ENDIF}
 
 const
 (** A macro to check at compile time which set of API functions to expect.

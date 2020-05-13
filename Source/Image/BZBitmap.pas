@@ -536,11 +536,15 @@ Type
     FFrameIndex : Integer;
     FAnimateTimer : TTimer;
     FAnimateBuffer : TBZBitmap;
+    FRestoreBitmap : TBZBitmap;
+
     FIsAnimate : Boolean;
     FIsAnimatePaused : Boolean;
     FAnimateLoop : Integer;
     FCurrentLoopIndex: Integer;
     FAnimationSpeed : Integer;
+    FLastDrawMode : Byte;
+
     (* FFrameLoop : Boolean;
     FFramePingpong : Boolean;
     FFrameStart : Integer;
@@ -557,7 +561,7 @@ Type
   Protected
     //procedure SetUseMask(Const Value:Boolean); override;
 
-    procedure RenderFrame(Index : Integer);
+
 
     procedure DoOnAnimateTime(Sender : TObject);
   Public
@@ -587,6 +591,7 @@ Type
     { Applique une operation arithmetique avec un autre image. (cf : PutImageBlend) }
     procedure ArithmeticBlend(BlendMap : TBZBitmap; ColorOperator :  TBZColorCombineMode);
 
+    procedure RenderFrame(Index : Integer);
     { Joue l'animation depuis les images contenue dans Layers }
     procedure StartAnimate;virtual;
     { Stoppe l'animation }
@@ -5396,10 +5401,10 @@ Begin
     end;
     iftLime :
     begin
-      // AColorMatrix[0] := 1.0;  AColorMatrix[1] := 0.0;  AColorMatrix[2] := 0.0;  AColorMatrix[3] := 1.0;  AColorMatrix[4] := 0.0;
-      // AColorMatrix[5] := 0.0;  AColorMatrix[6] := 2.0;  AColorMatrix[7] := 0.0;  AColorMatrix[8] := 1.0;  AColorMatrix[9] := 0.0;
-      //AColorMatrix[10] := 0.0; AColorMatrix[11] := 0.0; AColorMatrix[12] := 0.0; AColorMatrix[13] := 1.0; AColorMatrix[14] := 0.0;
-      //AColorMatrix[15] := 0.0; AColorMatrix[16] := 0.0; AColorMatrix[17] := 0.0; AColorMatrix[18] := 1.0; AColorMatrix[19] := 0.0;
+       AColorMatrix.m11 := 1.0;  AColorMatrix.m12 := 0.0; AColorMatrix.m13 := 0.0; AColorMatrix.m14 := 0.0; AColorMatrix.m51 := 0.0;
+       AColorMatrix.m21 := 0.0;  AColorMatrix.m22 := 2.0; AColorMatrix.m23 := 0.0; AColorMatrix.m24 := 0.0; AColorMatrix.m52 := 0.0;
+       AColorMatrix.m31 := 0.0;  AColorMatrix.m32 := 0.0; AColorMatrix.m33 := 0.0; AColorMatrix.m34 := 0.0; AColorMatrix.m53 := 0.0;
+       AColorMatrix.m41 := 0.0;  AColorMatrix.m42 := 0.0; AColorMatrix.m43 := 0.0; AColorMatrix.m44 := 1.0; AColorMatrix.m54 := 0.0;
       //
       TBZBitmap(OwnerBitmap).ColorFilter.OnProgress := Self.OnProgress;
       TBZBitmap(OwnerBitmap).ColorFilter.ApplyColorMatrix(AColorMatrix);
@@ -5547,10 +5552,11 @@ Begin
     end;
     iftPeachy :
     begin
-      // AColorMatrix[0] := 1.0;  AColorMatrix[1] := 0.0;  AColorMatrix[2] := 0.0;  AColorMatrix[3] := 1.0;  AColorMatrix[4] := 0.0;
-      // AColorMatrix[5] := 0.0;  AColorMatrix[6] := 0.5;  AColorMatrix[7] := 0.0;  AColorMatrix[8] := 1.0;  AColorMatrix[9] := 0.0;
-      //AColorMatrix[10] := 0.0; AColorMatrix[11] := 0.0; AColorMatrix[12] := 0.0; AColorMatrix[13] := 1.0; AColorMatrix[14] := 0.0;
-      //AColorMatrix[15] := 0.0; AColorMatrix[16] := 0.0; AColorMatrix[17] := 0.0; AColorMatrix[18] := 1.0; AColorMatrix[19] := 0.0;
+      AColorMatrix.m11 := 1.0;  AColorMatrix.m12 := 0.0; AColorMatrix.m13 := 0.0; AColorMatrix.m14 := 0.0; AColorMatrix.m51 := 0.0;
+      AColorMatrix.m21 := 0.0;  AColorMatrix.m22 := 0.5; AColorMatrix.m23 := 0.0; AColorMatrix.m24 := 0.0; AColorMatrix.m52 := 0.0;
+      AColorMatrix.m31 := 0.0;  AColorMatrix.m32 := 0.0; AColorMatrix.m33 := 0.0; AColorMatrix.m34 := 0.0; AColorMatrix.m53 := 0.0;
+      AColorMatrix.m41 := 0.0;  AColorMatrix.m42 := 0.0; AColorMatrix.m43 := 0.0; AColorMatrix.m44 := 1.0; AColorMatrix.m54 := 0.0;
+
       //
       TBZBitmap(OwnerBitmap).ColorFilter.OnProgress := Self.OnProgress;
       TBZBitmap(OwnerBitmap).ColorFilter.ApplyColorMatrix(AColorMatrix);
@@ -9665,6 +9671,7 @@ Begin
   FCurrentLoopIndex := -1;
   FAnimateLoop := 0;
   FAnimateBuffer := nil;
+  FLastDrawMode := 0;
 End;
 
 constructor TBZBitmap.Create(aWidth, aHeight : Integer);
@@ -9816,58 +9823,112 @@ var
   Src : TBZBitmap;
   pTop, pLeft : Integer;
   AlphaMode : TBZBitmapAlphaMode;
+  CurrentDrawMode : Byte;
 Begin
   Src := TBZBitmap(Layers.Items[Index].Bitmap);
   pLeft := Layers.Items[Index].Left;
   pTop  := Layers.Items[Index].Top;
-  if Src.ImageDescription.HasAlpha  then
-  begin
-    if Index = 0 then  clear(clrTransparent);
-    AlphaMode := amAlphaCheck;
-  End
-  else
-  begin
-   AlphaMode := amNone;
-   if Index = 0 then Clear(Layers.BackgroundColor);
-  End;
+  AlphaMode := amNone;
+  if FAnimateBuffer = nil then FAnimateBuffer := TBZBitmap.Create(Self.Width,Self.Height);
+  GlobalLogger.LogStatus('Current Frame = ' + Index.ToString);
+    if Src.ImageDescription.HasAlpha  then
+    begin
+      GlobalLogger.LogStatus('HAS ALPHA');
+      GlobalLogger.LogStatus('LAYER IS TRANSPARENT = '  + Layers.Transparent.ToString());
+      if Index = 0 then clear(clrTransparent);
+      AlphaMode := amAlphaCheck;
+    End
+    else
+    begin
+     GlobalLogger.LogStatus('NO ALPHA');
+     AlphaMode := amNone;
+     if Index = 0 then Clear(Layers.BackgroundColor);
+    End;
 
-  with Layers.Items[Index] do
-  begin
-    Case DrawMode of
-      0:
+    //PutImage(Src, 0, 0, Src.Width, Src.Height, pLeft, pTop, dmSet);
+    //if Layers.Items[Index].DrawMode = 1 then FAnimateBuffer.Assign(Self);
+    //FRestoreBitmap := Self.CreateClone;
+
+    with Layers.Items[Index] do
+    begin
+     CurrentDrawMode := DrawMode;
+
+      Case CurrentDrawMode of
+        0:  //None
         begin
+          GlobalLogger.LogStatus('Current Draw Mode = NONE');
           PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode); //PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop);
-          if Index = 0 then  FAnimateBuffer.Assign(Self);
         end;
-      1:
-      begin
-        PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode);
-  //        PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,amAlphaCheck);
-        FAnimateBuffer.Assign(Self);
-      End;
-      2:
+        1: // Keep
         begin
-          If (Src.ImageDescription.HasAlpha) and (Layers.Transparent) then Clear(clrTransparent) // And Layers.Transparent
-          Else
-            Clear(Layers.BackgroundColor);
+          GlobalLogger.LogStatus('Current Draw Mode = KEEP');
+          GlobalLogger.LogStatus('Last Draw Mode = ' + FLastDrawMode.ToString);
+          if FLastDrawMode = 3 then // Erase
+          begin
+            If (Src.ImageDescription.HasAlpha) then //and Layers.Transparent) Then
+              Self.Clear(clrTransparent) //And FTransparent
+            Else
+              Self.Clear(Layers.BackgroundColor);
+          end
+          else if FLastDrawMode = 1 then
+          begin
+            GlobalLogger.LogStatus('Copy Last frame');
+            if Index > 0 then PutImage(FAnimateBuffer,0,0, FAnimateBuffer.Width, FAnimateBuffer.Height,0,0,dmSet);
+          end;
+          GlobalLogger.LogStatus('Copy Current frame');
+          Self.PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode);
+
+    //        PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,amAlphaCheck);
+          GlobalLogger.LogStatus('Save frame');
+          FAnimateBuffer.Assign(Self);
+          //If Assigned(FRestoreBitmap) Then FreeAndNil(FRestoreBitmap);
+          //FRestoreBitmap := Self.CreateClone;
+        End;
+        2:  // Erase
+          begin
+            GlobalLogger.LogStatus('Current Draw Mode = ERASE');
+            GlobalLogger.LogStatus('Last Draw Mode = ' + FLastDrawMode.ToString);
+
+            If (Src.ImageDescription.HasAlpha) then //and (Layers.Transparent) then
+              Clear(clrTransparent)
+            Else
+              Clear(Layers.BackgroundColor);
 
             PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode);
-            if Index = 0 then  FAnimateBuffer.Assign(Self);
-        End;
-      3:
-        begin
-          if FFrameIndex > 0 then
-          begin
-            Clear(Layers.BackgroundColor);
-            PutImage(FanimateBuffer,0,0, FanimateBuffer.Width, FanimateBuffer.Height,0,0);
           End;
-          PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode);
-        End;
-      else
-        PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet);
-    end;
-    if DelayTime <> 0 then FAnimateTimer.Interval := DelayTime * FAnimationSpeed;
-  End;
+        3:  // Restore
+          begin
+            GlobalLogger.LogStatus('Current Draw Mode = RESTORE');
+            GlobalLogger.LogStatus('Last Draw Mode = ' + FLastDrawMode.ToString);
+            if FLastDrawMode = 2 then
+            begin
+              If (Src.ImageDescription.HasAlpha) then //and (Layers.Transparent) then
+                Clear(clrTransparent)
+              Else
+                Clear(Layers.BackgroundColor);
+            end
+            else if FLastDrawMode = 1 then
+            begin
+              PutImage(FAnimateBuffer,0,0, FAnimateBuffer.Width, FAnimateBuffer.Height,0,0,dmSet);
+            end
+            else
+            begin
+              If (Src.ImageDescription.HasAlpha) then  //and (Layers.Transparent) then
+                Clear(clrTransparent)
+              Else
+                Clear(Layers.BackgroundColor);
+            end;
+            PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet,AlphaMode);
+          End;
+        else
+          PutImage(Src,0,0, Src.Width, Src.Height,pLeft,pTop,dmSet);
+      end;
+      if DelayTime <> 0 then FAnimateTimer.Interval := DelayTime * FAnimationSpeed;
+    End;
+
+    FLastDrawMode := CurrentDrawMode;
+
+  //If Assigned(FRestoreBitmap) Then FreeAndNil(FRestoreBitmap);
   Changed;
 End;
 
@@ -9898,6 +9959,7 @@ Begin
   FFrameIndex := 0;
   FIsAnimate := False;
   FreeAndNil(FAnimateBuffer);
+  If Assigned(FRestoreBitmap) Then FreeAndNil(FRestoreBitmap);
 End;
 
 procedure TBZBitmap.PauseAnimate;

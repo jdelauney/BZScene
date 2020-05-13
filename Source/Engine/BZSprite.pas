@@ -67,6 +67,7 @@ Type
   public
     property Items[ Index : Integer ] : TBZCustomBaseSprite read Get write Put; default;
     constructor Create; override;
+    destructor Destroy; override;
   end;
 
   TBZCustomBaseSprite = class(TBZUpdateAbleObject)
@@ -397,6 +398,11 @@ begin
   inherited Create;
 end;
 
+destructor TBZSpriteList.Destroy;
+begin
+  inherited Destroy;
+end;
+
 function TBZSpriteList.Get( Index : Integer ) : TBZCustomBaseSprite;
 begin
   Result := TBZCustomBaseSprite(inherited Get( Index ));
@@ -448,7 +454,10 @@ End;
 
 destructor TBZCustomBaseSprite.Destroy;
 Begin
-  Clear;
+  //Clear;
+  //FSpriteList.Clear;
+  //FSpriteList.Free;
+  //FSpriteList.
   FreeAndNil(FSpriteList);
   Inherited Destroy;
 End;
@@ -720,7 +729,6 @@ end;
 
 destructor TBZBitmapSprite.Destroy;
 Begin
-  if FImage<>Nil then FreeAndNil(FImage);
   Inherited Destroy;
 End;
 

@@ -325,9 +325,9 @@ Uses
   BZImageStrConsts, Math, BZUtils
 
   //ZBase, ZInflate
-  {$IFDEF DEBUG}
+  {.$IFDEF DEBUG}
   , Dialogs, BZLogger
-  {$ENDIF};
+  {.$ENDIF};
 
 Const
   CRCTable: array[0..255] of LongWord = (
@@ -469,7 +469,7 @@ end;
 constructor TBZBitmapNetworkGraphicImage.Create(AOwner : TPersistent; AWidth, AHeight : Integer);
 Begin
   Inherited Create(aOwner, AWidth, AHeight);
-  //////GlobalLogger.LogNotice('Creation de TBZBitmapNetworkGraphicImage');
+  ////Globallogger.LogNotice('Creation de TBZBitmapNetworkGraphicImage');
   With DataFormatDesc Do
   Begin
     Name := 'PNG';
@@ -524,18 +524,18 @@ end; }
 Var
   aType:Integer;
 begin
-  ////GlobalLogger.LogStatus('======================================================================');
-  ////GlobalLogger.LogNotice('Read Chunk Header');
-  ////GlobalLogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
+  //Globallogger.LogStatus('======================================================================');
+  //Globallogger.LogNotice('Read Chunk Header');
+  //Globallogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
   //Memory.Read(ChunkInfos.ChunkHeader.DataSize, 4);
   ChunkInfos.ChunkHeader.DataSize := Memory.ReadLongWord;
   Memory.Read(ChunkInfos.ChunkHeader.Name, 4);
   {$IFDEF ENDIAN_LITTLE}
     ChunkInfos.ChunkHeader.DataSize := BEToN(ChunkInfos.ChunkHeader.DataSize);
   {$ENDIF}
-  ////GlobalLogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
-  ////GlobalLogger.LogStatus('---> Name     : '+String(ChunkInfos.ChunkHeader.Name));
-  ////GlobalLogger.LogStatus('---> DataSize : '+InttoStr(ChunkInfos.ChunkHeader.DataSize));
+  //Globallogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
+  //Globallogger.LogStatus('---> Name     : '+String(ChunkInfos.ChunkHeader.Name));
+  //Globallogger.LogStatus('---> DataSize : '+InttoStr(ChunkInfos.ChunkHeader.DataSize));
 
   // On trouve le type de "chunk"
   aType :=0;
@@ -548,8 +548,8 @@ Var
   BytesRead : Longint;
 begin
   Result:=False;
-  //GlobalLogger.LogNotice('Read Chunk Data');
-  //GlobalLogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
+  //Globallogger.LogNotice('Read Chunk Data');
+  //Globallogger.LogStatus('Memory Position  : '+InttoStr(Memory.Position));
   if ChunkInfos.ChunkHeader.DataSize > 0 then
   begin
     ReAllocMem(ChunkInfos.ChunkData, ChunkInfos.ChunkHeader.DataSize);
@@ -574,7 +574,7 @@ end;
 
 procedure TBZBitmapNetworkGraphicImage.SkipChunkData;
 begin
-  //GlobalLogger.LogNotice('Skip Chunk');
+  //Globallogger.LogNotice('Skip Chunk');
   Memory.SkipNextByte(ChunkInfos.ChunkHeader.DataSize + 4);
 end;
 
@@ -655,17 +655,17 @@ var
   TargetRun: PByte;
 
 begin
-  //////GlobalLogger.LogNotice('Apply Filter');
+  ////Globallogger.LogNotice('Apply Filter');
   case Filter of
     0: // no filter, just copy data
       begin
-        ////GlobalLogger.LogNotice('Apply Filter : None');
+        //Globallogger.LogNotice('Apply Filter : None');
         Move(aLine^, Target^, BytesPerRow);
 
       end;
     1: // subtraction filter
       begin
-        ////GlobalLogger.LogNotice('Apply Filter : Sub');
+        //Globallogger.LogNotice('Apply Filter : Sub');
         Raw := aLine;
         TargetRun := Target;
         // Transfer BPP bytes without filtering. This mimics the effect of bytes left to the
@@ -688,7 +688,7 @@ begin
       end;
     2: // Up filter
       begin
-        ////GlobalLogger.LogNotice('Apply Filter : Up');
+        //Globallogger.LogNotice('Apply Filter : Up');
         Raw := aLine;
         Prior := aPrevLine;
         TargetRun := Target;
@@ -703,7 +703,7 @@ begin
       end;
     3: // average filter
       begin
-        ////GlobalLogger.LogNotice('Apply Filter : Average');
+        //Globallogger.LogNotice('Apply Filter : Average');
         // first handle BPP virtual pixels to the left
         Raw := aLine;
         Decoded := aLine;
@@ -731,7 +731,7 @@ begin
       end;
    4: // paeth prediction
      begin
-       ////GlobalLogger.LogNotice('Apply Filter : Paeth');
+       //Globallogger.LogNotice('Apply Filter : Paeth');
        // again, start with first BPP pixel which would refer to non-existing pixels to the left
        Raw := aLine;
        Decoded := Target;
@@ -791,7 +791,7 @@ var
     Case PNGHeader.ColorType of
       COLOR_GRAYSCALE :
       begin
-        //GlobalLogger.logNotice('Convert Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -801,7 +801,7 @@ var
             While (sx<=MaxWidth) do
             begin
               Idx := Byte(ASource^ shl (sx and 7)) shr 7; //ExtractPixel1Bit(PByte(ASource+(sx div 8))^,sx);
-              ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString);
+              //Globallogger.LogNotice(' Idx = '+Idx.ToString);
               if Idx = 0 then  aTarget^:=Color1 else aTarget^:=Color2;
               IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
               if sx and 7=7 then Inc(ASource);
@@ -815,7 +815,7 @@ var
             While (sx<=MaxWidth) do
             begin
               Idx := Round(((ASource^ shr ((not sx and 3) shl 1)) and $3)); //ExtractPixel2Bit
-              ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString);
+              //Globallogger.LogNotice(' Idx = '+Idx.ToString);
               Case Idx of
                 0 : TargetColor := clrBlack;
                 1 : TargetColor := clrGray;
@@ -836,7 +836,7 @@ var
             begin
               Idx := Round(((ASource^ shr ((not sx and 1) shl 2)) and $f)); //ExtractPixel4Bits
               temp := (Idx * 255) div 16;
-              ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
+              //Globallogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
               TargetColor.Create(Temp,Temp,Temp);
 
               aTarget^:= TargetColor;
@@ -866,7 +866,11 @@ var
             Source16 := PWord(ASource);
             While (sx<=MaxWidth) do
             begin
+              {$IFDEF WINDOWS}
               Idx :=Hi(Source16^);
+              {$ELSE}
+              Idx :=Lo(Source16^);
+              {$ENDIF}
               TargetColor.Create(Idx,Idx,Idx);
               aTarget^:= TargetColor;
               IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
@@ -879,7 +883,7 @@ var
       end;
       COLOR_RGB :  // RGB
       begin
-        //GlobalLogger.logNotice('Convert Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then    // 24bits
         begin
           For sx := 0 to MaxWidth do
@@ -917,13 +921,20 @@ var
               TargetColor.Alpha := 255;
             end
             else }
-            begin
+            //begin
+            {$IFDEF WINDOWS}
               TargetColor.Red := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
               TargetColor.Green := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
               TargetColor.Blue := MulDiv(SwapEndian(Source16^), 255, 65535);Inc(Source16);
               TargetColor.Alpha := 255;
-            end;
-            //////GlobalLogger.LogNotice('TargetColor = '+TargetColor.ToString);
+            {$ELSE}
+            TargetColor.Red := MulDiv(Source16^, 255, 65535); Inc(Source16);
+            TargetColor.Green := MulDiv(Source16^, 255, 65535); Inc(Source16);
+            TargetColor.Blue := MulDiv(Source16^, 255, 65535);Inc(Source16);
+            TargetColor.Alpha := 255;
+            {$ENDIF}
+            //end;
+            ////Globallogger.LogNotice('TargetColor = '+TargetColor.ToString);
             aTarget^:= TargetColor;
             inc(aTarget);
           end;
@@ -931,7 +942,7 @@ var
       end;
       COLOR_PALETTE :  // Indexed
       begin
-        //GlobalLogger.logNotice('Convert Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -947,7 +958,7 @@ var
             While (sx<=MaxWidth) do
             begin
               Idx := Byte(ASource^ shl (sx and 7)) shr 7;
-              ////GlobalLogger.LogNotice('X : '+sx.ToString+' --> Idx = '+Idx.ToString + ' Color = '+ImageDescription.PaletteEntries^[Idx].ToString);
+              //Globallogger.LogNotice('X : '+sx.ToString+' --> Idx = '+Idx.ToString + ' Color = '+ImageDescription.PaletteEntries^[Idx].ToString);
               if Idx = 0 then  aTarget^:=Color1 else aTarget^:=Color2;
               IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
               if sx and 7=7 then Inc(ASource);
@@ -961,7 +972,7 @@ var
             While (sx<=MaxWidth) do
             begin
               Idx := Round(((ASource^ shr ((not sx and 3) shl 1)) and $3)); //ExtractPixel2Bit
-              ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString);
+              //Globallogger.LogNotice(' Idx = '+Idx.ToString);
               if (ImageDescription.PaletteCount>0) and  (Idx<ImageDescription.PaletteCount) then
               begin
                 aTarget^.AsInteger:= ImageDescription.PaletteEntries^[Idx].AsInteger;
@@ -980,7 +991,7 @@ var
             begin
               Idx := Round(((ASource^ shr ((not sx and 1) shl 2)) and $f)); //ExtractPixel4Bits
               temp := (Idx * 255) div 16;
-              ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
+              //Globallogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
 
               if (ImageDescription.PaletteCount>0) and (Idx<ImageDescription.PaletteCount) then
               begin
@@ -1027,7 +1038,7 @@ var
               begin
                  TargetColor.AsInteger:= ImageDescription.PaletteEntries^[Idx].AsInteger;
               end else AddError(Format(rsBitmapBadPaletteIndex,[Idx]));
-              ////GlobalLogger.LogNotice('X : '+sx.ToString+' --> Idx = '+Idx.ToString + ' Color = '+TargetColor.ToString);
+              //Globallogger.LogNotice('X : '+sx.ToString+' --> Idx = '+Idx.ToString + ' Color = '+TargetColor.ToString);
               aTarget^ := TargetColor;
               IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
               inc(aSource);
@@ -1040,7 +1051,11 @@ var
             Source16 := PWord(ASource);
             For sx := 0 to MaxWidth do
             begin
+              {$IFDEF WINDOWS}
               Idx := MulDiv(SwapEndian(Source16^), 255, 65535);
+              {$ELSE}
+              Idx := MulDiv(Source16^, 255, 65535);
+              {$ENDIF}
               if (ImageDescription.PaletteCount>0) and (Idx<ImageDescription.PaletteCount) then
               begin
                  TargetColor.AsInteger:= ImageDescription.PaletteEntries^[Idx].AsInteger;
@@ -1055,7 +1070,7 @@ var
       end;
       COLOR_GRAYSCALEALPHA : // RGBA Gray Scale
       begin
-        //GlobalLogger.logNotice('Convert Row ColorData : GRAYSCALE ALPHA, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Row ColorData : GRAYSCALE ALPHA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1082,7 +1097,7 @@ var
           Source16 := PWord(aSource);
           For sx := 0 to MaxWidth do
           begin
-            //TargetColor.Red := Round(aSource^ * 63 / 255 );
+            {$IFDEF WINDOWS}
             Temp := MulDiv(SwapEndian(Source16^), 255, 65535);
             TargetColor.Red := Temp;
             TargetColor.Green := Temp;
@@ -1090,6 +1105,15 @@ var
             Inc(Source16);
             TargetColor.Alpha := MulDiv(SwapEndian(Source16^), 255, 65535);
             Inc(Source16);
+            {$ELSE}
+            Temp := MulDiv(Source16^, 255, 65535);
+            TargetColor.Red := Temp;
+            TargetColor.Green := Temp;
+            TargetColor.Blue := Temp;
+            Inc(Source16);
+            TargetColor.Alpha := MulDiv(Source16^, 255, 65535);
+            Inc(Source16);
+            {$ENDIF}
             {if GammaCorrection then
             begin
               TargetColor.Red := GammaTable[TargetColor.Red];
@@ -1104,7 +1128,7 @@ var
       end;
       COLOR_RGBA:  // RGBA
       begin
-        //GlobalLogger.logNotice('Convert Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1123,7 +1147,7 @@ var
               TargetColor.Green := GammaTable[TargetColor.Green];
               TargetColor.Blue := GammaTable[TargetColor.Blue];
             end; }
-           // //GlobalLogger.LogNotice('TargetColor = '+TargetColor.ToString);
+           // Globallogger.LogNotice('TargetColor = '+TargetColor.ToString);
             aTarget^:= TargetColor;
             IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
             inc(aTarget);
@@ -1134,11 +1158,17 @@ var
           Source16 := PWord(aSource);
           For sx := 0 to MaxWidth do
           begin
-            //TargetColor.Red := Round(aSource^ * 63 / 255 );
+            //{$IFDEF WINDOWS}
             TargetColor.Red := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
             TargetColor.Green := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
             TargetColor.Blue := MulDiv(SwapEndian(Source16^), 255, 65535);Inc(Source16);
             TargetColor.Alpha := MulDiv(SwapEndian(Source16^), 255, 65535);Inc(Source16);
+            //{$ELSE}
+            //TargetColor.Red := MulDiv(Source16^, 255, 65535); Inc(Source16);
+            //TargetColor.Green := MulDiv(Source16^, 255, 65535); Inc(Source16);
+            //TargetColor.Blue := MulDiv(Source16^, 255, 65535);Inc(Source16);
+            //TargetColor.Alpha := MulDiv(Source16^, 255, 65535);Inc(Source16);
+            //{$ENDIF}
             { if GammaCorrection then
             begin
               TargetColor.Red := GammaTable[TargetColor.Red];
@@ -1165,7 +1195,7 @@ var
     Case PNGHeader.ColorType of
       COLOR_GRAYSCALE :
       begin
-        //GlobalLogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -1218,7 +1248,7 @@ var
            	  begin
                 Idx := Round(((ASource^ shr ((not sx and 1) shl 2)) and $f)); //ExtractPixel4Bits
                 temp := (Idx * 255) div 16;
-                ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
+                //Globallogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
                 TargetColor.Create(Temp,Temp,Temp);
 
                 aTarget^:= TargetColor;
@@ -1251,7 +1281,11 @@ var
             begin
             	if Boolean(Mask and BitRun) then
             	begin
+                {$IFDEF WINDOWS}
                 Idx := MulDiv(SwapEndian(Source16^), 255, 65535);
+                {$ELSE}
+                Idx := MulDiv(Source16^, 255, 65535);
+                {$ENDIF}
                 TargetColor.Create(Idx,Idx,Idx);
                 aTarget^:= TargetColor;
                 IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
@@ -1265,7 +1299,7 @@ var
       end;
       COLOR_RGB :  // RGB  24 bits
       begin
-        //GlobalLogger.logNotice('Convert Interlaced Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Interlaced Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1292,10 +1326,16 @@ var
           begin
             if Boolean(Mask and BitRun) then
             begin
+              {$IFDEF WINDOWS}
               TargetColor.Red := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
               TargetColor.Green := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
               TargetColor.Blue := MulDiv(SwapEndian(Source16^), 255, 65535);Inc(Source16);
+              {$ELSE}
+              TargetColor.Red := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              TargetColor.Green := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              TargetColor.Blue := MulDiv(Source16^, 255, 65535);Inc(Source16);
               TargetColor.Alpha := 255;
+              {$ENDIF}
               aTarget^:= TargetColor;
             end;
             BitRun := RorByte(BitRun);
@@ -1305,7 +1345,7 @@ var
       end;
       COLOR_PALETTE :  // Indexed
       begin
-        //GlobalLogger.logNotice('Convert Interlaced Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Interlaced Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -1362,7 +1402,7 @@ var
             	begin
                 Idx := Round(((ASource^ shr ((not sx and 1) shl 2)) and $f)); //ExtractPixel4Bits
                 temp := (Idx * 255) div 16;
-                ////GlobalLogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
+                //Globallogger.LogNotice(' Idx = '+Idx.ToString+ ' = ' + Temp.ToString);
 
                 if (ImageDescription.PaletteCount>0) and (Idx<ImageDescription.PaletteCount) then
                 begin
@@ -1447,7 +1487,7 @@ var
       end;
       COLOR_GRAYSCALEALPHA : // RGBA Gray Scale
       begin
-        //GlobalLogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALEALPHA, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALEALPHA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1472,12 +1512,21 @@ var
           begin
             if Boolean(Mask and BitRun) then
             begin
+              {$IFDEF WINDOWS}
               Temp := MulDiv(SwapEndian(Source16^), 255, 65535);
               TargetColor.Create(Temp, Temp,Temp);
               Inc(Source16);
               TargetColor.Alpha := MulDiv(SwapEndian(Source16^), 255, 65535);
               Inc(Source16);
+              {$ELSE}
+              Temp := MulDiv(Source16^, 255, 65535);
+              TargetColor.Create(Temp, Temp,Temp);
+              Inc(Source16);
+              TargetColor.Alpha := MulDiv(Source16^, 255, 65535);
+              Inc(Source16);
+              {$ENDIF}
               aTarget^:= TargetColor;
+
               IgnoreAlpha := IgnoreAlpha and (aTarget^.alpha = 0);
             end;
             BitRun := RorByte(BitRun);
@@ -1487,7 +1536,7 @@ var
       end;
       COLOR_RGBA:  // RGBA
       begin
-        //GlobalLogger.logNotice('Convert Interlaced Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
+        Globallogger.logNotice('Convert Interlaced Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then  // 32 bits
         begin
           For sx := 0 to MaxWidth do
@@ -1515,14 +1564,17 @@ var
           begin
             if Boolean(Mask and BitRun) then
 		        begin
-              TargetColor.Red := MulDiv(SwapEndian(Source16^), 255, 65535);
-              Inc(Source16);
-              TargetColor.Green := MulDiv(SwapEndian(Source16^), 255, 65535);
-              Inc(Source16);
-              TargetColor.Blue := MulDiv(SwapEndian(Source16^), 255, 65535);
-              Inc(Source16);
-              TargetColor.Alpha := MulDiv(SwapEndian(Source16^), 255, 65535);
-              Inc(Source16);
+              {$IFDEF WINDOWS} //LITTLE_ENDIAN
+              TargetColor.Red := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
+              TargetColor.Green := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
+              TargetColor.Blue := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
+              TargetColor.Alpha := MulDiv(SwapEndian(Source16^), 255, 65535); Inc(Source16);
+              {$ELSE}
+              TargetColor.Red := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              TargetColor.Green := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              TargetColor.Blue := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              TargetColor.Alpha := MulDiv(Source16^, 255, 65535); Inc(Source16);
+              {$ENDIF}
               aTarget^:= TargetColor;
             end;
 		        BitRun := RorByte(BitRun);
@@ -1534,13 +1586,13 @@ var
   end;
 
 begin
-  //GlobalLogger.LogNotice('Decode Data');
+  Globallogger.LogNotice('Decode Data');
   ZData.position := 0;
   //IsOpaque := False;
   IgnoreAlpha := False;
   Color1 := clrBlack;
   Color2 := clrWhite;
-  //GlobalLogger.LogNotice('ZData Buffer Size : '+ZData.Size.ToString);
+  Globallogger.LogNotice('ZData Buffer Size : '+ZData.Size.ToString);
   RowBuffer[False] := nil;
   RowBuffer[True] := nil;
   EvenRow := False;
@@ -1551,9 +1603,9 @@ begin
 
   //TargetBPP=4;
 
-  //GlobalLogger.LogNotice('SourceBPP : '+ SourceBPP.toString + ' TargetBPP : '+TargetBPP.ToString);
+  Globallogger.LogNotice('SourceBPP : '+ SourceBPP.toString + ' TargetBPP : '+TargetBPP.ToString);
   aBytesPerRow := TargetBPP * ((Width * PNGHeader.BitDepth + 7) div 8) + 1;
-  ////GlobalLogger.LogNotice('BytesPerRow : '+aBytesPerRow.ToString);
+  //Globallogger.LogNotice('BytesPerRow : '+aBytesPerRow.ToString);
 
   ReAllocMem(RowBuffer[True] , aBytesPerRow);
   ReAllocMem(RowBuffer[False], aBytesPerRow);
@@ -1566,7 +1618,7 @@ begin
   try
     if PNGHeader.Interlacing = 1 then  // Image entrlacée
     begin
-      //GlobalLogger.LogNotice('Process Interlaced ADAM 7');
+      Globallogger.LogNotice('Process Interlaced ADAM 7');
       for Pass := 0 to 6 do
       begin
         // prepare next interlace run
@@ -1606,11 +1658,11 @@ begin
     end
     else
     begin
-      //GlobalLogger.LogNotice('Process Regular');
-      for Row := 0 to Height - 1 do
+      Globallogger.LogNotice('Process Regular' + MaxWidth.ToString + 'x' + MaxHeight.ToString);
+      for Row := 0 to MaxHeight do
       begin
         PixPtr := GetScanLine(Row);
-        ////GlobalLogger.LogNotice('Read Line : '+Row.ToString);
+        Globallogger.LogNotice('Read Line : '+Row.ToString);
         DecompressStream.Read(RowBuffer[EvenRow]^, aBytesPerRow);
 
         ApplyFilter(Byte(RowBuffer[EvenRow]^),
@@ -1630,8 +1682,11 @@ begin
       end;
     end;
   finally
+     Globallogger.LogNotice('Free RowBuffer True');
      FreeMem(RowBuffer[True]);
+     Globallogger.LogNotice('Free RowBuffer False');
      FreeMem(RowBuffer[False]);
+     Globallogger.LogNotice('Free Decompress Stream True');
      FreeAndNil(DecompressStream);
    end;
 end;
@@ -1668,16 +1723,16 @@ Var
     vGamma : LongWord;
     i : Integer;
   begin
-    //GlobalLogger.LogNotice('Process Chunk gAMA');
+    Globallogger.LogNotice('Process Chunk gAMA');
     vGamma := Memory.ReadLongWord;
-    //GlobalLogger.LogNotice('vGamma Factor = '+vGamma.ToString);
+    Globallogger.LogNotice('vGamma Factor = '+vGamma.ToString);
     GammaFactor :=  (vGamma / 1000000000);
-    //GlobalLogger.LogNotice('Gamma Factor = '+GammaFactor.ToString);
+    Globallogger.LogNotice('Gamma Factor = '+GammaFactor.ToString);
     GammaFactor :=  1 / GammaFactor;
-    //GlobalLogger.LogNotice('Inv Gamma Factor = '+GammaFactor.ToString);
+    Globallogger.LogNotice('Inv Gamma Factor = '+GammaFactor.ToString);
     //if GammaFactor < 1.0 then GammaFactor := GammaFactor * 10;
     GammaFactor :=  GammaFactor * _DefaultGammaFactor;
-    //GlobalLogger.LogNotice('Corrected Gamma Factor = '+GammaFactor.ToString);
+    Globallogger.LogNotice('Corrected Gamma Factor = '+GammaFactor.ToString);
 
     GammaCorrection := True;
 
@@ -1720,7 +1775,7 @@ Var
   }
   procedure ProcessChunk_cHRM;
   begin
-    //GlobalLogger.LogNotice('Process Chunk cHRM');
+    Globallogger.LogNotice('Process Chunk cHRM');
     ReadChunkData;
     CIExyz := TBZPNGChunk_cHRM(ChunkInfos.ChunkData^);
     HasCIExyz :=  True;
@@ -1732,7 +1787,7 @@ Var
   var
     rb,gb,bb,ab:byte;
   begin
-    //GlobalLogger.LogNotice('Process Chunk sBIT');
+    Globallogger.LogNotice('Process Chunk sBIT');
     SkipChunkData;
    { Case PNGHeader.ColorType of
       0:
@@ -1770,7 +1825,7 @@ Var
     c : Char;
     l : Integer;
   begin
-    //GlobalLogger.LogNotice('Process Chunk iCCP');
+    Globallogger.LogNotice('Process Chunk iCCP');
     fillChar(iCCP_Profil.name,79,' ');
     s := '';
 
@@ -1784,13 +1839,13 @@ Var
     end;
     iCCP_Profil.name := S;
     //Memory.Read(iCCP_Profil.name,79);
-    ////GlobalLogger.LogNotice('iCCP Profil Name : ' + String(iCCP_Profil.name));
+    //Globallogger.LogNotice('iCCP Profil Name : ' + String(iCCP_Profil.name));
     iCCP_Profil.CompressMethod := Memory.ReadByte;
     inc(l);
-    ////GlobalLogger.LogNotice('iCCP Header : '+l.ToString);
-    ////GlobalLogger.LogNotice('iCCP Compress method : ' + iCCP_Profil.CompressMethod.ToString);
+    //Globallogger.LogNotice('iCCP Header : '+l.ToString);
+    //Globallogger.LogNotice('iCCP Compress method : ' + iCCP_Profil.CompressMethod.ToString);
     iCCP_Profil.Profil := nil;
-    ////GlobalLogger.LogNotice('iCCP Profil Data Size : ' + (ChunkInfos.ChunkHeader.DataSize - l).ToString);
+    //Globallogger.LogNotice('iCCP Profil Data Size : ' + (ChunkInfos.ChunkHeader.DataSize - l).ToString);
     if ((ChunkInfos.ChunkHeader.DataSize-l) > 0) then
     begin
       ReAllocMem(iCCP_Profil.Profil, ChunkInfos.ChunkHeader.DataSize-l);
@@ -1825,7 +1880,7 @@ Var
     S, AText : String; // Longueur definie par l'en-tete du chunk -> DataSize
     l : Integer;
   begin
-    //GlobalLogger.LogNotice('Process Chunk tEXT');
+    Globallogger.LogNotice('Process Chunk tEXT');
     fillChar(Keyword,79,' ');
     s := '';
 
@@ -1840,13 +1895,13 @@ Var
 
     KeyWord := String(S);
     Atext := '';
-    ////GlobalLogger.LogNotice('TextSize = '+(ChunkInfos.ChunkHeader.DataSize - l).ToString);
+    //Globallogger.LogNotice('TextSize = '+(ChunkInfos.ChunkHeader.DataSize - l).ToString);
     if (ChunkInfos.ChunkHeader.DataSize-l>0) then
     begin
       AText := Memory.ReadString((ChunkInfos.ChunkHeader.DataSize - l));
       Memory.SkipNextByte();
     end;
-    ////GlobalLogger.LogNotice('KeyWord = '+KeyWord+ ' : ' +AText);
+    //Globallogger.LogNotice('KeyWord = '+KeyWord+ ' : ' +AText);
 
     //ImageDescription.ExtraInfos.Add(String(Keyword) + ' : ' +AText);
     ChunkInfos.ChunkCrc := Memory.ReadLongWord;
@@ -1888,7 +1943,7 @@ Var
  //procedure ProcessChunk_tIME;
 
 Begin
-  //GlobalLogger.LogNotice('Read Image Properties');
+  Globallogger.LogNotice('Read Image Properties');
   Result := True;
   GammaCorrection := False;
   HasCIExyz := False;
@@ -1898,7 +1953,7 @@ Begin
   Case ImageType of
     ftPNG:
     begin
-      //GlobalLogger.LogNotice('PNG Header detected');
+      Globallogger.LogNotice('PNG Header detected');
       if (ChunkInfos.ChunkType<>ctIHDR) then // or (ChunkType<>ctfcTL) then
       begin
         Result:=false;
@@ -1934,7 +1989,7 @@ Begin
       end;
       // On met à jour la description du ImageDescription
       // On initialise la descritption du "ImageDescription"
-      //GlobalLogger.LogNotice('Description.InitDefault: '+InttoStr(PNGHeader.Width)+'x'+InttoStr(PNGHeader.Height)+'x'+InttoStr(BitCount)+' Type : '+Inttostr(PNGHeader.ColorType));
+      Globallogger.LogNotice('Description.InitDefault: '+InttoStr(PNGHeader.Width)+'x'+InttoStr(PNGHeader.Height)+'x'+InttoStr(BitCount)+' Type : '+Inttostr(PNGHeader.ColorType));
       ImageDescription.InitDefault(PNGHeader.Width, PNGHeader.Height, BitCount);
       HasTransparency := False;
       With ImageDescription do
@@ -1944,7 +1999,8 @@ Begin
            COLOR_GRAYSCALE :
            begin
              if BitCount = 1 then ColorFormat := cfMono
-             else ColorFormat := cfRGB; //cfGray
+             else ColorFormat := cfGrayAlpha; //cfGray
+             HasTransparency := False;
            end;
            COLOR_RGB : ColorFormat := cfRGB;
            COLOR_PALETTE : ColorFormat := cfIndexed;
@@ -1988,13 +2044,13 @@ Begin
     end;
     ftMNG:
     begin
-      //GlobalLogger.LogWarning('MNG Header detected');
+      Globallogger.LogWarning('MNG Header detected');
       MNGHeader := PBZPNGChunk_MHDR(ChunkInfos.ChunkData)^;
 
     end;
     ftJNG:
     begin
-      //GlobalLogger.LogWarning('JNG Header detected');
+      Globallogger.LogWarning('JNG Header detected');
       JNGHeader := PBZPNGChunk_JHDR(ChunkInfos.ChunkData)^;
 
     end;
@@ -2030,7 +2086,7 @@ Var
   MagicID : TBZPNGMagicID;
 
 Begin
-  //GlobalLogger.LogNotice('Check format');
+  Globallogger.LogNotice('Check format');
   MagicID := cNULL_MagicID;
   Result :=  False;
   Memory.Read(MagicID,8);
@@ -2064,12 +2120,12 @@ Var
    r,g,b : Byte;
    pcolor : TBZColor;
   begin
-    //GlobalLogger.LogNotice('Process Chunk PLTE');
+    Globallogger.LogNotice('Process Chunk PLTE');
     MaxCols := ChunkInfos.ChunkHeader.DataSize div 3;
     ImageDescription.UsePalette := True;
     ImageDescription.PaletteCount := MaxCols;
     if (MaxCols > 256) then Errors.Add('Too Many Colors');
-    //GlobalLogger.LogNotice('Load :' + MaxCols.ToString + ' Colors');
+    Globallogger.LogNotice('Load :' + MaxCols.ToString + ' Colors');
     if MaxCols > 0 then
     begin
       //if FGlobalPalette =  nil then FGlobalPalette := TBZColorList.Create else FGlobalPalette.Clear;
@@ -2098,7 +2154,7 @@ Var
     RGBAColor : TBZColor;
     rw,gw,bw : Word;
   begin
-    //GlobalLogger.LogNotice('Process Chunk tRNS');
+    Globallogger.LogNotice('Process Chunk tRNS');
 
     Case PNGHeader.ColorType of
        0:  // MonoChrome / Niveaux de gris
@@ -2129,16 +2185,16 @@ Var
          if Chunk_PLTE_Ok then
          begin
            ImageDescription.HasAlpha := True;
-           //GlobalLogger.LogNotice('Indexed');
+           Globallogger.LogNotice('Indexed');
            if ChunkInfos.ChunkHeader.DataSize > 0 then
            begin
              MaxCols := ChunkInfos.ChunkHeader.DataSize;
-             ////GlobalLogger.LogNotice('Nbre Transparent Colors : '+MaxCols.ToString);
+             //Globallogger.LogNotice('Nbre Transparent Colors : '+MaxCols.ToString);
              // if (MaxCols > 256) or (MaxCols>FGlobalPalette.Count) then Errors.Add('Too Many Colors');
               For i := 0 to MaxCols -1 do
               begin
                 AlphaValue := Memory.ReadByte - 1;
-                ////GlobalLogger.LogNotice('Idx : '+i.ToString + ' AlphaValue : '+AlphaValue.ToString);
+                //Globallogger.LogNotice('Idx : '+i.ToString + ' AlphaValue : '+AlphaValue.ToString);
                 if (AlphaValue < ImageDescription.PaletteCount) then
                 begin
                   ImageDescription.PaletteEntries^[AlphaValue].Alpha := 0;
@@ -2150,7 +2206,7 @@ Var
          end
          else
          begin
-           ////GlobalLogger.LogNotice('Skip Transparence');
+           //Globallogger.LogNotice('Skip Transparence');
            //Errors.Add
            SkipChunkData;
          end;
@@ -2169,12 +2225,12 @@ Var
     Value : Word;  // ColorType 0, 4
     vR, vG, vB, vA : Word; // ColorType 2,6
   begin
-    //GlobalLogger.LogNotice('Process Chunk bKGD');
+    Globallogger.LogNotice('Process Chunk bKGD');
     if Chunk_PLTE_Ok then
     begin
       // resultat Couleur RGBA. Canal Alpha en fonction du chunk tRNS (Transparence)
       //ReadChunkData;
-      //GlobalLogger.LogNotice('PNG Color Type = '+PNGHeader.ColorType.ToString);
+      Globallogger.LogNotice('PNG Color Type = '+PNGHeader.ColorType.ToString);
       Case PNGHeader.ColorType of
         0,4:
         begin
@@ -2229,7 +2285,7 @@ Var
           With BackgroundColor do
           begin
              // Conversion 16 bits vers 8 bits
-             ////GlobalLogger.LogStatus('Read KGD values at Position  : '+InttoStr(Memory.Position));
+             //Globallogger.LogStatus('Read KGD values at Position  : '+InttoStr(Memory.Position));
              Red   := BZUtils.MulDiv(SwapEndian(vR), 255, 65535);//vR * 65535 div 255;
              Green := BZUtils.MulDiv(SwapEndian(vG), 255, 65535); // vG * 65535 div 255;
              Blue  := BZUtils.MulDiv(SwapEndian(vB), 255, 65535); //vB * 65535 div 255;
@@ -2249,7 +2305,7 @@ Var
 
   procedure ProcessChunk_IDAT;
   begin
-    //GlobalLogger.LogNotice('Process Chunk IDAT');
+    //Globallogger.LogNotice('Process Chunk IDAT');
     ReadChunkData;
     ZData.Write(ChunkInfos.ChunkData^, ChunkInfos.ChunkHeader.DataSize);
   end;
@@ -2257,7 +2313,7 @@ Var
 
 Begin
   Chunk_PLTE_Ok := False;
-  //GlobalLogger.LogNotice('Load from memory');
+  Globallogger.LogNotice('Load from memory');
   Case ImageType of
     ftPNG:
     begin
@@ -2283,6 +2339,7 @@ Begin
         end;
       end;
       if ZData.Size > 0 then DecodeData;
+      Globallogger.LogNotice('END Load from memory');
       FreeAndNil(ZData);
     end;
     ftMNG:

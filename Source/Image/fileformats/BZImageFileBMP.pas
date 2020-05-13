@@ -947,10 +947,8 @@ Begin
 
         { /!\ Normalement un fichier WINDOWS BMP VALIDE 8bits ne peut pas avoir une palette de plus de 256 couleurs.
         Cependant certain logiciels peuvent avoir avec des bugs dans leurs procedures d'enregistrement du format BMP.
-        Et certain peuvent enregistré une palette des couleurs utilisées dans l'image (cf format 24 et 32 bits plus bas)
+        Et certain peuvent enregistrer une palette des couleurs utilisées dans l'image (cf format 24 et 32 bits plus bas)
         De même certain fichier peuvent être invalide en indiquant un mauvais nombre de couleur dans la palette }
-
-
 
         If (FHeaderType = bmpht_Os22x) or (FHeaderType = bmpht_Os21x) then
         begin
@@ -1854,15 +1852,15 @@ Begin
               While (X>0) Do
               Begin
                 SrcColorRGB24 := SrcPtrRGB24^;  // ! \ Les données sont au format BGR et pas RGB
-                {$IFDEF WINDOWS} // BGRA
+                {.$IFDEF WINDOWS} // BGRA
                 DstColor.Blue := SrcColorRGB24.Red;
                 DstColor.Green := SrcColorRGB24.Green;
                 DstColor.Red :=  SrcColorRGB24.Blue;
-                {$ELSE}
-                DstColor.Red :=  SrcColorRGB24.Red;
-                DstColor.Green := SrcColorRGB24.Green;
-                DstColor.Blue := SrcColorRGB24.Blue;
-                {$ENDIF}
+                //{$ELSE}
+                //DstColor.Red :=  SrcColorRGB24.Red;
+                //DstColor.Green := SrcColorRGB24.Green;
+                //DstColor.Blue := SrcColorRGB24.Blue;
+                //{$ENDIF}
                 DstColor.Alpha := 255;
                 DstLine^ := DstColor;
                 Inc(SrcPtrRGB24);
@@ -1902,15 +1900,15 @@ Begin
                 While (X<=MaxWidth) Do
                 Begin
                   SrcColorRGB24 := SrcPtrRGB24^;
-                  {$IFDEF WINDOWS} // BGRA
+                  {.$IFDEF WINDOWS} // BGRA
                   DstColor.Blue := SrcColorRGB24.Red;
                   DstColor.Green := SrcColorRGB24.Green;
                   DstColor.Red :=  SrcColorRGB24.Blue;
-                  {$ELSE}
-                  DstColor.Red :=  SrcColorRGB24.Blue;
-                  DstColor.Green := SrcColorRGB24.Green;
-                  DstColor.Blue := SrcColorRGB24.Red;
-                  {$ENDIF}
+                  //{$ELSE}
+                  //DstColor.Red :=  SrcColorRGB24.Red;
+                  //DstColor.Green := SrcColorRGB24.Green;
+                  //DstColor.Blue := SrcColorRGB24.Blue;
+                  //{$ENDIF}
                   DstColor.Alpha := 255;
                   DstLine^ := DstColor;
 
@@ -1946,15 +1944,15 @@ Begin
             While (X<=MaxWidth) Do
             Begin
               SrcColorRGB24 := SrcPtrRGB24^;
-              {$IFDEF WINDOWS} // BGRA
+              {.$IFDEF WINDOWS} // BGRA
               DstColor.Blue := SrcColorRGB24.Red;
               DstColor.Green := SrcColorRGB24.Green;
               DstColor.Red :=  SrcColorRGB24.Blue;
-              {$ELSE}
-              DstColor.Blue:=  SrcColorRGB24.Red;
-              DstColor.Green := SrcColorRGB24.Green;
-              DstColor.Red := SrcColorRGB24.Blue;
-              {$ENDIF}
+              //{$ELSE}
+              //DstColor.Blue:=  SrcColorRGB24.Blue;
+              //DstColor.Green := SrcColorRGB24.Green;
+              //DstColor.Red := SrcColorRGB24.Red;
+              //{$ENDIF}
               DstColor.Alpha := 255;
               DstLine^ := DstColor;
               Inc(SrcPtrRGB24);
@@ -1999,7 +1997,11 @@ Begin
             DstColor := ConvertBitFieldsToBZColor(ImageDescription.BitFields, SrcColor);
             FIgnoreAlpha := FIgnoreAlpha and (DstColor.alpha = 0);
             IsOpaque := IsOpaque and (DstColor.alpha = 255);
+            {.$IFDEF WINDOWS}
             DstLine^ := DstColor;
+            //{$ELSE}
+            //DstLine^.AsInteger := DstColor.FastSwapRedBlue;
+            //{$ENDIF}
             Inc(SrcPtr);
             Inc(DstLine);
             Dec(X);

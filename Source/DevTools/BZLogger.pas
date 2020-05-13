@@ -889,26 +889,27 @@ end;
 procedure TBZConsoleLoggerWriter.SetColor(aColor: byte);
 begin
   // Pour les systèmles unix on encode directement les couleurs
+  // Ne fonctionne pas chez moi sous Manjaro dans un Xterm et Konsole
   // https://stackoverflow.com/questions/287871/how-to-print-colored-text-in-terminal-in-python
   // https://askubuntu.com/questions/558280/changing-colour-of-text-and-background-of-terminal
 
   Case aColor of
-    0: write('\033[30m');   // Black
-    1: write('\033[34m');   // Blue
-    2: write('\033[32m');   // Green
-    3: write('\033[36m');   // Cyan
-    4: write('\033[31m');   // Red
-    5: write('\033[35m');   // Magenta
-    6: write('\033[33m');   // Brown / Yellow
-    7: write('\033[37m');   // LightGray
-    8: write('\033[90m');   // DarkGray
-    9: write('\033[94m');   // LightBlue
-    10: write('\033[92m');  // LightGreen
-    11: write('\033[96m');  // LightCyan
-    12: write('\033[91m');  // LightRed
-    13: write('\033[95m');  // LightMagenta
-    14: write('\033[93m');  // LightYellow
-    15: write('\033[97m');  // White
+    0: write('\033[30m ');   // Black
+    1: write('\033[34m ');   // Blue
+    2: write('\033[32m ');   // Green
+    3: write('\033[36m ');   // Cyan
+    4: write('\033[31m ');   // Red
+    5: write('\033[35m ');   // Magenta
+    6: write('\033[33m ');   // Brown / Yellow
+    7: write('\033[37m ');   // LightGray
+    8: write('\033[90m ');   // DarkGray
+    9: write('\033[94m ');   // LightBlue
+    10: write('\033[92m ');  // LightGreen
+    11: write('\033[96m ');  // LightCyan
+    12: write('\033[91m ');  // LightRed
+    13: write('\033[95m ');  // LightMagenta
+    14: write('\033[93m ');  // LightYellow
+    15: write('\033[97m ');  // White
   end;
 end;
 {$ENDIF}
@@ -925,14 +926,15 @@ begin
   if LogLevel<>llNone then
   begin
     cs := '['+ TimeToStr(aTimeStamp) + ']';
-    {$IFDEF UNIX}cs := cs + '\033[0m';{$ENDIF}
+    {$IFDEF UNIX}cs := cs + ' \033[0m';{$ENDIF}
     Write(cs);
+
     cs := '[' + cLogLevelName[LogLevel] +'] : ';
-    {$IFDEF UNIX}cs := cs + '\033[0m';{$ENDIF}
+    {$IFDEF UNIX}cs := cs + ' \033[0m';{$ENDIF}
     Write(cs);
   end;
   cs := aMsg;
-  {$IFDEF UNIX}cs := cs + '\033[0m';{$ENDIF}
+  {$IFDEF UNIX}cs := cs + ' \033[0m';{$ENDIF}
   Writeln(cs);
 end;
 
@@ -1111,29 +1113,31 @@ begin
   if Not(FEnabled) then Exit;
   LastCount:=0;
 
-  while not(Terminated) do //(not(Terminated) and (LastCount=0))
+  while  not(Terminated)  do //  (not(Terminated) and (LastCount=0))
   begin
     try
       LItem := nil;
       if Assigned(FQueue) then
       begin
         LList:= FQueue.LockList;
-        if Not(Assigned(LList)) then Break;
-        try
-          LastCount := LList.Count;
-          if LastCount > 0 then
-          begin
-            LItem := TBZLoggerItem(LList.Items[0]);
-          end;
-        finally
-          if LItem <> nil then
-          begin
-            WriteLogItem(LItem);
-            FreeAndNil(LItem);
-            LList.Delete(0);
+        if (Assigned(LList)) then
+        begin
+          try
             LastCount := LList.Count;
+            if LastCount > 0 then
+            begin
+              LItem := TBZLoggerItem(LList.Items[0]);
+            end;
+          finally
+            if LItem <> nil then
+            begin
+              WriteLogItem(LItem);
+              FreeAndNil(LItem);
+              LList.Delete(0);
+              LastCount := LList.Count;
+            end;
+            FQueue.UnlockList;
           end;
-          FQueue.UnlockList;
         end;
       end;
     except

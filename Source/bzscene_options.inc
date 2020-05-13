@@ -83,7 +83,9 @@
   {$CODEALIGN LOCALMIN=16}
   {$CODEALIGN VARMIN=16}
   // Enable / disable Assembly optimizations
-  {$DEFINE USE_ASM_OPTIMIZATIONS}
+  {$IFDEF WINDOWS}
+    {$DEFINE USE_ASM_OPTIMIZATIONS}
+  {$ENDIF}
 {$ENDIF}
 
 

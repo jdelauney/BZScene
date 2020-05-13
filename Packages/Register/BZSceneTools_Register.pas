@@ -8,19 +8,21 @@ uses
   LResources,
   Resource,
   Classes,
-
   ComponentEditors,
   PropEdits,
   LCLType,
   LazIDEIntf,
   ProjectIntf,
   ProjectResourcesIntf,
+  MacroIntf,
   Forms, Dialogs,
   Graphics,
 
+  {$IFDEF WINDOWS}
   BZThreadTimer,
-  BZCadencer,
   BZHotKeyManager,
+  {$ENDIF}
+  BZCadencer,
   BZScreenMode;
 
 procedure Register;
@@ -34,11 +36,19 @@ implementation
   -----------------------------------------------------------------------------** }
 procedure Register;
 begin
-  RegisterComponents('BZ-Tools', [TBZThreadTimer, TBZCadencer, TBZHotKeyManager, TBZFormHotKeyManager, TBZAppHotKeyManager, TBZScreenMode]);
+
+  RegisterComponents('BZ-Tools', [ TBZCadencer, TBZScreenMode]);
+  {$IFDEF WINDOWS}
+  RegisterComponents('BZ-Tools',[TBZThreadTimer, TBZHotKeyManager, TBZFormHotKeyManager, TBZAppHotKeyManager]);
+  {$ENDIF}
+
 end;
 
 initialization
-  {$i ..\..\Resources\bzscene_tools.lrs}
+
+    {$I ../../Resources/bzscene_tools.res}
+
+
 
 end.
 

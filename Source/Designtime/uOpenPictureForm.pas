@@ -70,6 +70,7 @@ end;
 procedure TOpenPictureForm.btnClearClick(Sender : TObject);
 begin
   ImageViewer.Picture.Bitmap.Clear(clrTransparent);
+  ImageViewer.Invalidate;
 end;
 
 procedure TOpenPictureForm.btnOpenClick(Sender : TObject);
@@ -77,6 +78,7 @@ begin
   if OPD.Execute then
   begin
     ImageViewer.Picture.LoadFromFile(OPD.FileName);
+    ImageViewer.Invalidate;
   end;
 end;
 

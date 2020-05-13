@@ -250,12 +250,18 @@ type
     procedure ChangeBounds(ALeft, ATop, AWidth, AHeight: integer; KeepBase: boolean); override;
 
     procedure DoOnPictureChange(Sender : TObject); virtual;
+    procedure DoOnFrameChanged(Sender : TObject); virtual;
   public
 
     constructor Create(AOwner: TComponent); override;
     destructor Destroy; override;
     procedure Invalidate; override;
     procedure Repaint; override;
+
+    procedure AnimationStart;
+    procedure AnimationStop;
+    procedure AnimationPause;
+
     { Portion de l'image actuellement affichée }
     property VirtualViewPort:TBZRect read FVirtualViewPort;
     { Retourne si le controle peut scroller }
@@ -554,6 +560,7 @@ begin
   Width := 90;
   Height := 90;
   FNeedUpdate := True;
+  FPicture.Bitmap.OnFrameChanged := @DoOnFrameChanged;
 end;
 
 destructor TBZImageViewer.Destroy;
@@ -657,7 +664,7 @@ begin
   Invalidate;
 end;
 
-Function TBZImageViewer.GetCanScrollHorizontal : Boolean;
+function TBZImageViewer.GetCanScrollHorizontal : Boolean;
 Begin
   Result := False;
   if Not(FStretch) then
@@ -666,7 +673,7 @@ Begin
   End;
 end;
 
-Function TBZImageViewer.GetCanScrollVertical : Boolean;
+function TBZImageViewer.GetCanScrollVertical : Boolean;
 Begin
   Result := False;
   if Not(FStretch) then
@@ -685,7 +692,7 @@ Begin
   //GlobalLogger.LogStatus('CAN SCROLL = ' + Result.ToString());
 End;
 
-procedure TBZImageViewer.SetZoomFactor(Const AValue : Integer);
+procedure TBZImageViewer.SetZoomFactor(const AValue : Integer);
 begin
   if FZoomFactor = AValue then exit;
   FZoomFactor:=AVAlue;
@@ -779,7 +786,7 @@ begin
   //Result := FVirtualCanvasBuffer.Canvas;
 end;
 
-Procedure TBZImageViewer.CalculatePreferredSize(Var PreferredWidth, PreferredHeight : Integer; WithThemeSpace : Boolean);
+procedure TBZImageViewer.CalculatePreferredSize(var PreferredWidth, PreferredHeight : Integer; WithThemeSpace : Boolean);
 begin
   inherited CalculatePreferredSize(PreferredWidth, PreferredHeight, WithThemeSpace);
   if (FPicture.Bitmap.Width > 1) then PreferredWidth := FPicture.Bitmap.Width else PreferredWidth := 90;
@@ -787,7 +794,7 @@ begin
 end;
 
 {$IFDEF WINDOWS}
-Class Function TBZImageViewer.GetControlClassDefaultSize : TSize;
+class function TBZImageViewer.GetControlClassDefaultSize : TSize;
 begin
   Result.CX := 90;
   Result.CY := 90;
@@ -805,6 +812,21 @@ procedure TBZImageViewer.Repaint;
 begin
   FNeedUpdate := True;
   inherited Repaint;
+end;
+
+procedure TBZImageViewer.AnimationStart;
+begin
+  FPicture.Bitmap.StartAnimate;
+end;
+
+procedure TBZImageViewer.AnimationStop;
+begin
+  FPicture.Bitmap.StopAnimate;
+end;
+
+procedure TBZImageViewer.AnimationPause;
+begin
+  FPicture.Bitmap.PauseAnimate;
 end;
 
 procedure TBZImageViewer.Paint;
@@ -1152,6 +1174,11 @@ Begin
   Invalidate;
   //ComputeScrollBounds;
 End;
+
+procedure TBZImageViewer.DoOnFrameChanged(Sender : TObject);
+begin
+  Repaint;
+end;
 
 {%endregion%}
 
