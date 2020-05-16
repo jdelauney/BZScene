@@ -23,7 +23,8 @@ uses
   BZHotKeyManager,
   {$ENDIF}
   BZCadencer,
-  BZScreenMode;
+  BZScreenMode,
+  BZFileFinder;
 
 procedure Register;
 
@@ -37,7 +38,7 @@ implementation
 procedure Register;
 begin
 
-  RegisterComponents('BZ-Tools', [ TBZCadencer, TBZScreenMode]);
+  RegisterComponents('BZ-Tools', [ TBZCadencer, TBZScreenMode, TBZFileFinder]);
   {$IFDEF WINDOWS}
   RegisterComponents('BZ-Tools',[TBZThreadTimer, TBZHotKeyManager, TBZFormHotKeyManager, TBZAppHotKeyManager]);
   {$ENDIF}
