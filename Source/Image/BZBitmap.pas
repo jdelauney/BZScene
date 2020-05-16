@@ -9989,6 +9989,11 @@ Begin
 End;
 
 procedure TBZPicture.WriteToFiler(writer : TVirtualWriter);
+{$IFDEF WINDOWS}
+Var
+  TmpBmp : TBZBitmap;
+{$ENDIF}
+
 begin
   inherited WriteToFiler(writer);
   with writer do
@@ -9998,7 +10003,15 @@ begin
     WriteInteger(FBitmap.Height);
     if Assigned(FBitmap) then
     begin
+      {$IFDEF WINDOWS}
+      // On sauvegarde en RGBA
+      TmpBmp := FBitmap.CreateClone;
+      TmpBmp.ColorFilter.SwapChannel(scmRedBlue);
+      write(TmpBmp.getSurfaceBuffer^, FBitmap.Size);
+      FreeAndNil(TmpBmp);
+      {$ELSE}
       write(FBitmap.getSurfaceBuffer^, FBitmap.Size);
+      {$ENDIF}
     end;
   end;
 end;
@@ -10023,6 +10036,9 @@ begin
         else FBitmap := TBZBitmap.Create(BmpWidth, BmpHeight);
         BmpBuf := FBitmap.getSurfaceBuffer;
         read(BmpBuf^,FBitmap.Size);
+        {$IFDEF WINDOWS}
+        FBitmap.ColorFilter.SwapChannel(scmRedBlue);
+        {$ENDIF}
       end;
     end;
   end
