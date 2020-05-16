@@ -1227,7 +1227,7 @@ Var
                   begin
                     TargetColor.Alpha := 0; // := clrTransparent;
                   End;
-                  If (CurrentFrameInfos.TransparentColorIndex = CurrentFrameInfos.BackgroundColorIndex) Then FBackgroundColor.Alpha := 0;
+                  If (CurrentFrameInfos.TransparentColorIndex = CurrentFrameInfos.BackgroundColorIndex) Then  TargetColor.Alpha := 0;//FBackgroundColor.Alpha := 0;
                 End;
               End;
               LinePtr^ := TargetColor;

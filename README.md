@@ -1,4 +1,4 @@
-
+#Release Dev 0.2
 # BZScene Multimedia 2D, 3D & audio library for Lazarus and FPC [VERSION ALPHA]
 # BZScene Bibliothèque multimédia 2D, 3D & audio pour Lazarus et FPC [VERSION ALPHA]
 

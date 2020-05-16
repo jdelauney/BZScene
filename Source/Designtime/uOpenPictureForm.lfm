@@ -82,9 +82,6 @@ object OpenPictureForm: TOpenPictureForm
       UseDockManager = False
       TabOrder = 0
       Color = clBlack
-      Picture.data = {
-        020002000200
-      }
       Stretch = True
       Proportional = True
       Center = True
@@ -99,7 +96,7 @@ object OpenPictureForm: TOpenPictureForm
     end
   end
   object OPD: TOpenPictureDialog
-    left = 336
-    top = 128
+    Left = 336
+    Top = 128
   end
 end

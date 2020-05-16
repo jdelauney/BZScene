@@ -56,7 +56,7 @@ uses
   {$IFDEF UNIX}
     BaseUnix,
   {$ENDIF}
-  BZClasses, BZSystem, BZUtils, BZControlClasses;
+  BZClasses, BZSystem, BZUtils;{, BZControlClasses;}
 
 CONST
   { Masques de recherche tous les fichiers }
@@ -88,6 +88,7 @@ type
     LookForDirectory    : Boolean;
     LookForArchiveFile  : Boolean;
     LookForAnyFile      : Boolean;
+    FollowSymLink       : Boolean;
   end;
 
   { TBZSearchOptionsParams : Paramètres des attibuts de fichier à rechercher. Utilisé par TBZFileFinder }
@@ -100,6 +101,8 @@ type
     FLookForDirectory : Boolean;
     FLookForArchiveFile : Boolean;
     FLookForAnyFile : Boolean;
+    FFollowSymLink : Boolean;
+
     procedure SetIncludeSubfolder(const AValue : Boolean);
     procedure SetLookForReadOnlyFile(const AValue : Boolean);
     procedure SetLookForHiddenFile(const AValue : Boolean);
@@ -359,7 +362,7 @@ type
 
 implementation
 
-Uses BZTypesHelpers;
+Uses BZTypesHelpers, FileUtil;
 
 procedure SearchFolder(var aFolderList : TStringList; aRootPath : String; Recurse : Boolean);
 Var
@@ -833,7 +836,7 @@ Begin
   ListePath    := TStringList.Create;
   bCont        := True;
   bFirstPass   := True;
-  sPathName    := RootPath;
+  sPathName    := FixPathDelimiter(RootPath);
 
   Stats.NbFilesFound   := 0;
   Stats.FoundInNbPath  := 0;
@@ -849,26 +852,32 @@ Begin
       if ListePath.Count=0 then bCont := False
       else
       begin
-        sPathName := ListePath.Strings[0];
+        sPathName := FixPathDelimiter(ListePath.Strings[0]);
         ListePath.Delete(0);
       end;
     end;
 
     if bCont=True then
     begin
+      sPathName := FixPathDelimiter(sPathName);
       if assigned(OnSearchChangeFolder)=True then OnSearchChangeFolder(Self, sPathName);
 
       if sPathName[Length(sPathName)]<>FixPathDelimiter('\') then sPathName := FixPathDelimiter(sPathName + '\');
+      {$IFDEF WINDOWS}
       sFiltreOk := sPathName + '*.*';
+      {$ELSE}
+      sFiltreOk := sPathName + '*';
+      {$ENDIF}
 
-      if FindFirstUTF8(sFiltreOk, faAnyFile, stFindData)=0 then
+
+      if FindFirstUTF8(sFiltreOk, faAnyFile, stFindData) =0 then
       begin
         bStop := False;
         while bStop=False and bCont=True do
         begin
-          if (stFindData.Name<>'.') and (stFindData.Name<>'..') then
+          if (stFindData.Name<>'.') and (stFindData.Name<>'..') and (stFindData.Name <> '') then
           begin
-            if ((stFindData.Attr and faDirectory)<>0) and (SearchOptions.IncludeSubfolder=True) then ListePath.Add(sPathName+stFindData.Name);
+            if ((stFindData.Attr and faDirectory) <> 0) and (SearchOptions.IncludeSubfolder=True) then ListePath.Add(sPathName+stFindData.Name);
             FileInfos := GetFileInformations(sPathName, stFindData);
             IncludeFile := False;
             if IsAttributesOk(stFindData.Attr)=True then IncludeFile := True;
@@ -961,12 +970,14 @@ end;
 
 destructor TBZFileFinder.Destroy;
 begin
+
   FreeAndNil(FSearchResult);
   FreeAndNil(FSizeFilter);
   FreeAndNil(FDateFilter);
   FreeAndNil(FSearchEngine);
   FreeAndNil(FFileMasks);
   FreeAndNil(FExcludedMasks);
+  FreeAndNil(FSearchOptions);
 
   inherited Destroy;
 end;
@@ -1016,12 +1027,12 @@ end;
 
 procedure TBZFileFinder.SetRootPath(NewRootPath : String);
 begin
-  FSearchEngine.RootPath := NewRootPath;
+  FSearchEngine.RootPath := FixPathDelimiter(NewRootPath);
 end;
 
 function TBZFileFinder.GetRootPath : String;
 begin
-  Result := FSearchEngine.RootPath;
+  Result := FixPathDelimiter(FSearchEngine.RootPath);
 end;
 
 procedure TBZFileFinder.ConvertFilterOptions;

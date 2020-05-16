@@ -623,9 +623,9 @@ Begin
               Begin
                 //aCol24BGR := SrcPtrRGB24^.ToBGR;
                 DstColor.Create(SrcPtrBGR24^,255);
-                //{$IFDEF LINUX}
-                //  DstColor.AsInteger := DstColor.FastSwapRedBlue;
-                //{$ENDIF}
+                {$IFDEF LINUX}
+                  DstColor.AsInteger := DstColor.FastSwapRedBlue;
+                {$ENDIF}
 
                 //DstColor.Red :=  aCol24BGR.Red;
                 //DstColor.Green := aCol24BGR.Green;
@@ -663,7 +663,7 @@ Begin
                 //aCol32BGRA := SrcPtrBGRA32^;
                 DstColor := SrcPtrBGRA32^;
                 {$IFDEF LINUX}
-                DstColor.AsInteger :=  SrcPtrBGRA32^.FastSwapRedBlue;
+                //DstColor.AsInteger :=  SrcPtrBGRA32^.FastSwapRedBlue;
                 {$ENDIF}
                 IgnoreAlpha := IgnoreAlpha and (DstColor.alpha = 0);
                 IsOpaque := IsOpaque and (DstColor.alpha = 255);
@@ -737,7 +737,7 @@ Begin
               DstColor.Create(aCol24BGR);
               //GlobalLogger.LogStatus('READ 24 bit BGR - Color =  '+DstColor.ToString);
               {$IFDEF LINUX}
-                DstColor.AsInteger := DstColor.FastSwapRedBlue;
+                //DstColor.AsInteger := DstColor.FastSwapRedBlue;
               {$ENDIF}
             end;
             32:
@@ -803,7 +803,7 @@ Begin
                 Memory.Read(aCol24BGR,3);
                 DstColor.Create(aCol24BGR);
                 {$IFDEF LINUX}
-                  DstColor.AsInteger := DstColor.FastSwapRedBlue;
+                  //DstColor.AsInteger := DstColor.FastSwapRedBlue;
                 {$ENDIF}
                 DstLine^:=DstColor;
                 Inc(DstLine);
@@ -1103,7 +1103,7 @@ Var
           BufferSize := Width * Height;
           GetMem(TmpBuffer, Self.Size);
           Move(BufferData^, TmpBuffer^, Self.Size);
-          SwapRBBuffer(TmpBuffer, BufferSize ;
+          SwapRBBuffer(TmpBuffer, BufferSize) ;
           Memory.Write(TmpBuffer,Self.Size);
           FreeMem(TmpBuffer);
         {$ELSE}

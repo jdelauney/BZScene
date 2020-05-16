@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>Documentation de BZScene: BZHotKeyManager</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+
+<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
+<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<div style="clear: both"></div>
+
+<script type="text/javascript">
+$(document).ready(function() {
+    $('#tipue_search_input').tipuesearch({
+        /* 10 items to display seems standard */
+        'show': 10,
+        /* For PasDoc docs, showing urls is not very useful,
+           since the page title already shows the unit and identifier. */
+        'showURL': false
+    });
+});
+</script>
+</ul></div></div><div class="content">
+<h1 class="unit">Unité BZHotKeyManager</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+<p>
+Contient un composant pour gérer et interagir avec les raccourcis clavier. <br> <a class="normal" href="BZHotKeyManager.TBZHotKeyManager.html">TBZHotKeyManager</a> permet d'intercepter les raccourcis clavier depuis le système (Application minimisée) et dans la fenêtre active en cours.</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : </p>
+
+<ul class="paragraph_spacing">
+  <li><p>10/07/2019 : Creation </p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Notes</b> : - Compatible Windows et Linux (Gnome, KDE, XFCE...) - Sous MacOS fonctionne si vous utiliser GTK et X11
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Dependances</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>()</p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Forms</li><li>Controls</li><li>Graphics</li><li>Dialogs</li><li>windows</li><li>Unix</li><li>x</li><li>xlib</li><li>gdk2</li><li>gdk2x</li><li>LCLProc</li><li>LCLType</li><li>LCLIntf</li><li>LResources</li><li>LMessages</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZHotKeyItem.html"><code>TBZHotKeyItem</code></a></td>
+<td class="itemdesc">Permet de définir un raccourci clavier</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZHotKeyList.html"><code>TBZHotKeyList</code></a></td>
+<td class="itemdesc">Liste des raccourcis clavier</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZXEventListener.html"><code>TBZXEventListener</code></a></td>
+<td class="itemdesc"><code>TBZXEventListener</code> : Ecoute des évènements clavier sous Linux</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZHotKeyManager.html"><code>TBZHotKeyManager</code></a></td>
+<td class="itemdesc">Gestionnaire de raccourcis clavier standard</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZFormHotKeyManager.html"><code>TBZFormHotKeyManager</code></a></td>
+<td class="itemdesc">Gestionnaire de raccourcis clavier au niveau d'une fenêtre</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZHotKeyManager.TBZAppHotKeyManager.html"><code>TBZAppHotKeyManager</code></a></td>
+<td class="itemdesc">Gestionnaire de raccourcis clavier au niveau de l'application</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZHotKeyManager.html#TOnHotKeyEvent">TOnHotKeyEvent</a></b> = procedure(Index: Integer) of object;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZHotKeyManager.html#MOD_SHIFT">MOD_SHIFT</a></b>   = $2000;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZHotKeyManager.html#MOD_CONTROL">MOD_CONTROL</a></b> = $4000;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><b><a  href="BZHotKeyManager.html#MOD_ALT">MOD_ALT</a></b>     = $8000;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><b><a  href="BZHotKeyManager.html#MOD_WIN">MOD_WIN</a></b>     = $10000;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TOnHotKeyEvent"></span><code><b>TOnHotKeyEvent</b> = procedure(Index: Integer) of object;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Methode de déclenchement d'une action, lors de l'appui d'un raccourci clavier</p>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MOD_SHIFT"></span><code><b>MOD_SHIFT</b>   = $2000;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+scShift</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MOD_CONTROL"></span><code><b>MOD_CONTROL</b> = $4000;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+scCtrl</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MOD_ALT"></span><code><b>MOD_ALT</b>     = $8000;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+scAlt</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="MOD_WIN"></span><code><b>MOD_WIN</b>     = $10000;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+scWin</p>
+</td></tr>
+</table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2016-11-16
+</p>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></body></html>

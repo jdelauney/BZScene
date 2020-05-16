@@ -9,7 +9,7 @@
       <PathDelim Value="\"/>
       <SearchPaths>
         <OtherUnitFiles Value="..\Source\Audio;..\Source\Components\Audio;..\Source\Audio\fileformats;..\Source\Dependancies\openal;..\Source\Dependancies\mp3;..\Source\Dependancies\ogg;..\Source\Dependancies\modplug"/>
-        <UnitOutputDirectory Value="lib\$(TargetCPU)-$(TargetOS)"/>
+        <UnitOutputDirectory Value="lib\bzscene-audio\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
         <Style Value="1"/>

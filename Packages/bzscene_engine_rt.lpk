@@ -8,8 +8,8 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <OtherUnitFiles Value="..\Source\engine;..\Source\Engine\Shaders\Software"/>
-        <UnitOutputDirectory Value="lib\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
+        <OtherUnitFiles Value="..\Source\Engine;..\Source\Engine\Shaders\Software"/>
+        <UnitOutputDirectory Value="lib\bzscene-engine\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
       </SearchPaths>
     </CompilerOptions>
     <Description Value="BZScene Multimedia Library -  Runtime Package
@@ -18,84 +18,84 @@ Contains the base of BZScene Render Engine"/>
     <Version Major="1"/>
     <Files Count="20">
       <Item1>
-        <Filename Value="..\Source\engine\BZEngineResStrings.pas"/>
-        <UnitName Value="BZEngineResStrings"/>
-      </Item1>
-      <Item2>
-        <Filename Value="..\Source\engine\BZRenderContextInfo.pas"/>
-        <UnitName Value="BZRenderContextInfo"/>
-      </Item2>
-      <Item3>
-        <Filename Value="..\Source\engine\BZBitmapFont.pas"/>
-        <UnitName Value="BZBitmapFont"/>
-      </Item3>
-      <Item4>
-        <Filename Value="..\Source\engine\BZCustomShader.pas"/>
-        <UnitName Value="BZCustomShader"/>
-      </Item4>
-      <Item5>
-        <Filename Value="..\Source\engine\BZBitmapRasterizer.pas"/>
-        <UnitName Value="BZBitmapRasterizer"/>
-      </Item5>
-      <Item6>
-        <Filename Value="..\Source\engine\BZSprite.pas"/>
-        <UnitName Value="BZSprite"/>
-      </Item6>
-      <Item7>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_FuzzyMandelbrot.pas"/>
         <UnitName Value="BZSoftwareShader_FuzzyMandelbrot"/>
-      </Item7>
-      <Item8>
+      </Item1>
+      <Item2>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_GroundAndDistortPhongSphere.pas"/>
         <UnitName Value="BZSoftwareShader_GroundAndDistortPhongSphere"/>
-      </Item8>
-      <Item9>
+      </Item2>
+      <Item3>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_TwistedColoredLines.pas"/>
         <UnitName Value="BZSoftwareShader_TwistedColoredLines"/>
-      </Item9>
-      <Item10>
+      </Item3>
+      <Item4>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_ReliefTunnel.pas"/>
         <UnitName Value="BZSoftwareShader_ReliefTunnel"/>
-      </Item10>
-      <Item11>
+      </Item4>
+      <Item5>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_NanoTubes.pas"/>
         <UnitName Value="BZSoftwareShader_NanoTubes"/>
-      </Item11>
-      <Item12>
+      </Item5>
+      <Item6>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_Flower.pas"/>
         <UnitName Value="BZSoftwareShader_Flower"/>
-      </Item12>
-      <Item13>
+      </Item6>
+      <Item7>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_SymetryDisco.pas"/>
         <UnitName Value="BZSoftwareShader_SymetryDisco"/>
-      </Item13>
-      <Item14>
+      </Item7>
+      <Item8>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_Explosion.pas"/>
         <UnitName Value="BZSoftwareShader_Explosion"/>
-      </Item14>
-      <Item15>
+      </Item8>
+      <Item9>
         <Filename Value="..\Source\Engine\Shaders\Software\bzsoftwareshader_morphingsphereandcube.pas"/>
         <UnitName Value="BZSoftwareShader_MorphingSphereAndCube"/>
-      </Item15>
-      <Item16>
+      </Item9>
+      <Item10>
         <Filename Value="..\Source\Engine\Shaders\Software\bzsoftwareshader_water.pas"/>
         <UnitName Value="BZSoftwareShader_Water"/>
-      </Item16>
-      <Item17>
+      </Item10>
+      <Item11>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_WaterPaint.pas"/>
         <UnitName Value="BZSoftwareShader_WaterPaint"/>
-      </Item17>
-      <Item18>
+      </Item11>
+      <Item12>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_NovaMarble.pas"/>
         <UnitName Value="BZSoftwareShader_NovaMarble"/>
-      </Item18>
-      <Item19>
+      </Item12>
+      <Item13>
         <Filename Value="..\Source\Engine\Shaders\Software\BZSoftwareShader_Voronoi.pas"/>
         <UnitName Value="BZSoftwareShader_Voronoi"/>
-      </Item19>
-      <Item20>
+      </Item13>
+      <Item14>
         <Filename Value="..\Source\Engine\BZRayMarchMath.pas"/>
         <UnitName Value="BZRayMarchMath"/>
+      </Item14>
+      <Item15>
+        <Filename Value="..\Source\Engine\BZSprite.pas"/>
+        <UnitName Value="BZSprite"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\Source\Engine\BZBitmapFont.pas"/>
+        <UnitName Value="BZBitmapFont"/>
+      </Item16>
+      <Item17>
+        <Filename Value="..\Source\Engine\BZCustomShader.pas"/>
+        <UnitName Value="BZCustomShader"/>
+      </Item17>
+      <Item18>
+        <Filename Value="..\Source\Engine\BZBitmapRasterizer.pas"/>
+        <UnitName Value="BZBitmapRasterizer"/>
+      </Item18>
+      <Item19>
+        <Filename Value="..\Source\Engine\BZEngineResStrings.pas"/>
+        <UnitName Value="BZEngineResStrings"/>
+      </Item19>
+      <Item20>
+        <Filename Value="..\Source\Engine\BZRenderContextInfo.pas"/>
+        <UnitName Value="BZRenderContextInfo"/>
       </Item20>
     </Files>
     <RequiredPkgs Count="4">

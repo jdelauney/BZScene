@@ -147,7 +147,7 @@ Type
 implementation
 
 uses
-  BZImageStrConsts, BZLibWEBP{$ifdef linux}, linuxlib{$endif},
+  BZImageStrConsts, BZLibWEBP{$ifdef linux}, linux, xlib{$endif},
   BZUtils;
 
 var
@@ -157,7 +157,8 @@ procedure LoadLibWebP;
 begin
   if not LibWebPIsLoaded then
   begin
-    if not LibWebPLoad({$ifdef linux}FindLinuxLibrary('libwebp.so', 6){$endif}) then
+    //{$ifdef linux}FindLinuxLibrary(LibWebPFilename, 6){$endif}
+    if not LibWebPLoad() then
       raise exception.Create('Cannot find libwebp library ('+LibWebPFilename+')');
     LibWebPIsLoaded:= true;
   end;
@@ -194,14 +195,14 @@ begin
   IgnoreAlpha := False;
   Self.SetSize(FBmpWidth, FBmpHeight);
   {$PUSH}{$WARNINGS OFF}
-   {$IFDEF UNIX}
-    ok := WebPDecodeRGBAInto(Memory.GetBuffer, FTotalSize, PByte(Self.getSurfaceBuffer), loadInto.RowSize*h, loadInto.RowSize)<>nil
-  {$ELSE}
+   {.$IFDEF UNIX}
+    //ok := WebPDecodeRGBAInto(Memory.GetBuffer, FTotalSize, PByte(Self.getSurfaceBuffer), loadInto.RowSize*h, loadInto.RowSize)<>nil;
+  {.$ELSE}
     //TmpBuf :=
     Ok := WebPDecodeBGRAInto(Memory.GetBuffer, FTotalSize, PByte(Self.getSurfaceBuffer), Self.Size, Self.Width * 4) <> nil;
     //Self.ImageDescription.RowStrideSize
     //Self.ImageDescription.BytesPerLine)<>nil;
-  {$ENDIF}
+  {.$ENDIF}
   {$POP}
   if not(Ok) then RaiseInvalidImageFile(rsFileDecodingError);
 

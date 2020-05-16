@@ -34,8 +34,47 @@ $(document).ready(function() {
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
 <span id="PasDoc-Description"></span><h2 class="description">Description</h2>
-&nbsp;<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
-<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Forms</li><li>Controls</li><li>Graphics</li><li>Dialogs</li><li>StdCtrls</li><li>Spin</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li><li><a  href="BZImageFilePNG.html">BZImageFilePNG</a></li></ul><h2 class="overview">Aperçu</h2>
+<p>
+Contient une classe pour le rendu de police de caractères bitmap</p>
+<p>
+
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p>  Historique : <br> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>10/07/2018 : Creation</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Notes</b> :
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Dependances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZGraphic.html">BZGraphic</a>, <a class="normal" href="BZBitmap.html">BZBitmap</a>, <a class="normal" href="BZBitmapIO.html">BZBitmapIO</a>;
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>Credits :</b> </p>
+
+<ul class="paragraph_spacing">
+  <li><p>()</p></li>
+  <li><p>J.Delauney (BeanzMaster)</p></li>
+</ul>
+
+<p>
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;
+
+<p><b>LICENCE</b> : MPL / GPL
+
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Forms</li><li>Controls</li><li>Graphics</li><li>Dialogs</li><li>StdCtrls</li><li>Spin</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZGraphic.html">BZGraphic</a></li><li><a  href="BZBitmap.html">BZBitmap</a></li><li><a  href="BZBitmapIO.html">BZBitmapIO</a></li></ul><h2 class="overview">Aperçu</h2>
 <span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
 <table class="classestable wide_list">
 <tr class="listheader">
@@ -44,7 +83,7 @@ $(document).ready(function() {
 </tr>
 <tr class="list">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZBitmapFont.TBZBitmapFont.html"><code>TBZBitmapFont</code></a></td>
-<td class="itemdesc">&nbsp;</td>
+<td class="itemdesc">Gestion d'une police de caractères <a class="normal" href="BZBitmapFont.TBZBitmapFont.html#Bitmap">bitmap</a></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
@@ -64,7 +103,7 @@ $(document).ready(function() {
 </tr>
 <tr><td colspan="1">
 <p>
-<a class="normal" href="BZBitmapFont.TBZBitmapFont.html">TBZBitmapFont</a></p>
+Alignement vertical</p>
 <h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
@@ -81,7 +120,9 @@ $(document).ready(function() {
 <td class="itemcode"><span id="TBZBitmapFontHorizontalAlign"></span><code><b>TBZBitmapFontHorizontalAlign</b> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
-&nbsp;<h6 class="description_section">Valeurs</h6>
+<p>
+Alignement horizontal</p>
+<h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
 <span id="haLeft">haLeft</span></li>
@@ -92,6 +133,14 @@ $(document).ready(function() {
 </ul>
 </td></tr>
 </table>
+<h2 class="authors">Auteur</h2>
+<ul class="authors">
+<li>J.Delauney (BeanzMaster)</li>
+</ul>
+<h2 class="created">Création</h2>
+<p>
+2018-07-11
+</p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
 </div></body></html>

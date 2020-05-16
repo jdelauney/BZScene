@@ -48,7 +48,7 @@ uses
    ,Windows, GetText
   {$ENDIF}
   {$IFDEF UNIX}
-   ,BaseUnix, Unix, Unixutil, linux
+   ,BaseUnix, Unix, Unixutil, linux, users
     {$IFDEF X11_SUPPORT}
      ,xlib
     {$ENDIF}

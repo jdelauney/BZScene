@@ -9,12 +9,15 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <OtherUnitFiles Value="Register"/>
+        <OtherUnitFiles Value="Register;..\Source\Components\Tools"/>
         <UnitOutputDirectory Value="lib\bzcene-tools\$(TargetOS)\$(BuildMode)\$(TargetCPU)"/>
       </SearchPaths>
       <Parsing>
         <Style Value="1"/>
       </Parsing>
+      <Other>
+        <CustomOptions Value="-vd"/>
+      </Other>
     </CompilerOptions>
     <Description Value="BZScene Multimedia Library
 Components Tools Package"/>
@@ -27,7 +30,7 @@ Components Tools Package"/>
         <UnitName Value="BZSceneTools_Register"/>
       </Item1>
     </Files>
-    <RequiredPkgs Count="4">
+    <RequiredPkgs Count="3">
       <Item1>
         <PackageName Value="IDEIntf"/>
       </Item1>
@@ -37,9 +40,6 @@ Components Tools Package"/>
       <Item3>
         <PackageName Value="bzscene_tools_rt"/>
       </Item3>
-      <Item4>
-        <PackageName Value="bzscene_rt"/>
-      </Item4>
     </RequiredPkgs>
     <UsageOptions>
       <UnitPath Value="$(PkgOutDir)"/>

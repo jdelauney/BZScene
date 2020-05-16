@@ -479,38 +479,7 @@ Type
   end;
 
 Type
-  TBZOnPropertyChange = procedure(ASender: TObject; AData: PtrInt) of object;
 
-  { TBZCustomComponentProperty }
-  TBZCustomComponentProperty = class(TBZUpdateAbleObject)
-  private
-    FOnChange: TBZOnPropertyChange;
-  protected
-    FComponent: TComponent;
-    procedure Change(AData: PtrInt = 0); virtual;
-  public
-    constructor Create(AComponent: TComponent);virtual;
-
-    property Component: TComponent read FComponent;
-    property OnChange: TBZOnPropertyChange read FOnChange write FOnChange;
-  end;
-
-  { TBZCustomControlProperty }
-
-  { TBZCustomProperty }
-
-  TBZCustomProperty = class(TBZUpdateAbleObject)
-  private
-    FOnChange: TBZOnPropertyChange;
-  protected
-    FControl: TComponent;//TCustomControl;
-    procedure Change(AData: PtrInt = 0); virtual;
-  public
-    constructor Create(AControl: TComponent); overload;
-  public
-    property Control: TComponent read FControl;
-    property OnChange: TBZOnPropertyChange read FOnChange write FOnChange;
-  end;
 
   { TBZColorProperty }
   TBZColorProperty = Class(TBZCustomProperty)
@@ -548,17 +517,6 @@ Type
 
 implementation
 
-{ TBZCustomProperty }
-
-procedure TBZCustomProperty.Change(AData : PtrInt);
-begin
-  //
-end;
-
-constructor TBZCustomProperty.Create(AControl : TComponent);
-begin
-  //
-end;
 
 { TBZColorProperty }
 
@@ -1210,32 +1168,6 @@ Begin
   inherited paint;
   //If Assigned(FOnPaint) Then FOnPaint(Self);
 End;
-
-{%endregion%}
-
-{%region==== [ TBZCustom Component & Control Property ]========================}
-
-constructor TBZCustomComponentProperty.Create(AComponent : TComponent);
-begin
-  inherited Create(nil);
-  FComponent := AComponent;
-end;
-
-procedure TBZCustomComponentProperty.Change(AData: PtrInt);
-begin
-  if Assigned(FOnChange) then FOnChange(Self,AData);
-end;
-
-//constructor TBZCustomControlProperty.Create(AControl: TCustomControl);
-//begin
-//  inherited Create(AControl);
-//  FControl := AControl;
-//end;
-
-//procedure TBZCustomControlProperty.Change(AData: PtrInt);
-//begin
-//  if Assigned(FOnChange) then FOnChange(Self,AData);
-//end;
 
 {%endregion%}
 

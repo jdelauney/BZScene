@@ -401,6 +401,8 @@ Type
   { Type de filtre morphologique de base }
   TBZMorphologicalOperator =(moErode, moDilate);
 
+  { Mode d'invertion des canaux de couleur }
+  TBZColorFilterSwapChannelMode = (scmRedBlue, scmRedGreen, scmGreenBlue);
 //const
 //  { BZBitmapDrawModeAsString : }
 //  BZBitmapDrawModeAsString:Array[TBZBitmapDrawMode] of string=('Set','Alpha','Average','Modulate','Add','Sub','Mul','Div','Or','Xor','And','Blend','Filter','Custom');
@@ -3130,6 +3132,18 @@ begin
         FPixelSize := 6;
         FSize:=(FWidth*FHeight)*FPixelSize;
       end;
+      64:
+      begin
+        FColorFormat:=cfRGBA;
+        FPixelFormat := pf64bits;
+        FBitCount := 64;
+        FBitsPerPixel := 64;
+        FHasAlpha:=true;
+        FRowStrideType := bleDWordBoundary;
+        FRowStride := 0;
+        FPixelSize := 8;
+        FSize:=(FWidth*FHeight)*FPixelSize;
+      end;
       96:
       begin
         FColorFormat:=cfRGBA;
@@ -4740,10 +4754,10 @@ Begin
   If FWidth = 0 Then FWidth := 1;
   If FHeight = 0 Then FHeight := 1;
  // {$IFDEF DEBUG}
-  GlobalLogger.LogNotice('TBZCustomBitmap.SetSize : ' + IntToStr(FWidth) + 'x' + IntToStr(FHeight));
+  //GlobalLogger.LogNotice('TBZCustomBitmap.SetSize : ' + IntToStr(FWidth) + 'x' + IntToStr(FHeight));
  // {$ENDIF}
   FSize := int64((Int64(FWidth) * Int64(FHeight)) * 4); //sizeof(TBZColor); //FImageDescription.Description.PixelSize;
-  GlobalLogger.LogNotice('TBZCustomBitmap.SetSize Buffer size : '+FSize.ToString());
+  //GlobalLogger.LogNotice('TBZCustomBitmap.SetSize Buffer size : '+FSize.ToString());
   FMaxWidth := FWidth - 1;
   FMaxHeight := FHeight - 1;
   FMaxSize := (Int64(FWidth) * Int64(FHeight)) - 1;
@@ -4770,7 +4784,7 @@ Begin
 
   If FUsePalette Then
   Begin
-    memReAlloc(FImageIndexBuffer, 0);
+    //memReAlloc(FImageIndexBuffer, 0);
     FreeMem(FImageIndexBuffer);
     FImageIndexBuffer := nil;
     memReAlloc(FImageIndexBuffer, int64((FWidth*FHeight)*Sizeof(DWord)));
@@ -4990,9 +5004,11 @@ Begin
   TempImage.OnProgress := Self.OnProgress;
   TempImage.OnLoadError := Self.OnLoadError;
   Try
-    //GlobalLogger.LogNotice('--> Format found : '+TempImage.ClassName);
+    GlobalLogger.LogNotice('--> Format found : '+TempImage.ClassName);
     if Layers.Count>0 then Layers.Clear;
+    GlobalLogger.LogNotice('--> Load Image ');
     tempImage.LoadFromFile(fileName);
+    GlobalLogger.LogNotice('--> Assign Image ');
     Self.Assign(TempImage);
 
     if IsMultiImage  then //or (ExtractFileExt(FileName) ='.gif')
@@ -5228,8 +5244,12 @@ Begin
           End;
           amAlphaCheck :
           Begin
-            If (DstColor.Alpha > 0)  or (ASrcBmp.ImageDescription.HasAlpha and (DstColor <> ASrcBmp.ImageDescription.TransparentColor)) Then
-            DstPtr^ := BackColor.Alphablend(DstColor) else DstPtr^:= BackColor;
+            //GlobalLogger.LogStatus('SrcColor = ' + SrcColor.ToString);
+            If (SrcColor.Alpha > 0) Then
+            begin
+              if (ASrcBmp.ImageDescription.HasAlpha and (SrcColor <> ASrcBmp.ImageDescription.TransparentColor)) then
+                DstPtr^ := BackColor.Alphablend(SrcColor) else DstPtr^:= BackColor; //BackColor.Alphablend(SrcColor); // else DstPtr^:= BackColor;
+            end;
           End;
         end;
       end;
@@ -5650,7 +5670,6 @@ begin
 end;
 
 procedure TBZCustomBitmap.DrawToCanvas(const ACanvas : TCanvas; const ARect : TRect; const IsOpaque : Boolean; const ClearBK : Boolean);
-{$IFDEF WINDOWS}
   // Fast Red-Blue channel color swapping
   procedure SwapRB(Buf: PBZColor; pixelCount: Integer);
   var
@@ -5666,7 +5685,7 @@ procedure TBZCustomBitmap.DrawToCanvas(const ACanvas : TCanvas; const ARect : TR
       Dec(pixelCount);
     end;
   end;
-
+{$IFDEF WINDOWS}
 //https://msdn.microsoft.com/en-us/library/windows/desktop/dd183351(v=vs.85).aspx
 //Const
 //  SHADEBLENDCAPS = 120;  //WinGDI
@@ -5718,8 +5737,7 @@ Begin
     hBmp := Windows.CreateDIBSection(ACanvas.Handle, BitsInfo, DIB_RGB_COLORS, BitsPtr, 0, 0);
 
     SelectObject(memDC, hBMp);
-   // rgb
-   // SwapRB(Tmpbmp.GetSurfaceBuffer,Tmpbmp.MaxSize);
+
 
     if Self.ImageDescription.BitsPerPixel = 32 then Self.PremultiplyAlpha;
     //Move(Self.getScanline(0)^, BitsPtr^, DataSize);
@@ -5933,16 +5951,42 @@ var
   BitmapHandle, MaskHandle: HBitmap;
   W,H : Integer;
   Buffer : PByte;
+
+  // Fast Red-Blue channel color swapping
+  procedure SwapRB(Buf: PBZColor; pixelCount: Integer);
+  var
+    Pixptr: PBZColor;
+    AIntColor : Cardinal;
+  begin
+    PixPtr := Buf;
+    while pixelCount > 0 do
+    begin
+      AIntColor := PixPtr^.AsInteger;
+      PixPtr^.AsInteger := AIntColor and $FF00FF00 or (AintColor and $000000FF SHL 16) or (AIntColor and $00FF0000 SHR 16);
+      Inc(PixPtr);
+      Dec(pixelCount);
+    end;
+  end;
+
 Begin
   result := nil;
   BitmapHandle := 0;
   MaskHandle := 0;
   w := Self.Width;
   h:=  Self.Height;
-  Buffer := PByte(GetSurfaceBuffer);
+  {$IFDEF LINUX}
+    // SwapRB(Self.GetSurfaceBuffer, Self.MaxSize);
+  {$ENDIF}
+  Buffer := PByte(Self.GetSurfaceBuffer);
 
   RawImage.Init;
+  //{$IFDEF LINUX}
+  //RawImage.Description.Init_BPP32_R8G8B8A8_BIO_TTB(W,H);
+  //{$ELSE}
+  //  RawImage.Description.Init_BPP32_B8G8R8A8_BIO_TTB(W,H); //Init_BPP32_R8G8B8A8_BIO_TTB(W,H);
+  //{$ENDIF}
   RawImage.Description.Init_BPP32_B8G8R8A8_BIO_TTB(W,H); //Init_BPP32_R8G8B8A8_BIO_TTB(W,H);
+
   RawImage.Data := Buffer;
   RawImage.DataSize:= Self.Size;
 
@@ -5953,8 +5997,8 @@ Begin
   else
   begin
    Temp := Graphics.TBitmap.Create;
-   //Temp.PixelFormat := pf32bit;
-   //Temp.SetSize(W,H);
+   Temp.PixelFormat := pf32bit;
+   Temp.SetSize(W,H);
    Temp.Handle := BitmapHandle;
    Temp.MaskHandle := MaskHandle;
    Result := Temp;

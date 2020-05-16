@@ -99,7 +99,7 @@ begin
   Result.Red := ClampByte((A.Red - B.Red));
   Result.Green := ClampByte((A.Green - B.Green));
   Result.Blue := ClampByte((A.Blue - B.Blue));
-  Result.Alpha := ClampByte((A.Alpha - B.Alpha));
+  Result.Alpha := A.Alpha; //ClampByte((A.Alpha - B.Alpha));
 end;
 
 class operator TBZColor32.*(constref A, B : TBZColor32): TBZColor32;

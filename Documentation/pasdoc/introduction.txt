@@ -38,7 +38,7 @@ BZScene est divisé en neuf groupes principaux, afin de faciliter le débogage e
 @br
 @br
 @html(<hr>)
-@section(1 SecCapacityB Les principales unités à connaitre. Ce quelles contiennent et leurs capacités)
+@section(1 SecCapacityB Les principales unités à connaitre. Ce qu'elles contiennent et leurs capacités)
 @unorderedlist( 
   @item(@bold(Options de compilation)
         Afin de contrôler les options de compilation vous devrez éditer le fichier "BZScene_options.inc"@br     
@@ -340,7 +340,7 @@ BZScene est divisé en neuf groupes principaux, afin de faciliter le débogage e
 	   L'unité BZThreadTimer contient un composant non-visuel TBZThreadTimer. C'est un bon remplaçant au TTimer habituel. Celui est plus précis et s'éxécute en arrière-plan dans un thread à part.
 	   )
 	   @Item(@Bold(BZHotKeyManager.pas) : @br
-	   L'unité BZHotKeyManager contient trois composants non-visuel TBZFormHotKey, TBZApplicationHotKey, TBZSystemHotKey ceux-ci permettent l'interception de l'appuis de raccourcis clavier chacun à leur niveau. Dans la fenêtre en cours, dans toutes l'application, en dehors de l'application (Application minimiser dans la barre d'icone par exemple)
+	   L'unité BZHotKeyManager contient trois composants non-visuel TBZHotKeyManager, TBZFormHotKeyManager et TBZAppHotKeyManager,  ceux-ci permettent l'interception de l'appuis de raccourcis clavier chacun à leur niveau. Dans la fenêtre en cours, dans toutes l'application, en dehors de l'application (Application minimiser dans la barre d'icone par exemple)
 	   )       
 	   @Item(@Bold(BZCadencer.pas) : @br
 	   L'unité BZCadencer contient un composant non-visuel TBZCadencer à la façon d'un TTimer,  en plus précis et spécialisé dans la mise en place d'animations synchronisées.
@@ -425,6 +425,8 @@ Recommencez les étapes 2,3 et 4 pour les paquet dans cet ordre : @br
   @item(@italic(bzscene_engine_rt))
   @item(@italic(bzscene_audio_rt), seulement si vous désirez utiliser les fonctions audio)
 )
+@image(install_step01.jpg)
+ 
 
 Vous pouvez maintenant également, si vous le désirez installer les composants dans l'EDI.
 
@@ -433,12 +435,17 @@ Vous pouvez maintenant également, si vous le désirez installer les composants 
   @item(Choisissez en le paquet @italic(bzscene_control_dt) (ce paquet est recommandé, car de nombreux exemples utilise TBZImageViewer) qui se trouve également dans le dossier "Packages")
   @item(Cliquez sur le bouton @bold(Utiliser) et choisissez @bold(Installer))
 )
+@image(install_step02.jpg)
+
+@image(install_step02a.jpg)
 
 Optionnellement vous pouvez installer les autres composants disponibles en suivant les mêmes étapes que ci-dessus avec les paquets suivant : @br
 @unorderedlist(
   @item(@italic(bzscene_tool_dt))
   @item(@italic(bzscene_audio_dt - NON RECOMMANDE A CAUSE D'UN BUG LIE A L'EDI)) 
 )
+
+@image(install_step01a.jpg)
 
 @bold(Note) : BUG : NE PAS INSTALLER LE PAQUET BZSCENE_AUDIO_DT malgré que celui-ci s'installe s'en encombre. En effet un bug est présent et génère une Erreur : "Out of memory" dès que vous souhaiterez poser une des composants sur votre fiche, sauf pour le "SoundManager". @br
 Néammoins vous pourrez utilisez ces composants en les créant par code
@@ -474,7 +481,7 @@ Néammoins vous pourrez utilisez ces composants en les créant par code
 )
 @br
 @br
-@Bold(NOTE] : Dans un soucis de compatibilité et de "non frustration" les fonctions en assembleur on été désactivées. @br Celles-ci sont relativement stables dans des environnement 64 bits et ont fait l'objet de tests unitaire poussés. @br
+@Bold(NOTE) : Dans un soucis de compatibilité et de "non frustration" les fonctions en assembleur on été désactivées. @br Celles-ci sont relativement stables dans des environnement 64 bits et ont fait l'objet de tests unitaire poussés. @br
 Vous pouvez les activer en éditant le fichier bzscene_options.inc qui se trouve dans le dossier "Source".@br
 Dirigez vous à la ligne 93 et supprimer le point "." de la commande @italic({.$DEFINE USE_ASM_SSE_3}).   @br
 @br
@@ -550,11 +557,11 @@ begin
 end;
 #)
 @br
-N'hésitez pas également a entouré les différentes partie d'un calcul par des parenthèses. Le compilateur faisant assez bien les chose, cela diminue le risque d'obtenir des données mal alignées en mémoire.
+N'hésitez pas également à entourer les différentes partie d'un calcul par des parenthèses. Le compilateur faisant assez bien les chose, cela diminue le risque d'obtenir des données mal alignées en mémoire.
 @br
 @br
 @html(<hr>)
-@section(1 SecDemos Les exemples de projet)
+@section(1 SecDemos Exemples de projets)
 Vous trouverez de nombreux exemples dans les différents dépots ci-dessous :
 @unorderedlist(
   @item(https://github.com/jdelauney/BZScene-Samples )
@@ -580,13 +587,24 @@ Vous trouverez de nombreux exemples dans les différents dépots ci-dessous :
  Si vous n'êtes pas familliariser avec les notions de fork et pull request sur GitHub je vous conseil de suivre ce tutoriel en français : @br https://openclassrooms.com/en/courses/2342361-gerez-votre-code-avec-git-et-github/2433731-contribuez-a-des-projets-open-source
  
  @bold(Note) : Si vous ête un peu allergique aux commandes en ligne je vous suggère l'utilisation d'un client GIT comme "Fork" disponible sur le site officiel https://fork.dev ou le client officiel de Github disponible ici : https://desktop.github.com
+ 
 @br
 @br
 @html(<hr>)
-@section(1 SecBugs Les principaux bugs connus)
+@section(1 SecBugs Bugs connus)
 @unorderedlist(
   @item(Les composants audio provoque une erreur dans l'IDE mais sont fonctionnels en "runtime")
-) 
+)
+
+@bold(Sous Linux):
+@unorderedlist(
+  @item(Le composant TBZThreadTimer, bien que pleinement fonctionnel refuse de s'installer dans l'EDI.)
+  @item(Les composants TBZHotKeyManager, TBZFormHotKeyManager et TBZAppHotKeyManager, ne sont pas encore compatible et ne veulent pas s'installer pas dans l'EDI.)
+  @item(Certains projets exemples, fonctionnent uniquement si ceux-ci sont compilés sans les options de débuggage (en mode release))  
+  @item(La bibliothèque "Libmodplug" ne se charge pas)
+  @item(Les fichiers audio MP3, sont lus, mais le son est distordu. Je ne sais pas si cela vient de la bibliothèque mpg123, ou des drivers OpenAl installés dans ma distribution linux (Manjaro))    
+)
+ 
 @br
 @br
 @html(<hr>)
@@ -630,7 +648,7 @@ Vous trouverez de nombreux exemples dans les différents dépots ci-dessous :
 @br
 @br
 @html(<hr>)
-@section(1 SecOtherInfos Autres informations)
+@section(1 SecOtherInfos Autres)
 
 Dans le dépot https://github.com/jdelauney/Computer-graphic-DocRefs vous trouverez des documents PDF (la majorité en anglais) glanner sur le web, sur divers sujets relatifs en majoriter au traitement d'image et à la 3D. @br
 Ceux-ci m'ont servis et me servent en partie de références sur un certain nombre d'algorithmes et de méthodes déja mises en place ou à faire.

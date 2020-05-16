@@ -46,8 +46,6 @@ uses
   BZClasses, BZMath, BZColors, BZGraphic, BZBitmapFilterClasses;
 
 Type
-  { Mode d'invertion des canaux de couleur }
-  TBZColorFilterSwapChannelMode = (scmRedBlue, scmRedGreen, scmGreenBlue);
 
   { TBZBitmapColorFilterSwapChannel }
   TBZBitmapColorFilterSwapChannel = class(TBZCustomBitmapFilterPointTransform)
@@ -473,6 +471,7 @@ Type
     FScale : Single;
     FMatrix : TBZColorMatrix;
   protected
+    procedure DoInitializeScanner; override;
     Function ProcessPixel(Const inColor : TBZColor) : TBZColor; override;
   public
     Constructor Create(Const AOwner: TBZBaseBitmap; Const  DirectWrite :Boolean = False); Override;
@@ -657,13 +656,19 @@ end;
 
 { TBZBitmapColorFilterSepia }
 
-Constructor TBZBitmapColorFilterSepia.Create(Const AOwner : TBZBaseBitmap; Const DirectWrite : Boolean);
+constructor TBZBitmapColorFilterSepia.Create(const AOwner : TBZBaseBitmap; const DirectWrite : Boolean);
 begin
   inherited Create(AOwner, DirectWrite);
   FScannerDescription := 'Filtre sepia';
 end;
 
-Function TBZBitmapColorFilterSepia.ProcessPixel(Const inColor : TBZColor) : TBZColor;
+procedure TBZBitmapColorFilterSepia.DoInitializeScanner;
+begin
+  inherited DoInitializeScanner;
+  FMatrix.CreateSepia(FScale);
+end;
+
+function TBZBitmapColorFilterSepia.ProcessPixel(const inColor : TBZColor) : TBZColor;
 Var
   {$CODEALIGN VARMIN=16}
   ColorF : TBZColorVector;
