@@ -49,30 +49,31 @@ interface
 uses
 
   Classes, SysUtils, Forms, Controls, Graphics, Dialogs,
-  LCLProc, LCLType, LCLIntf, LResources, LMessages,
-{$IFDEF WINDOWS}
-   windows
-{$ENDIF}
-{$IFDEF LINUX}
-  //cthreads, cmem ,
-  Unix, x, xlib, gdk2, gdk2x
-{$ENDIF}
-{$IFDEF DARWIN}
+  {$IFDEF WINDOWS}
+   windows,
+  {$ENDIF}
+  {$IFDEF LINUX}
+   Unix, x, xlib, gdk2, gdk2x,
+  {$ENDIF}  
+  LCLProc, LCLType, LCLIntf, LResources, LMessages;
+
+
+{.$IFDEF DARWIN}
   // Il semblrerait qu'en utilisant "NSEvent" il est possible d'intercepter les evenements clavier
   // à la fois sous Carbon et Cocoa. Mais aucune idées comment implémenter ça.
-{$IFDEF CARBON}
+{.$IFDEF CARBON}
   // FPCMacOSAll,
-{$ELSE}
+{.$ELSE}
 
-{$ENDIF}
-{$ENDIF};
+{.$ENDIF}
+{.$ENDIF}
 
 {$IFDEF UNIX}
 Const
-  MOD_SHIFT   = $2000;  // scShift
-  MOD_CONTROL = $4000;  // scCtrl
-  MOD_ALT     = $8000;  // scAlt
-  MOD_WIN     = $10000;
+  MOD_SHIFT   = $2000;  //< scShift
+  MOD_CONTROL = $4000;  //< scCtrl
+  MOD_ALT     = $8000;  //< scAlt
+  MOD_WIN     = $10000; //< scWin
 {$ENDIF}
 // ==============================================================================
 
