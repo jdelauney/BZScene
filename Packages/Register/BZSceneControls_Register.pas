@@ -18,7 +18,8 @@ uses
   Forms, Dialogs,
   Graphics,
 
-  BZImageViewer;
+  BZImageViewer,
+  BZPictureDialogs;
 
 procedure Register;
 
@@ -61,7 +62,7 @@ end;
   -----------------------------------------------------------------------------** }
 procedure Register;
 begin
-  RegisterComponents('BZ-Controls', [TBZImageViewer]);
+  RegisterComponents('BZ-Controls', [TBZImageViewer, TBZOpenPictureDialog]);
 
   RegisterClasses([TBZPicture]);
 

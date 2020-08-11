@@ -8,7 +8,7 @@ unit bzscene_controls_rt;
 interface
 
 uses
-  BZImageViewer, BZGizmoImage;
+  BZImageViewer, BZGizmoImage, BZPictureDialogs;
 
 implementation
 

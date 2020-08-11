@@ -19,7 +19,7 @@
 Contains the base for creating visuals and non-visuals components"/>
     <License Value="MPL / GPL"/>
     <Version Minor="1"/>
-    <Files Count="2">
+    <Files Count="3">
       <Item1>
         <Filename Value="..\Source\Components\Controls\BZImageViewer.pas"/>
         <UnitName Value="BZImageViewer"/>
@@ -28,6 +28,10 @@ Contains the base for creating visuals and non-visuals components"/>
         <Filename Value="..\Source\Components\Controls\BZGizmoImage.pas"/>
         <UnitName Value="BZGizmoImage"/>
       </Item2>
+      <Item3>
+        <Filename Value="..\Source\Components\Controls\BZPictureDialogs.pas"/>
+        <UnitName Value="BZPictureDialogs"/>
+      </Item3>
     </Files>
     <RequiredPkgs Count="4">
       <Item1>
