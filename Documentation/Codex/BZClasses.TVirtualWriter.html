@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZClasses: Classe TVirtualWriter</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZClasses: Classe TVirtualWriter</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <span id="TVirtualWriter"></span><h1 class="cio">Classe TVirtualWriter</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
@@ -49,46 +37,46 @@ Identique à TWriter, mais réutilisable. <br> Utilisé pour implémenter le mé
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>constructor <b><a  href="BZClasses.TVirtualWriter.html#Create">Create</a></b>(Stream: TStream); virtual;</code></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZClasses.TVirtualWriter.html#Create">Create</a></strong>(Stream: TStream); virtual;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#Write">Write</a></b>(const Buf; Count: Longint); virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#Write">Write</a></strong>(const Buf; Count: Longint); virtual; abstract;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteInteger">WriteInteger</a></b>(anInteger: Integer); virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteInteger">WriteInteger</a></strong>(anInteger: Integer); virtual; abstract;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteBoolean">WriteBoolean</a></b>(aBoolean: Boolean); virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteBoolean">WriteBoolean</a></strong>(aBoolean: Boolean); virtual; abstract;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteString">WriteString</a></b>(const aString: string); virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteString">WriteString</a></strong>(const aString: string); virtual; abstract;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteFloat">WriteFloat</a></b>(const aFloat: Extended); virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteFloat">WriteFloat</a></strong>(const aFloat: Extended); virtual; abstract;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteListBegin">WriteListBegin</a></b>; virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteListBegin">WriteListBegin</a></strong>; virtual; abstract;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteListEnd">WriteListEnd</a></b>; virtual; abstract;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteListEnd">WriteListEnd</a></strong>; virtual; abstract;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZClasses.TVirtualWriter.html#WriteTStrings">WriteTStrings</a></b>(const aStrings: TStrings; storeObjects: Boolean = True);</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZClasses.TVirtualWriter.html#WriteTStrings">WriteTStrings</a></strong>(const aStrings: TStrings; storeObjects: Boolean = True);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZClasses.TVirtualWriter.html#Stream">Stream</a></b>: TStream read FStream;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZClasses.TVirtualWriter.html#Stream">Stream</a></strong>: TStream read FStream;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -96,7 +84,7 @@ Identique à TWriter, mais réutilisable. <br> Utilisé pour implémenter le mé
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(Stream: TStream); virtual;</code></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(Stream: TStream); virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -106,7 +94,7 @@ Création de la classe</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Write"></span><code>procedure <b>Write</b>(const Buf; Count: Longint); virtual; abstract;</code></td>
+<td class="itemcode"><span id="Write"></span><code>procedure <strong>Write</strong>(const Buf; Count: Longint); virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -116,7 +104,7 @@ Ecrit un tampon de donnée de taille &quot;Count&quot;</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteInteger"></span><code>procedure <b>WriteInteger</b>(anInteger: Integer); virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteInteger"></span><code>procedure <strong>WriteInteger</strong>(anInteger: Integer); virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -126,7 +114,7 @@ Ecrit une valeur de type Integer</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteBoolean"></span><code>procedure <b>WriteBoolean</b>(aBoolean: Boolean); virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteBoolean"></span><code>procedure <strong>WriteBoolean</strong>(aBoolean: Boolean); virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -136,7 +124,7 @@ Ecrit une valeur de type Boolean</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteString"></span><code>procedure <b>WriteString</b>(const aString: string); virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteString"></span><code>procedure <strong>WriteString</strong>(const aString: string); virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -146,7 +134,7 @@ Ecrit une valeur de type String</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteFloat"></span><code>procedure <b>WriteFloat</b>(const aFloat: Extended); virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteFloat"></span><code>procedure <strong>WriteFloat</strong>(const aFloat: Extended); virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -156,7 +144,7 @@ Ecrit une valeur de type Virgule flottante</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteListBegin"></span><code>procedure <b>WriteListBegin</b>; virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteListBegin"></span><code>procedure <strong>WriteListBegin</strong>; virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -166,7 +154,7 @@ Flag de début de l'écriture d'une liste</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteListEnd"></span><code>procedure <b>WriteListEnd</b>; virtual; abstract;</code></td>
+<td class="itemcode"><span id="WriteListEnd"></span><code>procedure <strong>WriteListEnd</strong>; virtual; abstract;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -176,7 +164,7 @@ Flag de fin de l'écriture d'une liste</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="WriteTStrings"></span><code>procedure <b>WriteTStrings</b>(const aStrings: TStrings; storeObjects: Boolean = True);</code></td>
+<td class="itemcode"><span id="WriteTStrings"></span><code>procedure <strong>WriteTStrings</strong>(const aStrings: TStrings; storeObjects: Boolean = True);</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -187,7 +175,7 @@ Ecrit une liste de caractère de type TStrings. La paramètre &quot;storeObjects
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Stream"></span><code>property <b>Stream</b>: TStream read FStream;</code></td>
+<td class="itemcode"><span id="Stream"></span><code>property <strong>Stream</strong>: TStream read FStream;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -196,4 +184,9 @@ Retourne le flux d'écriture</p>
 </table>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZOpenALManager</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZOpenALManager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="unit">Unité BZOpenALManager</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
@@ -102,17 +90,17 @@ Contient le &quot;Manager de son&quot; pour la librairie OpenAL</p>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Notes</b> : <br> Pour l'implementation des filtres et effets voir unité BZSound.pas<br>
+<p><strong>Notes</strong> : <br> Pour l'implementation des filtres et effets voir unité BZSound.pas<br>
 
 <p>Malheureusement avec les 2 librairies (officielles et soft) ont ne peux pas utiliser<br> les effets d'environnements virtuel 3D, car les fonctions &quot;eaxSet&quot; et &quot;eaxGet&quot;<br> ne sont pas disponiblent. Il nous faut donc les émuler via les effets &quot;Reverb&quot; EFX ou EAX. De plus ces fonctions ne fonctionnent que si le mode<br> &quot;Hardware&quot; est activé, ce qui est impossible sous Windows (du à sont fonctionnement :( )<br> Je n'ai pas testé sous d'autres OS comme linux, donc à voir.<br> Cependant sous Windows (non testé avec d'autres OS) les fonctions &quot;EAXSet&quot; et &quot;EAXget&quot; <br> sont disponiblent uniquement avec la version officielle d'OpenAL, mais il faut utiliser <br> le fichier &quot;wrap_oal.dll&quot; à la place de &quot;OpenAL32.dll&quot; mais idem cela ne change rien du fait <br> que le mode Hardware n'est pas disponible.<br>
 
 <p>La solution est donc d'utiliser les effets REVERB et EAX_REVERB pour simuler les environnements.
 
-<p>Pour infos l'installateur de la version officiel d'OpenAL pour Windows sur des sytemes <br> 64 bits place les Librairie DLL 32 bits dans le dossier c:\Windows\sysWOW64 et les librairies 64 bits dans le dossier c:\Windows\system32. <br> <b>Attention</b> : leurs noms ne changent pas et reste &quot;OpenAL32.dll&quot; et &quot;wrap_oal.dll&quot;
+<p>Pour infos l'installateur de la version officiel d'OpenAL pour Windows sur des sytemes <br> 64 bits place les Librairie DLL 32 bits dans le dossier c:\Windows\sysWOW64 et les librairies 64 bits dans le dossier c:\Windows\system32. <br> <strong>Attention</strong> : leurs noms ne changent pas et reste &quot;OpenAL32.dll&quot; et &quot;wrap_oal.dll&quot;
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Dépendances</b> :
+<p><strong>Dépendances</strong> :
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
@@ -126,7 +114,7 @@ Contient le &quot;Manager de son&quot; pour la librairie OpenAL</p>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Licence</b> : MPL / GPL
+<p><strong>Licence</strong> : MPL / GPL
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
@@ -149,23 +137,23 @@ Contient le &quot;Manager de son&quot; pour la librairie OpenAL</p>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZOpenALManager.html#EOpenALError">EOpenALError</a></b> = Exception;</code></td>
+<td class="itemcode"><code><strong><a  href="BZOpenALManager.html#EOpenALError">EOpenALError</a></strong> = Exception;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZOpenALManager.html#OAL_MIN_PITCH">OAL_MIN_PITCH</a></b> : Single = 0.1;</code></td>
+<td class="itemcode"><code><strong><a  href="BZOpenALManager.html#OAL_MIN_PITCH">OAL_MIN_PITCH</a></strong> : Single = 0.1;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZOpenALManager.html#OAL_MAX_PITCH">OAL_MAX_PITCH</a></b> : Single = 4.0;</code></td>
+<td class="itemcode"><code><strong><a  href="BZOpenALManager.html#OAL_MAX_PITCH">OAL_MAX_PITCH</a></strong> : Single = 4.0;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EOpenALError"></span><code><b>EOpenALError</b> = Exception;</code></td>
+<td class="itemcode"><span id="EOpenALError"></span><code><strong>EOpenALError</strong> = Exception;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -175,14 +163,14 @@ Exception levé par OpenAL</p>
 <h3 class="detail">Constantes</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OAL_MIN_PITCH"></span><code><b>OAL_MIN_PITCH</b> : Single = 0.1;</code></td>
+<td class="itemcode"><span id="OAL_MIN_PITCH"></span><code><strong>OAL_MIN_PITCH</strong> : Single = 0.1;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OAL_MAX_PITCH"></span><code><b>OAL_MAX_PITCH</b> : Single = 4.0;</code></td>
+<td class="itemcode"><span id="OAL_MAX_PITCH"></span><code><strong>OAL_MAX_PITCH</strong> : Single = 4.0;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
@@ -191,10 +179,15 @@ Exception levé par OpenAL</p>
 <ul class="authors">
 <li>J.Delauney (BeanzMaster)</li>
 </ul>
-<h2 class="created">Création</h2>
+<h2 class="created">Crée</h2>
 <p>
 2016-11-16
 </p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

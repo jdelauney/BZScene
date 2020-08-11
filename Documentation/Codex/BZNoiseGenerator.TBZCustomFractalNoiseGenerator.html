@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZNoiseGenerator: Classe TBZCustomFractalNoiseGenerator</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<span id="TBZCustomFractalNoiseGenerator"></span><h1 class="cio">Classe TBZCustomFractalNoiseGenerator</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZNoiseGenerator.html">BZNoiseGenerator</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomFractalNoiseGenerator = class(<a class="normal" href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZCustomFractalNoiseGenerator</code> : Classe de base à hériter pour la génération de bruit &quot;fractal&quot;</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="ancestor"><a class="normal" href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a></li>
+<li class="thisitem">TBZCustomFractalNoiseGenerator</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Constructor <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Create">Create</a></strong>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Destructor <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Noise2D">Noise2D</a></strong>(x,y:Double):Double; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>Function <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Noise3D">Noise3D</a></strong>(x,y,z : Double): Double; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#FractalNoiseType">FractalNoiseType</a></strong> : <a  href="BZNoiseGenerator.html#TBZFractalNoiseType">TBZFractalNoiseType</a> read FFractalNoiseType write FFractalNoiseType;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#NoiseType">NoiseType</a></strong> : <a  href="BZNoiseGenerator.html#TBZNoiseType">TBZNoiseType</a> read FNoiseType write SetNoiseType;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Perturbation">Perturbation</a></strong> : <a  href="BZNoiseGenerator.html#TBZNoisePerturbation">TBZNoisePerturbation</a> read FPerturbation write FPerturbation;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Seed">Seed</a></strong> : Int64 read FSeed write FSeed;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Frequency">Frequency</a></strong> : Double read FFrequency write FFrequency;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Octaves">Octaves</a></strong> : LongWord read FOctaves write FOcatves;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Lacunarity">Lacunarity</a></strong> : Double read FLacunarity write FLacunarity;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Gain">Gain</a></strong> : Double read FGain write FGain;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Amplitude">Amplitude</a></strong> : Double read FAmplitude write FAmplitude;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#FractalParam">FractalParam</a></strong> : Double read FFractalParame write FFractalParam;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#Offset">Offset</a></strong> : Double read FOffset write FOffset;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html#NoiseGenerator">NoiseGenerator</a></strong> : <a  href="BZNoiseGenerator.TBZBaseNoiseGenerator.html">TBZBaseNoiseGenerator</a> read FNoiseGenerator write SetNoiseGenerator;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>Constructor <strong>Create</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>Destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Noise2D"></span><code>Function <strong>Noise2D</strong>(x,y:Double):Double; override;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Function <a class="normal" href="BZNoiseGenerator.TBZCustomNoiseGenerator.html#Noise1D">Noise1D</a>(x:Double):Double; override;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Noise3D"></span><code>Function <strong>Noise3D</strong>(x,y,z : Double): Double; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FractalNoiseType"></span><code>property <strong>FractalNoiseType</strong> : <a  href="BZNoiseGenerator.html#TBZFractalNoiseType">TBZFractalNoiseType</a> read FFractalNoiseType write FFractalNoiseType;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NoiseType"></span><code>property <strong>NoiseType</strong> : <a  href="BZNoiseGenerator.html#TBZNoiseType">TBZNoiseType</a> read FNoiseType write SetNoiseType;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Perturbation"></span><code>property <strong>Perturbation</strong> : <a  href="BZNoiseGenerator.html#TBZNoisePerturbation">TBZNoisePerturbation</a> read FPerturbation write FPerturbation;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Seed"></span><code>property <strong>Seed</strong> : Int64 read FSeed write FSeed;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Frequency"></span><code>property <strong>Frequency</strong> : Double read FFrequency write FFrequency;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Octaves"></span><code>property <strong>Octaves</strong> : LongWord read FOctaves write FOcatves;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Lacunarity"></span><code>property <strong>Lacunarity</strong> : Double read FLacunarity write FLacunarity;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Gain"></span><code>property <strong>Gain</strong> : Double read FGain write FGain;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Amplitude"></span><code>property <strong>Amplitude</strong> : Double read FAmplitude write FAmplitude;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="FractalParam"></span><code>property <strong>FractalParam</strong> : Double read FFractalParame write FFractalParam;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Offset"></span><code>property <strong>Offset</strong> : Double read FOffset write FOffset;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NoiseGenerator"></span><code>property <strong>NoiseGenerator</strong> : <a  href="BZNoiseGenerator.TBZBaseNoiseGenerator.html">TBZBaseNoiseGenerator</a> read FNoiseGenerator write SetNoiseGenerator;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

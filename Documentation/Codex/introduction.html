@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: Acceuil</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: Acceuil</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="externalitem">BZScene bibliothèque multimédia 2D, 3D et audio pour Larazus &amp; FPC</h1>
  
 
@@ -40,9 +28,9 @@ $(document).ready(function() {
 <p><h2 class=""><span id="SecPreface"></span>Preface</h2>
 
 
-<p><b>BZScene</b> est la solution Audio, 2D et 3D pour développer des applications graphiques multiplateformes avec Lazarus &amp;amp; FPC 32 et 64 bits.
+<p><strong>BZScene</strong> est la solution Audio, 2D et 3D pour développer des applications graphiques multiplateformes avec Lazarus &amp;amp; FPC 32 et 64 bits.
 
-<p><b>BZScene</b> est en partie basé sur le moteur de rendu <a href ="https://sourceforge.net/projects/glscene/">GLScene</a>. Communauté dont je fais partie. <a href ="https://sourceforge.net/projects/glscene/">GLScene</a> est le fruits de centaines de développeurs à travers le monde.
+<p><strong>BZScene</strong> est en partie basé sur le moteur de rendu <a href ="https://sourceforge.net/projects/glscene/">GLScene</a>. Communauté dont je fais partie. <a href ="https://sourceforge.net/projects/glscene/">GLScene</a> est le fruits de centaines de développeurs à travers le monde.
 
 <p>Son histoire débute dans les années 1995 avec <a href ="http://www.lischke-online.de/">Mike Lischke</a>( &quot;Soft Gems - Mike Lischke&quot;) et ces bibliothèques pour delphi <a href ="https://github.com/mike-lischke/GraphicEx>GraphicEx</a>&quot;, et de GLScene. <br> Puis le flambeau de GLScene à été passé à Eric Grange. Depuis la communauté est toujours là et est plus ou moins active. C'est une bibliothèque robuste, optimisée, et éprouvée. Mais le code est &quot;vieillissant&quot;
 
@@ -69,19 +57,19 @@ $(document).ready(function() {
  </p>
 
 <ul class="paragraph_spacing">
-  <li><p><b>Options de compilation</b> Afin de contrôler les options de compilation vous devrez éditer le fichier &quot;BZScene_options.inc&quot;<br> Vous pourrez contrôler l'utilisation des méthodes rapide mathématique ainsi que l'utilisation de l'assembleur
+  <li><p><strong>Options de compilation</strong> Afin de contrôler les options de compilation vous devrez éditer le fichier &quot;BZScene_options.inc&quot;<br> Vous pourrez contrôler l'utilisation des méthodes rapide mathématique ainsi que l'utilisation de l'assembleur
 
 <p></p></li>
-  <li><p><b>Core</b> : </p>
+  <li><p><strong>Core</strong> : </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZSytem.pas</b> : <br> L'unité <a class="normal" href="BZSystem.html">BZSystem</a>, regroupe quelques routines pour la detection de l'OS, du CPU et autres informations sur le systeme en général. Elle contient également des fonctions utiles pour une application. (retrouver le dossier de l'application, dossier temporaire de l'OS etc...) </p></li>
-  <li value="2"><p><b>BZUtils.pas</b> : <br> L'unité <a class="normal" href="BZUtils.html">BZUtils</a> contiens des routines utiles dans différents domaines tel que les nombres, la manipulation de bits, le calcul de <a class="normal" href="BZUtils.html#CRC32">CRC32</a> etc... <br> Certaines routines ont étés optimisées gràce à l'utilisation de l'assembleur. </p></li>
-  <li value="3"><p><b>BZClasses.pas</b> : <br> L'unité <a class="normal" href="BZClasses.html">BZClasses</a> contient des classes conçues à des fins génériques.<br> Elles implémentent un mécanisme de persistance légèrement différent de celui de la LCL / VCL. <br> Elles permettent le contrôle de version au niveau de l'objet avec une persistance 100% ascendante et une compatibilité polymorphe.<br> Cette unité, contient également les définitions d'objets à remplacer.<br> Ces objets peuvent être 'notifiés pendant les changements' et peuvent être animées (simulations basées sur le temps). <br> Elles peuvent inclure un méchanisme de lecture/écriture de données dans un flux optimisée. <br> Elle contient également des classes spécialisées et utiles comme par exemple,le remplacement d'un TStringList basé sur le hachage.<br> <br> <b>Les principales classes à connaitre</b> : </p>
+  <li value="1"><p><strong>BZSytem.pas</strong> : <br> L'unité <a class="normal" href="BZSystem.html">BZSystem</a>, regroupe quelques routines pour la detection de l'OS, du CPU et autres informations sur le systeme en général. Elle contient également des fonctions utiles pour une application. (retrouver le dossier de l'application, dossier temporaire de l'OS etc...) </p></li>
+  <li value="2"><p><strong>BZUtils.pas</strong> : <br> L'unité <a class="normal" href="BZUtils.html">BZUtils</a> contiens des routines utiles dans différents domaines tel que les nombres, la manipulation de bits, le calcul de <a class="normal" href="BZUtils.html#CRC32">CRC32</a> etc... <br> Certaines routines ont étés optimisées gràce à l'utilisation de l'assembleur. </p></li>
+  <li value="3"><p><strong>BZClasses.pas</strong> : <br> L'unité <a class="normal" href="BZClasses.html">BZClasses</a> contient des classes conçues à des fins génériques.<br> Elles implémentent un mécanisme de persistance légèrement différent de celui de la LCL / VCL. <br> Elles permettent le contrôle de version au niveau de l'objet avec une persistance 100% ascendante et une compatibilité polymorphe.<br> Cette unité, contient également les définitions d'objets à remplacer.<br> Ces objets peuvent être 'notifiés pendant les changements' et peuvent être animées (simulations basées sur le temps). <br> Elles peuvent inclure un méchanisme de lecture/écriture de données dans un flux optimisée. <br> Elle contient également des classes spécialisées et utiles comme par exemple,le remplacement d'un TStringList basé sur le hachage.<br> <br> <strong>Les principales classes à connaitre</strong> : </p>
 
 <ul class="paragraph_spacing">
-  <li><p><b><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></b> : Classe de base pour les objets persistants. <br> L'exigence de base est l'implémentation de ReadFromFiler et WriteToFiler dans les sous-classes.<br> L'autre exigence est l'utilisation d'un constructeur virtuel, ce qui permet la construction polymorphe (ne pas oublier d'enregistrer vos sous-classes).<br> Les avantages immédiats sont le support du streaming (flux, fichier ou chaîne), l'affectation et le clonage. </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a></b> : Liste d'objets persistants.<br> Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.<br> Contrairement à la TObjectList de la VCL / LCL, <a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a> ne libère pas ses objets lors de la destruction ou de Clear. Vous devez utiliser les fonctions Clean et CleanFree.<br> </p>
+  <li><p><strong><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></strong> : Classe de base pour les objets persistants. <br> L'exigence de base est l'implémentation de ReadFromFiler et WriteToFiler dans les sous-classes.<br> L'autre exigence est l'utilisation d'un constructeur virtuel, ce qui permet la construction polymorphe (ne pas oublier d'enregistrer vos sous-classes).<br> Les avantages immédiats sont le support du streaming (flux, fichier ou chaîne), l'affectation et le clonage. </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a></strong> : Liste d'objets persistants.<br> Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.<br> Contrairement à la TObjectList de la VCL / LCL, <a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a> ne libère pas ses objets lors de la destruction ou de Clear. Vous devez utiliser les fonctions Clean et CleanFree.<br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>Seuls les éléments <a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a> et descendants seront gérés correctement.</p></li>
@@ -91,62 +79,62 @@ $(document).ready(function() {
 
 <p>
 
-<p><i>Note</i> : L'implémentation de la fonction IndexOf est jusqu'à 3 fois plus rapide que celle de TList </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></b> : Classe abstraite décrivant l'interface &quot;IGLZNotifyAble&quot;<br> Elle offre un systeme d'événements de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes. </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a></b> : Classe abstraite décrivant l'interface &quot;IBZProgessAble&quot;<br> Elle est basée sur le Temps, permettant de créer des animations / simulations (2D,3D,...) ou autres fonctions d'arrière-plan </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZUpdateAbleComponent.html">TBZUpdateAbleComponent</a></b> : Classe abstraite décrivant et supportant IGLZProgessAble et IGLZNotifyAble<br> Elle offre la cappacité de notifer les changements de valeurs des propriétés à d'autres classes. Et permet &quot;d'animer&quot; les propriétés en se basant sur le temps </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></b> : Classe de base abstraite pour les interfaces de formats de fichiers de données.<br> Cette classe déclare les comportements de base liés aux fichiers. C'est à dire, pouvoir charger / enregistrer à partir d'un fichier ou d'un flux.<br> Il est fortement recommandé de surcharger SEULEMENT les méthodes d'acces à la mémoire. (fonction CanLoad et procedure LoadFromMemory)<br> Les comportements en flux permettent d'ajouter d'autres capacités en Entrée/Sortie, comme la compression, la mise en cache, etc... sans qu'il soit nécessaire de réécrire de sous-classes.<br> <i>Note </i>: CheckFormat / LoadFromMemory / SaveToMemory : Les enfants doivent réécrirent ces méthodes pour supporter la lecture et ou l'écriture d'un format de fichier spécifique. </p></li>
-  <li><p><b><a class="normal" href="BZClasses.TBZStringList.html">TBZStringList</a></b> : Classe optimisée pour utiliser une liste de chaine de caractères. A utiliser en remplacement d'une TStringList. <br> On a la possibilité d'associer un d'objets et ou un Tag de type integer et single à chaque élément. A chaque item est associé à un &quot;Hash&quot; permettant ainsi de retrouver un élément spécifique très rapidement juste par correspondance. La liste n'a donc pas besoin d'être triée pou effectuer un recherche rapide<br> Cette classe dispose également d'une méthode de trie 'DirectSort&quot; plus rapide que QuickSort. Elle utilise l'algorithme de tri &quot;A-Sort&quot;. </p></li>
+<p><em>Note</em> : L'implémentation de la fonction IndexOf est jusqu'à 3 fois plus rapide que celle de TList </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></strong> : Classe abstraite décrivant l'interface &quot;IGLZNotifyAble&quot;<br> Elle offre un systeme d'événements de notifications, qui donne la capacité de notifer les changements de valeurs des propriétés à d'autres classes. </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a></strong> : Classe abstraite décrivant l'interface &quot;IBZProgessAble&quot;<br> Elle est basée sur le Temps, permettant de créer des animations / simulations (2D,3D,...) ou autres fonctions d'arrière-plan </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZUpdateAbleComponent.html">TBZUpdateAbleComponent</a></strong> : Classe abstraite décrivant et supportant IGLZProgessAble et IGLZNotifyAble<br> Elle offre la cappacité de notifer les changements de valeurs des propriétés à d'autres classes. Et permet &quot;d'animer&quot; les propriétés en se basant sur le temps </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZCustomDataFile.html">TBZCustomDataFile</a></strong> : Classe de base abstraite pour les interfaces de formats de fichiers de données.<br> Cette classe déclare les comportements de base liés aux fichiers. C'est à dire, pouvoir charger / enregistrer à partir d'un fichier ou d'un flux.<br> Il est fortement recommandé de surcharger SEULEMENT les méthodes d'acces à la mémoire. (fonction CanLoad et procedure LoadFromMemory)<br> Les comportements en flux permettent d'ajouter d'autres capacités en Entrée/Sortie, comme la compression, la mise en cache, etc... sans qu'il soit nécessaire de réécrire de sous-classes.<br> <em>Note </em>: CheckFormat / LoadFromMemory / SaveToMemory : Les enfants doivent réécrirent ces méthodes pour supporter la lecture et ou l'écriture d'un format de fichier spécifique. </p></li>
+  <li><p><strong><a class="normal" href="BZClasses.TBZStringList.html">TBZStringList</a></strong> : Classe optimisée pour utiliser une liste de chaine de caractères. A utiliser en remplacement d'une TStringList. <br> On a la possibilité d'associer un d'objets et ou un Tag de type integer et single à chaque élément. A chaque item est associé à un &quot;Hash&quot; permettant ainsi de retrouver un élément spécifique très rapidement juste par correspondance. La liste n'a donc pas besoin d'être triée pou effectuer un recherche rapide<br> Cette classe dispose également d'une méthode de trie 'DirectSort&quot; plus rapide que QuickSort. Elle utilise l'algorithme de tri &quot;A-Sort&quot;. </p></li>
 </ul>
 
 <p> </p></li>
-  <li value="4"><p><b>BZArrayClasses.pas</b> : <br> L'unité <a class="normal" href="BZArrayClasses.html">BZArrayClasses</a> contient des classes génériques pour manipuler des tableaux &quot;Array&quot; a travers un pointeur.<br> Elle regroupe des tableuax 1D et 2D pour les types Byte, Integer, Single et double<br> Fournis quelques fonctions utiles et communes ajouter, supprimer, l'accès aux données par incrément, de tri, l'accès en mode LIFO (Stack), la &quot;mutation&quot;
+  <li value="4"><p><strong>BZArrayClasses.pas</strong> : <br> L'unité <a class="normal" href="BZArrayClasses.html">BZArrayClasses</a> contient des classes génériques pour manipuler des tableaux &quot;Array&quot; a travers un pointeur.<br> Elle regroupe des tableuax 1D et 2D pour les types Byte, Integer, Single et double<br> Fournis quelques fonctions utiles et communes ajouter, supprimer, l'accès aux données par incrément, de tri, l'accès en mode LIFO (Stack), la &quot;mutation&quot;
 
-<p><b>Les principales classes et types à connaitre</b> : <br> </p>
+<p><strong>Les principales classes et types à connaitre</strong> : <br> </p>
 
 <ul class="paragraph_spacing">
-  <li><p><b>Tableaux prédéfinis 1D </b> : <a class="normal" href="BZArrayClasses.TBZByteList.html">TBZByteList</a>, <a class="normal" href="BZArrayClasses.TBZIntegerList.html">TBZIntegerList</a>, <a class="normal" href="BZArrayClasses.TBZSingleList.html">TBZSingleList</a>, <a class="normal" href="BZArrayClasses.TBZDoubleList.html">TBZDoubleList</a></p></li>
-  <li><p><b>Tableaux prédéfinis 2D </b> : <a class="normal" href="BZArrayClasses.TBZByte2DMap.html">TBZByte2DMap</a>, <a class="normal" href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>, <a class="normal" href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>, <a class="normal" href="BZArrayClasses.TBZDouble2DMap.html">TBZDouble2DMap</a> </p></li>
+  <li><p><strong>Tableaux prédéfinis 1D </strong> : <a class="normal" href="BZArrayClasses.TBZByteList.html">TBZByteList</a>, <a class="normal" href="BZArrayClasses.TBZIntegerList.html">TBZIntegerList</a>, <a class="normal" href="BZArrayClasses.TBZSingleList.html">TBZSingleList</a>, <a class="normal" href="BZArrayClasses.TBZDoubleList.html">TBZDoubleList</a></p></li>
+  <li><p><strong>Tableaux prédéfinis 2D </strong> : <a class="normal" href="BZArrayClasses.TBZByte2DMap.html">TBZByte2DMap</a>, <a class="normal" href="BZArrayClasses.TBZInteger2DMap.html">TBZInteger2DMap</a>, <a class="normal" href="BZArrayClasses.TBZSingle2DMap.html">TBZSingle2DMap</a>, <a class="normal" href="BZArrayClasses.TBZDouble2DMap.html">TBZDouble2DMap</a> </p></li>
 </ul>
 
 <p> </p></li>
-  <li value="5"><p><b>BZColors.pas</b> : <br> L'unité <a class="normal" href="BZColors.html">BZColors</a> définis et regroupe les systèmes de couleurs RGBA / BGRA suivant l'OS, HSV, et autres espaces de couleur et leurs informations. <br> Contient des objets pour la gestion de palette de couleurs et des dégradés.
+  <li value="5"><p><strong>BZColors.pas</strong> : <br> L'unité <a class="normal" href="BZColors.html">BZColors</a> définis et regroupe les systèmes de couleurs RGBA / BGRA suivant l'OS, HSV, et autres espaces de couleur et leurs informations. <br> Contient des objets pour la gestion de palette de couleurs et des dégradés.
 
-<p><b>Les principales classes et types à connaitre</b> : <br> </p>
+<p><strong>Les principales classes et types à connaitre</strong> : <br> </p>
 
 <ul class="paragraph_spacing">
-  <li><p><b><a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> / <a class="normal" href="BZColors.html#TBZColor">TBZColor</a> </b> <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> est un enristrement avancé décrivant le format de couleur RGBA ou BGRA automatiquement en fonction de l'OS. Les valeurs sont de type byte [0,255]. <a class="normal" href="BZColors.html#TBZColor">TBZColor</a> est un type de convenance décrivant un <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a><br> <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> supporte les opérateurs courrant : +, -, *, /, and, or, xor. Il contient également plusieurs méthode pour facilité la manipulation de couleur. L'acces se fait via les propriétés Red, Green, Blue, Alpha ; AsInteger, et un tableau de valeur et enfin AsVector3b (x,y,z). </p></li>
-  <li><p><b><a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></b> Identique à <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> sauf que les valeurs sont de type single et sont comprises dans l'interval [0.0,1.0]. </p></li>
-  <li><p><b><a class="normal" href="BZColors.html#TBZPaletteEntries">TBZPaletteEntries</a></b> Définis un tableau de <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a>, pour stocker rapidement une palette de couleur. </p></li>
-  <li><p><b><a class="normal" href="BZColors.TBZColorList.html">TBZColorList</a></b> <a class="normal" href="BZColors.TBZColorList.html">TBZColorList</a> est une classe servant à gérer une liste de couleur. </p></li>
-  <li><p><b><a class="normal" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a></b> <a class="normal" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a> est une liste servant à décrire un dégradé de couleur. </p></li>
-  <li><p><b><a class="normal" href="BZColors.TBZColorsManager.html">TBZColorsManager</a></b> <a class="normal" href="BZColors.TBZColorsManager.html">TBZColorsManager</a> est une classe permettant de gérer un liste de couleur et les dégradés de couleur. Elle permet l'animation de la palette. </p></li>
+  <li><p><strong><a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> / <a class="normal" href="BZColors.html#TBZColor">TBZColor</a> </strong> <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> est un enristrement avancé décrivant le format de couleur RGBA ou BGRA automatiquement en fonction de l'OS. Les valeurs sont de type byte [0,255]. <a class="normal" href="BZColors.html#TBZColor">TBZColor</a> est un type de convenance décrivant un <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a><br> <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> supporte les opérateurs courrant : +, -, *, /, and, or, xor. Il contient également plusieurs méthode pour facilité la manipulation de couleur. L'acces se fait via les propriétés Red, Green, Blue, Alpha ; AsInteger, et un tableau de valeur et enfin AsVector3b (x,y,z). </p></li>
+  <li><p><strong><a class="normal" href="BZColors.TBZColorVector.html">TBZColorVector</a></strong> Identique à <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a> sauf que les valeurs sont de type single et sont comprises dans l'interval [0.0,1.0]. </p></li>
+  <li><p><strong><a class="normal" href="BZColors.html#TBZPaletteEntries">TBZPaletteEntries</a></strong> Définis un tableau de <a class="normal" href="BZColors.TBZColor32.html">TBZColor32</a>, pour stocker rapidement une palette de couleur. </p></li>
+  <li><p><strong><a class="normal" href="BZColors.TBZColorList.html">TBZColorList</a></strong> <a class="normal" href="BZColors.TBZColorList.html">TBZColorList</a> est une classe servant à gérer une liste de couleur. </p></li>
+  <li><p><strong><a class="normal" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a></strong> <a class="normal" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a> est une liste servant à décrire un dégradé de couleur. </p></li>
+  <li><p><strong><a class="normal" href="BZColors.TBZColorsManager.html">TBZColorsManager</a></strong> <a class="normal" href="BZColors.TBZColorsManager.html">TBZColorsManager</a> est une classe permettant de gérer un liste de couleur et les dégradés de couleur. Elle permet l'animation de la palette. </p></li>
 </ul>
 
 <p> </p></li>
-  <li value="6"><p><b>BZGraphic.pas</b> : <br> L'unité <a class="normal" href="BZGraphic.html">BZGraphic</a> définis et regroupe des enregistrements et objets de base pour la gestion des bitmaps, des informations sur les formats d'image, <br> Définis les types de filtres et autres données utiles à la gestion du graphisme.<br> Elle contient également quelques méthodes globale utiles.
+  <li value="6"><p><strong>BZGraphic.pas</strong> : <br> L'unité <a class="normal" href="BZGraphic.html">BZGraphic</a> définis et regroupe des enregistrements et objets de base pour la gestion des bitmaps, des informations sur les formats d'image, <br> Définis les types de filtres et autres données utiles à la gestion du graphisme.<br> Elle contient également quelques méthodes globale utiles.
 
 <p></p>
 
 <ul class="paragraph_spacing">
-  <li><p><b><a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a> / <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></b> Ces deux types sont des enregistrements avancés permet la manipulation de &quot;Rectangle&quot; comme le TRect natif.<br> Ces types supportent les operateurs, ainsi que des méthodes utiles à leur manipulation. </p></li>
-  <li><p><b><a class="normal" href="BZGraphic.TBZRawImageData.html">TBZRawImageData</a> / <a class="normal" href="BZGraphic.TBZRawImageDescription.html">TBZRawImageDescription</a></b> Ces deux classes sont utilisées par <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>, elles permettent de décrire le format et les spécification d'image chargée via &quot;LoadFromFile&quot;. </p></li>
-  <li><p><b><a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></b> <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> est la classe de base pour la gestion de bitmap. Elle contient des méthodes basiques pour copier en entier ou en partie un autre bitmap. Dessiner des lignes, des rectangles, déplacer (&quot;Scroller&quot;) le bitmap, et de quelques méthodes de traitement. Il dispose également d'un systeme de gestion de calques. </p></li>
-  <li><p><b><a class="normal" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a></b> <a class="normal" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a> permet de stocker les différentes classes en charge de la lecture et de l'écriture d'image dans différents formats. Sont accès se fait globalement vi la fonction <a class="normal" href="BZGraphic.html#GetBZImageFileFormats">GetBZImageFileFormats</a> . </p></li>
+  <li><p><strong><a class="normal" href="BZGraphic.TBZRect.html">TBZRect</a> / <a class="normal" href="BZGraphic.TBZFloatRect.html">TBZFloatRect</a></strong> Ces deux types sont des enregistrements avancés permet la manipulation de &quot;Rectangle&quot; comme le TRect natif.<br> Ces types supportent les operateurs, ainsi que des méthodes utiles à leur manipulation. </p></li>
+  <li><p><strong><a class="normal" href="BZGraphic.TBZRawImageData.html">TBZRawImageData</a> / <a class="normal" href="BZGraphic.TBZRawImageDescription.html">TBZRawImageDescription</a></strong> Ces deux classes sont utilisées par <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>, elles permettent de décrire le format et les spécification d'image chargée via &quot;LoadFromFile&quot;. </p></li>
+  <li><p><strong><a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a></strong> <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a> est la classe de base pour la gestion de bitmap. Elle contient des méthodes basiques pour copier en entier ou en partie un autre bitmap. Dessiner des lignes, des rectangles, déplacer (&quot;Scroller&quot;) le bitmap, et de quelques méthodes de traitement. Il dispose également d'un systeme de gestion de calques. </p></li>
+  <li><p><strong><a class="normal" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a></strong> <a class="normal" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a> permet de stocker les différentes classes en charge de la lecture et de l'écriture d'image dans différents formats. Sont accès se fait globalement vi la fonction <a class="normal" href="BZGraphic.html#GetBZImageFileFormats">GetBZImageFileFormats</a> . </p></li>
 </ul>
 
 <p> </p></li>
-  <li value="7"><p><b>BZParallelThread.pas</b> : <br> L'unité <a class="normal" href="BZParallelThread.html">BZParallelThread</a> contient un objet <a class="normal" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a> et des méthodes globales qui permettent d'exécuter des opérations en parallele facilement grâce au multithreading. Elle dispose de la possibilité de suivre la progression de la tâche. </p></li>
+  <li value="7"><p><strong>BZParallelThread.pas</strong> : <br> L'unité <a class="normal" href="BZParallelThread.html">BZParallelThread</a> contient un objet <a class="normal" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a> et des méthodes globales qui permettent d'exécuter des opérations en parallele facilement grâce au multithreading. Elle dispose de la possibilité de suivre la progression de la tâche. </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Maths</b> : <br> </p>
+  <li><p><strong>Maths</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZMath.pas</b> L'unité <a class="normal" href="BZMath.html">BZMath</a> contient des fonctions mathématiques optimisées. <br> Si l'option USE_FASTMATH est activée, des fonctions optimisées par approximation sont utilisées. <br> <br> Par exemple: <br>    - Les fonctions 'approximatives' de <a class="normal" href="BZMath.html#Sin">Sin</a> et <a class="normal" href="BZMath.html#Cos">Cos</a> ont une précision moyenne de 4E-8 et sont jusqu'a 5 fois plus rapide que les fonctions natives.
+  <li value="1"><p><strong>BZMath.pas</strong> L'unité <a class="normal" href="BZMath.html">BZMath</a> contient des fonctions mathématiques optimisées. <br> Si l'option USE_FASTMATH est activée, des fonctions optimisées par approximation sont utilisées. <br> <br> Par exemple: <br>    - Les fonctions 'approximatives' de <a class="normal" href="BZMath.html#Sin">Sin</a> et <a class="normal" href="BZMath.html#Cos">Cos</a> ont une précision moyenne de 4E-8 et sont jusqu'a 5 fois plus rapide que les fonctions natives.
 
 <p>  Elle comprend également des fonctions trigonométriques, calcul d'interpolations,    Des fonctionnalités avancées comme <a class="normal" href="BZMath.html#Bessel">Bessel</a>, <a class="normal" href="BZMath.html#Blackman">BlackMan</a>. Et aussi quelques fonctions utiles   Il y a également des fonctions indéfinies dans l'unité Math FPC tel   <a class="normal" href="BZMath.html#ArcCsc">ArcCsc</a>, <a class="normal" href="BZMath.html#ArcSec">ArcSec</a>, <a class="normal" href="BZMath.html#ArcCot">ArcCot</a>, <a class="normal" href="BZMath.html#CscH">CscH</a>, <a class="normal" href="BZMath.html#SecH">SecH</a> ect ... <br> </p></li>
-  <li value="2"><p><b>BZVectorMath.pas</b> : <br> L'unité <a class="normal" href="BZVectorMath.html">BZVectorMath</a> contient des enregistrements avancés optimisée pour l'utilisation de mathématique vectorielle. Une majorité des méthodes utilisent l'accélération SIMD (SSE, SSE3, SS4, AVX, AVX2) si l'option USE_ASM_OPTIMIZATIONS est activée. <br> Elles peuvent être utilisées dans les graphiques 2D / 3D et tout autre application nécessitant des calculs mathématique avec des vecteurs.
+  <li value="2"><p><strong>BZVectorMath.pas</strong> : <br> L'unité <a class="normal" href="BZVectorMath.html">BZVectorMath</a> contient des enregistrements avancés optimisée pour l'utilisation de mathématique vectorielle. Une majorité des méthodes utilisent l'accélération SIMD (SSE, SSE3, SS4, AVX, AVX2) si l'option USE_ASM_OPTIMIZATIONS est activée. <br> Elles peuvent être utilisées dans les graphiques 2D / 3D et tout autre application nécessitant des calculs mathématique avec des vecteurs.
 
 <p>Les types de vecteurs supportés : <br> </p>
 
@@ -176,7 +164,7 @@ $(document).ready(function() {
 <p>
 
 <p>Contient également des fonctions identique au script GLSL / HLSL tel que <a class="normal" href="BZMath.html#Lerp">Lerp</a>, <a class="normal" href="BZMath.html#SmoothStep">SmoothStep</a>, <a class="normal" href="BZMath.html#Step">Step</a>... </p></li>
-  <li value="3"><p><b>BZVectorMathEx.pas</b> : <br> L'unité <a class="normal" href="BZVectorMathEx.html">BZVectorMathEx</a> contient des enregistrements avancés supplémentaire à <a class="normal" href="BZVectorMath.html">BZVectorMath</a> optimisée avec les instructions SIMD utiles principalement en 3D. <br><br> <b>Types supportés</b> :<br> </p>
+  <li value="3"><p><strong>BZVectorMathEx.pas</strong> : <br> L'unité <a class="normal" href="BZVectorMathEx.html">BZVectorMathEx</a> contient des enregistrements avancés supplémentaire à <a class="normal" href="BZVectorMath.html">BZVectorMath</a> optimisée avec les instructions SIMD utiles principalement en 3D. <br><br> <strong>Types supportés</strong> :<br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>Matrix affine (pour la manipulation en 2D)</p></li>
@@ -188,14 +176,14 @@ $(document).ready(function() {
 </ul>
 
 <p> </p></li>
-  <li value="4"><p><b>BZVectorMathUtils.pas</b> : <br> L'unité <a class="normal" href="BZVectorMathUtils.html">BZVectorMathUtils</a> contient des méthodes pour faciliter l'utilisation des vecteurs </p></li>
+  <li value="4"><p><strong>BZVectorMathUtils.pas</strong> : <br> L'unité <a class="normal" href="BZVectorMathUtils.html">BZVectorMathUtils</a> contient des méthodes pour faciliter l'utilisation des vecteurs </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Image</b> : <br> </p>
+  <li><p><strong>Image</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZBitmap.pas</b> : <br> L'unité <a class="normal" href="BZBitmap.html">BZBitmap</a>, contient la classe <a class="normal" href="BZBitmap.TBZBitmap.html">TBZBitmap</a> descendant de <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>. Elle est spécialisée dans la gestion et la manupilation et le traitement d'image.<br> C'est une sorte de **Super TBitmap**. <br> La manipulation se fait exclusivement en 32 bits (RGBA/BGRA)<br><br> <b>Capacités</b> :<br> </p>
+  <li value="1"><p><strong>BZBitmap.pas</strong> : <br> L'unité <a class="normal" href="BZBitmap.html">BZBitmap</a>, contient la classe <a class="normal" href="BZBitmap.TBZBitmap.html">TBZBitmap</a> descendant de <a class="normal" href="BZGraphic.TBZCustomBitmap.html">TBZCustomBitmap</a>. Elle est spécialisée dans la gestion et la manupilation et le traitement d'image.<br> C'est une sorte de **Super TBitmap**. <br> La manipulation se fait exclusivement en 32 bits (RGBA/BGRA)<br><br> <strong>Capacités</strong> :<br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>Accès aux pixels optimisé</p></li>
@@ -220,7 +208,7 @@ $(document).ready(function() {
 </ul>
 
 <p> </p></li>
-  <li value="2"><p><b>BZBitmapIO.pas</b> : <br> L'unité <a class="normal" href="BZBitmapIO.html">BZBitmapIO</a> est une unité de convenance pour la prise en charge de tous les formats image supportés<br> <br> <b>Format supportés en lecture</b> :<br> </p>
+  <li value="2"><p><strong>BZBitmapIO.pas</strong> : <br> L'unité <a class="normal" href="BZBitmapIO.html">BZBitmapIO</a> est une unité de convenance pour la prise en charge de tous les formats image supportés<br> <br> <strong>Format supportés en lecture</strong> :<br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>BMP Windows et OS/x. 1,2,4,8,16,24,32 et 64 bits. bmp, dib</p></li>
@@ -234,7 +222,7 @@ $(document).ready(function() {
   <li><p>Google WEBP, webp</p></li>
 </ul>
 
-<p> <br> <b>Format supportés en écriture à l'heure actuelle</b> :<br> </p>
+<p> <br> <strong>Format supportés en écriture à l'heure actuelle</strong> :<br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>BMP Windows 24 &amp; 32 bits uniquement</p></li>
@@ -243,18 +231,18 @@ $(document).ready(function() {
 </ul>
 
 <p> </p></li>
-  <li value="3"><p><b>BZImageViewer.pas</b> : <br> L'unité <a class="normal" href="BZImageViewer.html">BZImageViewer</a> contient le composant <a class="normal" href="BZImageViewer.TBZImageViewer.html">TBZImageViewer</a> qui est un control visuel similaire au TImage<br> Il dispose de quelques options supplémentaires, tel que la prise en charge du déplacement, du zoom. L'affichage d'un fond de type echiquier.<br> Supporte plusieur filtre pour la mise à l'échelle et différents comportements en fonction de la taille de l'image chargée. </p></li>
+  <li value="3"><p><strong>BZImageViewer.pas</strong> : <br> L'unité <a class="normal" href="BZImageViewer.html">BZImageViewer</a> contient le composant <a class="normal" href="BZImageViewer.TBZImageViewer.html">TBZImageViewer</a> qui est un control visuel similaire au TImage<br> Il dispose de quelques options supplémentaires, tel que la prise en charge du déplacement, du zoom. L'affichage d'un fond de type echiquier.<br> Supporte plusieur filtre pour la mise à l'échelle et différents comportements en fonction de la taille de l'image chargée. </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Utils</b> : <br> </p>
+  <li><p><strong>Utils</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZRandomGenerator.pas</b> : <br> L'unité <a class="normal" href="BZRandomGenerator.html">BZRandomGenerator</a> contient un classe &quot;Thread-Safe&quot; pour la génération de nombre aléatoire. </p></li>
-  <li value="2"><p><b>BZKeyboard.pas</b> : <br> L'unité <a class="normal" href="BZKeyboard.html">BZKeyboard</a> contient des fonction utiles pour l'interception et le mappage des touches appuyées sur le clavier. </p></li>
-  <li value="3"><p><b>BZInterpolationFilters.pas</b> : <br> L'unité <a class="normal" href="BZInterpolationFilters.html">BZInterpolationFilters</a> contient plusieurs type de filtre d'interpolation (utilisé pour le rééchantillonage d'image par exemple) </p></li>
-  <li value="4"><p><b>BZAnimationTool.pas</b> : <br> L'unité <a class="normal" href="BZAnimationTool.html">BZAnimationTool</a> contient un objet et des méthodes pour le calcul d'animations de valeurs gràce à des fonctions paramétrique 1D (easing) </p></li>
-  <li value="5"><p><b>BZGeoTools.pas</b> : <br> L'unité <a class="normal" href="BZGeoTools.html">BZGeoTools</a> contient des classes utiles pour la manipulation de primitives vectorielles. <br> </p>
+  <li value="1"><p><strong>BZRandomGenerator.pas</strong> : <br> L'unité <a class="normal" href="BZRandomGenerator.html">BZRandomGenerator</a> contient un classe &quot;Thread-Safe&quot; pour la génération de nombre aléatoire. </p></li>
+  <li value="2"><p><strong>BZKeyboard.pas</strong> : <br> L'unité <a class="normal" href="BZKeyboard.html">BZKeyboard</a> contient des fonction utiles pour l'interception et le mappage des touches appuyées sur le clavier. </p></li>
+  <li value="3"><p><strong>BZInterpolationFilters.pas</strong> : <br> L'unité <a class="normal" href="BZInterpolationFilters.html">BZInterpolationFilters</a> contient plusieurs type de filtre d'interpolation (utilisé pour le rééchantillonage d'image par exemple) </p></li>
+  <li value="4"><p><strong>BZAnimationTool.pas</strong> : <br> L'unité <a class="normal" href="BZAnimationTool.html">BZAnimationTool</a> contient un objet et des méthodes pour le calcul d'animations de valeurs gràce à des fonctions paramétrique 1D (easing) </p></li>
+  <li value="5"><p><strong>BZGeoTools.pas</strong> : <br> L'unité <a class="normal" href="BZGeoTools.html">BZGeoTools</a> contient des classes utiles pour la manipulation de primitives vectorielles. <br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>Lignes</p></li>
@@ -265,7 +253,7 @@ $(document).ready(function() {
 </ul>
 
 <p> </p></li>
-  <li value="6"><p><b>BZNoiseGenerator.pas</b> : <br> L'unité <a class="normal" href="BZNoiseGenerator.html">BZNoiseGenerator</a> contient des classes d'objet permettant de générer divers bruits : </p>
+  <li value="6"><p><strong>BZNoiseGenerator.pas</strong> : <br> L'unité <a class="normal" href="BZNoiseGenerator.html">BZNoiseGenerator</a> contient des classes d'objet permettant de générer divers bruits : </p>
 
 <ul class="paragraph_spacing">
   <li><p>Bruit blanc, bruit gaussien</p></li>
@@ -274,60 +262,60 @@ $(document).ready(function() {
   <li><p>Bruit Simplex / OpenSimplex</p></li>
 </ul>
 
-<p> <br> <b>NOTE</b> : Celle-ci est finaliser pour une utilisation à 100% et pour générer des textures de bruit cohérent </p></li>
+<p> <br> <strong>NOTE</strong> : Celle-ci est finaliser pour une utilisation à 100% et pour générer des textures de bruit cohérent </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Audio</b> : <br> </p>
+  <li><p><strong>Audio</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZSound.pas</b> : <br> L'unité <a class="normal" href="BZSound.html">BZSound</a> contient les classes et collections pour la gestion des sources audio et des effets sonore. </p></li>
-  <li value="2"><p><b>BZOpenALManager.pas</b> : <br> L'unité <a class="normal" href="BZOpenALManager.html">BZOpenALManager</a> contient le gestionnaire audio pour le moteur OpenAL. </p></li>
+  <li value="1"><p><strong>BZSound.pas</strong> : <br> L'unité <a class="normal" href="BZSound.html">BZSound</a> contient les classes et collections pour la gestion des sources audio et des effets sonore. </p></li>
+  <li value="2"><p><strong>BZOpenALManager.pas</strong> : <br> L'unité <a class="normal" href="BZOpenALManager.html">BZOpenALManager</a> contient le gestionnaire audio pour le moteur OpenAL. </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Components</b> : <br> </p>
+  <li><p><strong>Components</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZThreadTimer.pas</b> : <br> L'unité <a class="normal" href="BZThreadTimer.html">BZThreadTimer</a> contient un composant non-visuel <a class="normal" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a>. C'est un bon remplaçant au TTimer habituel. Celui est plus précis et s'éxécute en arrière-plan dans un thread à part. </p></li>
-  <li value="2"><p><b>BZHotKeyManager.pas</b> : <br> L'unité <a class="normal" href="BZHotKeyManager.html">BZHotKeyManager</a> contient trois composants non-visuel <a class="normal" href="BZHotKeyManager.TBZHotKeyManager.html">TBZHotKeyManager</a>, <a class="normal" href="BZHotKeyManager.TBZFormHotKeyManager.html">TBZFormHotKeyManager</a> et <a class="normal" href="BZHotKeyManager.TBZAppHotKeyManager.html">TBZAppHotKeyManager</a>, ceux-ci permettent l'interception de l'appuis de raccourcis clavier chacun à leur niveau. Dans la fenêtre en cours, dans toutes l'application, en dehors de l'application (Application minimiser dans la barre d'icone par exemple) </p></li>
-  <li value="3"><p><b>BZCadencer.pas</b> : <br> L'unité <a class="normal" href="BZCadencer.html">BZCadencer</a> contient un composant non-visuel <a class="normal" href="BZCadencer.TBZCadencer.html">TBZCadencer</a> à la façon d'un TTimer, en plus précis et spécialisé dans la mise en place d'animations synchronisées. </p></li>
-  <li value="4"><p><b>BZFileFinder.pas</b> : <br> L'unité <a class="normal" href="BZFileFinder.html">BZFileFinder</a> contient un composant non-visuel <a class="normal" href="BZFileFinder.TBZFileFinder.html">TBZFileFinder</a> d'aide à la recherche de fichiers récursif, sur un disque ou dans un dossier. </p></li>
-  <li value="5"><p><b>BZScreenMode.pas</b> : <br> L'unité <a class="normal" href="BZScreenMode.html">BZScreenMode</a> contient un composant non-visuel <a class="normal" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a> permmettant de changer la résolution du moniteur et d'afficher en mode &quot;plein écran&quot; </p></li>
+  <li value="1"><p><strong>BZThreadTimer.pas</strong> : <br> L'unité <a class="normal" href="BZThreadTimer.html">BZThreadTimer</a> contient un composant non-visuel <a class="normal" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a>. C'est un bon remplaçant au TTimer habituel. Celui est plus précis et s'éxécute en arrière-plan dans un thread à part. </p></li>
+  <li value="2"><p><strong>BZHotKeyManager.pas</strong> : <br> L'unité BZHotKeyManager contient trois composants non-visuel TBZHotKeyManager, TBZFormHotKeyManager et TBZAppHotKeyManager, ceux-ci permettent l'interception de l'appuis de raccourcis clavier chacun à leur niveau. Dans la fenêtre en cours, dans toutes l'application, en dehors de l'application (Application minimiser dans la barre d'icone par exemple) </p></li>
+  <li value="3"><p><strong>BZCadencer.pas</strong> : <br> L'unité <a class="normal" href="BZCadencer.html">BZCadencer</a> contient un composant non-visuel <a class="normal" href="BZCadencer.TBZCadencer.html">TBZCadencer</a> à la façon d'un TTimer, en plus précis et spécialisé dans la mise en place d'animations synchronisées. </p></li>
+  <li value="4"><p><strong>BZFileFinder.pas</strong> : <br> L'unité <a class="normal" href="BZFileFinder.html">BZFileFinder</a> contient un composant non-visuel <a class="normal" href="BZFileFinder.TBZFileFinder.html">TBZFileFinder</a> d'aide à la recherche de fichiers récursif, sur un disque ou dans un dossier. </p></li>
+  <li value="5"><p><strong>BZScreenMode.pas</strong> : <br> L'unité <a class="normal" href="BZScreenMode.html">BZScreenMode</a> contient un composant non-visuel <a class="normal" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a> permmettant de changer la résolution du moniteur et d'afficher en mode &quot;plein écran&quot; </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>DevTools</b> : <br> </p>
+  <li><p><strong>DevTools</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZTypesHelpers.pas</b> : <br> L'unité BZTypesHelpers surcharge les assistants de types (byte, word, integer, string, TDatetime) par défaut de FPC et Lazarus en y ajoutant plusieurs fonctions utiles. </p></li>
-  <li value="2"><p><b>BZLogger.pas</b> : <br> L'unité <a class="normal" href="BZLogger.html">BZLogger</a> contient un composant non-visuel <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a> permmettant de générer des &quot;log&quot; très simplement dans un fichier, dans la console, dans un fenêtre supplémentaire etc... </p></li>
-  <li value="3"><p><b>BZStopWatch.pas</b> : <br> L'unité <a class="normal" href="BZStopWatch.html">BZStopWatch</a> contient un composant non-visuel <a class="normal" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a> est une sorte de chronomètre très précis, qui permet de calculer le temps en 2 actions. </p></li>
+  <li value="1"><p><strong>BZTypesHelpers.pas</strong> : <br> L'unité BZTypesHelpers surcharge les assistants de types (byte, word, integer, string, TDatetime) par défaut de FPC et Lazarus en y ajoutant plusieurs fonctions utiles. </p></li>
+  <li value="2"><p><strong>BZLogger.pas</strong> : <br> L'unité <a class="normal" href="BZLogger.html">BZLogger</a> contient un composant non-visuel <a class="normal" href="BZLogger.TBZLogger.html">TBZLogger</a> permmettant de générer des &quot;log&quot; très simplement dans un fichier, dans la console, dans un fenêtre supplémentaire etc... </p></li>
+  <li value="3"><p><strong>BZStopWatch.pas</strong> : <br> L'unité <a class="normal" href="BZStopWatch.html">BZStopWatch</a> contient un composant non-visuel <a class="normal" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a> est une sorte de chronomètre très précis, qui permet de calculer le temps en 2 actions. </p></li>
 </ol>
 
 <p> </p></li>
-  <li><p><b>Engine</b> : <br> </p>
+  <li><p><strong>Engine</strong> : <br> </p>
 
 <ol class="paragraph_spacing">
-  <li value="1"><p><b>BZCustomShader.pas</b> : <br> L'unité <a class="normal" href="BZCustomShader.html">BZCustomShader</a> contient les classes de base à hériter pour le rendu de shader (openGL/Vulkan/Software) </p></li>
-  <li value="2"><p><b>BZBitmapRasterizer.pas</b> : <br> L'unité <a class="normal" href="BZBitmapRasterizer.html">BZBitmapRasterizer</a> contient des classes spécialisées dans le rendu de shader alla GLSL en software. </p></li>
-  <li value="3"><p><b>BZBitmapFont.pas</b> : <br> L'unité <a class="normal" href="BZBitmapFont.html">BZBitmapFont</a> contient les classes pour le rendu de police bitmap. </p></li>
-  <li value="4"><p><b>BZSoftwareShader_?????.pas</b> : <br> Ces unités contiennent les methodes de rendu de différents Shader en software. </p></li>
+  <li value="1"><p><strong>BZCustomShader.pas</strong> : <br> L'unité <a class="normal" href="BZCustomShader.html">BZCustomShader</a> contient les classes de base à hériter pour le rendu de shader (openGL/Vulkan/Software) </p></li>
+  <li value="2"><p><strong>BZBitmapRasterizer.pas</strong> : <br> L'unité <a class="normal" href="BZBitmapRasterizer.html">BZBitmapRasterizer</a> contient des classes spécialisées dans le rendu de shader alla GLSL en software. </p></li>
+  <li value="3"><p><strong>BZBitmapFont.pas</strong> : <br> L'unité <a class="normal" href="BZBitmapFont.html">BZBitmapFont</a> contient les classes pour le rendu de police bitmap. </p></li>
+  <li value="4"><p><strong>BZSoftwareShader_?????.pas</strong> : <br> Ces unités contiennent les methodes de rendu de différents Shader en software. </p></li>
 </ol>
 
 <p> </p></li>
 </ul>
 
-<p> <br> <b>NOTE</b> : Les unités non listées ici, sont principalement des unités utilisées en en interne. Je vous laisse donc vous reporter à leur code source pour plus d'information. <br> Sinon, cela signifie que les unités non listés sont encore en cours de développement, ne sont pas stables ou non pas encore été testés. <br> <br> <hr> <h2 class=""><span id="SecInstallA"></span>Prérequis</h2>
+<p> <br> <strong>NOTE</strong> : Les unités non listées ici, sont principalement des unités utilisées en en interne. Je vous laisse donc vous reporter à leur code source pour plus d'information. <br> Sinon, cela signifie que les unités non listés sont encore en cours de développement, ne sont pas stables ou non pas encore été testés. <br> <br> <hr> <h2 class=""><span id="SecInstallA"></span>Prérequis</h2>
 
 
-<p><b>La principale dépendance pour utiliser les bitmaps est la bibliothèque FreeType</b>. <br> Que ce soit ous Linux ou Windows. Cette bibliothèque doit-être installée sur votre système. Sous Windows vous pourrez placer directement la &quot;DLL&quot; dans le dossier de vos exécutables.
+<p><strong>La principale dépendance pour utiliser les bitmaps est la bibliothèque FreeType</strong>. <br> Que ce soit ous Linux ou Windows. Cette bibliothèque doit-être installée sur votre système. Sous Windows vous pourrez placer directement la &quot;DLL&quot; dans le dossier de vos exécutables.
 
-<p><b>Les autres bibliothèques requises sont</b> : </p>
+<p><strong>Les autres bibliothèques requises sont</strong> : </p>
 
 <ul class="paragraph_spacing">
   <li><p>LibWebp : Pour la prise en charge des image au format Webp</p></li>
-  <li><p>OpenAL, warp_oal et soft_openal : Pour la gestion audio (<b>note</b> : soft_openal est la version software : <a  href="https://openal-soft.org">https://openal-soft.org</a>), pour l'utilisation de cette dernière vous devrez le renommer en &quot;OpenAL64&quot; ou &quot;OpenAL32&quot;</p></li>
+  <li><p>OpenAL, warp_oal et soft_openal : Pour la gestion audio (<strong>note</strong> : soft_openal est la version software : <a  href="https://openal-soft.org">https://openal-soft.org</a>), pour l'utilisation de cette dernière vous devrez le renommer en &quot;OpenAL64&quot; ou &quot;OpenAL32&quot;</p></li>
   <li><p>Libmodplug : Prise en charge des format audio tracker (.mod, .st3, .xm,...)</p></li>
   <li><p>LibVorbis, LibOgg : Prise en charge des formats audio OGG</p></li>
   <li><p>Libmpg123 : Prise en charge du format audio MP3</p></li>
@@ -343,8 +331,8 @@ $(document).ready(function() {
 <ol class="paragraph_spacing">
   <li value="1"><p>Lancez Lazarus (pas trop fort quand même !)</p></li>
   <li value="2"><p>Dirigez vous vers le menu Paquet &ndash;&gt; Ouvrir un paquet</p></li>
-  <li value="3"><p>Choisissez en 1er le paquet <i>bzscene_rt</i> qui se trouve dans le dossier &quot;Packages&quot;</p></li>
-  <li value="4"><p>Cliquez sur le bouton <b>Compiler</b></p></li>
+  <li value="3"><p>Choisissez en 1er le paquet <em>bzscene_rt</em> qui se trouve dans le dossier &quot;Packages&quot;</p></li>
+  <li value="4"><p>Cliquez sur le bouton <strong>Compiler</strong></p></li>
 </ol>
 
 <p>
@@ -352,11 +340,11 @@ $(document).ready(function() {
 <p>Recommencez les étapes 2,3 et 4 pour les paquet dans cet ordre : <br> </p>
 
 <ul class="paragraph_spacing">
-  <li><p><i>bzscene_tool_rt</i></p></li>
-  <li><p><i>bzscene_controls_rt</i></p></li>
-  <li><p><i>bzscene_image_rt</i></p></li>
-  <li><p><i>bzscene_engine_rt</i></p></li>
-  <li><p><i>bzscene_audio_rt</i>, seulement si vous désirez utiliser les fonctions audio</p></li>
+  <li><p><em>bzscene_tool_rt</em></p></li>
+  <li><p><em>bzscene_controls_rt</em></p></li>
+  <li><p><em>bzscene_image_rt</em></p></li>
+  <li><p><em>bzscene_engine_rt</em></p></li>
+  <li><p><em>bzscene_audio_rt</em>, seulement si vous désirez utiliser les fonctions audio</p></li>
 </ul>
 
 <p> <img src="image_0.jpg" alt="install_step01" />
@@ -367,8 +355,8 @@ $(document).ready(function() {
 
 <ol class="paragraph_spacing">
   <li value="1"><p>Dirigez vous vers le menu Paquet &ndash;&gt; Ouvrir un paquet</p></li>
-  <li value="2"><p>Choisissez en le paquet <i>bzscene_control_dt</i> (ce paquet est recommandé, car de nombreux exemples utilise <a class="normal" href="BZImageViewer.TBZImageViewer.html">TBZImageViewer</a>) qui se trouve également dans le dossier &quot;Packages&quot;</p></li>
-  <li value="3"><p>Cliquez sur le bouton <b>Utiliser</b> et choisissez <b>Installer</b></p></li>
+  <li value="2"><p>Choisissez en le paquet <em>bzscene_control_dt</em> (ce paquet est recommandé, car de nombreux exemples utilise <a class="normal" href="BZImageViewer.TBZImageViewer.html">TBZImageViewer</a>) qui se trouve également dans le dossier &quot;Packages&quot;</p></li>
+  <li value="3"><p>Cliquez sur le bouton <strong>Utiliser</strong> et choisissez <strong>Installer</strong></p></li>
 </ol>
 
 <p> <img src="image_1.jpg" alt="install_step02" />
@@ -378,15 +366,15 @@ $(document).ready(function() {
 <p>Optionnellement vous pouvez installer les autres composants disponibles en suivant les mêmes étapes que ci-dessus avec les paquets suivant : <br> </p>
 
 <ul class="paragraph_spacing">
-  <li><p><i>bzscene_tool_dt</i></p></li>
-  <li><p><i>bzscene_audio_dt - NON RECOMMANDE A CAUSE D'UN BUG LIE A L'EDI</i></p></li>
+  <li><p><em>bzscene_tool_dt</em></p></li>
+  <li><p><em>bzscene_audio_dt - NON RECOMMANDE A CAUSE D'UN BUG LIE A L'EDI</em></p></li>
 </ul>
 
 <p>
 
 <p><img src="image_3.jpg" alt="install_step01a" />
 
-<p><b>Note</b> : BUG : NE PAS INSTALLER LE PAQUET BZSCENE_AUDIO_DT malgré que celui-ci s'installe s'en encombre. En effet un bug est présent et génère une Erreur : &quot;Out of memory&quot; dès que vous souhaiterez poser une des composants sur votre fiche, sauf pour le &quot;SoundManager&quot;. <br> Néammoins vous pourrez utilisez ces composants en les créant par code
+<p><strong>Note</strong> : BUG : NE PAS INSTALLER LE PAQUET BZSCENE_AUDIO_DT malgré que celui-ci s'installe s'en encombre. En effet un bug est présent et génère une Erreur : &quot;Out of memory&quot; dès que vous souhaiterez poser une des composants sur votre fiche, sauf pour le &quot;SoundManager&quot;. <br> Néammoins vous pourrez utilisez ces composants en les créant par code
 
 <p><br> <br> <hr> <h2 class=""><span id="SecHowto"></span>Démarrer un projet avec BZScene</h2>
  </p>
@@ -400,7 +388,7 @@ $(document).ready(function() {
   <li value="2"><p>Dans la boite de dialogue, en fonction des méthodes que vous souhaitez utiliser, choisissez les paquets : bzscene_rt, bzscene_image_rt, bzscene_tools_rt, bzscene_engine_rt, bzscene_audio_rt</p></li>
 </ol>
 
-<p> <br> <b>NOTE</b> : Le choix des paquets insereront automatiquement les dépendances requises du paquet. Exemples : <br> </p>
+<p> <br> <strong>NOTE</strong> : Le choix des paquets insereront automatiquement les dépendances requises du paquet. Exemples : <br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>Vous choisissez le paquet bzscene_image_rt, le paquet bzscene_rt sera automatiquement référencé.</p></li>
@@ -409,12 +397,12 @@ $(document).ready(function() {
 
 <p> <br> </p></li>
   <li value="3"><p>Enregistrez votre projet</p></li>
-  <li value="4"><p>Facultatif, mais conseillé. Dirigez vous dans les options du projet. Cliquez sur le bouton <i>Importer</i> et allez chercher le fichier <i>&quot;Lazarus_BZScene_Desktop_Config&quot;</i> qui se trouve dans le sous-dosssier <b>LazProjectConfig</b> de la bibliothèque. <br> <br> Ce fichier iimportera directement les options de compilation (debug et release), nécessaire pour la cross-compilation pour les environnements Windows et Linux 32 et 64bit. <br> Il vous suffira juste de choisir le mode que vous déserez pour compiler votre projet. </p></li>
-  <li value="5"><p>Insérer les nom d'unités que vous souhaitez utiliser dans la clause <i>uses</i></p></li>
+  <li value="4"><p>Facultatif, mais conseillé. Dirigez vous dans les options du projet. Cliquez sur le bouton <em>Importer</em> et allez chercher le fichier <em>&quot;Lazarus_BZScene_Desktop_Config&quot;</em> qui se trouve dans le sous-dosssier <strong>LazProjectConfig</strong> de la bibliothèque. <br> <br> Ce fichier iimportera directement les options de compilation (debug et release), nécessaire pour la cross-compilation pour les environnements Windows et Linux 32 et 64bit. <br> Il vous suffira juste de choisir le mode que vous déserez pour compiler votre projet. </p></li>
+  <li value="5"><p>Insérer les nom d'unités que vous souhaitez utiliser dans la clause <em>uses</em></p></li>
   <li value="6"><p>Commencez à coder comme vous le faite d'habitude</p></li>
 </ol>
 
-<p> <br> <br> <b>NOTE</b> : Dans un soucis de compatibilité et de &quot;non frustration&quot; les fonctions en assembleur on été désactivées. <br> Celles-ci sont relativement stables dans des environnement 64 bits et ont fait l'objet de tests unitaire poussés. <br> Vous pouvez les activer en éditant le fichier bzscene_options.inc qui se trouve dans le dossier &quot;Source&quot;.<br> Dirigez vous à la ligne 93 et supprimer le point &quot;.&quot; de la commande <i>{.$DEFINE USE_ASM_SSE_3}</i>. <br> <br> <b>Si vous utilisez l'assembleur, il vous faudra faire attention à l'alignement des données.</b>
+<p> <br> <br> <strong>NOTE</strong> : Dans un soucis de compatibilité et de &quot;non frustration&quot; les fonctions en assembleur on été désactivées. <br> Celles-ci sont relativement stables dans des environnement 64 bits et ont fait l'objet de tests unitaire poussés. <br> Vous pouvez les activer en éditant le fichier bzscene_options.inc qui se trouve dans le dossier &quot;Source&quot;.<br> Dirigez vous à la ligne 93 et supprimer le point &quot;.&quot; de la commande <em>{.$DEFINE USE_ASM_SSE_3}</em>. <br> <br> <strong>Si vous utilisez l'assembleur, il vous faudra faire attention à l'alignement des données.</strong>
 
 <p>Pour ce faire vous devrez ajouter les ligne suivantes dans l'entète de vos unités (hors unités de l'application contenant des &quot;Form&quot; ou ce n'est pas obligatoire) :<br> </p>
 
@@ -463,7 +451,7 @@ $(document).ready(function() {
 <p> </p></li>
 </ul>
 
-<p> <br> A Savoir (uniquement avec l'utilisation de l'assembleur) vous serez limiter à 4 (5 maximum) operations sur un seule ligne, suivant les cas.<br> <b>Exemple</b> : <br> </p>
+<p> <br> A Savoir (uniquement avec l'utilisation de l'assembleur) vous serez limiter à 4 (5 maximum) operations sur un seule ligne, suivant les cas.<br> <strong>Exemple</strong> : <br> </p>
 
 <pre class="longcode">
 <span class="pascal_keyword">function</span> compute : TBZVector;
@@ -475,7 +463,7 @@ $(document).ready(function() {
   Result := v1 + v2 * v3 + (v4 / v5);
 <span class="pascal_keyword">end</span>;</pre>
 
-<p> provoquera un SIGSEGV car une des données, ne sera plus alignée dans la pile. (dépacement de capacité) <br> Il vous faudra alors découper votre formule en de plus petite entités. <br> <b>Exemple</b> : <br> </p>
+<p> provoquera un SIGSEGV car une des données, ne sera plus alignée dans la pile. (dépacement de capacité) <br> Il vous faudra alors découper votre formule en de plus petite entités. <br> <strong>Exemple</strong> : <br> </p>
 
 <pre class="longcode">
 <span class="pascal_keyword">function</span> compute : TBZVector;
@@ -518,7 +506,7 @@ $(document).ready(function() {
 
 <p>Si vous n'êtes pas familliariser avec les notions de fork et pull request sur GitHub je vous conseil de suivre ce tutoriel en français : <br> <a  href="https://openclassrooms.com/en/courses/2342361-gerez-votre-code-avec-git-et-github/2433731-contribuez-a-des-projets-open-source">https://openclassrooms.com/en/courses/2342361-gerez-votre-code-avec-git-et-github/2433731-contribuez-a-des-projets-open-source</a>
 
-<p><b>Note</b> : Si vous ête un peu allergique aux commandes en ligne je vous suggère l'utilisation d'un client GIT comme &quot;Fork&quot; disponible sur le site officiel <a  href="https://fork.dev">https://fork.dev</a> ou le client officiel de Github disponible ici : <a  href="https://desktop.github.com">https://desktop.github.com</a>
+<p><strong>Note</strong> : Si vous ête un peu allergique aux commandes en ligne je vous suggère l'utilisation d'un client GIT comme &quot;Fork&quot; disponible sur le site officiel <a  href="https://fork.dev">https://fork.dev</a> ou le client officiel de Github disponible ici : <a  href="https://desktop.github.com">https://desktop.github.com</a>
 
 <p><br> <br> <hr> <h2 class=""><span id="SecBugs"></span>Bugs connus</h2>
  </p>
@@ -529,11 +517,11 @@ $(document).ready(function() {
 
 <p>
 
-<p><b>Sous Linux</b>: </p>
+<p><strong>Sous Linux</strong>: </p>
 
 <ul class="paragraph_spacing">
   <li><p>Le composant <a class="normal" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a>, bien que pleinement fonctionnel refuse de s'installer dans l'EDI.</p></li>
-  <li><p>Les composants <a class="normal" href="BZHotKeyManager.TBZHotKeyManager.html">TBZHotKeyManager</a>, <a class="normal" href="BZHotKeyManager.TBZFormHotKeyManager.html">TBZFormHotKeyManager</a> et <a class="normal" href="BZHotKeyManager.TBZAppHotKeyManager.html">TBZAppHotKeyManager</a>, ne sont pas encore compatible et ne veulent pas s'installer pas dans l'EDI.</p></li>
+  <li><p>Les composants TBZHotKeyManager, TBZFormHotKeyManager et TBZAppHotKeyManager, ne sont pas encore compatible et ne veulent pas s'installer pas dans l'EDI.</p></li>
   <li><p>Certains projets exemples, fonctionnent uniquement si ceux-ci sont compilés sans les options de débuggage (en mode release)</p></li>
   <li><p>La bibliothèque &quot;Libmodplug&quot; ne se charge pas</p></li>
   <li><p>Les fichiers audio MP3, sont lus, mais le son est distordu. Je ne sais pas si cela vient de la bibliothèque mpg123, ou des drivers OpenAl installés dans ma distribution linux (Manjaro)</p></li>
@@ -555,7 +543,7 @@ $(document).ready(function() {
 
 <p>Tous les liens, noms, prénoms, oncle, nièces, neveux, petits enfant, arrières grand-parents, dessus, dessous, dedans, dehore et au-delà.....sur le fil du temp. Plus tout ceux que j'oublie en backstage, merci ! xD).
 
-<p><i><b>NoteDeMoiMême</b> : Je ne suis pas fou, juste une petite extériorisation après une petite séance de réflexiologie sur les licences à 3 ou 4 lettres et de la douce hypocrisie qui se cache derrière. On se croirait chez un concessionnaire de voitures d'occasion. Une licence, une marque.</i>
+<p><em><strong>NoteDeMoiMême</strong> : Je ne suis pas fou, juste une petite extériorisation après une petite séance de réflexiologie sur les licences à 3 ou 4 lettres et de la douce hypocrisie qui se cache derrière. On se croirait chez un concessionnaire de voitures d'occasion. Une licence, une marque.</em>
 
 <p>Je suis pour la publication des noms des auteurs autant que faire se peut. Ainsi que le partages des sources et des connaissances. <br> Mais là franchement comment &quot;kifont&quot; pour controler tous ce vaste champ de codes et logciels ? Parce que quand on parcours certains codes on se demande lequel a pompé sur l'autre. <br> Ok, le source est publié après, qu'il n'y ai pas la référence dans l'un ou l'autre de l'auteur originel. C'est trop c.... ...................................................................hum à méditer. Non ?
 
@@ -564,16 +552,16 @@ $(document).ready(function() {
 <p></p>
 
 <ul class="paragraph_spacing">
-  <li><p><b>REGLE 1</b> : CITER LES AUTEURS ET LA PROVENANCES DES CODES (MEME PARTIEL) quelque part DANS LE CODE au maximum </p></li>
-  <li><p><b>REGLE 2</b> : TU MODIFIES, TU AMELIORES LE CODE, TU PARTAGES TON NOUVEAU CODE ET TES AVENTURES QUI VONT AVEC (au cas ou cela pourrait interessé ou bien encore être utile a quelqu'un d'autre, on sait jamais !) </p></li>
-  <li><p><b>REGLE 3</b> : TU TE REPORTES A LA REGLE 1
+  <li><p><strong>REGLE 1</strong> : CITER LES AUTEURS ET LA PROVENANCES DES CODES (MEME PARTIEL) quelque part DANS LE CODE au maximum </p></li>
+  <li><p><strong>REGLE 2</strong> : TU MODIFIES, TU AMELIORES LE CODE, TU PARTAGES TON NOUVEAU CODE ET TES AVENTURES QUI VONT AVEC (au cas ou cela pourrait interessé ou bien encore être utile a quelqu'un d'autre, on sait jamais !) </p></li>
+  <li><p><strong>REGLE 3</strong> : TU TE REPORTES A LA REGLE 1
 
 <p>Tu fais un logiciel tu veux le vendre ? va y fait toi plaisir. Mais si tu améliores le bouzin. RETOURNES VOIR LES REGLES 1, 2 (3 aussi si t'as envie :)</p></li>
 </ul>
 
 <p> cf : <a  href="https://fr.wikipedia.org/wiki/WTFPL">https://fr.wikipedia.org/wiki/WTFPL</a>
 
-<p>Alors, vu qu'il faut bien choisir, donc respectons l'ancêtre GLScene principal <b>CETTE BIBLIOTHEQUE EST DONC PUBLIEE SOUS LICENCES : MPL ET GPL</b> <br> <br> <hr> <h2 class=""><span id="SecOtherInfos"></span>Autres</h2>
+<p>Alors, vu qu'il faut bien choisir, donc respectons l'ancêtre GLScene principal <strong>CETTE BIBLIOTHEQUE EST DONC PUBLIEE SOUS LICENCES : MPL ET GPL</strong> <br> <br> <hr> <h2 class=""><span id="SecOtherInfos"></span>Autres</h2>
 
 
 <p>Dans le dépot <a  href="https://github.com/jdelauney/Computer-graphic-DocRefs">https://github.com/jdelauney/Computer-graphic-DocRefs</a> vous trouverez des documents PDF (la majorité en anglais) glanner sur le web, sur divers sujets relatifs en majoriter au traitement d'image et à la 3D. <br> Ceux-ci m'ont servis et me servent en partie de références sur un certain nombre d'algorithmes et de méthodes déja mises en place ou à faire.
@@ -607,15 +595,15 @@ $(document).ready(function() {
 
 <p>
 
-<p>Cordialement <br> <b>Jérôme Delauney</b>
+<p>Cordialement <br> <strong>Jérôme Delauney</strong>
 
 <p><br> <br> <hr> <hr> </p>
 
 <ul class="paragraph_spacing">
-  <li><p>&quot;L'Homme devrait mettre autant d'ardeur à simplifier sa vie qu'il met à la compliquer&quot; - <i>Henri Bergson</i></p></li>
-  <li><p>&quot;Bien des livres auraient été plus clairs s'ils n'avaient pas voulu être si clairs&quot; - <i>Emmanuel Kant</i></p></li>
-  <li><p>&quot;La simplicité est la sophistication suprême&quot; - <i>Léonard De Vinci</i></p></li>
-  <li><p>&quot;Ce qui est facile à comprendre ou à faire pour toi, ne l'est pas forcément pour l'autre.&quot; - <i>Mon père</i></p></li>
+  <li><p>&quot;L'Homme devrait mettre autant d'ardeur à simplifier sa vie qu'il met à la compliquer&quot; - <em>Henri Bergson</em></p></li>
+  <li><p>&quot;Bien des livres auraient été plus clairs s'ils n'avaient pas voulu être si clairs&quot; - <em>Emmanuel Kant</em></p></li>
+  <li><p>&quot;La simplicité est la sophistication suprême&quot; - <em>Léonard De Vinci</em></p></li>
+  <li><p>&quot;Ce qui est facile à comprendre ou à faire pour toi, ne l'est pas forcément pour l'autre.&quot; - <em>Mon père</em></p></li>
 </ul>
 
 <p> <br> <hr><h2 class="authors">Auteur</h2>
@@ -624,4 +612,9 @@ $(document).ready(function() {
 </ul>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

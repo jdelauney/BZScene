@@ -1,39 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: Hiérarchie</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: Hiérarchie des classes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
-<h1 class="allitems">Hiérarchie</h1>
+</li></ul></div><div class="content">
+<h1 class="allitems">Hiérarchie des classes</h1>
 <ul class="hierarchylevel">
 <li>IInterface<ul class="hierarchylevel">
-<li><a class="bold" href="BZClasses.IBZCadenceAble.html">IBZCadenceAble</a><li><a class="bold" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a><li><a class="bold" href="BZClasses.IBZPersistentObject.html">IBZPersistentObject</a></ul>
+<li><a class="bold" href="BZClasses.IBZCadenceAble.html">IBZCadenceAble</a><li><a class="bold" href="BZCoordinateProperty.IBZCoordinatesUpdateAble.html">IBZCoordinatesUpdateAble</a><li><a class="bold" href="BZClasses.IBZNotifyAble.html">IBZNotifyAble</a><li><a class="bold" href="BZClasses.IBZPersistentObject.html">IBZPersistentObject</a></ul>
 </li>
 <li>TBZCustomControl<ul class="hierarchylevel">
 <li><a class="bold" href="BZImageViewer.TBZCustomViewer.html">TBZCustomViewer</a><ul class="hierarchylevel">
@@ -48,7 +36,7 @@ $(document).ready(function() {
 <li>Exception<ul class="hierarchylevel">
 <li><a class="bold" href="BZClasses.EBZBaseException.html">EBZBaseException</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZGraphic.EBZBitmapException.html">EBZBitmapException</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZGraphic.EBZInvalidImageFormatException.html">EBZInvalidImageFormatException</a><li><a class="bold" href="BZImageFileBMP.EBZSaveImageException.html">EBZSaveImageException</a><li><a class="bold" href="BZImageFileIO.EInvalidImageFile.html">EInvalidImageFile</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZGraphic.EBZInvalidImageFormatException.html">EBZInvalidImageFormatException</a><li><a class="bold" href="BZImageFileIO.EInvalidImageFile.html">EInvalidImageFile</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZImageFileIO.EInvalidImageData.html">EInvalidImageData</a><li><a class="bold" href="BZImageFileIO.EInvalidImageHeader.html">EInvalidImageHeader</a></ul>
 </li>
 </ul>
@@ -57,9 +45,9 @@ $(document).ready(function() {
 <li><a class="bold" href="BZCustomShader.EBZShaderException.html">EBZShaderException</a></ul>
 </li>
 <li><a class="bold" href="BZSoundSample.EBZSoundException.html">EBZSoundException</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZSoundSample.EBZInvalidSoundFile.html">EBZInvalidSoundFile</a><li><a class="bold" href="BZOpenALManager.EBZSoundOpenALManager.html">EBZSoundOpenALManager</a></ul>
+<li><a class="bold" href="BZSoundSample.EBZInvalidSoundFile.html">EBZInvalidSoundFile</a><li><a class="bold" href="BZBassManager.EBZSoundBassManager.html">EBZSoundBassManager</a><li><a class="bold" href="BZOpenALManager.EBZSoundOpenALManager.html">EBZSoundOpenALManager</a></ul>
 </li>
-<li><a class="bold" href="BZClasses.EFilerException.html">EFilerException</a><li><a class="bold" href="BZClasses.EInvalidFileSignature.html">EInvalidFileSignature</a></ul>
+<li><a class="bold" href="BZSprite.EBZSpriteError.html">EBZSpriteError</a><li><a class="bold" href="BZClasses.EFilerException.html">EFilerException</a><li><a class="bold" href="BZClasses.EInvalidFileSignature.html">EInvalidFileSignature</a></ul>
 </li>
 <li><a class="bold" href="BZStreamClasses.EBZCantCreateFile.html">EBZCantCreateFile</a><li><a class="bold" href="BZStreamClasses.EBZFileNotExist.html">EBZFileNotExist</a><li><a class="bold" href="BZXCollection.EBZXCollectionFilerException.html">EBZXCollectionFilerException</a><li>EStreamError<ul class="hierarchylevel">
 <li><a class="bold" href="BZStreamClasses.EZLibError.html">EZLibError</a><ul class="hierarchylevel">
@@ -93,7 +81,7 @@ $(document).ready(function() {
 </li>
 </ul>
 </li>
-<li><a class="bold" href="BZImageFileXPM.TBZColorHolder.html">TBZColorHolder</a><li><a class="bold" href="BZClasses.TBZDataFileFormatDesc.html">TBZDataFileFormatDesc</a><li><a class="bold" href="BZFileFinder.TBZFileSearchEngine.html">TBZFileSearchEngine</a><li><a class="bold" href="BZGraphic.TBZImageFileFormat.html">TBZImageFileFormat</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFilterRec.html">TBZInterpolationFilterRec</a><li><a class="bold" href="BZLogger.TBZLogFileDef.html">TBZLogFileDef</a><li><a class="bold" href="BZLogger.TBZLoggerItem.html">TBZLoggerItem</a><li><a class="bold" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a><li><a class="bold" href="BZRandomGenerator.TBZRandomNumGenerator.html">TBZRandomNumGenerator</a><li>TList<ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZDataFileFormatDesc.html">TBZDataFileFormatDesc</a><li><a class="bold" href="BZFileFinder.TBZFileSearchEngine.html">TBZFileSearchEngine</a><li><a class="bold" href="BZGraphic.TBZImageFileFormat.html">TBZImageFileFormat</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFilterRec.html">TBZInterpolationFilterRec</a><li><a class="bold" href="BZLogger.TBZLogFileDef.html">TBZLogFileDef</a><li><a class="bold" href="BZLogger.TBZLoggerItem.html">TBZLoggerItem</a><li><a class="bold" href="BZParallelThread.TBZParallelThread.html">TBZParallelThread</a><li><a class="bold" href="BZRandomGenerator.TBZRandomNumGenerator.html">TBZRandomNumGenerator</a><li>TList<ul class="hierarchylevel">
 <li><a class="bold" href="BZColors.TBZColorRegister.html">TBZColorRegister</a><li><a class="bold" href="BZSoundSample.TBZSoundFileFormatsList.html">TBZSoundFileFormatsList</a></ul>
 </li>
 <li>TPersistent<ul class="hierarchylevel">
@@ -105,8 +93,17 @@ $(document).ready(function() {
 </li>
 </ul>
 </li>
-<li><a class="bold" href="BZBitmapFont.TBZBitmapFont.html">TBZBitmapFont</a><li><a class="bold" href="BZImageFileJPEG.TBZBitmapJPEGSavingOptions.html">TBZBitmapJPEGSavingOptions</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerItem.html">TBZBitmapLayerItem</a><li><a class="bold" href="BZImageFileTGA.TBZBitmapTGASavingOptions.html">TBZBitmapTGASavingOptions</a><li><a class="bold" href="BZCanvasClasses.TBZBrushTextureProperty.html">TBZBrushTextureProperty</a><li><a class="bold" href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a><li><a class="bold" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZBitmapFont.TBZBitmapFont.html">TBZBitmapFont</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerItem.html">TBZBitmapLayerItem</a><li><a class="bold" href="BZCanvasClasses.TBZBrushTextureProperty.html">TBZBrushTextureProperty</a><li><a class="bold" href="BZCanvasClasses.TBZCanvasDrawModeProperty.html">TBZCanvasDrawModeProperty</a><li><a class="bold" href="BZColors.TBZColorItemProperty.html">TBZColorItemProperty</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZColors.TBZGradientColorItem.html">TBZGradientColorItem</a></ul>
+</li>
+<li><a class="bold" href="BZSprite.TBZCustomBaseSprite.html">TBZCustomBaseSprite</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSprite.TBZBitmapSprite.html">TBZBitmapSprite</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSprite.TBZBackgroundMapSprite.html">TBZBackgroundMapSprite</a></ul>
+</li>
+<li><a class="bold" href="BZSprite.TBZCustomSpriteEngine.html">TBZCustomSpriteEngine</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZSprite.TBZBitmapSpriteEngine.html">TBZBitmapSpriteEngine</a></ul>
+</li>
+</ul>
 </li>
 <li><a class="bold" href="BZBitmapCompression.TBZCustomBitmapEncoder.html">TBZCustomBitmapEncoder</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZBitmapCompression.TBZDataEncoderLZ77.html">TBZDataEncoderLZ77</a><li><a class="bold" href="BZBitmapCompression.TBZDataEncoderRLA.html">TBZDataEncoderRLA</a><li><a class="bold" href="BZBitmapCompression.TBZDataEncoderRLE_PCX.html">TBZDataEncoderRLE_PCX</a></ul>
@@ -116,6 +113,9 @@ $(document).ready(function() {
 </li>
 <li><a class="bold" href="BZCanvasClasses.TBZCustomCanvasBrush.html">TBZCustomCanvasBrush</a><li><a class="bold" href="BZCanvasClasses.TBZCustomCanvasPen.html">TBZCustomCanvasPen</a><li><a class="bold" href="BZClasses.TBZCustomComponentProperty.html">TBZCustomComponentProperty</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZFileFinder.TBZDateFilterParams.html">TBZDateFilterParams</a><li><a class="bold" href="BZFileFinder.TBZSearchOptionsParams.html">TBZSearchOptionsParams</a><li><a class="bold" href="BZFileFinder.TBZSizeFilterParams.html">TBZSizeFilterParams</a></ul>
+</li>
+<li><a class="bold" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZCoordinateProperty.TBZCoordinates2D.html">TBZCoordinates2D</a><li><a class="bold" href="BZCoordinateProperty.TBZCoordinates3D.html">TBZCoordinates3D</a><li><a class="bold" href="BZCoordinateProperty.TBZCoordinates4D.html">TBZCoordinates4D</a></ul>
 </li>
 <li><a class="bold" href="BZFontClasses.TBZCustomFont.html">TBZCustomFont</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZFontClasses.TBZCustomFontDrawer.html">TBZCustomFontDrawer</a><ul class="hierarchylevel">
@@ -136,12 +136,15 @@ $(document).ready(function() {
 </li>
 <li><a class="bold" href="BZNoiseGenerator.TBZValueNoiseGenerator.html">TBZValueNoiseGenerator</a></ul>
 </li>
-</ul>
+<li><a class="bold" href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html">TBZCustomFractalNoiseGenerator</a></ul>
 </li>
-<li><a class="bold" href="BZClasses.TBZCustomProperty.html">TBZCustomProperty</a><li><a class="bold" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZClasses.TBZCustomProperty.html">TBZCustomProperty</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZColorProperty.TBZColorProperty.html">TBZColorProperty</a></ul>
+</li>
+<li><a class="bold" href="BZGeoTools.TBZFloatPointsContainer.html">TBZFloatPointsContainer</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZGeoTools.TBZ2DCurve.html">TBZ2DCurve</a><li><a class="bold" href="BZGeoTools.TBZ2DPolygonTool.html">TBZ2DPolygonTool</a><li><a class="bold" href="BZGeoTools.TBZ2DPolyLineTool.html">TBZ2DPolyLineTool</a></ul>
 </li>
-<li><a class="bold" href="BZColors.TBZGradientProperty.html">TBZGradientProperty</a><li><a class="bold" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZColors.TBZGradientProperty.html">TBZGradientProperty</a><li><a class="bold" href="BZNoiseGenerator.TBZNoisePertubation.html">TBZNoisePertubation</a><li><a class="bold" href="BZClasses.TBZProgressAbleObject.html">TBZProgressAbleObject</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZBitmapRasterizer.TBZCustomBitmapRasterizer.html">TBZCustomBitmapRasterizer</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZBitmapRasterizer.TBZBitmapShaderRasterizer.html">TBZBitmapShaderRasterizer</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZBitmapRasterizer.TBZBitmapShaderThreadRasterizer.html">TBZBitmapShaderThreadRasterizer</a></ul>
@@ -179,7 +182,7 @@ $(document).ready(function() {
 <li><a class="bold" href="BZBitmap.TBZBitmap.html">TBZBitmap</a></ul>
 </li>
 <li><a class="bold" href="BZImageFileIO.TBZCustomImageFileIO.html">TBZCustomImageFileIO</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZImageFileBMP.TBZBitmapBMPImage.html">TBZBitmapBMPImage</a><li><a class="bold" href="BZImageFileGIF.TBZBitmapGIFImage.html">TBZBitmapGIFImage</a><li><a class="bold" href="BZImageFileJPEG.TBZBitmapJPEGImage.html">TBZBitmapJPEGImage</a><li><a class="bold" href="BZImageFilePNG.TBZBitmapNetworkGraphicImage.html">TBZBitmapNetworkGraphicImage</a><li><a class="bold" href="BZImageFilePCX.TBZBitmapPCXImage.html">TBZBitmapPCXImage</a><li><a class="bold" href="BZImageFilePPM.TBZBitmapPPMImage.html">TBZBitmapPPMImage</a><li><a class="bold" href="BZImageFileTGA.TBZBitmapTGAImage.html">TBZBitmapTGAImage</a><li><a class="bold" href="BZImageFileWEBP.TBZBitmapWEBPImage.html">TBZBitmapWEBPImage</a><li><a class="bold" href="BZImageFileXPM.TBZBitmapXPMImage.html">TBZBitmapXPMImage</a><li><a class="bold" href="BZImageFileIO.TBZImageFileIO.html">TBZImageFileIO</a></ul>
+<li><a class="bold" href="BZImageFileIO.TBZImageFileIO.html">TBZImageFileIO</a></ul>
 </li>
 </ul>
 </li>
@@ -222,7 +225,7 @@ $(document).ready(function() {
 <li><a class="bold" href="BZInterpolationFilters.TBZGaussianInterpolationFilter.html">TBZGaussianInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHammingInterpolationFilter.html">TBZHammingInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHannInterpolationFilter.html">TBZHannInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZHermitInterpolationFilter.html">TBZHermitInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZJinCInterpolationFilter.html">TBZJinCInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZLagrangeInterpolationFilter.html">TBZLagrangeInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZLanczos3InterpolationFilter.html">TBZLanczos3InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZMitchellInterpolationFilter.html">TBZMitchellInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx3InterpolationFilter.html">TBZOMomsx3InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx5InterpolationFilter.html">TBZOMomsx5InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZOMomsx7InterpolationFilter.html">TBZOMomsx7InterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuadraticInterpolationFilter.html">TBZQuadraticInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuadraticSchaumInterpolationFilter.html">TBZQuadraticSchaumInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZQuinticInterpolationFilter.html">TBZQuinticInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSinCInterpolationFilter.html">TBZSinCInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSinshInterpolationFilter.html">TBZSinshInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZSplineInterpolationFilter.html">TBZSplineInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZTriangleInterpolationFilter.html">TBZTriangleInterpolationFilter</a><li><a class="bold" href="BZInterpolationFilters.TBZWelchInterpolationFilter.html">TBZWelchInterpolationFilter</a></ul>
 </li>
 <li><a class="bold" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a><li><a class="bold" href="BZGeoTools.TBZ2DPolygonList.html">TBZ2DPolygonList</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerList.html">TBZBitmapLayerList</a><li><a class="bold" href="BZColors.TBZColorList.html">TBZColorList</a><li><a class="bold" href="BZGeoTools.TBZCubicBezierCurves.html">TBZCubicBezierCurves</a><li><a class="bold" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a><li><a class="bold" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a><li><a class="bold" href="BZLogger.TBZLoggerWriterList.html">TBZLoggerWriterList</a></ul>
+<li><a class="bold" href="BZGeoTools.TBZ2DEdgeList.html">TBZ2DEdgeList</a><li><a class="bold" href="BZGeoTools.TBZ2DPolygonList.html">TBZ2DPolygonList</a><li><a class="bold" href="BZGraphic.TBZBitmapLayerList.html">TBZBitmapLayerList</a><li><a class="bold" href="BZColors.TBZColorList.html">TBZColorList</a><li><a class="bold" href="BZGeoTools.TBZCubicBezierCurves.html">TBZCubicBezierCurves</a><li><a class="bold" href="BZColors.TBZGradientColorList.html">TBZGradientColorList</a><li><a class="bold" href="BZGraphic.TBZImageFileFormatsList.html">TBZImageFileFormatsList</a><li><a class="bold" href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a><li><a class="bold" href="BZLogger.TBZLoggerWriterList.html">TBZLoggerWriterList</a><li><a class="bold" href="BZSprite.TBZSpriteList.html">TBZSpriteList</a></ul>
 </li>
 <li><a class="bold" href="BZBitmap.TBZPicture.html">TBZPicture</a></ul>
 </li>
@@ -230,7 +233,7 @@ $(document).ready(function() {
 <li><a class="bold" href="BZSound.TBZSoundFXLib.html">TBZSoundFXLib</a></ul>
 </li>
 <li>TCollection<ul class="hierarchylevel">
-<li><a class="bold" href="BZHotKeyManager.TBZHotKeyList.html">TBZHotKeyList</a><li><a class="bold" href="BZSound.TBZSoundFXAuxSlots.html">TBZSoundFXAuxSlots</a><li><a class="bold" href="BZSound.TBZSoundSampleItems.html">TBZSoundSampleItems</a><li><a class="bold" href="BZSound.TBZSoundSources.html">TBZSoundSources</a><li>TOwnedCollection<ul class="hierarchylevel">
+<li><a class="bold" href="BZSound.TBZSoundFXAuxSlots.html">TBZSoundFXAuxSlots</a><li><a class="bold" href="BZSound.TBZSoundSampleItems.html">TBZSoundSampleItems</a><li><a class="bold" href="BZSound.TBZSoundSources.html">TBZSoundSources</a><li>TOwnedCollection<ul class="hierarchylevel">
 <li><a class="bold" href="BZClasses.TBZNotifyCollection.html">TBZNotifyCollection</a></ul>
 </li>
 </ul>
@@ -239,28 +242,22 @@ $(document).ready(function() {
 <li><a class="bold" href="BZSound.TBZBaseSoundSource.html">TBZBaseSoundSource</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZSound.TBZSoundSource.html">TBZSoundSource</a></ul>
 </li>
-<li><a class="bold" href="BZHotKeyManager.TBZHotKeyItem.html">TBZHotKeyItem</a><li><a class="bold" href="BZClasses.TBZInterfacedCollectionItem.html">TBZInterfacedCollectionItem</a><li><a class="bold" href="BZSound.TBZSoundFXAuxSlot.html">TBZSoundFXAuxSlot</a><li><a class="bold" href="BZSound.TBZSoundSampleItem.html">TBZSoundSampleItem</a></ul>
+<li><a class="bold" href="BZClasses.TBZInterfacedCollectionItem.html">TBZInterfacedCollectionItem</a><li><a class="bold" href="BZSound.TBZSoundFXAuxSlot.html">TBZSoundFXAuxSlot</a><li><a class="bold" href="BZSound.TBZSoundSampleItem.html">TBZSoundSampleItem</a></ul>
 </li>
 <li>TComponent<ul class="hierarchylevel">
 <li><a class="bold" href="BZClasses.TBZCadenceAbleComponent.html">TBZCadenceAbleComponent</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZColors.TBZColorsManager.html">TBZColorsManager</a><li><a class="bold" href="BZSound.TBZSoundManager.html">TBZSoundManager</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZOpenALManager.TBZSoundOpenALManager.html">TBZSoundOpenALManager</a></ul>
+<li><a class="bold" href="BZBassManager.TBZSoundBassManager.html">TBZSoundBassManager</a><li><a class="bold" href="BZOpenALManager.TBZSoundOpenALManager.html">TBZSoundOpenALManager</a></ul>
 </li>
 <li><a class="bold" href="BZClasses.TBZUpdateAbleComponent.html">TBZUpdateAbleComponent</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZCadencer.TBZCustomCadencedComponent.html">TBZCustomCadencedComponent</a><ul class="hierarchylevel">
+<li><a class="bold" href="BZCoordinateProperty.TBZCoordinatesUpdateAbleComponent.html">TBZCoordinatesUpdateAbleComponent</a><li><a class="bold" href="BZCadencer.TBZCustomCadencedComponent.html">TBZCustomCadencedComponent</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZCadencer.TBZCadencedComponent.html">TBZCadencedComponent</a></ul>
 </li>
 </ul>
 </li>
 </ul>
 </li>
-<li><a class="bold" href="BZCadencer.TBZCadencer.html">TBZCadencer</a><li><a class="bold" href="BZFileFinder.TBZFileFinder.html">TBZFileFinder</a><li><a class="bold" href="BZHotKeyManager.TBZHotKeyManager.html">TBZHotKeyManager</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZHotKeyManager.TBZFormHotKeyManager.html">TBZFormHotKeyManager</a><ul class="hierarchylevel">
-<li><a class="bold" href="BZHotKeyManager.TBZAppHotKeyManager.html">TBZAppHotKeyManager</a></ul>
-</li>
-</ul>
-</li>
-<li><a class="bold" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a><li><a class="bold" href="BZSound.TBZSoundFXLibrary.html">TBZSoundFXLibrary</a><li><a class="bold" href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a><li><a class="bold" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a><li><a class="bold" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a></ul>
+<li><a class="bold" href="BZCadencer.TBZCadencer.html">TBZCadencer</a><li><a class="bold" href="BZFileFinder.TBZFileFinder.html">TBZFileFinder</a><li><a class="bold" href="BZScreenMode.TBZScreenMode.html">TBZScreenMode</a><li><a class="bold" href="BZSnapForm.TBZSnapForm.html">TBZSnapForm</a><li><a class="bold" href="BZSound.TBZSoundFXLibrary.html">TBZSoundFXLibrary</a><li><a class="bold" href="BZSound.TBZSoundLibrary.html">TBZSoundLibrary</a><li><a class="bold" href="BZStopWatch.TBZStopWatch.html">TBZStopWatch</a><li><a class="bold" href="BZThreadTimer.TBZThreadTimer.html">TBZThreadTimer</a></ul>
 </li>
 </ul>
 </li>
@@ -274,7 +271,7 @@ $(document).ready(function() {
 </ul>
 </li>
 <li>TThread<ul class="hierarchylevel">
-<li><a class="bold" href="BZLogger.TBZLogger.html">TBZLogger</a><li><a class="bold" href="BZHotKeyManager.TBZXEventListener.html">TBZXEventListener</a></ul>
+<li><a class="bold" href="BZLogger.TBZLogger.html">TBZLogger</a></ul>
 </li>
 <li><a class="bold" href="BZClasses.TVirtualReader.html">TVirtualReader</a><ul class="hierarchylevel">
 <li><a class="bold" href="BZClasses.TBinaryReader.html">TBinaryReader</a><li><a class="bold" href="BZClasses.TTextReader.html">TTextReader</a></ul>
@@ -287,4 +284,9 @@ $(document).ready(function() {
 </ul>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

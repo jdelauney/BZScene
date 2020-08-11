@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZInterpolationFilters</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZInterpolationFilters</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="unit">Unité BZInterpolationFilters</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
@@ -57,7 +45,7 @@ Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'inte
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Notes</b> : <br> Les filtres avec le préfixe &quot;WD&quot; (Windowed) donnent en général de meilleurs résultats. <br> Les filtres de type &quot;windowed&quot; WD peuvent être implémenter de 2 manières différente. <br> <br> . 1ere Méthode :<br> Type<br> TWD_MonFiltre = Class(<a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>)
+<p><strong>Notes</strong> : <br> Les filtres avec le préfixe &quot;WD&quot; (Windowed) donnent en général de meilleurs résultats. <br> Les filtres de type &quot;windowed&quot; WD peuvent être implémenter de 2 manières différente. <br> <br> . 1ere Méthode :<br> Type<br> TWD_MonFiltre = Class(<a class="normal" href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>)
 
 <p>Dans ce cas, le calcul du résultat de la fonction &quot;filter&quot; devra être &quot;réfactoré&quot;/&quot;factorisé&quot; <br> (cf filtres BlackManBessel/<a class="normal" href="BZMath.html#Sinc">SinC</a>, Bohman par exemple)
 
@@ -107,7 +95,7 @@ Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'inte
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>TODO :</b><br> - Ajouter d'autres filtres : <br> </p>
+<p><strong>TODO :</strong><br> - Ajouter d'autres filtres : <br> </p>
 
 <ul class="paragraph_spacing">
   <li><p><a  href="https://en.wikipedia.org/wiki/Chebyshev_filter">https://en.wikipedia.org/wiki/Chebyshev_filter</a></p></li>
@@ -122,11 +110,11 @@ Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'inte
   <li><p>Planck-Taper, chebyshev, Burgess, Lawrey, ...</p></li>
 </ul>
 
-<p> <br> - Ajouter fonction de rééchantillonage à base de FFT (Fast Fourrier Transformation) <br> - <b>Corriger</b> les methodes : Nutttal, BlackmanHarris, BlackmanNuttal, BartlettHann, FlatTop, Poisson, HannPoisson
+<p> <br> - Ajouter fonction de rééchantillonage à base de FFT (Fast Fourrier Transformation) <br> - <strong>Corriger</strong> les methodes : Nutttal, BlackmanHarris, BlackmanNuttal, BartlettHann, FlatTop, Poisson, HannPoisson
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Credits :</b> </p>
+<p><strong>Credits :</strong> </p>
 
 <ul class="paragraph_spacing">
   <li><p>J.Delauney aka BeanzMaster</p></li>
@@ -139,7 +127,7 @@ Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'inte
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>LICENCE :</b> MPL / GPL
+<p><strong>LICENCE :</strong> MPL / GPL
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
@@ -362,35 +350,35 @@ Regroupe plusieurs filtres (48) à utiliser pour le rééchantillonage et l'inte
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZInterpolationFilters.html#GetBZInterpolationFilter">GetBZInterpolationFilter</a></b>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZInterpolationFilters.html#GetBZInterpolationFilter">GetBZInterpolationFilter</a></strong>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZInterpolationFilters.html#GetBZInterpolationFilters">GetBZInterpolationFilters</a></b>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZInterpolationFilters.html#GetBZInterpolationFilters">GetBZInterpolationFilters</a></strong>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>procedure <b><a  href="BZInterpolationFilters.html#RegisterBZInterpolationFilter">RegisterBZInterpolationFilter</a></b>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZInterpolationFilters.html#RegisterBZInterpolationFilter">RegisterBZInterpolationFilter</a></strong>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <b><a  href="BZInterpolationFilters.html#UnregisterBZInterpolationFilter">UnregisterBZInterpolationFilter</a></b>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZInterpolationFilters.html#UnregisterBZInterpolationFilter">UnregisterBZInterpolationFilter</a></strong>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterWindowedMode">TBZInterpolationFilterWindowedMode</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZInterpolationFilters.html#TBZInterpolationFilterWindowedMode">TBZInterpolationFilterWindowedMode</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a></b> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a></strong> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a></strong> = (...);</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fonctions et procédures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetBZInterpolationFilter"></span><code>function <b>GetBZInterpolationFilter</b>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
+<td class="itemcode"><span id="GetBZInterpolationFilter"></span><code>function <strong>GetBZInterpolationFilter</strong>( aType: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterMethod">TBZInterpolationFilterMethod</a>): <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -418,7 +406,7 @@ Retourne la classe du filtre de rééchantillonnage &quot;aType&quot;</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="GetBZInterpolationFilters"></span><code>function <b>GetBZInterpolationFilters</b>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
+<td class="itemcode"><span id="GetBZInterpolationFilters"></span><code>function <strong>GetBZInterpolationFilters</strong>: <a  href="BZInterpolationFilters.TBZInterpolationFiltersList.html">TBZInterpolationFiltersList</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -427,7 +415,7 @@ Retourne la liste des filtres de rééchantillognage supportés</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="RegisterBZInterpolationFilter"></span><code>procedure <b>RegisterBZInterpolationFilter</b>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+<td class="itemcode"><span id="RegisterBZInterpolationFilter"></span><code>procedure <strong>RegisterBZInterpolationFilter</strong>(const AName, ADescription: string;AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -436,7 +424,7 @@ Enregistrement d'un filtre de rééchantillonage dans la liste des filtres suppo
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="UnregisterBZInterpolationFilter"></span><code>procedure <b>UnregisterBZInterpolationFilter</b>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
+<td class="itemcode"><span id="UnregisterBZInterpolationFilter"></span><code>procedure <strong>UnregisterBZInterpolationFilter</strong>(AClass: <a  href="BZInterpolationFilters.html#TBZInterpolationFilterClass">TBZInterpolationFilterClass</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -446,7 +434,7 @@ Libération de l'enregistrement d'un filtre de rééchantillonage dans la liste 
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZInterpolationFilterWindowedMode"></span><code><b>TBZInterpolationFilterWindowedMode</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZInterpolationFilterWindowedMode"></span><code><strong>TBZInterpolationFilterWindowedMode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -464,7 +452,7 @@ Enumération des modes de fenetrage pour les filtres de type &quot;Windowed&quot
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZInterpolationFilterClass"></span><code><b>TBZInterpolationFilterClass</b> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
+<td class="itemcode"><span id="TBZInterpolationFilterClass"></span><code><strong>TBZInterpolationFilterClass</strong> = class of <a  href="BZInterpolationFilters.TBZCustomInterpolationFilter.html">TBZCustomInterpolationFilter</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -473,7 +461,7 @@ Type de classe descendante de BZCustomInterpolationFilter</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZInterpolationFilterMethod"></span><code><b>TBZInterpolationFilterMethod</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZInterpolationFilterMethod"></span><code><strong>TBZInterpolationFilterMethod</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -490,7 +478,7 @@ Enumération des filtres de rééchantillonage supportés.</p>
 
 <p>
 
-<p><b>Note</b> : Jinc est aussi appelé <a class="normal" href="BZMath.html#Bessel">Bessel</a></p>
+<p><strong>Note</strong> : Jinc est aussi appelé <a class="normal" href="BZMath.html#Bessel">Bessel</a></p>
 <h6 class="description_section">Valeurs</h6>
 <ul>
 <li>
@@ -596,10 +584,15 @@ Enumération des filtres de rééchantillonage supportés.</p>
 <ul class="authors">
 <li>J.Delauney (BeanzMaster)</li>
 </ul>
-<h2 class="created">Création</h2>
+<h2 class="created">Crée</h2>
 <p>
 2017-07-21
 </p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

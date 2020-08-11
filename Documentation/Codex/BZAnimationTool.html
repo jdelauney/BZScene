@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZAnimationTool</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZAnimationTool</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="unit">Unité BZAnimationTool</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
@@ -51,7 +39,7 @@ Contient une classe qui permet de faire des animations (&quot;Easing&quot; / &qu
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Notes :</b> Quelques liens intéressants sur le sujet qui m'ont servis de référence : <br> </p>
+<p><strong>Notes :</strong> Quelques liens intéressants sur le sujet qui m'ont servis de référence : <br> </p>
 
 <ul class="paragraph_spacing">
   <li><p><a  href="https://en.wikipedia.org/wiki/Parametric_equation">https://en.wikipedia.org/wiki/Parametric_equation</a></p></li>
@@ -71,11 +59,11 @@ Contient une classe qui permet de faire des animations (&quot;Easing&quot; / &qu
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Dépendances</b> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZInterpolationFilters.html">BZInterpolationFilters</a>;
+<p><strong>Dépendances</strong> : <a class="normal" href="BZClasses.html">BZClasses</a>, <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZInterpolationFilters.html">BZInterpolationFilters</a>;
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Credits :</b> </p>
+<p><strong>Credits :</strong> </p>
 
 <ul class="paragraph_spacing">
   <li><p>(Tous les lien ci-dessus)</p></li>
@@ -85,7 +73,7 @@ Contient une classe qui permet de faire des animations (&quot;Easing&quot; / &qu
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>LICENCE</b> : MP / GPL
+<p><strong>LICENCE</strong> : MP / GPL
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
@@ -104,113 +92,113 @@ Contient une classe qui permet de faire des animations (&quot;Easing&quot; / &qu
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeLinear">easeLinear</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeLinear">easeLinear</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeSquare">easeSquare</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeSquare">easeSquare</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeCubic">easeCubic</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeCubic">easeCubic</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeQuartic">easeQuartic</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeQuartic">easeQuartic</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeQuintic">easeQuintic</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeQuintic">easeQuintic</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeExponantial">easeExponantial</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeExponantial">easeExponantial</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeSine">easeSine</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeSine">easeSine</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeCircle">easeCircle</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeCircle">easeCircle</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeElastic">easeElastic</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeElastic">easeElastic</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeBack">easeBack</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeBack">easeBack</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeBounce">easeBounce</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeBounce">easeBounce</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeBell">easeBell</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeBell">easeBell</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeJitterWave">easeJitterWave</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeJitterWave">easeJitterWave</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeSwing">easeSwing</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeSwing">easeSwing</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#EaseWave">EaseWave</a></b>(t : Single) : Single; Inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#EaseWave">EaseWave</a></strong>(t : Single) : Single; Inline;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#EasePower">EasePower</a></b>(t, Exponent : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#EasePower">EasePower</a></strong>(t, Exponent : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#EaseStep">EaseStep</a></b>(t, Steps : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#EaseStep">EaseStep</a></strong>(t, Steps : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#EaseTardis">EaseTardis</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#EaseTardis">EaseTardis</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#EaseDamping">EaseDamping</a></b>(t : Single) : Single; Inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#EaseDamping">EaseDamping</a></strong>(t : Single) : Single; Inline;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeFlip">easeFlip</a></b>(t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeFlip">easeFlip</a></strong>(t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeScale">easeScale</a></b>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeScale">easeScale</a></strong>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeReverseScale">easeReverseScale</a></b>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeReverseScale">easeReverseScale</a></strong>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeMix">easeMix</a></b>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; BlendFactor, t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeMix">easeMix</a></strong>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; BlendFactor, t : Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeCrossFade">easeCrossFade</a></b>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; t : Single) : Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeCrossFade">easeCrossFade</a></strong>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; t : Single) : Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeArch">easeArch</a></b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeArch">easeArch</a></strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeClampBottom">easeClampBottom</a></b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeClampBottom">easeClampBottom</a></strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeClampTop">easeClampTop</a></b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeClampTop">easeClampTop</a></strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#easeClampBottomTop">easeClampBottomTop</a></b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#easeClampBottomTop">easeClampBottomTop</a></strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZAnimationTool.html#Tweener">Tweener</a></b>(Start, Target: Single; Time, Duration: Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>): Single;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZAnimationTool.html#Tweener">Tweener</a></strong>(Start, Target: Single; Time, Duration: Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>): Single;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a></b> = function(t:Single) : Single;</code></td>
+<td class="itemcode"><code><strong><a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a></strong> = function(t:Single) : Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZAnimationTool.html#TBZAnimationClampMode">TBZAnimationClampMode</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZAnimationTool.html#TBZAnimationClampMode">TBZAnimationClampMode</a></strong> = (...);</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fonctions et procédures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeLinear"></span><code>function <b>easeLinear</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeLinear"></span><code>function <strong>easeLinear</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -219,7 +207,7 @@ Animation linéaire</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeSquare"></span><code>function <b>easeSquare</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeSquare"></span><code>function <strong>easeSquare</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -228,7 +216,7 @@ Animation carré</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeCubic"></span><code>function <b>easeCubic</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeCubic"></span><code>function <strong>easeCubic</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -237,7 +225,7 @@ Animation cubique</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeQuartic"></span><code>function <b>easeQuartic</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeQuartic"></span><code>function <strong>easeQuartic</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -246,7 +234,7 @@ Animation quartique</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeQuintic"></span><code>function <b>easeQuintic</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeQuintic"></span><code>function <strong>easeQuintic</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -255,7 +243,7 @@ Animation quintique</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeExponantial"></span><code>function <b>easeExponantial</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeExponantial"></span><code>function <strong>easeExponantial</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -264,7 +252,7 @@ Animation exponentielle</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeSine"></span><code>function <b>easeSine</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeSine"></span><code>function <strong>easeSine</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -273,7 +261,7 @@ Animation Sinus</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeCircle"></span><code>function <b>easeCircle</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeCircle"></span><code>function <strong>easeCircle</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -282,7 +270,7 @@ Animation cercle</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeElastic"></span><code>function <b>easeElastic</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeElastic"></span><code>function <strong>easeElastic</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -291,7 +279,7 @@ Animation elastique</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeBack"></span><code>function <b>easeBack</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeBack"></span><code>function <strong>easeBack</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -300,7 +288,7 @@ Animation retour</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeBounce"></span><code>function <b>easeBounce</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeBounce"></span><code>function <strong>easeBounce</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -309,7 +297,7 @@ Animation rebond</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeBell"></span><code>function <b>easeBell</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeBell"></span><code>function <strong>easeBell</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -318,7 +306,7 @@ Animation courbe de type Bell</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeJitterWave"></span><code>function <b>easeJitterWave</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeJitterWave"></span><code>function <strong>easeJitterWave</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -327,7 +315,7 @@ Animation &quot;Jitter&quot;</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeSwing"></span><code>function <b>easeSwing</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeSwing"></span><code>function <strong>easeSwing</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -336,7 +324,7 @@ Animation &quot;Dance&quot;</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EaseWave"></span><code>function <b>EaseWave</b>(t : Single) : Single; Inline;</code></td>
+<td class="itemcode"><span id="EaseWave"></span><code>function <strong>EaseWave</strong>(t : Single) : Single; Inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -345,7 +333,7 @@ Animation sinuosidale</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EasePower"></span><code>function <b>EasePower</b>(t, Exponent : Single) : Single;</code></td>
+<td class="itemcode"><span id="EasePower"></span><code>function <strong>EasePower</strong>(t, Exponent : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -354,7 +342,7 @@ Animation puissance</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EaseStep"></span><code>function <b>EaseStep</b>(t, Steps : Single) : Single;</code></td>
+<td class="itemcode"><span id="EaseStep"></span><code>function <strong>EaseStep</strong>(t, Steps : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -363,7 +351,7 @@ Animation étapes</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EaseTardis"></span><code>function <b>EaseTardis</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="EaseTardis"></span><code>function <strong>EaseTardis</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -372,7 +360,7 @@ Animation tardis</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EaseDamping"></span><code>function <b>EaseDamping</b>(t : Single) : Single; Inline;</code></td>
+<td class="itemcode"><span id="EaseDamping"></span><code>function <strong>EaseDamping</strong>(t : Single) : Single; Inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -381,7 +369,7 @@ Animation amortissement</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeFlip"></span><code>function <b>easeFlip</b>(t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeFlip"></span><code>function <strong>easeFlip</strong>(t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -390,7 +378,7 @@ Inversion</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeScale"></span><code>function <b>easeScale</b>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeScale"></span><code>function <strong>easeScale</strong>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -399,7 +387,7 @@ Redimensionnement</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeReverseScale"></span><code>function <b>easeReverseScale</b>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeReverseScale"></span><code>function <strong>easeReverseScale</strong>(EaseFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>;t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -408,7 +396,7 @@ Redimensionnement inverse</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeMix"></span><code>function <b>easeMix</b>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; BlendFactor, t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeMix"></span><code>function <strong>easeMix</strong>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; BlendFactor, t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -417,7 +405,7 @@ Mixage</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeCrossFade"></span><code>function <b>easeCrossFade</b>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; t : Single) : Single;</code></td>
+<td class="itemcode"><span id="easeCrossFade"></span><code>function <strong>easeCrossFade</strong>(EaseStartFunc, EaseStopFunc : <a  href="BZAnimationTool.html#TBZParametric1DFunc">TBZParametric1DFunc</a>; t : Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -426,7 +414,7 @@ Fondu</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeArch"></span><code>function <b>easeArch</b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><span id="easeArch"></span><code>function <strong>easeArch</strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -435,7 +423,7 @@ Arche</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeClampBottom"></span><code>function <b>easeClampBottom</b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><span id="easeClampBottom"></span><code>function <strong>easeClampBottom</strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -444,7 +432,7 @@ Restraint les valeurs du bas</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeClampTop"></span><code>function <b>easeClampTop</b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><span id="easeClampTop"></span><code>function <strong>easeClampTop</strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -453,7 +441,7 @@ Restraint les valeurs du haut</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="easeClampBottomTop"></span><code>function <b>easeClampBottomTop</b>(t : Single) : Single; inline;</code></td>
+<td class="itemcode"><span id="easeClampBottomTop"></span><code>function <strong>easeClampBottomTop</strong>(t : Single) : Single; inline;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -462,7 +450,7 @@ Restraint les valeurs du bas et du haut</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="Tweener"></span><code>function <b>Tweener</b>(Start, Target: Single; Time, Duration: Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>): Single;</code></td>
+<td class="itemcode"><span id="Tweener"></span><code>function <strong>Tweener</strong>(Start, Target: Single; Time, Duration: Single; EaseMode : <a  href="BZAnimationTool.html#TBZAnimationMode">TBZAnimationMode</a>; EaseType: <a  href="BZAnimationTool.html#TBZAnimationType">TBZAnimationType</a>): Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -472,7 +460,7 @@ Calcul les valeurs d'interpolation en fonction des paramètres</p>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZParametric1DFunc"></span><code><b>TBZParametric1DFunc</b> = function(t:Single) : Single;</code></td>
+<td class="itemcode"><span id="TBZParametric1DFunc"></span><code><strong>TBZParametric1DFunc</strong> = function(t:Single) : Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -481,7 +469,7 @@ Definition d'une function paramétrique 1D</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZAnimationMode"></span><code><b>TBZAnimationMode</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZAnimationMode"></span><code><strong>TBZAnimationMode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -521,7 +509,7 @@ Enumération des mode d'animation disponibles</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZAnimationType"></span><code><b>TBZAnimationType</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZAnimationType"></span><code><strong>TBZAnimationType</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -579,7 +567,7 @@ Enumération des type d'animation disponibles</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZAnimationClampMode"></span><code><b>TBZAnimationClampMode</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZAnimationClampMode"></span><code><strong>TBZAnimationClampMode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;<h6 class="description_section">Valeurs</h6>
@@ -599,10 +587,15 @@ Enumération des type d'animation disponibles</p>
 <ul class="authors">
 <li>J.Delauney (BeanzMaster)</li>
 </ul>
-<h2 class="created">Création</h2>
+<h2 class="created">Crée</h2>
 <p>
 2017-09-09
 </p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

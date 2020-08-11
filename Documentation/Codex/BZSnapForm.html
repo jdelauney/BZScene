@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZSnapForm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unité BZSnapForm</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+&nbsp;<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>LResources</li><li>Forms</li><li>Controls</li><li>Graphics</li><li>Dialogs</li><li><a  href="BZThreadTimer.html">BZThreadTimer</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Enregistrement&nbsp;<a class="bold" href="BZSnapForm.TSnapFormChildRec.html"><code>TSnapFormChildRec</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZSnapForm.TBZSnapForm.html"><code>TBZSnapForm</code></a></td>
+<td class="itemdesc">============================================================================== ==== [ <code>TBZSnapForm</code> ]============================================================ @Desc : Composant ajoutont des fonctions aux fenêtres ==============================================================================</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#TSnappingActiveBorders">TSnappingActiveBorders</a></strong>      = set of (abLeft, abTop, abRight, abBottom);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#TSnappingTargets">TSnappingTargets</a></strong>    = set of (stLeft, stTop, stRight, stBottom);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#TSnappingTarget">TSnappingTarget</a></strong> = (...);</code></td>
+</tr>
+</table>
+<span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#cSnapTargetAll">cSnapTargetAll</a></strong> = [stLeft, stTop, stRight, stBottom];</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#cSnapActiveBorderAll">cSnapActiveBorderAll</a></strong> = [abLeft, abTop, abRight, abBottom];</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZSnapForm.html#cMaxSnapForms">cMaxSnapForms</a></strong> = 19;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TSnappingActiveBorders"></span><code><strong>TSnappingActiveBorders</strong>      = set of (abLeft, abTop, abRight, abBottom);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+============================================================================== ============================================================================== Définitions des paramètres des propriétés pour notre composant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TSnappingTargets"></span><code><strong>TSnappingTargets</strong>    = set of (stLeft, stTop, stRight, stBottom);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TSnappingTarget"></span><code><strong>TSnappingTarget</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="stToNone">stToNone</span></li>
+<li>
+<span id="stToLeft">stToLeft</span></li>
+<li>
+<span id="stToTop">stToTop</span></li>
+<li>
+<span id="stToRight">stToRight</span></li>
+<li>
+<span id="stToBottom">stToBottom</span></li>
+</ul>
+</td></tr>
+</table>
+<h3 class="detail">Constantes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cSnapTargetAll"></span><code><strong>cSnapTargetAll</strong> = [stLeft, stTop, stRight, stBottom];</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+TActiveMovingArea = (amClient, amTitleBar);</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cSnapActiveBorderAll"></span><code><strong>cSnapActiveBorderAll</strong> = [abLeft, abTop, abRight, abBottom];</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="cMaxSnapForms"></span><code><strong>cMaxSnapForms</strong> = 19;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+FormPropKeywords : array of string = ['left','top','right','bottom','<a class="normal" href="BZMath.html#Min">min</a>-height','<a class="normal" href="BZMath.html#Min">min</a>-width','<a class="normal" href="BZMath.html#Max">max</a>-height','<a class="normal" href="BZMath.html#Max">max</a>-width','visible','snap','snapto'];</p>
+</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

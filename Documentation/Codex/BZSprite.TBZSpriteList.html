@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZSprite: Classe TBZSpriteList</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<span id="TBZSpriteList"></span><h1 class="cio">Classe TBZSpriteList</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZSprite.html">BZSprite</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZSpriteList = class(<a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a>)</code></p>
+<h2 class="description">Description</h2>
+<div class="nodescription">No description available, ancestor TBZPersistentObjectList description follows</div><p>
+Liste d'objets persistants. Similaire à TList, mais fonctionne sur des objets TObject directement et dispose d'un mécanisme de persistance des données.</p>
+<p>
+
+
+<p>Contrairement à la TObjectList de la VCL / LCL, <code>TBZPersistentObjectList</code> ne libère pas ses objets lors de la destruction ou de <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Clear">Clear</a>. Vous devez utiliser les fonctions <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Clean">Clean</a> et <a class="normal" href="BZClasses.TBZPersistentObjectList.html#CleanFree">CleanFree</a>.
+
+<p></p>
+
+<ul class="paragraph_spacing">
+  <li><p>Seuls les éléments <a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a> et descendants seront gérés correctement.</p></li>
+  <li><p>La liste peut être utilisée sous forme de LIFO avec <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Push">Push</a> and <a class="normal" href="BZClasses.TBZPersistentObjectList.html#Pop">Pop</a>.</p></li>
+  <li><p>Vous pouvez effectuer des opérations booléennes de base.</p></li>
+</ul>
+
+<p>
+
+<p><strong>Note</strong> : L'implémentation de la fonction <a class="normal" href="BZClasses.TBZPersistentObjectList.html#IndexOf">IndexOf</a> est jusqu'à 3 fois plus rapide que celle de TList</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObject.html">TBZPersistentObject</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZPersistentObjectList.html">TBZPersistentObjectList</a></li>
+<li class="thisitem">TBZSpriteList</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZSprite.TBZSpriteList.html#Create">Create</a></strong>; override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <strong><a  href="BZSprite.TBZSpriteList.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSprite.TBZSpriteList.html#Items">Items</a></strong>[Index:Integer]: <a  href="BZSprite.TBZCustomBaseSprite.html">TBZCustomBaseSprite</a> read Get write Put;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Items"></span><code>property <strong>Items</strong>[Index:Integer]: <a  href="BZSprite.TBZCustomBaseSprite.html">TBZCustomBaseSprite</a> read Get write Put;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>
