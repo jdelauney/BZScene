@@ -24,7 +24,8 @@ uses
   {$ENDIF}
   BZCadencer,
   BZScreenMode,
-  BZFileFinder;
+  BZFileFinder,
+  BZSnapForm;
 
 procedure Register;
 
@@ -40,7 +41,7 @@ begin
 
   RegisterComponents('BZ-Tools', [ TBZCadencer, TBZScreenMode, TBZFileFinder]);
   {$IFDEF WINDOWS}
-  RegisterComponents('BZ-Tools',[TBZThreadTimer, TBZHotKeyManager, TBZFormHotKeyManager, TBZAppHotKeyManager]);
+  RegisterComponents('BZ-Tools',[TBZThreadTimer, TBZHotKeyManager, TBZFormHotKeyManager, TBZAppHotKeyManager, TBZSnapForm]);
   {$ENDIF}
 
 end;
