@@ -18,7 +18,7 @@ uses
   Forms, Dialogs,
   Graphics,
 
-  BZSound, BZOpenALManager;
+  BZSound, BZOpenALManager, BZBassManager;
 
 procedure Register;
 
@@ -30,7 +30,7 @@ implementation
   -----------------------------------------------------------------------------** }
 procedure Register;
 begin
-   RegisterComponents('BZ-Audio', [TBZSoundLibrary, TBZSoundFXLibrary, TBZSoundOpenALManager]);
+   RegisterComponents('BZ-Audio', [TBZSoundLibrary, TBZSoundFXLibrary, TBZSoundOpenALManager, TBZSoundBassManager]);
 end;
 
 initialization
