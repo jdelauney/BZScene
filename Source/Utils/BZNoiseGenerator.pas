@@ -65,7 +65,7 @@ const
 
 Type
   { Enumération des types de pertubation du bruit }
-  TBZNoisePerturbation = (npNone, npGradient, npGradientFractal, npGradientNormalize, npGradientFractalNormalize);
+  TBZNoisePerturbation = (npNone, npTurbulence, npGradient, npGradientFractal, npGradientNormalize, npGradientFractalNormalize);
   { Enumération des types d'interpolation du bruit }
   TBZNoiseInterpolationType = (nitLinear, nitCosine, nitCubic);
   { Enumération des types de bruit }
@@ -141,8 +141,6 @@ Type
     cf : https://en.wikipedia.org/wiki/White_noise  }
   TBZBaseNoiseGenerator = Class(TBZCustomNoiseGenerator)
   private
-    FFrequency : Double;
-
     FSmooth : Boolean;
     FNoiseInterpolationType : TBZNoiseInterpolationType;
     FSmoothInterpolationType : TBZInterpolationFilterMethod;
@@ -151,24 +149,12 @@ Type
     FOnCustomRandomNoise : TBZOnCustomRandomNoise;
     FInterpolationMode : TBZInterpolationFilterMethod;
 
-    FPerturbation : TBZNoisePerturbation;
-    FPerturbationFrequency : Double;
-    FPerturbationAmplitude : Double;
-
-    procedure SetFrequency(const AValue : Double);
-
   protected
     // Retourne un entier aléatoire
     function Hash1D(x : Integer):Integer;
     function Hash2D(x, y : Integer):Integer;
     function Hash3D(x, y, z : Integer):Integer;
     function Hash4D(x, y, z, w : Integer):Integer;
-
-    // Retourne les coordonées perturbées du bruit (à utiliser avant les méthodes NoiseXD)
-    procedure GradientPerturb1D(Var x : Double); virtual;
-    procedure GradientPerturb2D(Var x, y : Double); virtual;
-    procedure GradientPerturb3D(Var x, y, z : Double); virtual;
-    procedure GradientPerturb4D(Var x, y, z, w : Double); virtual;
 
   public
 
@@ -196,12 +182,42 @@ Type
     property RandomNoiseGenerator : TBZNoiseRandomGeneratorType read FRandomNoiseGenerator write FRandomNoiseGenerator;
     { Type d'interpolation }
     property NoiseInterpolation : TBZNoiseInterpolationType read FNoiseInterpolationType write FNoiseInterpolationType;
-    { Fréquence pour la génération du bruit }
-    property Frequency : Double read FFrequency write SetFrequency;
     { Active / désactive le lissage du bruit }
     property Smooth : Boolean read FSmooth write FSmooth;
     { Type du filtre pour le lissage }
     property SmoothInterpolation : TBZInterpolationFilterMethod read FInterpolationMode write FInterpolationMode;
+
+    { Methode personnelle de la génération du bruit }
+    property OnCustomRandomNoise : TBZOnCustomRandomNoise read FOnCustomRandomNoise write FOnCustomRandomNoise;
+  end;
+
+
+  TBZNoisePertubation = class(TBZUpdateAbleObject)
+  private
+    FNoiseGenerator : TBZBaseNoiseGenerator;
+
+    FPerturbation : TBZNoisePerturbation;
+    FPerturbationFrequency : Double;
+    FPerturbationAmplitude : Double;
+  protected
+    // Retourne les coordonées perturbées du bruit (à utiliser avant les méthodes NoiseXD)
+    procedure GradientPerturb1D(Var x : Double); virtual;
+    procedure GradientPerturb2D(Var x, y : Double); virtual;
+    procedure GradientPerturb3D(Var x, y, z : Double); virtual;
+    procedure GradientPerturb4D(Var x, y, z, w : Double); virtual;
+
+    procedure TurbulencePerturb1D(Var x : Double); virtual;
+    procedure TurbulencePerturb2D(Var x, y : Double); virtual;
+    procedure TurbulencePerturb3D(Var x, y, z : Double); virtual;
+    procedure TurbulencePerturb4D(Var x, y, z, w : Double); virtual;
+  public
+    constructor Create(ANoiseGenerator : TBZBaseNoiseGenerator);
+
+    procedure Perturb(Var x : Double); virtual; overload;
+    procedure Perturb(Var x, y : Double); virtual; overload;
+    procedure Perturb(Var x, y, z : Double); virtual; overload;
+    procedure Perturb(Var x, y, z, w : Double); virtual; overload;
+
     { Type de pertubation du bruit }
     property Perturbation : TBZNoisePerturbation read FPerturbation write FPerturbation;
     { Fréquence de la perturbation }
@@ -209,11 +225,8 @@ Type
     { Amplitude de la perturbation }
     property PerturbationAmplitude : Double read FPerturbationAmplitude write FPerturbationAmplitude;
 
-    { Methode personnelle de la génération du bruit }
-    property OnCustomRandomNoise : TBZOnCustomRandomNoise read FOnCustomRandomNoise write FOnCustomRandomNoise;
   end;
 
-  
   { @abstract(Générateur de bruit multi valeurs.)
 
     cf : https://en.wikipedia.org/wiki/Value_noise}
@@ -244,6 +257,7 @@ Type
     Function Noise3D(x, y, z : Double) : Double; override;
     Function Noise4D(x, y, z, w : Double) : Double; override;
   end;
+
   { Classe de type TBZGradientNoiseGenerator }
   TBZPerlinNoiseGenerator = Class(TBZGradientNoiseGenerator);
 
@@ -295,7 +309,6 @@ Type
   // Convertis depuis : https://gist.github.com/KdotJPG/b1270127455a94ac5d19
 
   { TBZOpenSimplexNoiseGenerator }
-
   TBZOpenSimplexNoiseGenerator = Class(TBZImprovedPerlinNoiseGenerator)
   private
     //FPermutations : packed array [0..cPERLIN_TABLE_SIZE-1] of Integer;
@@ -320,31 +333,74 @@ Type
   end;
 
   // WorleyNoise : https://en.wikipedia.org/wiki/Worley_noise 
-  
-  //TBZFractalNoiseType = (fntStandard, fntFBM, fntBillow, fntTurbulence, fntDistored, fntMulti, fntHybrid, fnrHetero, fntRidged);
+  TBZNoiseType = (ntValue, ntPerlin, ntImprovedPerlin, ntSimplex, ntOpenSimplex, ntCustom);
+  TBZFractalNoiseType = (fntStandard, fntFBM, fntBillow, fntTurbulence, fntDistored, fntMulti, fntHybrid, fnrHetero, fntRidged);
   { TBZCustomFractalNoiseGenerator : Classe de base à hériter pour la génération de bruit "fractal" }
-  //TBZCustomFractalNoiseGenerator = Class(TBZCustomNoiseGenerator)
-  //private
-  //  FNoiseGenerator : TBZBaseNoiseGenerator;
-  //  FFractalNoiseType : TBZFractalNoiseType;
-  //  FLacunarity : Double;
-  //  FGain : Double;
-  //  FOctaves : LongWord;
-  //  FFractalBounding : Double;
-  //protected
-  //  procedure ComputeFractalBounding;
-  //public
-  //
-  //  Constructor Create; override;
-  //  Destructor Destroy; override;
-  //  
-  //  //Function Noise1D(x:Double):Double; override; 
-  //  Function Noise2D(x,y:Double):Double; override;
-  //  Function Noise3D(x,y,z : Double): Double; override;
-  //  
-  //  property FractalNoiseType : TBZFractalNoiseType read FFractalNoiseType write FFractalNoiseType;
-  //  //property NoiseGenerator :TBZCustomNoiseGenerator read FNoiseGenerator write SetNoiseGenerator;
-  //end;
+  TBZCustomFractalNoiseGenerator = Class(TBZCustomNoiseGenerator)
+  private
+    FFractalParame : Double;
+    FNoiseGenerator : TBZBaseNoiseGenerator;
+    FNoisePertubation : TBZNoisePertubation;
+
+    FNoiseType : TBZNoiseType;
+
+    //FSeed : Int64;
+    FFrequency : Double;
+
+    FFractalNoiseType : TBZFractalNoiseType;
+
+    FPerturbation : TBZNoisePerturbation;
+
+    FLacunarity : Double;
+    FGain : Double;
+    FOctaves : Integer;
+    FAmplitude : Double;
+    FOffset : Double;
+    FFractalParam : Double;
+
+    procedure SetNoiseGenerator(AValue : TBZBaseNoiseGenerator);
+    procedure SetNoiseType(AValue : TBZNoiseType);
+
+  protected
+    FFractalBounding : Double;
+
+    procedure SetSeed(const AValue : Int64); override;
+    procedure ComputeFractalBounding;
+  public
+
+    Constructor Create; override;
+    Destructor Destroy; override;
+
+    //Function Noise1D(x:Double):Double; override;
+    Function Noise2D(x,y:Double):Double; override;
+    Function Noise3D(x,y,z : Double): Double; override;
+
+    { Retourne la valeur du bruit en fonction de sa coordonnée 1D et en prenant en compte la fréquence }
+    function GetNoise(x : Double) : Double;  override;
+    { Retourne la valeur du bruit en fonction de sa coordonnée 2D et en prenant en compte la fréquence }
+    function GetNoise(x, y : Double) : Double;  override;
+    { Retourne la valeur du bruit en fonction de sa coordonnée 3D et en prenant en compte la fréquence }
+    function GetNoise(x, y, z : Double) : Double; override;
+    { Retourne la valeur du bruit en fonction de sa coordonnée 4D et en prenant en compte la fréquence }
+    function GetNoise(x, y, z, w : Double) : Double; override;
+
+    property FractalNoiseType : TBZFractalNoiseType read FFractalNoiseType write FFractalNoiseType;
+    property NoiseType : TBZNoiseType read FNoiseType write SetNoiseType;
+    property Perturbation : TBZNoisePerturbation read FPerturbation write FPerturbation;
+
+    property Seed : Int64 read FSeed write SetSeed;
+    property Frequency : Double read FFrequency write FFrequency;
+
+    property Octaves : Integer read FOctaves write FOctaves;
+    property Lacunarity : Double read FLacunarity write FLacunarity;
+    property Gain : Double read FGain write FGain;
+
+    property Amplitude : Double read FAmplitude write FAmplitude;
+    property FractalParam : Double read FFractalParame write FFractalParam;
+    property Offset : Double read FOffset write FOffset;
+
+    property NoiseGenerator :TBZBaseNoiseGenerator read FNoiseGenerator write SetNoiseGenerator;
+  end;
   
   //TBZCellularDistanceType = (cdtEuclidian, cdtManhatan, cdtNatural);
   //TBZCellularDistanceReturnTypz = (cdrtValue, cdrtNoiseLookup, cdrtDistance, cdrtDistance2, cdrtDistance2Add, cdrtDistance2Sub, cdrtDistance2Mul, cdrtDistance2Div, cdrtDistanceCave);
@@ -369,11 +425,11 @@ Type
   //TBZSimpleCellularNoiseGenerator  = Class(TBZCustomCellularNoiseGenerator); 
   //TBZVoronoiCellularNoiseGenerator  = Class(TBZCustomCellularNoiseGenerator); 
   
-  //TBZTextureGenerator
+  //TBZTextureNoiseGenerator
 
 Implementation
 
-uses Math, BZMath;
+uses Math, BZMath, Dialogs;
 
 {%region=====[ Open Simplex Noise constantes ]==================================}
 Const
@@ -437,6 +493,8 @@ Const
           -3, -1, -1, -1,     -1, -3, -1, -1,     -1, -1, -3, -1,     -1, -1, -1, -3
   );
 
+{%endregion%}
+
 function CastDoubleToInt64(value : double) : int64;
 var
   i : int64 absolute Value;
@@ -451,7 +509,108 @@ begin
   result := d;
 end;
 
-{%region=====[ TBZOpenSimplexNoiseGenerator ]===================================}
+{ TBZNoisePertubation }
+
+procedure TBZNoisePertubation.GradientPerturb1D(var x : Double);
+begin
+  x := x;
+end;
+
+procedure TBZNoisePertubation.GradientPerturb2D(var x, y : Double);
+begin
+  x := x;
+  y := y;
+end;
+
+procedure TBZNoisePertubation.GradientPerturb3D(var x, y, z : Double);
+begin
+  x := x;
+  y := y;
+  z := z;
+end;
+
+procedure TBZNoisePertubation.GradientPerturb4D(var x, y, z, w : Double);
+begin
+  x := x;
+  y := y;
+  z := z;
+  w := w;
+end;
+
+procedure TBZNoisePertubation.TurbulencePerturb1D(var x : Double);
+begin
+
+end;
+
+procedure TBZNoisePertubation.TurbulencePerturb2D(var x, y : Double);
+begin
+
+end;
+
+procedure TBZNoisePertubation.TurbulencePerturb3D(var x, y, z : Double);
+begin
+
+end;
+
+procedure TBZNoisePertubation.TurbulencePerturb4D(var x, y, z, w : Double);
+begin
+
+end;
+
+constructor TBZNoisePertubation.Create(ANoiseGenerator : TBZBaseNoiseGenerator);
+begin
+  FNoiseGenerator := ANoiseGenerator;
+end;
+
+procedure TBZNoisePertubation.Perturb(var x : Double);
+begin
+  Case FPerturbation of
+    npNone:;
+    npTurbulence: ;
+    npGradient: ;
+    npGradientFractal: ;
+    npGradientNormalize: ;
+    npGradientFractalNormalize: ;
+  end;
+end;
+
+procedure TBZNoisePertubation.Perturb(var x, y : Double);
+begin
+  Case FPerturbation of
+    npNone:;
+    npTurbulence: ;
+    npGradient: ;
+    npGradientFractal: ;
+    npGradientNormalize: ;
+    npGradientFractalNormalize: ;
+  end;
+end;
+
+procedure TBZNoisePertubation.Perturb(var x, y, z : Double);
+begin
+  Case FPerturbation of
+    npNone:;
+    npTurbulence: ;
+    npGradient: ;
+    npGradientFractal: ;
+    npGradientNormalize: ;
+    npGradientFractalNormalize: ;
+  end;
+end;
+
+procedure TBZNoisePertubation.Perturb(var x, y, z, w : Double);
+begin
+  Case FPerturbation of
+    npNone:;
+    npTurbulence: ;
+    npGradient: ;
+    npGradientFractal: ;
+    npGradientNormalize: ;
+    npGradientFractalNormalize: ;
+  end;
+end;
+
+{%region=====[ TBZOpenSimplexNoiseGenerator ]====================================================}
 
 constructor TBZOpenSimplexNoiseGenerator.Create;
 Var
@@ -3171,7 +3330,6 @@ end;
 
 {%endregion%}
 
-
 {%region=====[ TBZCustomNoiseGenerator ]=========================================================}
 
 Constructor TBZCustomNoiseGenerator.Create;
@@ -3348,18 +3506,11 @@ end;
 Constructor TBZBaseNoiseGenerator.Create;
 begin
   inherited Create;
-  FFrequency := 0.02;
   FRandomNoiseGenerator := ngtWhite;
   FNoiseInterpolationType := nitLinear;
   FSmooth := True;
   FSmoothInterpolationType := ifmCosine;
   FSupport := [ns1D, ns2D, ns3D, ns4D];
-end;
-
-procedure TBZBaseNoiseGenerator.SetFrequency(const AValue : Double);
-begin
-  if FFrequency = AValue then Exit;
-  FFrequency := AValue;
 end;
 
 function TBZBaseNoiseGenerator.Hash1D(x : Integer) : Integer;
@@ -3424,25 +3575,6 @@ begin
 	Result:= hash;
 end;
 
-procedure TBZBaseNoiseGenerator.GradientPerturb1D(Var x : Double);
-begin
-
-end;
-
-procedure TBZBaseNoiseGenerator.GradientPerturb2D(Var x, y : Double);
-begin
-
-end;
-
-procedure TBZBaseNoiseGenerator.GradientPerturb3D(Var x, y, z : Double);
-begin
-
-end;
-
-procedure TBZBaseNoiseGenerator.GradientPerturb4D(Var x, y, z, w : Double);
-begin
-
-end;
 
 Function TBZBaseNoiseGenerator.Noise1D(x : Double) : Double;
 begin
@@ -3488,22 +3620,22 @@ end;
 
 function TBZBaseNoiseGenerator.GetNoise(x : Double) : Double;
 begin
-  result := noise1D(x * Frequency);
+  result := noise1D(x);
 end;
 
 function TBZBaseNoiseGenerator.GetNoise(x, y : Double) : Double;
 begin
-  result := noise2D(x * Frequency, y * Frequency);
+  result := noise2D(x, y);
 end;
 
 function TBZBaseNoiseGenerator.GetNoise(x, y, z : Double) : Double;
 begin
-  result := noise3D(x * Frequency, y * Frequency, z * Frequency);
+  result := noise3D(x, y, z);
 end;
 
 function TBZBaseNoiseGenerator.GetNoise(x, y, z, w : Double) : Double;
 begin
-  result := noise4D(x * Frequency, y * Frequency, z * Frequency, w * Frequency);
+  result := noise4D(x, y, z, w);
 end;
 
 {%endregion%}
@@ -3678,8 +3810,8 @@ end;
 
 Function TBZGradientNoiseGenerator.Noise2D(x, y : Double) : Double;
 var
-  fx, cx, fy, cy : Integer;
-  fx0,fx1,fy0,fy1 : Double;
+  fx, cx, fy, cy : Double;
+//  fx0,fx1,fy0,fy1 : Double;
   upperLeftCell,
   upperRightCell,
   lowerLeftCell,
@@ -3705,8 +3837,8 @@ begin
   lowerRightCell := GradientNoise2D(cX, fY);
 
   // Interpolation linéaire standard
-  interpolatorX :=  frac(x);
-  interpolatorY :=  frac(y);
+  interpolatorX :=  x - fx; //frac(x);
+  interpolatorY :=  y - fy; //frac(y);
 
   // Lissage
   if FSmooth then
@@ -4506,8 +4638,6 @@ end;
 
 {%endregion%}
 
-
-
 {%region=====[ TBZCustomFractalNoiseGenerator ]==================================================}
 //Constructor  TBZCustomFractalNoiseGenerator.Create;
 //begin
@@ -4520,6 +4650,174 @@ end;
 //  FNoiseType := bntPerlin; //bntValue, bntSimpleX, bntOpenSimpleX, bntCellular
 //  FCellularNoiseType := cntWorley; //cntVoronoi, cntStandard
 //end;
+
+{ TBZCustomFractalNoiseGenerator }
+
+Constructor TBZCustomFractalNoiseGenerator.Create;
+begin
+  inherited Create;
+  FLacunarity := 2.0;
+  FGain := 0.5;
+  FOctaves := 4;
+  FAmplitude := 2;
+  FFrequency := 0.02;
+  FNoiseType := ntPerlin;
+  FNoiseGenerator := TBZPerlinNoiseGenerator.Create;
+  FNoiseGenerator.RandomNoiseGenerator := ngtWhite;
+  FFractalNoiseType := fntStandard;
+end;
+
+Destructor TBZCustomFractalNoiseGenerator.Destroy;
+begin
+  if Assigned(FNoiseGenerator) then FreeAndNil(FNoiseGenerator);
+  inherited Destroy;
+end;
+
+procedure TBZCustomFractalNoiseGenerator.SetNoiseGenerator(AValue: TBZBaseNoiseGenerator);
+begin
+  if FNoiseGenerator = AValue then Exit;
+  FNoiseGenerator := AValue;
+  //FNoiseGenerator.Frequency := FFrequency;
+end;
+
+procedure TBZCustomFractalNoiseGenerator.SetNoiseType(AValue: TBZNoiseType);
+begin
+  if FNoiseType = AValue then Exit;
+  FNoiseType := AValue;
+  FreeAndNil(FNoiseGenerator);
+  Case FNoiseType of
+    ntValue : FNoiseGenerator := TBZValueNoiseGenerator.Create;
+    ntPerlin : FNoiseGenerator := TBZPerlinNoiseGenerator.Create;
+    ntImprovedPerlin : FNoiseGenerator := TBZImprovedPerlinNoiseGenerator.Create;
+    ntSimplex : FNoiseGenerator := TBZSimplexNoiseGenerator.Create;
+    ntOpenSimplex : FNoiseGenerator := TBZOpenSimplexNoiseGenerator.Create;
+  end;
+  if assigned(FNoiseGenerator) then FNoiseGenerator.Seed := FSeed;
+end;
+
+procedure TBZCustomFractalNoiseGenerator.SetSeed(const AValue: Int64);
+begin
+  inherited SetSeed(AValue);
+  FNoiseGenerator.Seed := AValue;
+end;
+
+procedure TBZCustomFractalNoiseGenerator.ComputeFractalBounding;
+begin
+
+end;
+
+Function TBZCustomFractalNoiseGenerator.Noise2D(x, y: Double): Double;
+Var
+  i : Integer;
+  total : single;
+  LPersistence : single;
+  LFrequency : single;
+  LAmplitude : single;
+  MaxValue, weight : Single;
+  Lx, Ly : Double;
+begin
+  total := 0;
+  LPersistence := FLacunarity;
+  LFrequency := FFrequency;
+  LAmplitude := FAmplitude;
+
+  MaxValue := 0;
+  Lx := x;
+  Ly := y;
+  if FFractalNoiseType = fntHybrid then
+  begin
+
+  end
+  else
+  begin
+    //total :=  (FOffset + FNoiseGenerator.GetNoise(x * LFrequency, y * LFrequency)) * power(LFrequency, -FFractalParam);
+    //LFrequency := LFrequency * LPersistence;
+    //Weight := total;
+  end;
+  //Result := inherited Noise2D(x, y);
+
+  if FOctaves < 2 then
+  begin
+    Result := FNoiseGenerator.GetNoise(x * LFrequency, y * LFrequency);
+    exit;
+  end;
+
+  for i := 0 to FOctaves - 1 do
+  begin
+      Case FFractalNoiseType of
+        fntStandard:
+        begin
+          total := total + FNoiseGenerator.GetNoise(x * LFrequency, y * LFrequency) * LAmplitude;
+          maxValue := MaxValue + LAmplitude;
+          LAmplitude := LAmplitude * LPersistence;
+          Lfrequency := Lfrequency * 2;
+        end;
+        fntFBM:
+        begin
+          total := total + FNoiseGenerator.GetNoise(Lx * LFrequency, Ly * LFrequency) * power(LPersistence, -FFractalParam * i);
+          Lx := Lx * LPersistence;
+          Ly := Ly * LPersistence;
+        end;
+        fntBillow:;
+
+        fntTurbulence: ;
+        fntDistored: ;
+        fntMulti:
+        begin
+          total := total + (FNoiseGenerator.GetNoise(Lx * LFrequency, Ly * LFrequency) + FOffset) * power(LPersistence, -FFractalParam * i);
+          Lx := Lx * LPersistence;
+          Ly := Ly * LPersistence;
+        end;
+        fntHybrid:
+        begin
+          if (Weight > 0.001) then
+          begin
+            if ( Weight > 1.0 ) then Weight := 1.0;
+            MaxValue :=  (FOffset + FNoiseGenerator.GetNoise(Lx * LFrequency, Ly * LFrequency)) * power(LFrequency, -FFractalParam);
+            LFrequency := LFrequency * LPersistence;
+            Total := Total + Weight * MaxValue;
+            Weight := Weight * MaxValue;
+            Lx := Lx * LPersistence;
+            Ly := Ly * LPersistence;
+          end;
+        end;
+        fnrHetero: ;
+        fntRidged: ;
+      end;
+
+    //FNoiseGenerator.Frequency := LFrequency;
+  end;
+  Result := Total / maxValue;
+end;
+
+Function TBZCustomFractalNoiseGenerator.Noise3D(x, y, z: Double): Double;
+begin
+  Result := GetNoise(x, y, z);
+end;
+
+function TBZCustomFractalNoiseGenerator.GetNoise(x: Double): Double;
+begin
+ result := -1;
+end;
+
+function TBZCustomFractalNoiseGenerator.GetNoise(x, y: Double): Double;
+begin
+  result := Noise2D(x,y);
+end;
+
+function TBZCustomFractalNoiseGenerator.GetNoise(x, y, z: Double): Double;
+begin
+ result := -1;
+end;
+
+function TBZCustomFractalNoiseGenerator.GetNoise(x, y, z, w: Double): Double;
+begin
+ result := -1;
+end;
+
+
+
+
 {%endregion%}
 
 End.

@@ -89,7 +89,7 @@ Type
   end;
 
   { Assistant pour le type Byte }
-  TByteHelper =  type helper for Byte
+  TByteHelper = type helper for Byte
   public
     const
       MaxValue = 255;  // < Valeur maximum pour le type Byte

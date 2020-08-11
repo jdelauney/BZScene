@@ -633,8 +633,12 @@ begin
     {$ENDIF}
     Assert(Position < FCount-1);
   {$endif}
-  Dec(FCount);
-  System.Move(FData[(Position + 1)], FData[Position], (FCount - Position)); //* FItemSize
+  if (Position < (FCount - 1)) then
+  begin
+    Dec(FCount);
+    System.Move(FData[(Position + 1)], FData[Position], (FCount - Position) * ItemSize);
+  end
+  else Dec(FCount);
   Inc(FRevision);
 end;
 

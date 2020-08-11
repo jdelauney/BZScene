@@ -3755,11 +3755,11 @@ end;
 
 function TBZColor32Helper.Average(Constref A : TBZColor32) : TBZColor32;
 begin
-  Result := (Self And A) + ((Self Xor A) * 0.5);
-  //Result := Self;
-  //Result.Red := (Self.Red + A.Red) div 2;
-  //Result.Green := (Self.Green + A.Green) div 2;
-  //Result.Blue := (Self.Blue + A.Blue) div 2;
+  //Result := (Self And A) + ((Self Xor A) * 0.5);
+  Result := Self;
+  Result.Red := (Self.Red + A.Red) div 2;
+  Result.Green := (Self.Green + A.Green) div 2;
+  Result.Blue := (Self.Blue + A.Blue) div 2;
 end;
 
 function TBZColor32Helper.Modulate(Constref A : TBZColor32) : TBZColor32;

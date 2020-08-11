@@ -123,7 +123,7 @@ Const
   BMP_COMPRESSION_NONE = Longword(0);  //< Non compressé
   BMP_COMPRESSION_RLE8 = Longword(1);  //< Compressé avec RLE 8bits
   BMP_COMPRESSION_RLE4 = Longword(2);  //< Compressé avec RLE 4bits
-  BMP_COMPRESSION_BITF = Longword(3);  //< Nom compressé BitFields winV2 Mask RGB / V3 Mask RGBA,   et seulement 16 et 32 bits
+  BMP_COMPRESSION_BITF = Longword(3);  //< Non compressé BitFields winV2 Mask RGB / V3 Mask RGBA,   et seulement 16 et 32 bits
   BMP_COMPRESSION_HUF1D = Longword(3); //< OSX22 = Hufman1D seulement 1bit
   BMP_COMPRESSION_JPEG = Longword(4);  //< Compressé avec JPEG si OSX22 = RLE 24bits
   BMP_COMPRESSION_PNG = Longword(5);   //< Compressé avec PNG
@@ -329,6 +329,24 @@ Type
 Type
   EBZSaveImageException = Class(EBZBitmapException);
 
+  //TBZBMPSavingSupportedHeaderVersion = (shvAuto, shv1, shv4, shv5);
+  TBZBMPSavingSupportedCompression = (shcNone, shcBitfield);
+  TBZBMPSavingSupportedPixelFormat = (shpf24bit, shpf32bit);
+  TBZBitmapBMPSavingOptions = Class(TBZUpdateAbleObject)
+  private
+    //FHeaderVersion : TBZBMPSavingSupportedHeaderVersion;
+    FCompression   : TBZBMPSavingSupportedCompression;
+    FBitsPerPixel  : TBZBMPSavingSupportedPixelFormat;
+    FAutoFormat : Boolean;
+  public
+    Constructor Create; override;
+
+    //property HeaderVersion : TBZBMPSavingSupportedHeaderVersion read FHeaderVersion write FHeaderVersion;
+    property Compression   : TBZBMPSavingSupportedCompression read FCompression write FCompression;
+    property BitsPerPixel  : TBZBMPSavingSupportedPixelFormat read FBitsPerPixel write FBitsPerPixel;
+    property AutoFormat    : Boolean read FAutoFormat write FAutoFormat;
+  end;
+
   { Classe de lecture et d"ecriture des images au format BMP }
   TBZBitmapBMPImage = Class(TBZCustomImageFileIO)
   private
@@ -340,7 +358,8 @@ Type
     FRowSize, FLineEndGapSize: Integer;
     FIgnoreAlpha: Boolean;
 
-    FNeedAdjustBFH : Boolean;
+    FSavingOptions : TBZBitmapBMPSavingOptions;
+
     // Fonctions d'aide à la lecture des infos dans les en-têtes
     Function GetHeaderWidth: Integer;
     Function GetHeaderHeight: Integer;
@@ -354,12 +373,6 @@ Type
     Function GetRowSize: Integer;
     Function GetPadding: Integer;
 
-    function getInfoHeaderSize(aVersion : TBZBMPHeaderType): Integer;
-    function ComputePaletteOrMaskSize:Integer;
-    function ComputeCompressionType : LongWord;
-    function CreateInfoHeader(aVersion : TBZBMPHeaderType):TBZBitmapBMPInfoHeader;
-    procedure InitSaving(aVersion : TBZBMPHeaderType);
-    procedure InitBitFieldMasks;
   protected
     // Variables utiles lors de l'encodage et du décodage des données
     RedMask, GreenMask, BlueMask, AlphaMask: Longword;
@@ -370,10 +383,6 @@ Type
     bmpWidth, bmpHeight: Integer;
     TopDown: Boolean;
     GapSize1, GapSize2: Integer;
-
-    procedure SaveHeader;
-    procedure SavePalette;
-    procedure SaveImageData;
 
     Procedure LoadFromMemory(); override;
     Function CheckFormat(): Boolean; override;
@@ -387,6 +396,8 @@ Type
     Class Function Capabilities: TBZDataFileCapabilities; override;
 
     Function getImagePropertiesAsString: String; override;
+
+    property SavingOptions : TBZBitmapBMPSavingOptions read FSavingOptions;
   End;
 
 Implementation
@@ -394,9 +405,19 @@ Implementation
 Uses
   BZImageStrConsts,
   BZUtils
- {$IFDEF DEBUG}
+ {.$IFDEF DEBUG}
  , Dialogs, BZLogger
- {$ENDIF};
+ {.$ENDIF};
+
+ { TBZBitmapTGASavingOptions }
+
+Constructor TBZBitmapBMPSavingOptions.Create;
+begin
+  inherited Create;
+  FCompression   := shcNone;
+  FBitsPerPixel  := shpf32bit;
+  FAutoFormat := True;
+end;
 
 {%region%=====[ TBZBitmapBMPImage ]============================================}
 
@@ -414,11 +435,14 @@ Begin
 
   SupportedColorFormat := SupportedColorFormat + [cfXRGB_1555, cfRGB_565, cfBGR_565, cfBGR, cfRGB, cfARGB, cfABGR, cfRGBA, cfBGRA];
   FInternalReadSize := 0;
+
+  FSavingOptions := TBZBitmapBMPSavingOptions.Create;
 End;
 
 Destructor TBZBitmapBMPImage.Destroy;
 Begin
   SupportedColorFormat := [];
+  FreeAndNil(FSavingOptions);
   Inherited Destroy;
 End;
 
@@ -685,49 +709,51 @@ Begin
   // On lit le bon en-tête suivant sa taille.
   { NOTE : La structure With..Do est obligatoire ici pour assigner les paramètres.
     Sinon si sous la forme DataFormatDesc.Desc:='blablabla'; --> Error : Argument Cannot be assigned to }
-  With DataFormatDesc do begin Desc:='Microsoft / OSx Bitmap' end;
+  With DataFormatDesc do begin Desc:='Microsoft Windows Bitmap' end;
   Case FHeaderSize Of
     12:
     Begin
       FHeaderType := bmpht_Os21x;
       Memory.Read(FInfoHeader.Os21x, 12);
-      With DataFormatDesc do begin Version := 'OSx Bitmap 2.1'; end;
+      With DataFormatDesc do begin Desc:='OSx Bitmap' end;
+      With DataFormatDesc do begin Version := '2.1'; end;
     End;
     40:
     Begin
       FHeaderType := bmpht_WindowsV1;
       Memory.Read(FInfoHeader.WindowsV1, 36);
-      With DataFormatDesc do begin Version := 'Windows Bitmap 1.0'; end;
+      With DataFormatDesc do begin Version := '1.0'; end;
     End;
     52:
     Begin
       FHeaderType := bmpht_WindowsV2;
       Memory.Read(FInfoHeader.WindowsV2, 48);
-      With DataFormatDesc do begin Version := 'Windows Bitmap 2.0'; end;
+      With DataFormatDesc do begin Version := '2.0'; end;
     End;
     56:
     Begin
       FHeaderType := bmpht_WindowsV3;
       Memory.Read(FInfoHeader.WindowsV3, 52);
-      With DataFormatDesc do begin Version := 'Windows Bitmap 3.0'; end;
+      With DataFormatDesc do begin Version := '3.0'; end;
     End;
     64:
     Begin
       FHeaderType := bmpht_Os22x;
       Memory.Read(FInfoHeader.Os22x, 60);
-      With DataFormatDesc do begin Version := 'OSx Bitmap 2.2'; end;
+      With DataFormatDesc do begin Desc:='OSx Bitmap' end;
+      With DataFormatDesc do begin Version := '2.2'; end;
     End;
     108:
     Begin
       FHeaderType := bmpht_WindowsV4;
       Memory.Read(FInfoHeader.WindowsV4, 104);
-      With DataFormatDesc do begin Version := 'Windows Bitmap 4.0'; end;
+      With DataFormatDesc do begin Version := '4.0'; end;
     End;
     124:
     Begin
       FHeaderType := bmpht_WindowsV5;
       Memory.Read(FInfoHeader.WindowsV5, 120);
-      With DataFormatDesc do begin Version := 'Windows Bitmap 5.0'; end;
+      With DataFormatDesc do begin Version := '5.0'; end;
     End;
     Else
     begin
@@ -736,10 +762,18 @@ Begin
     end;
   End;
   // On verifie l'ID en cas de fichier OS22x Bitmap Array (BA)
-  if FBmpFileHeader.bfType = BMP_MAGIC_OS2BMP then  With DataFormatDesc do begin Version := 'OSx Bitmap 2.2 BA'; end;
+  if FBmpFileHeader.bfType = BMP_MAGIC_OS2BMP then
+  begin
+    With DataFormatDesc do
+    begin
+      Desc:='OSx Bitmap';
+      Version := '2.2 BA';
+    end;
+  end;
 
   //GlobalLogger.LogNotice('Version detected : '+DataFormatDesc.Version);
   // On calcul combien d'octets ont deja été lu dans le fichier (servira pour la calcul des "GapSize")
+
 
   //FInternalReadSize := 14 + FHeaderSize + 4;
   FInternalReadSize := Memory.Position;
@@ -1249,7 +1283,6 @@ Begin
 
   End;
 End;
-
 
 Procedure TBZBitmapBMPImage.LoadFromMemory();
 Var
@@ -2048,385 +2081,380 @@ Begin
   FinishProgressSection(True);
 End;
 
-function TBZBitmapBMPImage.ComputePaletteOrMaskSize : Integer;
-begin
-  Result := 0;
-  if UsePalette and (ABitCount <= 8) then
+Procedure TBZBitmapBMPImage.SaveToMemory();
+Var
+  FormatVersion : TBZBMPHeaderType;
+  CompressionMode : Longword;
+  IgnoreAlpha : Boolean;
+  StrideCount : Integer;
+  TotalFileSize, ImageDataSize, TotalHeaderSize {,PaletteSize} : LongWord;
+  Delta : Single;
+
+  function getInfoHeaderSize(aVersion : TBZBMPHeaderType): Integer;
   begin
-    Result := ColorManager.ColorCount;
-    if Result = 0 then Result := 1 shl ABitCount;
-  end
-  else
-  begin
-    Case AbitCount of
-      15,16 : result := 3;  //GapSize1
-      32 : if DataFormatDesc.Encoding = etBitfields then result := 4 else result:=0;
+    Result := 0;
+    Case aVersion of
+      bmpht_WindowsV1 : Result:= 36;
+      bmpht_WindowsV2 : Result:= 48;
+      bmpht_WindowsV3 : Result:= 52;
+      bmpht_WindowsV4 : Result:= 104;
+      bmpht_WindowsV5 : Result:= 120;
     End;
   End;
-  Result := Result * 4;
-End;
 
-function TBZBitmapBMPImage.ComputeCompressionType : LongWord;
-begin
-  //BMP_COMPRESSION_HUF1D
-  //BMP_COMPRESSION_JPEG
-  //BMP_COMPRESSION_PNG
-  //BMP_COMPRESSION_ALPHABITF
-  Result  := BMP_COMPRESSION_NONE;
-  if (ABitCount = 16) then Result  := BMP_COMPRESSION_BITF;
-  Case DataFormatDesc.Encoding of
-    etBitFields : if (ABitCount = 16) or (ABitCount>=32) then Result:=BMP_COMPRESSION_BITF;
-    etRLE :
+  procedure InitBitFieldMasks;
+  begin
+    RedMask   := $00000000;
+    GreenMask := $00000000;
+    BlueMask  := $00000000;
+    AlphaMask := $00000000;
+    if ABitCount >8 then
     begin
       Case ABitCount of
-        4 : Result := BMP_COMPRESSION_RLE4;
-        8 : Result := BMP_COMPRESSION_RLE8;
-      end;
-    End;
-  end;
-End;
-
-function TBZBitmapBMPImage.getInfoHeaderSize(aVersion : TBZBMPHeaderType): Integer;
-begin
-  Result := 0;
-  Case aVersion of
-    bmpht_WindowsV1 : Result:= 36;
-    bmpht_WindowsV4 : Result:= 108;
-    bmpht_WindowsV5 : Result:= 124;
-  End;
-End;
-
-procedure TBZBitmapBMPImage.InitBitFieldMasks;
-begin
-  RedMask   := $00000000;
-  GreenMask := $00000000;
-  BlueMask  := $00000000;
-  AlphaMask := $00000000;
-  if ABitCount >8 then
-  begin
-    Case ABitCount of
-      15:
-      begin
-        //format XRGB 1555
-        AlphaMask := $00008000;
-        RedMask   := $00007C00;
-        GreenMask := $000003E0;
-        BlueMask  := $0000001F;
-        ABitCount := 16;
-      End;
-      16:
-      begin
-        // format RGB 565
-        RedMask   := $00007C00;
-        GreenMask := $000003E0;
-        BlueMask  := $0000001F;
-        AlphaMask := $00000000;
-      End;
-      24: //BGR
-      begin
-        RedMask   := $00FF0000;
-        GreenMask := $0000FF00;
-        BlueMask  := $000000FF;
-        AlphaMask := $00000000;
-      End;
-      32: //BGRA
-      begin
-        RedMask   := $00FF0000;
-        GreenMask := $0000FF00;
-        BlueMask  := $000000FF;
-        AlphaMask := $FF000000;
-      End;
-      //64;
-    End;
-  End;
-End;
-
-procedure TBZBitmapBMPImage.InitSaving(aVersion : TBZBMPHeaderType);
-begin
-  // On initialise quelques variables et paramètres
-  With ImageDescription do
-  begin
-    RowStrideType := bleDWordBoundary; //Alignement des lignes sur 32bits
-    bmpWidth := Width;
-    bmpHeight := Height;
-    ABitCount := BitsPerPixel;
-     //GlobalLogger.LogStatus('BitsPerPixel    : '+Inttostr(BitsPerPixel));
-  End;
-  //GlobalLogger.LogStatus('Width  : '+Inttostr(bmpWidth));
-  //GlobalLogger.LogStatus('Height : '+Inttostr(bmpHeight));
-  //GlobalLogger.LogStatus('Bpp    : '+Inttostr(ABitCount));
-
- // id:='MB';
-  FBmpFileHeader.bfType:=BMP_MAGIC_WINBMP;
-
-  If DataFormatDesc.Encoding = etRLE then
-  begin
-    FNeedAdjustBFH:=True;
-    FBmpFileHeader.bfSize := 14 + 4+ getInfoHeaderSize(aVersion) + ComputePaletteOrMaskSize;      //Ce paramètre est à recalculer un peu plus tard si compression RLE
-  End
-  Else FBmpFileHeader.bfSize := 14 + 4+ getInfoHeaderSize(aVersion) + ComputePaletteOrMaskSize + ((bmpWidth*bmpHeight)*ImageDescription.PixelSize);
-
-  With FBmpFileHeader do
-  begin
-    bfReserved1:=0;
-    bfReserved2:=0;
-    bfOffBits:= 14 + 4+getInfoHeaderSize(aVersion)+ComputePaletteOrMaskSize; //sizeof(TBZBmpFileHeader)
-  End;
-End;
-
-Function TBZBitmapBMPImage.CreateInfoHeader(aVersion : TBZBMPHeaderType):TBZBitmapBMPInfoHeader;
-begin
-  Case aVersion of
-    bmpht_unknown : raise EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : En-tête inconnue');
-    bmpht_Os21x, bmpht_Os22x : raise EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : '+#13+#10+
-                                                                   ' Type Os21x et Os22x non supportés');
-    bmpht_WindowsV2, bmpht_WindowsV3 : EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : '+#13+#10+
-                                                                       ' Type Windows Version 2 et 3 non supportés');
-    bmpht_WindowsV1 :
-    Begin
-      With Result.WindowsV1 Do
-      begin
-        biWidth           := bmpWidth;
-        biHeight          := bmpHeight;
-        biPlanes          := 1;
-        if ABitCount = 15 then biBitCount:=16 else   biBitCount:= ABitCount;
-        biCompression     := ComputeCompressionType;
-        biSizeImage:=(bmpWidth*bmpHeight)*(ABitCount Div 8);
-        biXPixelsPerMeter:=100;
-        biYPixelsPerMeter:=100;
-        if ABitCount<=8 then biClrUsed:=ComputePaletteOrMAskSize else biClrUsed:=0;
-        biClrImportant:=0;
-      End;
-    End;
-    bmpht_WindowsV4 :
-    Begin
-      With Result.WindowsV4 Do
-      begin
-        biWidth           := bmpWidth;
-        biHeight          := bmpHeight;
-        biPlanes          := 1;
-        biBitCount        := ABitCount;
-
-        biCompression     := ComputeCompressionType;
-        //biSizeImage:=0;          //Ce paramètre est calculer un peu plus tard
-        biXPixelsPerMeter:=100;
-        biYPixelsPerMeter:=100;
-        if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
-        biClrImportant:=0;
-
-       (* biRedMask: Longword;             //< Masque Couleur Rouge
-        biGreenMask: Longword;           //< Masque Couleur Vert
-        biBlueMask: Longword;            //< Masque Couleur Bleu
-        biAlphaMask: Longword;           //< Masque Couleur Alpha
-
-        biCSType: Longword;              //< Type de l'espace de couleur CIE
-        biEndpoints: TBZBMP_CIEXYZCoordTriple; //< "Color space endpoints"
-
-        biGammaRed: Longword;            //< Correction Gamma Rouge
-        biGammaGreen: Longword;          //< Correction Gamma Vert
-        biGammaBlue: Longword;           //< Correction Gamma Bleu  *)
-      End;
-    End;
-    bmpht_WindowsV5 :
-    begin
-      With Result.WindowsV5 Do
-      begin
-        biWidth           := bmpWidth;
-        biHeight          := bmpHeight;
-        biPlanes          := 1;
-        biBitCount        := ABitCount;
-
-        biCompression     := ComputeCompressionType;
-        //biSizeImage:=0;          //Ce paramètre est calculer un peu plus tard
-        biXPixelsPerMeter:=100;
-        biYPixelsPerMeter:=100;
-        if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
-        biClrImportant:=0;
-
-       (* biRedMask: Longword;             //< Masque Couleur Rouge
-        biGreenMask: Longword;           //< Masque Couleur Vert
-        biBlueMask: Longword;            //< Masque Couleur Bleu
-        biAlphaMask: Longword;           //< Masque Couleur Alpha
-
-        biCSType: Longword;              //< Type de l'espace de couleur CIE
-        biEndpoints: TBZBMP_CIEXYZCoordTriple; //< "Color space endpoints"
-
-        biGammaRed: Longword;            //< Correction Gamma Rouge
-        biGammaGreen: Longword;          //< Correction Gamma Vert
-        biGammaBlue: Longword;           //< Correction Gamma Bleu
-
-        biIntent: Longword;              //< "rendering intent"
-
-        biProfileData: Longword;         //< Position des données du profile de couleur
-        biProfileSize: Longword;         //< Taille des données du profile de couleur
-
-        biReserved: Longword;            //< Réservé *)
-      End;
-    End;
-  end;
-end;
-
-procedure TBZBitmapBMPImage.SaveHeader;
-var
-  BIH : TBZBitmapBMPInfoHeader;
-begin
-  if not(DataFormatDesc.VersionAsInteger in [1,4,5]) then DataFormatDesc.VersionAsInteger:=1;
-
-  Case DataFormatDesc.VersionAsInteger of
-    1 :
-    begin
-      InitSaving(bmpht_WindowsV1);
-      InitBitFieldMasks;
-      BIH := CreateInfoHeader(bmpht_WindowsV1);
-      //ShowMessage('ID = '+FBmpFileHeader.bfType);
-      Memory.Write(FBmpFileHeader,14);
-      FHeaderSize := 40;
-      Memory.WriteLongWord(FHeaderSize);
-      Memory.Write(BIH.WindowsV1,36);
-      if (ABitCount>8) and (BIH.WindowsV1.biCompression = BMP_COMPRESSION_BITF) then
-      begin
-        Case ABitCOunt of
-          15:
-          begin
-            With Memory do
-            begin
-              WriteLongWord(RedMask);
-              WriteLongWord(GreenMask);
-              WriteLongWord(BlueMask);
-              WriteLongWord(AlphaMask);
-            End;
-          End;
-          16:
-          begin
-            With Memory do
-            begin
-              WriteLongWord(RedMask);
-              WriteLongWord(GreenMask);
-              WriteLongWord(BlueMask);
-            End;
-          End;
-          32:
-          begin
-            With Memory do
-            begin
-              WriteLongWord(RedMask);
-              WriteLongWord(GreenMask);
-              WriteLongWord(BlueMask);
-              WriteLongWord(AlphaMask);
-            End;
-          End;
-          //64;
+        15:
+        begin
+          //format XRGB 1555
+          AlphaMask := $00008000;
+          RedMask   := $00007C00;
+          GreenMask := $000003E0;
+          BlueMask  := $0000001F;
+          ABitCount := 16;
         End;
+        16:
+        begin
+          // format RGB 565
+          RedMask   := $00007C00;
+          GreenMask := $000003E0;
+          BlueMask  := $0000001F;
+          AlphaMask := $00000000;
+        End;
+        24: //BGR
+        begin
+          //GlobalLogger.LogNotice('==>> InitBitFieldMasks BGR');
+          RedMask   := $00FF0000;
+          GreenMask := $0000FF00;
+          BlueMask  := $000000FF;
+          AlphaMask := $00000000;
+        End;
+        32: //BGRA
+        begin
+          //GlobalLogger.LogNotice('==>> InitBitFieldMasks BGRA');
+          RedMask   := $00FF0000;
+          GreenMask := $0000FF00;
+          BlueMask  := $000000FF;
+          AlphaMask := $FF000000;
+        End;
+        //64;
       End;
     End;
-    4 :
-    begin
-      InitSaving(bmpht_WindowsV4);
-      InitBitFieldMasks;
-      BIH := CreateInfoHeader(bmpht_WindowsV4);
-      Memory.Write(FBmpFileHeader,14);
-      Memory.WriteLongWord(FHeaderSize);
-      Memory.Write(BIH.WindowsV4,108);
-    End;
-    5 :
-    begin
-      InitSaving(bmpht_WindowsV4);
-      InitBitFieldMasks;
-      BIH := CreateInfoHeader(bmpht_WindowsV4);
-      Memory.Write(FBmpFileHeader,14);
-      Memory.WriteLongWord(FHeaderSize);
-      Memory.Write(BIH.WindowsV5,124);
-    End;
   End;
-End;
 
-procedure TBZBitmapBMPImage.SavePalette;
-begin
-  if ImageDescription.UsePalette then
+  procedure DetectFormat;
   begin
-    if (ABitCount<=8) then
+    With ImageDescription do
     begin
+      //RowStrideType := bleDWordBoundary; //Alignement des lignes sur 32bits
+      bmpWidth := Width;
+      bmpHeight := Height;
+    End;
+    StrideCount := 0;
 
-    End
+    if FSavingOptions.AutoFormat then
+    begin
+      if Self.CheckIfTransparent(IgnoreAlpha) then ABitCount := 32 else
+      ABitCount := 24;
+      FormatVersion := bmpht_WindowsV1;
+      CompressionMode := BMP_COMPRESSION_NONE;
+      ImageDataSize := (bmpWidth * bmpHeight) * (ABitCount Div 8);
+      if ABitCount = 24 then
+      begin
+        StrideCount := ((Round((ABitCount * bmpWidth + 31) shr 5) shl 2) - (bmpWidth * 3));
+        ImageDataSize := ImageDataSize  + (bmpHeight * StrideCount);
+      end;
+    end
     else
     begin
+      Case FSavingOptions.BitsPerPixel of
+        shpf24bit : ABitCount := 24;
+        shpf32bit : ABitCount := 32;
+      end;
+      Case ABitCount of
+         24 :
+         begin
+           Case FSavingOptions.Compression of
+             shcNone :
+             begin
+               FormatVersion := bmpht_WindowsV1;
+               CompressionMode := BMP_COMPRESSION_NONE;
+             end;
+             shcBitfield :
+             begin
+               FormatVersion := bmpht_WindowsV2;
+               CompressionMode := BMP_COMPRESSION_BITF;
+               InitBitFieldMasks;
+             end;
+           end;
+           ImageDataSize := (bmpWidth * bmpHeight) * 3;
+           StrideCount := ((Round((ABitCount * bmpWidth + 31) shr 5) shl 2) - (bmpWidth * 3));
+           ImageDataSize := ImageDataSize  + (bmpHeight * StrideCount);
+         end;
+         32 :
+         begin
+           Case FSavingOptions.Compression of
+             shcNone :
+             begin
+               FormatVersion := bmpht_WindowsV1;
+               CompressionMode := BMP_COMPRESSION_NONE;
+             end;
+             shcBitfield :
+             begin
+               FormatVersion := bmpht_WindowsV3;
+               CompressionMode := BMP_COMPRESSION_BITF;
+               InitBitFieldMasks;
+             end;
+           end;
+           ImageDataSize := (bmpWidth * bmpHeight) * 4;
+         end;
+       end;
+    end;
+    TotalHeaderSize := 14 + 4 +  getInfoHeaderSize(FormatVersion); // +(paletteormasksize)
+    TotalFileSize := TotalHeaderSize + ImageDataSize;
+  end;
 
-    End;
-  End;
-End;
-
-procedure TBZBitmapBMPImage.SaveImageData;
-var
-  x,y : Integer;
-  AColor : TBZColor;
-  ColorBGR24 : TBZColorBGR_24;
-  ColorBGRA32 : TBZColor;
-begin
-  Case ABitCount of
-    1:
+  function CreateFileHeader : TBZBMPFileHeader;
+  begin
+    with Result do
     begin
+      bfType := BMP_MAGIC_WINBMP;
+      bfSize := TotalFileSize;
+      bfReserved1 := 0;
+      bfReserved2 := 0;
+      bfOffBits := TotalHeaderSize;
+    end;
+  end;
 
-    End;
-    2:
-    begin
-
-    End;
-    4:
-    begin
-
-    End;
-    8:
-    begin
-
-    End;
-    15 :
-    begin
-
-    End;
-    24 :
-    begin
-      For y:=MaxHeight downto 0 do
-      begin
-        For X:=0 to MaxWidth do
+  function CreateHeader(aVersion : TBZBMPHeaderType) : TBZBitmapBMPInfoHeader;
+  begin
+    Case aVersion of
+      bmpht_unknown : raise EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : En-tête inconnue');
+      bmpht_Os21x, bmpht_Os22x : raise EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : '+#13+#10+
+                                                                     ' Type Os21x et Os22x non supportés');
+      bmpht_WindowsV4, bmpht_WindowsV5 : EBZSaveImageException.Create('Erreur lors de la sauvegarde de l''image BMP : '+#13+#10+
+                                                                         ' Type Windows Version 4 et 5 non supportés');
+      bmpht_WindowsV1 :
+      Begin
+        With Result.WindowsV1 Do
         begin
-          AColor := GetPixel(X,Y);
-          //Format BGR
-          //ColorBGR24 :=AColor.SwapRBChannels.; SwapChannels(scmToBGR). .AsVector3b; //BZColorToBGR24(AColor);
-          ColorBGR24.Blue := AColor.Blue;
-          ColorBGR24.Green := AColor.Green;
-          ColorBGR24.Red := AColor.Red;
-          Memory.Write(ColorBGR24,3);
-          //if ImageDescription.RowStrideLength>0 then  // padding de fin de ligne
-          //for i:=1 to ImageDescription.RowStrideLength do Memory.WriteByte(0);
+          biWidth           := bmpWidth;
+          biHeight          := bmpHeight;
+          biPlanes          := 1;
+          if ABitCount = 15 then biBitCount:=16 else   biBitCount:= ABitCount;
+          biCompression     := CompressionMode;
+          biSizeImage := ImageDataSize;
+          biXPixelsPerMeter:= 2835; //72 DPI
+          biYPixelsPerMeter:= 2835;
+          //if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
+          biClrUsed:=0;
+          biClrImportant:=0;
         End;
       End;
-    End;
-    32 :
-    begin
-      For y:=MaxHeight downto 0 do
+      bmpht_WindowsV2 :
       begin
-        For X:=0 to MaxWidth do
+        With Result.WindowsV2 Do
         begin
-          AColor := GetPixel(X,Y);
-          {$IFDEF LINUX}
-          AColor := AColor.SwapRBChannels;
-          {$ENDIF}
-          Memory.Write(AColor,4);
+          biWidth           := bmpWidth;
+          biHeight          := bmpHeight;
+          biPlanes          := 1;
+          biBitCount        := 24;
+          //if ABitCount = 15 then biBitCount:=16 else   biBitCount:= ABitCount;
+          biCompression     := BMP_COMPRESSION_BITF; //ComputeCompressionType;
+          biSizeImage := ImageDataSize;
+          biXPixelsPerMeter := 2835; //72 DPI
+          biYPixelsPerMeter := 2835;
+          //if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
+          biClrUsed :=0;
+          biClrImportant :=0;
+          biRedMask   := RedMask;
+          biGreenMask := GreenMask;
+          biBlueMask  := BlueMask;
+        End;
+      end;
+      bmpht_WindowsV3 :
+      begin
+        With Result.WindowsV3 Do
+        begin
+          biWidth           := bmpWidth;
+          biHeight          := bmpHeight;
+          biPlanes          := 1;
+          biBitCount        := 32;
+          //if ABitCount = 15 then biBitCount:=16 else   biBitCount:= ABitCount;
+          biCompression     := BMP_COMPRESSION_BITF; //ComputeCompressionType;
+          biSizeImage := ImageDataSize;
+          biXPixelsPerMeter := 2835; //72 DPI
+          biYPixelsPerMeter := 2835;
+          //if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
+          biClrUsed :=0;
+          biClrImportant :=0;
+          biRedMask   := RedMask;
+          biGreenMask := GreenMask;
+          biBlueMask  := BlueMask;
+          biAlphaMask := AlphaMask;
+        End;
+      end;
+
+      {bmpht_WindowsV4 :
+      Begin
+        With Result.WindowsV4 Do
+        begin
+          biWidth           := bmpWidth;
+          biHeight          := bmpHeight;
+          biPlanes          := 1;
+          biBitCount        := ABitCount;
+
+          biCompression     := ComputeCompressionType;
+          //biSizeImage:=0;          //Ce paramètre est calculer un peu plus tard
+          biXPixelsPerMeter:=100;
+          biYPixelsPerMeter:=100;
+          if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
+          biClrImportant:=0;
+
+         (* biRedMask: Longword;             //< Masque Couleur Rouge
+          biGreenMask: Longword;           //< Masque Couleur Vert
+          biBlueMask: Longword;            //< Masque Couleur Bleu
+          biAlphaMask: Longword;           //< Masque Couleur Alpha
+
+          biCSType: Longword;              //< Type de l'espace de couleur CIE
+          biEndpoints: TBZBMP_CIEXYZCoordTriple; //< "Color space endpoints"
+
+          biGammaRed: Longword;            //< Correction Gamma Rouge
+          biGammaGreen: Longword;          //< Correction Gamma Vert
+          biGammaBlue: Longword;           //< Correction Gamma Bleu  *)
         End;
       End;
-    End;
-    // 64 :
-  End;
-End;
+      bmpht_WindowsV5 :
+      begin
+        With Result.WindowsV5 Do
+        begin
+          biWidth           := bmpWidth;
+          biHeight          := bmpHeight;
+          biPlanes          := 1;
+          biBitCount        := ABitCount;
 
-Procedure TBZBitmapBMPImage.SaveToMemory();
+          biCompression     := ComputeCompressionType;
+          //biSizeImage:=0;          //Ce paramètre est calculer un peu plus tard
+          biXPixelsPerMeter:=100;
+          biYPixelsPerMeter:=100;
+          if ABitCount<=8 then biClrUsed:=ComputePaletteOrMaskSize else biClrUsed:=0;
+          biClrImportant:=0;
+
+         (* biRedMask: Longword;             //< Masque Couleur Rouge
+          biGreenMask: Longword;           //< Masque Couleur Vert
+          biBlueMask: Longword;            //< Masque Couleur Bleu
+          biAlphaMask: Longword;           //< Masque Couleur Alpha
+
+          biCSType: Longword;              //< Type de l'espace de couleur CIE
+          biEndpoints: TBZBMP_CIEXYZCoordTriple; //< "Color space endpoints"
+
+          biGammaRed: Longword;            //< Correction Gamma Rouge
+          biGammaGreen: Longword;          //< Correction Gamma Vert
+          biGammaBlue: Longword;           //< Correction Gamma Bleu
+
+          biIntent: Longword;              //< "rendering intent"
+
+          biProfileData: Longword;         //< Position des données du profile de couleur
+          biProfileSize: Longword;         //< Taille des données du profile de couleur
+
+          biReserved: Longword;            //< Réservé *)
+        End;
+      End; }
+    end;
+  end;
+
+  procedure SaveHeader;
+  var
+    BIH : TBZBitmapBMPInfoHeader;
+    BFH : TBZBMPFileHeader;
+    HeaderSize : LongWord;
+  begin
+    BFH := CreateFileHeader;
+    BIH := CreateHeader(FormatVersion);
+    Memory.Write(BFH,14);
+
+    HeaderSize := 4 + getInfoHeaderSize(FormatVersion);
+    Memory.WriteLongWord(HeaderSize);
+    Case FormatVersion of
+       bmpht_WindowsV1 : Memory.Write(BIH.WindowsV1,36);
+       bmpht_WindowsV2 : Memory.Write(BIH.WindowsV2,48);
+       bmpht_WindowsV3 : Memory.Write(BIH.WindowsV3,52);
+       //bmpht_WindowsV4 : Memory.Write(BIH.WindowsV4,104);
+       //bmpht_WindowsV5 : Memory.Write(BIH.WindowsV5,120);
+    end;
+  end;
+
+  //procedure SavePalette;
+
+  procedure SaveData;
+  var
+    x,y,i : Integer;
+    ColorBGR24 : TBZColorBGR_24;
+    Color32 : TBZColor;
+  begin
+    Case ABitCount of
+      //1:
+      //2:
+      //4:
+      //8:
+      //15:
+      //16 :
+
+      24 :
+      begin
+        For y:= Self.MaxHeight downto 0 do
+        begin
+          For x:= 0 to Self.MaxWidth do
+          begin
+            Color32 := Self.getPixel(x,y);
+            //Format BGR
+            ColorBGR24.Blue := Color32.Blue;
+            ColorBGR24.Green := Color32.Green;
+            ColorBGR24.Red := Color32.Red;
+            Memory.Write(ColorBGR24,3);
+          End;
+           if StrideCount > 0 then  // padding de fin de ligne
+              for i:=1 to StrideCount do Memory.WriteByte(0);
+          AdvanceProgress(Delta,0,1,False);
+        End;
+      end;
+      32 :
+      begin
+        For y:= Self.MaxHeight downto 0 do
+        begin
+          For x:= 0 to Self.MaxWidth do
+          begin
+            Color32 := Self.getPixel(x,y);
+            {$IFDEF LINUX}
+            Color32 :=Color32.SwapRBChannels;
+            {$ENDIF}
+            //GlobalLogger.LogNotice('Save pixel at (' + x.ToString + ', ' + y.ToString + ') Color = ' + AColor.ToString);
+            Memory.Write(Color32,4);
+          End;
+          AdvanceProgress(Delta,0,1,False);
+        End;
+      end;
+    end;
+  end;
+
 begin
-  DataFormatDesc.VersionAsInteger := 1;
-  DataFormatDesc.Encoding := etBitFields;
-  AbitCount := 32;
+  InitProgress(Self.Width,Self.Height);
+  StartProgressSection(0, ''); // On debute une nouvelle section globale
+  Delta := 100 / Self.Height;
+  StartProgressSection(100 ,'Enregistrement de l''image au format BMP');
+  DetectFormat;
   SaveHeader;
-  if ImageDescription.UsePalette then SavePalette;
-  SaveImageData;
+  //SavePalette
+  SaveData;
+  FinishProgressSection(False);
+  FinishProgressSection(True);
 End;
 
 {%endregion%}

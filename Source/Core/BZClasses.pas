@@ -666,6 +666,11 @@ Type
 
   { Decrit l'algorithme de compression utilisé dans un fichier }
   TBZEncodingType = (etNone, etBitFields, etRLE, etHuffman, etLZW, etLZ77, etThunder, etJPEG, etVP8, etNotSupported, etUnknown);
+
+Const
+  cBZEncodingTypeStr : array[TBZEncodingType] of String = ('Aucune', 'BitFields', 'RLE', 'Huffman', 'LZW', 'LZ77', 'Thunder', 'JPEG', 'VP8', 'Non supporté', 'Inconnue');
+
+Type
   { Description minimale pour la prise en charge d'un format de fichier spécifique }
   TBZDataFileFormatDesc = Class(TObject)
   Private
@@ -2554,6 +2559,7 @@ Constructor TBZUpdateAbleObject.Create;
 Begin
   Inherited Create;
   FOwner := nil;
+  FUpdating := 0
 End;
 
 Constructor TBZUpdateAbleObject.Create(AOwner: TPersistent);

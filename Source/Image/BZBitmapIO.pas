@@ -43,7 +43,7 @@ Uses
   Classes, Sysutils,
 
   BZImageFileBMP, BZImageFileXPM, BZImageFileTGA, BZImageFilePCX, BZImageFilePPM,
-  BZImageFileJPEG, BZImageFilePNG, BZImageFileGIF, BZImageFileWEBP;
+  BZImageFileJPEG, BZImageFilePNG, BZImageFileGIF, BZImageFileWEBP; {, BZImageFileTIFF;}
 
  { TODO -oBZBitmap -cIO : Prise en charge de nouveaux formats de fichier image
     - BZImageFileICO

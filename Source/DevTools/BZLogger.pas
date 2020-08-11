@@ -1113,7 +1113,7 @@ begin
   if Not(FEnabled) then Exit;
   LastCount:=0;
 
-  while  not(Terminated)  do //  (not(Terminated) and (LastCount=0))
+  while (not(Terminated))  do //  (not(Terminated) and (LastCount=0))
   begin
     try
       LItem := nil;

@@ -1732,7 +1732,8 @@ type
 	  Plus d'informations : @br
     @unorderedlist(
       @item(http://developer.download.nvidia.com/cg/lerp.html)
-      @item(https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/mix.xhtml) }
+      @item(https://www.khronos.org/registry/OpenGL-Refpages/gl4/html/mix.xhtml) 
+    )}
     function Lerp(Constref B: TBZVector2f; Constref T:Single): TBZVector2f;
 
     { Accès rapide aux propriétés de "Swizzling" comme dans HLSL et GLSL }
@@ -1865,9 +1866,10 @@ type
     { @abstract(Translation du point depuis le centre "Center"  a une distance "ADistance")
 
       Si "AFromCenterSpot" est à :  @br
-      @unordredlist(
+      @unorderedlist(
 	      @item( @true : la distance, est la distance que le point doit garder du centre)
-	      @item( @false : la distance, est la distance que le point doit se déplacer de sa position actuelle par rapport au centre. )) }
+	      @item( @false : la distance, est la distance que le point doit se déplacer de sa position actuelle par rapport au centre. )
+      ) }
     function ShiftObjectFromCenter(Constref ACenter: TBZVector; const ADistance: Single; const AFromCenterSpot: Boolean): TBZVector;
 
     { Retourne la moyenne de quatre point représentant un plan }

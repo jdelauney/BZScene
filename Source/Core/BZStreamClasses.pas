@@ -422,9 +422,9 @@ Implementation
 Uses Dialogs, zdeflate, zinflate,
      BZSystem, BZUtils
      //, BZCrossPlateFormTools
-     {$IFDEF DEBUG}
+     {.$IFDEF DEBUG}
      ,BZLogger
-     {$ENDIF};
+     {.$ENDIF};
 
 
 Const
@@ -584,7 +584,9 @@ procedure TBZCustomBufferedStream.WriteBuffer;
 var
   SeekResult: Integer;
 begin
-  {$IFDEF DEBUG}GlobalLogger.LogNotice('Ecriture du fichier sur le disque');{$ENDIF}
+  {.$IFDEF DEBUG}
+  GlobalLogger.LogNotice('Ecriture du fichier sur le disque');
+  {.$ENDIF}
   If Not (Assigned(Buffer)) Then Exit; // rien à écrire
  // if Not(NeedStreamWrite) or (BytesInBuf<=0) then exit; // On n'a pas demandé l'ecriture ou il n'y a rien à écrire
 
@@ -680,21 +682,21 @@ Var
   CachePtr, BufferPtr: PByte;
  // BytesWritten : Longint;
 Begin
-  {$IFDEF DEBUG}
+  {.$IFDEF DEBUG}
     //{$IFDEF DEBUGLOG}
-    //  GlobalLogger.LogNotice('Write Data in Buffer : '+Inttostr(Count)+' Octets');
-    //  GlobalLogger.LogStatus(' - Stream Position : '+Inttostr(Position));
-    //  GlobalLogger.LogStatus(' - Buffer Position : '+Inttostr(BufferPosition));
-    //  GlobalLogger.LogStatus(' - Bytes in buf  : '+Inttostr(BytesInBuf));
-    //  GlobalLogger.LogStatus(' - Stream Bytes Left : '+Inttostr(StreamBytesLeft));
-    //  GlobalLogger.LogStatus(' - Stream Size : '+Inttostr(StreamSize));
-    //  GlobalLogger.LogStatus(' - Buffer Size : '+Inttostr(BufferSize));
+      //GlobalLogger.LogNotice('Write Data in Buffer : '+Inttostr(Count)+' Octets');
+      //GlobalLogger.LogStatus(' - Stream Position : '+Inttostr(Position));
+      //GlobalLogger.LogStatus(' - Buffer Position : '+Inttostr(BufferPosition));
+      //GlobalLogger.LogStatus(' - Bytes in buf  : '+Inttostr(BytesInBuf));
+      //GlobalLogger.LogStatus(' - Stream Bytes Left : '+Inttostr(StreamBytesLeft));
+      //GlobalLogger.LogStatus(' - Stream Size : '+Inttostr(StreamSize));
+      //GlobalLogger.LogStatus(' - Buffer Size : '+Inttostr(BufferSize));
     //{$ENDIF}
-  {$ENDIF}
+  {.$ENDIF}
   Result := 0;
   NumOfBytesLeft := Count;
- // If (BufferSize>0) and (BytesInBuf+1 > pred(BufferSize)) Then Save;
-  If Not (Assigned(Buffer)) Then SetSize(BufferDefaultSize);
+  If (Assigned(Buffer)) and (BufferSize>0) and (BytesInBuf + NumOfBytesLeft > pred(BufferSize)) Then Save;
+  If Not(Assigned(Buffer)) Then SetSize(BufferDefaultSize);
   BufferPtr := @aBuffer;
  // NumOfBytesToCopy := 0;
   While NumOfBytesLeft > 0 Do
@@ -703,9 +705,11 @@ Begin
     If (BufferPosition + NumOfBytesLeft) >= pred(BufferSize) Then NumOfBytesToCopy := Pred(BufferSize) - BufferPosition;
     NumOfBytesWriteLeft := NumOfBytesLeft-NumOfBytesToCopy;
     //if NumOfBytesWriteLeft < 0 then NumOfBytesWriteLeft:=0;
-
+    //GlobalLogger.LogStatus(' - NumOfBytesToCopy : '+Inttostr(NumOfBytesToCopy));
+    //GlobalLogger.LogStatus(' - NumOfBytesWriteLeft : '+Inttostr(NumOfBytesWriteLeft));
     if NumOfBytesToCopy>0 then
     begin
+      //GlobalLogger.LogNotice('---> Ecriture du tampon');
       CachePtr := Buffer;
       Inc(CachePtr, BufferPosition);
       Move(BufferPtr^,CachePtr^, NumOfBytesToCopy);
@@ -722,6 +726,7 @@ Begin
     end
     else
     begin
+      //GlobalLogger.LogNotice('---> Ecriture des données dans le cache');
       CachePtr := Buffer;
       Inc(CachePtr, BufferPosition);
       Move(BufferPtr^, CachePtr^, NumOfBytesWriteLeft);

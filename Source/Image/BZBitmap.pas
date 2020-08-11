@@ -567,6 +567,8 @@ Type
   Public
     Constructor Create(AOwner: TPersistent; AWidth, AHeight: Integer);override;
     Constructor Create(aWidth, aHeight: Integer); Override;
+    Constructor Create(aWidth, aHeight: Integer; FillColor : TBZColor); Overload;
+
     Constructor Create;override;
     Destructor Destroy; Override;
 
@@ -586,7 +588,8 @@ Type
     Procedure SaveToFile(Const FileName: String); Override;
 
     { Applique un masque à l'image }
-    procedure ApplyMask(Const FreeAfter:Boolean = True);
+    procedure ApplyMask(Const FreeAfter:Boolean = True); overload;
+    procedure ApplyMask(MaskBmp : TBZBitmap); overload;
 
     { Applique une operation arithmetique avec un autre image. (cf : PutImageBlend) }
     procedure ArithmeticBlend(BlendMap : TBZBitmap; ColorOperator :  TBZColorCombineMode);
@@ -1061,9 +1064,13 @@ Type
 
   { Classe d'aide surtout utile pour l'integration d'un bitmap dans un composant (non) visuel.@br
     Elle permet également de définir le format les options adequates pour la sauvegarde d'une image. }
-  TBZPicture = Class(TBZPersistentObject)
+
+  { TBZPicture }
+
+  TBZPicture = Class(TBZPersistentObject, IBZNotifyAble)
   Private
     FBitmap: TBZBitmap;
+    FOnChange: TNotifyEvent;
 
     Procedure SetBitmap(Const aBitmap: TBZBitmap);
   Protected
@@ -1077,6 +1084,9 @@ Type
     procedure WriteToFiler(writer: TVirtualWriter); override;
     procedure ReadFromFiler(reader: TVirtualReader); override;
 
+    { Notifie un changement dans l'objet. L'énènement se propagera dans les objets propriétaires (Owner) de celui-ci }
+    Procedure NotifyChange(Sender: TObject); Virtual;
+
     { Charge un fichier image }
     Procedure LoadFromFile(Const aFileName: String); Overload;
     { Enregistre un fichier image }
@@ -1084,6 +1094,8 @@ Type
   Public
     { Bitmap }
     Property Bitmap: TBZBitmap read FBitmap write SetBitmap;
+    { Evènement levé lors d'une changement d'état de l'objet }
+    Property OnChange: TNotifyEvent read FOnChange write FOnChange;
   End;
 
 
@@ -2485,7 +2497,7 @@ procedure TBZHistogram.DrawTo(Dst : TBZBitmap; HistoChannel : TBZHistorgramDrawM
 const
   cGradientBarHeight = 8;
   cAxisBarHeight = 8;
-  cMargin = 4;
+  cMargin = 0;
   //cAxisMargin = 16;
 
   cBaseLog = 2.71828;  // the base of the logarithm
@@ -2540,7 +2552,12 @@ Var
       Dst.Canvas.MoveTo(GridRect.Left, GridRect.Top + (y*GridRect.Height) div 5);
       Dst.Canvas.LineTo(GridRect.Right, GridRect.Top + (y*GridRect.Height) div 5);
     end;
-
+    // Vertical Lines
+    for y := 0 TO 4 DO
+    begin
+      Dst.Canvas.MoveTo(GridRect.Left + (y*GridRect.Width) div 5, GridRect.Top);
+      Dst.Canvas.LineTo(GridRect.Left + (y*GridRect.Width) div 5, GridRect.Bottom);
+    end;
     Dst.Canvas.Rectangle(GridRect);
   end;
 
@@ -2700,14 +2717,14 @@ begin
     ComputeStatistics;
   end;
 
-  Dst.Clear(clrGray);
+  //Dst.Clear(clrGray);
 
   //w := Dst.Width - (cMargin * 2);
   //h := Dst.Height - (cMargin * 2);
-  StartX := cMargin + 1;
-  StartY := cMargin + 1;
-  EndX := Dst.MaxWidth - cMargin - 1;
-  EndY := Dst.MaxHeight - cMargin - 1;
+  StartX := 0;//cMargin + 1;
+  StartY := 0;//cMargin + 1;
+  EndX := Dst.MaxWidth; //- cMargin - 1;
+  EndY := Dst.MaxHeight; //- cMargin - 1;
   x1 := StartX;
   x2 := EndX;
   y1 := StartY;
@@ -9636,7 +9653,7 @@ end;
 
 {%region ====[ TBZBitmap ]======================================================}
 
-constructor TBZBitmap.Create(AOwner : TPersistent; AWidth, AHeight : Integer);  //Const Indexed : Boolean=false
+Constructor TBZBitmap.Create(AOwner: TPersistent; AWidth, AHeight: Integer);  //Const Indexed : Boolean=false
 Begin
   Inherited Create(AOwner, aWidth, aHeight);
   FMask := nil;
@@ -9674,17 +9691,23 @@ Begin
   FLastDrawMode := 0;
 End;
 
-constructor TBZBitmap.Create(aWidth, aHeight : Integer);
+Constructor TBZBitmap.Create(aWidth, aHeight: Integer);
 Begin
   Create(nil, aWidth, aHeight);
 End;
 
-constructor TBZBitmap.Create;
+Constructor TBZBitmap.Create;
 Begin
   Create(nil, 1, 1);
 End;
 
-destructor TBZBitmap.Destroy;
+Constructor TBZBitmap.Create(aWidth, aHeight: Integer; FillColor: TBZColor);
+begin
+  Create(aWidth, aHeight);
+  Clear(FillColor);
+end;
+
+Destructor TBZBitmap.Destroy;
 Begin
   FreeAndNil(FAnimateTimer);
   FreeAndNil(FHistogram);
@@ -9703,7 +9726,7 @@ Begin
   Inherited Destroy;
 End;
 
-procedure TBZBitmap.Assign(Source : TPersistent);
+Procedure TBZBitmap.Assign(Source: TPersistent);
 Begin
   Inherited Assign(Source);
 End;
@@ -9732,7 +9755,7 @@ End;
 //  FUseMask := Value;
 //End;
 
-procedure TBZBitmap.SetSize(NewWidth, NewHeight : Integer);
+Procedure TBZBitmap.SetSize(NewWidth, NewHeight: Integer);
 Begin
   Inherited SetSize(NewWidth, NewHeight);
   if FUseMask then if (FMask<>nil) then FMask.SetSize(NewWidth, NewHeight);
@@ -9746,7 +9769,7 @@ End;
 //End;
 
 
-procedure TBZBitmap.SaveToFile(const FileName : String);
+Procedure TBZBitmap.SaveToFile(Const FileName: String);
 Var
   BaseImageClass: TBZBitmapClass;
   tempImage:      TBZCustomBitmap;
@@ -9760,28 +9783,28 @@ Begin
   TempImage.OnProgress := Self.OnProgress;
   Try
     //GlobalLogger.LogNotice('--> Format found : '+TempImage.ClassName);
-    tempImage.Assign(Self);
+    //tempImage.Assign(Self);
+    tempImage.AssignBitmapAsRef(Self);
     tempImage.SaveToFile(FileName);
   Finally
     FreeAndNil(tempImage);
   End;
 End;
 
-procedure TBZBitmap.ApplyMask(const FreeAfter : Boolean);
+procedure TBZBitmap.ApplyMask(Const FreeAfter: Boolean);
 var
   SrcPtr, DstPtr : PBZColor;
   I : Integer;
   AColor: TBZColor;
   ADelta : Single;
 begin
-  if Not(UseMask) then exit;
+  if Not(Assigned(FMask)) then exit;
   Assert((FMask.Width<>Width) or (FMask.Height<>Height),'Le masque doit avoir les même dimensions que le bitmap');
   SrcPtr := FMask.getSurfaceBuffer;
   DstPtr := GetSurfaceBuffer;
   I:=0;
 
-  if FMaskApply then
-  begin
+
     While (I<=FMask.MaxSize) do
     begin
      (* if not(FMask.ApplyAlpha) then
@@ -9804,7 +9827,7 @@ begin
       Inc(SrcPtr);
       Inc(DstPtr);
     End;
-  end;
+
 
   if FreeAfter then
   begin
@@ -9812,6 +9835,32 @@ begin
     FUseMask := False;
   end;
 End;
+
+procedure TBZBitmap.ApplyMask(MaskBmp: TBZBitmap);
+var
+  SrcPtr, DstPtr : PBZColor;
+  I : Integer;
+  SrcColor, DstColor: TBZColor;
+begin
+  Assert((MaskBmp.Width<>Width) and (MaskBmp.Height<>Height),'Le masque doit avoir les même dimensions que le bitmap');
+  SrcPtr := MaskBmp.getSurfaceBuffer;
+  DstPtr := GetSurfaceBuffer;
+  I:=0;
+  While (I<=FMask.MaxSize) do
+  begin
+    if SrcPtr^.Red>0 then
+    begin
+      DstColor := DstPtr^;
+      DstColor.Alpha := SrcPtr^.Red;// DstPtr^.Alpha;
+    End
+    else DstColor := clrTransparent;
+
+    DstPtr^ := DstColor;
+    inc(I);
+    Inc(SrcPtr);
+    Inc(DstPtr);
+  End;
+end;
 
 procedure TBZBitmap.ArithmeticBlend(BlendMap : TBZBitmap; ColorOperator : TBZColorCombineMode);
 begin
@@ -9970,11 +10019,15 @@ Begin
 End;
 
 
+
+
+
+
 {%endregion%}
 
 {%region ====[ TBZPicture ]=====================================================}
 
-constructor TBZPicture.Create;
+Constructor TBZPicture.Create;
 Begin
   //GlobalLogger.LogNotice('TBZPicture.Create');
   Inherited Create;
@@ -9982,7 +10035,7 @@ Begin
   FBitmap.Clear(clrTransparent);
 End;
 
-destructor TBZPicture.Destroy;
+Destructor TBZPicture.Destroy;
 Begin
   FreeAndNil(FBitmap);
   Inherited Destroy;
@@ -10046,6 +10099,11 @@ begin
     RaiseFilerException(archiveVersion);
 end;
 
+Procedure TBZPicture.NotifyChange(Sender: TObject);
+begin
+  If Assigned(FOnChange) Then FOnChange(Self);
+end;
+
 procedure TBZPicture.DefineProperties(Filer: TFiler);
 begin
   inherited;
@@ -10088,7 +10146,7 @@ begin
   //Stream.Write(bmpBuffer^,FBitmap.Size);
 end;
 
-procedure TBZPicture.SetBitmap(const aBitmap : TBZBitmap);
+Procedure TBZPicture.SetBitmap(Const aBitmap: TBZBitmap);
 Begin
   //GlobalLogger.LogNotice('TBZPicture.SetBitmap');
   With FBItmap Do
@@ -10097,20 +10155,22 @@ Begin
     Clear(clrTransparent);
     //PutImage(aBitmap, 0, 0, aBitmap.Width, aBitmap.Height, 0, 0);
     assign(aBitmap);
+    NotifyChange(Self);
   End;
 End;
 
 //procedure ReadFiler
 //procedure WriteFiler
 
-procedure TBZPicture.LoadFromFile(const aFileName : String);
+Procedure TBZPicture.LoadFromFile(Const aFileName: String);
 Begin
   //GlobalLogger.LogNotice('TBZPicture.LoadFromFile');
   FBitmap.LoadFromFile(aFileName);
+  NotifyChange(Self);
   //GlobalLogger.LogStatus('TBZPicture.FBitmap.FullFileName : ' + FBitmap.FullFileName);
 End;
 
-procedure TBZPicture.SaveToFile(const aFileName : String); //aFormat : TBZImageFileFormats; Options : Pointer);
+Procedure TBZPicture.SaveToFile(Const aFileName: String); //aFormat : TBZImageFileFormats; Options : Pointer);
 Begin
   FBitmap.SaveToFile(aFileName);
 End;
