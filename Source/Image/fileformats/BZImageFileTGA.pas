@@ -156,11 +156,13 @@ Type
   private
     FCompressed : Boolean;
     FBitsPerPixel : TBZPixelFormat;
+    FAutoFormat : Boolean;
   public
     Constructor Create; override;
 
     property Commpressed : Boolean read FCompressed write FCompressed;
     property BitsPerPixel : TBZPixelFormat read FBitsPerPixel write FBitsPerPixel;
+    property AutoFormat    : Boolean read FAutoFormat write FAutoFormat;
   end;
 
   { TBZBitmapTGAImage }
@@ -204,6 +206,7 @@ begin
   inherited Create;
   FCompressed := False;
   FBitsPerPixel := pf32bits;
+  FAutoFormat := True;
 end;
 
 
@@ -313,8 +316,6 @@ Begin
      //GlobalLogger.LogStatus('TGA is Valid :'+Result.ToString());
   end;
 End;
-
-
 
 Procedure TBZBitmapTGAImage.LoadFromMemory();
 Var
@@ -867,6 +868,17 @@ procedure TBZBitmapTGAImage.SaveToMemory();
 Var
   Delta : Single;
 
+  procedure DetectFormat;
+  Var
+    IgnoreAlpha : Boolean;
+  begin
+    if FSavingOptions.AutoFormat then
+    begin
+     if Self.CheckIfTransparent(IgnoreAlpha) then FSavingOptions.BitsPerPixel :=  pf32bits
+     else FSavingOptions.BitsPerPixel :=  pf24bits;
+    end;
+  end;
+
   procedure SaveHeader;
   Var
     Header : TBZTGAFileHeader;
@@ -905,12 +917,14 @@ Var
   {$IFDEF LINUX}
     TmpBuffer : PBZColor;
   {$ENDIF}
-    BufferBGR : PBZColorBGR_24; //PBZColor24;
+    //BufferBGR : PBZColorBGR_24; //PBZColor24;
     BufferData : PBZColor;
+    ColorBGR24 : TBZColorBGR_24;
+    Color32 : TBZColor;
     BufferSize, PixelCount : Int64;
     BPP : Byte;
     RLEBuffer : PByte;
-    WriteLength : Integer;
+    WriteLength, x, y : Integer;
 
     function CountDiff(P: PBZColor; Count: Integer) : Integer;
     var
@@ -1092,24 +1106,49 @@ Var
     begin
       if FSavingOptions.BitsPerPixel = pf24bits then
       begin
-        BufferBGR := Self.ContvertToBGR24(BufferSize);
-        Memory.Write(BufferBGR^,BufferSize);
-        FreeMem(BufferBGR);
+        //BufferBGR := Self.ContvertToBGR24(BufferSize);
+        //Memory.Write(BufferBGR^,BufferSize);
+        //FreeMem(BufferBGR);
+        For y:= Self.MaxHeight downto 0 do
+        begin
+          For x:= 0 to Self.MaxWidth do
+          begin
+            Color32 := Self.getPixel(x,y);
+            //Format BGR
+            ColorBGR24.Blue := Color32.Blue;
+            ColorBGR24.Green := Color32.Green;
+            ColorBGR24.Red := Color32.Red;
+            Memory.Write(ColorBGR24,3);
+          End;
+          AdvanceProgress(Delta,0,1,False);
+        End;
       end
       else
       begin
-        BufferData := getSurfaceBuffer;
-        {$IFDEF LINUX}
-          BufferSize := Width * Height;
-          GetMem(TmpBuffer, Self.Size);
-          Move(BufferData^, TmpBuffer^, Self.Size);
-          SwapRBBuffer(TmpBuffer, BufferSize) ;
-          Memory.Write(TmpBuffer,Self.Size);
-          FreeMem(TmpBuffer);
-        {$ELSE}
-          Memory.Write(BufferData^,Self.Size);
-          AdvanceProgress(100,0,1,False);
-        {$ENDIF}
+        //BufferData := getSurfaceBuffer;
+        //{$IFDEF LINUX}
+        //  BufferSize := Width * Height;
+        //  GetMem(TmpBuffer, Self.Size);
+        //  Move(BufferData^, TmpBuffer^, Self.Size);
+        //  SwapRBBuffer(TmpBuffer, BufferSize) ;
+        //  Memory.Write(TmpBuffer,Self.Size);
+        //  FreeMem(TmpBuffer);
+        //{$ELSE}
+        //  Memory.Write(BufferData^,Self.Size);
+        //  AdvanceProgress(100,0,1,False);
+        //{$ENDIF}
+        For y:= Self.MaxHeight downto 0 do
+        begin
+          For x:= 0 to Self.MaxWidth do
+          begin
+            Color32 := Self.getPixel(x,y);
+            {$IFDEF LINUX}
+            Color32 :=Color32.SwapRBChannels;
+            {$ENDIF}
+            //GlobalLogger.LogNotice('Save pixel at (' + x.ToString + ', ' + y.ToString + ') Color = ' + AColor.ToString);
+            Memory.Write(Color32,4);
+          End;
+        end;
       end;
     end;
   end;
@@ -1138,6 +1177,7 @@ begin
   StartProgressSection(0, ''); // On debute une nouvelle section globale
   Delta := 100 / Self.Height;
   StartProgressSection(100 ,'Enregistrement de l''image au format TGA');
+  DetectFormat;
   SaveHeader;
   SaveData;
   SaveExtension;

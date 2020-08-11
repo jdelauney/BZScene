@@ -584,6 +584,12 @@ function ComputeLoGCenter(x, Sigma : Single) : Single;
 { Calcul du nombre d'Euler en fonction de "weight" }
 function ComputeEuler(Weight : Single) : Single;
 
+{ Retourne la valeur factorielle de x }
+function Factorial(x : Int64) : Int64;
+
+{ Retourne le x ème polynome de Berstein d'ordre n+1 évalué en u (appartenant à 0..1) }
+function ComputeBerstein(x, n : integer; u : Single) : Single;
+
 { Normalise une valeur en virgule flotantte comprise entre l'interval [InMin, InMax] vers l'interval [OutMin, OutMax] }
 function RangeMap(value, InMin, InMax, OutMin, OutMax : Single) : Single; overload;
 
@@ -2216,6 +2222,25 @@ begin
   Result := 1.0 / (2 * cPI * Math.Power(Weight, 2.0));
 end;
 
+function Factorial(x: Int64): Int64;
+Var
+ i, r : integer;
+begin
+ r:= 1;
+ for i:= 2 to x do
+ begin
+   r := r * i;
+ end;
+ result := r;
+end;
+
+function ComputeBerstein(x, n: integer; u: Single): Single;
+var
+ f : Single;
+begin
+ f := 1.0 - u;
+ result := factorial(n) / (factorial(x) * factorial(n-x)) * power(u, x) * power(f, n-x);
+end;
 
 //https://stackoverflow.com/questions/5731863/mapping-a-numeric-range-onto-another
 function RangeMap(value, InMin, InMax, OutMin, OutMax : Single) : Single;

@@ -64,7 +64,7 @@ Type
   { Définit le type d'intersection de deux lignes }
   TBZ2DLineIntersecType = (ilNone, ilIntersect, ilOverlap);
 
-  TBZCurveType = (ctBezier, ctBezierSpline, ctUniformSpline, ctCatmullRomSpline);
+  TBZCurveType = (ctBezier, ctSmoothBezier, ctBezierSpline, ctUniformSpline, ctCatmullRomSpline);
 
   TBZRasterItem = Packed Record
     xStart: Integer;
@@ -610,9 +610,21 @@ Type
   end;
 {%endregion}
 
+//  TBZ2DPolyBezierCurve = class(TBZFloatPointsContainer)
+
+{%region=====[ TBZ2DBezierSplineCurve ]================================================================================}
+
+
+{%endregion}
+//  TBZ2DCubicSplineCurve = class(TBZFloatPointsContainer)
+//  TBZ2DCatmullRomSplineCurve = class(TBZFloatPointsContainer)
+
 {%region=====[ TBZ2DCurves ]==========================================================================================}
 
   { Classe de gestion de courbes de bezier et spline }
+
+  { TBZ2DCurve }
+
   TBZ2DCurve = class(TBZFloatPointsContainer)
   private
     FCurveType : TBZCurveType;
@@ -620,13 +632,17 @@ Type
   protected
     function ComputeUniformSplineCurve : TBZArrayOfFloatPoints;
     function ComputeCatmullRomSplineCurve : TBZArrayOfFloatPoints;
-    function ComputeBSplineCurve : TBZArrayOfFloatPoints;
-    function ComputeContiniousBezierCurve : TBZArrayOfFloatPoints;
+
+    function ComputeBezierCurve : TBZArrayOfFloatPoints;
+    function ComputeSmoothBezierCurve : TBZArrayOfFloatPoints;
+    function ComputeBezierSplineCurve : TBZArrayOfFloatPoints;
   public
     Constructor Create(aCurveType : TBZCurveType); overload; virtual;
     Constructor Create(aCurveType : TBZCurveType; aControlPoints : TBZArrayOfFloatPoints); overload; virtual;
 
     function ComputePolylinePoints : TBZArrayOfFloatPoints;
+
+    property CurveType : TBZCurveType read FCurveType write FCurveType;
   end;
 
   {%endregion}
@@ -3745,6 +3761,472 @@ begin
   //Rotate(FEndPoint);
 end;
 
+{%endregion}
+
+{%region=====( TBZCubicBezierCurves ]======================================================================}
+
+Constructor TBZCubicBezierCurves.Create;
+begin
+  inherited Create;
+end;
+
+Destructor TBZCubicBezierCurves.Destroy;
+begin
+  Clear;
+  inherited Destroy;
+end;
+
+Function TBZCubicBezierCurves.GetCubicBezierCurveItem(index : Integer) : TBZ2DCubicBezierCurve;
+begin
+  Result := TBZ2DCubicBezierCurve(Get(Index));
+end;
+
+Procedure TBZCubicBezierCurves.SetCubicBezierCurveItem(index : Integer; val : TBZ2DCubicBezierCurve);
+begin
+  Put(Index, Val);
+end;
+
+procedure TBZCubicBezierCurves.Assign(source : TPersistent);
+Var
+  I : Integer;
+  NewItem : TBZ2DCubicBezierCurve;
+Begin
+  if (Source Is TBZCubicBezierCurves) then
+  begin
+    If TBZCubicBezierCurves(Source).Count > 0 then
+    begin
+      Clear;
+      For I := 0 to TBZCubicBezierCurves(Source).Count-1 do
+      begin
+        NewItem := TBZ2DCubicBezierCurve.Create;
+        NewItem.Assign(TBZCubicBezierCurves(Source).Items[I]);
+        AddCurve(NewItem);
+      End;
+    end;
+  End
+  else
+    Inherited Assign(source);
+end;
+
+procedure TBZCubicBezierCurves.WriteToFiler(writer : TVirtualWriter);
+begin
+  inherited WriteToFiler(writer);
+end;
+
+procedure TBZCubicBezierCurves.ReadFromFiler(reader : TVirtualReader);
+begin
+  inherited ReadFromFiler(reader);
+end;
+
+Procedure TBZCubicBezierCurves.Clear;
+begin
+  inherited Clear;
+end;
+
+function TBZCubicBezierCurves.AddCurve(aCurve: TBZ2DCubicBezierCurve) : Integer;
+begin
+  Result := Add(aCurve);
+end;
+
+{%endregion%}
+
+{%region=====[ TBZ2DCurve ]================================================================================}
+
+Constructor TBZ2DCurve.Create(aCurveType : TBZCurveType);
+begin
+  Inherited Create;
+  FCurveType := aCurveType;
+end;
+
+Constructor TBZ2DCurve.Create(aCurveType : TBZCurveType; aControlPoints : TBZArrayOfFloatPoints);
+begin
+  Create(aCurveType);
+  Self.AssignPoints(aControlPoints);
+end;
+
+function TBZ2DCurve.ComputeUniformSplineCurve : TBZArrayOfFloatPoints;
+begin
+
+end;
+
+function TBZ2DCurve.ComputeCatmullRomSplineCurve : TBZArrayOfFloatPoints;
+begin
+
+end;
+
+function TBZ2DCurve.ComputeSmoothBezierCurve : TBZArrayOfFloatPoints;
+Var
+  i,j, k  : Integer;
+  OutControlPoints, OutAnchorPoints, RenderingPoints : TBZArrayOfFloatPoints;
+  CubicCurve : TBZ2DCubicBezierCurve;
+  {$CODEALIGN VARMIN=16}
+  p0, p1, p2, p3, p4, tn : TBZFloatPoint;
+  {$CODEALIGN VARMIN=4}
+  d, d2 : single;
+begin
+
+  if (PointsList.Count < 2) then exit;
+
+  CubicCurve := TBZ2DCubicBezierCurve.Create;
+  RenderingPoints := TBZArrayOfFloatPoints.Create(32);
+  OutControlPoints := TBZArrayOfFloatPoints.Create(32);
+  OutAnchorPoints := TBZArrayOfFloatPoints.Create(32);
+  Result := TBZArrayOfFloatPoints.Create(32);
+
+  // Controls points
+  for i := 0 to (Self.PointsList.Count - 2) do
+  begin
+    p0 := Self.Points[i];
+    p1 := Self.Points[i + 1];
+    tn := p1 - p0;
+    p1 := tn / 3;
+    p2 := (tn + tn) / 3;
+    p3 := p0 + p1;
+    p4 := p0 + p2;
+    OutControlPoints.Add(p3);
+    OutControlPoints.Add(p4);
+  end;
+  // if FClosed then
+  //begin
+  //end;
+
+  // Anchor Points
+  //if FClosed then
+  //begin
+    //p0 := OutControlPoints.Items[0];
+  //end;
+  //else
+  OutAnchorPoints.Add(Self.Points[0]);
+  j := 1;
+  for i := 0 to  (Self.PointsList.Count - 3) do
+  begin
+    p1 := OutControlPoints.Items[j];
+    p2 := OutControlPoints.Items[j + 1];
+    p3 := (p1 + p2) * 0.5;
+    OutAnchorPoints.Add(p3);
+    inc(j, 2);
+  end;
+  // if FClosed then OutAnchorPoints.Add(Self.Points[0])
+  //else
+  OutAnchorPoints.Add(Self.Points[(Self.PointsList.Count - 1)]);
+
+  // Update curve control points
+  j := 0;
+  for i := 0 to  (OutAnchorPoints.Count - 2) do
+  begin
+    //Result.Add(OutAnchorPoints.Items[i]);
+    //Result.Add(OutControlPoints.Items[j]);
+    //Result.Add(OutControlPoints.Items[j + 1]);
+    //Result.Add(OutAnchorPoints.Items[i + 1]);
+    RenderingPoints.Clear;
+    CubicCurve.StartPoint := OutAnchorPoints.Items[i];
+    CubicCurve.ControlPointA := OutControlPoints.Items[j];
+    CubicCurve.ControlPointB := OutControlPoints.Items[j + 1];
+    CubicCurve.EndPoint := OutAnchorPoints.Items[i + 1];
+    RenderingPoints := CubicCurve.ComputePolyLinePoints();
+    for k := 0 to RenderingPoints.Count - 1 do
+    begin
+      Result.Add(RenderingPoints.Items[k]);
+    end;
+    inc(j, 2);
+  end;
+
+  FreeAndNil(RenderingPoints);
+  FreeAndNil(OutAnchorPoints);
+  FreeAndNil(OutControlPoints);
+  FreeAndNil(CubicCurve);
+end;
+
+function TBZ2DCurve.ComputeBezierSplineCurve: TBZArrayOfFloatPoints;
+Var
+  i,j, n  : Integer;
+  OutControlPointsA, OutControlPointsB, OutAnchorPoints : TBZArrayOfFloatPoints;
+  TmpA, TmpB, TmpC, TmpR : TBZArrayOfFloatPoints;
+  RenderingPoints : TBZArrayOfFloatPoints;
+  {$CODEALIGN VARMIN=16}
+  p1, p2, p3, p4 : TBZFloatPoint;
+  {$CODEALIGN VARMIN=4}
+  m : Single;
+begin
+  n := Self.PointsList.Count - 1;
+
+  if (n < 2) then exit;
+
+  TmpA := TBZArrayOfFloatPoints.Create(n);
+  TmpB := TBZArrayOfFloatPoints.Create(n);
+  TmpC := TBZArrayOfFloatPoints.Create(n);
+  TmpR := TBZArrayOfFloatPoints.Create(n);
+
+  p1.Create(1.0, 1.0);
+  p2.Create(4.0, 4.0);
+  p3.Create(1.0, 1.0);
+  p4 := Self.Points[0] + (Self.Points[1]  + Self.Points[1]);
+  TmpA.Add(p1);
+  TmpB.Add(p2);
+  TmpC.Add(p3);
+  TmpR.Add(p4);
+
+  for i := 1 to (n - 2) do
+  begin
+    p1.Create(1.0, 1.0);
+    p2.Create(4.0, 4.0);
+    p3.Create(1.0, 1.0);
+    p4 := (Self.Points[i] * 4) + (Self.Points[i + 1]  + Self.Points[i + 1]);
+    TmpA.Add(p1);
+    TmpB.Add(p2);
+    TmpC.Add(p3);
+    TmpR.Add(p4);
+  end;
+
+  p1.Create(2.0, 2.0);
+  p2.Create(7.0, 7.0);
+  p3.Create(0.0, 0.0);
+  p4 := (Self.Points[n - 1] * 8) + Self.Points[n];
+  TmpA.Add(p1);
+  TmpB.Add(p2);
+  TmpC.Add(p3);
+  TmpR.Add(p4);
+
+  for i := 1 to (n - 1) do
+  begin
+    p1 := TmpA.Items[i] / TmpB.Items[i-1];
+    TmpB.Items[i] := TmpB.Items[i] - (p1 * TmpC.Items[i - 1]);
+    TmpR.Items[i] := TmpR.Items[i] - (p1 * TmpR.Items[i - 1]);
+  end;
+
+  p1.Create(0,0);
+  OutControlPointsA := TBZArrayOfFloatPoints.Create(n);
+  for i := 0 to (n - 1) do
+  begin
+    OutControlPointsA.Add(p1);
+  end;
+  p4 := TmpR.Items[N - 1] /  TmpB.Items[N - 1];
+  OutControlPointsA.Items[(n - 1)] := p4;
+
+  for i := (n - 2) downto 0  do
+  begin
+    p1 := (TmpR.Items[i] - (TmpC.Items[i] * OutControlPointsA.Items[i + 1])) / TmpB.Items[i];
+    OutControlPointsA.Items[i] := p1;
+  end;
+
+  OutControlPointsB := TBZArrayOfFloatPoints.Create(n);
+  for i := 0  to (n - 1) do
+  begin
+    p1 := Self.Points[i + 1];
+    p2 := (p1 + p1) - OutControlPointsA.Items[i + 1];
+    OutControlPointsB.Add(p2);
+  end;
+
+  p1 :=  (Self.Points[N] + OutControlPointsA.Items[N - 1]) * 0.5;
+  OutControlPointsB.Add(p1);
+
+
+
+
+  RenderingPoints := TBZArrayOfFloatPoints.Create(32);
+  Result := TBZArrayOfFloatPoints.Create(32);
+
+  FreeAndNil(OutControlPointsB);
+  FreeAndNil(OutControlPointsA);
+  FreeAndNil(TmpR);
+  FreeAndNil(TmpC);
+  FreeAndNil(TmpB);
+  FreeAndNil(TmpA);
+end;
+
+function TBZ2DCurve.ComputeBezierCurve : TBZArrayOfFloatPoints;
+Var
+  OutControlPoints, RenderingPoints : TBZArrayOfFloatPoints;
+  QuadraticCurve : TBZ2DQuadraticBezierCurve;
+
+  CubicCurve : TBZ2DCubicBezierCurve;
+  {$CODEALIGN VARMIN=16}
+  p0, p1, p2, p3 : TBZFloatPoint;
+  {$CODEALIGN VARMIN=4}
+  i, j : Integer;
+begin
+  QuadraticCurve := TBZ2DQuadraticBezierCurve.Create;
+  CubicCurve := TBZ2DCubicBezierCurve.Create;
+  if (odd(Self.PointsList.Count)) then Self.PointsList.Add(Self.Points[(Self.PointsList.Count - 1)]);
+
+  RenderingPoints := TBZArrayOfFloatPoints.Create(32);
+  OutControlPoints := TBZArrayOfFloatPoints.Create(32);
+  Result := TBZArrayOfFloatPoints.Create(32);
+
+  i := 0;
+  While (i < (Self.PointsList.Count - 2)) do
+  begin
+    p0 := Self.Points[i];
+    p1 := Self.Points[i + 1];
+    p2 := Self.Points[i + 2];
+ 		if ( (i + 3) > (Self.PointsList.Count - 1) ) then
+    begin
+      QuadraticCurve.StartPoint := p0;
+      QuadraticCurve.ControlPoint := p1;
+      QuadraticCurve.EndPoint := p2;
+      RenderingPoints := QuadraticCurve.ComputePolyLinePoints();
+      for j := 0 to RenderingPoints.Count - 1 do
+      begin
+        Result.Add(RenderingPoints.Items[j]);
+      end;
+      inc(i, 2);
+    end
+    else
+    begin
+      p3 := Self.Points[i + 3];
+      CubicCurve.StartPoint := p0;
+      CubicCurve.ControlPointA := p1;
+      CubicCurve.ControlPointB := p2;
+      CubicCurve.EndPoint := p3;
+      RenderingPoints := CubicCurve.ComputePolyLinePoints();
+      for j := 0 to RenderingPoints.Count - 1 do
+      begin
+        Result.Add(RenderingPoints.Items[j]);
+      end;
+      inc(i, 3);
+    end;
+  end;
+
+  FreeAndNil(RenderingPoints);
+  FreeAndNil(OutControlPoints);
+  FreeAndNil(CubicCurve);
+  FreeAndNil(QuadraticCurve);
+end;
+
+function TBZ2DCurve.ComputePolylinePoints : TBZArrayOfFloatPoints;
+begin
+  Case FCurveType of
+    ctBezier: Result := ComputeBezierCurve;
+    ctSmoothBezier : Result := ComputeSmoothBezierCurve;
+    ctBezierSpline : Result := ComputeBezierSplineCurve;
+    ctUniformSpline: ;
+    ctCatmullRomSpline: ;
+  end;
+end;
+
+
+//for i := 1 to (PointsList.Count - 2) do
+    //p0 := Self.Points[i - 1];
+    //p1 := Self.Points[i];
+    //p2 := Self.Points[i + 1];
+    //tn := (p2 - p0).Normalize;
+    //p3 := p1 - (tn *  (p0.Distance(p1) * 0.25)); //(p1 - p0).Length;
+    //p4 := p1 + (tn *  (p1.Distance(p2) * 0.25)); //(p2 - p1).Length;
+    //GlobalLogger.LogNotice('Set control point at ' + i.ToString);
+    //OutControlPoints.Add(p3);
+    //OutControlPoints.Add(p4);
+    ////OutControlPoints.Add(p2);
+    //if  (Self.PointsList.Count > 3) and ((i + 1) < (Self.PointsList.Count - 1)) then
+    //begin
+    //  //if (i > 1) and (i < (PointsList.Count - 2)) then
+    //  OutControlPoints.Add(Self.Points[i + 1]);
+    //end;
+
+
+//OutControlPoints.Add(Self.Points[(Self.PointsList.Count - 1)]);
+//GlobalLogger.LogNotice('Set control point Count ' + OutControlPoints.Count.ToString);
+//i := 0;
+//While (i < (OutControlPoints.Count - 2)) do
+//  begin
+//    p0 := OutControlPoints.Items[i];
+//    p1 := OutControlPoints.Items[i + 1];
+//    p2 := OutControlPoints.Items[i + 2];
+// 		if ( (i + 3) > (Self.PointsList.Count - 1) ) then
+//    begin
+//      QuadraticCurve.StartPoint := p0;
+//      QuadraticCurve.ControlPoint := p1;
+//      QuadraticCurve.EndPoint := p2;
+//      RenderingPoints := QuadraticCurve.ComputePolyLinePoints();
+//      for j := 0 to RenderingPoints.Count - 1 do
+//      begin
+//        Result.Add(RenderingPoints.Items[j]);
+//      end;
+//      //inc(i, 2);
+//    end
+//    else
+//    begin
+//      p3 := OutControlPoints.Items[i + 3];
+//      CubicCurve.StartPoint := p0;
+//      CubicCurve.ControlPointA := p1;
+//      CubicCurve.ControlPointB := p2;
+//      CubicCurve.EndPoint := p3;
+//      RenderingPoints := CubicCurve.ComputePolyLinePoints();
+//      for j := 0 to RenderingPoints.Count - 1 do
+//      begin
+//        Result.Add(RenderingPoints.Items[j]);
+//      end;
+//      //inc(i, 3);
+//    end;
+//    inc(i, 4);
+//  end;
+
+//for j := 0 to OutControlPoints.Count - 1 do
+//begin
+//  Result.Add(OutControlPoints.Items[j]);
+//end;
+
+//PointsList.Clear;
+//Self.AssignPoints(OutControlPoints);
+//Result := OutControlPoints; //ComputeContiniousBezierCurve;
+
+//OutControlPoints.Add(Self.Points[0]);
+// i := 1;
+//While (i <= (Self.PointsList.Count - 1)) do
+// begin
+//   OutControlPoints.Add(Self.Points[i - 1].Center(Self.Points[i]));
+//   OutControlPoints.Add(Self.Points[i]);
+//   OutControlPoints.Add(Self.Points[i + 1]);
+//
+//	if ( (i + 2) < (Self.PointsList.Count - 1) ) then
+//   begin
+//     OutControlPoints.Add(Self.Points[i + 1].Center(Self.Points[i + 2]));
+//   end;
+//
+//   inc(i, 2);
+// end;
+//
+// i := 0;
+// While (i < (OutControlPoints.Count - 2)) do
+//   begin
+//     p0 := OutControlPoints.Items[i];
+//     p1 := OutControlPoints.Items[i + 1];
+//     p2 := OutControlPoints.Items[i + 2];
+//  		if ( (i + 3) > (Self.PointsList.Count - 1) ) then
+//     begin
+//       QuadraticCurve.StartPoint := p0;
+//       QuadraticCurve.ControlPoint := p1;
+//       QuadraticCurve.EndPoint := p2;
+//       RenderingPoints := QuadraticCurve.ComputePolyLinePoints();
+//       for j := 0 to RenderingPoints.Count - 1 do
+//       begin
+//         Result.Add(RenderingPoints.Items[j]);
+//       end;
+//       //inc(i, 2);
+//     end
+//     else
+//     begin
+//       p3 := OutControlPoints.Items[i + 3];
+//       CubicCurve.StartPoint := p0;
+//       CubicCurve.ControlPointA := p1;
+//       CubicCurve.ControlPointB := p2;
+//       CubicCurve.EndPoint := p3;
+//       RenderingPoints := CubicCurve.ComputePolyLinePoints();
+//       for j := 0 to RenderingPoints.Count - 1 do
+//       begin
+//         Result.Add(RenderingPoints.Items[j]);
+//       end;
+//       //inc(i, 3);
+//     end;
+//     inc(i, 4);
+//   end;
+
+
+
+
+{%endregion%}
+
+{%region=====[ Globale ]===================================================================================}
+
 function CreateCubicBezierCurve(StartPoint, ControlPointA, ControlPointB, EndPoint : TBZFloatPoint) : TBZ2DCubicBezierCurve;
 begin
   Result := TBZ2DCubicBezierCurve.Create;
@@ -4019,218 +4501,7 @@ begin
   end;
 end;
 
-{%endregion%}
-
-{%region=====( TBZCubicBezierCurves ]==========================================================================}
-
-Constructor TBZCubicBezierCurves.Create;
-begin
-  inherited Create;
-end;
-
-Destructor TBZCubicBezierCurves.Destroy;
-begin
-  Clear;
-  inherited Destroy;
-end;
-
-Function TBZCubicBezierCurves.GetCubicBezierCurveItem(index : Integer) : TBZ2DCubicBezierCurve;
-begin
-  Result := TBZ2DCubicBezierCurve(Get(Index));
-end;
-
-Procedure TBZCubicBezierCurves.SetCubicBezierCurveItem(index : Integer; val : TBZ2DCubicBezierCurve);
-begin
-  Put(Index, Val);
-end;
-
-procedure TBZCubicBezierCurves.Assign(source : TPersistent);
-Var
-  I : Integer;
-  NewItem : TBZ2DCubicBezierCurve;
-Begin
-  if (Source Is TBZCubicBezierCurves) then
-  begin
-    If TBZCubicBezierCurves(Source).Count > 0 then
-    begin
-      Clear;
-      For I := 0 to TBZCubicBezierCurves(Source).Count-1 do
-      begin
-        NewItem := TBZ2DCubicBezierCurve.Create;
-        NewItem.Assign(TBZCubicBezierCurves(Source).Items[I]);
-        AddCurve(NewItem);
-      End;
-    end;
-  End
-  else
-    Inherited Assign(source);
-end;
-
-procedure TBZCubicBezierCurves.WriteToFiler(writer : TVirtualWriter);
-begin
-  inherited WriteToFiler(writer);
-end;
-
-procedure TBZCubicBezierCurves.ReadFromFiler(reader : TVirtualReader);
-begin
-  inherited ReadFromFiler(reader);
-end;
-
-Procedure TBZCubicBezierCurves.Clear;
-begin
-  inherited Clear;
-end;
-
-function TBZCubicBezierCurves.AddCurve(aCurve: TBZ2DCubicBezierCurve) : Integer;
-begin
-  Result := Add(aCurve);
-end;
-
-{%endregion%}
-
-{%region=====[ TBZ2DCurve ]================================================================================}
-
-Constructor TBZ2DCurve.Create(aCurveType : TBZCurveType);
-begin
-  Inherited Create;
-  FCurveType := aCurveType;
-end;
-
-Constructor TBZ2DCurve.Create(aCurveType : TBZCurveType; aControlPoints : TBZArrayOfFloatPoints);
-begin
-  Create(aCurveType);
-  Self.AssignPoints(aControlPoints);
-end;
-
-function TBZ2DCurve.ComputeUniformSplineCurve : TBZArrayOfFloatPoints;
-begin
-
-end;
-
-function TBZ2DCurve.ComputeCatmullRomSplineCurve : TBZArrayOfFloatPoints;
-begin
-
-end;
-
-function TBZ2DCurve.ComputeBSplineCurve : TBZArrayOfFloatPoints;
-Var
-  i : Integer;
-  OutControlPoints : TBZArrayOfFloatPoints;
-  {$CODEALIGN VARMIN=16}
-  p0, p1, p2, p3, p4, tn : TBZFloatPoint;
-  {$CODEALIGN VARMIN=4}
-begin
-  if (PointsList.Count < 2) then exit;
-  for i := 0 to (PointsList.Count - 1) do
-  begin
-    if (i = 0) then
-    begin
-      p0 := Points[i];
-      p1 := Points[i + 1];
-      tn := p1 - p0;
-      p1 := p1 + tn;
-      OutControlPoints.Add(p0);
-      OutControlPoints.Add(p1);
-    end
-    else if (i = (PointsList.Count - 1)) then
-    begin
-      p0 := Points[i - 1];
-      p1 := Points[i];
-      tn := p1 - p0;
-      p1 := p1 - tn;
-      OutControlPoints.Add(p1);
-      OutControlPoints.Add(p0);
-    end
-    else
-    begin
-      p0 := Points[i - 1];
-      p1 := Points[i];
-      p2 := Points[i + 1];
-      tn := (p2 - p0).Normalize;
-      p3 := p1 - tn * (p1 - p0).Length;
-      p4 := p1 + tn * (p2 - p1).Length;
-
-      OutControlPoints.Add(p3);
-      OutControlPoints.Add(p1);
-      OutControlPoints.Add(p4);
-    end
-  end;
-  PointsList.Clear;
-  Self.AssignPoints(OutControlPoints);
-  Result := ComputeContiniousBezierCurve;
-  FreeAndNil(OutControlPoints);
-end;
-
-function TBZ2DCurve.ComputeContiniousBezierCurve : TBZArrayOfFloatPoints;
-Var
-  RenderingPoints : TBZArrayOfFloatPoints;
-  OutControlPoints : TBZArrayOfFloatPoints;
-  QuadraticCurve : TBZ2DQuadraticBezierCurve;
-  CubicCurve : TBZ2DCubicBezierCurve;
-  {$CODEALIGN VARMIN=16}
-  p0, p1, p2, p3 : TBZFloatPoint;
-  {$CODEALIGN VARMIN=4}
-  i, j : Integer;
-begin
-  i := 0;
-  OutControlPoints := TBZArrayOfFloatPoints.Create(16);
-  While (i < PointsList.Count - 1) do
-  begin
-    OutControlPoints.add(Points[i-1].Center(Points[i]));
-		OutControlPoints.add(Points[i]);
-		OutControlPoints.add(Points[i+1]);
-		if ( i+2 < PointsList.Count - 1 ) then OutControlPoints.add(Points[i + 1].Center(Points[i + 2]));
-    inc(i, 2);
-  end;
-
-  i := 0;
-  RenderingPoints := TBZArrayOfFloatPoints.Create(16);
-  Result := TBZArrayOfFloatPoints.Create(16);
-  While (i < OutControlPoints.Count - 1) do
-  begin
-    p0 := OutControlPoints.Items[i];
-    p1 := OutControlPoints.Items[i + 1];
-    p2 := OutControlPoints.Items[i + 2];
- 		if ( (i + 3) > (OutControlPoints.Count - 1) ) then
-    begin
-      QuadraticCurve.StartPoint := p0;
-      QuadraticCurve.ControlPoint := p1;
-      QuadraticCurve.EndPoint := p2;
-      RenderingPoints := QuadraticCurve.ComputePolyLinePoints();
-      for j := 0 to RenderingPoints.Count - 1 do
-      begin
-        Result.Add(RenderingPoints.Items[j]);
-      end;
-    end
-    else
-    begin
-      p3 := OutControlPoints.Items[i + 3];
-      CubicCurve.StartPoint := p0;
-      CubicCurve.ControlPointA := p1;
-      CubicCurve.ControlPointB := p2;
-      CubicCurve.EndPoint := p3;
-      RenderingPoints := CubicCurve.ComputePolyLinePoints();
-      for j := 0 to RenderingPoints.Count - 1 do
-      begin
-        Result.Add(RenderingPoints.Items[j]);
-      end;
-    end;
-    inc(i, 4);
-  end;
-
-end;
-
-function TBZ2DCurve.ComputePolylinePoints : TBZArrayOfFloatPoints;
-begin
-  Case FCurveType of
-    ctBezier: Result := ComputeContiniousBezierCurve;
-    ctBezierSpline: Result := ComputeBSplineCurve;
-    ctUniformSpline: ;
-    ctCatmullRomSpline: ;
-  end;
-end;
-
-{%endregion%}
+{%endregion}
 
 end.
 

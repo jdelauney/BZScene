@@ -620,7 +620,7 @@ begin
  {$IFDEF UNIX} //LINUX
    if fpstat(Result.Name,FileInfos)=0 then
    begin
-     Result.Time.CreationTime := FileDateToDateTime(FileInfos.ctime);
+     Result.Time.CreationTime := FileDateToDateTime(FileInfos.st_ctime);
      Result.Time.AccessTime := FileDateToDateTime(FileInfos.st_atime);
      Result.Time.WriteTime := FileDateToDateTime(FileInfos.st_mtime);
    end

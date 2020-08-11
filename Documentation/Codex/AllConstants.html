@@ -1,111 +1,29 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: Toutes les constantes</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: Toutes les constantes</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="allitems">Toutes les constantes</h1>
 <table class="itemstable wide_list">
 <tr class="listheader">
 <th class="itemname">Nom</th>
 <th class="itemunit">Unité</th>
 <th class="itemdesc">Description</th>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_ALPHABITF">BMP_COMPRESSION_ALPHABITF</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Compressé avec AlphaBitFields Mask RGBA (seulement WinCE5.0 et avec .NET &gt; 4.0)</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_BITF">BMP_COMPRESSION_BITF</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Nom compressé BitFields winV2 Mask RGB / V3 Mask RGBA, et seulement 16 et 32 bits</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_HUF1D">BMP_COMPRESSION_HUF1D</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>OSX22 = Hufman1D seulement 1bit</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_JPEG">BMP_COMPRESSION_JPEG</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Compressé avec JPEG si OSX22 = RLE 24bits</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_NONE">BMP_COMPRESSION_NONE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Non compressé</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_PNG">BMP_COMPRESSION_PNG</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Compressé avec PNG</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_RLE4">BMP_COMPRESSION_RLE4</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Compressé avec RLE 4bits</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_COMPRESSION_RLE8">BMP_COMPRESSION_RLE8</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>Compressé avec RLE 8bits</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_OS21CUR">BMP_MAGIC_OS21CUR</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_OS21ICO">BMP_MAGIC_OS21ICO</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_OS22CUR">BMP_MAGIC_OS22CUR</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_OS22ICO">BMP_MAGIC_OS22ICO</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_OS2BMP">BMP_MAGIC_OS2BMP</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>19778;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileBMP.html#BMP_MAGIC_WINBMP">BMP_MAGIC_WINBMP</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileBMP.html">BZImageFileBMP</a></td>
-<td class="itemdesc"><p>ID BMP</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#BZColorFormatDesc">BZColorFormatDesc</a></td>
@@ -213,74 +131,74 @@ $(document).ready(function() {
 <td class="itemdesc"><p>Décalage de la composante bleue</p></td>
 </tr>
 <tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#cBZGIFVersions">cBZGIFVersions</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cCbrt10">cCbrt10</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Racine cubique de 10</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cCbrt2">cCbrt2</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Racine cubique de 2</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cCbrt3">cCbrt3</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Racine cubique de 3</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cCbrtPi">cCbrtPi</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Racine cubique de PI</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cColinearBias">cColinearBias</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p><a class="normal" href="BZMath.html#bias">Bias</a> colinéaire</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#cColorFloatRatio">cColorFloatRatio</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>Constante pour la normalisation d'un composant de couleur en byte vers un npmbre flottant</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cCombineDrawModeStr">cCombineDrawModeStr</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Définition en chaine de caractères des modes de combinaison</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZStreamClasses.html#cDefaultBufferedStreamBlockSize">cDefaultBufferedStreamBlockSize</a></td>
 <td class="itemunit"><a class="bold" href="BZStreamClasses.html">BZStreamClasses</a></td>
 <td class="itemdesc"><p><code>cDefaultBufferedStreamBlockSize</code> : par défaut tampon de 32Mo</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZStreamClasses.html#cDefaultCharsDelims">cDefaultCharsDelims</a></td>
 <td class="itemunit"><a class="bold" href="BZStreamClasses.html">BZStreamClasses</a></td>
 <td class="itemdesc"><p><code>cDefaultCharsDelims</code> : Caractères de délimitation : Tabulation, retour à la ligne, espace</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZFontClasses.html#cDefaultFontList">cDefaultFontList</a></td>
 <td class="itemunit"><a class="bold" href="BZFontClasses.html">BZFontClasses</a></td>
 <td class="itemdesc"><p>Nom des fichiers TTF pouvant être utilisé comme police par défaut @A remplacer par nom de famille</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZSystem.html#cDefaultLanguage">cDefaultLanguage</a></td>
 <td class="itemunit"><a class="bold" href="BZSystem.html">BZSystem</a></td>
 <td class="itemdesc"><p>Langue utilisée par défaut</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZArrayClasses.html#cDefaultListGrowthDelta">cDefaultListGrowthDelta</a></td>
 <td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
 <td class="itemdesc"><p>Granularité de croissance minimum d'un tableau</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZLogger.html#cDefaultLogFileName">cDefaultLogFileName</a></td>
 <td class="itemunit"><a class="bold" href="BZLogger.html">BZLogger</a></td>
 <td class="itemdesc"><p>Nom par defaut du fichier journal</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZFontClasses.html#cDefaultPreferredFontIndex">cDefaultPreferredFontIndex</a></td>
+<td class="itemunit"><a class="bold" href="BZFontClasses.html">BZFontClasses</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZFontClasses.html#cDefaultPreferredFontIndex">cDefaultPreferredFontIndex</a></td>
@@ -288,149 +206,139 @@ $(document).ready(function() {
 <td class="itemdesc"><p>Index de la police de caractères préférées</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="BZFontClasses.html#cDefaultPreferredFontIndex">cDefaultPreferredFontIndex</a></td>
-<td class="itemunit"><a class="bold" href="BZFontClasses.html">BZFontClasses</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cEpsilon">cEpsilon</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Epsilon faible précision</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cEpsilon30">cEpsilon30</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Epsilon grande précision</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cEpsilon40">cEpsilon40</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Epsilon moyenne précision</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cEulerNumber">cEulerNumber</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Nombre d'Euler</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cFullEpsilon">cFullEpsilon</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Epsilon précision par défaut</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_AlphaMask">cGCM_AlphaMask</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris en fonction de la composante Alpha</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_Average">cGCM_Average</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux &quot;moyen&quot; de gris</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_BlueMask">cGCM_BlueMask</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris en fonction de la composante Bleu</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_CIEObserverRef709">cGCM_CIEObserverRef709</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris CIEObserverRef709</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_GreenMask">cGCM_GreenMask</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris en fonction de la composante Vert</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_JPEG">cGCM_JPEG</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris JPEG</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_NTSC">cGCM_NTSC</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris NTSC</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_Photoshop">cGCM_Photoshop</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris Photoshop</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_RedMask">cGCM_RedMask</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris en fonction de la composante Rouge</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGCM_RMY">cGCM_RMY</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion couleur vers niveaux de gris RMY</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cGreenOrder">cGreenOrder</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cGreenShift">cGreenShift</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Décalage de la composante verte</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#cHalfOneVector2f">cHalfOneVector2f</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#cHalfOneVector4f">cHalfOneVector4f</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cInfinity">cInfinity</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Nombre infini</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZArrayClasses.html#cInsertionSort_CutOff">cInsertionSort_CutOff</a></td>
 <td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
 <td class="itemdesc"><p>Lorsque la liste est plus petite que <code>cInsertionSort_CutOff</code>, nous utilisons InsertionSort au lieu d'appeler tout autre algorithme de tri, de manière récursive.</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cInv255">cInv255</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Inverse de 255 = 0.0039215686274509803921568627451</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cInv2PI">cInv2PI</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Inverse de PI multiplier par 2 = 0.15915494309189533576888376337251</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cInv360">cInv360</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Inverse de 360 = 0.00277777777777777777777777777778</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cInvPI">cInvPI</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Valeur inverse de PI = 0.31830988618379067153776752674503</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cInvSqrt2">cInvSqrt2</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Inverse de la racine carré de 2 = 1.4142135623730950488016887242097</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cInvThree">cInvThree</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Inverse de 3 = 0.33333333333333333333333333333333</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#cJNG_MAGICID">cJNG_MAGICID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cLn10">cLn10</a></td>
@@ -2388,19 +2296,19 @@ $(document).ready(function() {
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="BZSnapForm.html#cMaxSnapForms">cMaxSnapForms</a></td>
+<td class="itemunit"><a class="bold" href="BZSnapForm.html">BZSnapForm</a></td>
+<td class="itemdesc"><p>FormPropKeywords : array of string = ['left','top','right','bottom','<a class="normal" href="BZMath.html#Min">min</a>-height','<a class="normal" href="BZMath.html#Min">min</a>-width','<a class="normal" href="BZMath.html#Max">max</a>-height','<a class="normal" href="BZMath.html#Max">max</a>-width','visible','snap','snapto'];</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZBitmapFilterClasses.html#cMidToneLimit">cMidToneLimit</a></td>
 <td class="itemunit"><a class="bold" href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></td>
 <td class="itemdesc"><p>Limite <a class="normal" href="BZMath.html#Max">max</a> des tons moyens</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZMath.html#cMinusOneHalf">cMinusOneHalf</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>-0.5</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#cMNG_MAGICID">cMNG_MAGICID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZFileFinder.html#cMskSEARCH_ALLFILES">cMskSEARCH_ALLFILES</a></td>
@@ -2470,36 +2378,6 @@ $(document).ready(function() {
 <tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#cNullVector4i">cNullVector4i</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#cNULL_MAGICID">cNULL_MAGICID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#COLOR_GRAYSCALE">COLOR_GRAYSCALE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>Modes de couleur valide pour le PNG</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#COLOR_GRAYSCALEALPHA">COLOR_GRAYSCALEALPHA</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#COLOR_PALETTE">COLOR_PALETTE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#COLOR_RGB">COLOR_RGB</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#COLOR_RGBA">COLOR_RGBA</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
@@ -2598,89 +2476,99 @@ $(document).ready(function() {
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFilePNG.html#cPNG_MAGICID">cPNG_MAGICID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFilePNG.html">BZImageFilePNG</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
 <td class="itemname"><a class="bold" href="BZArrayClasses.html#cQuickSort_CutOff">cQuickSort_CutOff</a></td>
 <td class="itemunit"><a class="bold" href="BZArrayClasses.html">BZArrayClasses</a></td>
 <td class="itemdesc"><p>Lorsque la liste est plus petite que <code>cQuickSort_CutOff</code>, nous utilisons l'algorithme QuickSort au lieu de DualQuickSort</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZMath.html#cRadian">cRadian</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>57.29577951;</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cRedOrder">cRedOrder</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cRedShift">cRedShift</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Décalage de la composante rouge</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZBitmapFilterClasses.html#cShadowToneLimit">cShadowToneLimit</a></td>
 <td class="itemunit"><a class="bold" href="BZBitmapFilterClasses.html">BZBitmapFilterClasses</a></td>
 <td class="itemdesc"><p>Limite <a class="normal" href="BZMath.html#Max">max</a> des tons foncés</p></td>
 </tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSnapForm.html#cSnapActiveBorderAll">cSnapActiveBorderAll</a></td>
+<td class="itemunit"><a class="bold" href="BZSnapForm.html">BZSnapForm</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="BZSnapForm.html#cSnapTargetAll">cSnapTargetAll</a></td>
+<td class="itemunit"><a class="bold" href="BZSnapForm.html">BZSnapForm</a></td>
+<td class="itemdesc"><p>TActiveMovingArea = (amClient, amTitleBar);</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSL_Default">cssHSL_Default</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSL par défaut</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSL_PaintShopPro">cssHSL_PaintShopPro</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSL utilisé par PaintShopPro</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSL_Windows">cssHSL_Windows</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSL utilisé par Windows</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_Apple">cssHSV_Apple</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par Apple</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_Default">cssHSV_Default</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV par défaut</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_Gimp">cssHSV_Gimp</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par Gimp</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_GTK">cssHSV_GTK</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par GTK</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_JavaAWT">cssHSV_JavaAWT</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par Java AWT</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_LinuxKDE">cssHSV_LinuxKDE</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par KDE</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_OpenCV">cssHSV_OpenCV</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par OpenCV</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZColors.html#cssHSV_Photoshop">cssHSV_Photoshop</a></td>
 <td class="itemunit"><a class="bold" href="BZColors.html">BZColors</a></td>
 <td class="itemdesc"><p>Matrice de conversion du sous-espace de couleur HSV utilisé par Photoshop</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#cUnknownArchiveVersion">cUnknownArchiveVersion</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#cWOneSSEVector4f">cWOneSSEVector4f</a></td>
@@ -2696,16 +2584,6 @@ $(document).ready(function() {
 <td class="itemname"><a class="bold" href="BZNoiseGenerator.html#cW_PRIME">cW_PRIME</a></td>
 <td class="itemunit"><a class="bold" href="BZNoiseGenerator.html">BZNoiseGenerator</a></td>
 <td class="itemdesc"><p>Nombre aléatoire premier pour l'axe des W</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#cXPM2_MagicID">cXPM2_MagicID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#cXPM3_MagicID">cXPM3_MagicID</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="BZNoiseGenerator.html#cX_PRIME">cX_PRIME</a></td>
@@ -2728,16 +2606,6 @@ $(document).ready(function() {
 <td class="itemdesc"><p>Nombre aléatoire premier pour l'axe des Z</p></td>
 </tr>
 <tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#DefCharsCount">DefCharsCount</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>Caractères autorisés par defaut.</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#DefPalChars">DefPalChars</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#EmptyHmgMatrix">EmptyHmgMatrix</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>Matrice homogène vide</p></td>
@@ -2751,166 +2619,6 @@ $(document).ready(function() {
 <td class="itemname"><a class="bold" href="BZMath.html#EpsilonXTResolution">EpsilonXTResolution</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Résolution Epsilon étendue</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#ExtPalChars">ExtPalChars</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileXPM.html#ExtPalCharsCount">ExtPalCharsCount</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileXPM.html">BZImageFileXPM</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GifGCEDisposalModeStr">GifGCEDisposalModeStr</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_APPLICATIONEXTENSION">GIF_APPLICATIONEXTENSION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_BUFFEREXTENSION">GIF_BUFFEREXTENSION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_COLORRESOLUTION">GIF_COLORRESOLUTION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Défini si la table de couleurs globale suit la description globale</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_COLORTABLESIZE">GIF_COLORTABLESIZE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Définit si la palette globale est triée - 1 bit</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_COMMENTEXTENSION">GIF_COMMENTEXTENSION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_DefaultDelay">GIF_DefaultDelay</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_DelayFactor">GIF_DelayFactor</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Nombre de couleurs maximum supportées.</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_DISPOSAL_ALL">GIF_DISPOSAL_ALL</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>3</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_DO_NOT_DISPOSE">GIF_DO_NOT_DISPOSE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>0</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_EXTENSIONINTRODUCER">GIF_EXTENSIONINTRODUCER</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>','</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_GLOBALCOLORTABLE">GIF_GLOBALCOLORTABLE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>TBZGIFFrameList = class(specialize <a class="normal" href="BZArrayClasses.TBZArrayInt.html">TBZArrayInt</a>&lt;<a class="normal" href="BZImageFileGIF.TBZGifFrameInformations.html">TBZGifFrameInformations</a>&gt;); Description des masques pour la description globale de l'image</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_GLOBALCOLORTABLESORTED">GIF_GLOBALCOLORTABLESORTED</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Résolution de la couleur (BitsPerPixel) - 3 bits</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_GRAPHICCONTROLEXTENSION">GIF_GRAPHICCONTROLEXTENSION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_ImageDefaultCompression">GIF_ImageDefaultCompression</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_IMAGEDESCRIPTOR">GIF_IMAGEDESCRIPTOR</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_INTERLACED">GIF_INTERLACED</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Défini si la table de couleurs locale suit la description de l'image</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_LOCALCOLORTABLE">GIF_LOCALCOLORTABLE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Réservé - doit être défini avec $00 - Taille des données = 2&circ;value+1 - 3 bits Descption des masques pour les images</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_LOCALCOLORTABLESORTED">GIF_LOCALCOLORTABLESORTED</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Défini si l'image est entrelacée</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_LOOPEXTENSION">GIF_LOOPEXTENSION</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Identification des sous-blocs pour &quot;Application Extension&quot;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_MaxColors">GIF_MaxColors</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>%region=====[ Définitions des types et constantes utiles ]=====================================================================================================</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_NO_DISPOSAL">GIF_NO_DISPOSAL</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>';' Graphic Control Extension - Définition des masques pour les paramètres</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_PLAINTEXT">GIF_PLAINTEXT</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Définit si la palette locale est triée Identification des blocs</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_RESERVED">GIF_RESERVED</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>Taille de la palette - 3 bits</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_RESERVED_FLAG">GIF_RESERVED_FLAG</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_RESTORE_BACKGROUND_COLOR">GIF_RESTORE_BACKGROUND_COLOR</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>1</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_RESTORE_PREVIOUS">GIF_RESTORE_PREVIOUS</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>2</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_TRAILER">GIF_TRAILER</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>'!'</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_TRANSPARENT_FLAG">GIF_TRANSPARENT_FLAG</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileGIF.html#GIF_USER_INPUT_FLAG">GIF_USER_INPUT_FLAG</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileGIF.html">BZImageFileGIF</a></td>
-<td class="itemdesc"><p>bits 2-4 ($1C)</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#IdentityHmgMatrix">IdentityHmgMatrix</a></td>
@@ -2996,26 +2704,6 @@ $(document).ready(function() {
 <td class="itemname"><a class="bold" href="BZMath.html#MinSingle">MinSingle</a></td>
 <td class="itemunit"><a class="bold" href="BZMath.html">BZMath</a></td>
 <td class="itemdesc"><p>Nombre minimum Single</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZHotKeyManager.html#MOD_ALT">MOD_ALT</a></td>
-<td class="itemunit"><a class="bold" href="BZHotKeyManager.html">BZHotKeyManager</a></td>
-<td class="itemdesc"><p>scAlt</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZHotKeyManager.html#MOD_CONTROL">MOD_CONTROL</a></td>
-<td class="itemunit"><a class="bold" href="BZHotKeyManager.html">BZHotKeyManager</a></td>
-<td class="itemdesc"><p>scCtrl</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZHotKeyManager.html#MOD_SHIFT">MOD_SHIFT</a></td>
-<td class="itemunit"><a class="bold" href="BZHotKeyManager.html">BZHotKeyManager</a></td>
-<td class="itemdesc"><p>scShift</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZHotKeyManager.html#MOD_WIN">MOD_WIN</a></td>
-<td class="itemunit"><a class="bold" href="BZHotKeyManager.html">BZHotKeyManager</a></td>
-<td class="itemdesc"><p>scWin</p></td>
 </tr>
 <tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#mxcsr_default">mxcsr_default</a></td>
@@ -3148,79 +2836,49 @@ $(document).ready(function() {
 <td class="itemdesc"><p>Matrice de conversion d'un format RGB vers le profil YIQ</p></td>
 </tr>
 <tr class="list">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#rsAnimPowerInfosMsg">rsAnimPowerInfosMsg</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#rsIndexOutOfRange">rsIndexOutOfRange</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#rsListOrArrayIsEmpty">rsListOrArrayIsEmpty</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#rsOutOfMemory">rsOutOfMemory</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list">
+<td class="itemname"><a class="bold" href="BZSceneStrConsts.html#rsTooLarge">rsTooLarge</a></td>
+<td class="itemunit"><a class="bold" href="BZSceneStrConsts.html">BZSceneStrConsts</a></td>
+<td class="itemdesc"><p>&nbsp;</p></td>
+</tr>
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#sse_align">sse_align</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>Constant d'alignement des données SIMD en bits</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#sse_align_mask">sse_align_mask</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>Mask pour l'alignement des données</p></td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#sse_no_round_bits_mask">sse_no_round_bits_mask</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>masque pour enlever les anciens bits d'arrondi pour définir de nouveaux bits</p></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname"><a class="bold" href="BZVectorMath.html#sse_Rounding_Flags">sse_Rounding_Flags</a></td>
 <td class="itemunit"><a class="bold" href="BZVectorMath.html">BZVectorMath</a></td>
 <td class="itemdesc"><p>Table de conversion du nom du mode d'arrondissement vers bits d'arrondi</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_BW_IMAGE">TARGA_BW_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_BW_RLE_IMAGE">TARGA_BW_RLE_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_COLORMAP">TARGA_COLORMAP</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_DESCRIPTOR_RIGHT_ORIGIN">TARGA_DESCRIPTOR_RIGHT_ORIGIN</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_DESCRIPTOR_UPPER_ORIGIN">TARGA_DESCRIPTOR_UPPER_ORIGIN</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_EMPTY_IMAGE">TARGA_EMPTY_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_INDEXED_IMAGE">TARGA_INDEXED_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_INDEXED_RLE_IMAGE">TARGA_INDEXED_RLE_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_NO_COLORMAP">TARGA_NO_COLORMAP</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>Constantes pour les types d'images </p></td>
-</tr>
-<tr class="list2">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_TRUECOLOR_IMAGE">TARGA_TRUECOLOR_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
-</tr>
-<tr class="list">
-<td class="itemname"><a class="bold" href="BZImageFileTGA.html#TARGA_TRUECOLOR_RLE_IMAGE">TARGA_TRUECOLOR_RLE_IMAGE</a></td>
-<td class="itemunit"><a class="bold" href="BZImageFileTGA.html">BZImageFileTGA</a></td>
-<td class="itemdesc"><p>&nbsp;</p></td>
 </tr>
 <tr class="list2">
 <td class="itemname"><a class="bold" href="BZKeyboard.html#VK_MOUSEWHEELDOWN">VK_MOUSEWHEELDOWN</a></td>
@@ -3415,4 +3073,9 @@ $(document).ready(function() {
 </table>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

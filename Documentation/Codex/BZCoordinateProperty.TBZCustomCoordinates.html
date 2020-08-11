@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZCoordinateProperty: Classe TBZCustomCoordinates</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<span id="TBZCustomCoordinates"></span><h1 class="cio">Classe TBZCustomCoordinates</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZCoordinateProperty.html">BZCoordinateProperty</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZCustomCoordinates = class(<a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a>)</code></p>
+<h2 class="description">Description</h2>
+<p>
+<code>TBZCustomCoordinates</code> :  Cette classe est fondamentalement un conteneur pour un <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>, permettant une utilisation correcte de l'éditeurs de propriétés et l'édition dans l'EDI.     les méthodes de manipulation sont seulement minimes.     Gère les valeurs par défaut dynamiquememnt pour l'enregistrement dans le fichier de ressources.</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TPersistent</li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZInterfacedPersistent.html">TBZInterfacedPersistent</a></li>
+<li class="ancestor"><a class="normal" href="BZClasses.TBZUpdateAbleObject.html">TBZUpdateAbleObject</a></li>
+<li class="thisitem">TBZCustomCoordinates</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#CreateInitialized">CreateInitialized</a></strong>(AOwner: TPersistent; const AValue: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; const AStyle: <a  href="BZCoordinateProperty.html#TBZCoordinatesStyle">TBZCoordinatesStyle</a> = <a  href="BZCoordinateProperty.html#CsUnknown">CsUnknown</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Assign">Assign</a></strong>(Source: TPersistent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#WriteToFiler">WriteToFiler</a></strong>(Writer: TWriter);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#ReadFromFiler">ReadFromFiler</a></strong>(Reader: TReader);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Initialize">Initialize</a></strong>(const Value: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#NotifyChange">NotifyChange</a></strong>(Sender: TObject); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Translate">Translate</a></strong>(const TranslationVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Translate">Translate</a></strong>(const TranslationVector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AddScaledVector">AddScaledVector</a></strong>(const Factor: Single; const TranslationVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AddScaledVector">AddScaledVector</a></strong>(const Factor: Single; const TranslationVector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Rotate">Rotate</a></strong>(const AnAxis: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>; AnAngle: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Rotate">Rotate</a></strong>(const AnAxis: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; AnAngle: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Normalize">Normalize</a></strong>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Invert">Invert</a></strong>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Scale">Scale</a></strong>(Factor: Single);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#VectorLength">VectorLength</a></strong>: Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#VectorNorm">VectorNorm</a></strong>: Single;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#MaxXYZ">MaxXYZ</a></strong>: Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Equals">Equals</a></strong>(const AVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): Boolean; reintroduce;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetVector">SetVector</a></strong>(const X, Y: Single; Z: Single = 0); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetVector">SetVector</a></strong>(const X, Y, Z, W: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetVector">SetVector</a></strong>(const V: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetVector">SetVector</a></strong>(const V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint">SetPoint</a></strong>(const X, Y, Z: Single); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint">SetPoint</a></strong>(const V: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint">SetPoint</a></strong>(const V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint2D">SetPoint2D</a></strong>(const X, Y: Single); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint2D">SetPoint2D</a></strong>(const Vector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint2D">SetPoint2D</a></strong>(const Vector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetPoint2D">SetPoint2D</a></strong>(const Vector: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>); overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#SetToZero">SetToZero</a></strong>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Style">Style</a></strong>: <a  href="BZCoordinateProperty.html#TBZCoordinatesStyle">TBZCoordinatesStyle</a> read FStyle write FStyle;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AsVector">AsVector</a></strong>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a> read FCoords write SetAsVector;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AsAffineVector">AsAffineVector</a></strong>: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> read GetAsAffineVector write SetAsAffineVector;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AsPoint2D">AsPoint2D</a></strong>: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetAsPoint2D write SetAsPoint2D;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#X">X</a></strong>: Single index 0 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Y">Y</a></strong>: Single index 1 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Z">Z</a></strong>: Single index 2 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#W">W</a></strong>: Single index 3 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#Coordinate">Coordinate</a></strong>[constAIndex:Integer]: Single read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#AsString">AsString</a></strong>: String read GetAsString;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#DirecVector">DirecVector</a></strong>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a> read FCoords write SetDirecVector;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#DirectX">DirectX</a></strong>: Single index 0 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#DirectY">DirectY</a></strong>: Single index 1 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#DirectZ">DirectZ</a></strong>: Single index 2 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZCoordinateProperty.TBZCustomCoordinates.html#DirectW">DirectW</a></strong>: Single index 3 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="CreateInitialized"></span><code>constructor <strong>CreateInitialized</strong>(AOwner: TPersistent; const AValue: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; const AStyle: <a  href="BZCoordinateProperty.html#TBZCoordinatesStyle">TBZCoordinatesStyle</a> = <a  href="BZCoordinateProperty.html#CsUnknown">CsUnknown</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Assign"></span><code>procedure <strong>Assign</strong>(Source: TPersistent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="WriteToFiler"></span><code>procedure <strong>WriteToFiler</strong>(Writer: TWriter);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ReadFromFiler"></span><code>procedure <strong>ReadFromFiler</strong>(Reader: TReader);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Initialize"></span><code>procedure <strong>Initialize</strong>(const Value: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="NotifyChange"></span><code>procedure <strong>NotifyChange</strong>(Sender: TObject); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Translate"></span><code>procedure <strong>Translate</strong>(const TranslationVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Translate"></span><code>procedure <strong>Translate</strong>(const TranslationVector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddScaledVector"></span><code>procedure <strong>AddScaledVector</strong>(const Factor: Single; const TranslationVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AddScaledVector"></span><code>procedure <strong>AddScaledVector</strong>(const Factor: Single; const TranslationVector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rotate"></span><code>procedure <strong>Rotate</strong>(const AnAxis: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>; AnAngle: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Rotate"></span><code>procedure <strong>Rotate</strong>(const AnAxis: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>; AnAngle: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Normalize"></span><code>procedure <strong>Normalize</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Invert"></span><code>procedure <strong>Invert</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Scale"></span><code>procedure <strong>Scale</strong>(Factor: Single);</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VectorLength"></span><code>function <strong>VectorLength</strong>: Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="VectorNorm"></span><code>function <strong>VectorNorm</strong>: Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MaxXYZ"></span><code>function <strong>MaxXYZ</strong>: Single;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Equals"></span><code>function <strong>Equals</strong>(const AVector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>): Boolean; reintroduce;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetVector"></span><code>procedure <strong>SetVector</strong>(const X, Y: Single; Z: Single = 0); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetVector"></span><code>procedure <strong>SetVector</strong>(const X, Y, Z, W: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetVector"></span><code>procedure <strong>SetVector</strong>(const V: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetVector"></span><code>procedure <strong>SetVector</strong>(const V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint"></span><code>procedure <strong>SetPoint</strong>(const X, Y, Z: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint"></span><code>procedure <strong>SetPoint</strong>(const V: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint"></span><code>procedure <strong>SetPoint</strong>(const V: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint2D"></span><code>procedure <strong>SetPoint2D</strong>(const X, Y: Single); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint2D"></span><code>procedure <strong>SetPoint2D</strong>(const Vector: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint2D"></span><code>procedure <strong>SetPoint2D</strong>(const Vector: <a  href="BZVectorMath.html#TBZVector">TBZVector</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetPoint2D"></span><code>procedure <strong>SetPoint2D</strong>(const Vector: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>); overload;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SetToZero"></span><code>procedure <strong>SetToZero</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Style"></span><code>property <strong>Style</strong>: <a  href="BZCoordinateProperty.html#TBZCoordinatesStyle">TBZCoordinatesStyle</a> read FStyle write FStyle;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>Style</code> : Identifie les styles de coordonnées.       La propriété n'est pas persistante. <a class="normal" href="BZCoordinateProperty.html#CsUnknown">csUnknown</a> par défaut. Il devrait être géré par l'objet propriétaire uniquement (en interne).       Il est utilisé par <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a> pour les vérifications internes d ''assertion'       détecter les «abus» ou les «malentendus» que Le système de coordonnées homogène implique.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AsVector"></span><code>property <strong>AsVector</strong>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a> read FCoords write SetAsVector;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>AsVector</code> : Les coordonnées sont vues comme un vecteur.       L'attribution d'une valeur à cette propriété déclenchera des événements de <a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Notification">notification</a>,       Si vous ne le souhaitez pas, utilisez plutôt <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html#DirecVector">DirecVector</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AsAffineVector"></span><code>property <strong>AsAffineVector</strong>: <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> read GetAsAffineVector write SetAsAffineVector;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>AsAffineVector</code> : Les coordonnées sont vues comme un vecteur affine.       L'attribution d'une valeur à cette propriété déclenchera des événements de <a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Notification">notification</a>,       Si vous ne le souhaitez pas, utilisez plutôt <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html#DirecVector">DirecVector</a>.       Le composant W est automatiquement ajusté en fonction du <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html#Style">style</a>.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AsPoint2D"></span><code>property <strong>AsPoint2D</strong>: <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> read GetAsPoint2D write SetAsPoint2D;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>AsPoint2D</code> : Les coordonnées considérées comme un point 2D.       L'attribution d'une valeur à cette propriété déclenchera des événements de <a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Notification">notification</a>,       Si vous ne le souhaitez pas, utilisez <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html#DirecVector">DirecVector</a> à la place</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="X"></span><code>property <strong>X</strong>: Single index 0 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Y"></span><code>property <strong>Y</strong>: Single index 1 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Z"></span><code>property <strong>Z</strong>: Single index 2 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="W"></span><code>property <strong>W</strong>: Single index 3 read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Coordinate"></span><code>property <strong>Coordinate</strong>[constAIndex:Integer]: Single read GetCoordinate write SetCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="AsString"></span><code>property <strong>AsString</strong>: String read GetAsString;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+<code>AsString</code> : Retourne Les coordonnées, entre parenthèses, séparées par des points-virgules.</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirecVector"></span><code>property <strong>DirecVector</strong>: <a  href="BZVectorMath.html#TBZVector">TBZVector</a> read FCoords write SetDirecVector;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+: Similaire à <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html#AsVector">AsVector</a> mais ne déclenche pas d'événements de <a class="normal" href="BZClasses.TBZUpdateAbleObject.html#Notification">notification</a></p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectX"></span><code>property <strong>DirectX</strong>: Single index 0 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectY"></span><code>property <strong>DirectY</strong>: Single index 1 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectZ"></span><code>property <strong>DirectZ</strong>: Single index 2 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="DirectW"></span><code>property <strong>DirectW</strong>: Single index 3 read GetDirectCoordinate write SetDirectCoordinate;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

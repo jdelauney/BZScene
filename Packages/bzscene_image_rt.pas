@@ -8,9 +8,12 @@ unit bzscene_image_rt;
 interface
 
 uses
-  BZImageStrConsts, BZBitmap, BZBitmapCompression, BZImageFileIO, BZBitmapFilterClasses, BZBitmapColorFilters, BZBitmapBlurFilters, 
-  BZBitmapDeformationFilters, BZBitmapMorphologicalFilters, BZBitmapThresholdFilters, BZImageFileBMP, BZImageFileGIF, BZImageFileJPEG, BZImageFilePNG, 
-  BZImageFilePCX, BZImageFilePPM, BZImageFileTGA, BZImageFileXPM, BZImageFileWEBP, BZLibWebp, BZBitmapIO;
+  BZImageStrConsts, BZBitmap, BZBitmapCompression, BZImageFileIO, 
+  BZBitmapFilterClasses, BZBitmapColorFilters, BZBitmapBlurFilters, 
+  BZBitmapDeformationFilters, BZBitmapMorphologicalFilters, 
+  BZBitmapThresholdFilters, BZImageFileBMP, BZImageFileGIF, BZImageFileJPEG, 
+  BZImageFilePNG, BZImageFilePCX, BZImageFilePPM, BZImageFileTGA, 
+  BZImageFileXPM, BZImageFileWEBP, BZLibWebp, BZBitmapIO;
 
 implementation
 

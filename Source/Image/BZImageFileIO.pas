@@ -79,7 +79,7 @@ Type
 
   { TBZCustomImageFileIO }
 
-  TBZCustomImageFileIO = Class(TBZCustomBitmap)
+  TBZCustomImageFileIO = class(TBZBaseBitmap) //Class(TBZCustomBitmap)
   private
     FImageProperties : Pointer;
     FSupportedColorFormat : TBZSupportedColorFormat;
@@ -122,7 +122,7 @@ Type
     Procedure CreateGrayRawPalette(Const WhiteFirst : Boolean=false);// Const aCount=256);
 
     { CreateRawPalette : Création d'une palette de couleurs à partir des données fournies
-      qui peuvent être sous différents bruts suivant la valeur de "aFormat"
+      qui peuvent être sous différents formats suivant la valeur de "aFormat"
        - entrelacé ou par plan
        - 8 bits ou 16 bits par composant
        - en ordre RGB ou BGR
@@ -138,7 +138,7 @@ Type
                 dans "aBuffer" (seul le premier est utilisé), tandis que pour les
                 données par plan, 3 pointeurs minimum sont nécessaires (un pointeur pour chaque plan).
      L'ordre des données est RGB ou BGR ("aSwapRB = True) en mode entrelacé.
-     En mode avion, les trois pointeurs nécessaires doivent également être donnés
+     En mode plan, les trois pointeurs nécessaires doivent également être donnés
      de telle sorte que le pointeur vers les composants rouges se trouve dans "aBuffer[0]",
      le pointeur vert dans "aBuffer[1]" et le bleu dans "aBuffer[2]" et Alpha dans "aBuffer[3]".
      Dans ce cas, la conversion BGR->RGB ou vice-versa n'est pas nécessaire.
@@ -178,6 +178,9 @@ Type
     procedure NotifyUser(Msg : String ; Const Severity : TBZNotifySeverity=nsWarning);
 
     function CheckIfTransparent(Var IgnoreAlpha : Boolean) : Boolean;
+
+    function CheckIfGrayScale : Boolean;
+
     procedure MakeOpaque;
 
   public
@@ -940,6 +943,35 @@ begin
 
     end;
   end;  *)
+end;
+
+function TBZCustomImageFileIO.CheckIfGrayScale: Boolean;
+Var
+ PixPtr : PBZColor;
+ i : Int64;
+ IsGrayScale : Boolean;
+ SrcColor : TBZColor;
+ Diff, rd,gd, bd : Byte;
+
+begin
+  i := 0;
+  PixPtr := Self.GetScanLine(0);
+  IsGrayScale := True;
+  While (I < Self.MaxSize) and (IsGrayScale = True) do
+  begin
+    SrcColor := PixPtr^;
+    rd := abs(SrcColor.Red - SrcColor.Green);
+    gd := abs(SrcColor.Red - SrcColor.Blue);
+    bd := abs(SrcColor.Blue - SrcColor.Green);
+    Diff := rd + gd + bd;
+    if Diff<>0 then
+    begin
+      IsGrayScale := False
+    end;
+    Inc(PixPtr);
+    Inc(I);
+  end;
+  Result := IsGrayScale;
 end;
 
 {%endregion%}

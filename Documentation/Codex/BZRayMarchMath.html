@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZRayMarchMath</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unité BZRayMarchMath</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section">Classes, interfaces, enregistrements et objets</div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section">Types</div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+&nbsp;<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceBox">DistanceBox</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>Function <strong><a  href="BZRayMarchMath.html#DistanceBox">DistanceBox</a></strong>(p,b:<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>):Single; overload;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceSphere">DistanceSphere</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceTorus">DistanceTorus</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceTorus82">DistanceTorus82</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceTorus88">DistanceTorus88</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceCylinder">DistanceCylinder</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceCone">DistanceCone</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistancePlane">DistancePlane</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceHexaGonalPrism">DistanceHexaGonalPrism</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceTriangularPrism">DistanceTriangularPrism</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceCapsuleLine">DistanceCapsuleLine</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceCappedCylinder">DistanceCappedCylinder</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceCappedCone">DistanceCappedCone</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#DistanceEllipsoid">DistanceEllipsoid</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#uDistanceTriangle">uDistanceTriangle</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#uDistanceQuad">uDistanceQuad</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#uDistanceBox">uDistanceBox</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#uDistanceRoundBox">uDistanceRoundBox</a></strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opUnion">opUnion</a></strong>(d1, d2 : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opSubstract">opSubstract</a></strong>(d1, d2 : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opIntersect">opIntersect</a></strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opRepeat">opRepeat</a></strong>(p, c : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>):<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opRotateTranslate">opRotateTranslate</a></strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opScale">opScale</a></strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opDisplace">opDisplace</a></strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opBlend">opBlend</a></strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opTwist">opTwist</a></strong>(p:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code>function <strong><a  href="BZRayMarchMath.html#opCheapBend">opCheapBend</a></strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Fonctions et procédures</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceBox"></span><code>function <strong>DistanceBox</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Signed distance</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceBox"></span><code>Function <strong>DistanceBox</strong>(p,b:<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>):Single; overload;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceSphere"></span><code>function <strong>DistanceSphere</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceTorus"></span><code>function <strong>DistanceTorus</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceTorus82"></span><code>function <strong>DistanceTorus82</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceTorus88"></span><code>function <strong>DistanceTorus88</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceCylinder"></span><code>function <strong>DistanceCylinder</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceCone"></span><code>function <strong>DistanceCone</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistancePlane"></span><code>function <strong>DistancePlane</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceHexaGonalPrism"></span><code>function <strong>DistanceHexaGonalPrism</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceTriangularPrism"></span><code>function <strong>DistanceTriangularPrism</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceCapsuleLine"></span><code>function <strong>DistanceCapsuleLine</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceCappedCylinder"></span><code>function <strong>DistanceCappedCylinder</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceCappedCone"></span><code>function <strong>DistanceCappedCone</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="DistanceEllipsoid"></span><code>function <strong>DistanceEllipsoid</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="uDistanceTriangle"></span><code>function <strong>uDistanceTriangle</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Unsigned Distance</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="uDistanceQuad"></span><code>function <strong>uDistanceQuad</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="uDistanceBox"></span><code>function <strong>uDistanceBox</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="uDistanceRoundBox"></span><code>function <strong>uDistanceRoundBox</strong>(P:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>; S : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opUnion"></span><code>function <strong>opUnion</strong>(d1, d2 : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+Operation</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opSubstract"></span><code>function <strong>opSubstract</strong>(d1, d2 : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>):<a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opIntersect"></span><code>function <strong>opIntersect</strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opRepeat"></span><code>function <strong>opRepeat</strong>(p, c : <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>):<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opRotateTranslate"></span><code>function <strong>opRotateTranslate</strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opScale"></span><code>function <strong>opScale</strong>(d1, d2 : Single):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opDisplace"></span><code>function <strong>opDisplace</strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opBlend"></span><code>function <strong>opBlend</strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opTwist"></span><code>function <strong>opTwist</strong>(p:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):<a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="opCheapBend"></span><code>function <strong>opCheapBend</strong>(v:<a  href="BZVectorMath.html#TBZVector">TBZVector</a>):Single;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZSound: Classe TBZSoundManager</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZSound: Classe TBZSoundManager</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <span id="TBZSoundManager"></span><h1 class="cio">Classe TBZSoundManager</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
@@ -54,90 +42,94 @@ Classe de base pour les composants du gestionnaire de son. <br> Le composant sou
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>constructor <b><a  href="BZSound.TBZSoundManager.html#Create">Create</a></b>(AOwner: TComponent); override;</code></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZSound.TBZSoundManager.html#Create">Create</a></strong>(AOwner: TComponent); override;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>destructor <b><a  href="BZSound.TBZSoundManager.html#Destroy">Destroy</a></b>; override;</code></td>
+<td class="itemcode"><code>destructor <strong><a  href="BZSound.TBZSoundManager.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZSoundManager.html#UpdateSources">UpdateSources</a></b>; virtual;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSound.TBZSoundManager.html#UpdateSources">UpdateSources</a></strong>; virtual;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZSoundManager.html#StopAllSources">StopAllSources</a></b>;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSound.TBZSoundManager.html#StopAllSources">StopAllSources</a></strong>;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>procedure <b><a  href="BZSound.TBZSoundManager.html#DoProgress">DoProgress</a></b>(const progressTime: <a  href="BZClasses.TBZProgressTimes.html">TBZProgressTimes</a>); override;</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSound.TBZSoundManager.html#DoProgress">DoProgress</a></strong>(const progressTime: <a  href="BZClasses.TBZProgressTimes.html">TBZProgressTimes</a>); override;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundManager.html#CPUUsagePercent">CPUUsagePercent</a></b>: Single; virtual;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZSound.TBZSoundManager.html#CPUUsagePercent">CPUUsagePercent</a></strong>: Single; virtual;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <b><a  href="BZSound.TBZSoundManager.html#EAXSupported">EAXSupported</a></b>: Boolean; dynamic;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZSound.TBZSoundManager.html#EAXSupported">EAXSupported</a></strong>: Boolean; dynamic;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSound.TBZSoundManager.html#GetInformations">GetInformations</a></strong>: String; virtual;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Active">Active</a></b>: Boolean read FActive write SetActive default False;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Active">Active</a></strong>: Boolean read FActive write SetActive default False;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#MaxChannels">MaxChannels</a></b>: Integer read FMaxChannels write SetMaxChannels default 8;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#MaxChannels">MaxChannels</a></strong>: Integer read FMaxChannels write SetMaxChannels default 8;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#OutputFrequency">OutputFrequency</a></b>: Integer read FOutputFrequency write SetOutputFrequency default 44100;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#OutputFrequency">OutputFrequency</a></strong>: Integer read FOutputFrequency write SetOutputFrequency default 44100;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Mute">Mute</a></b>: Boolean read FMute write SetMute default False;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Mute">Mute</a></strong>: Boolean read FMute write SetMute default False;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Pause">Pause</a></b>: Boolean read FPause write SetPause default False;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Pause">Pause</a></strong>: Boolean read FPause write SetPause default False;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#MasterVolume">MasterVolume</a></b>: Single read FMasterVolume write SetMasterVolume;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#MasterVolume">MasterVolume</a></strong>: Single read FMasterVolume write SetMasterVolume;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Sources">Sources</a></b>: <a  href="BZSound.TBZSoundSources.html">TBZSoundSources</a> read FSources write SetSources;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Sources">Sources</a></strong>: <a  href="BZSound.TBZSoundSources.html">TBZSoundSources</a> read FSources write SetSources;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#UpdateFrequency">UpdateFrequency</a></b>: Single read FUpdateFrequency write SetUpdateFrequency stored StoreUpdateFrequency;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#UpdateFrequency">UpdateFrequency</a></strong>: Single read FUpdateFrequency write SetUpdateFrequency stored StoreUpdateFrequency;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Cadencer">Cadencer</a></b>: <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write SetCadencer;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Cadencer">Cadencer</a></strong>: <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write SetCadencer;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#DistanceFactor">DistanceFactor</a></b>: Single read FDistanceFactor write SetDistanceFactor stored StoreDistanceFactor;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#DistanceFactor">DistanceFactor</a></strong>: Single read FDistanceFactor write SetDistanceFactor stored StoreDistanceFactor;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#RollOffFactor">RollOffFactor</a></b>: Single read FRollOffFactor write SetRollOffFactor stored StoreRollOffFactor;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#RollOffFactor">RollOffFactor</a></strong>: Single read FRollOffFactor write SetRollOffFactor stored StoreRollOffFactor;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#DopplerFactor">DopplerFactor</a></b>: Single read FDopplerFactor write SetDopplerFactor stored False;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#DopplerFactor">DopplerFactor</a></strong>: Single read FDopplerFactor write SetDopplerFactor stored False;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#Environment">Environment</a></b>: <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FSoundEnvironment write SetSoundEnvironment default <a  href="BZSound.html#seGeneric">seGeneric</a>;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#Environment">Environment</a></strong>: <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FSoundEnvironment write SetSoundEnvironment default <a  href="BZSound.html#seGeneric">seGeneric</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><code>property <b><a  href="BZSound.TBZSoundManager.html#UseEnvironment">UseEnvironment</a></b> : Boolean read FUseEnvironment write SetUseEnvironment;</code></td>
+<td class="itemcode"><code>property <strong><a  href="BZSound.TBZSoundManager.html#UseEnvironment">UseEnvironment</a></strong> : Boolean read FUseEnvironment write SetUseEnvironment;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -145,7 +137,7 @@ Classe de base pour les composants du gestionnaire de son. <br> Le composant sou
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>(AOwner: TComponent); override;</code></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner: TComponent); override;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -153,7 +145,7 @@ Classe de base pour les composants du gestionnaire de son. <br> Le composant sou
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -161,7 +153,7 @@ Classe de base pour les composants du gestionnaire de son. <br> Le composant sou
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="UpdateSources"></span><code>procedure <b>UpdateSources</b>; virtual;</code></td>
+<td class="itemcode"><span id="UpdateSources"></span><code>procedure <strong>UpdateSources</strong>; virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -171,7 +163,7 @@ Manual request to update all <a class="normal" href="BZSound.TBZSoundManager.htm
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="StopAllSources"></span><code>procedure <b>StopAllSources</b>;</code></td>
+<td class="itemcode"><span id="StopAllSources"></span><code>procedure <strong>StopAllSources</strong>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -181,7 +173,7 @@ Stop and free all <a class="normal" href="BZSound.TBZSoundManager.html#Sources">
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="DoProgress"></span><code>procedure <b>DoProgress</b>(const progressTime: <a  href="BZClasses.TBZProgressTimes.html">TBZProgressTimes</a>); override;</code></td>
+<td class="itemcode"><span id="DoProgress"></span><code>procedure <strong>DoProgress</strong>(const progressTime: <a  href="BZClasses.TBZProgressTimes.html">TBZProgressTimes</a>); override;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -191,7 +183,7 @@ Progress notification for time synchronization. This method will call <a class="
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="CPUUsagePercent"></span><code>function <b>CPUUsagePercent</b>: Single; virtual;</code></td>
+<td class="itemcode"><span id="CPUUsagePercent"></span><code>function <strong>CPUUsagePercent</strong>: Single; virtual;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -201,18 +193,26 @@ Sound manager API reported CPU Usage. Returns -1 when unsupported.</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="EAXSupported"></span><code>function <b>EAXSupported</b>: Boolean; dynamic;</code></td>
+<td class="itemcode"><span id="EAXSupported"></span><code>function <strong>EAXSupported</strong>: Boolean; dynamic;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
 True if EAX is supported.</p>
 </td></tr>
 </table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="GetInformations"></span><code>function <strong>GetInformations</strong>: String; virtual;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
 <h3 class="detail">Propriétés</h3>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Active"></span><code>property <b>Active</b>: Boolean read FActive write SetActive default False;</code></td>
+<td class="itemcode"><span id="Active"></span><code>property <strong>Active</strong>: Boolean read FActive write SetActive default False;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -222,7 +222,7 @@ Activation/deactivation of the low-level sound API</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="MaxChannels"></span><code>property <b>MaxChannels</b>: Integer read FMaxChannels write SetMaxChannels default 8;</code></td>
+<td class="itemcode"><span id="MaxChannels"></span><code>property <strong>MaxChannels</strong>: Integer read FMaxChannels write SetMaxChannels default 8;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -232,7 +232,7 @@ Maximum number of sound output channels. While some drivers will just ignore thi
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="OutputFrequency"></span><code>property <b>OutputFrequency</b>: Integer read FOutputFrequency write SetOutputFrequency default 44100;</code></td>
+<td class="itemcode"><span id="OutputFrequency"></span><code>property <strong>OutputFrequency</strong>: Integer read FOutputFrequency write SetOutputFrequency default 44100;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -242,7 +242,7 @@ Sound output mixing frequency. Commonly used values ar 11025, 22050 and 44100. N
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Mute"></span><code>property <b>Mute</b>: Boolean read FMute write SetMute default False;</code></td>
+<td class="itemcode"><span id="Mute"></span><code>property <strong>Mute</strong>: Boolean read FMute write SetMute default False;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -252,7 +252,7 @@ Request to <code>mute</code> all sounds. All sound requests should be handled as
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Pause"></span><code>property <b>Pause</b>: Boolean read FPause write SetPause default False;</code></td>
+<td class="itemcode"><span id="Pause"></span><code>property <strong>Pause</strong>: Boolean read FPause write SetPause default False;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -262,7 +262,7 @@ Request to <code>pause</code> all sound, sound output should be muted too. When 
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="MasterVolume"></span><code>property <b>MasterVolume</b>: Single read FMasterVolume write SetMasterVolume;</code></td>
+<td class="itemcode"><span id="MasterVolume"></span><code>property <strong>MasterVolume</strong>: Single read FMasterVolume write SetMasterVolume;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -272,7 +272,7 @@ Master Volume adjustement in the [0.0; 1.0] range. Driver should take care of pr
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Sources"></span><code>property <b>Sources</b>: <a  href="BZSound.TBZSoundSources.html">TBZSoundSources</a> read FSources write SetSources;</code></td>
+<td class="itemcode"><span id="Sources"></span><code>property <strong>Sources</strong>: <a  href="BZSound.TBZSoundSources.html">TBZSoundSources</a> read FSources write SetSources;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -282,7 +282,7 @@ Currently <a class="normal" href="BZSound.TBZSoundManager.html#Active">active</a
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="UpdateFrequency"></span><code>property <b>UpdateFrequency</b>: Single read FUpdateFrequency write SetUpdateFrequency stored StoreUpdateFrequency;</code></td>
+<td class="itemcode"><span id="UpdateFrequency"></span><code>property <strong>UpdateFrequency</strong>: Single read FUpdateFrequency write SetUpdateFrequency stored StoreUpdateFrequency;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -292,7 +292,7 @@ Update frequency for time-based control (<a class="normal" href="BZSound.TBZSoun
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Cadencer"></span><code>property <b>Cadencer</b>: <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write SetCadencer;</code></td>
+<td class="itemcode"><span id="Cadencer"></span><code>property <strong>Cadencer</strong>: <a  href="BZCadencer.TBZCadencer.html">TBZCadencer</a> read FCadencer write SetCadencer;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -302,7 +302,7 @@ Update frequency for time-based control (<a class="normal" href="BZSound.TBZSoun
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="DistanceFactor"></span><code>property <b>DistanceFactor</b>: Single read FDistanceFactor write SetDistanceFactor stored StoreDistanceFactor;</code></td>
+<td class="itemcode"><span id="DistanceFactor"></span><code>property <strong>DistanceFactor</strong>: Single read FDistanceFactor write SetDistanceFactor stored StoreDistanceFactor;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -312,7 +312,7 @@ Engine relative distance factor, compared to 1.0 meters. Equates to 'how many un
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="RollOffFactor"></span><code>property <b>RollOffFactor</b>: Single read FRollOffFactor write SetRollOffFactor stored StoreRollOffFactor;</code></td>
+<td class="itemcode"><span id="RollOffFactor"></span><code>property <strong>RollOffFactor</strong>: Single read FRollOffFactor write SetRollOffFactor stored StoreRollOffFactor;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -322,7 +322,7 @@ Sets the global attenuation rolloff factor. Normally volume for a sample will sc
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="DopplerFactor"></span><code>property <b>DopplerFactor</b>: Single read FDopplerFactor write SetDopplerFactor stored False;</code></td>
+<td class="itemcode"><span id="DopplerFactor"></span><code>property <strong>DopplerFactor</strong>: Single read FDopplerFactor write SetDopplerFactor stored False;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -332,7 +332,7 @@ Engine relative Doppler factor, compared to 1.0 meters. Equates to 'how many uni
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="Environment"></span><code>property <b>Environment</b>: <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FSoundEnvironment write SetSoundEnvironment default <a  href="BZSound.html#seGeneric">seGeneric</a>;</code></td>
+<td class="itemcode"><span id="Environment"></span><code>property <strong>Environment</strong>: <a  href="BZSound.html#TBZSoundReverbEnvironment">TBZSoundReverbEnvironment</a> read FSoundEnvironment write SetSoundEnvironment default <a  href="BZSound.html#seGeneric">seGeneric</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -342,11 +342,16 @@ Sound <code>environment</code> (requires EAX compatible soundboard).</p>
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
-<td class="itemcode"><span id="UseEnvironment"></span><code>property <b>UseEnvironment</b> : Boolean read FUseEnvironment write SetUseEnvironment;</code></td>
+<td class="itemcode"><span id="UseEnvironment"></span><code>property <strong>UseEnvironment</strong> : Boolean read FUseEnvironment write SetUseEnvironment;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
 </table>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

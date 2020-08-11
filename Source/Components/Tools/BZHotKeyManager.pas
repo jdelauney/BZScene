@@ -48,14 +48,14 @@ interface
 
 uses
 
-  Classes, SysUtils, Forms, Controls, Graphics, Dialogs,
+  Classes, SysUtils, LCLProc, LCLType, LCLIntf, LResources, LMessages,
+  Forms, Controls, Graphics, Dialogs,
   {$IFDEF WINDOWS}
-   windows,
+   windows
   {$ENDIF}
   {$IFDEF LINUX}
-   Unix, x, xlib, gdk2, gdk2x,
-  {$ENDIF}  
-  LCLProc, LCLType, LCLIntf, LResources, LMessages;
+   Unix, x, xlib, gdk2, gdk2x
+  {$ENDIF};
 
 
 {.$IFDEF DARWIN}

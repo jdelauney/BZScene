@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZNoiseGenerator</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZNoiseGenerator</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="unit">Unité BZNoiseGenerator</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
@@ -53,11 +41,11 @@ Contient des classes d'aide à la génération de bruit.</p>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Notes</b> : <br>
+<p><strong>Notes</strong> : <br>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Credits :</b> </p>
+<p><strong>Credits :</strong> </p>
 
 <ul class="paragraph_spacing">
   <li><p>J.Delauney (BeanzMaster)</p></li>
@@ -67,7 +55,7 @@ Contient des classes d'aide à la génération de bruit.</p>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>LICENCE</b> : MPL / GPL
+<p><strong>LICENCE</strong> : MPL / GPL
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
@@ -87,83 +75,97 @@ Contient des classes d'aide à la génération de bruit.</p>
 <td class="itemdesc">Générateur de bruit monochrome</td>
 </tr>
 <tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZNoisePertubation.html"><code>TBZNoisePertubation</code></a></td>
+<td class="itemdesc">&nbsp;</td>
+</tr>
+<tr class="list2">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZValueNoiseGenerator.html"><code>TBZValueNoiseGenerator</code></a></td>
 <td class="itemdesc">Générateur de bruit multi valeurs.</td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZGradientNoiseGenerator.html"><code>TBZGradientNoiseGenerator</code></a></td>
 <td class="itemdesc">Générateur de bruit &quot;Gradient&quot; appelé aussi &quot;Perlin&quot; suivant l'aglorithme de Ken Perlin</td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZPerlinNoiseGenerator.html"><code>TBZPerlinNoiseGenerator</code></a></td>
 <td class="itemdesc">Classe de type <a class="normal" href="BZNoiseGenerator.TBZGradientNoiseGenerator.html">TBZGradientNoiseGenerator</a></td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZImprovedPerlinNoiseGenerator.html"><code>TBZImprovedPerlinNoiseGenerator</code></a></td>
 <td class="itemdesc">Générateur de bruit &quot;Perlin&quot; amélioré suivant l'aglorithme de Ken Perlin</td>
 </tr>
-<tr class="list">
+<tr class="list2">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZSimplexNoiseGenerator.html"><code>TBZSimplexNoiseGenerator</code></a></td>
 <td class="itemdesc">Générateur de bruit suivant l'algorithme Simplex</td>
 </tr>
-<tr class="list2">
+<tr class="list">
 <td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZOpenSimplexNoiseGenerator.html"><code>TBZOpenSimplexNoiseGenerator</code></a></td>
 <td class="itemdesc"><code>TBZOpenSimplexNoiseGenerator</code></td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZNoiseGenerator.TBZCustomFractalNoiseGenerator.html"><code>TBZCustomFractalNoiseGenerator</code></a></td>
+<td class="itemdesc"><code>TBZCustomFractalNoiseGenerator</code> : Classe de base à hériter pour la génération de bruit &quot;fractal&quot;</td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoisePerturbation">TBZNoisePerturbation</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoisePerturbation">TBZNoisePerturbation</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoiseInterpolationType">TBZNoiseInterpolationType</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseInterpolationType">TBZNoiseInterpolationType</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoiseSupports">TBZNoiseSupports</a></b> = set of <a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseSupports">TBZNoiseSupports</a></strong> = set of <a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoiseGeneratorClass">TBZNoiseGeneratorClass</a></b> = Class of <a  href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseGeneratorClass">TBZNoiseGeneratorClass</a></strong> = Class of <a  href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZNoiseRandomGeneratorType">TBZNoiseRandomGeneratorType</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseRandomGeneratorType">TBZNoiseRandomGeneratorType</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#TBZOnCustomRandomNoise">TBZOnCustomRandomNoise</a></b> = procedure(Dimension : Byte; x,y,z,w : Double; var value : Double) of object;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZOnCustomRandomNoise">TBZOnCustomRandomNoise</a></strong> = procedure(Dimension : Byte; x,y,z,w : Double; var value : Double) of object;</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZNoiseType">TBZNoiseType</a></strong> = (...);</code></td>
+</tr>
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#TBZFractalNoiseType">TBZFractalNoiseType</a></strong> = (...);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cX_PRIME">cX_PRIME</a></b> = 1619;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cX_PRIME">cX_PRIME</a></strong> = 1619;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cY_PRIME">cY_PRIME</a></b> = 31337;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cY_PRIME">cY_PRIME</a></strong> = 31337;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cZ_PRIME">cZ_PRIME</a></b> = 6971;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cZ_PRIME">cZ_PRIME</a></strong> = 6971;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cW_PRIME">cW_PRIME</a></b> = 1013;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cW_PRIME">cW_PRIME</a></strong> = 1013;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cNOISE_SEED">cNOISE_SEED</a></b> = 4679;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cNOISE_SEED">cNOISE_SEED</a></strong> = 4679;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cPERLIN_TABLE_SIZE">cPERLIN_TABLE_SIZE</a></b> = 256;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cPERLIN_TABLE_SIZE">cPERLIN_TABLE_SIZE</a></strong> = 256;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZNoiseGenerator.html#cPERLIN_TABLE_MASK">cPERLIN_TABLE_MASK</a></b> = 255;</code></td>
+<td class="itemcode"><code><strong><a  href="BZNoiseGenerator.html#cPERLIN_TABLE_MASK">cPERLIN_TABLE_MASK</a></strong> = 255;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoisePerturbation"></span><code><b>TBZNoisePerturbation</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZNoisePerturbation"></span><code><strong>TBZNoisePerturbation</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -172,6 +174,8 @@ Enumération des types de pertubation du bruit</p>
 <ul>
 <li>
 <span id="npNone">npNone</span></li>
+<li>
+<span id="npTurbulence">npTurbulence</span></li>
 <li>
 <span id="npGradient">npGradient</span></li>
 <li>
@@ -185,7 +189,7 @@ Enumération des types de pertubation du bruit</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoiseInterpolationType"></span><code><b>TBZNoiseInterpolationType</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZNoiseInterpolationType"></span><code><strong>TBZNoiseInterpolationType</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -203,7 +207,7 @@ Enumération des types d'interpolation du bruit</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoiseSupport"></span><code><b>TBZNoiseSupport</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZNoiseSupport"></span><code><strong>TBZNoiseSupport</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -227,7 +231,7 @@ Enumération des types de bruit</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoiseSupports"></span><code><b>TBZNoiseSupports</b> = set of <a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a>;</code></td>
+<td class="itemcode"><span id="TBZNoiseSupports"></span><code><strong>TBZNoiseSupports</strong> = set of <a  href="BZNoiseGenerator.html#TBZNoiseSupport">TBZNoiseSupport</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -236,7 +240,7 @@ Support des bruits</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoiseGeneratorClass"></span><code><b>TBZNoiseGeneratorClass</b> = Class of <a  href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a>;</code></td>
+<td class="itemcode"><span id="TBZNoiseGeneratorClass"></span><code><strong>TBZNoiseGeneratorClass</strong> = Class of <a  href="BZNoiseGenerator.TBZCustomNoiseGenerator.html">TBZCustomNoiseGenerator</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -245,7 +249,7 @@ Classe de type <a class="normal" href="BZNoiseGenerator.TBZCustomNoiseGenerator.
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZNoiseRandomGeneratorType"></span><code><b>TBZNoiseRandomGeneratorType</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZNoiseRandomGeneratorType"></span><code><strong>TBZNoiseRandomGeneratorType</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -263,17 +267,71 @@ Enumération des générateurs aléatoire pour la génération du bruit</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZOnCustomRandomNoise"></span><code><b>TBZOnCustomRandomNoise</b> = procedure(Dimension : Byte; x,y,z,w : Double; var value : Double) of object;</code></td>
+<td class="itemcode"><span id="TBZOnCustomRandomNoise"></span><code><strong>TBZOnCustomRandomNoise</strong> = procedure(Dimension : Byte; x,y,z,w : Double; var value : Double) of object;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
 Méthode personalisée pour la génération d'un bruit</p>
 </td></tr>
 </table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZNoiseType"></span><code><strong>TBZNoiseType</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+WorleyNoise : <a  href="https://en.wikipedia.org/wiki/Worley_noise">https://en.wikipedia.org/wiki/Worley_noise</a></p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="ntRandom">ntRandom</span></li>
+<li>
+<span id="ntValue">ntValue</span></li>
+<li>
+<span id="ntGradient">ntGradient</span></li>
+<li>
+<span id="ntImprovePerlin">ntImprovePerlin</span></li>
+<li>
+<span id="ntSimplex">ntSimplex</span></li>
+<li>
+<span id="ntOpenSimplex">ntOpenSimplex</span></li>
+<li>
+<span id="ntCustom">ntCustom</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZFractalNoiseType"></span><code><strong>TBZFractalNoiseType</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="fntStandard">fntStandard</span></li>
+<li>
+<span id="fntFBM">fntFBM</span></li>
+<li>
+<span id="fntBillow">fntBillow</span></li>
+<li>
+<span id="fntTurbulence">fntTurbulence</span></li>
+<li>
+<span id="fntDistored">fntDistored</span></li>
+<li>
+<span id="fntMulti">fntMulti</span></li>
+<li>
+<span id="fntHybrid">fntHybrid</span></li>
+<li>
+<span id="fnrHetero">fnrHetero</span></li>
+<li>
+<span id="fntRidged">fntRidged</span></li>
+</ul>
+</td></tr>
+</table>
 <h3 class="detail">Constantes</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cX_PRIME"></span><code><b>cX_PRIME</b> = 1619;</code></td>
+<td class="itemcode"><span id="cX_PRIME"></span><code><strong>cX_PRIME</strong> = 1619;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -282,7 +340,7 @@ Nombre aléatoire premier pour l'axe des X</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cY_PRIME"></span><code><b>cY_PRIME</b> = 31337;</code></td>
+<td class="itemcode"><span id="cY_PRIME"></span><code><strong>cY_PRIME</strong> = 31337;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -291,7 +349,7 @@ Nombre aléatoire premier pour l'axe des Y</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cZ_PRIME"></span><code><b>cZ_PRIME</b> = 6971;</code></td>
+<td class="itemcode"><span id="cZ_PRIME"></span><code><strong>cZ_PRIME</strong> = 6971;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -300,7 +358,7 @@ Nombre aléatoire premier pour l'axe des Z</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cW_PRIME"></span><code><b>cW_PRIME</b> = 1013;</code></td>
+<td class="itemcode"><span id="cW_PRIME"></span><code><strong>cW_PRIME</strong> = 1013;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -309,7 +367,7 @@ Nombre aléatoire premier pour l'axe des W</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cNOISE_SEED"></span><code><b>cNOISE_SEED</b> = 4679;</code></td>
+<td class="itemcode"><span id="cNOISE_SEED"></span><code><strong>cNOISE_SEED</strong> = 4679;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -318,7 +376,7 @@ Nombre aléatoire</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPERLIN_TABLE_SIZE"></span><code><b>cPERLIN_TABLE_SIZE</b> = 256;</code></td>
+<td class="itemcode"><span id="cPERLIN_TABLE_SIZE"></span><code><strong>cPERLIN_TABLE_SIZE</strong> = 256;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -327,7 +385,7 @@ Taille de la table de Perlin</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPERLIN_TABLE_MASK"></span><code><b>cPERLIN_TABLE_MASK</b> = 255;</code></td>
+<td class="itemcode"><span id="cPERLIN_TABLE_MASK"></span><code><strong>cPERLIN_TABLE_MASK</strong> = 255;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -338,10 +396,15 @@ Masque de la table de Perlin</p>
 <ul class="authors">
 <li>J.Delauney (BeanzMaster)</li>
 </ul>
-<h2 class="created">Création</h2>
+<h2 class="created">Crée</h2>
 <p>
 2019-11-10
 </p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

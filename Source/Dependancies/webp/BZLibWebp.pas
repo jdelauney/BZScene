@@ -13,7 +13,7 @@ unit BZLibWebp;
 
 {$ALIGN ON}
 {$MINENUMSIZE 4}
-
+{$WARN 3031 off : Values in enumeration types have to be ascending}
 interface
 
 uses

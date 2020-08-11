@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZFileFinder: Classe TBZFileSearchEngine</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZFileFinder: Classe TBZFileSearchEngine</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <span id="TBZFileSearchEngine"></span><h1 class="cio">Classe TBZFileSearchEngine</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section"><a class="section" href="#PasDoc-Fields">Champs</a></div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section">Propriétés</div></div>
@@ -49,62 +37,62 @@ $(document).ready(function() {
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#SearchOptions">SearchOptions</a></b>: <a  href="BZFileFinder.TBZFileSearchOptions.html">TBZFileSearchOptions</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#SearchOptions">SearchOptions</a></strong>: <a  href="BZFileFinder.TBZFileSearchOptions.html">TBZFileSearchOptions</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#DateOptions">DateOptions</a></b>: <a  href="BZFileFinder.TBZFileDateFilter.html">TBZFileDateFilter</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#DateOptions">DateOptions</a></strong>: <a  href="BZFileFinder.TBZFileDateFilter.html">TBZFileDateFilter</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#SizeOptions">SizeOptions</a></b>: <a  href="BZFileFinder.TBZFileSizeFilter.html">TBZFileSizeFilter</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#SizeOptions">SizeOptions</a></strong>: <a  href="BZFileFinder.TBZFileSizeFilter.html">TBZFileSizeFilter</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#ExcludeMasks">ExcludeMasks</a></b>: TStringList;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#ExcludeMasks">ExcludeMasks</a></strong>: TStringList;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#FileMasks">FileMasks</a></b>: TStringList;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#FileMasks">FileMasks</a></strong>: TStringList;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#RootPath">RootPath</a></b>: String;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#RootPath">RootPath</a></strong>: String;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchFileFound">OnSearchFileFound</a></b>: <a  href="BZFileFinder.html#TBZOnSearchFileFound">TBZOnSearchFileFound</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchFileFound">OnSearchFileFound</a></strong>: <a  href="BZFileFinder.html#TBZOnSearchFileFound">TBZOnSearchFileFound</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchChangeFolder">OnSearchChangeFolder</a></b>: <a  href="BZFileFinder.html#TBZOnSearchChangeFolder">TBZOnSearchChangeFolder</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchChangeFolder">OnSearchChangeFolder</a></strong>: <a  href="BZFileFinder.html#TBZOnSearchChangeFolder">TBZOnSearchChangeFolder</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchCompleted">OnSearchCompleted</a></b>: <a  href="BZFileFinder.html#TBZOnSearchCompleted">TBZOnSearchCompleted</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchCompleted">OnSearchCompleted</a></strong>: <a  href="BZFileFinder.html#TBZOnSearchCompleted">TBZOnSearchCompleted</a>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchAcceptFile">OnSearchAcceptFile</a></b>: <a  href="BZFileFinder.html#TBZOnSearchAcceptFile">TBZOnSearchAcceptFile</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchAcceptFile">OnSearchAcceptFile</a></strong>: <a  href="BZFileFinder.html#TBZOnSearchAcceptFile">TBZOnSearchAcceptFile</a>;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code><b><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchStart">OnSearchStart</a></b>: <a  href="BZFileFinder.html#TBZOnSearchStart">TBZOnSearchStart</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZFileFinder.TBZFileSearchEngine.html#OnSearchStart">OnSearchStart</a></strong>: <a  href="BZFileFinder.html#TBZOnSearchStart">TBZOnSearchStart</a>;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
 <table class="summary wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>constructor <b><a  href="BZFileFinder.TBZFileSearchEngine.html#Create">Create</a></b>;</code></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZFileFinder.TBZFileSearchEngine.html#Create">Create</a></strong>;</code></td>
 </tr>
 <tr class="list2">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>destructor <b><a  href="BZFileFinder.TBZFileSearchEngine.html#Destroy">Destroy</a></b>; override;</code></td>
+<td class="itemcode"><code>destructor <strong><a  href="BZFileFinder.TBZFileSearchEngine.html#Destroy">Destroy</a></strong>; override;</code></td>
 </tr>
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><code>function <b><a  href="BZFileFinder.TBZFileSearchEngine.html#Search">Search</a></b> : Boolean;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZFileFinder.TBZFileSearchEngine.html#Search">Search</a></strong>: Boolean;</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
@@ -112,7 +100,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="SearchOptions"></span><code><b>SearchOptions</b>: <a  href="BZFileFinder.TBZFileSearchOptions.html">TBZFileSearchOptions</a>;</code></td>
+<td class="itemcode"><span id="SearchOptions"></span><code><strong>SearchOptions</strong>: <a  href="BZFileFinder.TBZFileSearchOptions.html">TBZFileSearchOptions</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -120,7 +108,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="DateOptions"></span><code><b>DateOptions</b>: <a  href="BZFileFinder.TBZFileDateFilter.html">TBZFileDateFilter</a>;</code></td>
+<td class="itemcode"><span id="DateOptions"></span><code><strong>DateOptions</strong>: <a  href="BZFileFinder.TBZFileDateFilter.html">TBZFileDateFilter</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -128,7 +116,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="SizeOptions"></span><code><b>SizeOptions</b>: <a  href="BZFileFinder.TBZFileSizeFilter.html">TBZFileSizeFilter</a>;</code></td>
+<td class="itemcode"><span id="SizeOptions"></span><code><strong>SizeOptions</strong>: <a  href="BZFileFinder.TBZFileSizeFilter.html">TBZFileSizeFilter</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -136,7 +124,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="ExcludeMasks"></span><code><b>ExcludeMasks</b>: TStringList;</code></td>
+<td class="itemcode"><span id="ExcludeMasks"></span><code><strong>ExcludeMasks</strong>: TStringList;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -144,7 +132,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="FileMasks"></span><code><b>FileMasks</b>: TStringList;</code></td>
+<td class="itemcode"><span id="FileMasks"></span><code><strong>FileMasks</strong>: TStringList;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -152,7 +140,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="RootPath"></span><code><b>RootPath</b>: String;</code></td>
+<td class="itemcode"><span id="RootPath"></span><code><strong>RootPath</strong>: String;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -160,7 +148,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OnSearchFileFound"></span><code><b>OnSearchFileFound</b>: <a  href="BZFileFinder.html#TBZOnSearchFileFound">TBZOnSearchFileFound</a>;</code></td>
+<td class="itemcode"><span id="OnSearchFileFound"></span><code><strong>OnSearchFileFound</strong>: <a  href="BZFileFinder.html#TBZOnSearchFileFound">TBZOnSearchFileFound</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -168,7 +156,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OnSearchChangeFolder"></span><code><b>OnSearchChangeFolder</b>: <a  href="BZFileFinder.html#TBZOnSearchChangeFolder">TBZOnSearchChangeFolder</a>;</code></td>
+<td class="itemcode"><span id="OnSearchChangeFolder"></span><code><strong>OnSearchChangeFolder</strong>: <a  href="BZFileFinder.html#TBZOnSearchChangeFolder">TBZOnSearchChangeFolder</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -176,7 +164,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OnSearchCompleted"></span><code><b>OnSearchCompleted</b>: <a  href="BZFileFinder.html#TBZOnSearchCompleted">TBZOnSearchCompleted</a>;</code></td>
+<td class="itemcode"><span id="OnSearchCompleted"></span><code><strong>OnSearchCompleted</strong>: <a  href="BZFileFinder.html#TBZOnSearchCompleted">TBZOnSearchCompleted</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -184,7 +172,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OnSearchAcceptFile"></span><code><b>OnSearchAcceptFile</b>: <a  href="BZFileFinder.html#TBZOnSearchAcceptFile">TBZOnSearchAcceptFile</a>;</code></td>
+<td class="itemcode"><span id="OnSearchAcceptFile"></span><code><strong>OnSearchAcceptFile</strong>: <a  href="BZFileFinder.html#TBZOnSearchAcceptFile">TBZOnSearchAcceptFile</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -192,7 +180,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="OnSearchStart"></span><code><b>OnSearchStart</b>: <a  href="BZFileFinder.html#TBZOnSearchStart">TBZOnSearchStart</a>;</code></td>
+<td class="itemcode"><span id="OnSearchStart"></span><code><strong>OnSearchStart</strong>: <a  href="BZFileFinder.html#TBZOnSearchStart">TBZOnSearchStart</a>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -201,7 +189,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Create"></span><code>constructor <b>Create</b>;</code></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -209,7 +197,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Destroy"></span><code>destructor <b>Destroy</b>; override;</code></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
 </tr>
 <tr><td colspan="2">
 &nbsp;</td></tr>
@@ -217,7 +205,7 @@ $(document).ready(function() {
 <table class="detail wide_list">
 <tr class="list">
 <td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
-<td class="itemcode"><span id="Search"></span><code>function <b>Search</b> : Boolean;</code></td>
+<td class="itemcode"><span id="Search"></span><code>function <strong>Search</strong>: Boolean;</code></td>
 </tr>
 <tr><td colspan="2">
 <p>
@@ -226,4 +214,9 @@ Recherche les dossiers et fichiers en fonction des critères de recherche. <br> 
 </table>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

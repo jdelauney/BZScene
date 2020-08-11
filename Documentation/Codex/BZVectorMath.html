@@ -1,35 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-<title>Documentation de BZScene: BZVectorMath</title>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZVectorMath</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="generator" content="PasDoc 0.15.0">
 <meta http-equiv="content-type" content="text/html; charset=utf-8">
-<script type="text/javascript" src="tipuesearch/jquery.min.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
 <link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
 
-<script type="text/javascript" src="tipuesearch/tipuesearch.js"></script>
-<script type="text/javascript" src="tipuesearch/tipuesearch_data.js"></script>
 <link rel="StyleSheet" type="text/css" href="pasdoc.css">
 </head>
 <body>
 <div class="container"><div class="navigation">
-<h2>Documentation de BZScene</h2><ul><li><a href="introduction.html">Acceuil</a></li><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input"></div><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></form>
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
 <div style="clear: both"></div>
-
-<script type="text/javascript">
-$(document).ready(function() {
-    $('#tipue_search_input').tipuesearch({
-        /* 10 items to display seems standard */
-        'show': 10,
-        /* For PasDoc docs, showing urls is not very useful,
-           since the page title already shows the unit and identifier. */
-        'showURL': false
-    });
-});
-</script>
-</ul></div></div><div class="content">
+</li></ul></div><div class="content">
 <h1 class="unit">Unité BZVectorMath</h1>
 <div class="sections">
 <div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section"><a class="section" href="#PasDoc-FuncsProcs">Fonctions et procédures</a></div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section"><a class="section" href="#PasDoc-Constants">Constantes</a></div><div class="one_section">Variables</div></div>
@@ -70,13 +58,13 @@ Contient une bibliothèque de classes mathématique optimisée pour les vecteurs
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Notes</b> : <br> Remarquez, ici, nous devons redéfinir le mode d'arrondi FPC comme identique à notre code SSE. <br>   Dans FPC, la 'fonction <a class="normal" href="BZMath.html#Round">Round</a>' utilise l'algorithme 'd'arrondissement bancaire'. <br>   Il ne fait pas un &quot;RoundUp&quot; ou &quot;RoundDown&quot; si le paramètre d'entré est exactement x.50.
+<p><strong>Notes</strong> : <br> Remarquez, ici, nous devons redéfinir le mode d'arrondi FPC comme identique à notre code SSE. <br>   Dans FPC, la 'fonction <a class="normal" href="BZMath.html#Round">Round</a>' utilise l'algorithme 'd'arrondissement bancaire'. <br>   Il ne fait pas un &quot;RoundUp&quot; ou &quot;RoundDown&quot; si le paramètre d'entré est exactement x.50.
 
 <p>Exemples : <br> <code><a class="normal" href="BZMath.html#Round">Round</a>(2.5) Resultat = 2</code> <br> <code><a class="normal" href="BZMath.html#Round">Round</a>(3.5) Resultat = 4</code>
 
 <p>Pour plus d'informations voir : <a  href="https://www.freepascal.org/docs-html/rtl/system/round.html">https://www.freepascal.org/docs-html/rtl/system/round.html</a> <br>
 
-<p><b>Alignement des données sur la limite de 16 bits</b> : <br> Sous x64, pour utiliser les fonctions vectorielle, vous aurez besoin d'ajouter des commandes de préprocesseur pour obtenir des données alignées appropriées. Normalement, ce n'est pas nécessaire sous x86. Mais c'est recommandé pour plus de sécurité.
+<p><strong>Alignement des données sur la limite de 16 bits</strong> : <br> Sous x64, pour utiliser les fonctions vectorielle, vous aurez besoin d'ajouter des commandes de préprocesseur pour obtenir des données alignées appropriées. Normalement, ce n'est pas nécessaire sous x86. Mais c'est recommandé pour plus de sécurité.
 
 <p>Dans l'en-tête des unité ajoutez : <br> </p>
 
@@ -177,15 +165,15 @@ Contient une bibliothèque de classes mathématique optimisée pour les vecteurs
 
 <p>
 
-<p>Vous trouverez d'autres article dans le dossier <b>DocRefs</b> <br>
+<p>Vous trouverez d'autres article dans le dossier <strong>DocRefs</strong> <br>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Dependances</b> : <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZArrayClasses.html">BZArrayClasses</a>
+<p><strong>Dependances</strong> : <a class="normal" href="BZMath.html">BZMath</a>, <a class="normal" href="BZArrayClasses.html">BZArrayClasses</a>
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>Credits :</b><br> </p>
+<p><strong>Credits :</strong><br> </p>
 
 <ul class="paragraph_spacing">
   <li><p>FPC/Lazarus</p></li>
@@ -197,7 +185,7 @@ Contient une bibliothèque de classes mathématique optimisée pour les vecteurs
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-
 
-<p><b>LICENCE</b> : MPL / GPL
+<p><strong>LICENCE</strong> : MPL / GPL
 
 <p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-</p>
 <span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
@@ -316,279 +304,279 @@ Contient une bibliothèque de classes mathématique optimisée pour les vecteurs
 <span id="PasDoc-FuncsProcs"></span><h3 class="summary">Fonctions et procédures</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code>function <b><a  href="BZVectorMath.html#sse_GetRoundMode">sse_GetRoundMode</a></b>: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>;</code></td>
+<td class="itemcode"><code>function <strong><a  href="BZVectorMath.html#sse_GetRoundMode">sse_GetRoundMode</a></strong>: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code>procedure <b><a  href="BZVectorMath.html#sse_SetRoundMode">sse_SetRoundMode</a></b>(Round_Mode: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>);</code></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZVectorMath.html#sse_SetRoundMode">sse_SetRoundMode</a></strong>(Round_Mode: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>);</code></td>
 </tr>
 </table>
 <span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector2fType">TBZVector2fType</a></b> = packed array[0..1] of Single;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector2fType">TBZVector2fType</a></strong> = packed array[0..1] of Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector2dType">TBZVector2dType</a></b> = packed array[0..1] of Double;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector2dType">TBZVector2dType</a></strong> = packed array[0..1] of Double;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector2iType">TBZVector2iType</a></b> = packed array[0..1] of Integer;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector2iType">TBZVector2iType</a></strong> = packed array[0..1] of Integer;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector3fType">TBZVector3fType</a></b> = packed array[0..2] of Single;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector3fType">TBZVector3fType</a></strong> = packed array[0..2] of Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector3iType">TBZVector3iType</a></b> = packed Array[0..2] of Longint;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector3iType">TBZVector3iType</a></strong> = packed Array[0..2] of Longint;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector3bType">TBZVector3bType</a></b> = packed Array[0..2] of Byte;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector3bType">TBZVector3bType</a></strong> = packed Array[0..2] of Byte;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector4fType">TBZVector4fType</a></b> = packed array[0..3] of Single;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector4fType">TBZVector4fType</a></strong> = packed array[0..3] of Single;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector4iType">TBZVector4iType</a></b> = packed array[0..3] of Longint;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector4iType">TBZVector4iType</a></strong> = packed array[0..3] of Longint;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector4bType">TBZVector4bType</a></b> = packed Array[0..3] of Byte;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector4bType">TBZVector4bType</a></strong> = packed Array[0..3] of Byte;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector2SwizzleRef">TBZVector2SwizzleRef</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector2SwizzleRef">TBZVector2SwizzleRef</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector3SwizzleRef">TBZVector3SwizzleRef</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector3SwizzleRef">TBZVector3SwizzleRef</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector4SwizzleRef">TBZVector4SwizzleRef</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#PBZVector2i">PBZVector2i</a></b> = &circ;<a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#PBZVector2i">PBZVector2i</a></strong> = &circ;<a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a></b> = <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZFloatPoint">TBZFloatPoint</a></strong> = <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></b> = <a  href="BZVectorMath.TBZVector3f.html">TBZVector3f</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a></strong> = <a  href="BZVectorMath.TBZVector3f.html">TBZVector3f</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#PBZAffineVector">PBZAffineVector</a></b> = &circ;<a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#PBZAffineVector">PBZAffineVector</a></strong> = &circ;<a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZVector">TBZVector</a></b> = <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZVector">TBZVector</a></strong> = <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#PBZVector">PBZVector</a></b> = &circ;<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#PBZVector">PBZVector</a></strong> = &circ;<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZClipRect">TBZClipRect</a></b> = <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZClipRect">TBZClipRect</a></strong> = <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZHmgPlaneHalfSpace">TBZHmgPlaneHalfSpace</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZHmgPlaneHalfSpace">TBZHmgPlaneHalfSpace</a></strong> = (...);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZMatrixTransformations">TBZMatrixTransformations</a></b>  = array [<a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a>] of Single;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZMatrixTransformations">TBZMatrixTransformations</a></strong>  = array [<a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a>] of Single;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a></b> = <a  href="BZVectorMath.TBZMatrix4f.html">TBZMatrix4f</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a></strong> = <a  href="BZVectorMath.TBZMatrix4f.html">TBZMatrix4f</a>;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#PBZMatrix">PBZMatrix</a></b> = &circ;<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#PBZMatrix">PBZMatrix</a></strong> = &circ;<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a></b> = (...);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZEulerOrder">TBZEulerOrder</a></strong> = (...);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a></b> = <a  href="BZVectorMath.TBZVector2fList.html">TBZVector2fList</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZArrayOfFloatPoints">TBZArrayOfFloatPoints</a></strong> = <a  href="BZVectorMath.TBZVector2fList.html">TBZVector2fList</a>;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#TBZArrayOfPoints">TBZArrayOfPoints</a></b>  = <a  href="BZVectorMath.TBZVector2iList.html">TBZVector2iList</a>;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#TBZArrayOfPoints">TBZArrayOfPoints</a></strong>  = <a  href="BZVectorMath.TBZVector2iList.html">TBZVector2iList</a>;</code></td>
 </tr>
 </table>
 <span id="PasDoc-Constants"></span><h3 class="summary">Constantes</h3>
 <table class="summary wide_list">
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cColorFloatRatio">cColorFloatRatio</a></b> : Single = 1/255;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cColorFloatRatio">cColorFloatRatio</a></strong> : Single = 1/255;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#sse_no_round_bits_mask">sse_no_round_bits_mask</a></b>= $ffffffff-sse_MaskNegRound-sse_MaskPosRound;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#sse_no_round_bits_mask">sse_no_round_bits_mask</a></strong>= $ffffffff-sse_MaskNegRound-sse_MaskPosRound;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#mxcsr_default">mxcsr_default</a></b> : dword =sse_MaskInvalidOp or sse_MaskDenorm  or sse_MaskDivZero or sse_MaskOverflow
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#mxcsr_default">mxcsr_default</a></strong> : dword =sse_MaskInvalidOp or sse_MaskDenorm  or sse_MaskDivZero or sse_MaskOverflow
                       or sse_MaskUnderflow or sse_MaskPrecision or $00000000;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#sse_Rounding_Flags">sse_Rounding_Flags</a></b>: array [<a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>] of longint = (0,sse_MaskNegRound,sse_MaskPosRound,0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#sse_Rounding_Flags">sse_Rounding_Flags</a></strong>: array [<a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>] of longint = (0,sse_MaskNegRound,sse_MaskPosRound,0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#sse_align">sse_align</a></b>=16;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#sse_align">sse_align</a></strong>=16;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#sse_align_mask">sse_align_mask</a></b>=<a  href="BZVectorMath.html#sse_align">sse_align</a>-1;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#sse_align_mask">sse_align_mask</a></strong>=<a  href="BZVectorMath.html#sse_align">sse_align</a>-1;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlaneFront">cPlaneFront</a></b>   = 0;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlaneFront">cPlaneFront</a></strong>   = 0;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlaneBack">cPlaneBack</a></b>    = 1;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlaneBack">cPlaneBack</a></strong>    = 1;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlanePlanar">cPlanePlanar</a></b>  = 2;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlanePlanar">cPlanePlanar</a></strong>  = 2;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlaneClipped">cPlaneClipped</a></b> = 3;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlaneClipped">cPlaneClipped</a></strong> = 3;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlaneCulled">cPlaneCulled</a></b>  = 4;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlaneCulled">cPlaneCulled</a></strong>  = 4;</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cPlaneVisible">cPlaneVisible</a></b> = 5;</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cPlaneVisible">cPlaneVisible</a></strong> = 5;</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullVector2f">NullVector2f</a></b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullVector2f">NullVector2f</a></strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:0;y:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#OneVector2f">OneVector2f</a></b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#OneVector2f">OneVector2f</a></strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:1;y:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullVector2d">NullVector2d</a></b>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullVector2d">NullVector2d</a></strong>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:0;y:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#OneVector2d">OneVector2d</a></b>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#OneVector2d">OneVector2d</a></strong>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:1;y:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullVector2i">NullVector2i</a></b>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullVector2i">NullVector2i</a></strong>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:0;y:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#OneVector2i">OneVector2i</a></b>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#OneVector2i">OneVector2i</a></strong>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:1;y:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XVector">XVector</a></b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XVector">XVector</a></strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#YVector">YVector</a></b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#YVector">YVector</a></strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#ZVector">ZVector</a></b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#ZVector">ZVector</a></strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XYVector">XYVector</a></b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XYVector">XYVector</a></strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XZVector">XZVector</a></b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XZVector">XZVector</a></strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#YZVector">YZVector</a></b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#YZVector">YZVector</a></strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XYZVector">XYZVector</a></b> :  <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XYZVector">XYZVector</a></strong> :  <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullVector">NullVector</a></b> : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullVector">NullVector</a></strong> : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XHmgVector">XHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XHmgVector">XHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#YHmgVector">YHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#YHmgVector">YHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#ZHmgVector">ZHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#ZHmgVector">ZHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#WHmgVector">WHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#WHmgVector">WHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullHmgVector">NullHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 0; Z: 0; W: 0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullHmgVector">NullHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 0; Z: 0; W: 0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XYHmgVector">XYHmgVector</a></b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 0; W: 0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XYHmgVector">XYHmgVector</a></strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 0; W: 0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#YZHmgVector">YZHmgVector</a></b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 1; Z: 1; W: 0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#YZHmgVector">YZHmgVector</a></strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 1; Z: 1; W: 0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XZHmgVector">XZHmgVector</a></b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 0; Z: 1; W: 0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XZHmgVector">XZHmgVector</a></strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 0; Z: 1; W: 0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XYZHmgVector">XYZHmgVector</a></b>  : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XYZHmgVector">XYZHmgVector</a></strong>  : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XYZWHmgVector">XYZWHmgVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XYZWHmgVector">XYZWHmgVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#XHmgPoint">XHmgPoint</a></b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#XHmgPoint">XHmgPoint</a></strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#YHmgPoint">YHmgPoint</a></b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#YHmgPoint">YHmgPoint</a></strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#ZHmgPoint">ZHmgPoint</a></b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#ZHmgPoint">ZHmgPoint</a></strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#WHmgPoint">WHmgPoint</a></b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#WHmgPoint">WHmgPoint</a></strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NullHmgPoint">NullHmgPoint</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NullHmgPoint">NullHmgPoint</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#NegativeUnitVector">NegativeUnitVector</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:-1; Y:-1; Z:-1; W:-1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#NegativeUnitVector">NegativeUnitVector</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:-1; Y:-1; Z:-1; W:-1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cNullVector2f">cNullVector2f</a></b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (x:0;y:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cNullVector2f">cNullVector2f</a></strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (x:0;y:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cHalfOneVector2f">cHalfOneVector2f</a></b>     : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (X:0.5; Y:0.5);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cHalfOneVector2f">cHalfOneVector2f</a></strong>     : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (X:0.5; Y:0.5);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cNullVector4f">cNullVector4f</a></b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cNullVector4f">cNullVector4f</a></strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:0);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cNullVector4i">cNullVector4i</a></b>   : <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a> = (x:0;y:0;z:0;w:0);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cNullVector4i">cNullVector4i</a></strong>   : <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a> = (x:0;y:0;z:0;w:0);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cOneVector4f">cOneVector4f</a></b>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:1;z:1;w:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cOneVector4f">cOneVector4f</a></strong>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:1;z:1;w:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cOneMinusVector4f">cOneMinusVector4f</a></b>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:-1;y:-1;z:-1;w:-1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cOneMinusVector4f">cOneMinusVector4f</a></strong>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:-1;y:-1;z:-1;w:-1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cNegateVector4f_PNPN">cNegateVector4f_PNPN</a></b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:-1;z:1;w:-1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cNegateVector4f_PNPN">cNegateVector4f_PNPN</a></strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:-1;z:1;w:-1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cWOneVector4f">cWOneVector4f</a></b>        : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cWOneVector4f">cWOneVector4f</a></strong>        : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:1);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cWOneSSEVector4f">cWOneSSEVector4f</a></b>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cWOneSSEVector4f">cWOneSSEVector4f</a></strong>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#cHalfOneVector4f">cHalfOneVector4f</a></b>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>  = (X:0.5; Y:0.5; Z:0.5; W:0.5);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#cHalfOneVector4f">cHalfOneVector4f</a></strong>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>  = (X:0.5; Y:0.5; Z:0.5; W:0.5);</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#IdentityHmgMatrix">IdentityHmgMatrix</a></b> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:1; Y:0; Z:0; W:0),
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#IdentityHmgMatrix">IdentityHmgMatrix</a></strong> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:1; Y:0; Z:0; W:0),
                                       (X:0; Y:1; Z:0; W:0),
                                       (X:0; Y:0; Z:1; W:0),
                                       (X:0; Y:0; Z:0; W:1)));</code></td>
 </tr>
 <tr class="list2">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#EmptyHmgMatrix">EmptyHmgMatrix</a></b> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:0; Y:0; Z:0; W:0),
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#EmptyHmgMatrix">EmptyHmgMatrix</a></strong> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0)));</code></td>
 </tr>
 <tr class="list">
-<td class="itemcode"><code><b><a  href="BZVectorMath.html#IdentityQuaternion">IdentityQuaternion</a></b>: <a  href="BZVectorMath.TBZQuaternion.html">TBZQuaternion</a> = (ImagePart:(X:0; Y:0; Z:0); RealPart: 1);</code></td>
+<td class="itemcode"><code><strong><a  href="BZVectorMath.html#IdentityQuaternion">IdentityQuaternion</a></strong>: <a  href="BZVectorMath.TBZQuaternion.html">TBZQuaternion</a> = (ImagePart:(X:0; Y:0; Z:0); RealPart: 1);</code></td>
 </tr>
 </table>
 <h2 class="description">Description</h2>
 <h3 class="detail">Fonctions et procédures</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_GetRoundMode"></span><code>function <b>sse_GetRoundMode</b>: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>;</code></td>
+<td class="itemcode"><span id="sse_GetRoundMode"></span><code>function <strong>sse_GetRoundMode</strong>: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -597,7 +585,7 @@ Retourne le mode actuel d'arrondissement SIMD</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_SetRoundMode"></span><code>procedure <b>sse_SetRoundMode</b>(Round_Mode: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>);</code></td>
+<td class="itemcode"><span id="sse_SetRoundMode"></span><code>procedure <strong>sse_SetRoundMode</strong>(Round_Mode: <a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -607,7 +595,7 @@ Définit le mode actuel d'arrondissement SIMD</p>
 <h3 class="detail">Types</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_Rounding_Mode"></span><code><b>sse_Rounding_Mode</b> = (...);</code></td>
+<td class="itemcode"><span id="sse_Rounding_Mode"></span><code><strong>sse_Rounding_Mode</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -627,7 +615,7 @@ Mode d'arrondissement du SIMD</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector2fType"></span><code><b>TBZVector2fType</b> = packed array[0..1] of Single;</code></td>
+<td class="itemcode"><span id="TBZVector2fType"></span><code><strong>TBZVector2fType</strong> = packed array[0..1] of Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -636,7 +624,7 @@ Tableau aligné pour les vecteur 2D Single</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector2dType"></span><code><b>TBZVector2dType</b> = packed array[0..1] of Double;</code></td>
+<td class="itemcode"><span id="TBZVector2dType"></span><code><strong>TBZVector2dType</strong> = packed array[0..1] of Double;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -645,7 +633,7 @@ Tableau aligné pour les vecteur 2D Double</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector2iType"></span><code><b>TBZVector2iType</b> = packed array[0..1] of Integer;</code></td>
+<td class="itemcode"><span id="TBZVector2iType"></span><code><strong>TBZVector2iType</strong> = packed array[0..1] of Integer;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -654,7 +642,7 @@ Tableau aligné pour les vecteur 2D Integer</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector3fType"></span><code><b>TBZVector3fType</b> = packed array[0..2] of Single;</code></td>
+<td class="itemcode"><span id="TBZVector3fType"></span><code><strong>TBZVector3fType</strong> = packed array[0..2] of Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -663,7 +651,7 @@ Tableau aligné pour les vecteur 3D Single</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector3iType"></span><code><b>TBZVector3iType</b> = packed Array[0..2] of Longint;</code></td>
+<td class="itemcode"><span id="TBZVector3iType"></span><code><strong>TBZVector3iType</strong> = packed Array[0..2] of Longint;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -672,7 +660,7 @@ Tableau aligné pour les vecteur 3D Integer</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector3bType"></span><code><b>TBZVector3bType</b> = packed Array[0..2] of Byte;</code></td>
+<td class="itemcode"><span id="TBZVector3bType"></span><code><strong>TBZVector3bType</strong> = packed Array[0..2] of Byte;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -681,7 +669,7 @@ Tableau aligné pour les vecteur 3D Byte</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector4fType"></span><code><b>TBZVector4fType</b> = packed array[0..3] of Single;</code></td>
+<td class="itemcode"><span id="TBZVector4fType"></span><code><strong>TBZVector4fType</strong> = packed array[0..3] of Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -690,7 +678,7 @@ Tableau aligné pour les vecteur 4D Single</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector4iType"></span><code><b>TBZVector4iType</b> = packed array[0..3] of Longint;</code></td>
+<td class="itemcode"><span id="TBZVector4iType"></span><code><strong>TBZVector4iType</strong> = packed array[0..3] of Longint;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -699,7 +687,7 @@ Tableau aligné pour les vecteur 4D Integer</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector4bType"></span><code><b>TBZVector4bType</b> = packed Array[0..3] of Byte;</code></td>
+<td class="itemcode"><span id="TBZVector4bType"></span><code><strong>TBZVector4bType</strong> = packed Array[0..3] of Byte;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -708,7 +696,7 @@ Tableau aligné pour les vecteur 4D Byte</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector2SwizzleRef"></span><code><b>TBZVector2SwizzleRef</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZVector2SwizzleRef"></span><code><strong>TBZVector2SwizzleRef</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -730,7 +718,7 @@ Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 2D</p
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector3SwizzleRef"></span><code><b>TBZVector3SwizzleRef</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZVector3SwizzleRef"></span><code><strong>TBZVector3SwizzleRef</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -780,7 +768,7 @@ Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 3D</p
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector4SwizzleRef"></span><code><b>TBZVector4SwizzleRef</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZVector4SwizzleRef"></span><code><strong>TBZVector4SwizzleRef</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -858,7 +846,7 @@ Référence pour le mélange des composants d'un vecteur (swizzle/shuffle) 4D</p
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="PBZVector2i"></span><code><b>PBZVector2i</b> = &circ;<a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
+<td class="itemcode"><span id="PBZVector2i"></span><code><strong>PBZVector2i</strong> = &circ;<a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -867,7 +855,7 @@ Pointeur vers un <a class="normal" href="BZVectorMath.TBZVector2i.html">TBZVecto
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZFloatPoint"></span><code><b>TBZFloatPoint</b> = <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
+<td class="itemcode"><span id="TBZFloatPoint"></span><code><strong>TBZFloatPoint</strong> = <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -876,7 +864,7 @@ Définition de convenance pour la représentation d'un point 2D en virgule flott
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZAffineVector"></span><code><b>TBZAffineVector</b> = <a  href="BZVectorMath.TBZVector3f.html">TBZVector3f</a>;</code></td>
+<td class="itemcode"><span id="TBZAffineVector"></span><code><strong>TBZAffineVector</strong> = <a  href="BZVectorMath.TBZVector3f.html">TBZVector3f</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -885,7 +873,7 @@ Définition de convenance pratique pour décrire un vecteur affine de type <a cl
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="PBZAffineVector"></span><code><b>PBZAffineVector</b> = &circ;<a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;</code></td>
+<td class="itemcode"><span id="PBZAffineVector"></span><code><strong>PBZAffineVector</strong> = &circ;<a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -894,7 +882,7 @@ Pointeur vers <a class="normal" href="BZVectorMath.html#TBZAffineVector">TBZAffi
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZVector"></span><code><b>TBZVector</b> = <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
+<td class="itemcode"><span id="TBZVector"></span><code><strong>TBZVector</strong> = <a  href="BZVectorMath.TBZVector4f.html">TBZVector4f</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -903,7 +891,7 @@ Définition de convenance pratique pour décrire un vecteur homogène de type <a
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="PBZVector"></span><code><b>PBZVector</b> = &circ;<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+<td class="itemcode"><span id="PBZVector"></span><code><strong>PBZVector</strong> = &circ;<a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -912,7 +900,7 @@ Pointeur vers <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZClipRect"></span><code><b>TBZClipRect</b> = <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
+<td class="itemcode"><span id="TBZClipRect"></span><code><strong>TBZClipRect</strong> = <a  href="BZVectorMath.html#TBZVector">TBZVector</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -921,7 +909,7 @@ TODO : Rendre Independant ou extraire <a class="normal" href="BZGraphic.TBZFloat
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZHmgPlaneHalfSpace"></span><code><b>TBZHmgPlaneHalfSpace</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZHmgPlaneHalfSpace"></span><code><strong>TBZHmgPlaneHalfSpace</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -943,7 +931,7 @@ Description du plan dans l'espace. <br> La Position des point par rapport à l'a
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZMatrixTransType"></span><code><b>TBZMatrixTransType</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZMatrixTransType"></span><code><strong>TBZMatrixTransType</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -987,7 +975,7 @@ Type d'action de transformation d'une matrice</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZMatrixTransformations"></span><code><b>TBZMatrixTransformations</b>  = array [<a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a>] of Single;</code></td>
+<td class="itemcode"><span id="TBZMatrixTransformations"></span><code><strong>TBZMatrixTransformations</strong>  = array [<a  href="BZVectorMath.html#TBZMatrixTransType">TBZMatrixTransType</a>] of Single;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -996,7 +984,7 @@ Type d'action de transformation d'une matrice</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZMatrix"></span><code><b>TBZMatrix</b> = <a  href="BZVectorMath.TBZMatrix4f.html">TBZMatrix4f</a>;</code></td>
+<td class="itemcode"><span id="TBZMatrix"></span><code><strong>TBZMatrix</strong> = <a  href="BZVectorMath.TBZMatrix4f.html">TBZMatrix4f</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1005,7 +993,7 @@ Définition de convenance pratique pour décrire une matrice de type <a class="n
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="PBZMatrix"></span><code><b>PBZMatrix</b> = &circ;<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
+<td class="itemcode"><span id="PBZMatrix"></span><code><strong>PBZMatrix</strong> = &circ;<a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1014,7 +1002,7 @@ Pointeur vers <a class="normal" href="BZVectorMath.html#TBZMatrix">TBZMatrix</a>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZEulerOrder"></span><code><b>TBZEulerOrder</b> = (...);</code></td>
+<td class="itemcode"><span id="TBZEulerOrder"></span><code><strong>TBZEulerOrder</strong> = (...);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1038,7 +1026,7 @@ Ordre de rotation des angles d'Euler. <br> Ici, nous utilisons les conventions d
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZArrayOfFloatPoints"></span><code><b>TBZArrayOfFloatPoints</b> = <a  href="BZVectorMath.TBZVector2fList.html">TBZVector2fList</a>;</code></td>
+<td class="itemcode"><span id="TBZArrayOfFloatPoints"></span><code><strong>TBZArrayOfFloatPoints</strong> = <a  href="BZVectorMath.TBZVector2fList.html">TBZVector2fList</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1047,7 +1035,7 @@ Type de convenance pour un tableau 1D conteant des <a class="normal" href="BZVec
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="TBZArrayOfPoints"></span><code><b>TBZArrayOfPoints</b>  = <a  href="BZVectorMath.TBZVector2iList.html">TBZVector2iList</a>;</code></td>
+<td class="itemcode"><span id="TBZArrayOfPoints"></span><code><strong>TBZArrayOfPoints</strong>  = <a  href="BZVectorMath.TBZVector2iList.html">TBZVector2iList</a>;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1057,7 +1045,7 @@ Type de convenance pour un tableau 1D conteant des <a class="normal" href="BZVec
 <h3 class="detail">Constantes</h3>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cColorFloatRatio"></span><code><b>cColorFloatRatio</b> : Single = 1/255;</code></td>
+<td class="itemcode"><span id="cColorFloatRatio"></span><code><strong>cColorFloatRatio</strong> : Single = 1/255;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1066,7 +1054,7 @@ Constante pour la normalisation d'un composant de couleur en byte vers un npmbre
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_no_round_bits_mask"></span><code><b>sse_no_round_bits_mask</b>= $ffffffff-sse_MaskNegRound-sse_MaskPosRound;</code></td>
+<td class="itemcode"><span id="sse_no_round_bits_mask"></span><code><strong>sse_no_round_bits_mask</strong>= $ffffffff-sse_MaskNegRound-sse_MaskPosRound;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1075,7 +1063,7 @@ masque pour enlever les anciens bits d'arrondi pour définir de nouveaux bits</p
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="mxcsr_default"></span><code><b>mxcsr_default</b> : dword =sse_MaskInvalidOp or sse_MaskDenorm  or sse_MaskDivZero or sse_MaskOverflow
+<td class="itemcode"><span id="mxcsr_default"></span><code><strong>mxcsr_default</strong> : dword =sse_MaskInvalidOp or sse_MaskDenorm  or sse_MaskDivZero or sse_MaskOverflow
                       or sse_MaskUnderflow or sse_MaskPrecision or $00000000;</code></td>
 </tr>
 <tr><td colspan="1">
@@ -1085,7 +1073,7 @@ Valeur par défaut du registre mxcsr après le démarrage du PC @ br     Par
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_Rounding_Flags"></span><code><b>sse_Rounding_Flags</b>: array [<a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>] of longint = (0,sse_MaskNegRound,sse_MaskPosRound,0);</code></td>
+<td class="itemcode"><span id="sse_Rounding_Flags"></span><code><strong>sse_Rounding_Flags</strong>: array [<a  href="BZVectorMath.html#sse_Rounding_Mode">sse_Rounding_Mode</a>] of longint = (0,sse_MaskNegRound,sse_MaskPosRound,0);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1094,7 +1082,7 @@ Table de conversion du nom du mode d'arrondissement vers bits d'arrondi</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_align"></span><code><b>sse_align</b>=16;</code></td>
+<td class="itemcode"><span id="sse_align"></span><code><strong>sse_align</strong>=16;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1103,7 +1091,7 @@ Constant d'alignement des données SIMD en bits</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="sse_align_mask"></span><code><b>sse_align_mask</b>=<a  href="BZVectorMath.html#sse_align">sse_align</a>-1;</code></td>
+<td class="itemcode"><span id="sse_align_mask"></span><code><strong>sse_align_mask</strong>=<a  href="BZVectorMath.html#sse_align">sse_align</a>-1;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1112,7 +1100,7 @@ Mask pour l'alignement des données</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlaneFront"></span><code><b>cPlaneFront</b>   = 0;</code></td>
+<td class="itemcode"><span id="cPlaneFront"></span><code><strong>cPlaneFront</strong>   = 0;</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1121,245 +1109,245 @@ Mask pour l'alignement des données</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlaneBack"></span><code><b>cPlaneBack</b>    = 1;</code></td>
+<td class="itemcode"><span id="cPlaneBack"></span><code><strong>cPlaneBack</strong>    = 1;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlanePlanar"></span><code><b>cPlanePlanar</b>  = 2;</code></td>
+<td class="itemcode"><span id="cPlanePlanar"></span><code><strong>cPlanePlanar</strong>  = 2;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlaneClipped"></span><code><b>cPlaneClipped</b> = 3;</code></td>
+<td class="itemcode"><span id="cPlaneClipped"></span><code><strong>cPlaneClipped</strong> = 3;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlaneCulled"></span><code><b>cPlaneCulled</b>  = 4;</code></td>
+<td class="itemcode"><span id="cPlaneCulled"></span><code><strong>cPlaneCulled</strong>  = 4;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cPlaneVisible"></span><code><b>cPlaneVisible</b> = 5;</code></td>
+<td class="itemcode"><span id="cPlaneVisible"></span><code><strong>cPlaneVisible</strong> = 5;</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullVector2f"></span><code><b>NullVector2f</b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><span id="NullVector2f"></span><code><strong>NullVector2f</strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:0;y:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OneVector2f"></span><code><b>OneVector2f</b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><span id="OneVector2f"></span><code><strong>OneVector2f</strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a> = (x:1;y:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullVector2d"></span><code><b>NullVector2d</b>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><span id="NullVector2d"></span><code><strong>NullVector2d</strong>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:0;y:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OneVector2d"></span><code><b>OneVector2d</b>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><span id="OneVector2d"></span><code><strong>OneVector2d</strong>   : <a  href="BZVectorMath.TBZVector2d.html">TBZVector2d</a> = (x:1;y:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullVector2i"></span><code><b>NullVector2i</b>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:0;y:0);</code></td>
+<td class="itemcode"><span id="NullVector2i"></span><code><strong>NullVector2i</strong>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:0;y:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="OneVector2i"></span><code><b>OneVector2i</b>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:1;y:1);</code></td>
+<td class="itemcode"><span id="OneVector2i"></span><code><strong>OneVector2i</strong>   : <a  href="BZVectorMath.TBZVector2i.html">TBZVector2i</a> = (x:1;y:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XVector"></span><code><b>XVector</b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:0);</code></td>
+<td class="itemcode"><span id="XVector"></span><code><strong>XVector</strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="YVector"></span><code><b>YVector</b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:0);</code></td>
+<td class="itemcode"><span id="YVector"></span><code><strong>YVector</strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ZVector"></span><code><b>ZVector</b> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:1);</code></td>
+<td class="itemcode"><span id="ZVector"></span><code><strong>ZVector</strong> :    <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XYVector"></span><code><b>XYVector</b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:0);</code></td>
+<td class="itemcode"><span id="XYVector"></span><code><strong>XYVector</strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XZVector"></span><code><b>XZVector</b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:1);</code></td>
+<td class="itemcode"><span id="XZVector"></span><code><strong>XZVector</strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:0; Z:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="YZVector"></span><code><b>YZVector</b> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:1);</code></td>
+<td class="itemcode"><span id="YZVector"></span><code><strong>YZVector</strong> :   <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:1; Z:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XYZVector"></span><code><b>XYZVector</b> :  <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:1);</code></td>
+<td class="itemcode"><span id="XYZVector"></span><code><strong>XYZVector</strong> :  <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:1; Y:1; Z:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullVector"></span><code><b>NullVector</b> : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:0);</code></td>
+<td class="itemcode"><span id="NullVector"></span><code><strong>NullVector</strong> : <a  href="BZVectorMath.html#TBZAffineVector">TBZAffineVector</a> = (X:0; Y:0; Z:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XHmgVector"></span><code><b>XHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:0);</code></td>
+<td class="itemcode"><span id="XHmgVector"></span><code><strong>XHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="YHmgVector"></span><code><b>YHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:0);</code></td>
+<td class="itemcode"><span id="YHmgVector"></span><code><strong>YHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ZHmgVector"></span><code><b>ZHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:0);</code></td>
+<td class="itemcode"><span id="ZHmgVector"></span><code><strong>ZHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="WHmgVector"></span><code><b>WHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="WHmgVector"></span><code><strong>WHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullHmgVector"></span><code><b>NullHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 0; Z: 0; W: 0);</code></td>
+<td class="itemcode"><span id="NullHmgVector"></span><code><strong>NullHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 0; Z: 0; W: 0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XYHmgVector"></span><code><b>XYHmgVector</b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 0; W: 0);</code></td>
+<td class="itemcode"><span id="XYHmgVector"></span><code><strong>XYHmgVector</strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 0; W: 0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="YZHmgVector"></span><code><b>YZHmgVector</b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 1; Z: 1; W: 0);</code></td>
+<td class="itemcode"><span id="YZHmgVector"></span><code><strong>YZHmgVector</strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 0; Y: 1; Z: 1; W: 0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XZHmgVector"></span><code><b>XZHmgVector</b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 0; Z: 1; W: 0);</code></td>
+<td class="itemcode"><span id="XZHmgVector"></span><code><strong>XZHmgVector</strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 0; Z: 1; W: 0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XYZHmgVector"></span><code><b>XYZHmgVector</b>  : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 0);</code></td>
+<td class="itemcode"><span id="XYZHmgVector"></span><code><strong>XYZHmgVector</strong>  : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XYZWHmgVector"></span><code><b>XYZWHmgVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 1);</code></td>
+<td class="itemcode"><span id="XYZWHmgVector"></span><code><strong>XYZWHmgVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X: 1; Y: 1; Z: 1; W: 1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="XHmgPoint"></span><code><b>XHmgPoint</b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="XHmgPoint"></span><code><strong>XHmgPoint</strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:1; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="YHmgPoint"></span><code><b>YHmgPoint</b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="YHmgPoint"></span><code><strong>YHmgPoint</strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:1; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="ZHmgPoint"></span><code><b>ZHmgPoint</b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:1);</code></td>
+<td class="itemcode"><span id="ZHmgPoint"></span><code><strong>ZHmgPoint</strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:1; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="WHmgPoint"></span><code><b>WHmgPoint</b> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="WHmgPoint"></span><code><strong>WHmgPoint</strong> :  <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NullHmgPoint"></span><code><b>NullHmgPoint</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="NullHmgPoint"></span><code><strong>NullHmgPoint</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="NegativeUnitVector"></span><code><b>NegativeUnitVector</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:-1; Y:-1; Z:-1; W:-1);</code></td>
+<td class="itemcode"><span id="NegativeUnitVector"></span><code><strong>NegativeUnitVector</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:-1; Y:-1; Z:-1; W:-1);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1368,77 +1356,77 @@ Vecteur homogène unitaire négatif</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cNullVector2f"></span><code><b>cNullVector2f</b>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (x:0;y:0);</code></td>
+<td class="itemcode"><span id="cNullVector2f"></span><code><strong>cNullVector2f</strong>   : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (x:0;y:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cHalfOneVector2f"></span><code><b>cHalfOneVector2f</b>     : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (X:0.5; Y:0.5);</code></td>
+<td class="itemcode"><span id="cHalfOneVector2f"></span><code><strong>cHalfOneVector2f</strong>     : <a  href="BZVectorMath.TBZVector2f.html">TBZVector2f</a>  = (X:0.5; Y:0.5);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cNullVector4f"></span><code><b>cNullVector4f</b>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:0);</code></td>
+<td class="itemcode"><span id="cNullVector4f"></span><code><strong>cNullVector4f</strong>   : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cNullVector4i"></span><code><b>cNullVector4i</b>   : <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a> = (x:0;y:0;z:0;w:0);</code></td>
+<td class="itemcode"><span id="cNullVector4i"></span><code><strong>cNullVector4i</strong>   : <a  href="BZVectorMath.TBZVector4i.html">TBZVector4i</a> = (x:0;y:0;z:0;w:0);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cOneVector4f"></span><code><b>cOneVector4f</b>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:1;z:1;w:1);</code></td>
+<td class="itemcode"><span id="cOneVector4f"></span><code><strong>cOneVector4f</strong>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:1;z:1;w:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cOneMinusVector4f"></span><code><b>cOneMinusVector4f</b>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:-1;y:-1;z:-1;w:-1);</code></td>
+<td class="itemcode"><span id="cOneMinusVector4f"></span><code><strong>cOneMinusVector4f</strong>    : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:-1;y:-1;z:-1;w:-1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cNegateVector4f_PNPN"></span><code><b>cNegateVector4f_PNPN</b> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:-1;z:1;w:-1);</code></td>
+<td class="itemcode"><span id="cNegateVector4f_PNPN"></span><code><strong>cNegateVector4f_PNPN</strong> : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:1;y:-1;z:1;w:-1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cWOneVector4f"></span><code><b>cWOneVector4f</b>        : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:1);</code></td>
+<td class="itemcode"><span id="cWOneVector4f"></span><code><strong>cWOneVector4f</strong>        : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (x:0;y:0;z:0;w:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cWOneSSEVector4f"></span><code><b>cWOneSSEVector4f</b>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
+<td class="itemcode"><span id="cWOneSSEVector4f"></span><code><strong>cWOneSSEVector4f</strong>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a> = (X:0; Y:0; Z:0; W:1);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="cHalfOneVector4f"></span><code><b>cHalfOneVector4f</b>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>  = (X:0.5; Y:0.5; Z:0.5; W:0.5);</code></td>
+<td class="itemcode"><span id="cHalfOneVector4f"></span><code><strong>cHalfOneVector4f</strong>     : <a  href="BZVectorMath.html#TBZVector">TBZVector</a>  = (X:0.5; Y:0.5; Z:0.5; W:0.5);</code></td>
 </tr>
 <tr><td colspan="1">
 &nbsp;</td></tr>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="IdentityHmgMatrix"></span><code><b>IdentityHmgMatrix</b> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:1; Y:0; Z:0; W:0),
+<td class="itemcode"><span id="IdentityHmgMatrix"></span><code><strong>IdentityHmgMatrix</strong> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:1; Y:0; Z:0; W:0),
                                       (X:0; Y:1; Z:0; W:0),
                                       (X:0; Y:0; Z:1; W:0),
                                       (X:0; Y:0; Z:0; W:1)));</code></td>
@@ -1450,7 +1438,7 @@ Matrice homogène d'identité</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="EmptyHmgMatrix"></span><code><b>EmptyHmgMatrix</b> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:0; Y:0; Z:0; W:0),
+<td class="itemcode"><span id="EmptyHmgMatrix"></span><code><strong>EmptyHmgMatrix</strong> : <a  href="BZVectorMath.html#TBZMatrix">TBZMatrix</a> = (V:((X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0),
                                    (X:0; Y:0; Z:0; W:0)));</code></td>
@@ -1462,7 +1450,7 @@ Matrice homogène vide</p>
 </table>
 <table class="detail wide_list">
 <tr class="list">
-<td class="itemcode"><span id="IdentityQuaternion"></span><code><b>IdentityQuaternion</b>: <a  href="BZVectorMath.TBZQuaternion.html">TBZQuaternion</a> = (ImagePart:(X:0; Y:0; Z:0); RealPart: 1);</code></td>
+<td class="itemcode"><span id="IdentityQuaternion"></span><code><strong>IdentityQuaternion</strong>: <a  href="BZVectorMath.TBZQuaternion.html">TBZQuaternion</a> = (ImagePart:(X:0; Y:0; Z:0); RealPart: 1);</code></td>
 </tr>
 <tr><td colspan="1">
 <p>
@@ -1474,10 +1462,15 @@ Quaternion d'identité</p>
 <li>J.Delauney (BeanzMaster)</li>
 <li>Peter Dyson (Dicepd)</li>
 </ul>
-<h2 class="created">Création</h2>
+<h2 class="created">Crée</h2>
 <p>
 2017-11-25
 </p>
 <hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
 </span>
-</div></body></html>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

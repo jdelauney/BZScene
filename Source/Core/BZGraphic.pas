@@ -1554,7 +1554,7 @@ Type
      property Width:Integer read FWidth Write setWidth;
      { Largeur du l'image }
      property Height:Integer read FHeight Write setHeight;
-     { Taille de l'image (Taille = (Largeur * Hauteur) * Taille d'un pixel en octet }
+     { Taille de l'image (Taille = (Largeur * Hauteur)) * Taille d'un pixel en octet }
      property Size:Int64 read FSize write FSize;
      { Format couleur de l'image : RGB, BGRA, GrayScale,... }
      property ColorFormat : TBZColorFormat read FColorFormat write FColorFormat; //setColorFormat;
@@ -1786,6 +1786,8 @@ Type
   { TBZCustomBitmap }
 
   TBZCustomBitmap = Class(TBZCustomDataFile)
+  strict private
+    FBitmapAsRef : Boolean;
   Private
     { FImageDescription est ici pour gérer les informations relative aux données du bitmap
       lui même. c'est à dire que seul Le tampon des données est modifié lorsque
@@ -1820,6 +1822,8 @@ Type
     FSize, FMaxSize:    Int64;
     FCenterX, FCenterY: Integer;
     FLineSizeInBytes : Integer;
+
+
 
     { Utilise t-on une palette de couleur ? Si oui
       Pixel format 8bits = codé sur 32Bits
@@ -1863,8 +1867,8 @@ Type
 
     Function CloneSurfaceBuffer(Const BufferData: PByte; Var Clone: PByte): Boolean;
     procedure AddLayer(anImage:TBZCustomBitmap);
-    // Can resize buffer in children. Using in TBZGLBitmap
-    //procedure ReAllocBuffer(ANewSize: Longword);virtual;
+
+
 
     procedure Changed; virtual;
 
@@ -1883,6 +1887,9 @@ Type
 
     { Assigne un autre TBZCustomBitmap  }
     Procedure Assign(Source: TPersistent); Override;
+    Procedure AssignBitmapAsRef(Source: TBZCustomBitmap);
+
+
     // function Clone : TBZCustomBitmap; virtual;
 
     { Copie rapide d'un autre Bitmap. ATTENTION les dimensions doivent être identique }
@@ -2156,7 +2163,7 @@ Type
     FMask : TBZCustomBitmap;
     FUseMask : Boolean;
     FMaskApplyAlpha: Boolean;
-    FMaskApply : Boolean;
+    //FMaskApply : Boolean;
     FSelectionMask : TBZCustomBitmap;
     FUseSelectionMask : Boolean;
 
@@ -2198,8 +2205,8 @@ Type
 
     { Si TRUE le masque sera utilisé ????? à supprimer ???? }
     Property UseMask : Boolean read FUseMask Write SetUseMask;
-    { Si TRUE le masque sera appliqué }
-    property ApplyMask : Boolean Read FMaskApply Write FMaskApply;
+    //{ Si TRUE le masque sera appliqué }
+    //property ApplyMask : Boolean Read FMaskApply Write FMaskApply;
     { Si TRUE on applique la transparence, sinon toutes valeurs > 0 sont affichées. }
     property ApplyMaskAlpha : Boolean Read FMaskApplyAlpha Write FMaskApplyAlpha;
     { Si TRUE le masque de selection sera utilisé pour l'application de certains filtres }
@@ -3736,7 +3743,7 @@ End;
 
 {%region%====[ TBZCustomBitmap ]================================================}
 
-constructor TBZCustomBitmap.Create(AOwner : TPersistent; AWidth, AHeight : Integer);  //Const Indexed : Boolean=false
+Constructor TBZCustomBitmap.Create(AOwner: TPersistent; AWidth, AHeight: Integer);  //Const Indexed : Boolean=false
 Begin
   if Assigned(AOwner) then Inherited Create(AOwner)
   else inherited Create;
@@ -3770,22 +3777,23 @@ Begin
   // Init liste sous-images
   FLayers := TBZBitmapLayerList.Create;
   FIsPremultiply := False;
+  FBitmapAsRef := False;
   //IsMultiImage := False;
 End;
 
-constructor TBZCustomBitmap.Create(aWidth, aHeight : Integer);
+Constructor TBZCustomBitmap.Create(aWidth, aHeight: Integer);
 Begin
   Self.Create(nil, aWidth, aHeight);
 End;
 
-constructor TBZCustomBitmap.Create;
+Constructor TBZCustomBitmap.Create;
 begin
 //  inherited Create;
   Self.Create(0,0);
 end;
 
 
-destructor TBZCustomBitmap.Destroy;
+Destructor TBZCustomBitmap.Destroy;
 Begin
 
   If Assigned(FImageIndexBuffer) Then
@@ -3800,7 +3808,7 @@ Begin
   //FScanLineIdxLUT := nil;
 
   //memReAlloc(FSurfaceBuffer, 0);
-  if FSurfaceBuffer<>nil then FreeMem(FSurfaceBuffer);
+  if (FSurfaceBuffer<>nil) and not(FBitmapAsRef) then FreeMem(FSurfaceBuffer);
   FSurfaceBuffer := nil;
   FreeAndNil(FLayers);
   FreeAndNil(FColorManager);
@@ -3810,7 +3818,7 @@ Begin
   Inherited Destroy;
 End;
 
-procedure TBZCustomBitmap.Assign(Source : TPersistent);
+Procedure TBZCustomBitmap.Assign(Source: TPersistent);
 Var
   SrcW, SrcH:     Integer;
   SrcPtr, DstPtr: PBZColor;
@@ -3838,6 +3846,20 @@ Begin
   End;
 End;
 
+Procedure TBZCustomBitmap.AssignBitmapAsRef(Source: TBZCustomBitmap);
+begin
+  FWidth := Source.Width;
+  FHeight := Source.Height;
+  FMaxHeight := FHeight - 1;
+  FMaxWidth := FWidth - 1;
+  FSize := (FWidth * FHeight) * 4;
+  FMaxSize := FSize - 1;
+  FSurfaceBuffer := PDWord(Source.getSurfaceBuffer);
+  setLength(FScanLineLUT, FHeight);
+  ComputeScanLineLUT;
+  FBitmapAsRef := True;
+end;
+
 procedure TBZCustomBitmap.FastCopy(Source : TBZCustomBitmap);
 Var
    SrcPtr, DstPtr: PBZColor;
@@ -3848,7 +3870,7 @@ begin
   Move(SrcPtr^, DstPtr^, Self.Size);
 end;
 
-procedure TBZCustomBitmap.setWidth(const AValue : Integer);
+Procedure TBZCustomBitmap.setWidth(Const AValue: Integer);
 Begin
   If FWidth = AValue Then exit;
   SetSize(AValue, FHeight);
@@ -3856,12 +3878,12 @@ Begin
   //  FImageDescription.Image.UpdateSize(AValue, FHeight,(FHeight*AValue)*FImageDescription.Description.PixelSize);
 End;
 
-function TBZCustomBitmap.getWidth : Integer;
+Function TBZCustomBitmap.getWidth: Integer;
 Begin
   Result := FWidth;
 End;
 
-procedure TBZCustomBitmap.setHeight(const AValue : Integer);
+Procedure TBZCustomBitmap.setHeight(Const AValue: Integer);
 Begin
   If FHeight = AValue Then exit;
   SetSize(FWidth, AValue);
@@ -3869,22 +3891,22 @@ Begin
   // FImageDescription.UpdateSize(FWidth,AValue,(FWidth*AValue)*FImageDescription.Description.PixelSize);
 End;
 
-function TBZCustomBitmap.getHeight : Integer;
+Function TBZCustomBitmap.getHeight: Integer;
 Begin
   Result := FHeight;
 End;
 
-function TBZCustomBitmap.getImageDescription : TBZRawImageDescription;
+Function TBZCustomBitmap.getImageDescription: TBZRawImageDescription;
 Begin
   Result := FImageDescription;
 End;
 
-function TBZCustomBitmap.GetIsMultiImage : Boolean;
+Function TBZCustomBitmap.GetIsMultiImage: Boolean;
 Begin
   Result := (Layers.Count>0);
 end;
 
-procedure TBZCustomBitmap.setUsePalette(const aValue : Boolean);
+Procedure TBZCustomBitmap.setUsePalette(Const aValue: Boolean);
 Begin
   If aValue = FUsePalette Then exit;
   FUsePalette := aValue;
@@ -3903,7 +3925,7 @@ Begin
   //end;
 End;
 
-procedure TBZCustomBitmap.ComputeScanLineLUT;
+Procedure TBZCustomBitmap.ComputeScanLineLUT;
 Var
   y: Integer;
 Begin
@@ -3932,7 +3954,7 @@ Begin
   Changed();
 End;
 
-function TBZCustomBitmap.CheckPixelBound(X, Y : Integer) : Boolean;
+Function TBZCustomBitmap.CheckPixelBound(X, Y: Integer): Boolean;
 Begin
   // Algo Clipping Cohen-Sutherland
   if FClipping then
@@ -3942,7 +3964,7 @@ Begin
     //((x>=0) or (x<=FMaxWidth)) and ((y>=0) or (y<=FMaxHeight));
 End;
 
-function TBZCustomBitmap.GetPixelColorIndex(X, Y : Integer) : Integer;
+Function TBZCustomBitmap.GetPixelColorIndex(X, Y: Integer): Integer;
 Var
   YY:     Integer;
   IdxPtr: PDWord;
@@ -3955,7 +3977,7 @@ Begin
   Result := IdxPtr^; //PInteger(FImageIndexBuffer+(x*4)+FScanLineLUT[y])^;
 End;
 
-procedure TBZCustomBitmap.SetPixelColorIndex(X, Y, Value : Integer);
+Procedure TBZCustomBitmap.SetPixelColorIndex(X, Y, Value: Integer);
 Var
   PixPtr: PBZColor;
   IdxPtr: PDWord;
@@ -3976,7 +3998,7 @@ Begin
 
 End;
 
-function TBZCustomBitmap.GetPixelNeighbour(x, y : Integer; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelNeighbour(x, y: Integer; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   {$CODEALIGN VARMIN=16}
   c,cL,cT,cR,cB, ColorF : TBZColorVector;
@@ -3998,7 +4020,7 @@ end;
 //function TBZCustomBitmap.GetPixelBilinear(fx, fy : Single; x, y : Integer; Const EdgeAction : TBZPixelEdgeAction) : TBZColor;
 //begin
 // dx := fx; dy := fy;
-function TBZCustomBitmap.GetPixelBilinear(x, y : Single; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelBilinear(x, y: Single; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 var
   sx, sxFract, sxFractInv,
   sy, syFract, syFractInv,
@@ -4060,7 +4082,7 @@ begin
   Result := OutColor.BlendFour(cTL, cTR, cBL, cBR, wul, wur, wll, wlr);
 end;
 
-function TBZCustomBitmap.GetPixelBicubic(x, y : Single; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelBicubic(x, y: Single; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Const
   BiCubicRPrecal: Array[1..16] Of Single = (0.00260416666666667, 0.0208333333333333, 0.0703125, 0.166666666666667,
     0.315104166666667, 0.479166666666667, 0.611979166666667, 0.666666666666667,
@@ -4107,7 +4129,7 @@ begin
   Result := DstCol;
 end;
 
-function TBZCustomBitmap.GetPixelMean(x, y : Integer; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelMean(x, y: Integer; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx,ny : Integer;
   d, r, FilterDelta : Integer;
@@ -4218,7 +4240,7 @@ begin
 end;
 
 
-function TBZCustomBitmap.GetPixelMedian(x, y : Integer; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelMedian(x, y: Integer; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx,ny : Integer;
   FilterDelta, d, dr,r : Integer;
@@ -4253,7 +4275,7 @@ begin
   Result := outColor;
 end;
 
-function TBZCustomBitmap.GetPixelMin(x, y : Integer; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelMin(x, y: Integer; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx, ny : Integer;
   dr,d, FilterDelta,r : Integer;
@@ -4287,7 +4309,7 @@ begin
   Result := outColor;
 end;
 
-function TBZCustomBitmap.GetPixelMax(x, y : Integer; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelMax(x, y: Integer; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx, ny : Integer;
   FilterDelta, dr, d, r : Integer;
@@ -4321,7 +4343,7 @@ begin
   Result := outColor;
 end;
 
-function TBZCustomBitmap.GetPixelMinMax(x, y : Integer; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelMinMax(x, y: Integer; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx, ny : Integer;
   dr,d, FilterDelta,r : Integer;
@@ -4356,7 +4378,7 @@ begin
   Result := outColor;
 end;
 
-function TBZCustomBitmap.GetPixelSubSample(x, y : Single; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetPixelSubSample(x, y: Single; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   ix, iy, nx,ny : Integer;
   d, r, nbSample,FilterDelta : Integer;
@@ -4399,7 +4421,7 @@ begin
   Result := outColor;
 end;
 
-function TBZCustomBitmap.GetSamplePixel(x, y : Single; SubSampleMode : TBZGetPixelSampleMethod; const FilterSize : word; const EdgeAction : TBZPixelEdgeAction) : TBZColor;
+function TBZCustomBitmap.GetSamplePixel(x, y: Single; SubSampleMode: TBZGetPixelSampleMethod; Const FilterSize: word; Const EdgeAction: TBZPixelEdgeAction): TBZColor;
 Var
   OutColor : TBZColor;
 begin
@@ -4523,7 +4545,7 @@ begin
   Result := System.Sqrt(Energy);
 end;
 
-procedure TBZCustomBitmap.DrawPixel(x, y : Integer; const ForeColor : TBZColor; const ADrawMode : TBZBitmapDrawMode; const AAlphaMode : TBZBitmapAlphaMode; const MasterAlpha : Byte; const CombineMode : TBZColorCombineMode; const BlendSrcFactor : TBZBlendingFactor; const BlendDstFactor : TBZBlendingFactor);
+procedure TBZCustomBitmap.DrawPixel(x, y: Integer; Const ForeColor: TBZColor; Const ADrawMode: TBZBitmapDrawMode; Const AAlphaMode: TBZBitmapAlphaMode; Const MasterAlpha: Byte; Const CombineMode: TBZColorCombineMode; Const BlendSrcFactor: TBZBlendingFactor; Const BlendDstFactor: TBZBlendingFactor);
 Var
  SrcColor, DstColor: TBZColor;
 begin
@@ -4704,22 +4726,22 @@ end;
 //  End;
 //End;
 
-function TBZCustomBitmap.getColorManager : TBZColorsManager;
+Function TBZCustomBitmap.getColorManager: TBZColorsManager;
 Begin
   Result := FColorManager;
 End;
 
-function TBZCustomBitmap.getSurfaceBuffer : PBZColor;
+Function TBZCustomBitmap.getSurfaceBuffer: PBZColor;
 Begin
   Result := PBZColor(FSurfaceBuffer);
 End;
 
-function TBZCustomBitmap.getSurfaceIndexedBuffer : PDWord;
+Function TBZCustomBitmap.getSurfaceIndexedBuffer: PDWord;
 Begin
   Result := FImageIndexBuffer;
 End;
 
-function TBZCustomBitmap.GetScanLine(Row : LongInt) : PBZColor;
+Function TBZCustomBitmap.GetScanLine(Row: LongInt): PBZColor;
 Var
   yy: Integer;
 Begin
@@ -4728,12 +4750,12 @@ Begin
   Result := PBZColor(FSurfaceBuffer + YY);
 End;
 
-function TBZCustomBitmap.GetScanLineLUT : TBZScanLineLUT;
+Function TBZCustomBitmap.GetScanLineLUT: TBZScanLineLUT;
 begin
   Result := FScanLineLUT;
 end;
 
-function TBZCustomBitmap.GetPixelPtr(X, Y : Integer) : PBZColor;
+Function TBZCustomBitmap.GetPixelPtr(X, Y: Integer): PBZColor;
 Var
   yy: Integer;
 Begin
@@ -4744,7 +4766,7 @@ Begin
   Result := PBZColor(FSurfaceBuffer + YY + X);// (X * 4));
 End;
 
-procedure TBZCustomBitmap.SetSize(NewWidth, NewHeight : Integer);
+Procedure TBZCustomBitmap.SetSize(NewWidth, NewHeight: Integer);
 Begin
   If (FWidth = Abs(NewWidth)) And (FHeight = Abs(NewHeight)) Then exit;
   FWidth := Abs(NewWidth); // abs au cas ou cela serai négatif (lors d'un chargement de fichier incorrecte par exemple)
@@ -4805,7 +4827,7 @@ begin
   memReAlloc(FSurfaceBuffer, ANewSize);
 end;
 
-function TBZCustomBitmap.GetInternalPixelColor(x, y : Integer) : Integer;
+Function TBZCustomBitmap.GetInternalPixelColor(x, y: Integer): Integer;
 Begin
   Result := 0;
   //if not(CheckPixelBound(x,y)) then exit;
@@ -4815,7 +4837,7 @@ Begin
   End;
 End;
 
-procedure TBZCustomBitmap.SetInternalPixelColor(x, y : Integer; Value : Integer);
+Procedure TBZCustomBitmap.SetInternalPixelColor(x, y: Integer; Value: Integer);
 Begin
   If FUsePalette Then
   Begin
@@ -4823,7 +4845,7 @@ Begin
   End;
 End;
 
-function TBZCustomBitmap.CloneSurfaceBuffer(const BufferData : PByte; var Clone : PByte) : Boolean;
+Function TBZCustomBitmap.CloneSurfaceBuffer(Const BufferData: PByte; Var Clone: PByte): Boolean;
 Var
   aSize: Integer;
 Begin
@@ -4849,7 +4871,7 @@ begin
 end;
 
 
-function TBZCustomBitmap.getPixel(x, y : Integer) : TBZColor; //Inline;
+Function TBZCustomBitmap.getPixel(x, y: Integer): TBZColor; //Inline;
 Var
   yy: Integer;
   PixelPtr: PBZColor;
@@ -4903,12 +4925,12 @@ begin
   end;
 end;
 
-function TBZCustomBitmap.getPixelOffset(Offset : Integer) : TBZColor;
+Function TBZCustomBitmap.getPixelOffset(Offset: Integer): TBZColor;
 begin
   Result := PBZColor(FSurfaceBuffer + Offset)^;
 end;
 
-function TBZCustomBitmap.getPixelCycle(x, y : Integer) : TBZColor;
+Function TBZCustomBitmap.getPixelCycle(x, y: Integer): TBZColor;
 Var
   yy,px,py : Integer;
   PixelPtr: PBZColor;
@@ -4939,7 +4961,7 @@ Begin
   Result := PixelPtr^; // On recupere la valeur
 end;
 
-procedure TBZCustomBitmap.setPixel(x, y : Integer; aValue : TBZColor); //Inline;
+Procedure TBZCustomBitmap.setPixel(x, y: Integer; aValue: TBZColor); //Inline;
 Var
   yy:     Integer;
   //xx:Integer
@@ -4957,12 +4979,12 @@ Begin
 End;
 
 
-procedure TBZCustomBitmap.setPixelOffset(Offset : DWord; aValue : TBZColor);
+Procedure TBZCustomBitmap.setPixelOffset(Offset: DWord; aValue: TBZColor);
 begin
   PBZColor(FSurfaceBuffer + Offset)^ := aValue;
 end;
 
-procedure TBZCustomBitmap.setPixelAlphaBlend(x, y : Integer; aValue : TBZColor);
+Procedure TBZCustomBitmap.setPixelAlphaBlend(x, y: Integer; aValue: TBZColor);
 Var
   yy:     Integer;
   PixPtr: PBZColor;
@@ -4973,7 +4995,7 @@ begin
   PixPtr^:= PixPtr^.AlphaBlend(aValue);
 end;
 
-procedure TBZCustomBitmap.setPixelCheckAlpha(x, y : Integer; aValue : TBZColor);
+Procedure TBZCustomBitmap.setPixelCheckAlpha(x, y: Integer; aValue: TBZColor);
 begin
   if aValue.Alpha > 0 then SetPixel(x,y,aValue);
 end;
@@ -4990,7 +5012,7 @@ begin
   setInternalPixelColor(x, y,aValue);
 end; *)
 
-procedure TBZCustomBitmap.LoadFromFile(const FileName : String);
+Procedure TBZCustomBitmap.LoadFromFile(Const FileName: String);
 Var
   BaseImageClass: TBZBitmapClass;
   tempImage:      TBZCustomBitmap;
@@ -5023,7 +5045,7 @@ Begin
   End;
 end;
 
-procedure TBZCustomBitmap.PreMultiplyAlpha;
+Procedure TBZCustomBitmap.PreMultiplyAlpha;
 Var
   i: Integer;
   DstPtr, SrcPtr: PBZColor;
@@ -5046,7 +5068,7 @@ Begin
   end;
 End;
 
-procedure TBZCustomBitmap.UnPreMultiplyAlpha;
+Procedure TBZCustomBitmap.UnPreMultiplyAlpha;
 Var
   i: Integer;
   DstPtr, SrcPtr: PBZColor;
@@ -5082,13 +5104,13 @@ Begin
   end;
 End;
 
-procedure TBZCustomBitmap.Clear(aColor : TBZColor);
+Procedure TBZCustomBitmap.Clear(aColor: TBZColor);
 Begin
   //GlobalLogger.LogStatus('Clear Color : '+aColor.ToString);
   FillLongWord(FSurfaceBuffer^, FWidth * FHeight , DWord(aColor));
 End;
 
-procedure TBZCustomBitmap.Clear(aColorIndex : Integer);
+Procedure TBZCustomBitmap.Clear(aColorIndex: Integer);
 Begin
   If FUsePalette Then
   Begin
@@ -5098,8 +5120,7 @@ Begin
   End;
 End;
 
-procedure TBZCustomBitmap.PutImage(
-  const ASrcBmp : TBZCustomBitmap; SrcX, SrcY, cfWidth, cfHeight : Integer; DstX, DstY : Integer; const ADrawMode : TBZBitmapDrawMode; const AAlphaMode : TBZBitmapAlphaMode; const MasterAlpha : Byte; const CombineMode : TBZColorCombineMode; const BlendSrcFactor : TBZBlendingFactor; const BlendDstFactor : TBZBlendingFactor);
+Procedure TBZCustomBitmap.PutImage(Const ASrcBmp: TBZCustomBitmap; SrcX, SrcY, cfWidth, cfHeight: Integer; DstX, DstY: Integer; Const ADrawMode: TBZBitmapDrawMode; Const AAlphaMode: TBZBitmapAlphaMode; Const MasterAlpha: Byte; Const CombineMode: TBZColorCombineMode; Const BlendSrcFactor: TBZBlendingFactor; Const BlendDstFactor: TBZBlendingFactor);
 
   Procedure ClipCopyRect(Var SrcX, SrcY, Width, Height, DstX, DstY: Integer; SrcImageWidth, SrcImageHeight: Integer; Const DstClip: Types.TRect);
   Var
@@ -5271,29 +5292,27 @@ Begin
   End;
 End;
 
-procedure TBZCustomBitmap.PutImage(const ASrcBmp : TBZCustomBitmap; DstX, DstY : Integer);
+procedure TBZCustomBitmap.PutImage(Const ASrcBmp: TBZCustomBitmap; DstX, DstY: Integer);
 begin
   PutImage(ASrcBmp,0,0,ASrcBmp.Width, ASrcBmp.Height,DstX,DstY);
 end;
 
-procedure TBZCustomBitmap.PutImage(const ASrcBmp : TBZCustomBitmap; DstX, DstY : Integer; MasterAlpha : Byte);
+procedure TBZCustomBitmap.PutImage(Const ASrcBmp: TBZCustomBitmap; DstX, DstY: Integer; MasterAlpha: Byte);
 begin
   PutImage(ASrcBmp,0,0,ASrcBmp.Width, ASrcBmp.Height,DstX,DstY,dmSet, amAlphaBlend, MasterAlpha);
 end;
 
-procedure TBZCustomBitmap.PutImage(
-  const ASrcBmp : TBZCustomBitmap; DstX, DstY : Integer; MasterAlpha : Byte; ADrawMode : TBZBitmapDrawMode; AAlphaMode : TBZBitmapAlphaMode);
+procedure TBZCustomBitmap.PutImage(Const ASrcBmp: TBZCustomBitmap; DstX, DstY: Integer; MasterAlpha: Byte; ADrawMode: TBZBitmapDrawMode; AAlphaMode: TBZBitmapAlphaMode);
 begin
   PutImage(ASrcBmp,0,0,ASrcBmp.Width, ASrcBmp.Height,DstX,DstY, ADrawMode, AAlphaMode, MasterAlpha);
 end;
 
-procedure TBZCustomBitmap.PutImageBlend(
-  const ASrcBmp : TBZCustomBitmap; DstX, DstY : Integer; const CombineMode : TBZColorCombineMode; const MasterAlpha : Byte);
+procedure TBZCustomBitmap.PutImageBlend(Const ASrcBmp: TBZCustomBitmap; DstX, DstY: Integer; Const CombineMode: TBZColorCombineMode; Const MasterAlpha: Byte);
 begin
   PutImage(ASrcBmp,0,0,ASrcBmp.Width, ASrcBmp.Height,DstX,DstY, dmCombine, amAlphaBlendHQ, MasterAlpha, CombineMode);
 end;
 
-procedure TBZCustomBitmap.PutImageStretch(Source : TBZCustomBitmap; DestLeft, DestTop, DestRight, DestBottom : Integer; const ADrawMode : TBZBitmapDrawMode; const AAlphaMode : TBZBitmapAlphaMode; const MasterAlpha : Byte; const CombineMode : TBZColorCombineMode);
+procedure TBZCustomBitmap.PutImageStretch(Source: TBZCustomBitmap; DestLeft, DestTop, DestRight, DestBottom: Integer; Const ADrawMode: TBZBitmapDrawMode; Const AAlphaMode: TBZBitmapAlphaMode; Const MasterAlpha: Byte; Const CombineMode: TBZColorCombineMode);
 var
   SrcPtr, DstPtr : PBZColor;
   SrcStartX, SrcStartY, StartX, EndX, StartY, EndY, W, H, X, Y, XX,YY, px, py : Integer;
@@ -5406,7 +5425,7 @@ begin
    Self.PutImageStretch(Source, DestRect.Left, DestRect.Top, DestRect.Right, DestRect.Bottom,MasterAlpha);
 end;
 
-procedure TBZCustomBitmap.PutImageRotateAndScale(Source : TBZCustomBitmap; DstX, DstY : Integer; Angle : Single; ZoomFactor : Single; xOrg, yOrg : Integer; const MasterAlpha : Byte; const Warp : Boolean);
+procedure TBZCustomBitmap.PutImageRotateAndScale(Source: TBZCustomBitmap; DstX, DstY: Integer; Angle: Single; ZoomFactor: Single; xOrg, yOrg: Integer; Const MasterAlpha: Byte; Const Warp: Boolean);
 Var
   x,y : Integer;
 
@@ -5512,7 +5531,7 @@ begin
   End;
 end;
 
-procedure TBZCustomBitmap.CopyBlock(Source : TBZCustomBitmap; SrcX, SrcY, aWidth, aHeight, DestX, destY : Integer; const CheckAlpha : Boolean);
+procedure TBZCustomBitmap.CopyBlock(Source: TBZCustomBitmap; SrcX, SrcY, aWidth, aHeight, DestX, destY: Integer; Const CheckAlpha: Boolean);
 Var
   LineSize : DWord;
   SrcPtr, DstPtr : PBZColor;
@@ -5560,7 +5579,7 @@ begin
   end;
 end;
 
-procedure TBZCustomBitmap.CopyBlock(Source : TBZCustomBitmap; SrcRect : TBZRect; DestX, destY : Integer; const CheckAlpha : Boolean);
+procedure TBZCustomBitmap.CopyBlock(Source: TBZCustomBitmap; SrcRect: TBZRect; DestX, destY: Integer; Const CheckAlpha: Boolean);
 begin
   Self.CopyBlock(Source, SrcRect.Left, SrcRect.Top, SrcRect.Width, SrcRect.Height, DestX, DestY, CheckAlpha);
 end;
@@ -5669,7 +5688,7 @@ begin
   FreeAndNil(TmpBmp);
 end;
 
-procedure TBZCustomBitmap.DrawToCanvas(const ACanvas : TCanvas; const ARect : TRect; const IsOpaque : Boolean; const ClearBK : Boolean);
+procedure TBZCustomBitmap.DrawToCanvas(Const ACanvas: TCanvas; Const ARect: TRect; Const IsOpaque: Boolean; Const ClearBK: Boolean);
   // Fast Red-Blue channel color swapping
   procedure SwapRB(Buf: PBZColor; pixelCount: Integer);
   var
@@ -5873,7 +5892,7 @@ End;
 //------------------------------------------------------------------------------
 // Importation des données d'un TBitmap de bit indifferent et le converti en 32bit
 //------------------------------------------------------------------------------
-function TBZCustomBitmap.ImportFromBitmap(const ABitmap : Graphics.TBitmap) : Boolean;
+function TBZCustomBitmap.ImportFromBitmap(Const ABitmap: Graphics.TBitmap): Boolean;
 var
   LTempBitmap: Graphics.TBitmap;
   ok,ResetAlpha:Boolean;
@@ -5921,7 +5940,7 @@ end;
 //------------------------------------------------------------------------------
 // Importation des données d'un TRawImage
 //------------------------------------------------------------------------------
-function TBZCustomBitmap.ImportFromRawImage(const ARawImage : TRawImage) : Boolean;
+function TBZCustomBitmap.ImportFromRawImage(Const ARawImage: TRawImage): Boolean;
 var
   //BytePerRow:Integer;
   BufferData : PByte;
@@ -5944,7 +5963,7 @@ begin
   end;
 end;
 
-function TBZCustomBitmap.ExportToBitmap : Graphics.TBitmap;
+Function TBZCustomBitmap.ExportToBitmap: Graphics.TBitmap;
 var
   Temp:     Graphics.TBitmap;
   RawImage: TRawImage;
@@ -6073,6 +6092,8 @@ begin
 
 end;
 
+
+
 {%endregion%}
 
 {%region%====[ TBZCustomOwnerBitmap ]===========================================}
@@ -6189,7 +6210,7 @@ Constructor TBZBaseBitmap.Create;
 begin
   Inherited Create(nil,0,0);
   FMaskApplyAlpha:=False;
-  FMaskApply :=False;
+  //FMaskApply :=False;
   FUseMask := False;
   FUseSelectionMask := False;
 end;
@@ -6201,8 +6222,8 @@ Begin
   begin
     FMask := TBZBaseBitmap(Source).Mask;
     FUseMask := TBZBaseBitmap(Source).UseMask;
-    FMaskApplyAlpha := TBZBaseBitmap(Source).ApplyMask;
-    FMaskApply := TBZBaseBitmap(Source).ApplyMaskAlpha;
+    FMaskApplyAlpha := TBZBaseBitmap(Source).ApplyMaskAlpha;
+    //FMaskApply := TBZBaseBitmap(Source).ApplyMask;
     FSelectionMask := TBZBaseBitmap(Source).SelectionMask;
     FUseSelectionMask := TBZBaseBitmap(Source).UseSelectionMask;
   End;
@@ -6437,14 +6458,13 @@ Begin
     p := TBZImageFileFormat(Items[i]);
     With p Do
     Begin
-     // If k <> 0 Then
-     // Begin
-        descriptions := descriptions + '|';
-        filters := filters + ';';
-     // End;
       FmtStr(descriptions, '%s%s (*.%s)|*.%2:s', [descriptions, Description, Extension]);
       filters := filters + '*.' + Extension;
-      //Inc(k);
+      if (i < (Count - 1)) then
+      begin
+        descriptions := descriptions + '|';
+        filters := filters + ';';
+      end;
     End;
   End;
   FmtStr(descriptions, '%s (%s)|%1:s|%s', ['Tous les formats', filters, descriptions]);

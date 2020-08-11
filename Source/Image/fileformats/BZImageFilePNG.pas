@@ -117,6 +117,8 @@ const
   COLOR_RGBA           = 6;
 
 Type
+  TBZPortableNetworkGraphicColorType = (ctGrayScale, ctRGB, ctIndexed, ctGrayScaleAlpha, ctRGBA);
+
   TBZPortableNetworkGraphicFormatType = (ftPNG, tfAPNG, ftMNG, ftJNG);
 
 { 0	Perceptual	for images preferring good adaptation to the output device gamut at the expense of colorimetric accuracy, such as photographs.
@@ -250,11 +252,31 @@ Type
   PBZPNGChunk_tIME = ^TBZPNGChunk_tIME;
 
 Type
+
+  TBZBitmapPNGSavingOptions = Class(TBZUpdateAbleObject)
+  private
+    FCompressed : Boolean;
+    FBitsPerPixel : TBZPixelFormat;
+    FColorType : TBZPortableNetworkGraphicColorType;
+    FAutoFormat : Boolean;
+  public
+    Constructor Create; override;
+
+    property Commpressed : Boolean read FCompressed write FCompressed;
+    property BitsPerPixel : TBZPixelFormat read FBitsPerPixel write FBitsPerPixel;
+    property ColorType : TBZPortableNetworkGraphicColorType read FColorType write FColorType;
+    property AutoFormat : Boolean read FAutoFormat write FAutoFormat;
+  end;
+
   { TBZBitmapPortableNetworkGraphicImage : Classe de base pour la prise en charge
     des formats PNG, MNG et JNG}
+
+  { TBZBitmapNetworkGraphicImage }
+
   TBZBitmapNetworkGraphicImage = Class(TBZCustomImageFileIO)
   private
      FGlobalPalette : TBZColorList;
+     FSavingOptions : TBZBitmapPNGSavingOptions;
   protected
    // Decoder: TBZDataEncoderLZ77;7
     ImageType :  TBZPortableNetworkGraphicFormatType; // Type d'image, pour les reconnaitres car les en-têtes sont differents
@@ -307,6 +329,8 @@ Type
     procedure DecodeData;
 
     Procedure LoadFromMemory(); override;
+    Procedure SaveToMemory(); override;
+
     Function CheckFormat(): Boolean; override;
     Function ReadImageProperties: Boolean; override;
   public
@@ -317,6 +341,8 @@ Type
     Class Function Capabilities: TBZDataFileCapabilities; override;
 
     Function getImagePropertiesAsString: String; override;
+
+    property SavingOptions : TBZBitmapPNGSavingOptions read FSavingOptions;
   end;
 
 implementation
@@ -382,7 +408,7 @@ Const
   'Creation Time', 'Software', 'Disclaimer',
   'Legal disclaimer', 'Warning', 'Source', 'Comment');
 
-  MaxChunkLength = $7FFFFFFF;
+  cMaxChunkLength = $7FFFFFFF;
 
   cInterlaced_Adam7_RowStart: array[0..6] of LongInt = (0, 0, 4, 0, 2, 0, 1);
   cInterlaced_Adam7_ColumnStart: array[0..6] of LongInt = (0, 4, 0, 2, 0, 1, 0);
@@ -464,9 +490,18 @@ begin
   Result := SwapEndian(CRC) = Chunk.ChunkCRC;
 end;
 
+{ TBZBitmapTGASavingOptions }
+
+Constructor TBZBitmapPNGSavingOptions.Create;
+begin
+  inherited Create;
+  FCompressed := False;
+  FBitsPerPixel := pf32bits;
+end;
+
 {%region%=====[  TBZBitmapNetworkGraphicImage ]===============================}
 
-constructor TBZBitmapNetworkGraphicImage.Create(AOwner : TPersistent; AWidth, AHeight : Integer);
+Constructor TBZBitmapNetworkGraphicImage.Create(AOwner: TPersistent; AWidth, AHeight: Integer);
 Begin
   Inherited Create(aOwner, AWidth, AHeight);
   ////Globallogger.LogNotice('Creation de TBZBitmapNetworkGraphicImage');
@@ -481,9 +516,10 @@ Begin
   //ChunkInfos := nil;
   HasTransparency:=false;
   BackgroundColor:=clrBlack;
+  FSavingOptions := TBZBitmapPNGSavingOptions.Create;
 end;
 
-destructor TBZBitmapNetworkGraphicImage.Destroy;
+Destructor TBZBitmapNetworkGraphicImage.Destroy;
 Begin
   //if ChunkInfos<>nil then
   //begin
@@ -491,15 +527,16 @@ Begin
   //  ChunkInfos := nil;
   //end;
   //SupportedColorFormat := [];
+  FreeAndNil(FSavingOptions);
   Inherited Destroy;
 End;
 
-class function TBZBitmapNetworkGraphicImage.Capabilities : TBZDataFileCapabilities;
+Class Function TBZBitmapNetworkGraphicImage.Capabilities: TBZDataFileCapabilities;
 Begin
   Result := [dfcRead]; //[dfcRead, dfcWrite]
 End;
 
-function TBZBitmapNetworkGraphicImage.getImagePropertiesAsString : String;
+Function TBZBitmapNetworkGraphicImage.getImagePropertiesAsString: String;
 Var
   S: String;
 Begin
@@ -558,7 +595,7 @@ begin
   else ChunkInfos.ChunkData := nil;
 
   ChunkInfos.ChunkCrc := Memory.ReadLongWord;
-  If (BytesRead <> ChunkInfos.ChunkHeader.DataSize) or (ChunkInfos.ChunkHeader.DataSize>MaxChunkLength) then
+  If (BytesRead <> ChunkInfos.ChunkHeader.DataSize) or (ChunkInfos.ChunkHeader.DataSize > cMaxChunkLength) then
   begin
     RaiseInvalidImageFile('Erreur de lecture : Taille des donnée du chunk = '+String(ChunkInfos.ChunkHeader.Name)+' incorrecte');
   end;
@@ -791,7 +828,7 @@ var
     Case PNGHeader.ColorType of
       COLOR_GRAYSCALE :
       begin
-        Globallogger.logNotice('Convert Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -883,7 +920,7 @@ var
       end;
       COLOR_RGB :  // RGB
       begin
-        Globallogger.logNotice('Convert Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then    // 24bits
         begin
           For sx := 0 to MaxWidth do
@@ -942,7 +979,7 @@ var
       end;
       COLOR_PALETTE :  // Indexed
       begin
-        Globallogger.logNotice('Convert Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -1070,7 +1107,7 @@ var
       end;
       COLOR_GRAYSCALEALPHA : // RGBA Gray Scale
       begin
-        Globallogger.logNotice('Convert Row ColorData : GRAYSCALE ALPHA, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Row ColorData : GRAYSCALE ALPHA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1195,7 +1232,7 @@ var
     Case PNGHeader.ColorType of
       COLOR_GRAYSCALE :
       begin
-        Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALE, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -1299,7 +1336,7 @@ var
       end;
       COLOR_RGB :  // RGB  24 bits
       begin
-        Globallogger.logNotice('Convert Interlaced Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Interlaced Row ColorData : RGB, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1345,7 +1382,7 @@ var
       end;
       COLOR_PALETTE :  // Indexed
       begin
-        Globallogger.logNotice('Convert Interlaced Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Interlaced Row ColorData : INDEXED, '+PNGHeader.BitDepth.ToString+' bits');
         Case PNGHeader.BitDepth of
           1  :
           begin
@@ -1487,7 +1524,7 @@ var
       end;
       COLOR_GRAYSCALEALPHA : // RGBA Gray Scale
       begin
-        Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALEALPHA, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Interlaced Row ColorData : GRAYSCALEALPHA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then
         begin
           For sx := 0 to MaxWidth do
@@ -1536,7 +1573,7 @@ var
       end;
       COLOR_RGBA:  // RGBA
       begin
-        Globallogger.logNotice('Convert Interlaced Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
+        //Globallogger.logNotice('Convert Interlaced Row ColorData : RGBA, '+PNGHeader.BitDepth.ToString+' bits');
         if PNGHeader.BitDepth = 8 then  // 32 bits
         begin
           For sx := 0 to MaxWidth do
@@ -1586,13 +1623,13 @@ var
   end;
 
 begin
-  Globallogger.LogNotice('Decode Data');
+  //Globallogger.LogNotice('Decode Data');
   ZData.position := 0;
   //IsOpaque := False;
   IgnoreAlpha := False;
   Color1 := clrBlack;
   Color2 := clrWhite;
-  Globallogger.LogNotice('ZData Buffer Size : '+ZData.Size.ToString);
+  //Globallogger.LogNotice('ZData Buffer Size : '+ZData.Size.ToString);
   RowBuffer[False] := nil;
   RowBuffer[True] := nil;
   EvenRow := False;
@@ -1603,7 +1640,7 @@ begin
 
   //TargetBPP=4;
 
-  Globallogger.LogNotice('SourceBPP : '+ SourceBPP.toString + ' TargetBPP : '+TargetBPP.ToString);
+  //Globallogger.LogNotice('SourceBPP : '+ SourceBPP.toString + ' TargetBPP : '+TargetBPP.ToString);
   aBytesPerRow := TargetBPP * ((Width * PNGHeader.BitDepth + 7) div 8) + 1;
   //Globallogger.LogNotice('BytesPerRow : '+aBytesPerRow.ToString);
 
@@ -1618,7 +1655,7 @@ begin
   try
     if PNGHeader.Interlacing = 1 then  // Image entrlacée
     begin
-      Globallogger.LogNotice('Process Interlaced ADAM 7');
+      //Globallogger.LogNotice('Process Interlaced ADAM 7');
       for Pass := 0 to 6 do
       begin
         // prepare next interlace run
@@ -1658,11 +1695,11 @@ begin
     end
     else
     begin
-      Globallogger.LogNotice('Process Regular' + MaxWidth.ToString + 'x' + MaxHeight.ToString);
+      //Globallogger.LogNotice('Process Regular' + MaxWidth.ToString + 'x' + MaxHeight.ToString);
       for Row := 0 to MaxHeight do
       begin
         PixPtr := GetScanLine(Row);
-        Globallogger.LogNotice('Read Line : '+Row.ToString);
+        //Globallogger.LogNotice('Read Line : '+Row.ToString);
         DecompressStream.Read(RowBuffer[EvenRow]^, aBytesPerRow);
 
         ApplyFilter(Byte(RowBuffer[EvenRow]^),
@@ -1682,16 +1719,16 @@ begin
       end;
     end;
   finally
-     Globallogger.LogNotice('Free RowBuffer True');
+     //Globallogger.LogNotice('Free RowBuffer True');
      FreeMem(RowBuffer[True]);
-     Globallogger.LogNotice('Free RowBuffer False');
+     //Globallogger.LogNotice('Free RowBuffer False');
      FreeMem(RowBuffer[False]);
-     Globallogger.LogNotice('Free Decompress Stream True');
+     //Globallogger.LogNotice('Free Decompress Stream True');
      FreeAndNil(DecompressStream);
    end;
 end;
 
-function TBZBitmapNetworkGraphicImage.ReadImageProperties : Boolean;
+Function TBZBitmapNetworkGraphicImage.ReadImageProperties: Boolean;
 Var
   OldPos :Int64;
 
@@ -1723,16 +1760,16 @@ Var
     vGamma : LongWord;
     i : Integer;
   begin
-    Globallogger.LogNotice('Process Chunk gAMA');
+    //Globallogger.LogNotice('Process Chunk gAMA');
     vGamma := Memory.ReadLongWord;
-    Globallogger.LogNotice('vGamma Factor = '+vGamma.ToString);
+    //Globallogger.LogNotice('vGamma Factor = '+vGamma.ToString);
     GammaFactor :=  (vGamma / 1000000000);
-    Globallogger.LogNotice('Gamma Factor = '+GammaFactor.ToString);
+    //Globallogger.LogNotice('Gamma Factor = '+GammaFactor.ToString);
     GammaFactor :=  1 / GammaFactor;
-    Globallogger.LogNotice('Inv Gamma Factor = '+GammaFactor.ToString);
+    //Globallogger.LogNotice('Inv Gamma Factor = '+GammaFactor.ToString);
     //if GammaFactor < 1.0 then GammaFactor := GammaFactor * 10;
     GammaFactor :=  GammaFactor * _DefaultGammaFactor;
-    Globallogger.LogNotice('Corrected Gamma Factor = '+GammaFactor.ToString);
+    //Globallogger.LogNotice('Corrected Gamma Factor = '+GammaFactor.ToString);
 
     GammaCorrection := True;
 
@@ -1775,7 +1812,7 @@ Var
   }
   procedure ProcessChunk_cHRM;
   begin
-    Globallogger.LogNotice('Process Chunk cHRM');
+    //Globallogger.LogNotice('Process Chunk cHRM');
     ReadChunkData;
     CIExyz := TBZPNGChunk_cHRM(ChunkInfos.ChunkData^);
     HasCIExyz :=  True;
@@ -1787,7 +1824,7 @@ Var
   var
     rb,gb,bb,ab:byte;
   begin
-    Globallogger.LogNotice('Process Chunk sBIT');
+    //Globallogger.LogNotice('Process Chunk sBIT');
     SkipChunkData;
    { Case PNGHeader.ColorType of
       0:
@@ -1825,7 +1862,7 @@ Var
     c : Char;
     l : Integer;
   begin
-    Globallogger.LogNotice('Process Chunk iCCP');
+    //Globallogger.LogNotice('Process Chunk iCCP');
     fillChar(iCCP_Profil.name,79,' ');
     s := '';
 
@@ -1880,7 +1917,7 @@ Var
     S, AText : String; // Longueur definie par l'en-tete du chunk -> DataSize
     l : Integer;
   begin
-    Globallogger.LogNotice('Process Chunk tEXT');
+    //Globallogger.LogNotice('Process Chunk tEXT');
     fillChar(Keyword,79,' ');
     s := '';
 
@@ -1943,7 +1980,7 @@ Var
  //procedure ProcessChunk_tIME;
 
 Begin
-  Globallogger.LogNotice('Read Image Properties');
+  //Globallogger.LogNotice('Read Image Properties');
   Result := True;
   GammaCorrection := False;
   HasCIExyz := False;
@@ -1953,7 +1990,7 @@ Begin
   Case ImageType of
     ftPNG:
     begin
-      Globallogger.LogNotice('PNG Header detected');
+      //Globallogger.LogNotice('PNG Header detected');
       if (ChunkInfos.ChunkType<>ctIHDR) then // or (ChunkType<>ctfcTL) then
       begin
         Result:=false;
@@ -1989,7 +2026,7 @@ Begin
       end;
       // On met à jour la description du ImageDescription
       // On initialise la descritption du "ImageDescription"
-      Globallogger.LogNotice('Description.InitDefault: '+InttoStr(PNGHeader.Width)+'x'+InttoStr(PNGHeader.Height)+'x'+InttoStr(BitCount)+' Type : '+Inttostr(PNGHeader.ColorType));
+      //Globallogger.LogNotice('Description.InitDefault: '+InttoStr(PNGHeader.Width)+'x'+InttoStr(PNGHeader.Height)+'x'+InttoStr(BitCount)+' Type : '+Inttostr(PNGHeader.ColorType));
       ImageDescription.InitDefault(PNGHeader.Width, PNGHeader.Height, BitCount);
       HasTransparency := False;
       With ImageDescription do
@@ -2081,12 +2118,12 @@ Begin
 
 End;
 
-function TBZBitmapNetworkGraphicImage.CheckFormat() : Boolean;
+Function TBZBitmapNetworkGraphicImage.CheckFormat(): Boolean;
 Var
   MagicID : TBZPNGMagicID;
 
 Begin
-  Globallogger.LogNotice('Check format');
+  //Globallogger.LogNotice('Check format');
   MagicID := cNULL_MagicID;
   Result :=  False;
   Memory.Read(MagicID,8);
@@ -2110,7 +2147,7 @@ Begin
 
 End;
 
-procedure TBZBitmapNetworkGraphicImage.LoadFromMemory();
+Procedure TBZBitmapNetworkGraphicImage.LoadFromMemory();
 Var
  Chunk_PLTE_Ok : Boolean;
 
@@ -2120,12 +2157,12 @@ Var
    r,g,b : Byte;
    pcolor : TBZColor;
   begin
-    Globallogger.LogNotice('Process Chunk PLTE');
+    //Globallogger.LogNotice('Process Chunk PLTE');
     MaxCols := ChunkInfos.ChunkHeader.DataSize div 3;
     ImageDescription.UsePalette := True;
     ImageDescription.PaletteCount := MaxCols;
     if (MaxCols > 256) then Errors.Add('Too Many Colors');
-    Globallogger.LogNotice('Load :' + MaxCols.ToString + ' Colors');
+    //Globallogger.LogNotice('Load :' + MaxCols.ToString + ' Colors');
     if MaxCols > 0 then
     begin
       //if FGlobalPalette =  nil then FGlobalPalette := TBZColorList.Create else FGlobalPalette.Clear;
@@ -2154,7 +2191,7 @@ Var
     RGBAColor : TBZColor;
     rw,gw,bw : Word;
   begin
-    Globallogger.LogNotice('Process Chunk tRNS');
+    //Globallogger.LogNotice('Process Chunk tRNS');
 
     Case PNGHeader.ColorType of
        0:  // MonoChrome / Niveaux de gris
@@ -2185,7 +2222,7 @@ Var
          if Chunk_PLTE_Ok then
          begin
            ImageDescription.HasAlpha := True;
-           Globallogger.LogNotice('Indexed');
+           //Globallogger.LogNotice('Indexed');
            if ChunkInfos.ChunkHeader.DataSize > 0 then
            begin
              MaxCols := ChunkInfos.ChunkHeader.DataSize;
@@ -2225,12 +2262,12 @@ Var
     Value : Word;  // ColorType 0, 4
     vR, vG, vB, vA : Word; // ColorType 2,6
   begin
-    Globallogger.LogNotice('Process Chunk bKGD');
+    //Globallogger.LogNotice('Process Chunk bKGD');
     if Chunk_PLTE_Ok then
     begin
       // resultat Couleur RGBA. Canal Alpha en fonction du chunk tRNS (Transparence)
       //ReadChunkData;
-      Globallogger.LogNotice('PNG Color Type = '+PNGHeader.ColorType.ToString);
+      //Globallogger.LogNotice('PNG Color Type = '+PNGHeader.ColorType.ToString);
       Case PNGHeader.ColorType of
         0,4:
         begin
@@ -2313,7 +2350,7 @@ Var
 
 Begin
   Chunk_PLTE_Ok := False;
-  Globallogger.LogNotice('Load from memory');
+  //Globallogger.LogNotice('Load from memory');
   Case ImageType of
     ftPNG:
     begin
@@ -2339,7 +2376,7 @@ Begin
         end;
       end;
       if ZData.Size > 0 then DecodeData;
-      Globallogger.LogNotice('END Load from memory');
+      //Globallogger.LogNotice('END Load from memory');
       FreeAndNil(ZData);
     end;
     ftMNG:
@@ -2355,6 +2392,122 @@ Begin
   if HasICCP then if (iCCP_Profil.Profil<>nil) then FreeMem(iCCP_Profil.Profil);
   if ChunkInfos.ChunkData<>nil then FreeMem(ChunkInfos.ChunkData);
 End;
+
+Procedure TBZBitmapNetworkGraphicImage.SaveToMemory();
+Var
+  Delta : Single;
+
+  procedure DetectFormat;
+  begin
+
+  end;
+
+  procedure SaveChunk(aChunk : TBZPNGChunkInfos);
+  begin
+    aChunk.ChunkCrc := 0;
+    Memory.Write(aChunk.ChunkHeader, SizeOf(TBZPNGChunkHeader));
+    if (aChunk.ChunkHeader.DataSize > 0) then
+    begin
+      Memory.Write(aChunk.ChunkData^, aChunk.ChunkHeader.DataSize);
+      aChunk.ChunkCrc := GetCrc(aChunk.ChunkData, aChunk.ChunkHeader.DataSize);
+    end;
+    Memory.WriteLongWord(aChunk.ChunkCrc);
+  end;
+
+  procedure SaveHeader;
+  var
+    Header :  TBZPNGChunk_IHDR;
+    HeaderChunk : TBZPNGChunkInfos;
+  begin
+    with Header do
+    begin
+      Width := self.Width;
+      Height := self.Height;
+      Case FSavingOptions.BitsPerPixel of
+        pfDefault: BitDepth := 8;
+        pf8bits: BitDepth := 8;
+        pf16bits: BitDepth := 8;
+        pf24bits: BitDepth := 8;
+        pf32bits: BitDepth := 8;
+        pf48bits: BitDepth := 16;
+        pf64bits: BitDepth := 16;
+        else BitDepth := 8;
+      end;
+
+      Case FSavingOptions.ColorType of
+        ctGrayScale: ColorType := COLOR_GRAYSCALE;
+        ctRGB: ColorType := COLOR_RGB;
+        ctIndexed: ColorType := COLOR_PALETTE;
+        ctGrayScaleAlpha: ColorType := COLOR_GRAYSCALEALPHA;
+        ctRGBA: ColorType := COLOR_RGBA;
+      end;
+
+      if (FSavingOptions.ColorType = ctGrayScaleAlpha)  and (FSavingOptions.BitsPerPixel = pf32bits) then BitDepth := 16;
+
+      Filter := 0;
+      Compression := 0;
+      Interlacing := 0;
+    end;
+
+    Memory.Write(cPNG_MAGICID, SizeOf(TBZPNGMagicID));
+    HeaderChunk.ChunkHeader.DataSize := SizeOf(TBZPNGChunk_IHDR);
+    HeaderChunk.ChunkHeader.Name := cChunkTypesName[ctIHDR] ;
+    HeaderChunk.ChunkData := nil;
+    ReAllocMem(HeaderChunk.ChunkData, HeaderChunk.ChunkHeader.DataSize);
+    Move(Header, HeaderChunk.ChunkData^, HeaderChunk.ChunkHeader.DataSize);
+    SaveChunk(HeaderChunk);
+    FreeMem(HeaderChunk.ChunkData);
+  end;
+
+  procedure SaveData;
+  var
+    DataChunk : TBZPNGChunkInfos;
+
+    procedure EncodeFilterData;
+    begin
+
+    end;
+
+    procedure EncodeData;
+    begin
+
+    end;
+
+    procedure PackData;
+    begin
+
+    end;
+
+  begin
+    DataChunk.ChunkHeader.Name := cChunkTypesName[ctIDAT] ;
+    DataChunk.ChunkHeader.DataSize := 0;
+    DataChunk.ChunkData := nil;
+    // PackData;
+    SaveChunk(DataChunk);
+  end;
+
+  procedure SaveFooter;
+  Var
+    FooterChunk : TBZPNGChunkInfos;
+  begin
+    FooterChunk.ChunkHeader.DataSize := 0;
+    FooterChunk.ChunkHeader.Name := cChunkTypesName[ctIEND] ;
+    FooterChunk.ChunkData := nil;
+    SaveChunk(FooterChunk);
+  end;
+
+begin
+  InitProgress(Self.Width,Self.Height);
+  StartProgressSection(0, ''); // On debute une nouvelle section globale
+  Delta := 100 / Self.Height;
+  StartProgressSection(100 ,'Enregistrement de l''image au format PNG');
+  DetectFormat;
+  SaveHeader;
+  SaveData;
+  SaveFooter;
+  FinishProgressSection(False);
+  FinishProgressSection(True);
+end;
 
 {%endregion%}
 

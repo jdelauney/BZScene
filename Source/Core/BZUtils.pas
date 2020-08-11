@@ -126,6 +126,16 @@ function SwapBits(This : Word): Word; overload;
 //function RotateLeftBit;
 //function RotateRightBit;
 
+{ Immediate IF (Single), retourne la valeur "IfTrue si "Condition" est vérifié sinon retrourne la valeur "IfFalse" }
+function iif(Condition : Boolean; IfTrue : Single; IfFalse : Single) : Single; overload;
+{ Immediate IF (Double), retourne la valeur "IfTrue si "Condition" est vérifié sinon retrourne la valeur "IfFalse" }
+function iif(Condition : Boolean; IfTrue : Double; IfFalse : Double) : Double; overload;
+{ Immediate IF (Int64), retourne la valeur "IfTrue si "Condition" est vérifié sinon retrourne la valeur "IfFalse" }
+function iif(Condition : Boolean; IfTrue : Int64; IfFalse : Int64) : Int64; overload;
+{ Immediate IF (Integer), retourne la valeur "IfTrue si "Condition" est vérifié sinon retrourne la valeur "IfFalse" }
+function iif(Condition : Boolean; IfTrue : Integer; IfFalse : integer) : Integer; overload;
+
+
 { Calcul le CRC32 d'un tampon de données }
 procedure CRC32 (p: pointer; ByteCount: LongWord; VAR CRCValue: LongWord);
 
@@ -227,6 +237,26 @@ Var
  Proc_FillLongWord :TFillLongWordProc;
 
 {%region%=====[ Misc Utilities ]================================================}
+
+function iif(Condition: Boolean; IfTrue: Single; IfFalse: Single): Single;
+begin
+  if Condition then Result := IfTrue else Result := IfFalse;
+end;
+
+function iif(Condition: Boolean; IfTrue: Double; IfFalse: Double): Double;
+begin
+  if Condition then Result := IfTrue else Result := ifFalse;
+end;
+
+function iif(Condition: Boolean; IfTrue: Int64; IfFalse: Int64): Int64;
+begin
+  if Condition then Result := IfTrue else Result := IfFalse;
+end;
+
+function iif(Condition: Boolean; iftrue: Integer; IfFalse: integer): Integer;
+begin
+  if Condition then Result := IfTrue else Result := IfFalse;
+end;
 
 procedure CRC32 (p: pointer; ByteCount: LongWord; VAR CRCValue: LongWord);
 // Ce qui suit est un peu énigmatique (mais s'exécute très rapidement).

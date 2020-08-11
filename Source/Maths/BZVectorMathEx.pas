@@ -18,7 +18,7 @@
   Support :@br
     @unorderedlist (
      @item(Frustum)
-     @item(Boite englobante orienté en 3D (OBB)
+     @item(Boite englobante orienté en 3D (OBB))
      @item(Sphere englobante 3D)
      @item(Boite englobante 3D avec alignement des axes (Axis Aligned Bounding Box))
      @item(Raycast)

@@ -456,6 +456,13 @@ Type
     { Trace une ligne de longueur "L" depuis la position du curseur et dans la direction chosie par la methode "Turn" }
     Procedure TraceTo(L: Single);
 
+    { Trace une courbe de bezier quadratique }
+    procedure BezierCurveTo(C1, P2 : TBZFloatPoint); overload;
+    procedure BezierCurveTo(C1x, C1y, P2x, P2y : Single ); overload;
+    { Trace une courbe de bezier cubique }
+    procedure BezierCurveTo(C1, C2, P2 : TBZFloatPoint); overload;
+    procedure BezierCurveTo(C1x, C1y, C2x, C2y, P2x, P2y : Single ); overload;
+
     //procedure BezierCurveTo(C1, P2 : TBZFloatPoint);
     //procedure BezierCurveTo(C1, C2, P2 : TBZFloatPoint);
 
@@ -1414,6 +1421,35 @@ Begin
   //dp := d.Round;
   LineTo(D);
   //FCurrentPos := D
+end;
+
+procedure TBZCustomCanvas.BezierCurveTo(C1, P2: TBZFloatPoint);
+begin
+  BezierCurve(FCurrentPos, C1, P2);
+end;
+
+procedure TBZCustomCanvas.BezierCurveTo(C1x, C1y, P2x, P2y: Single);
+Var
+ C1, P2 : TBZVector2f;
+begin
+  C1.Create(C1x, C1y);
+  P2.Create(P2x, P2y);
+  BezierCurve(FCurrentPos, C1, P2);
+end;
+
+procedure TBZCustomCanvas.BezierCurveTo(C1, C2, P2: TBZFloatPoint);
+begin
+  BezierCurve(FCurrentPos, C1, C2, P2);
+end;
+
+procedure TBZCustomCanvas.BezierCurveTo(C1x, C1y, C2x, C2y, P2x, P2y: Single);
+Var
+ C1, C2, P2 : TBZVector2f;
+begin
+  C1.Create(C1x, C1y);
+  C1.Create(C2x, C2y);
+  P2.Create(P2x, P2y);
+  BezierCurve(FCurrentPos, C1, C2, P2);
 end;
 
 {%endregion}

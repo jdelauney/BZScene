@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZCoordinateProperty</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<h1 class="unit">Unité BZCoordinateProperty</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Uses">Uses</a></div><div class="one_section"><a class="section" href="#PasDoc-Classes">Classes, interfaces, enregistrements et objets</a></div><div class="one_section">Fonctions et procédures</div><div class="one_section"><a class="section" href="#PasDoc-Types">Types</a></div><div class="one_section">Constantes</div><div class="one_section">Variables</div></div>
+<span id="PasDoc-Description"></span><h2 class="description">Description</h2>
+&nbsp;<span id="PasDoc-Uses"></span><h2 class="uses">Uses</h2>
+<ul class="useslist"><li>Classes</li><li>SysUtils</li><li>Controls</li><li>Graphics</li><li>LCLType</li><li><a  href="BZClasses.html">BZClasses</a></li><li><a  href="BZMath.html">BZMath</a></li><li><a  href="BZVectorMath.html">BZVectorMath</a></li><li><a  href="BZVectorMathUtils.html">BZVectorMathUtils</a></li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Classes"></span><h3 class="cio">Classes, interfaces, enregistrements et objets</h3>
+<table class="classestable wide_list">
+<tr class="listheader">
+<th class="itemname">Nom</th>
+<th class="itemdesc">Description</th>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCoordinateProperty.TBZCustomCoordinates.html"><code>TBZCustomCoordinates</code></a></td>
+<td class="itemdesc"><code>TBZCustomCoordinates</code> :  Cette classe est fondamentalement un conteneur pour un <a class="normal" href="BZVectorMath.html#TBZVector">TBZVector</a>, permettant une utilisation correcte de l'éditeurs de propriétés et l'édition dans l'EDI.</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCoordinateProperty.TBZCoordinates2D.html"><code>TBZCoordinates2D</code></a></td>
+<td class="itemdesc">TBZCoordinates2 : Un <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a> qui publie les propriétés X, Y</td>
+</tr>
+<tr class="list">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCoordinateProperty.TBZCoordinates3D.html"><code>TBZCoordinates3D</code></a></td>
+<td class="itemdesc">TBZCoordinates3 : Un <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a> qui publie les propriétés X, Y, Z</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCoordinateProperty.TBZCoordinates4D.html"><code>TBZCoordinates4D</code></a></td>
+<td class="itemdesc">TBZCoordinates4 : Un <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a> qui publie les propriétés X, Y, Z, W</td>
+</tr>
+<tr class="list">
+<td class="itemname">Interface&nbsp;<a class="bold" href="BZCoordinateProperty.IBZCoordinatesUpdateAble.html"><code>IBZCoordinatesUpdateAble</code></a></td>
+<td class="itemdesc"><code>IBZCoordinatesUpdateAble</code>: En fait, Sender devrait être <a class="normal" href="BZCoordinateProperty.html#TBZCoordinates">TBZCoordinates</a>, mais cela nécessiterait    des changements dans d'autres unités et d'autres projets qui l'utilisent</td>
+</tr>
+<tr class="list2">
+<td class="itemname">Classe&nbsp;<a class="bold" href="BZCoordinateProperty.TBZCoordinatesUpdateAbleComponent.html"><code>TBZCoordinatesUpdateAbleComponent</code></a></td>
+<td class="itemdesc"><code>TBZCoordinatesUpdateAbleComponent</code> : Composant de base à hériter disposant d'un systeme de coordonées</td>
+</tr>
+</table>
+<span id="PasDoc-Types"></span><h3 class="summary">Types</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="itemcode"><code><strong><a  href="BZCoordinateProperty.html#TBZCoordinatesStyle">TBZCoordinatesStyle</a></strong> = (...);</code></td>
+</tr>
+<tr class="list2">
+<td class="itemcode"><code><strong><a  href="BZCoordinateProperty.html#TBZCoordinates">TBZCoordinates</a></strong> = <a  href="BZCoordinateProperty.TBZCoordinates3D.html">TBZCoordinates3D</a>;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Types</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCoordinatesStyle"></span><code><strong>TBZCoordinatesStyle</strong> = (...);</code></td>
+</tr>
+<tr><td colspan="1">
+<p>
+<code>TBZCoordinatesStyle</code> : Identifie le type de données stockées au sein d'un <a class="normal" href="BZCoordinateProperty.TBZCustomCoordinates.html">TBZCustomCoordinates</a>. <a class="normal" href="BZCoordinateProperty.html#CsPoint2D">csPoint2D</a> : a simple 2D point (Z=0, W=0) <a class="normal" href="BZCoordinateProperty.html#CsPoint">csPoint</a> : un point (W=1) <a class="normal" href="BZCoordinateProperty.html#CsVector">csVector</a> : un vecteur (W=0) <a class="normal" href="BZCoordinateProperty.html#CsUnknown">csUnknown</a> : aucune contrainte</p>
+<h6 class="description_section">Valeurs</h6>
+<ul>
+<li>
+<span id="CsPoint2D">CsPoint2D</span></li>
+<li>
+<span id="CsPoint">CsPoint</span></li>
+<li>
+<span id="CsVector">CsVector</span></li>
+<li>
+<span id="CsUnknown">CsUnknown</span></li>
+</ul>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="itemcode"><span id="TBZCoordinates"></span><code><strong>TBZCoordinates</strong> = <a  href="BZCoordinateProperty.TBZCoordinates3D.html">TBZCoordinates3D</a>;</code></td>
+</tr>
+<tr><td colspan="1">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>

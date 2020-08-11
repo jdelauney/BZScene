@@ -1,0 +1,488 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<title>BZScene bibliothèque multimédia 2D, 3D et audio: BZSnapForm: Classe TBZSnapForm</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="generator" content="PasDoc 0.15.0">
+<meta http-equiv="content-type" content="text/html; charset=utf-8">
+<script src="tipuesearch/jquery.min.js"></script>
+<script src="tipuesearch/tipuesearch_content.js"></script>
+<link rel="stylesheet" type="text/css" href="tipuesearch/tipuesearch.css">
+<script src="tipuesearch/tipuesearch_set.js"></script>
+<script src="tipuesearch/tipuesearch.js"></script>
+
+<link rel="StyleSheet" type="text/css" href="pasdoc.css">
+</head>
+<body>
+<div class="container"><div class="navigation">
+<h2><a href="index.html">BZScene bibliothèque multimédia 2D, 3D et audio</a></h2><ul><li><a href="AllUnits.html">Unités</a></li><li><a href="ClassHierarchy.html">Hiérarchie des classes</a></li><li><a href="AllClasses.html">Classes, interfaces, enregistrements et objets</a></li><li><a href="AllTypes.html">Types</a></li><li><a href="AllVariables.html">Variables</a></li><li><a href="AllConstants.html">Constantes</a></li><li><a href="AllFunctions.html">Fonctions et procédures</a></li><li><a href="AllIdentifiers.html">Identificateurs</a></li><li><form class="search-form" action="_tipue_results.html"><div class="search-input"><input type="text" name="q" id="tipue_search_input" pattern=".{3,}" title="At least 3 characters" required><div class="search-button"><input type="button" id="tipue_search_button" onclick="this.form.submit();"></div></div></form>
+<div style="clear: both"></div>
+</li></ul></div><div class="content">
+<span id="TBZSnapForm"></span><h1 class="cio">Classe TBZSnapForm</h1>
+<div class="sections">
+<div class="one_section"><a class="section" href="#PasDoc-Description">Description</a></div><div class="one_section"><a class="section" href="#PasDoc-Hierarchy">Hiérarchie</a></div><div class="one_section">Champs</div><div class="one_section"><a class="section" href="#PasDoc-Methods">Méthodes</a></div><div class="one_section"><a class="section" href="#PasDoc-Properties">Propriétés</a></div></div>
+<span id="PasDoc-Description"></span><h2 class="unit">Unité</h2>
+<p class="unitlink">
+<a  href="BZSnapForm.html">BZSnapForm</a></p>
+<h2 class="declaration">Déclaration</h2>
+<p class="declaration">
+<code>type TBZSnapForm = class(TComponent)</code></p>
+<h2 class="description">Description</h2>
+<p>
+============================================================================== ==== [ <code>TBZSnapForm</code> ]============================================================ @Desc : Composant ajoutont des fonctions aux fenêtres ==============================================================================</p>
+<span id="PasDoc-Hierarchy"></span><h2 class="hierarchy">Hiérarchie</h2>
+<ul class="hierarchy"><li class="ancestor">TComponent</li>
+<li class="thisitem">TBZSnapForm</li></ul><h2 class="overview">Aperçu</h2>
+<span id="PasDoc-Methods"></span><h3 class="summary">Méthodes</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>constructor <strong><a  href="BZSnapForm.TBZSnapForm.html#Create">Create</a></strong>(AOwner:TComponent); override;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>destructor <strong><a  href="BZSnapForm.TBZSnapForm.html#Destroy">Destroy</a></strong>; override;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#addChildForm">addChildForm</a></strong>(AName:string;AForm:TForm);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSnapForm.TBZSnapForm.html#getChildForm">getChildForm</a></strong>(AName:String;var Index:Integer):TForm;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSnapForm.TBZSnapForm.html#getChildForm">getChildForm</a></strong>(AName:String):TForm; overload;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSnapForm.TBZSnapForm.html#getChildFormIndex">getChildFormIndex</a></strong>(AName:String):Integer;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#MagnetToScreen">MagnetToScreen</a></strong>(ATarget: <a  href="BZSnapForm.html#TSnappingTarget">TSnappingTarget</a>);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#SnapChildToLeft">SnapChildToLeft</a></strong>(AName:String);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#SnapChildToTop">SnapChildToTop</a></strong>(AName:String);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#SnapChildToRight">SnapChildToRight</a></strong>(AName:String);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#SnapChildToBottom">SnapChildToBottom</a></strong>(AName:String);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#SnapChildTo">SnapChildTo</a></strong>(AName:String;ATarget: <a  href="BZSnapForm.html#TSnappingTarget">TSnappingTarget</a>);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#UnSnapChild">UnSnapChild</a></strong>(AName:String);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#EnterFullScreen">EnterFullScreen</a></strong>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#ExitFullScreen">ExitFullScreen</a></strong>;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#ShowForm">ShowForm</a></strong>(AName:String;Fade:Boolean);</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#HideForm">HideForm</a></strong>(AName:String;Fade:Boolean);</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSnapForm.TBZSnapForm.html#TakeFormScreenShot">TakeFormScreenShot</a></strong>:TBitmap;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>function <strong><a  href="BZSnapForm.TBZSnapForm.html#TakeChildFormScreenShot">TakeChildFormScreenShot</a></strong>(AName:String):TBitmap;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#Start">Start</a></strong>;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>procedure <strong><a  href="BZSnapForm.TBZSnapForm.html#Stop">Stop</a></strong>;</code></td>
+</tr>
+</table>
+<span id="PasDoc-Properties"></span><h3 class="summary">Propriétés</h3>
+<table class="summary wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#Active">Active</a></strong> : Boolean read FActive write setActive;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#ScreenMagnet">ScreenMagnet</a></strong> : Boolean read FScreenMagnet write FScreenMagnet;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#MagnetOnScreen">MagnetOnScreen</a></strong> : <a  href="BZSnapForm.html#TSnappingTargets">TSnappingTargets</a> read FMagnetOnScreen write FMagnetOnScreen;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#SnappingBorders">SnappingBorders</a></strong> : <a  href="BZSnapForm.html#TSnappingActiveBorders">TSnappingActiveBorders</a> Read FSnappingBorders Write FSnappingBorders;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#MagneticScreen">MagneticScreen</a></strong> : <a  href="BZSnapForm.html#TSnappingActiveBorders">TSnappingActiveBorders</a> Read FMagneticScreen  Write FMagneticScreen;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#Snapping">Snapping</a></strong> : Boolean read FSnapping write FSnapping;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#MagneticField">MagneticField</a></strong> : Cardinal read FMagneticField   write FMagneticField;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#ActiveMoving">ActiveMoving</a></strong> : Boolean read FActiveMoving write SetActiveMoving;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#ActiveSizing">ActiveSizing</a></strong> : Boolean read FActiveSizing write SetActiveSizing;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#FullScreen">FullScreen</a></strong> : Boolean read FFullScreen Write SetFullScreen;</code></td>
+</tr>
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#MousePosX">MousePosX</a></strong> : Integer Read FMouseX;</code></td>
+</tr>
+<tr class="list2">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><code>property <strong><a  href="BZSnapForm.TBZSnapForm.html#MousePosY">MousePosY</a></strong> : Integer Read FMouseY;</code></td>
+</tr>
+</table>
+<h2 class="description">Description</h2>
+<h3 class="detail">Méthodes</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Create"></span><code>constructor <strong>Create</strong>(AOwner:TComponent); override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Destroy"></span><code>destructor <strong>Destroy</strong>; override;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="addChildForm"></span><code>procedure <strong>addChildForm</strong>(AName:string;AForm:TForm);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Ajoute une fenêtre enfant à gérer dans la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getChildForm"></span><code>function <strong>getChildForm</strong>(AName:String;var Index:Integer):TForm;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la fenêtre enfant et son Index de la liste</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getChildForm"></span><code>function <strong>getChildForm</strong>(AName:String):TForm; overload;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne la fenêtre enfant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="getChildFormIndex"></span><code>function <strong>getChildFormIndex</strong>(AName:String):Integer;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Retourne l'index de la fenêtre enfant</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MagnetToScreen"></span><code>procedure <strong>MagnetToScreen</strong>(ATarget: <a  href="BZSnapForm.html#TSnappingTarget">TSnappingTarget</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Magnetise notre fenêtre sur les bords de l'écran</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SnapChildToLeft"></span><code>procedure <strong>SnapChildToLeft</strong>(AName:String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attache une fenêtre enfant sur le bord Gauche de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SnapChildToTop"></span><code>procedure <strong>SnapChildToTop</strong>(AName:String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attache une fenêtre enfant sur le bord Haut de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SnapChildToRight"></span><code>procedure <strong>SnapChildToRight</strong>(AName:String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attache une fenêtre enfant sur le bord Droit de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SnapChildToBottom"></span><code>procedure <strong>SnapChildToBottom</strong>(AName:String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attache une fenêtre enfant sur le bord Bas de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="SnapChildTo"></span><code>procedure <strong>SnapChildTo</strong>(AName:String;ATarget: <a  href="BZSnapForm.html#TSnappingTarget">TSnappingTarget</a>);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Attache une fenêtre enfant sur un bord de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="UnSnapChild"></span><code>procedure <strong>UnSnapChild</strong>(AName:String);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Détache une fenêtre enfant d'un des bords de notre fenêtre principale</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="EnterFullScreen"></span><code>procedure <strong>EnterFullScreen</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Passe en mode plein écran</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ExitFullScreen"></span><code>procedure <strong>ExitFullScreen</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Sort du mode plein ecran</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="ShowForm"></span><code>procedure <strong>ShowForm</strong>(AName:String;Fade:Boolean);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Affiche une fenêtre enfant avec un effet de fading</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="HideForm"></span><code>procedure <strong>HideForm</strong>(AName:String;Fade:Boolean);</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Cache une fenêtre enfant avec un effet de fading</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TakeFormScreenShot"></span><code>function <strong>TakeFormScreenShot</strong>:TBitmap;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Capture de la fenetre vers un Bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="TakeChildFormScreenShot"></span><code>function <strong>TakeChildFormScreenShot</strong>(AName:String):TBitmap;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Capture d'une fen&circ;tre enfant vers un Bitmap</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Start"></span><code>procedure <strong>Start</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Débute la gestion de nos évênements</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="Stop"></span><code>procedure <strong>Stop</strong>;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+Arrête la gestion de nos évênements</p>
+</td></tr>
+</table>
+<h3 class="detail">Propriétés</h3>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Active"></span><code>property <strong>Active</strong> : Boolean read FActive write setActive;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ScreenMagnet"></span><code>property <strong>ScreenMagnet</strong> : Boolean read FScreenMagnet write FScreenMagnet;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MagnetOnScreen"></span><code>property <strong>MagnetOnScreen</strong> : <a  href="BZSnapForm.html#TSnappingTargets">TSnappingTargets</a> read FMagnetOnScreen write FMagnetOnScreen;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="SnappingBorders"></span><code>property <strong>SnappingBorders</strong> : <a  href="BZSnapForm.html#TSnappingActiveBorders">TSnappingActiveBorders</a> Read FSnappingBorders Write FSnappingBorders;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MagneticScreen"></span><code>property <strong>MagneticScreen</strong> : <a  href="BZSnapForm.html#TSnappingActiveBorders">TSnappingActiveBorders</a> Read FMagneticScreen  Write FMagneticScreen;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="Snapping"></span><code>property <strong>Snapping</strong> : Boolean read FSnapping write FSnapping;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="MagneticField"></span><code>property <strong>MagneticField</strong> : Cardinal read FMagneticField   write FMagneticField;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ActiveMoving"></span><code>property <strong>ActiveMoving</strong> : Boolean read FActiveMoving write SetActiveMoving;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="ActiveSizing"></span><code>property <strong>ActiveSizing</strong> : Boolean read FActiveSizing write SetActiveSizing;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="published.gif" alt="Publiés" title="Publiés"></a></td>
+<td class="itemcode"><span id="FullScreen"></span><code>property <strong>FullScreen</strong> : Boolean read FFullScreen Write SetFullScreen;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MousePosX"></span><code>property <strong>MousePosX</strong> : Integer Read FMouseX;</code></td>
+</tr>
+<tr><td colspan="2">
+<p>
+property <a class="normal" href="BZSnapForm.TBZSnapForm.html#ActiveSizing">ActiveSizing</a> : Boolean read FActiveSizing write FActiveSizing default True; property AutoResizing : Boolean read FAutoResizing write FAutoResizing default False; property AutoLayout : Boolean read FAutoLayout write FAutoLayout default False;</p>
+</td></tr>
+</table>
+<table class="detail wide_list">
+<tr class="list">
+<td class="visibility"><a  href="legend.html"><img  src="public.gif" alt="Public" title="Public"></a></td>
+<td class="itemcode"><span id="MousePosY"></span><code>property <strong>MousePosY</strong> : Integer Read FMouseY;</code></td>
+</tr>
+<tr><td colspan="2">
+&nbsp;</td></tr>
+</table>
+<hr><span class="appinfo"><em>Produit par <a  href="https://github.com/pasdoc/pasdoc/wiki">PasDoc 0.15.0</a>. </em>
+</span>
+</div></div><script>
+$(window).resize(function(){
+var height = $('.navigation').height() + 15;//take the header height
+$('.content').css({'padding-top':height});//alter the margin of the wrapped content
+}).trigger('resize');//trigger the margin resize when page is loaded
+</script></body></html>
