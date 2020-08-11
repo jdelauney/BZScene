@@ -11,7 +11,7 @@
   NOTE: Delphi users should use the BASS_UNICODE flag where possible
 }
 
-unit BASS;
+unit BZLibBass;
 
 interface
 

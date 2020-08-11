@@ -8,7 +8,7 @@
       <Version Value="11"/>
       <PathDelim Value="\"/>
       <SearchPaths>
-        <OtherUnitFiles Value="..\Source\Audio;..\Source\Components\Audio;..\Source\Audio\fileformats;..\Source\Dependancies\openal;..\Source\Dependancies\mp3;..\Source\Dependancies\ogg;..\Source\Dependancies\modplug"/>
+        <OtherUnitFiles Value="..\Source\Audio;..\Source\Components\Audio;..\Source\Audio\fileformats;..\Source\Dependancies\openal;..\Source\Dependancies\mp3;..\Source\Dependancies\ogg;..\Source\Dependancies\modplug;..\Source\Dependancies\bass"/>
         <UnitOutputDirectory Value="lib\bzscene-audio\$(TargetCPU)-$(TargetOS)"/>
       </SearchPaths>
       <Parsing>
@@ -19,7 +19,7 @@
 Contains the base of BZScene Multimedia Library for audio management"/>
     <License Value="MPL /GPL"/>
     <Version Major="1"/>
-    <Files Count="14">
+    <Files Count="16">
       <Item1>
         <Filename Value="..\Source\Audio\BZSoundSample.pas"/>
         <UnitName Value="BZSoundSample"/>
@@ -76,6 +76,14 @@ Contains the base of BZScene Multimedia Library for audio management"/>
         <Filename Value="..\Source\Audio\fileformats\BZSoundFileModplug.pas"/>
         <UnitName Value="BZSoundFileModplug"/>
       </Item14>
+      <Item15>
+        <Filename Value="..\Source\Components\Audio\BZBassManager.pas"/>
+        <UnitName Value="BZBassManager"/>
+      </Item15>
+      <Item16>
+        <Filename Value="..\Source\Dependancies\bass\BZLibBass.pas"/>
+        <UnitName Value="BASS"/>
+      </Item16>
     </Files>
     <RequiredPkgs Count="3">
       <Item1>

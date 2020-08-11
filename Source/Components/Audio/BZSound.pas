@@ -901,6 +901,7 @@ type
     procedure MuteSource(aSource: TBZBaseSoundSource; muted: Boolean); virtual;
     procedure PauseSource(aSource: TBZBaseSoundSource; paused: Boolean); virtual;
     procedure PlaySource(aSource : TBZBaseSoundSource; playing : Boolean); virtual;
+    function GetDefaultFrequency(aSource : TBZBaseSoundSource) : Integer; virtual;
     function GetTimePosition(aSource : TBZBaseSoundSource): Single; virtual;
   public
      
@@ -924,7 +925,7 @@ type
     { True if EAX is supported. }
     function EAXSupported: Boolean; dynamic;
 
-
+    function GetInformations : String; virtual;
   published
      
      { Activation/deactivation of the low-level sound API }
@@ -3420,6 +3421,11 @@ begin
   // nothing
 end;
 
+function TBZSoundManager.GetDefaultFrequency(aSource : TBZBaseSoundSource) : Integer;
+begin
+  Result := 44100;
+end;
+
 function TBZSoundManager.GetTimePosition(aSource : TBZBaseSoundSource): Single;
 begin
   result:=0.0;
@@ -3460,6 +3466,11 @@ end;
 function TBZSoundManager.EAXSupported: Boolean;
 begin
   Result := False;
+end;
+
+function TBZSoundManager.GetInformations : String;
+begin
+  Result := 'No Informations';
 end;
 
 {%endregion%}

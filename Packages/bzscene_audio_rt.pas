@@ -9,7 +9,7 @@ interface
 
 uses
   BZSoundSample, BZLibOpenAL, fmt123, mpg123, out123, BZLibOgg, BZLibVorbis, BZLibModplug, BZSound, BZOpenALManager, BZSoundFileMP3, BZSoundFileOGG, 
-  BZSoundFileWAV, BZSoundFileModplug;
+  BZSoundFileWAV, BZSoundFileModplug, BZBassManager, BZLibBass;
 
 implementation
 
