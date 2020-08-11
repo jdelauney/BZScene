@@ -16,7 +16,7 @@
 Contains non-visuals tools components"/>
     <License Value="MPL / GPL"/>
     <Version Minor="1"/>
-    <Files Count="5">
+    <Files Count="6">
       <Item1>
         <Filename Value="..\Source\Components\Tools\BZCadencer.pas"/>
         <UnitName Value="BZCadencer"/>
@@ -37,6 +37,10 @@ Contains non-visuals tools components"/>
         <Filename Value="..\Source\Components\Tools\BZScreenMode.pas"/>
         <UnitName Value="BZScreenMode"/>
       </Item5>
+      <Item6>
+        <Filename Value="..\Source\Components\Tools\BZSnapForm.pas"/>
+        <UnitName Value="BZSnapForm"/>
+      </Item6>
     </Files>
     <RequiredPkgs Count="2">
       <Item1>
@@ -53,5 +57,8 @@ Contains non-visuals tools components"/>
       <Version Value="2"/>
       <UseFileFilters Value="True"/>
     </PublishOptions>
+    <CustomOptions Items="ExternHelp" Version="2">
+      <_ExternHelp Items="Count"/>
+    </CustomOptions>
   </Package>
 </CONFIG>

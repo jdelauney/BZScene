@@ -8,7 +8,7 @@ unit bzscene_tools_rt;
 interface
 
 uses
-  BZCadencer, BZFileFinder, BZHotKeyManager, BZThreadTimer, BZScreenMode;
+  BZCadencer, BZFileFinder, BZHotKeyManager, BZThreadTimer, BZScreenMode, BZSnapForm;
 
 implementation
 
